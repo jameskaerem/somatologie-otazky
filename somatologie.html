@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f3ee">
+  <meta name="description" content="Prvních 10 otázek ze somatologie. Procvičování s vysvětlením, náhodným pořadím a přehledem úspěšnosti. Funguje i offline.">
+  <title>Somatologie · malý krok, velké pochopení</title>
+  <style>
+    :root{color-scheme:light;--bg:#f6f3ee;--paper:#fffefa;--ink:#293d39;--muted:#65736e;--line:#e1e6df;--sage:#dceadf;--green:#236345;--green-bg:#e4f3e7;--red:#983a45;--red-bg:#fbe5e6;--lavender:#ece7f8;--accent:#65558e;--peach:#fae8dc;--radius:26px}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.55;-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer;touch-action:manipulation}button,a,summary{outline-offset:5px}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--accent)}button:disabled{cursor:default}button:enabled:active{transform:translateY(1px)}[hidden]{display:none!important}a{color:#59477d;text-underline-offset:3px}svg{display:block}.app{max-width:740px;margin:auto;padding:30px 24px calc(28px + env(safe-area-inset-bottom))}.brand{display:flex;align-items:center;gap:12px}.brand-icon{display:grid;place-items:center;width:46px;height:46px;border-radius:16px;background:var(--sage)}.brand-name{font-weight:760;letter-spacing:-.4px;font-size:20px}.brand-sub{font-size:12px;color:var(--muted)}.offline{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:12px;color:#4e6458}.offline:before{content:"";width:7px;height:7px;border-radius:50%;background:#7b9b80}.intro{margin:28px 0 22px}.eyebrow{text-transform:uppercase;letter-spacing:1.8px;font-size:10px;font-weight:750;color:#667968;margin-bottom:8px}.intro h1{font-size:clamp(27px,5.8vw,36px);letter-spacing:-1.2px;line-height:1.17;margin:0 0 10px;font-weight:720}.intro p{color:var(--muted);font-size:14px;margin:0;max-width:490px}.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:22px}.stat{border:1px solid #e2e4dd;border-radius:18px;padding:13px 16px;background:#fdfbf7}.stat:nth-child(2){background:var(--lavender);border-color:transparent}.stat:nth-child(3){background:var(--sage);border-color:transparent}.stat-label{font-size:11px;color:#58645f;display:block;margin-bottom:3px}.stat-value{font-size:23px;font-weight:750;letter-spacing:-.7px}.stat-unit{font-size:12px;font-weight:500;letter-spacing:0;color:#58645f}.card{background:var(--paper);border:1px solid #e5e7df;border-radius:var(--radius);padding:25px;box-shadow:0 12px 35px #32463706}.question-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.pill{display:inline-flex;padding:5px 10px;border-radius:9px;background:var(--lavender);color:#62547f;font-size:11px;font-weight:650}.book-number{font-size:11px;color:var(--muted)}.track{height:5px;background:#eceee7;border-radius:10px;margin:16px 0 22px;overflow:hidden}.fill{height:100%;width:0;background:#9eb7a1;border-radius:10px;transition:width .25s}.question-title{font-size:clamp(20px,4.5vw,25px);font-weight:690;line-height:1.35;letter-spacing:-.55px;margin:0 0 18px;overflow-wrap:anywhere}.legend{background:#f5f6f0;border:1px solid #e5e8de;border-radius:17px;padding:15px;margin:0 0 18px;font-size:13px}.legend-title{font-weight:750;margin:0 0 8px;color:#536154}.legend-list{margin:0;padding:0;list-style:none}.legend-list li{display:flex;gap:9px;margin:7px 0;line-height:1.4}.legend-code{min-width:20px;font-weight:750;color:#56694d}.legend-divider{height:1px;background:#e0e4d8;margin:14px 0}.hint{font-size:12px;color:var(--muted);margin:0 0 11px}.answers{display:grid;gap:10px}.answer{width:100%;display:flex;align-items:center;gap:12px;padding:14px;border:1.5px solid var(--line);background:white;border-radius:16px;text-align:left;min-height:64px;color:var(--ink);line-height:1.45;transition:background .15s,border-color .15s;position:relative}.letter{flex:0 0 33px;height:33px;display:grid;place-items:center;border-radius:10px;background:#f3f4ef;font-weight:720;font-size:13px;color:#627064}.answer-text{flex:1;font-size:15px;overflow-wrap:anywhere}.answer-mark{display:none;flex:0 0 21px;font-size:20px;font-weight:700}.answer:disabled{opacity:1;color:#5c6761}.answer.correct{background:var(--green-bg);border-color:#68a67b;color:var(--green)}.answer.correct .letter{background:#cbe7d3;color:var(--green)}.answer.wrong{background:var(--red-bg);border-color:#d5838b;color:var(--red)}.answer.wrong .letter{background:#f5cbd0;color:var(--red)}.answer.correct .answer-mark,.answer.wrong .answer-mark{display:block}.feedback{margin-top:22px;padding:20px;background:#f3f6ef;border-radius:18px;animation:appear .22s ease-out}.feedback-status{margin:0 0 13px;display:flex;align-items:center;gap:8px;font-size:14px;font-weight:750}.feedback-status.good{color:var(--green)}.feedback-status.bad{color:var(--red)}.feedback h3{font-size:17px;letter-spacing:-.2px;margin:0 0 10px}.feedback p{font-size:14px;margin:0 0 12px;line-height:1.7}.feedback p:last-child{margin-bottom:0}.memory{padding:13px 15px;border-radius:13px;background:#e4ebdf;font-size:13px!important}.note{padding:13px 15px;border-radius:13px;background:#fcf0dc;border:1px solid #ecdfc1;font-size:12px!important}.source-link{font-size:11px!important;color:var(--muted)}.actions{margin-top:20px}.next{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:57px;border:0;background:#344e43;color:white;border-radius:16px;font-weight:700;font-size:15px;padding:15px}.next:disabled{background:#e5e8e0;color:#7b847c}.next svg{width:17px;height:17px}.under-button{text-align:center;font-size:11px;color:var(--muted);margin:9px 0 0}.footer{padding:20px 8px 0;text-align:center;color:var(--muted);font-size:11px}.footer p{margin:7px 0}.reset{border:0;background:transparent;padding:12px;color:#5b695e;font-size:12px;text-decoration:underline;text-underline-offset:4px;min-height:44px}.sources{text-align:left;border-top:1px solid #e2e5dd;margin-top:12px;padding-top:10px}.sources summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:6px;font-size:12px}.sources summary:before{content:"+";font-size:18px}.sources[open] summary:before{content:"−"}.sources ul{padding-left:19px;line-height:1.8}.sources p{font-size:12px}.result{text-align:center;padding:8px 0}.result-icon{margin:0 auto 16px;width:66px;height:66px;border-radius:22px;background:var(--sage);display:grid;place-items:center}.result h2{font-size:27px;letter-spacing:-.8px;margin:0 0 8px}.result>p{color:var(--muted);font-size:14px;margin:0 auto 20px;max-width:400px}.result-score{font-size:58px;font-weight:760;letter-spacing:-3px;line-height:1.2;color:#4e6553}.result-caption{font-size:12px;color:var(--muted);margin:6px 0 22px}.secondary{margin-top:10px;border:1px solid #d4dcd0;background:#f1f5eb;color:#3c5848}.mistakes{margin:24px 0 0;text-align:left}.mistakes h3{font-size:13px;margin-bottom:10px}.mistake{border-top:1px solid var(--line);padding:12px 0;font-size:13px}.mistake strong{display:block;margin-bottom:5px}.mistake span{color:var(--muted)}.toast{background:var(--peach);color:#705747;border-radius:10px;padding:9px 12px;margin:12px 0;font-size:12px}.session-label{font-size:11px;color:var(--muted)}@keyframes appear{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}@media(hover:hover){.answer:enabled:hover{background:#f5f7ef;border-color:#aab9a4}.next:enabled:hover{background:#416151}.secondary:enabled:hover{background:#e2eadb}}@media(max-width:480px){.app{padding:22px 16px calc(20px + env(safe-area-inset-bottom))}.intro{margin-top:25px}.stats{gap:8px;margin-bottom:18px}.stat{padding:12px}.stat-value{font-size:22px}.card{padding:20px 16px;border-radius:23px}.question-head{flex-wrap:wrap}.answer{padding:13px 12px;gap:10px}.answer-text{font-size:14px}.feedback{padding:17px}.offline{font-size:11px}.brand-sub{font-size:11px}.legend{padding:13px}.question-title{font-size:21px}.footer{padding-left:2px;padding-right:2px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+<main class="app">
+  <header class="brand">
+    <div class="brand-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M4 6.5c3.4-1.2 6.7-.7 10 1.6 3.3-2.3 6.6-2.8 10-1.6v16c-3.4-1.2-6.7-.7-10 1.6-3.3-2.3-6.6-2.8-10-1.6v-16Z" stroke="#56765e" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 8v16M7.5 11l3 .9M7.5 15l3 .9M17.5 12l3-.9M17.5 16l3-.9" stroke="#56765e" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    <div><div class="brand-name">Somatologie</div><div class="brand-sub">Malý krok, velké pochopení.</div></div>
+    <span class="offline">I offline</span>
+  </header>
+  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p>Prvních 10 otázek z učebnice, pokaždé v jiném pořadí. Vyber odpověď a zjisti, proč dává smysl.</p></section>
+  <div id="storageNotice" class="toast" hidden>Prohlížeč nepovolil ukládání. Test funguje, ale po zavření se průběh neobnoví.</div>
+  <section class="stats" aria-label="Výsledky tohoto kola">
+    <div class="stat"><span class="stat-label">Zodpovězeno</span><span class="stat-value" id="answered">0 <span class="stat-unit">/ 10</span></span></div>
+    <div class="stat"><span class="stat-label">Úspěšnost</span><span class="stat-value" id="success">—</span></div>
+    <div class="stat"><span class="stat-label">Správně</span><span class="stat-value" id="correct">0 <span class="stat-unit">/ 0</span></span></div>
+  </section>
+  <section class="card" id="quiz" aria-label="Testová otázka">
+    <div class="question-head"><span class="pill" id="category">Základy biologie</span><span class="book-number" id="bookNumber"></span></div>
+    <div class="track" role="progressbar" aria-label="Průběh kola" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="progress"><div class="fill" id="fill"></div></div>
+    <h2 class="question-title" id="question" tabindex="-1"></h2>
+    <div id="legend" class="legend" hidden></div>
+    <p class="hint" id="hint">Vyber jednu odpověď.</p>
+    <div class="answers" id="answers" role="group" aria-labelledby="question"></div>
+    <div id="announcement" class="sr" role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"></div>
+    <section class="feedback" id="feedback" aria-label="Vysvětlení odpovědi" hidden>
+      <div class="feedback-status" id="feedbackStatus"></div>
+      <h3 id="explanationTitle"></h3><div id="explanation"></div>
+    </section>
+    <div class="actions"><button class="next" id="next" disabled><span id="nextText">Další otázka</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button><p class="under-button" id="underButton">Nejdřív zkus odpovědět. Není kam spěchat.</p></div>
+  </section>
+  <section class="card" id="results" aria-label="Výsledek kola" hidden></section>
+  <footer class="footer">
+    <p id="saveStatus">Průběh se ukládá v tomto prohlížeči.</p>
+    <button class="reset" id="reset">Začít nové kolo</button>
+    <details class="sources"><summary>O otázkách a zdrojích</summary>
+      <p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Otázky 1–10: tištěné strany 8–9 (strana 5 PDF). Oficiální klíč: tištěná strana 15 (strana 8 PDF).</p>
+      <p>Hodnocení přesně odpovídá klíči: <strong>1 D · 2 B · 3 C · 4 D · 5 C · 6 D · 7 B · 8 B · 9 B · 10 B</strong>. Ruční značky ve skenu nejsou zdrojem hodnocení. U přiřazování mají písmena v legendě jiný význam než tlačítka odpovědí A–D.</p>
+      <p>Vysvětlení jsou nově napsaná pro tuto aplikaci. Historické pojmy a zjednodušené otázky jsou vysvětlené přímo u odpovědi; zejména otázky 3, 5, 9 a 10 potřebují doplnění souvislostí.</p>
+      <ul><li><a href="https://openstax.org/books/concepts-biology/pages/1-1-themes-and-concepts-of-biology" target="_blank" rel="noopener noreferrer">OpenStax: společné znaky života</a></li><li><a href="https://openstax.org/books/biology/pages/18-1-understanding-evolution" target="_blank" rel="noopener noreferrer">OpenStax: variabilita a přírodní výběr</a></li><li><a href="https://cneos.jpl.nasa.gov/about/life_on_earth.html" target="_blank" rel="noopener noreferrer">NASA / JPL: nejstarší doklady života</a></li><li><a href="https://www.sciencedirect.com/science/article/pii/S1359029420301229" target="_blank" rel="noopener noreferrer">Přehled výzkumu koacervátů jako modelů prabuněk</a></li><li><a href="https://humanorigins.si.edu/evidence/human-fossils/species/homo-erectus" target="_blank" rel="noopener noreferrer">Smithsonian: Homo erectus a lidská evoluce</a></li></ul>
+      <p>Aplikace nepotřebuje připojení, registraci ani instalaci. Odkazy na zdroje vyžadují internet. Kolo obsahuje každou vybranou otázku právě jednou.</p>
+    </details>
+  </footer>
+</main>
+<script>
+'use strict';
+const QUESTIONS = [
+  {
+    id:1,category:'Biologické obory',
+    question:'Přiřaďte odpovídající náplň jednotlivým biologickým vědním oborům:',
+    terms:['Anatomie','Antropologie','Fyziologie','Morfologie','Cytologie','Genetika'],
+    definitions:['Věda o člověku','Věda o dědičnosti a proměnlivosti organismů','Věda o stavbě a tvaru organismů a orgánů','Věda o funkcích orgánů a organismů a jejich řízení','Věda o tvaru, stavbě a vývoji živých organismů','Věda o stavbě a funkci buněk a buněčných organel'],
+    options:['A1, B5, C3, D4, E6, F2','A5, B1, C3, D4, E6, F2','A4, B1, C5, D6, E3, F2','A5, B1, C4, D3, E6, F2'],answer:3,
+    title:'Tělo jako dům: plán, provoz a stavební kostky',
+    paragraphs:[
+      'Představ si tělo jako dům. Anatomie řeší jeho stavbu: kde jsou místnosti, co s čím sousedí a jak se tělo vyvíjí. Fyziologie se ptá, jak dům funguje: jak běží topení a voda. U srdce tedy anatomie popíše komory a chlopně, zatímco fyziologie vysvětlí, jak srdce čerpá krev.',
+      'Morfologie je širší pohled na tvar a stavbu organismů a jejich částí; anatomie do tohoto okruhu patří. Cytologie se přiblíží až k jednotlivým buňkám, tedy ke stavebním kostkám domu. Genetika zkoumá dědičné informace a jejich proměnlivost: proč potomci připomínají rodiče, ale nejsou jejich přesné kopie. Antropologie se soustředí na člověka.',
+      'V nabídce této učebnice proto vychází: anatomie A5, antropologie B1, fyziologie C4, morfologie D3, cytologie E6, genetika F2. Největší chyták je prohodit stavbu a funkci: fyziologie je vždy hlavně o tom, co tělo dělá.'
+    ],memory:'Anatomie = plán domu. Fyziologie = jeho provoz. Cytologie = buňky. Genetika = dědičný návod.'
+  },
+  {
+    id:2,category:'Lékařské obory',
+    question:'Přiřaďte odpovídající náplň jednotlivým lékařským vědním oborům:',
+    terms:['Interna','Patologie','Pediatrie','Embryologie','Gynekologie','Psychologie','Sociologie'],
+    definitions:['Nauka o vzniku a vývoji zárodků','Věda o lidské společnosti a o vztazích mezi lidmi','Věda o ženských pohlavních orgánech, jejich chorobách a léčení','Věda o chorobných změnách a chorobných pochodech v organismu','Věda o duševní činnosti a způsobu myšlení','Věda o chorobách vnitřních orgánů a jejich léčení','Nauka o chorobách dětí, jejich předcházení a léčení'],
+    options:['A4, B6, C1, D7, E3, F5, G2','A6, B4, C7, D1, E3, F5, G2','A6, B4, C1, D7, E3, F2, G5','A4, B6, C7, D1, E3, F2, G5'],answer:1,
+    title:'Každý obor se dívá na jinou část příběhu',
+    paragraphs:[
+      'Internista řeší choroby vnitřních orgánů, třeba srdce nebo ledvin. Patologie se ptá, co se při nemoci v těle změnilo a jak nemoc probíhá; například zkoumá změny ve vzorku tkáně. Interna tedy hlavně pečuje o pacienta, patologie pomáhá rozpoznat a pochopit chorobný děj.',
+      'Pediatrie pečuje o děti a také nemocem předchází. Embryologie sleduje, jak se ze zárodku postupně vytváří organismus. Gynekologie se věnuje ženské pohlavní soustavě a jejím nemocem. Psychologie řeší duševní děje, například vnímání, emoce a myšlení. Sociologie zkoumá společnost a vztahy mezi lidmi: místo jedné mysli se dívá na skupinu.',
+      'Proto patří interna k 6, patologie ke 4, pediatrie k 7, embryologie k 1, gynekologie ke 3, psychologie k 5 a sociologie ke 2. Pozor hlavně na děti a zárodky: dětská ordinace je pediatrie, vývoj zárodku embryologie.'
+    ],memory:'Interna = vnitřní orgány. Pediatrie = děti. Embryologie = zárodek. Psychologie = mysl, sociologie = společnost.'
+  },
+  {
+    id:3,category:'Vznik života',question:'Kdy asi vznikl na Zemi život?',
+    options:['Před miliardou let','Před více než 4 miliardami let','Před více než 3,5 miliardami let','Před 2 miliardami let'],answer:2,
+    title:'Stopy života jsou starší než většina dějin Země',
+    paragraphs:[
+      'Klíč této učebnice uvádí C: před více než 3,5 miliardami let. Nejde o první zvířata nebo lidi, ale o úplné začátky jednoduchého života. Velkou část historie Země tu existovaly především mikroorganismy.',
+      'Jak to víme? Ve velmi starých horninách hledáme zachované stopy mikroorganismů a jejich činnosti. Je to jako hledat starou fotografii: dokazuje, že už tehdy někdo existoval, ale neříká přesně, kdy se narodil. Doklady života přibližně před 3,5 miliardami let proto nejsou přesným datem jeho vzniku.',
+      'Kdybychom celou historii Země zkrátili na jeden rok, život by se objevil už v jeho první části; moderní člověk až těsně před koncem. Představa, že život vznikl teprve před jednou či dvěma miliardami let, je tedy příliš pozdní.'
+    ],memory:'Pro tento test: C, více než 3,5 miliardy let. Nejstarší nalezená stopa není totéž co okamžik vzniku.',
+    note:'Přesné stáří vzniku života neznáme. Ještě starší možné doklady jsou předmětem výzkumu; možnost B proto není vhodné odmítat jako definitivně nemožnou. Zde se hodnotí podle klíče učebnice.',
+    source:{label:'NASA / JPL: stáří dokladů života',url:'https://cneos.jpl.nasa.gov/about/life_on_earth.html'}
+  },
+  {
+    id:4,category:'Vznik života',question:'Koacerváty',
+    options:['Jsou primitivní útvary s projevy života','Jsou jednoduché prabuňky','Nejsou schopné výměny látek se svým prostředím','Útvary samostatně vznikající v roztoku makromolekulárních látek'],answer:3,
+    title:'Kapka s vlastním vnitřkem ještě není živá buňka',
+    paragraphs:[
+      'Koacervát je drobná kapka bohatá na velké molekuly. Za vhodných podmínek se takové molekuly v roztoku shluknou a vytvoří kapku odlišnou od okolní tekutiny. Právě samovolný vznik v roztoku popisuje možnost D.',
+      'Pro představu si vzpomeň na kapky oleje ve vodě: také vidíš oddělené malé prostory. Koacerváty ale nejsou olejové kapky; přirovnání jen pomáhá představit si oddělení dvou kapalných prostředí. Uvnitř koacervátu se mohou soustředit látky a probíhat chemické reakce. Některé látky mohou přecházet i mezi kapkou a okolím, takže C neplatí.',
+      'Samotná kapka však nemá kompletní soustavu, která by zajišťovala dědičnost a samostatné rozmnožování živé buňky. Vědci je proto používají jako model jedné možné etapy před vznikem buněk, ne jako důkaz, že každá taková kapka je živá.'
+    ],memory:'Koacervát = chemická kapka, která vznikne sama v roztoku. Oddělený vnitřek ještě neznamená život.',
+    source:{label:'Odborný přehled: koacerváty jako modely prabuněk',url:'https://www.sciencedirect.com/science/article/pii/S1359029420301229'}
+  },
+  {
+    id:5,category:'Vznik života',question:'Jak se nazývají nejprimitivnější prabuňky, prvotní živé soustavy, jevící základní znaky živé hmoty?',
+    options:['Archebakterie','Koacerváty','Eobionti','Prokaryota'],answer:2,
+    title:'Eobionti: označení pro pomyslný začátek buněčného života',
+    paragraphs:[
+      'Učebnice pro tyto prvotní živé soustavy používá název eobionti. Představ si přechod od volně probíhajících chemických reakcí k malé soustavě, ve které se děje začnou propojeně udržovat a předávat dál. Je to rozdíl mezi hromadou součástek a prvním velmi jednoduchým strojem.',
+      'Koacervát z předchozí otázky může soustředit molekuly, ale sám o sobě ještě není plně živou buňkou. Prokaryota jsou už buněčné organismy bez jádra ohraničeného membránou. Archebakterie je starší označení pro archea, jednu ze skupin dnešních buněčných organismů; nejsou názvem pro všechny první prabuňky.',
+      'Důležité je nepředstavovat si eobionty jako přesně známý druh, jehož podobu a vznik máme doložené. Je to historický pojem pro předpokládané velmi rané živé soustavy.'
+    ],memory:'Eo- si spoj se začátkem či úsvitem, bio- se životem: eobionti = „úsvit života“.',
+    note:'Jde o terminologii učebnice. Přesnou podobu prvních živých soustav ani jedinou prokázanou cestu jejich vzniku neznáme; obrázek „prvního stroje“ je pomůcka, ne popis doloženého organismu.'
+  },
+  {
+    id:6,category:'Druh a evoluce',question:'Druh',
+    options:['Vzniklý evolucí už nezaniká','Je tvořen jedinci naprosto tvarově a funkčně shodnými','Je hybnou silou evoluce','Zplozením potomků zajišťuje svou kontinuitu'],answer:3,
+    title:'Druh pokračuje díky dalším generacím',
+    paragraphs:[
+      'Jednotlivý organismus žije omezenou dobu. Když ale příslušníci druhu vytvářejí další generace, druh může pokračovat i po smrti původních jedinců. To znamená kontinuita: návaznost generací. Správně je proto D.',
+      'Představ si štafetu. Běžec nemusí běžet navždy, protože předá kolík dalšímu. Podobně se při rozmnožování předává dědičná informace potomkům. To však nezaručuje, že druh nikdy nevyhyne: pokud další generace nevznikají nebo nepřežijí, štafeta skončí.',
+      'Členové jednoho druhu navíc nejsou identické kopie. Dva psi se mohou lišit velikostí či zbarvením, a přesto patří ke stejnému druhu. Tyto rozdíly poskytují materiál pro evoluci; samotné slovo „druh“ není mechanismem evoluční změny.'
+    ],memory:'Druh je štafeta generací. Potomci nesou kolík dál; bez nich kontinuita končí.'
+  },
+  {
+    id:7,category:'Druh a evoluce',question:'Přírodní výběr',
+    options:['Umožňuje přežití jedincům nejhůře přizpůsobeným','Je umožněn variabilitou a proměnlivostí organismů','Vede k nahromadění nevýhodných odchylek','Je jediným evolučním mechanismem'],answer:1,
+    title:'Aby bylo z čeho vybírat, musí existovat rozdíly',
+    paragraphs:[
+      'Představ si světlé a tmavé brouky na tmavé kůře stromu. Ptáci mohou světlé brouky snáze zahlédnout. Pokud tmaví díky svému zbarvení častěji přežijí a mají více potomků, dědičná tmavá barva se v populaci postupně rozšíří. Rozdíl mezi brouky, tedy variabilita, je materiálem pro přírodní výběr.',
+      'Kdyby všichni brouci byli v dané vlastnosti stejní, podle této vlastnosti by se nemohli lišit v úspěchu. Proto je správně B. Rozhodující není jen přežít, ale také zanechat potomky; a aby se změna přenesla do dalších generací, musí mít zvýhodněný rozdíl dědičný základ.',
+      'Příroda si nic vědomě nevybírá a organismy se nemění proto, že se rozhodnou být lepší. Prostředí ovlivňuje úspěch už existujících rozdílů. Evoluci ovlivňují i další procesy, například náhodné změny četnosti dědičných variant v malých populacích, takže D není správně.'
+    ],memory:'Variabilita nabízí možnosti, prostředí ovlivní jejich úspěch a potomci přenesou dědičné rozdíly dál.',
+    source:{label:'OpenStax: jak funguje přírodní výběr',url:'https://openstax.org/books/biology/pages/18-1-understanding-evolution'}
+  },
+  {
+    id:8,category:'Znaky života',question:'Mezi základní vlastnosti buněčných organismů nepatří:',
+    options:['Metabolismus','Schopnost autotrofie růstu','Dráždivost','Schopnost reprodukce'],answer:1,
+    title:'Živý organismus nemusí umět vyrobit potravu z CO₂',
+    paragraphs:[
+      'Tady hledáš vlastnost, která není společná všem buněčným organismům. Autotrofie znamená schopnost vytvářet organické látky z anorganického uhlíku, typicky z oxidu uhličitého. Rostlina k tomu při fotosyntéze využívá energii světla. Člověk to neumí: potřebuje organické látky přijímat v potravě. Proto autotrofie není univerzálním znakem života.',
+      'Metabolismus je soubor chemických dějů: organismus získává energii, přestavuje látky a udržuje se v chodu. Dráždivost znamená schopnost reagovat na podněty, například změnu světla nebo teploty. Reprodukce umožňuje vznik dalších generací; neznamená to, že se musí rozmnožovat každý jednotlivý jedinec.',
+      'Rozdíl je jako mezi domem se solárními panely a domem, který energii odebírá ze sítě. Oba potřebují energii, jen ji získávají jinak. Podobně rostlina i člověk mají metabolismus, ale jen jeden z těchto příkladů je autotrofní.'
+    ],memory:'Autotrofie není povinná výbava života: rostlina ji umí, člověk ne, a přesto jsou oba živí.',
+    note:'Možnost B je přepsána podle PDF, kde zní neobratně „Schopnost autotrofie růstu“. Chyták je v autotrofii, ne v růstu: růst sám mezi znaky života patří.',
+    source:{label:'OpenStax: společné znaky života',url:'https://openstax.org/books/concepts-biology/pages/1-1-themes-and-concepts-of-biology'}
+  },
+  {
+    id:9,category:'Znaky života',question:'Které základní vlastnosti jsou společné všem buněčným organismům?',
+    options:['Metabolismus, pohyb, schopnost reprodukce','Metabolismus, dráždivost, schopnost reprodukce','Růst, dráždivost, schopnost reprodukce','Metabolismus, růst, schopnost reprodukce'],answer:1,
+    title:'Chemický provoz, reakce na okolí a další generace',
+    paragraphs:[
+      'Klíč vybírá B: metabolismus, dráždivost a schopnost reprodukce. Můžeš si je představit jako tři otázky: Udržuje se soustava chemicky v chodu? Umí reagovat na změny okolí? Dokáže život pokračovat v dalších generacích?',
+      'Rostlina nemusí chodit, aby byla živá. Přesto v ní probíhají chemické reakce, její růst reaguje například na světlo a může vytvářet potomstvo. Dráždivost tedy není nervozita ani nutně vědomý pocit: je to biologická reakce na podnět. Pohyb celého organismu z místa na místo není podmínkou života.',
+      'Reprodukci chápej jako schopnost živých soustav pokračovat v dalších generacích, ne jako povinnost každého jedince. Dítě nebo neplodný jedinec jsou samozřejmě živí. Stejně tak organismus nemusí právě v okamžiku pozorování růst či se rozmnožovat.'
+    ],memory:'Pro klíč: M–D–R = metabolismus, dráždivost, reprodukce. „Udržet chod, reagovat, pokračovat.“',
+    note:'Otázka není vědecky zcela jednoznačná. Růst patří mezi znaky života také, takže C a D obsahují rovněž skutečné znaky živých organismů. B je požadovaná kombinace podle učebnice; z klíče nelze vyvodit, že růst znakem života není.',
+    source:{label:'OpenStax: růst i další znaky života',url:'https://openstax.org/books/concepts-biology/pages/1-1-themes-and-concepts-of-biology'}
+  },
+  {
+    id:10,category:'Evoluce člověka',question:'Který z uvedených druhů rodu Homo byl přímým evolučním předchůdcem Homo sapiens?',
+    options:['Homo habilis','Homo erectus','Homo ergaster','Homo sapiens neandertalensis'],answer:1,
+    title:'Lidská evoluce připomíná rozvětvený rodokmen',
+    paragraphs:[
+      'Podle klíče této učebnice je správně B: Homo erectus. Jeho populace jsou spojovány s původem pozdějších lidských druhů a nakonec i našeho druhu Homo sapiens. Pro přípravu na tento konkrétní test si tedy zapamatuj odpověď erectus.',
+      'Slovo „přímý“ je však příliš jednoduché. Evoluce člověka nebyla řada čtyř postav stojících za sebou, ale rodokmen s mnoha větvemi a mezilehlými populacemi. Určit jediný bezprostředně předcházející druh je obtížné a jeho zařazení se mezi odborníky liší.',
+      'Neandertálci se obvykle chápou jako blízká příbuzná větev, ne jako jediný druh, který se jednoduše proměnil v dnešní lidi. Obě linie se navíc někdy křížily. Přirovnání ke vzdáleným příbuzným je tedy lepší než představa, že neandertálec byl automaticky náš „dědeček“.'
+    ],memory:'V tomto testu: B = erectus. Pro pochopení: evoluce je rozvětvený rodokmen, ne rovný žebřík.',
+    note:'Hodnocení zachovává starší klíč. Označení Homo erectus za jednoznačně přímého předchůdce všech Homo sapiens není přesným shrnutím dnešních poznatků.',
+    source:{label:'Smithsonian: Homo erectus a pozdější lidské druhy',url:'https://humanorigins.si.edu/evidence/human-fossils/species/homo-erectus'}
+  }
+];
+const $=id=>document.getElementById(id);
+const LETTERS=['A','B','C','D'];
+const STORAGE_KEY='somatologie-first10-v1';
+const byId=new Map(QUESTIONS.map(q=>[q.id,q]));
+let storageOK=true;
+let state;
+function shuffle(values){const result=[...values];for(let i=result.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[result[i],result[j]]=[result[j],result[i]];}return result;}
+function newState(ids=QUESTIONS.map(q=>q.id),mode='all'){return{version:1,order:shuffle(ids),index:0,answers:{},done:false,mode};}
+function validState(s){
+  if(!s||s.version!==1||!Array.isArray(s.order)||s.order.length<1||s.order.length>10||new Set(s.order).size!==s.order.length||!s.order.every(id=>byId.has(id))||!['all','mistakes'].includes(s.mode)||typeof s.done!=='boolean'||!Number.isInteger(s.index)||s.index<0||s.index>=s.order.length||!s.answers||typeof s.answers!=='object'||Array.isArray(s.answers))return false;
+  if(s.mode==='all'&&s.order.length!==10)return false;
+  if(!Object.entries(s.answers).every(([id,v])=>s.order.includes(Number(id))&&Number.isInteger(v)&&v>=0&&v<=3))return false;
+  if(s.order.some((id,i)=>i<s.index&&s.answers[id]===undefined||i>s.index&&s.answers[id]!==undefined))return false;
+  return !s.done||Object.keys(s.answers).length===s.order.length;
+}
+function storageUnavailable(){storageOK=false;$('storageNotice').hidden=false;$('saveStatus').textContent='Průběh zůstává jen po dobu otevření této stránky.';}
+function save(){if(!storageOK)return;try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}catch(e){storageUnavailable();}}
+function load(){try{const s=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');return validState(s)?s:newState();}catch(e){storageUnavailable();return newState();}}
+function score(){const answered=Object.keys(state.answers).length;const correct=state.order.filter(id=>state.answers[id]===byId.get(id).answer).length;return{answered,correct,rate:answered?Math.round(correct/answered*100):0};}
+function updateStats(){const s=score();$('answered').innerHTML=s.answered+' <span class="stat-unit">/ '+state.order.length+'</span>';$('success').textContent=s.answered?s.rate+' %':'—';$('correct').innerHTML=s.correct+' <span class="stat-unit">/ '+s.answered+'</span>';$('fill').style.width=(s.answered/state.order.length*100)+'%';$('progress').setAttribute('aria-valuemax',state.order.length);$('progress').setAttribute('aria-valuenow',s.answered);}
+function element(tag,className,text){const el=document.createElement(tag);if(className)el.className=className;if(text!==undefined)el.textContent=text;return el;}
+function renderLegend(q){const root=$('legend');root.replaceChildren();root.hidden=!q.terms;if(!q.terms)return;root.append(element('p','legend-title','Obory (písmena v přiřazení)'));const terms=element('ul','legend-list');q.terms.forEach((text,i)=>{const li=element('li');li.append(element('span','legend-code',String.fromCharCode(65+i)),element('span','',text));terms.append(li);});root.append(terms,element('div','legend-divider'),element('p','legend-title','Náplně (čísla v přiřazení)'));const defs=element('ul','legend-list');q.definitions.forEach((text,i)=>{const li=element('li');li.append(element('span','legend-code',String(i+1)),element('span','',text));defs.append(li);});root.append(defs);}
+function renderFeedback(q,selected){const good=selected===q.answer;const status=$('feedbackStatus');status.className='feedback-status '+(good?'good':'bad');status.textContent=good?'✓ Správně. Pojďme si říct proč.':'✕ Tentokrát ne. Správně je '+LETTERS[q.answer]+'.';$('explanationTitle').textContent=q.title;const explanation=$('explanation');explanation.replaceChildren();q.paragraphs.forEach(p=>explanation.append(element('p','',p)));const memory=element('p','memory');memory.append(element('strong','','Jak si to zapamatovat: '),document.createTextNode(q.memory));explanation.append(memory);if(q.note){const note=element('p','note');note.append(element('strong','','Pro přesnost: '),document.createTextNode(q.note));explanation.append(note);}if(q.source){const p=element('p','source-link');const a=element('a','',q.source.label);a.href=q.source.url;a.target='_blank';a.rel='noopener noreferrer';p.append(a);explanation.append(p);}$('feedback').hidden=false;}
+function renderQuestion(focus=false){
+  $('quiz').hidden=false;$('results').hidden=true;$('reset').hidden=false;const q=byId.get(state.order[state.index]);const selected=state.answers[q.id];const hasAnswer=selected!==undefined;
+  $('category').textContent=q.category;$('bookNumber').textContent=(state.index+1)+' / '+state.order.length+' · v učebnici č. '+q.id;$('question').textContent=q.question;$('hint').textContent=q.terms?'Vyber správnou kombinaci přiřazení.':'Vyber jednu odpověď.';renderLegend(q);
+  const root=$('answers');root.replaceChildren();q.options.forEach((text,i)=>{const button=element('button','answer');button.type='button';button.dataset.option=String(i);button.disabled=hasAnswer;button.append(element('span','letter',LETTERS[i]),element('span','answer-text',text));const mark=element('span','answer-mark');mark.setAttribute('aria-hidden','true');button.append(mark);if(hasAnswer&&i===q.answer){button.classList.add('correct');mark.textContent='✓';button.setAttribute('aria-label',LETTERS[i]+': '+text+'. Správná odpověď'+(i===selected?', tvoje volba.':'.'));}else if(hasAnswer&&i===selected){button.classList.add('wrong');mark.textContent='✕';button.setAttribute('aria-label',LETTERS[i]+': '+text+'. Tvoje odpověď, nesprávně.');}button.addEventListener('click',()=>choose(i));root.append(button);});
+  $('feedback').hidden=true;if(hasAnswer)renderFeedback(q,selected);$('next').disabled=!hasAnswer;$('nextText').textContent=state.index===state.order.length-1?'Zobrazit výsledek':'Další otázka';$('underButton').textContent=hasAnswer?'Vysvětlení si můžeš přečíst v klidu.':'Nejdřív zkus odpovědět. Není kam spěchat.';updateStats();if(focus)$('question').focus({preventScroll:true});
+}
+function choose(selected){
+  const q=byId.get(state.order[state.index]);if(state.done||state.answers[q.id]!==undefined)return;state.answers[q.id]=selected;save();
+  [...$('answers').children].forEach((button,i)=>{button.disabled=true;const mark=button.querySelector('.answer-mark');if(i===q.answer){button.classList.add('correct');mark.textContent='✓';button.setAttribute('aria-label',LETTERS[i]+': '+q.options[i]+'. Správná odpověď'+(i===selected?', tvoje volba.':'.'));}else if(i===selected){button.classList.add('wrong');mark.textContent='✕';button.setAttribute('aria-label',LETTERS[i]+': '+q.options[i]+'. Tvoje odpověď, nesprávně.');}});
+  renderFeedback(q,selected);updateStats();$('next').disabled=false;$('underButton').textContent='Vysvětlení si můžeš přečíst v klidu.';$('announcement').textContent=(selected===q.answer?'Správně.':'Nesprávně. Správná odpověď je '+LETTERS[q.answer]+'.')+' Vysvětlení je pod možnostmi.';
+  $('feedbackStatus').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});$('next').focus({preventScroll:true});
+}
+function renderResults(focus=false){
+  updateStats();$('quiz').hidden=true;$('results').hidden=false;$('reset').hidden=true;const root=$('results');root.replaceChildren();const s=score();const wrong=state.order.filter(id=>state.answers[id]!==byId.get(id).answer);const box=element('div','result');const icon=element('div','result-icon');icon.setAttribute('aria-hidden','true');icon.innerHTML='<svg width="31" height="31" viewBox="0 0 32 32" fill="none"><path d="m8 16 5 5 11-11" stroke="#56765e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';box.append(icon,element('div','eyebrow',state.mode==='mistakes'?'Opakování dokončeno':'Kolo dokončeno'));const heading=element('h2','',s.rate===100?'Všechno správně.':s.rate>=70?'Jde ti to dobře.':'Každá otázka tě posune.');heading.tabIndex=-1;box.append(heading,element('p','',wrong.length?'Teď už víš, proč odpovědi dávají smysl. Zkus si ještě jednou otázky, které tě potrápily.':'Všechna vysvětlení máš za sebou. Nové kolo promíchá stejné otázky a prověří, co sis zapamatoval/a.'),element('div','result-score',s.rate+' %'),element('div','result-caption',s.correct+' z '+state.order.length+' odpovědí správně'));
+  if(wrong.length){const retry=element('button','next','Procvičit chyby ('+wrong.length+')');retry.addEventListener('click',()=>start(wrong,'mistakes'));box.append(retry);}const all=element('button','next'+(wrong.length?' secondary':''),'Nové kolo · všech 10 otázek');all.addEventListener('click',()=>start());box.append(all);root.append(box);
+  if(wrong.length){const mistakes=element('div','mistakes');mistakes.append(element('h3','','K čemu se vrátit'));wrong.forEach(id=>{const q=byId.get(id);const row=element('div','mistake');row.append(element('strong','','Č. '+id+' · '+q.question),element('span','','Tvoje volba: '+LETTERS[state.answers[id]]+' · správně: '+LETTERS[q.answer]+' — '+q.options[q.answer]));mistakes.append(row);});root.append(mistakes);}if(focus)heading.focus({preventScroll:true});
+}
+function scrollTop(){window.scrollTo({top:0,behavior:'auto'});}
+function start(ids,mode){state=newState(ids,mode);save();$('announcement').textContent='';renderQuestion(true);scrollTop();}
+$('next').addEventListener('click',()=>{const q=byId.get(state.order[state.index]);if(state.answers[q.id]===undefined||state.done)return;if(state.index===state.order.length-1){state.done=true;save();renderResults(true);}else{state.index++;save();$('announcement').textContent='';renderQuestion(true);}scrollTop();});
+$('reset').addEventListener('click',()=>{if(Object.keys(state.answers).length&&!window.confirm('Začít nové kolo? Výsledek tohoto kola se vynuluje.'))return;start();});
+state=load();save();if(state.done)renderResults();else renderQuestion();
+</script>
+</body>
+</html>
