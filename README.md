@@ -1,2 +1,2 @@
-# somatologie-ot-zky
+# somatologie-otázky
 Somatologie - kvíz otázek
