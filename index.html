@@ -4,11 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f6f3ee">
-  <meta name="description" content="Prvních 10 otázek ze somatologie. Procvičování s vysvětlením, náhodným pořadím a přehledem úspěšnosti. Funguje i offline.">
+  <meta name="description" content="50 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
   <title>Somatologie · malý krok, velké pochopení</title>
   <style>
     :root{color-scheme:light;--bg:#f6f3ee;--paper:#fffefa;--ink:#293d39;--muted:#65736e;--line:#e1e6df;--sage:#dceadf;--green:#236345;--green-bg:#e4f3e7;--red:#983a45;--red-bg:#fbe5e6;--lavender:#ece7f8;--accent:#65558e;--peach:#fae8dc;--radius:26px}
     *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.55;-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer;touch-action:manipulation}button,a,summary{outline-offset:5px}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--accent)}button:disabled{cursor:default}button:enabled:active{transform:translateY(1px)}[hidden]{display:none!important}a{color:#59477d;text-underline-offset:3px}svg{display:block}.app{max-width:740px;margin:auto;padding:30px 24px calc(28px + env(safe-area-inset-bottom))}.brand{display:flex;align-items:center;gap:12px}.brand-icon{display:grid;place-items:center;width:46px;height:46px;border-radius:16px;background:var(--sage)}.brand-name{font-weight:760;letter-spacing:-.4px;font-size:20px}.brand-sub{font-size:12px;color:var(--muted)}.offline{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:12px;color:#4e6458}.offline:before{content:"";width:7px;height:7px;border-radius:50%;background:#7b9b80}.intro{margin:28px 0 22px}.eyebrow{text-transform:uppercase;letter-spacing:1.8px;font-size:10px;font-weight:750;color:#667968;margin-bottom:8px}.intro h1{font-size:clamp(27px,5.8vw,36px);letter-spacing:-1.2px;line-height:1.17;margin:0 0 10px;font-weight:720}.intro p{color:var(--muted);font-size:14px;margin:0;max-width:490px}.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:22px}.stat{border:1px solid #e2e4dd;border-radius:18px;padding:13px 16px;background:#fdfbf7}.stat:nth-child(2){background:var(--lavender);border-color:transparent}.stat:nth-child(3){background:var(--sage);border-color:transparent}.stat-label{font-size:11px;color:#58645f;display:block;margin-bottom:3px}.stat-value{font-size:23px;font-weight:750;letter-spacing:-.7px}.stat-unit{font-size:12px;font-weight:500;letter-spacing:0;color:#58645f}.card{background:var(--paper);border:1px solid #e5e7df;border-radius:var(--radius);padding:25px;box-shadow:0 12px 35px #32463706}.question-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.pill{display:inline-flex;padding:5px 10px;border-radius:9px;background:var(--lavender);color:#62547f;font-size:11px;font-weight:650}.book-number{font-size:11px;color:var(--muted)}.track{height:5px;background:#eceee7;border-radius:10px;margin:16px 0 22px;overflow:hidden}.fill{height:100%;width:0;background:#9eb7a1;border-radius:10px;transition:width .25s}.question-title{font-size:clamp(20px,4.5vw,25px);font-weight:690;line-height:1.35;letter-spacing:-.55px;margin:0 0 18px;overflow-wrap:anywhere}.legend{background:#f5f6f0;border:1px solid #e5e8de;border-radius:17px;padding:15px;margin:0 0 18px;font-size:13px}.legend-title{font-weight:750;margin:0 0 8px;color:#536154}.legend-list{margin:0;padding:0;list-style:none}.legend-list li{display:flex;gap:9px;margin:7px 0;line-height:1.4}.legend-code{min-width:20px;font-weight:750;color:#56694d}.legend-divider{height:1px;background:#e0e4d8;margin:14px 0}.hint{font-size:12px;color:var(--muted);margin:0 0 11px}.answers{display:grid;gap:10px}.answer{width:100%;display:flex;align-items:center;gap:12px;padding:14px;border:1.5px solid var(--line);background:white;border-radius:16px;text-align:left;min-height:64px;color:var(--ink);line-height:1.45;transition:background .15s,border-color .15s;position:relative}.letter{flex:0 0 33px;height:33px;display:grid;place-items:center;border-radius:10px;background:#f3f4ef;font-weight:720;font-size:13px;color:#627064}.answer-text{flex:1;font-size:15px;overflow-wrap:anywhere}.answer-mark{display:none;flex:0 0 21px;font-size:20px;font-weight:700}.answer:disabled{opacity:1;color:#5c6761}.answer.correct{background:var(--green-bg);border-color:#68a67b;color:var(--green)}.answer.correct .letter{background:#cbe7d3;color:var(--green)}.answer.wrong{background:var(--red-bg);border-color:#d5838b;color:var(--red)}.answer.wrong .letter{background:#f5cbd0;color:var(--red)}.answer.correct .answer-mark,.answer.wrong .answer-mark{display:block}.feedback{margin-top:22px;padding:20px;background:#f3f6ef;border-radius:18px;animation:appear .22s ease-out}.feedback-status{margin:0 0 13px;display:flex;align-items:center;gap:8px;font-size:14px;font-weight:750}.feedback-status.good{color:var(--green)}.feedback-status.bad{color:var(--red)}.feedback h3{font-size:17px;letter-spacing:-.2px;margin:0 0 10px}.feedback p{font-size:14px;margin:0 0 12px;line-height:1.7}.feedback p:last-child{margin-bottom:0}.memory{padding:13px 15px;border-radius:13px;background:#e4ebdf;font-size:13px!important}.note{padding:13px 15px;border-radius:13px;background:#fcf0dc;border:1px solid #ecdfc1;font-size:12px!important}.source-link{font-size:11px!important;color:var(--muted)}.actions{margin-top:20px}.next{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:57px;border:0;background:#344e43;color:white;border-radius:16px;font-weight:700;font-size:15px;padding:15px}.next:disabled{background:#e5e8e0;color:#7b847c}.next svg{width:17px;height:17px}.under-button{text-align:center;font-size:11px;color:var(--muted);margin:9px 0 0}.footer{padding:20px 8px 0;text-align:center;color:var(--muted);font-size:11px}.footer p{margin:7px 0}.reset{border:0;background:transparent;padding:12px;color:#5b695e;font-size:12px;text-decoration:underline;text-underline-offset:4px;min-height:44px}.sources{text-align:left;border-top:1px solid #e2e5dd;margin-top:12px;padding-top:10px}.sources summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:6px;font-size:12px}.sources summary:before{content:"+";font-size:18px}.sources[open] summary:before{content:"−"}.sources ul{padding-left:19px;line-height:1.8}.sources p{font-size:12px}.result{text-align:center;padding:8px 0}.result-icon{margin:0 auto 16px;width:66px;height:66px;border-radius:22px;background:var(--sage);display:grid;place-items:center}.result h2{font-size:27px;letter-spacing:-.8px;margin:0 0 8px}.result>p{color:var(--muted);font-size:14px;margin:0 auto 20px;max-width:400px}.result-score{font-size:58px;font-weight:760;letter-spacing:-3px;line-height:1.2;color:#4e6553}.result-caption{font-size:12px;color:var(--muted);margin:6px 0 22px}.secondary{margin-top:10px;border:1px solid #d4dcd0;background:#f1f5eb;color:#3c5848}.mistakes{margin:24px 0 0;text-align:left}.mistakes h3{font-size:13px;margin-bottom:10px}.mistake{border-top:1px solid var(--line);padding:12px 0;font-size:13px}.mistake strong{display:block;margin-bottom:5px}.mistake span{color:var(--muted)}.toast{background:var(--peach);color:#705747;border-radius:10px;padding:9px 12px;margin:12px 0;font-size:12px}.session-label{font-size:11px;color:var(--muted)}@keyframes appear{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}@media(hover:hover){.answer:enabled:hover{background:#f5f7ef;border-color:#aab9a4}.next:enabled:hover{background:#416151}.secondary:enabled:hover{background:#e2eadb}}@media(max-width:480px){.app{padding:22px 16px calc(20px + env(safe-area-inset-bottom))}.intro{margin-top:25px}.stats{gap:8px;margin-bottom:18px}.stat{padding:12px}.stat-value{font-size:22px}.card{padding:20px 16px;border-radius:23px}.question-head{flex-wrap:wrap}.answer{padding:13px 12px;gap:10px}.answer-text{font-size:14px}.feedback{padding:17px}.offline{font-size:11px}.brand-sub{font-size:11px}.legend{padding:13px}.question-title{font-size:21px}.footer{padding-left:2px;padding-right:2px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  
+    .home-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:0 0 21px}.home-stat{background:#f3f5ed;border-radius:16px;padding:14px 11px}.home-stat:nth-child(2){background:var(--sage)}.home-stat:nth-child(3){background:var(--lavender)}.home-stat span{display:block;font-size:11px;color:#58665b}.home-stat strong{display:block;font-size:24px;margin-top:3px;letter-spacing:-.6px}.home-title{font-size:23px;line-height:1.3;letter-spacing:-.6px;margin:0 0 17px}.learning-label{font-size:12px;color:var(--muted);margin:10px 0 6px}.home .track{margin:8px 0 18px}.home-hint{font-size:13px;color:#526753;line-height:1.6;margin:0 0 17px}.mode-card{border:1px solid var(--line);border-radius:17px;padding:16px;margin-top:12px;background:#fafbf6}.mode-card.recommended{background:#edf3e7;border-color:#cddac2}.mode-card h3{font-size:16px;line-height:1.35;margin:0 0 6px}.mode-card p{font-size:12px;color:var(--muted);margin:0 0 12px;line-height:1.65}.mode-card .next{min-height:51px;font-size:14px}.tag{font-size:10px;color:#506345;background:#dce9d2;border-radius:8px;padding:4px 8px;display:inline-block;margin-bottom:8px;font-weight:650}.home-help{font-size:12px;color:#56665b;margin-top:19px}.home-help summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:650}.home-help ul{padding-left:20px;margin:5px 0 12px;line-height:1.8}.home-help p{line-height:1.7}.resume{margin-bottom:16px;background:var(--lavender);border:1px solid #d7cdea;color:#584676}.quiz-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 13px}.home-button{border:1px solid #dfe4da;background:#fffefa;color:#56664f;border-radius:12px;padding:10px 13px;min-height:44px;font-size:12px}.mode-label{font-size:12px;color:var(--muted);text-align:right}.reason{font-size:11px;font-weight:650;color:#6b775d;margin:12px 0 3px}.guess-label{display:flex;align-items:flex-start;gap:10px;margin:0 0 14px;padding:12px 13px;border-radius:13px;background:#f8f1e8;font-size:13px;min-height:50px;cursor:pointer;color:#725d42}.guess-label input{width:20px;height:20px;flex:0 0 20px;accent-color:#84653f;margin:1px 0 0}.guess-label small{font-size:11px;color:#786d5c;display:block;line-height:1.45;margin-top:2px}.statements{margin:0;padding-left:22px}.statements li{margin:8px 0 13px;line-height:1.65}.statements li::marker{font-weight:750}.schedule-note{padding:13px 15px;border-radius:12px;background:var(--lavender);color:#5d4a7b;font-size:12px!important}.source-list li{margin-bottom:6px}.sources{overflow-wrap:anywhere}.recovery{font-size:12px;margin:10px 0;border-radius:12px;padding:12px;background:var(--peach)}@media(max-width:360px){.home-stat strong{font-size:21px}.home-stat span{font-size:10px}.book-number{font-size:10px}.home .card{padding:16px}.home-stat{padding:12px 8px}.offline{font-size:10px}.brand-name{font-size:19px}}
   </style>
 </head>
 <body>
@@ -16,40 +18,43 @@
   <header class="brand">
     <div class="brand-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M4 6.5c3.4-1.2 6.7-.7 10 1.6 3.3-2.3 6.6-2.8 10-1.6v16c-3.4-1.2-6.7-.7-10 1.6-3.3-2.3-6.6-2.8-10-1.6v-16Z" stroke="#56765e" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 8v16M7.5 11l3 .9M7.5 15l3 .9M17.5 12l3-.9M17.5 16l3-.9" stroke="#56765e" stroke-width="1.5" stroke-linecap="round"/></svg></div>
     <div><div class="brand-name">Somatologie</div><div class="brand-sub">Malý krok, velké pochopení.</div></div>
-    <span class="offline">I offline</span>
+    <span class="offline">50 otázek</span>
   </header>
-  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p>Prvních 10 otázek z učebnice, pokaždé v jiném pořadí. Vyber odpověď a zjisti, proč dává smysl.</p></section>
+
+  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">50 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
   <div id="storageNotice" class="toast" hidden>Prohlížeč nepovolil ukládání. Test funguje, ale po zavření se průběh neobnoví.</div>
-  <section class="stats" aria-label="Výsledky tohoto kola">
-    <div class="stat"><span class="stat-label">Zodpovězeno</span><span class="stat-value" id="answered">0 <span class="stat-unit">/ 10</span></span></div>
-    <div class="stat"><span class="stat-label">Úspěšnost</span><span class="stat-value" id="success">—</span></div>
-    <div class="stat"><span class="stat-label">Správně</span><span class="stat-value" id="correct">0 <span class="stat-unit">/ 0</span></span></div>
+  <div id="recoveryNotice" class="recovery" hidden>Uložený pokrok nebylo možné načíst. Začínáme s novým přehledem.</div>
+  <section class="card home" id="home" aria-label="Přehled učení">
+    <h2 class="home-title">Každá otázka má svůj čas.</h2>
+    <div class="home-stats"><div class="home-stat"><span>Vyzkoušeno</span><strong id="seenTotal">0 / 50</strong></div><div class="home-stat"><span>Zvládnuté</span><strong id="masteredTotal">0 / 50</strong></div><div class="home-stat"><span>Čas zopakovat</span><strong id="dueTotal">0</strong></div></div>
+    <p class="learning-label">Zvládnuté = alespoň 3 úspěšná vybavení v plánovaných termínech.</p>
+    <div class="track" role="progressbar" id="learningProgress" aria-label="Počet opakovaně zvládnutých otázek" aria-valuemin="0" aria-valuemax="50" aria-valuenow="0"><div class="fill" id="learningFill"></div></div>
+    <p class="home-hint" id="homeHint"></p>
+    <button class="next resume" id="resume" hidden>Pokračovat v kole</button>
+    <div class="mode-card recommended"><span class="tag">Doporučený režim</span><h3>Chytré procvičování</h3><p>Krátké kolo do 10 odpovědí. Přednost mají chyby a tipy, pak otázky k opakování a nové. Zvládnuté odpočívají do svého termínu.</p><button class="next" id="smartStart">Začít chytré kolo</button></div>
+    <div class="mode-card"><h3>Jen chyby a tipy <span class="pill" id="weakCount">0</span></h3><p id="weakHint"></p><button class="next secondary" id="weakStart">Procvičit slabší otázky</button></div>
+    <div class="mode-card"><h3>Test všech 50</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
+    <details class="home-help"><summary>Jak funguje chytré opakování?</summary><ul><li><strong>Chyba nebo tip:</strong> otázka se vrátí po alespoň třech jiných odpovědích v témže chytrém kole, jinak přibližně za 10 minut.</li><li><strong>Správně a bez tipu:</strong> termíny se postupně prodlužují na 1, 3, 7, 14 a 30 dní od příslušné odpovědi.</li><li><strong>Správně před termínem:</strong> procvičení se počítá do výsledku, ale samo neposune otázku na vyšší úroveň.</li><li><strong>Tři úspěchy s odstupem:</strong> otázka se označí jako zvládnutá. Nezmizí navždy; po termínu se znovu ověří.</li><li><strong>Další chyba:</strong> otázka se vrátí mezi ty k častému procvičení.</li></ul><p>Jednotlivé otázky se v chytrém kole mohou zopakovat. Skóre proto počítá odpovědi, zatímco horní přehled počítá různé otázky.</p><p>Pokrok se ukládá pouze v tomto prohlížeči a na této webové adrese. Telefon a počítač mají samostatný přehled. Režim tipování označ před odpovědí.</p></details>
   </section>
-  <section class="card" id="quiz" aria-label="Testová otázka">
-    <div class="question-head"><span class="pill" id="category">Základy biologie</span><span class="book-number" id="bookNumber"></span></div>
+  <div class="quiz-toolbar" id="quizToolbar" hidden><button class="home-button" id="homeButton">← Přehled</button><span class="mode-label" id="modeLabel"></span></div>
+  <section class="stats" id="roundStats" aria-label="Výsledky tohoto kola" hidden><div class="stat"><span class="stat-label">Odpovědi</span><span class="stat-value" id="answered">0 <span class="stat-unit">/ 10</span></span></div><div class="stat"><span class="stat-label">Úspěšnost</span><span class="stat-value" id="success">—</span></div><div class="stat"><span class="stat-label">Správně</span><span class="stat-value" id="correct">0 <span class="stat-unit">/ 0</span></span></div></section>
+  <section class="card" id="quiz" aria-label="Testová otázka" hidden>
+    <div class="question-head"><span class="pill" id="category"></span><span class="book-number" id="bookNumber"></span></div>
+    <p class="reason" id="reason"></p>
     <div class="track" role="progressbar" aria-label="Průběh kola" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="progress"><div class="fill" id="fill"></div></div>
     <h2 class="question-title" id="question" tabindex="-1"></h2>
     <div id="legend" class="legend" hidden></div>
     <p class="hint" id="hint">Vyber jednu odpověď.</p>
+    <label class="guess-label"><input type="checkbox" id="guess"><span>Spíš tipuju<small>I správná odpověď se pak brzy zopakuje.</small></span></label>
     <div class="answers" id="answers" role="group" aria-labelledby="question"></div>
-    <div id="announcement" class="sr" role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"></div>
-    <section class="feedback" id="feedback" aria-label="Vysvětlení odpovědi" hidden>
-      <div class="feedback-status" id="feedbackStatus"></div>
-      <h3 id="explanationTitle"></h3><div id="explanation"></div>
-    </section>
-    <div class="actions"><button class="next" id="next" disabled><span id="nextText">Další otázka</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button><p class="under-button" id="underButton">Nejdřív zkus odpovědět. Není kam spěchat.</p></div>
+    <div id="announcement" role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"></div>
+    <section class="feedback" id="feedback" aria-label="Vysvětlení odpovědi" hidden><div class="feedback-status" id="feedbackStatus"></div><h3 id="explanationTitle"></h3><div id="explanation"></div></section>
+    <div class="actions"><button class="next" id="next" disabled><span id="nextText">Další otázka</span><svg viewBox="0 0 20 20" fill="none" width="17" height="17" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button><p class="under-button" id="underButton"></p></div>
   </section>
   <section class="card" id="results" aria-label="Výsledek kola" hidden></section>
-  <footer class="footer">
-    <p id="saveStatus">Průběh se ukládá v tomto prohlížeči.</p>
-    <button class="reset" id="reset">Začít nové kolo</button>
-    <details class="sources"><summary>O otázkách a zdrojích</summary>
-      <p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Otázky 1–10: tištěné strany 8–9 (strana 5 PDF). Oficiální klíč: tištěná strana 15 (strana 8 PDF).</p>
-      <p>Hodnocení přesně odpovídá klíči: <strong>1 D · 2 B · 3 C · 4 D · 5 C · 6 D · 7 B · 8 B · 9 B · 10 B</strong>. Ruční značky ve skenu nejsou zdrojem hodnocení. U přiřazování mají písmena v legendě jiný význam než tlačítka odpovědí A–D.</p>
-      <p>Vysvětlení jsou nově napsaná pro tuto aplikaci. Historické pojmy a zjednodušené otázky jsou vysvětlené přímo u odpovědi; zejména otázky 3, 5, 9 a 10 potřebují doplnění souvislostí.</p>
-      <ul><li><a href="https://openstax.org/books/concepts-biology/pages/1-1-themes-and-concepts-of-biology" target="_blank" rel="noopener noreferrer">OpenStax: společné znaky života</a></li><li><a href="https://openstax.org/books/biology/pages/18-1-understanding-evolution" target="_blank" rel="noopener noreferrer">OpenStax: variabilita a přírodní výběr</a></li><li><a href="https://cneos.jpl.nasa.gov/about/life_on_earth.html" target="_blank" rel="noopener noreferrer">NASA / JPL: nejstarší doklady života</a></li><li><a href="https://www.sciencedirect.com/science/article/pii/S1359029420301229" target="_blank" rel="noopener noreferrer">Přehled výzkumu koacervátů jako modelů prabuněk</a></li><li><a href="https://humanorigins.si.edu/evidence/human-fossils/species/homo-erectus" target="_blank" rel="noopener noreferrer">Smithsonian: Homo erectus a lidská evoluce</a></li></ul>
-      <p>Aplikace nepotřebuje připojení, registraci ani instalaci. Odkazy na zdroje vyžadují internet. Kolo obsahuje každou vybranou otázku právě jednou.</p>
-    </details>
+  <footer class="footer"><p id="saveStatus">Pokrok se ukládá v tomto prohlížeči. Bez účtu a registrace.</p>
+    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 50 otázek v pořadí dokumentu: kapitolu I, otázky 1–45, a kapitolu II, otázky 1–5 (v aplikaci 46–50).</p><p>Otázky: tištěné strany 8–15 a 18 (PDF strany 5–8 a 10). Tištěné klíče: strany 15 a 22 (PDF strany 8 a 12). Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
+    <details class="sources"><summary>Uložený pokrok</summary><p>Nové kolo nemaže dřívější znalost otázek. Vymazání dole resetuje celé učení. Vymazáním dat prohlížeče se pokrok také ztratí. Stejná webová adresa po nahrání nové verze pokrok zachová, pokud zůstane zachované úložiště prohlížeče.</p><button class="reset" id="reset">Vymazat celý uložený pokrok</button></details>
   </footer>
 </main>
 <script>
@@ -173,51 +178,1113 @@ const QUESTIONS = [
     source:{label:'Smithsonian: Homo erectus a pozdější lidské druhy',url:'https://humanorigins.si.edu/evidence/human-fossils/species/homo-erectus'}
   }
 ];
-const $=id=>document.getElementById(id);
-const LETTERS=['A','B','C','D'];
-const STORAGE_KEY='somatologie-first10-v1';
-const byId=new Map(QUESTIONS.map(q=>[q.id,q]));
-let storageOK=true;
-let state;
+
+QUESTIONS.push(...[
+  {
+    "id": 11,
+    "category": "Člověk a antropologie",
+    "question": "Který z názvů lidských ras (plemen) je nesprávný?",
+    "options": [
+      "Antropoidní",
+      "Mongoloidní",
+      "Europoidní",
+      "Negroidní"
+    ],
+    "answer": 0,
+    "title": "Historické pojmy nejsou dnešní mapa lidstva",
+    "paragraphs": [
+      "Klíč starší učebnice vybírá A. Slovo antropoidní odkazuje na podobnost s člověkem, případně na skupiny primátů; není názvem jedné z historických kategorií, které tato otázka uvádí.",
+      "Ostatní tři názvy patřily do starších antropologických klasifikací. Dnešní genetika však lidstvo nerozděluje do takových pevných biologických škatulek. Lidská rozmanitost připomíná plynulé přechody barev: nelze ji přesně vystihnout několika krabicemi s ostrými hranicemi.",
+      "Pro tuto konkrétní otázku si tedy zapamatuj A, ale neber zbytek nabídky jako platnou současnou klasifikaci lidských poddruhů. Všichni současní lidé patří k druhu Homo sapiens."
+    ],
+    "memory": "V historickém testu vyřaď antropoidní. Lidská rozmanitost ale není sada tří biologických krabic.",
+    "note": "Otázka zachovává zastaralé názvosloví dokumentu. Rasové kategorie jsou společenské konstrukty a nejsou přesným popisem genetické rozmanitosti.",
+    "source": {
+      "label": "NHGRI: rasové kategorie a genetika",
+      "url": "https://www.genome.gov/about-genomics/policy-issues/population-descriptors-in-genomics"
+    }
+  },
+  {
+    "id": 12,
+    "category": "Viry a bakterie",
+    "question": "Viry",
+    "options": [
+      "Jsou nejjednodušší buňky",
+      "Parazitují jen v živočišných buňkách",
+      "Mimo buňku nejeví známky života",
+      "Nemusí obsahovat nukleové kyseliny"
+    ],
+    "answer": 2,
+    "title": "Virus je balíček návodu, který potřebuje cizí dílnu",
+    "paragraphs": [
+      "Virová částice obsahuje genetický návod, DNA nebo RNA, a ochranný obal. Nemá však vlastní kompletní buněčnou výbavu, například ribosomy, na kterých by vyráběla bílkoviny. Mimo vhodnou hostitelskou buňku proto sama neroste, neprovozuje vlastní metabolismus ani se nemnoží; tomu odpovídá C.",
+      "Představ si soubor s návodem na výrobek. Bez dílny, materiálu a pracovníků z něj další výrobky nevzniknou. Virus si potřebnou dílnu vypůjčí od napadené buňky a přesměruje část jejích činností na tvorbu nových virových částic.",
+      "Viry tedy nejsou nejjednodušší buňky, ale nebuněčné částice. Nenapadají jen živočichy: existují viry rostlin i bakterií. Genetická informace je jejich základní součást, takže možnost D neplatí."
+    ],
+    "memory": "Virus = návod v obalu. Hostitelská buňka = dílna, bez které nevzniknou nové kopie."
+  },
+  {
+    "id": 13,
+    "category": "Viry a bakterie",
+    "question": "Virus",
+    "options": [
+      "Je schopen růstu",
+      "Je schopen dělení",
+      "Je schopen autoreprodukce",
+      "Má metabolismus"
+    ],
+    "answer": 2,
+    "title": "Nové viry se skládají; původní částice se nerozdělí",
+    "paragraphs": [
+      "Klíč uvádí C, tedy schopnost autoreprodukce. Tím se zde myslí vznik dalších virových částic podle virové genetické informace. Slovo nesmíš chápat jako samostatné množení bez pomoci: virus se reprodukuje pouze s využitím hostitelské buňky.",
+      "Buňka vyrobí kopie virové DNA či RNA a potřebné virové bílkoviny. Z těchto součástí se potom sestaví nové částice. Je to jako výroba dalších stavebnic podle stejného návodu, ne jako rozpůlení jedné hotové stavebnice na dvě celé.",
+      "Virová částice se proto nedělí buněčným dělením, nezvětšuje se růstem jako buňka a nemá vlastní metabolismus. Rozlišuj možnost vytvářet potomstvo uvnitř cizí buňky od schopnosti žít a množit se samostatně."
+    ],
+    "memory": "Virus se kopíruje v hostiteli. Nesprávná představa: jedna částice vyroste a rozpůlí se.",
+    "note": "Termín autoreprodukce je zde zavádějící, pokud by znamenal nezávislost. Samostatnou reprodukci bez hostitelské buňky viry nezvládají."
+  },
+  {
+    "id": 14,
+    "category": "Viry a bakterie",
+    "question": "Bakterie",
+    "options": [
+      "Nemají jádro",
+      "Jsou podbuněčné organismy",
+      "Mají cytoskeletální soustavu",
+      "Obsahují buněčné organely"
+    ],
+    "answer": 0,
+    "title": "DNA bez samostatné místnosti",
+    "paragraphs": [
+      "Učebnice vybírá A. Bakterie mají DNA, ale nemají buněčné jádro ohraničené jaderným obalem. Jejich hlavní genetická informace se nachází v oblasti buňky zvané nukleoid. Je to jako pracovní dokumenty na stole v otevřené kanceláři, místo v oddělené zamčené místnosti.",
+      "Bakterie jsou skutečné buňky: mají membránu, cytoplazmu a ribosomy a uskutečňují vlastní metabolismus. Nejsou tedy podbuněčné částice jako viry. Nemají běžnou sestavu membránových organel typickou pro naše buňky, například mitochondrie a Golgiho aparát.",
+      "Z výroku bez jádra ale nikdy nevyvozuj bez DNA. Právě DNA se před dělením zkopíruje, aby ji získaly obě nové buňky."
+    ],
+    "memory": "Bakterie mají DNA, ale bez jaderného obalu: otevřená kancelář místo samostatné místnosti.",
+    "note": "Nabídka je zjednodušená. U bakterií dnes známe cytoskeletální bílkoviny; ribosomy jsou navíc nemembránové buněčné struktury. A je požadovaná odpověď klíče, nikoli důkaz, že bakterie nemají žádnou vnitřní organizaci.",
+    "source": {
+      "label": "Bakteriální cytoskelet",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1594594/"
+    }
+  },
+  {
+    "id": 15,
+    "category": "Buňka",
+    "question": "Prokaryotická buňka",
+    "options": [
+      "Nemá ribosomy",
+      "Má jediný chromozom",
+      "Dělí se mitózou",
+      "Je stejně velká jako eukaryotická buňka"
+    ],
+    "answer": 1,
+    "title": "Jednodušší uspořádání neznamená nulovou výbavu",
+    "paragraphs": [
+      "Pro běžný školní model prokaryotické buňky platí B: jeden hlavní, často kruhový chromozom. Není uložený v jádře s obalem, ale v nukleoidu. Kromě něj může buňka obsahovat menší samostatné úseky DNA, plasmidy.",
+      "Ribosomy prokaryota mají, protože i ona musí vyrábět bílkoviny. Jsou jako základní výrobní stroje, bez kterých by buňka nemohla dlouhodobě fungovat. Mitóza je naproti tomu dělení jádra eukaryot; typická bakterie se množí příčným dělením po zkopírování DNA.",
+      "Prokaryotické buňky bývají menší než eukaryotické. To neznamená, že všechny mají přesně stejnou velikost nebo že počet chromozomů nemá výjimky."
+    ],
+    "memory": "Školní model bakterie: jeden hlavní chromozom, ribosomy ano, mitóza ne.",
+    "note": "Existují prokaryota s více chromozomy i neobvyklou velikostí. Výrok B není univerzální zákon pro každý druh; odpovídá modelu a klíči učebnice.",
+    "source": {
+      "label": "Bakterie s více chromozomy",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3348396/"
+    }
+  },
+  {
+    "id": 16,
+    "category": "Buněčné membrány",
+    "question": "Základem biomembrán v buňce jsou",
+    "options": [
+      "Peptidoglykany",
+      "Polysacharidy",
+      "Koloidní systémy",
+      "Fosfolipidy a proteiny"
+    ],
+    "answer": 3,
+    "title": "Mastná stěna s dveřmi a čtečkami",
+    "paragraphs": [
+      "Fosfolipidy mají část, která se dobře snáší s vodou, a část, která se vodě vyhýbá. Ve vodním prostředí se proto uspořádají do dvou vrstev: části přitahované vodou míří ven, zatímco nepolární ocásky jsou schované uvnitř. Tak vznikne základ membrány.",
+      "Do této vrstvy jsou vložené bílkoviny. Některé propouštějí vybrané látky jako dveře, jiné je aktivně přenášejí nebo přijímají signály jako čtečky na vstupu. Membrána tedy nejen odděluje dvě prostředí, ale také kontroluje jejich komunikaci.",
+      "Proto je správně D. Peptidoglykan je typický stavební materiál bakteriální buněčné stěny, což je jiná struktura než membrána. Cukry mohou být k membránovým molekulám připojené, ale netvoří její základní dvojvrstvu."
+    ],
+    "memory": "Fosfolipidy tvoří stěnu, proteiny dveře a přijímače signálů."
+  },
+  {
+    "id": 17,
+    "category": "Buněčné organely",
+    "question": "Které z uvedených struktur nepatří k membránovým organelám buňky?",
+    "options": [
+      "Vakuoly",
+      "Mitochondrie",
+      "Ribosomy",
+      "Jádro"
+    ],
+    "answer": 2,
+    "title": "Ribosom je pracovní stroj, ne místnost s obalem",
+    "paragraphs": [
+      "Vakuola, mitochondrie i buněčné jádro jsou oddělené od okolní cytoplazmy membránou či membránami. Je to jako místnosti v továrně: jejich stěny umožňují udržet uvnitř vhodné podmínky pro určitou práci.",
+      "Ribosom takový membránový obal nemá. Je tvořený ribosomální RNA a bílkovinami a sestavuje další bílkoviny. Proto je správně C. Může být volně v cytoplazmě nebo připojený k drsnému endoplazmatickému retikulu.",
+      "Připojení k membráně ale není totéž jako vlastní membránový obal. Když připevníš stroj ke stěně dílny, nestane se z něj samostatná místnost."
+    ],
+    "memory": "Ribosom = stroj bez obalu, i když může pracovat u membrány."
+  },
+  {
+    "id": 18,
+    "category": "Buněčné organely",
+    "question": "Lysosomy živočišných buněk slouží jako",
+    "options": [
+      "Energetická centra buňky",
+      "Místa rozkladných procesů",
+      "Místa fotosyntézy",
+      "Syntetická centra buňky"
+    ],
+    "answer": 1,
+    "title": "Buněčná recyklační linka",
+    "paragraphs": [
+      "Lysosomy obsahují enzymy, které rozkládají různé látky. Mohou zpracovat materiál pohlcený buňkou i její opotřebované součásti. Proto je správně B: jsou místem rozkladných procesů.",
+      "Představ si recyklační centrum, kde se starý výrobek rozebere na použitelné části. Buňka díky rozkladu získává stavební jednotky, které může znovu využít. Lysosom není jen odpadkový koš, ale i prostředek obnovy a hospodaření s materiálem.",
+      "Rozkladné enzymy pracují v kyselém prostředí uvnitř lysosomu; membrána odděluje tuto dílnu od zbytku buňky. Energetické centrum v této nabídce připomíná mitochondrii, fotosyntéza probíhá v chloroplastech a stavba nových bílkovin na ribosomech."
+    ],
+    "memory": "Lysosom rozebírá a recykluje. Mitochondrie pomáhá získávat energii."
+  },
+  {
+    "id": 19,
+    "category": "Buněčné organely",
+    "question": "Mezi syntetická centra eukaryotické buňky patří",
+    "options": [
+      "Lysosomy",
+      "Mitochondrie",
+      "Jádro",
+      "Golgiho systém"
+    ],
+    "answer": 3,
+    "title": "Golgiho aparát dokončuje, třídí a odesílá výrobky",
+    "paragraphs": [
+      "Učebnice vybírá D. Golgiho aparát přijímá například bílkoviny z endoplazmatického retikula, dál je upravuje, třídí a balí do váčků. Některé materiály také vytváří či chemicky doplňuje, například určité cukerné složky.",
+      "Představ si závěrečnou úpravnu a expedici továrny. Výrobek přijde z výrobní linky, dostane další úpravu a adresu a pošle se na správné místo. Bez třídění by část buněčných výrobků skončila na nesprávné adrese.",
+      "Bílkovinný řetězec samotný se ale sestavuje na ribosomu. Lysosom naopak především rozkládá. Jádro obsahuje genetický návod a mitochondrie se významně podílí na energetickém hospodaření."
+    ],
+    "memory": "Ribosom vyrábí řetězec, Golgiho aparát ho dokončuje a posílá.",
+    "note": "Pojem syntetické centrum je široký: v jádře i mitochondriích také probíhá syntéza některých látek. D je zamýšlená odpověď v tomto členění, ne tvrzení, že jinde v buňce syntéza neprobíhá."
+  },
+  {
+    "id": 20,
+    "category": "Buněčné organely",
+    "question": "Která z organel obsahuje vlastní DNA?",
+    "options": [
+      "Golgiho komplex",
+      "Lysosom",
+      "Endoplazmatické retikulum",
+      "Mitochondrie"
+    ],
+    "answer": 3,
+    "title": "Mitochondrie má malý vlastní návod",
+    "paragraphs": [
+      "Většina genetické informace naší buňky je v jádře, ale mitochondrie má také svůj malý genom. Obsahuje návody pro část její výbavy. Proto je mezi uvedenými možnostmi správně D.",
+      "Dává to smysl v souvislosti s evolucí. Mitochondrie vznikly z bakteriálních předků, kteří se začlenili do buněk jiných organismů. Část původní samostatné výbavy si zachovaly, včetně DNA a vlastních ribosomů.",
+      "Je to jako pobočka firmy s malou vlastní příručkou, která je ale zároveň závislá na centrále. Mitochondrie nedokáže vyrobit vše potřebné sama: mnoho jejích bílkovin se tvoří podle genů uložených v buněčném jádře. Golgiho aparát, lysosomy a ER vlastní genom nemají."
+    ],
+    "memory": "Mitochondrie = někdejší samostatný pomocník s malou vlastní genetickou příručkou."
+  },
+  {
+    "id": 21,
+    "category": "Buněčné organely",
+    "question": "Mitochondrie",
+    "options": [
+      "Neobsahují enzymy",
+      "Zajišťují buněčné dýchání",
+      "Mají na svém povrchu jednu membránu",
+      "Nemají schopnost autoreprodukce"
+    ],
+    "answer": 1,
+    "title": "Z energie živin vzniká použitelné ATP",
+    "paragraphs": [
+      "Mitochondrie se podílejí na buněčném dýchání: energii získanou při zpracování živin pomáhají převést do ATP. ATP je pro buňku snadno využitelný nosič energie, který pohání například transport látek a svalovou práci. Správně je B.",
+      "Představ si elektrárnu, která energii paliva převede na formu použitelnou pro spotřebiče. Na vnitřní mitochondriální membráně probíhají děje vedoucí k tvorbě velké části ATP; kyslík při nich přijímá elektrony na konci dýchacího řetězce.",
+      "Mitochondrie obsahují mnoho enzymů a dvě membrány. Mohou se také dělit, i když jsou závislé na zbytku buňky. Buněčné dýchání není totéž co nádech: plíce přivádějí kyslík, buňky ho pak využívají při chemických dějích."
+    ],
+    "memory": "Plíce dodají kyslík. Mitochondrie ho využijí při získávání energie pro ATP."
+  },
+  {
+    "id": 22,
+    "category": "Tvorba bílkovin",
+    "question": "Ribosomy v buňkách se účastní syntézy",
+    "options": [
+      "Nukleových kyselin",
+      "Tuků",
+      "Cukrů",
+      "Bílkovin"
+    ],
+    "answer": 3,
+    "title": "Ribosom navléká aminokyseliny podle návodu",
+    "paragraphs": [
+      "Bílkovina je řetězec aminokyselin. Ribosom čte informaci v mRNA a spojuje aminokyseliny do předepsaného pořadí. Tím tvoří bílkovinný řetězec, takže správně je D.",
+      "Představ si náhrdelník s různými korálky. Nestačí navléct libovolné korálky: pořadí určí, jak se výsledný řetězec poskládá a co bude dělat. U bílkoviny její prostorový tvar významně ovlivňuje funkci, například zda působí jako enzym nebo receptor.",
+      "DNA poskytuje původní genetický návod, mRNA jeho pracovní přepis a ribosom místo sestavení. Tvorba nukleových kyselin, tuků a cukrů vyžaduje jiné enzymové postupy; není hlavní prací ribosomu."
+    ],
+    "memory": "Ribosom = navlékač aminokyselin. Výsledkem je bílkovina."
+  },
+  {
+    "id": 23,
+    "category": "Tvorba bílkovin",
+    "question": "Syntéza bílkovin na ribosomech",
+    "options": [
+      "Přiřazuje aminokyseliny podle pořadí nukleotidů na DNA",
+      "Využívá k dopravě aminokyselin k místu syntézy molekul tRNA",
+      "Probíhá v Golgiho komplexu",
+      "Probíhá nepřetržitě"
+    ],
+    "answer": 1,
+    "title": "tRNA je kurýr se správnou zásilkou",
+    "paragraphs": [
+      "Každá tRNA přináší k ribosomu určitou aminokyselinu. Zároveň nese antikodon, který se může spojit s odpovídajícím kodonem na mRNA. Tím se dodaná aminokyselina zařadí na správné místo. Proto je správně B.",
+      "Je to jako kurýr, který má zásilku a její adresu. Ribosom kontroluje návaznost adres na pracovním návodu mRNA a spojuje správně doručené aminokyseliny do řetězce. Není to náhodné přihazování materiálu.",
+      "DNA určuje informaci nepřímo, ale ribosom přímo čte mRNA, nikoli DNA. Golgiho aparát pak může výrobek upravovat a třídit, není místem navlékání aminokyselin. Tvorba bílkovin se navíc řídí podle potřeb buňky a jednotlivé řetězce mají začátek i konec."
+    ],
+    "memory": "mRNA = pracovní návod, tRNA = kurýr, ribosom = montážní linka."
+  },
+  {
+    "id": 24,
+    "category": "Tvorba bílkovin",
+    "question": "Proteosyntéza probíhá",
+    "options": [
+      "V lysosomech",
+      "Na ribosomech",
+      "V mitochondriích",
+      "Na hladkém endoplazmatickém retikulu"
+    ],
+    "answer": 1,
+    "title": "Hledej stroj, ne jen budovu, kde může stát",
+    "paragraphs": [
+      "Proteosyntéza znamená tvorbu bílkovin. Samotný řetězec aminokyselin sestavuje ribosom, a proto je správně B. Ribosomy mohou pracovat volně v cytoplazmě nebo na drsném endoplazmatickém retikulu.",
+      "Mitochondrie jsou trochu chyták: skutečně v nich vzniká malá část bílkovin. I tam ale řetězce sestavují mitochondriální ribosomy. Když se ptáš, kde se vyrábí chleba, nejpřesnější odpovědí na výrobní zařízení je pec, ne jedna konkrétní budova, ve které pec stojí.",
+      "Lysosom především rozkládá materiál. Hladké ER nemá na povrchu připojené ribosomy a souvisí například s tvorbou lipidů. Název drsné ER odkazuje právě na připojené ribosomy."
+    ],
+    "memory": "Proteosyntéza → proteiny → ribosomy. I mitochondriální bílkoviny vyrábějí ribosomy.",
+    "note": "Možnost C popisuje skutečné místo části proteosyntézy, ale B je univerzální výrobní struktura a odpověď klíče."
+  },
+  {
+    "id": 25,
+    "category": "Buňka a dělení",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "Na ribosomech drsného endoplazmatického retikula jsou syntetizovány bílkoviny a zde jsou i upravovány pro svou funkci.",
+      "Po zdvojení centriolu začne v profázi mitózy (nepřímé dělení buněk) vznikat dělicí vřeténko."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 1,
+    "title": "Tady je potřeba oddělit klíč od skutečné biologie",
+    "paragraphs": [
+      "Vytištěný klíč uvádí B, tedy první tvrzení ne a druhé ano. Druhé tvrzení odpovídá běžnému popisu živočišné buňky: po předchozím zdvojení centrosomu se v profázi organizuje dělicí vřeténko. Jeho mikrotubuly pomohou rozdělit chromozomy.",
+      "První tvrzení má nejasné slovo zde. Na ribosomu vzniká řetězec; v drsném ER pak probíhá jeho skládání a řada počátečních úprav. Další úpravy pokračují v Golgiho aparátu. Pokud zde znamená drsné ER jako celek, je základ tvrzení správný. Pokud znamená výhradně ribosom, směšuje dva různé kroky.",
+      "Představ si montáž a dokončování v sousedních částech dílny. Ribosom montuje řetězec, ER pomáhá se skládáním a úpravami. Nenauč se kvůli klíči nesprávnou poučku, že ER bílkoviny neupravuje."
+    ],
+    "memory": "Klíč: B. Biologie: ribosom sestaví řetězec, ER ho skládá a upravuje; vřeténko se formuje v profázi.",
+    "note": "Klíč je u této formulace problematický. Při běžném výkladu prvního tvrzení jako práce drsného ER jsou obě tvrzení pravdivá (C). Aplikace zachovává B pro shodu s vytištěným testem.",
+    "source": {
+      "label": "NCBI: úpravy a skládání bílkovin v ER",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK9889/"
+    },
+    "sources": [
+      {
+        "label": "OpenStax: profáze a dělicí vřeténko",
+        "url": "https://openstax.org/books/biology-2e/pages/10-2-the-cell-cycle"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "category": "Chromozomy",
+    "question": "Chromozomy v jádře eukaryotické buňky",
+    "options": [
+      "Lze pozorovat v mikroskopu po celý život buňky",
+      "Řadíme do karyotypu od nejdelšího po nejkratší",
+      "Jsou tvořeny čistými molekulami DNA",
+      "Jsou dvouvláknové útvary se dvěma centromerami"
+    ],
+    "answer": 1,
+    "title": "Karyotyp je přehledně srovnaná fotografie chromozomů",
+    "paragraphs": [
+      "Karyotyp popisuje chromozomovou výbavu buňky. Při sestavování jejího obrazového přehledu se chromozomy párují a rozlišují podle velikosti, polohy centromery a dalších znaků. Učebnice to zkracuje na řazení od nejdelších k nejkratším: B.",
+      "Je to jako srovnat ponožky do párů, aby bylo vidět, zda nějaká přebývá nebo chybí. Jednotlivé kondenzované chromozomy jsou nejlépe rozeznatelné při dělení; mimo dělení je DNA obvykle rozvolněnější a neuvidíš běžně každý chromozom jako samostatné X.",
+      "Chromozom není čistá DNA: DNA je navázaná na bílkoviny, které ji pomáhají uspořádat. Zdvojený chromozom má dvě sesterské chromatidy spojené v oblasti centromery, ne jednoduchou definici dvou nezávislých centromer."
+    ],
+    "memory": "Karyotyp = spárovaný a uspořádaný přehled chromozomů, jako kontrola párů ponožek.",
+    "note": "Řazení podle délky je školní zjednodušení; při skutečné identifikaci se používá i tvar a pruhování a číslování není dokonale sestupné podle délky."
+  },
+  {
+    "id": 27,
+    "category": "Buněčné organely",
+    "question": "Jadérko je",
+    "options": [
+      "Místem syntézy DNA",
+      "Místem syntézy RNA",
+      "V jádře ohraničeno vlastní membránou",
+      "V jádře vždy jen jedno"
+    ],
+    "answer": 1,
+    "title": "Dílna na součásti ribosomů uvnitř jádra",
+    "paragraphs": [
+      "V jadérku vzniká a zpracovává se velká část ribosomální RNA. Spolu s bílkovinami se tu připravují podjednotky ribosomů, které později vyrábějí bílkoviny. Proto je správně B.",
+      "Představ si dílnu, která nevyrábí konečný výrobek, ale vyrábí části výrobních strojů. Jadérko pomáhá buňce vybavit se ribosomy; bez nich by se nemohly sestavovat nové bílkoviny.",
+      "Jadérko není malé jádro s vlastním obalem. Nemá vlastní membránu a v jednom jádře může být jadérek více. Jeho výraznost často souvisí s tím, jak intenzivně buňka vyrábí potřebné součásti ribosomů."
+    ],
+    "memory": "Jadérko vyrábí RNA a připravuje ribosomy. Strojírna uvnitř jádra."
+  },
+  {
+    "id": 28,
+    "category": "Buněčné organely",
+    "question": "Přiřaďte jednotlivé organely k jejich funkcím:",
+    "terms": [
+      "Buněčné jádro",
+      "Drsné ER",
+      "Hladké ER",
+      "Golgiho komplex",
+      "Lysosomy",
+      "Mitochondrie"
+    ],
+    "definitions": [
+      "Rozklad bakterií pohlcených fagocytózou",
+      "Syntéza cukrů a tuků",
+      "Syntéza a transport buněčných sekretů",
+      "Buněčné oxidace a tvorba energie",
+      "Syntéza bílkovin na ribosomech",
+      "Řídicí organela, obsahující podstatnou část genetické informace"
+    ],
+    "options": [
+      "A5, B2, C3, D6, E1, F4",
+      "A4, B2, C5, D3, E1, F4",
+      "A6, B5, C2, D3, E1, F4",
+      "A4, B5, C2, D1, E3, F5"
+    ],
+    "answer": 2,
+    "title": "Jedna buňka, několik navazujících pracovišť",
+    "paragraphs": [
+      "Jádro uchovává většinu genetických návodů, proto A6. Ribosomy na drsném ER sestavují bílkoviny, tedy B5. Hladké ER se podílí na tvorbě lipidů a také na některých dějích metabolismu sacharidů, v nabídce C2.",
+      "Golgiho aparát dále zpracovává a třídí materiál pro transport, proto D3. Lysosomy rozkládají pohlcený materiál, například bakterie, tedy E1. Mitochondrie se účastní oxidačních dějů a tvorby ATP, takže F4. Celá kombinace odpovídá C.",
+      "Představ si továrnu: archiv návodů, výrobu, dokončování, expedici, recyklaci a energetický provoz. Nejde o šest izolovaných ostrůvků; jejich práce se propojuje. Náklad z ER se například přesune do Golgiho aparátu a odtud dál."
+    ],
+    "memory": "Jádro = návod; drsné ER = bílkoviny; hladké ER = lipidy; Golgi = úprava a expedice; lysosom = rozklad; mitochondrie = ATP.",
+    "note": "Některé názvy funkcí v legendě jsou široké. Energie se nevyrábí z ničeho a bílkovinné sekrety se nesestavují přímo v Golgiho aparátu; ten je dále zpracovává."
+  },
+  {
+    "id": 29,
+    "category": "Buňka a dělení",
+    "question": "Mikrotrubičky (mikrotubuly), součást cytoskeletu",
+    "options": [
+      "Tvoří kontraktilní prstenec při dělení živočišných buněk",
+      "U spermií napomáhají oplození vajíčka",
+      "Se podílejí na lokalizaci organel v buňce",
+      "Vytvářejí mitotické dělicí vřeténko"
+    ],
+    "answer": 3,
+    "title": "Mikrotubuly jsou kolejnice i dělicí lana",
+    "paragraphs": [
+      "Mitotické vřeténko je tvořené mikrotubuly. Část z nich se připojí k chromozomům a pomůže rozdělit jejich kopie do vznikajících buněk. Klíč proto vybírá D. Představ si pečlivé roztažení dvou stejných sad zavazadel na opačné strany místnosti.",
+      "Mikrotubuly ale neslouží jen při dělení. Tvoří také dráhy pro pohyb buněčného nákladu a pomáhají organizovat polohu organel. Jsou rovněž součástí pohybového aparátu bičíku spermie.",
+      "Kontraktilní prstenec, který zaškrtí živočišnou buňku, naproti tomu stojí hlavně na aktinu a myosinu. Rozlišuj tedy lana rozdělující chromozomy od stahovacího pásu rozdělujícího buněčné tělo."
+    ],
+    "memory": "Mikrotubuly rozdělují chromozomy vřeténkem; aktin s myosinem stahují dělicí prstenec.",
+    "note": "Více možností obsahuje pravdivou biologickou souvislost: zvlášť C je také správný popis mikrotubulů, B lze chápat jako jejich roli v pohybu spermie. D je odpověď vytištěného klíče; nabídka není jednoznačná.",
+    "source": {
+      "label": "OpenStax: cytoskelet a transport",
+      "url": "https://openstax.org/books/biology-2e/pages/4-5-the-cytoskeleton"
+    }
+  },
+  {
+    "id": 30,
+    "category": "Buňka a dělení",
+    "question": "Mitóza",
+    "options": [
+      "Je nepřímé dělení buněk",
+      "Je redukční dělení buněk",
+      "Se skládá ze dvou dělení po sobě",
+      "Je urychlována cytostatiky"
+    ],
+    "answer": 0,
+    "title": "Dvě buňky dostanou zpravidla stejnou sadu návodů",
+    "paragraphs": [
+      "Mitóza je nepřímé dělení jádra, při kterém se zkopírované chromozomy řízeně rozdělí. Obvykle na ni navazuje rozdělení celé buňky. Počet chromozomových sad se přitom zachová, takže v této nabídce je správně A.",
+      "Nejdřív si představ okopírování celé příručky a potom rozdělení kopií do dvou kanceláří. Mitóza rozděluje již připravené kopie; DNA se kopíruje dříve, v S fázi buněčného cyklu. Tak tělo vytváří buňky při růstu nebo obnově tkání.",
+      "Redukční dělení se jmenuje meióza a zahrnuje dvě navazující dělení. Cytostatika dělení buněk naopak tlumí, nikoli zrychlují. Nezaměň tedy mito- a meio-: pro tvorbu běžných tělních buněk se počet sad uchovává."
+    ],
+    "memory": "Mitóza = rozdělení připravených kopií bez redukce počtu chromozomových sad."
+  },
+  {
+    "id": 31,
+    "category": "Buňka a dělení",
+    "question": "Redukční dělení – meióza",
+    "options": [
+      "Je u ženy zahajováno při každém menstruačním cyklu",
+      "Se skládá ze dvou následných buněčných dělení",
+      "Je v podstatě shodné s mitózou",
+      "Zajišťuje shodnou chromozomovou výbavu mateřské a dceřiných buněk"
+    ],
+    "answer": 1,
+    "title": "Dvě rozdělení, aby se počet sad snížil na polovinu",
+    "paragraphs": [
+      "Před meiózou se DNA jednou zkopíruje, ale pak následují dvě dělení. Při prvním se oddělují homologní chromozomy, tedy členové páru; při druhém sesterské chromatidy. Výsledné buňky tak mají polovinu původního počtu chromozomových sad. Správně je B.",
+      "Je to jako nejdřív rozdělit páry rukavic mezi dvě zásilky a pak v každé zásilce oddělit připravené kopie. Poloviční výbava je důležitá: při spojení vajíčka a spermie se dvě sady znovu doplní na obvyklý počet.",
+      "U ženy začíná meióza oocytů už před narozením a dlouho zůstává přerušená. V cyklu se část procesu obnovuje; nezačíná pokaždé úplně od začátku. Meióza navíc přispívá ke genetické rozmanitosti, takže nejde o stejný proces jako mitóza."
+    ],
+    "memory": "Meióza: jedno kopírování DNA, dvě dělení, polovina chromozomových sad."
+  },
+  {
+    "id": 32,
+    "category": "Vývoj a obnova",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "Meióza (redukční dělení) dává vznik zralým pohlavním buňkám. Svým průběhem zajišťuje variabilitu (proměnlivost) potomstva.",
+      "Tvarové a funkční rozrůznění tkání při embryogenezi se nazývá regenerace."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 0,
+    "title": "Promíchání dědičné výbavy není oprava tkáně",
+    "paragraphs": [
+      "Meióza patří k tvorbě pohlavních buněk a promíchává dědičnou výbavu. Homologní chromozomy si mohou vyměnit úseky a jejich rozdělení do buněk vytváří různé kombinace. Sourozenci proto zpravidla nejsou genetické kopie. První tvrzení učebnice bere jako pravdivé.",
+      "Když se při vývoji buňky specializují na různé úkoly a vytvářejí tkáně, mluvíme o diferenciaci. Regenerace znamená obnovu, například náhradu poškozené tkáně. Druhé tvrzení tedy používá nesprávné slovo a odpověď je A.",
+      "Představ si vznik týmu: lidé získávají různé role, což je diferenciace. Když po ztrátě člena doplníš tým, je to obnova, tedy regenerace. Tato dvě slova popisují rozdílné děje."
+    ],
+    "memory": "Diferenciace = specializace při vývoji. Regenerace = obnova po ztrátě či poškození.",
+    "note": "Meióza sama nezahrnuje všechny kroky dozrání gamet; například spermatidy se ještě přeměňují ve spermie. První tvrzení je školní zkratka pro její roli při jejich vzniku."
+  },
+  {
+    "id": 33,
+    "category": "Vývoj a obnova",
+    "question": "Spojte pojmy, které k sobě patří:",
+    "terms": [
+      "Diferenciace",
+      "Redukční dělení",
+      "Buněčný cyklus",
+      "Regenerace"
+    ],
+    "definitions": [
+      "Život buňky mezi dvěma děleními",
+      "Vznik tkání při embryogenezi",
+      "Vznik pohlavních buněk",
+      "Náhrada poškozené tkáně"
+    ],
+    "options": [
+      "A1, B2, C3, D4",
+      "A2, B3, C1, D4",
+      "A4, B3, C2, D1",
+      "A2, B3, C4, D1"
+    ],
+    "answer": 1,
+    "title": "Specializovat se, rozdělit se, obnovit se",
+    "paragraphs": [
+      "Diferenciace znamená vznik rozdílů ve stavbě a funkci buněk: při vývoji se z nich stávají různé typy tkání, tedy A2. Redukční dělení neboli meióza patří k tvorbě pohlavních buněk, proto B3.",
+      "Buněčný cyklus zahrnuje růst, přípravu, kopírování DNA a vlastní dělení. Učebnice ho označuje jako život buňky mezi dvěma děleními, takže C1. Regenerace nahrazuje ztracenou či poškozenou tkáň, tedy D4. Celá kombinace je B.",
+      "Představ si pracovní život: učit se určitou profesi je specializace, běžný pracovní cyklus je sled navazujících kroků a opravit poškozenou budovu je obnova. Když si každé slovo spojíš s odlišným úkolem, nepopleteš diferenciaci s regenerací."
+    ],
+    "memory": "Diferenciace rozdělí role, cyklus sleduje průběh, regenerace obnoví poškozené."
+  },
+  {
+    "id": 34,
+    "category": "Základy genetiky",
+    "question": "Vysvětlete jednotlivé uvedené pojmy:",
+    "terms": [
+      "Karyotyp",
+      "Heterozygot",
+      "Homozygot",
+      "Genotyp",
+      "Fenotyp"
+    ],
+    "definitions": [
+      "Všechny geny buňky",
+      "Jedinec se stejnými alelami na obou chromozomech",
+      "Jedinec s různými geny pro tentýž znak",
+      "Soubor znaků organismu",
+      "Soubor chromozomů buňky"
+    ],
+    "options": [
+      "A5, B3, C2, D1, E4",
+      "A5, B2, C3, D4, E1",
+      "A1, B3, C2, D5, E4",
+      "A5, B2, C3, D1, E4"
+    ],
+    "answer": 0,
+    "title": "Návod, jeho varianty a skutečný výsledek",
+    "paragraphs": [
+      "Karyotyp popisuje chromozomovou výbavu, tedy A5. Homozygot má pro sledovaný gen dvě stejné alely, například AA nebo aa: C2. Heterozygot má dvě různé alely, například Aa: B3. Alely jsou různé verze téhož genu, ne dvě úplně nesouvisející součásti.",
+      "Genotyp je genetická výbava, v nabídce zjednodušeně všechny geny: D1. Fenotyp je soubor projevujících se znaků: E4. Výsledek je A. Fenotyp ovlivňuje genetická výbava i prostředí, proto samotný návod nemusí určovat každý detail výsledku.",
+      "Představ si recept a hotové jídlo. Genotyp je recept, fenotyp výsledné jídlo ovlivněné i podmínkami vaření. Homo- znamená stejné verze, hetero- různé. Vždy se ale ptej, o který konkrétní gen či místo v DNA jde."
+    ],
+    "memory": "Genotyp = návod, fenotyp = projev. Homo = stejné alely, hetero = různé alely.",
+    "note": "Definice 3 z PDF říká různé geny, ale přesnější je různé alely téhož genu. Homozygotnost se vztahuje ke konkrétnímu sledovanému místu, ne automaticky k celému genomu."
+  },
+  {
+    "id": 35,
+    "category": "Chromozomy",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "Chromosomy člověka řadíme do karyotypu – od nejdelších po nejkratší. Člověk má v tělové buňce 22 párů autosomů a jeden pár pohlavních chromosomů.",
+      "Každý chromosom se na počátku buněčného dělení skládá ze dvou budoucích dceřiných chromosomů – sesterských chromatid, spojených v místě zvaném centromera."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 2,
+    "title": "Dvacet tři párů, před dělením připravené kopie",
+    "paragraphs": [
+      "Typická lidská tělní buňka s jádrem má 46 chromozomů: 22 párů autosomů a jeden pár pohlavních chromozomů. Autosomy jsou ostatní chromozomy mimo pohlavní pár. První tvrzení v základním modelu platí.",
+      "Před mitózou se DNA zkopíruje. Každý zdvojený chromozom pak tvoří dvě sesterské chromatidy; po jejich oddělení se každá počítá jako samostatný chromozom. Je to jako dvě stejné kopie dokumentu, dočasně spojené sponkou, aby šly spolehlivě rozdělit. Druhé tvrzení tedy také platí a správně je C.",
+      "Pozor na počítání: po zdvojení DNA se množství DNA zdvojnásobí, ale v běžném počítání před oddělením chromatid stále mluvíme o 46 chromozomech. Chromozom a chromatida nejsou zaměnitelné názvy v každé fázi."
+    ],
+    "memory": "Typická tělní buňka: 23 párů. Před mitózou má chromozom dvě připravené sesterské kopie.",
+    "note": "Jde o typickou buňku v běžném cyklu. Například zralá červená krvinka jádro nemá. Řazení karyotypu pouze podle délky je také zjednodušené."
+  },
+  {
+    "id": 36,
+    "category": "Základy genetiky",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "Mutace jsou dědičné změny genů. Faktory, které je vyvolávají, označujeme jako mutageny. Většina mutací je škodlivá.",
+      "Některé choroby člověka – např. cukrovka, poruchy vývoje kyčelního kloubu, srdeční vady – mají tzv. polygenní dědičnost, to znamená, že takováto choroba je podmíněna účinkem mnoha genů."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 2,
+    "title": "Změna v návodu nemusí automaticky způsobit poruchu",
+    "paragraphs": [
+      "Vytištěný klíč uvádí C. Mutace je změna genetické informace a mutagen faktor, který pravděpodobnost takových změn zvyšuje. Změny se mohou předávat dceřiným buňkám; pro dědičnost z rodiče na dítě je důležité, zda zasáhnou pohlavní linii.",
+      "Výrok většina mutací je škodlivá ale není správná obecná poučka o všech změnách DNA. Mnohé varianty nemají rozpoznatelný dopad na zdraví. Představ si překlep v dlouhé příručce: některý zničí důležitý pokyn, jiný vůbec nezmění jeho význam a další je v části, která se právě nepoužívá.",
+      "Polygenní znamená vliv více genů. U mnoha běžných onemocnění se k tomu přidávají podmínky prostředí, takže hovoříme také o multifaktoriálním původu. Není to jeden vypínač, ale více ovladačů společně ovlivňujících riziko."
+    ],
+    "memory": "Mutace = změna, ne automaticky nemoc. Poly- = mnoho genů; multifaktoriální = geny i další vlivy.",
+    "note": "Klíč C zachováváme pro shodu s dokumentem, ale první tvrzení jako celek je problematické. Bez obecného výroku o škodlivosti by bylo přesnější; při jeho přísném posouzení vychází B. Ne každý typ cukrovky či srdeční vady má stejnou příčinu.",
+    "source": {
+      "label": "MedlinePlus: většina genetických variant nepoškozuje zdraví",
+      "url": "https://medlineplus.gov/genetics/understanding/mutationsanddisorders/neutralmutations/"
+    }
+  },
+  {
+    "id": 37,
+    "category": "Genetické poruchy",
+    "question": "Která z chorob je způsobena chromozomálními odchylkami?",
+    "options": [
+      "Vrozená luxace kyčelního kloubu",
+      "Barvoslepost",
+      "Rozštěp rtu a patra",
+      "Downova choroba"
+    ],
+    "answer": 3,
+    "title": "Změna celé chromozomové výbavy versus změna jednoho genu",
+    "paragraphs": [
+      "Downův syndrom nejčastěji souvisí s přítomností třetí kopie chromozomu 21 místo obvyklých dvou. Jde tedy o chromozomovou odchylku, ne jen o změnu několika písmen jednoho genu. Správně je D, podle vytištěného klíče.",
+      "Představ si knihovnu návodů. Změna jednoho genu je úprava jednoho konkrétního textu, zatímco třetí kopie chromozomu znamená nadbytečnou kopii velkého souboru návodů. Změní se tak množství mnoha genových produktů současně.",
+      "Typická vrozená červeno-zelená barvoslepost souvisí s geny na chromozomu X. Poruchy vývoje kyčle a rozštěpy mohou mít různé příčiny, často více faktorů. Ručně zakroužkované C ve skenu se liší od skutečného tištěného klíče."
+    ],
+    "memory": "Downův syndrom → nejčastěji trisomie 21 → navíc chromozomový materiál.",
+    "note": "Existují i jiné formy Downova syndromu, například translokační či mozaiková. Některé rozštěpy také mohou být součástí chromozomových syndromů; v tomto základním testu je jednoznačně zamýšlena D.",
+    "source": {
+      "label": "MedlinePlus: Downův syndrom",
+      "url": "https://medlineplus.gov/genetics/condition/down-syndrome/"
+    }
+  },
+  {
+    "id": 38,
+    "category": "Dědičnost",
+    "question": "Která z uvedených chorob je na pohlaví vázaná?",
+    "options": [
+      "Fenylketonurie",
+      "Albinismus",
+      "Hemofilie",
+      "Dědičná hluchota"
+    ],
+    "answer": 2,
+    "title": "Když je důležitý návod uložen na chromozomu X",
+    "paragraphs": [
+      "Běžné dědičné hemofilie A a B souvisejí s geny na chromozomu X. Tyto geny poskytují návody pro srážecí faktory, které pomáhají vytvořit krevní sraženinu. Proto je v nabídce správně C.",
+      "V typickém uspořádání XY má muž jen jeden chromozom X. Pokud jeho gen pro určitý faktor nefunguje, nemá druhou kopii stejného genu na dalším X, která by mohla funkci doplnit. Žena s uspořádáním XX má dvě kopie, proto může být přenašečkou; i přenašečky ale někdy krvácejí více.",
+      "Představ si náhradní kopii pracovního návodu. S jednou kopií se její porucha projeví snáze než se dvěma. Pohlavně vázaná dědičnost však neznamená, že nemoc vzniká pohlavním stykem ani že ženy nikdy nemohou onemocnět."
+    ],
+    "memory": "Hemofilie A/B → gen na X. Jeden X obvykle znamená chybějící záložní kopii.",
+    "note": "Jde o klasické hemofilie A a B. Poruchy sluchu i albinismus zahrnují různé formy s různou dědičností; nabídka je základní školní členění.",
+    "source": {
+      "label": "MedlinePlus: hemofilie a dědičnost",
+      "url": "https://medlineplus.gov/hemophilia.html"
+    }
+  },
+  {
+    "id": 39,
+    "category": "Dědičnost",
+    "question": "Jakou dědičností se dědí uvedené choroby?",
+    "terms": [
+      "Luxace kyčelního kloubu",
+      "Hemofilie",
+      "Fenylketonurie"
+    ],
+    "definitions": [
+      "Recesivní dědičnost",
+      "Polygenní dědičnost",
+      "Pohlavně vázaná dědičnost"
+    ],
+    "options": [
+      "A1, B2, C3",
+      "A3, B2, C1",
+      "A2, B3, C1",
+      "A3, B1, C2"
+    ],
+    "answer": 2,
+    "title": "Několik ovladačů, gen na X a dvě změněné kopie",
+    "paragraphs": [
+      "V základním členění má vývojová porucha kyčle mnoho přispívajících faktorů, včetně více genů: A2. Hemofilie A/B se přenáší přes geny na X, tedy B3. Fenylketonurie se typicky dědí autosomálně recesivně: C1. Výsledná kombinace je C.",
+      "U fenylketonurie porucha enzymu naruší zpracování aminokyseliny fenylalaninu. Aby se klasická nemoc projevila, dítě obvykle zdědí změněnou kopii genu od obou rodičů. Rodiče s jedinou změněnou kopií mohou být zdraví přenašeči.",
+      "Je to rozdíl mezi více ovladači společně nastavujícími riziko, závadou návodu na X a poruchou obou záložních kopií jednoho návodu. Jen si pamatuj, že pohlavně vázané a recesivní nejsou vzájemně vylučující pojmy: hemofilie se obvykle popisuje jako X-vázaná recesivní."
+    ],
+    "memory": "Kyčel = více vlivů; hemofilie = X; fenylketonurie = dvě změněné autosomální kopie.",
+    "note": "Rozdělení v nabídce není úplná klasifikace. Hemofilie A/B je současně pohlavně vázaná i recesivní; u kyčle se uplatňuje také prostředí.",
+    "source": {
+      "label": "MedlinePlus: fenylketonurie",
+      "url": "https://medlineplus.gov/genetics/condition/phenylketonuria/"
+    }
+  },
+  {
+    "id": 40,
+    "category": "Dědičnost",
+    "question": "Hemofilie vzniká mutací genu pro faktor krevní srážlivosti na chromozomu X. Které z následujících tvrzení je správné?",
+    "options": [
+      "Nemocí jsou postiženy častěji ženy",
+      "Žena přenašečka má výrazně sníženou srážlivost krve",
+      "Postižený muž má dcery přenašečky",
+      "Žena trpící hemofilií nemůže mít zdravé děti"
+    ],
+    "answer": 2,
+    "title": "Otec předá svůj X dcerám, nikoli synům",
+    "paragraphs": [
+      "Při běžném uspořádání pohlavních chromozomů dává otec dcerám X a synům Y. Pokud jeho X nese variantu způsobující hemofilii, všechny dcery tento X dostanou. Klíč tedy vybírá C a předpokládá druhý, funkční X od matky.",
+      "Představ si dvě různé obálky od otce: obálka X jde dceři, obálka Y synovi. Změněný návod na otcově X se tak nepřenese z otce přímo na syna. Syn ale může získat změněný X od matky.",
+      "Ženy přenašečky nemusí mít výrazně sníženou srážlivost, ale některé krvácivé příznaky mít mohou. Ani nemocná žena nemá automaticky všechny děti nemocné; záleží na její výbavě a výbavě druhého rodiče."
+    ],
+    "memory": "Otcův X → všechny dcery. Otcův Y → synové. Gen na X tedy nejde přímo z otce na syna.",
+    "note": "Možnost C předpokládá, že matka předá funkční kopii genu. Pokud má i matka změněnou kopii, dcera může být nemocná. Přenašečka navíc nemusí být zcela bez příznaků.",
+    "source": {
+      "label": "MedlinePlus: hemofilie a přenašečky",
+      "url": "https://medlineplus.gov/genetics/condition/hemophilia/"
+    }
+  },
+  {
+    "id": 41,
+    "category": "Dědičnost",
+    "question": "Otec trpí hemofilií, matka je zdráva i chromozomově. Pak platí, že",
+    "options": [
+      "Polovina jeho dcer bude postižena",
+      "Polovina jeho synů bude postižena",
+      "Všechny jeho dcery budou přenašečky",
+      "Bude mít dcery trpící hemofilií a zdravé syny"
+    ],
+    "answer": 2,
+    "title": "Dvě konkrétní obálky vysvětlí celý příklad",
+    "paragraphs": [
+      "Tento příklad předpokládá otce se změněným X a matku se dvěma funkčními kopiemi příslušného genu. Dcera dostane otcův změněný X a matčin funkční X. Všechny dcery jsou proto v tomto modelu přenašečky: C.",
+      "Syn dostane od otce Y a od matky funkční X. Otcova hemofilie se tedy v tomto spojení nepřenese na syny. Nemusíš si memorovat tabulku: stačí postupně sledovat, který rodič předá který chromozom.",
+      "Je to jako rozdělit dvě barevné obálky: dcera vždy dostane otcův X, syn vždy otcův Y. Slovo všechny je zde možné díky výslovnému předpokladu matčiny genetické výbavy, ne proto, že tak dopadne každá rodina s hemofilií."
+    ],
+    "memory": "Nemocný otec + matka bez příslušné varianty → dcery přenašečky, synové bez této rodinné varianty.",
+    "note": "Pouhé zdraví nebo normální počet chromozomů u matky samo nevylučuje přenašečství. Pro výpočet klíče se musí předpokládat, že matka variantu genu nenese.",
+    "source": {
+      "label": "MedlinePlus: dědičnost hemofilie",
+      "url": "https://medlineplus.gov/ency/article/000539.htm"
+    }
+  },
+  {
+    "id": 42,
+    "category": "Dědičnost",
+    "question": "Daltonismus (barvoslepost)",
+    "options": [
+      "Postihuje především ženy",
+      "Vzniká mutací genu na chromozomu Y",
+      "Je choroba s dědičností vázanou na pohlaví",
+      "Je vždy přenášena z otců na syny"
+    ],
+    "answer": 2,
+    "title": "Rozdílné barevné signály, ne postupná ztráta všeho zraku",
+    "paragraphs": [
+      "V této otázce se daltonismem myslí běžná vrozená porucha rozlišování červené a zelené. Návody pro příslušné světločivné bílkoviny čípků jsou na chromozomu X. Proto je správně C: jde o X-vázanou dědičnost.",
+      "Čípky v sítnici dávají mozku informace o různých částech světelného spektra. Když některý typ signálu chybí nebo se příliš podobá jinému, některé barvy se hůře rozlišují. Je to jako mít dvě příliš podobné stupnice na měřicím přístroji.",
+      "Není to gen na Y a častěji se tento typ poruchy projevuje u mužů s jediným X. Syn dostane od otce Y, nikoli X, takže se příslušný gen nepřenáší přímo z otce na syna. Syn svůj X získá od matky. Právě tím odlišíš dědičnost na X od dědičnosti na Y."
+    ],
+    "memory": "Typický daltonismus → červeno-zelené rozlišování → geny na X, ne Y.",
+    "note": "Ne všechny poruchy barevného vidění mají stejnou příčinu či dědičnost. Výklad se týká běžného vrozeného červeno-zeleného typu.",
+    "source": {
+      "label": "MedlinePlus: poruchy barevného vidění",
+      "url": "https://medlineplus.gov/genetics/condition/color-vision-deficiency/"
+    }
+  },
+  {
+    "id": 43,
+    "category": "Historie genetiky",
+    "question": "Eugenika",
+    "options": [
+      "Se zabývá předpovědí výskytu dědičných chorob v rodinách",
+      "Usiluje o zlepšení genového fondu lidské populace",
+      "Upravuje fenotyp a nemění genotyp dědičně poškozených",
+      "Je moderní genetickou metodou zabývající se dědičnými poruchami metabolismu"
+    ],
+    "answer": 1,
+    "title": "Historická snaha ovlivnit, kdo bude mít potomky",
+    "paragraphs": [
+      "Klíč uvádí B. To vystihuje deklarovaný cíl historické eugeniky: ovlivňovat rozmnožování lidí s představou, že se tím zlepší dědičná výbava populace. Nejde o moderní léčebnou metodu ani o opravu DNA nemocného člověka.",
+      "Předpovídání rizika dědičných onemocnění v rodině patří ke genetickému poradenství. Úprava projevů nemoci bez změny genotypu zase popisuje jiný typ zásahu. Nelze tedy zaměňovat rodinné poradenství, léčbu a historickou politiku řízení reprodukce.",
+      "Představ si rozdíl mezi pomocí konkrétnímu pacientovi a snahou rozhodovat, kdo smí předávat svůj návod dál. Eugenické programy byly spojeny s chybnými představami o dědičnosti, diskriminací a závažným porušováním lidských práv. Výraz zlepšení v nabídce popisuje jejich tvrzený záměr, ne vědecky či eticky přijatý výsledek."
+    ],
+    "memory": "Eugenika = historické ovlivňování reprodukce populace. Není to genetické poradenství ani moderní léčba.",
+    "note": "Ručně označené C ve skenu neodpovídá tištěnému klíči B. Historický deklarovaný cíl není doporučením ani schválením eugeniky.",
+    "source": {
+      "label": "NHGRI: historie eugeniky",
+      "url": "https://www.genome.gov/about-genomics/fact-sheets/Eugenics-and-Scientific-Racism"
+    }
+  },
+  {
+    "id": 44,
+    "category": "Genetické poruchy",
+    "question": "Mezi genetické choroby nepatří",
+    "options": [
+      "Hemofilie",
+      "Daltonismus",
+      "Kretenismus",
+      "Downova choroba"
+    ],
+    "answer": 2,
+    "title": "Podobný následek nemusí mít stejnou příčinu",
+    "paragraphs": [
+      "Klíč vybírá C. Starší výraz v nabídce označuje závažné následky nedostatku hormonů štítné žlázy v raném vývoji. Učebnice má zřejmě na mysli situaci způsobenou nedostatkem jódu, který je pro tvorbu těchto hormonů potřebný.",
+      "Hemofilie A/B souvisí se změnami genů pro srážecí faktory, vrozený červeno-zelený daltonismus s geny pro barevné vidění a Downův syndrom s chromozomovou výbavou. Tyto příklady se proto v základním testu řadí mezi genetické poruchy.",
+      "Je to jako nedostatek paliva versus porucha stroje: oba mohou zpomalit provoz, ale příčina je jiná. U štítné žlázy ovšem může být problémem právě i geneticky podmíněná porucha jejího vývoje nebo tvorby hormonů. Nemoc a nedědičnost proto nelze spojit automaticky."
+    ],
+    "memory": "Pro starý klíč C. Pro pochopení: nedostatek jódu a genetická porucha jsou různé možné příčiny.",
+    "note": "Zastaralý termín dnes nepoužívej jako označení člověka. Vrozená hypotyreóza může mít i genetickou příčinu; absolutní tvrzení, že sem genetika nikdy nepatří, by bylo nesprávné.",
+    "source": {
+      "label": "MedlinePlus: genetické i negenetické příčiny vrozené hypotyreózy",
+      "url": "https://medlineplus.gov/genetics/condition/congenital-hypothyroidism/"
+    }
+  },
+  {
+    "id": 45,
+    "category": "Barevné vidění",
+    "question": "Daltonismus (barvoslepost)",
+    "options": [
+      "Je dědičná metabolická choroba",
+      "Postihuje především ženy",
+      "Je neschopnost rozlišovat červenou a zelenou barvu",
+      "Nepatří mezi dědičné choroby"
+    ],
+    "answer": 2,
+    "title": "Porucha barevného rozlišování má různé stupně",
+    "paragraphs": [
+      "V tomto školním použití slova daltonismus je zamýšlena vrozená červeno-zelená porucha vidění. Proto klíč uvádí C. Některé barevné odstíny se člověku mohou jevit podobné, protože signály z určitých čípků nejsou obvykle odlišitelné.",
+      "Představ si barevnou mapu, ve které jsou dvě oblasti téměř stejným odstínem. Člověk může dobře přečíst popisky i vidět tvary, ale barvy mu nedají stejnou informaci jako někomu jinému. Není to automaticky černobílé vidění nebo ztráta zrakové ostrosti.",
+      "Běžný vrozený červeno-zelený typ bývá dědičný a X-vázaný, a proto se častěji projeví u mužů. Z tohoto důvodu jsou B a D špatně. Slovo metabolická v A neodpovídá základnímu charakteru poruchy barevných receptorových signálů."
+    ],
+    "memory": "Daltonismus v testu = červeno-zelené rozlišování. Neznamená, že svět musí být černobílý.",
+    "note": "Výraz neschopnost je zjednodušený: mnoho lidí má částečnou poruchu různé závažnosti. Existují i jiné vrozené a získané poruchy barevného vidění.",
+    "source": {
+      "label": "MedlinePlus: poruchy barevného vidění",
+      "url": "https://medlineplus.gov/genetics/condition/color-vision-deficiency/"
+    }
+  },
+  {
+    "id": 46,
+    "category": "Anatomie tkání",
+    "bookRef": "II · otázka 1",
+    "question": "Studiem mikroskopické stavby tkání se zabývá",
+    "options": [
+      "Anatomie",
+      "Histologie",
+      "Fyziologie",
+      "Mikrobiologie"
+    ],
+    "answer": 1,
+    "title": "Histologie přiblíží tělo na úroveň tkání",
+    "paragraphs": [
+      "Histologie studuje tkáně a jejich mikroskopickou stavbu. Ve vzorku například sleduje, jak jsou buňky uspořádané, jaký materiál je mezi nimi a jak jednotlivé vrstvy vypadají. Správně je B.",
+      "Je to jako přiblížit fotografii města: místo polohy celých čtvrtí začneš zkoumat, jak jsou postavené domy a ulice. Anatomie může popisovat stavbu celých orgánů, histologie se dívá na jemné uspořádání jejich tkání.",
+      "Fyziologie se ptá, jak to funguje, například jak střevo vstřebává živiny. Mikrobiologie studuje mikroorganismy. Obor se tedy nepozná jen podle použití mikroskopu; rozhoduje i to, co pod ním zkoumáme."
+    ],
+    "memory": "Histo- = tkáň. Histologie = mikroskopická stavba tkání."
+  },
+  {
+    "id": 47,
+    "category": "Anatomie tkání",
+    "bookRef": "II · otázka 2",
+    "question": "Přiřaďte každou ze tkání ke tkáňovému typu:",
+    "terms": [
+      "Chrupavka",
+      "Povrchová vrstva sliznice",
+      "Varolův most",
+      "Krev",
+      "Střední vrstva srdeční stěny"
+    ],
+    "definitions": [
+      "Epitely",
+      "Pojiva",
+      "Svalová tkáň",
+      "Nervová tkáň",
+      "Tekutá tkáň"
+    ],
+    "options": [
+      "A1, B2, C4, D5, E3",
+      "A1, B2, C3, D4, E5",
+      "A2, B3, C4, D5, E1",
+      "A2, B1, C4, D5, E3"
+    ],
+    "answer": 3,
+    "title": "Opora, povrch, signály, transport a pohon",
+    "paragraphs": [
+      "Chrupavka patří k pojivům: má buňky uložené v pevnější mezibuněčné hmotě, tedy A2. Povrch sliznice tvoří epitel, souvislá vrstva buněk na rozhraní prostředí: B1. Varolův most je součást mozkového kmene, proto se zde přiřazuje k nervové tkáni: C4.",
+      "Krev má tekutou mezibuněčnou složku, plazmu, a v nabídce představuje tekutou tkáň: D5. Střední vrstva srdeční stěny je myokard, jehož svalové buňky vytvářejí sílu pro čerpání krve: E3. Správná kombinace je D.",
+      "Představ si tělo jako město: chrupavka podpírá, epitel tvoří hranici, nervová tkáň předává zprávy, krev převáží náklad a srdeční sval pohání čerpadlo. Tkáňový typ poznáš lépe podle stavby a hlavního úkolu než podle názvu orgánu."
+    ],
+    "memory": "Chrupavka podpírá; epitel pokrývá; nervová tkáň signalizuje; krev přepravuje; myokard se stahuje.",
+    "note": "Krev se v současném členění obvykle řadí mezi specializovaná tekutá pojiva. Zde má v nabídce samostatnou kategorii tekutá tkáň."
+  },
+  {
+    "id": 48,
+    "category": "Epitely",
+    "bookRef": "II · otázka 3",
+    "question": "Přiřaďte uvedené epitely k jejich funkčnímu typu:",
+    "terms": [
+      "Langerhansovy ostrůvky",
+      "Střevní mikroklky",
+      "Oční sítnice",
+      "Epidermis"
+    ],
+    "definitions": [
+      "Epitel krycí",
+      "Epitel žlázový",
+      "Epitel resorpční",
+      "Epitel smyslový"
+    ],
+    "options": [
+      "A2, B3, C4, D1",
+      "A1, B2, C3, D4",
+      "A2, B1, C4, D3",
+      "A4, B3, C2, D1"
+    ],
+    "answer": 0,
+    "title": "Tvar buněk pomáhá tomu, co mají dělat",
+    "paragraphs": [
+      "Buňky Langerhansových ostrůvků slinivky vytvářejí hormony, například inzulin, proto A2: žlázový epitel. Střevní epitel s mikroklky přijímá látky z obsahu střeva, tedy B3: resorpční, čili vstřebávací.",
+      "Mikroklky zvětšují plochu povrchu buňky. Je to jako rozložit zmačkanou či složenou látku na větší plochu: více dostupného povrchu umožní více kontaktu při vstřebávání. Smyslové buňky sítnice zachycují světelný podnět, C4; epidermis pokrývá a chrání povrch těla, D1. Výsledek je A.",
+      "Základní logika je jednoduchá: něco vytvořit a vydat, něco přijmout, něco zaznamenat nebo něco zakrýt. Právě hlavní funkce je důvodem tohoto členění."
+    ],
+    "memory": "Ostrůvky vydávají hormony, střevo vstřebává, sítnice vnímá světlo, epidermis kryje.",
+    "note": "Mikroklky jsou výběžky povrchu buněk, ne samostatná tkáň. Sítnice je složitá nervová struktura; přiřazení vyjadřuje funkci její smyslové části, ne celý její obsah."
+  },
+  {
+    "id": 49,
+    "category": "Epitely",
+    "bookRef": "II · otázka 4",
+    "question": "Nejodolnější proti mechanickým, tepelným a chemickým vlivům je",
+    "options": [
+      "Resorpční epitel",
+      "Smyslový epitel",
+      "Krycí epitel",
+      "Žlázový epitel"
+    ],
+    "answer": 2,
+    "title": "Ochranná vrstva musí snášet kontakt s okolím",
+    "paragraphs": [
+      "Krycí epitel vytváří povrchovou bariéru. Jeho ochranné typy, zejména vícevrstevný rohovějící epitel kůže, jsou přizpůsobené tření a dalším vlivům z okolí. Proto učebnice v této nabídce vybírá C.",
+      "Představ si pracovní rukavici oproti tenkému sítku. Rukavice má chránit, zatímco sítko má propouštět. Podobně vstřebávací epitel potřebuje dobře přenášet látky a smyslový zachytit podnět; jejich hlavním úkolem není vydržet co největší mechanickou zátěž.",
+      "Více vrstev umožňuje, aby se povrchové buňky opotřebovávaly a průběžně nahrazovaly, zatímco hlubší vrstvy zůstávají chráněné. Rohová vrstva kůže navíc omezuje průnik některých látek a ztrátu vody."
+    ],
+    "memory": "Krycí epitel = ochranná rukavice. Vstřebávací epitel = plocha pro přenos.",
+    "note": "Ne všechny krycí epitely jsou stejně odolné. Tenký jednovrstevný epitel cév nemá stejné vlastnosti jako pokožka; výrok se týká hlavně ochranných typů.",
+    "source": {
+      "label": "OpenStax: epitelové tkáně a jejich funkce",
+      "url": "https://openstax.org/books/anatomy-and-physiology/pages/4-2-epithelial-tissue"
+    }
+  },
+  {
+    "id": 50,
+    "category": "Epitely",
+    "bookRef": "II · otázka 5",
+    "question": "Nejmenší regenerační schopnost má",
+    "options": [
+      "Krycí epitel",
+      "Žlázový epitel",
+      "Resorpční epitel",
+      "Smyslový epitel"
+    ],
+    "answer": 3,
+    "title": "Vysoce specializovaný senzor se obnovuje obtížněji",
+    "paragraphs": [
+      "Učebnice vybírá D: smyslový epitel. Některé jeho buňky jsou velmi specializované a mají malou schopnost náhrady po poškození. Příkladem jsou lidské sluchové vláskové buňky, jejichž ztráta může zanechat trvalou poruchu sluchu.",
+      "Představ si rozdíl mezi běžnými dlaždicemi a přesným měřicím čidlem. Dlaždice lze průběžně vyměňovat, zatímco čidlo vyžaduje zvláštní stavbu a správné napojení. Krycí a střevní epitely se naopak v běžném provozu často intenzivně obnovují.",
+      "Regenerace není totéž co okamžité zacelení každého poranění. Záleží na přítomnosti buněk schopných dělení, zachované podpůrné struktuře a rozsahu poškození. Vysoce specializovaná buňka proto může fungovat výborně, ale po ztrátě se obtížně nahrazuje."
+    ],
+    "memory": "Pro tento test D: specializovaný smyslový senzor se často nahrazuje hůř než běžná povrchová buňka.",
+    "note": "Nejde o zákon pro všechny smyslové epitely: například čichový epitel má schopnost obnovy. D je obecné srovnání a odpověď klíče, nikoli tvrzení o nulové regeneraci každého smyslového epitelu.",
+    "source": {
+      "label": "NIDCD: obnova sluchových smyslových buněk",
+      "url": "https://www.nidcd.nih.gov/research/labs/section-sensory-cell-development-and-function"
+    }
+  }
+]);
+const $ = id => document.getElementById(id);
+const LETTERS = ['A','B','C','D'];
+const STORAGE_KEY = 'somatologie-learning-v2';
+const DAY = 86400000;
+const SHORT_DELAY = 10 * 60000;
+const INTERVALS = [0, DAY, 3*DAY, 7*DAY, 14*DAY, 30*DAY];
+const byId = new Map(QUESTIONS.map(q => [q.id,q]));
+let storageOK = true;
+let screen = 'home';
+let data;
+let refreshTimer;
 function shuffle(values){const result=[...values];for(let i=result.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[result[i],result[j]]=[result[j],result[i]];}return result;}
-function newState(ids=QUESTIONS.map(q=>q.id),mode='all'){return{version:1,order:shuffle(ids),index:0,answers:{},done:false,mode};}
-function validState(s){
-  if(!s||s.version!==1||!Array.isArray(s.order)||s.order.length<1||s.order.length>10||new Set(s.order).size!==s.order.length||!s.order.every(id=>byId.has(id))||!['all','mistakes'].includes(s.mode)||typeof s.done!=='boolean'||!Number.isInteger(s.index)||s.index<0||s.index>=s.order.length||!s.answers||typeof s.answers!=='object'||Array.isArray(s.answers))return false;
-  if(s.mode==='all'&&s.order.length!==10)return false;
-  if(!Object.entries(s.answers).every(([id,v])=>s.order.includes(Number(id))&&Number.isInteger(v)&&v>=0&&v<=3))return false;
-  if(s.order.some((id,i)=>i<s.index&&s.answers[id]===undefined||i>s.index&&s.answers[id]!==undefined))return false;
-  return !s.done||Object.keys(s.answers).length===s.order.length;
+function emptyProgress(){return {seen:0,correct:0,wrong:0,guesses:0,level:0,due:0,lastAt:0,lastTurn:0,lastResult:'new'};}
+function freshData(){return {version:2,turn:0,progress:{},session:null};}
+function progress(id){return data.progress[id] || emptyProgress();}
+function whole(n){return Number.isSafeInteger(n)&&n>=0;}
+function validProgress(p){return p&&['seen','correct','wrong','guesses','level','due','lastAt','lastTurn'].every(k=>whole(p[k]))&&p.level<=5&&p.guesses<=p.correct&&p.seen===p.correct+p.wrong&&['new','correct','wrong','guess'].includes(p.lastResult);}
+function validSession(s){
+  if(s===null)return true;
+  if(!s||!['smart','all','weak'].includes(s.mode)||!whole(s.target)||s.target<1||s.target>50||typeof s.completed!=='boolean'||!byId.has(s.currentId)||!Array.isArray(s.queue)||new Set(s.queue).size!==s.queue.length||!s.queue.every(id=>byId.has(id))||!Array.isArray(s.attempts)||s.attempts.length>s.target)return false;
+  if(!s.attempts.every(a=>a&&byId.has(a.id)&&whole(a.selected)&&a.selected<=3&&typeof a.guessed==='boolean'&&typeof a.good==='boolean'&&a.good===(a.selected===byId.get(a.id).answer)&&whole(a.at)))return false;
+  if(s.currentAnswer!==null&&(!whole(s.currentAnswer)||s.currentAnswer>3))return false;
+  if(s.currentAnswer!==null){const last=s.attempts.at(-1);if(!last||last.id!==s.currentId||last.selected!==s.currentAnswer||last.guessed!==s.currentGuessed)return false;}
+  return typeof s.currentGuessed==='boolean'&&(!s.completed||s.attempts.length>0);
 }
-function storageUnavailable(){storageOK=false;$('storageNotice').hidden=false;$('saveStatus').textContent='Průběh zůstává jen po dobu otevření této stránky.';}
-function save(){if(!storageOK)return;try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}catch(e){storageUnavailable();}}
-function load(){try{const s=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');return validState(s)?s:newState();}catch(e){storageUnavailable();return newState();}}
-function score(){const answered=Object.keys(state.answers).length;const correct=state.order.filter(id=>state.answers[id]===byId.get(id).answer).length;return{answered,correct,rate:answered?Math.round(correct/answered*100):0};}
-function updateStats(){const s=score();$('answered').innerHTML=s.answered+' <span class="stat-unit">/ '+state.order.length+'</span>';$('success').textContent=s.answered?s.rate+' %':'—';$('correct').innerHTML=s.correct+' <span class="stat-unit">/ '+s.answered+'</span>';$('fill').style.width=(s.answered/state.order.length*100)+'%';$('progress').setAttribute('aria-valuemax',state.order.length);$('progress').setAttribute('aria-valuenow',s.answered);}
+function validData(d){return d&&d.version===2&&whole(d.turn)&&d.progress&&typeof d.progress==='object'&&!Array.isArray(d.progress)&&Object.entries(d.progress).every(([id,p])=>byId.has(Number(id))&&validProgress(p)&&p.lastTurn<=d.turn)&&validSession(d.session);}
+function storageUnavailable(){storageOK=false;$('storageNotice').hidden=false;$('saveStatus').textContent='Ukládání není dostupné. Pokrok vydrží jen do zavření stránky.';}
+function save(){if(!storageOK)return;try{localStorage.setItem(STORAGE_KEY,JSON.stringify(data));}catch(e){storageUnavailable();}}
+function migrateOld(){
+  const raw=localStorage.getItem('somatologie-first10-v1');if(!raw)return null;
+  let old;try{old=JSON.parse(raw);}catch(e){return null;}
+  if(!old||old.version!==1||!old.answers||typeof old.answers!=='object'||Array.isArray(old.answers))return null;
+  const entries=Object.entries(old.answers);if(!entries.every(([id,v])=>Number(id)>=1&&Number(id)<=10&&byId.has(Number(id))&&whole(v)&&v<=3))return null;
+  const imported=freshData();const now=Date.now();
+  for(const [id,selected] of entries){const good=selected===byId.get(Number(id)).answer;imported.turn++;imported.progress[id]={...emptyProgress(),seen:1,correct:good?1:0,wrong:good?0:1,level:good?1:0,due:good?now+DAY:now,lastAt:now,lastTurn:imported.turn,lastResult:good?'correct':'wrong'};}
+  return imported;
+}
+function load(){try{const raw=localStorage.getItem(STORAGE_KEY);if(raw){let parsed;try{parsed=JSON.parse(raw);}catch(e){$('recoveryNotice').hidden=false;return freshData();}if(validData(parsed))return parsed;$('recoveryNotice').hidden=false;return freshData();}return migrateOld()||freshData();}catch(e){storageUnavailable();return freshData();}}
+function summary(now=Date.now()){
+  const all=QUESTIONS.map(q=>progress(q.id));return {seen:all.filter(p=>p.seen>0).length,mastered:all.filter(p=>p.level>=3).length,due:all.filter(p=>p.seen&&p.due<=now).length,weak:all.filter(p=>['wrong','guess'].includes(p.lastResult)).length,newCount:all.filter(p=>!p.seen).length};
+}
+function formatWhen(timestamp,now=Date.now()){
+  const diff=timestamp-now;if(diff<=0)return 'teď';if(diff<3600000)return 'za '+Math.max(1,Math.ceil(diff/60000))+' min';
+  if(diff<DAY)return 'za '+Math.ceil(diff/3600000)+' h';
+  return new Intl.DateTimeFormat('cs-CZ',{day:'numeric',month:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(timestamp));
+}
+// Smart mode keeps easy cards out until due. Weak cards may reappear within a
+// round after at least three other answers; it never repeats a card immediately.
+function smartCandidates(now=Date.now(),session=data.session){
+  const recent=new Set((session?.attempts||[]).slice(-3).map(a=>a.id));
+  return QUESTIONS.map(q=>{
+    const p=progress(q.id);if(recent.has(q.id))return null;
+    const weak=['wrong','guess'].includes(p.lastResult);
+    const sameRoundRetry=weak&&!!session?.attempts.some(a=>a.id===q.id)&&data.turn-p.lastTurn>=3;
+    let rank;if(weak&&(p.due<=now||sameRoundRetry))rank=0;else if(p.seen&&p.due<=now)rank=1;else if(!p.seen)rank=2;else return null;
+    return {id:q.id,rank,due:p.due,tie:Math.random()};
+  }).filter(Boolean).sort((a,b)=>a.rank-b.rank||(a.rank===0||a.rank===1?a.due-b.due:0)||a.tie-b.tie);
+}
+function applyReview(id,good,guessed,now=Date.now()){
+  const old=progress(id);const p={...old};data.turn++;p.seen++;p.lastAt=now;p.lastTurn=data.turn;
+  if(!good){p.wrong++;p.level=0;p.due=now+SHORT_DELAY;p.lastResult='wrong';}
+  else if(guessed){p.correct++;p.guesses++;p.level=0;p.due=now+SHORT_DELAY;p.lastResult='guess';}
+  else{
+    p.correct++;p.lastResult='correct';
+    // Re-reading an answer and getting it right immediately is practice, not
+    // evidence of long-term recall. Early success preserves the existing due date.
+    if(!old.seen||now>=old.due){p.level=Math.min(5,old.level+1);p.due=now+INTERVALS[p.level];}
+  }
+  data.progress[id]=p;return p;
+}
 function element(tag,className,text){const el=document.createElement(tag);if(className)el.className=className;if(text!==undefined)el.textContent=text;return el;}
-function renderLegend(q){const root=$('legend');root.replaceChildren();root.hidden=!q.terms;if(!q.terms)return;root.append(element('p','legend-title','Obory (písmena v přiřazení)'));const terms=element('ul','legend-list');q.terms.forEach((text,i)=>{const li=element('li');li.append(element('span','legend-code',String.fromCharCode(65+i)),element('span','',text));terms.append(li);});root.append(terms,element('div','legend-divider'),element('p','legend-title','Náplně (čísla v přiřazení)'));const defs=element('ul','legend-list');q.definitions.forEach((text,i)=>{const li=element('li');li.append(element('span','legend-code',String(i+1)),element('span','',text));defs.append(li);});root.append(defs);}
-function renderFeedback(q,selected){const good=selected===q.answer;const status=$('feedbackStatus');status.className='feedback-status '+(good?'good':'bad');status.textContent=good?'✓ Správně. Pojďme si říct proč.':'✕ Tentokrát ne. Správně je '+LETTERS[q.answer]+'.';$('explanationTitle').textContent=q.title;const explanation=$('explanation');explanation.replaceChildren();q.paragraphs.forEach(p=>explanation.append(element('p','',p)));const memory=element('p','memory');memory.append(element('strong','','Jak si to zapamatovat: '),document.createTextNode(q.memory));explanation.append(memory);if(q.note){const note=element('p','note');note.append(element('strong','','Pro přesnost: '),document.createTextNode(q.note));explanation.append(note);}if(q.source){const p=element('p','source-link');const a=element('a','',q.source.label);a.href=q.source.url;a.target='_blank';a.rel='noopener noreferrer';p.append(a);explanation.append(p);}$('feedback').hidden=false;}
+function setScreen(name){screen=name;$('home').hidden=name!=='home';$('quiz').hidden=name!=='quiz';$('results').hidden=name!=='results';$('roundStats').hidden=name==='home';$('quizToolbar').hidden=name==='home';$('introDescription').textContent=name==='home'?'50 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.':'Vyber odpověď, přečti si souvislosti a pokračuj vlastním tempem.';}
+function renderHome(){
+  setScreen('home');const s=summary();$('seenTotal').textContent=s.seen+' / 50';$('masteredTotal').textContent=s.mastered+' / 50';$('dueTotal').textContent=String(s.due);$('weakCount').textContent=String(s.weak);$('weakStart').disabled=s.weak===0;
+  $('resume').hidden=!data.session||data.session.completed;
+  if(data.session&&!data.session.completed){$('resume').textContent='Pokračovat v kole · '+data.session.attempts.length+' / '+data.session.target;}
+  const available=smartCandidates(Date.now(),null);$('smartStart').disabled=!available.length;
+  const nextDue=QUESTIONS.map(q=>progress(q.id)).filter(p=>p.seen&&p.due>Date.now()).reduce((min,p)=>Math.min(min,p.due),Infinity);
+  $('homeHint').textContent=available.length?(s.due?s.due+' otázek už čeká na zopakování. Slabší dostanou přednost.':s.newCount+' nových otázek čeká na první vyzkoušení.'):(Number.isFinite(nextDue)?'Pro tuto chvíli máš hotovo. Další opakování '+formatWhen(nextDue)+'. Pokud chceš, dej si test všech 50.':'Vyber si režim procvičování.');
+  $('weakHint').textContent=s.weak?'Poslední chyby a správné odpovědi označené jako tip. V tomto režimu se ukážou i před plánovaným termínem.':'Zatím žádné otázky po poslední chybě nebo tipu.';
+  $('learningFill').style.width=s.mastered/50*100+'%';$('learningProgress').setAttribute('aria-valuenow',s.mastered);
+}
+function start(mode){
+  const now=Date.now();let ids;if(mode==='all')ids=shuffle(QUESTIONS.map(q=>q.id));else if(mode==='weak')ids=shuffle(QUESTIONS.filter(q=>['wrong','guess'].includes(progress(q.id).lastResult)).map(q=>q.id));else ids=smartCandidates(now,null).map(c=>c.id);
+  if(!ids.length){renderHome();return;}
+  data.session={mode,target:mode==='smart'?10:ids.length,currentId:ids[0],queue:mode==='smart'?[]:ids.slice(1),attempts:[],currentAnswer:null,currentGuessed:false,completed:false};save();renderQuestion(true);scrollTop();
+}
+function score(){const attempts=data.session?.attempts||[];const correct=attempts.filter(a=>a.good).length;return{answered:attempts.length,correct,rate:attempts.length?Math.round(correct/attempts.length*100):0};}
+function updateStats(){const s=score();const target=data.session?.target||10;$('answered').innerHTML=s.answered+' <span class="stat-unit">/ '+target+'</span>';$('success').textContent=s.answered?s.rate+' %':'—';$('correct').innerHTML=s.correct+' <span class="stat-unit">/ '+s.answered+'</span>';$('fill').style.width=s.answered/target*100+'%';$('progress').setAttribute('aria-valuemax',target);$('progress').setAttribute('aria-valuenow',s.answered);}
+function renderLegend(q){
+  const root=$('legend');root.replaceChildren();root.hidden=!q.terms&&!q.statements;if(root.hidden)return;
+  if(q.statements){root.append(element('p','legend-title','Posuď obě tvrzení'));const list=element('ol','statements');q.statements.forEach(text=>list.append(element('li','',text)));root.append(list);return;}
+  root.append(element('p','legend-title','Pojmy (písmena v přiřazení)'));const terms=element('ul','legend-list');q.terms.forEach((text,i)=>{const li=element('li');li.append(element('span','legend-code',String.fromCharCode(65+i)),element('span','',text));terms.append(li);});root.append(terms,element('div','legend-divider'),element('p','legend-title','Významy (čísla v přiřazení)'));const defs=element('ul','legend-list');q.definitions.forEach((text,i)=>{const li=element('li');li.append(element('span','legend-code',String(i+1)),element('span','',text));defs.append(li);});root.append(defs);
+}
+function scheduleText(id,guessed,good){const p=progress(id);if(!good||guessed)return 'Vrátí se brzy: v chytrém kole nejdřív po třech jiných odpovědích, jinak '+formatWhen(p.due)+'.';return 'Další plánované opakování '+formatWhen(p.due)+'. '+(p.level>=3?'Opakovaně zvládnutá otázka — vrátí se ke kontrole.':'Jedna správná odpověď nestačí. Ověříme ji znovu s odstupem.');}
+function renderFeedback(q,selected,guessed){
+  const good=selected===q.answer;const status=$('feedbackStatus');status.className='feedback-status '+(good?'good':'bad');status.textContent=good?(guessed?'✓ Správný tip. Ještě si ho ověříme.':'✓ Správně. Pojďme si říct proč.'):'✕ Tentokrát ne. Podle klíče je správně '+LETTERS[q.answer]+'.';$('explanationTitle').textContent=q.title;const explanation=$('explanation');explanation.replaceChildren();
+  q.paragraphs.forEach(p=>explanation.append(element('p','',p)));const memory=element('p','memory');memory.append(element('strong','','Jak si to zapamatovat: '),document.createTextNode(q.memory));explanation.append(memory);
+  if(q.note){const note=element('p','note');note.append(element('strong','','Pro přesnost: '),document.createTextNode(q.note));explanation.append(note);}
+  const sources=[...(q.source?[q.source]:[]),...(q.sources||[])];sources.forEach(source=>{const p=element('p','source-link');const a=element('a','',source.label);a.href=source.url;a.target='_blank';a.rel='noopener noreferrer';p.append(a);explanation.append(p);});explanation.append(element('p','schedule-note',scheduleText(q.id,guessed,good)));$('feedback').hidden=false;
+}
+function reason(id){const p=progress(id);if(!p.seen)return 'Nová otázka';if(p.lastResult==='wrong')return 'Vrací se po chybě';if(p.lastResult==='guess')return 'Ověříme předchozí tip';if(p.due<=Date.now())return 'Čas na zopakování';return p.level>=3?'Kontrola zvládnuté otázky':'Další procvičení';}
 function renderQuestion(focus=false){
-  $('quiz').hidden=false;$('results').hidden=true;$('reset').hidden=false;const q=byId.get(state.order[state.index]);const selected=state.answers[q.id];const hasAnswer=selected!==undefined;
-  $('category').textContent=q.category;$('bookNumber').textContent=(state.index+1)+' / '+state.order.length+' · v učebnici č. '+q.id;$('question').textContent=q.question;$('hint').textContent=q.terms?'Vyber správnou kombinaci přiřazení.':'Vyber jednu odpověď.';renderLegend(q);
-  const root=$('answers');root.replaceChildren();q.options.forEach((text,i)=>{const button=element('button','answer');button.type='button';button.dataset.option=String(i);button.disabled=hasAnswer;button.append(element('span','letter',LETTERS[i]),element('span','answer-text',text));const mark=element('span','answer-mark');mark.setAttribute('aria-hidden','true');button.append(mark);if(hasAnswer&&i===q.answer){button.classList.add('correct');mark.textContent='✓';button.setAttribute('aria-label',LETTERS[i]+': '+text+'. Správná odpověď'+(i===selected?', tvoje volba.':'.'));}else if(hasAnswer&&i===selected){button.classList.add('wrong');mark.textContent='✕';button.setAttribute('aria-label',LETTERS[i]+': '+text+'. Tvoje odpověď, nesprávně.');}button.addEventListener('click',()=>choose(i));root.append(button);});
-  $('feedback').hidden=true;if(hasAnswer)renderFeedback(q,selected);$('next').disabled=!hasAnswer;$('nextText').textContent=state.index===state.order.length-1?'Zobrazit výsledek':'Další otázka';$('underButton').textContent=hasAnswer?'Vysvětlení si můžeš přečíst v klidu.':'Nejdřív zkus odpovědět. Není kam spěchat.';updateStats();if(focus)$('question').focus({preventScroll:true});
+  const s=data.session;if(!s){renderHome();return;}if(s.completed){renderResults(focus);return;}setScreen('quiz');const q=byId.get(s.currentId);const hasAnswer=s.currentAnswer!==null;
+  $('modeLabel').textContent=s.mode==='smart'?'Chytré procvičování':s.mode==='all'?'Test všech 50':'Chyby a tipy';$('category').textContent=q.category;$('bookNumber').textContent='Č. '+q.id+' / 50 · '+(q.bookRef||'I · otázka '+q.id);$('question').textContent=q.question;$('reason').textContent=reason(q.id);$('hint').textContent=q.terms?'Vyber správnou kombinaci přiřazení.':q.statements?'Vyber hodnocení obou tvrzení.':'Vyber jednu odpověď.';renderLegend(q);
+  $('guess').checked=hasAnswer?s.currentGuessed:false;$('guess').disabled=hasAnswer;
+  const root=$('answers');root.replaceChildren();q.options.forEach((text,i)=>{const button=element('button','answer');button.type='button';button.dataset.option=String(i);button.disabled=hasAnswer;button.append(element('span','letter',LETTERS[i]),element('span','answer-text',text));const mark=element('span','answer-mark');mark.setAttribute('aria-hidden','true');button.append(mark);if(hasAnswer&&i===q.answer){button.classList.add('correct');mark.textContent='✓';button.setAttribute('aria-label',LETTERS[i]+': '+text+'. Správně podle klíče'+(i===s.currentAnswer?', tvoje volba.':'.'));}else if(hasAnswer&&i===s.currentAnswer){button.classList.add('wrong');mark.textContent='✕';button.setAttribute('aria-label',LETTERS[i]+': '+text+'. Tvoje odpověď, nesprávně podle klíče.');}button.addEventListener('click',()=>choose(i));root.append(button);});
+  $('feedback').hidden=true;if(hasAnswer)renderFeedback(q,s.currentAnswer,s.currentGuessed);$('next').disabled=!hasAnswer;$('nextText').textContent=s.attempts.length>=s.target?'Zobrazit výsledek':'Další otázka';$('underButton').textContent=hasAnswer?'Vysvětlení si můžeš přečíst v klidu.':'Nejdřív zkus odpovědět. Správný tip označ před volbou.';updateStats();if(focus)$('question').focus({preventScroll:true});
 }
 function choose(selected){
-  const q=byId.get(state.order[state.index]);if(state.done||state.answers[q.id]!==undefined)return;state.answers[q.id]=selected;save();
-  [...$('answers').children].forEach((button,i)=>{button.disabled=true;const mark=button.querySelector('.answer-mark');if(i===q.answer){button.classList.add('correct');mark.textContent='✓';button.setAttribute('aria-label',LETTERS[i]+': '+q.options[i]+'. Správná odpověď'+(i===selected?', tvoje volba.':'.'));}else if(i===selected){button.classList.add('wrong');mark.textContent='✕';button.setAttribute('aria-label',LETTERS[i]+': '+q.options[i]+'. Tvoje odpověď, nesprávně.');}});
-  renderFeedback(q,selected);updateStats();$('next').disabled=false;$('underButton').textContent='Vysvětlení si můžeš přečíst v klidu.';$('announcement').textContent=(selected===q.answer?'Správně.':'Nesprávně. Správná odpověď je '+LETTERS[q.answer]+'.')+' Vysvětlení je pod možnostmi.';
-  $('feedbackStatus').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});$('next').focus({preventScroll:true});
+  const s=data.session;if(!s||s.completed||s.currentAnswer!==null||!whole(selected)||selected>3)return;const q=byId.get(s.currentId);const guessed=$('guess').checked;const good=selected===q.answer;const now=Date.now();
+  s.currentAnswer=selected;s.currentGuessed=guessed;s.attempts.push({id:q.id,selected,guessed,good,at:now});applyReview(q.id,good,guessed,now);save();renderQuestion();
+  $('announcement').textContent=(good?(guessed?'Správný tip. Otázka se brzy zopakuje.':'Správně.'):'Nesprávně podle klíče. Správná odpověď je '+LETTERS[q.answer]+'.')+' Vysvětlení je pod možnostmi.';$('feedbackStatus').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});$('next').focus({preventScroll:true});
+}
+function nextQuestion(){
+  const s=data.session;if(!s||s.completed||s.currentAnswer===null)return;
+  let next=null;if(s.attempts.length<s.target){next=s.mode==='smart'?(smartCandidates()[0]?.id||null):(s.queue.shift()||null);}
+  if(!next){s.completed=true;save();renderResults(true);}else{s.currentId=next;s.currentAnswer=null;s.currentGuessed=false;save();$('announcement').textContent='';renderQuestion(true);}scrollTop();
 }
 function renderResults(focus=false){
-  updateStats();$('quiz').hidden=true;$('results').hidden=false;$('reset').hidden=true;const root=$('results');root.replaceChildren();const s=score();const wrong=state.order.filter(id=>state.answers[id]!==byId.get(id).answer);const box=element('div','result');const icon=element('div','result-icon');icon.setAttribute('aria-hidden','true');icon.innerHTML='<svg width="31" height="31" viewBox="0 0 32 32" fill="none"><path d="m8 16 5 5 11-11" stroke="#56765e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';box.append(icon,element('div','eyebrow',state.mode==='mistakes'?'Opakování dokončeno':'Kolo dokončeno'));const heading=element('h2','',s.rate===100?'Všechno správně.':s.rate>=70?'Jde ti to dobře.':'Každá otázka tě posune.');heading.tabIndex=-1;box.append(heading,element('p','',wrong.length?'Teď už víš, proč odpovědi dávají smysl. Zkus si ještě jednou otázky, které tě potrápily.':'Všechna vysvětlení máš za sebou. Nové kolo promíchá stejné otázky a prověří, co sis zapamatoval/a.'),element('div','result-score',s.rate+' %'),element('div','result-caption',s.correct+' z '+state.order.length+' odpovědí správně'));
-  if(wrong.length){const retry=element('button','next','Procvičit chyby ('+wrong.length+')');retry.addEventListener('click',()=>start(wrong,'mistakes'));box.append(retry);}const all=element('button','next'+(wrong.length?' secondary':''),'Nové kolo · všech 10 otázek');all.addEventListener('click',()=>start());box.append(all);root.append(box);
-  if(wrong.length){const mistakes=element('div','mistakes');mistakes.append(element('h3','','K čemu se vrátit'));wrong.forEach(id=>{const q=byId.get(id);const row=element('div','mistake');row.append(element('strong','','Č. '+id+' · '+q.question),element('span','','Tvoje volba: '+LETTERS[state.answers[id]]+' · správně: '+LETTERS[q.answer]+' — '+q.options[q.answer]));mistakes.append(row);});root.append(mistakes);}if(focus)heading.focus({preventScroll:true});
+  setScreen('results');updateStats();const s=data.session;const result=score();$('modeLabel').textContent=s.mode==='smart'?'Chytré procvičování':s.mode==='all'?'Test všech 50':'Chyby a tipy';const root=$('results');root.replaceChildren();const box=element('div','result');box.append(element('div','eyebrow','Kolo dokončeno'));const heading=element('h2','',result.rate===100?'Výborně. Dej paměti čas.':result.rate>=70?'Jde ti to dobře.':'Každá otázka tě posune.');heading.tabIndex=-1;
+  const guessed=s.attempts.filter(a=>a.good&&a.guessed).length;box.append(heading,element('p','',s.attempts.length<s.target?'Pro tuto chvíli už není vhodná další otázka. Chytré procvičování pokračuje při dalším termínu.':'Pokrok je uložený. Chyby a tipy se vrátí brzy, zvládnuté otázky dostanou delší odstup.'),element('div','result-score',result.rate+' %'),element('div','result-caption',result.correct+' z '+result.answered+' odpovědí správně'+(guessed?' · z toho '+guessed+' označených jako tip':'')));
+  const overview=element('button','next','Zpět na přehled');overview.addEventListener('click',()=>{renderHome();scrollTop();});box.append(overview);
+  const weakIds=[...new Set(s.attempts.filter(a=>!a.good||a.guessed).map(a=>a.id))];if(weakIds.length){const retry=element('button','next secondary','Procvičit chyby a tipy');retry.addEventListener('click',()=>start('weak'));box.append(retry);}root.append(box);
+  if(weakIds.length){const mistakes=element('div','mistakes');mistakes.append(element('h3','','K čemu se vrátit'));weakIds.forEach(id=>{const q=byId.get(id);const row=element('div','mistake');row.append(element('strong','','Č. '+id+' · '+q.question),element('span','','Podle klíče: '+LETTERS[q.answer]+' — '+q.options[q.answer]));mistakes.append(row);});root.append(mistakes);}if(focus)heading.focus({preventScroll:true});
 }
 function scrollTop(){window.scrollTo({top:0,behavior:'auto'});}
-function start(ids,mode){state=newState(ids,mode);save();$('announcement').textContent='';renderQuestion(true);scrollTop();}
-$('next').addEventListener('click',()=>{const q=byId.get(state.order[state.index]);if(state.answers[q.id]===undefined||state.done)return;if(state.index===state.order.length-1){state.done=true;save();renderResults(true);}else{state.index++;save();$('announcement').textContent='';renderQuestion(true);}scrollTop();});
-$('reset').addEventListener('click',()=>{if(Object.keys(state.answers).length&&!window.confirm('Začít nové kolo? Výsledek tohoto kola se vynuluje.'))return;start();});
-state=load();save();if(state.done)renderResults();else renderQuestion();
+function abandonToHome(){save();renderHome();scrollTop();}
+$('smartStart').addEventListener('click',()=>start('smart'));
+$('allStart').addEventListener('click',()=>start('all'));
+$('weakStart').addEventListener('click',()=>start('weak'));
+$('resume').addEventListener('click',()=>{renderQuestion(true);scrollTop();});
+$('homeButton').addEventListener('click',abandonToHome);
+$('next').addEventListener('click',nextQuestion);
+$('reset').addEventListener('click',()=>{if(!confirm('Opravdu vymazat celý uložený pokrok všech 50 otázek? Tento krok nejde vrátit.'))return;data=freshData();save();renderHome();scrollTop();});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&screen==='home')renderHome();});
+data=load();save();renderHome();
+// Refresh due counts when a tab stays open across the next review time.
+refreshTimer=setInterval(()=>{if(screen==='home')renderHome();},30000);
+
+const uniqueSources=new Map();
+QUESTIONS.forEach(q=>[...(q.source?[q.source]:[]),...(q.sources||[])].forEach(source=>uniqueSources.set(source.url,source)));
+for(const source of uniqueSources.values()){const li=element('li');const a=element('a','',source.label);a.href=source.url;a.target='_blank';a.rel='noopener noreferrer';li.append(a);$('sourceList').append(li);}
+
 </script>
 </body>
 </html>
