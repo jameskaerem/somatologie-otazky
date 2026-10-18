@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f6f3ee">
-  <meta name="description" content="50 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
+  <meta name="description" content="150 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
   <title>Somatologie · malý krok, velké pochopení</title>
   <style>
     :root{color-scheme:light;--bg:#f6f3ee;--paper:#fffefa;--ink:#293d39;--muted:#65736e;--line:#e1e6df;--sage:#dceadf;--green:#236345;--green-bg:#e4f3e7;--red:#983a45;--red-bg:#fbe5e6;--lavender:#ece7f8;--accent:#65558e;--peach:#fae8dc;--radius:26px}
@@ -18,22 +18,22 @@
   <header class="brand">
     <div class="brand-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M4 6.5c3.4-1.2 6.7-.7 10 1.6 3.3-2.3 6.6-2.8 10-1.6v16c-3.4-1.2-6.7-.7-10 1.6-3.3-2.3-6.6-2.8-10-1.6v-16Z" stroke="#56765e" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 8v16M7.5 11l3 .9M7.5 15l3 .9M17.5 12l3-.9M17.5 16l3-.9" stroke="#56765e" stroke-width="1.5" stroke-linecap="round"/></svg></div>
     <div><div class="brand-name">Somatologie</div><div class="brand-sub">Malý krok, velké pochopení.</div></div>
-    <span class="offline">50 otázek</span>
+    <span class="offline">150 otázek</span>
   </header>
 
-  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">50 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
+  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">150 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
   <div id="storageNotice" class="toast" hidden>Prohlížeč nepovolil ukládání. Test funguje, ale po zavření se průběh neobnoví.</div>
   <div id="recoveryNotice" class="recovery" hidden>Uložený pokrok nebylo možné načíst. Začínáme s novým přehledem.</div>
   <section class="card home" id="home" aria-label="Přehled učení">
     <h2 class="home-title">Každá otázka má svůj čas.</h2>
-    <div class="home-stats"><div class="home-stat"><span>Vyzkoušeno</span><strong id="seenTotal">0 / 50</strong></div><div class="home-stat"><span>Zvládnuté</span><strong id="masteredTotal">0 / 50</strong></div><div class="home-stat"><span>Čas zopakovat</span><strong id="dueTotal">0</strong></div></div>
+    <div class="home-stats"><div class="home-stat"><span>Vyzkoušeno</span><strong id="seenTotal">0 / 150</strong></div><div class="home-stat"><span>Zvládnuté</span><strong id="masteredTotal">0 / 150</strong></div><div class="home-stat"><span>Čas zopakovat</span><strong id="dueTotal">0</strong></div></div>
     <p class="learning-label">Zvládnuté = alespoň 3 úspěšná vybavení v plánovaných termínech.</p>
-    <div class="track" role="progressbar" id="learningProgress" aria-label="Počet opakovaně zvládnutých otázek" aria-valuemin="0" aria-valuemax="50" aria-valuenow="0"><div class="fill" id="learningFill"></div></div>
+    <div class="track" role="progressbar" id="learningProgress" aria-label="Počet opakovaně zvládnutých otázek" aria-valuemin="0" aria-valuemax="150" aria-valuenow="0"><div class="fill" id="learningFill"></div></div>
     <p class="home-hint" id="homeHint"></p>
     <button class="next resume" id="resume" hidden>Pokračovat v kole</button>
     <div class="mode-card recommended"><span class="tag">Doporučený režim</span><h3>Chytré procvičování</h3><p>Krátké kolo do 10 odpovědí. Přednost mají chyby a tipy, pak otázky k opakování a nové. Zvládnuté odpočívají do svého termínu.</p><button class="next" id="smartStart">Začít chytré kolo</button></div>
     <div class="mode-card"><h3>Jen chyby a tipy <span class="pill" id="weakCount">0</span></h3><p id="weakHint"></p><button class="next secondary" id="weakStart">Procvičit slabší otázky</button></div>
-    <div class="mode-card"><h3>Test všech 50</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
+    <div class="mode-card"><h3>Test všech 150</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
     <details class="home-help"><summary>Jak funguje chytré opakování?</summary><ul><li><strong>Chyba nebo tip:</strong> otázka se vrátí po alespoň třech jiných odpovědích v témže chytrém kole, jinak přibližně za 10 minut.</li><li><strong>Správně a bez tipu:</strong> termíny se postupně prodlužují na 1, 3, 7, 14 a 30 dní od příslušné odpovědi.</li><li><strong>Správně před termínem:</strong> procvičení se počítá do výsledku, ale samo neposune otázku na vyšší úroveň.</li><li><strong>Tři úspěchy s odstupem:</strong> otázka se označí jako zvládnutá. Nezmizí navždy; po termínu se znovu ověří.</li><li><strong>Další chyba:</strong> otázka se vrátí mezi ty k častému procvičení.</li></ul><p>Jednotlivé otázky se v chytrém kole mohou zopakovat. Skóre proto počítá odpovědi, zatímco horní přehled počítá různé otázky.</p><p>Pokrok se ukládá pouze v tomto prohlížeči a na této webové adrese. Telefon a počítač mají samostatný přehled. Režim tipování označ před odpovědí.</p></details>
   </section>
   <div class="quiz-toolbar" id="quizToolbar" hidden><button class="home-button" id="homeButton">← Přehled</button><span class="mode-label" id="modeLabel"></span></div>
@@ -53,7 +53,7 @@
   </section>
   <section class="card" id="results" aria-label="Výsledek kola" hidden></section>
   <footer class="footer"><p id="saveStatus">Pokrok se ukládá v tomto prohlížeči. Bez účtu a registrace.</p>
-    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 50 otázek v pořadí dokumentu: kapitolu I, otázky 1–45, a kapitolu II, otázky 1–5 (v aplikaci 46–50).</p><p>Otázky: tištěné strany 8–15 a 18 (PDF strany 5–8 a 10). Tištěné klíče: strany 15 a 22 (PDF strany 8 a 12). Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
+    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 150 otázek v pořadí dokumentu: kapitolu I, otázky 1–45 (v aplikaci 1–45), kapitolu II, otázky 1–28 (46–73), kapitolu III, otázky 1–6 (74–79), kapitolu IV.a, otázky 1–29 (80–108), kapitolu IV.b, otázky 1–33 (109–141), a kapitolu V, otázky 1–9 (142–150).</p><p>Otázky: tištěné strany 8–15, 18–22, 24–25, 28–39 a 42–43 (PDF strany 5–8, 10–13, 15–20 a 22). Tištěné klíče: strany 15, 22, 25, 32, 39 a 51 (PDF strany 8, 12, 13, 17, 20 a 26). Všech 150 přiřazení správné odpovědi bylo porovnáno s těmito klíči; nově přidané otázky se ověřovaly bez internetových zdrojů. Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
     <details class="sources"><summary>Uložený pokrok</summary><p>Nové kolo nemaže dřívější znalost otázek. Vymazání dole resetuje celé učení. Vymazáním dat prohlížeče se pokrok také ztratí. Stejná webová adresa po nahrání nové verze pokrok zachová, pokud zůstane zachované úložiště prohlížeče.</p><button class="reset" id="reset">Vymazat celý uložený pokrok</button></details>
   </footer>
 </main>
@@ -1139,10 +1139,2251 @@ QUESTIONS.push(...[
       "label": "NIDCD: obnova sluchových smyslových buněk",
       "url": "https://www.nidcd.nih.gov/research/labs/section-sensory-cell-development-and-function"
     }
+  },
+  {
+    "id": 51,
+    "bookRef": "II · otázka 6",
+    "category": "Vazivo",
+    "question": "Tuhé vazivo obsahuje převážně",
+    "options": [
+      "Kolagenní vlákna",
+      "Buňky a mezibuněčnou hmotu",
+      "Elastická vlákna",
+      "Retikulární vlákna"
+    ],
+    "answer": 0,
+    "title": "Kolagen funguje jako svazek pevných lan",
+    "paragraphs": [
+      "Tuhé vazivo musí především dobře odolávat tahu. Převládají v něm proto pevná kolagenní vlákna: odpověď A. Buňky tato vlákna vytvářejí a udržují, ale netvoří hlavní část objemu tohoto typu vaziva.",
+      "Představ si šlachu jako lano složené z mnoha menších vláken. Uspořádání do svazků umožňuje přenést sílu svalu na kost. Samotné volně rozptýlené buňky by takovou tahovou zátěž nezvládly.",
+      "Elastická vlákna se umějí více protáhnout a vrátit zpět, jako gumička. Retikulární vlákna vytvářejí jemnou podpůrnou síť. Obě jsou užitečná jinde; zde se hledá hlavní materiál pevného vaziva."
+    ],
+    "memory": "Tuhé vazivo = hlavně pevná kolagenní lana, ne hlavně pružné gumičky."
+  },
+  {
+    "id": 52,
+    "bookRef": "II · otázka 7",
+    "category": "Vazivo",
+    "question": "Tuhé vazivo",
+    "options": [
+      "Má málo vláken a mnoho buněk a mezibuněčné hmoty",
+      "Obsahuje tukové buňky spojené retikulárními vlákny",
+      "Má převahu elastických vláken",
+      "Obsahuje převážně kolagenní vlákna"
+    ],
+    "answer": 3,
+    "title": "Když má tkáň držet, musí v ní převažovat nosná výztuž",
+    "paragraphs": [
+      "Správně je D. Pro tuhé vazivo je charakteristické velké množství kolagenních vláken. Mezi nimi jsou buňky a další složky mezibuněčné hmoty, ale právě vláknitá výztuž dává tkáni její hlavní mechanické vlastnosti.",
+      "Je to jako porovnat pevné plátno a řídkou výplň: plátno obsahuje hustou síť nosných vláken a lépe vzdoruje tahu. Podle směru namáhání mohou být kolagenní svazky pravidelně rovnoběžné nebo různě propletené.",
+      "Tukové buňky s podpůrnou sítí vystihují spíše tukovou tkáň. Převaha pružných vláken zase popisuje elastický typ vaziva. Při poznávání tkáně proto sleduj, co v ní převažuje a jaký úkol tím plní."
+    ],
+    "memory": "Tuhé = hustá nosná kolagenní výztuž. Název napovídá funkci."
+  },
+  {
+    "id": 53,
+    "bookRef": "II · otázka 8",
+    "category": "Vazivo",
+    "question": "Lymfoidní vazivo",
+    "options": [
+      "Je základem mízních uzlin",
+      "Formuje v podkoží tukové polštáře",
+      "Vyplňuje štěrbiny mezi orgány",
+      "Obsahuje převážně elastická vlákna"
+    ],
+    "answer": 0,
+    "title": "Jemná síť drží buňky obrany na správném místě",
+    "paragraphs": [
+      "V nabídce je správně A. Mízní uzlina obsahuje jemné podpůrné vazivové uspořádání, ve kterém jsou rozmístěné buňky imunitního systému. Učebnice ho spojuje s lymfoidním vazivem.",
+      "Představ si síť polic v kontrolním skladu: podpůrná konstrukce poskytuje prostor, kde se mohou zachytávat a prohlížet přicházející zásilky. Uzlinou protéká míza a imunitní buňky zde přicházejí do kontaktu s materiálem z tkání.",
+      "Tukové polštáře patří tukové tkáni a vyplnění mezer mezi orgány je typické spíše pro řídké vazivo. Hlavním smyslem zde není pružit, ale podpořit uspořádání obranných buněk."
+    ],
+    "memory": "Lymfoidní → lymfa, míza → mízní uzlina a prostor pro obranné buňky.",
+    "note": "Názvosloví je školní zkratka: podpůrné retikulární vazivo a lymfatická tkáň s imunitními buňkami nejsou úplně zaměnitelné pojmy."
+  },
+  {
+    "id": 54,
+    "bookRef": "II · otázka 9",
+    "category": "Chrupavka",
+    "question": "Vazivová chrupavka",
+    "options": [
+      "Obsahuje převážně elastická vlákna",
+      "Obsahuje převážně vlákna retikulární",
+      "Obsahuje svazky kolagenních vláken",
+      "Neobsahuje kolagenní vlákna"
+    ],
+    "answer": 2,
+    "title": "Pevná lana zapuštěná v chrupavčité výplni",
+    "paragraphs": [
+      "Vazivová chrupavka obsahuje výrazné svazky kolagenních vláken, proto je správně C. Spojuje vlastnosti chrupavčité hmoty s odolností vláknité výztuže.",
+      "Představ si pevnou podložku vyztuženou lany. Výplň pomáhá přenášet tlak, zatímco kolagenní síť dobře snáší tahové síly. Takové uspořádání se hodí například v meniscích nebo ve vazivovém prstenci meziobratlové ploténky.",
+      "Elastická chrupavka potřebuje výraznou pružnost, ale vazivová především pevnost. Kolagen tedy v této chrupavce rozhodně nechybí; právě jeho nápadné svazky jsou vodítkem ke správné odpovědi."
+    ],
+    "memory": "Vazivová chrupavka = chrupavka s pořádnou kolagenní výztuží."
+  },
+  {
+    "id": 55,
+    "bookRef": "II · otázka 10",
+    "category": "Epitely a žlázy",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "Exkreční žlázy vylučují odpadní látky (moč, pot) a sekreční žlázy vylučují sekrety mimo tělo (mléčná žláza) nebo do orgánových dutin (žaludeční šťáva).",
+      "Podle počtu vrstev rozlišujeme jednovrstevné a vícevrstevné epitely. Např. epidermis je vytvořena jednovrstevným epitelem a vícevrstevný epitel vystýlá vnitřní povrch cév."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 0,
+    "title": "Pokožka chrání v několika vrstvách, céva potřebuje tenkou výstelku",
+    "paragraphs": [
+      "První tvrzení učebnice hodnotí jako pravdivé: odlišuje odstraňování odpadních látek od tvorby a vydávání sekretů s určitou funkcí. Pot a moč mohou odnášet odpadní látky; například žaludeční šťáva naopak pomáhá při trávení.",
+      "Druhé tvrzení prohodilo příklady. Epidermis, tedy pokožka, je vícevrstevná. Vnitřek cév vystýlá endotel, který je běžně jednovrstevný. Proto je druhé tvrzení nepravdivé a podle klíče vychází A.",
+      "Představ si rozdíl mezi ochranným kabátem a hladkou tenkou vložkou potrubí. Kůže musí snášet opotřebení zvenčí, zatímco výstelka cévy tvoří jemné rozhraní mezi krví a stěnou."
+    ],
+    "memory": "Pokožka = více vrstev ochrany. Cévní endotel = jedna tenká vrstva.",
+    "note": "Dělení na exkreci a sekreci je zde zjednodušené. Pot má také termoregulační funkci a ledvinu nelze bez dalšího zaměnit za běžnou exkreční žlázu."
+  },
+  {
+    "id": 56,
+    "bookRef": "II · otázka 11",
+    "category": "Vazivo a chrupavka",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "V řídkém vazivu je málo buněk a mezibuněčné hmoty a je zde převaha elastických vláken. Tento typ vaziva vyplňuje štěrbiny mezi orgány.",
+      "Chrupavky jsou bezcévné a nemají inervaci, povrch chrupavek kryje vazivový obal perichondrium."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 1,
+    "title": "Řídké neznamená prázdné; chrupavka se živí z okolí",
+    "paragraphs": [
+      "Řídké vazivo skutečně vyplňuje prostory a podpírá okolní struktury. Není však správně popsáno jako tkáň s málem buněk a základní hmoty a převahou elastických vláken. Obsahuje rozmanité buňky i vlákna v poměrně bohaté základní hmotě. První tvrzení je tedy nepravdivé.",
+      "Chrupavka sama nemá běžnou síť cév a nervů. Živiny do ní přestupují z okolí; často ji kryje vazivový obal zvaný perichondrium neboli ochrustavice. Druhé tvrzení klíč bere jako pravdivé, takže správně je B.",
+      "Představ si zásobování domu bez vlastní příjezdové cesty: zásilky musí dorazit přes okolí. To pomáhá pochopit, proč má chrupavka horší podmínky pro rychlou opravu než dobře prokrvená tkáň."
+    ],
+    "memory": "Chrupavka nemá vlastní cévní rozvoz. Živiny k jejím buňkám musejí přestoupit z okolí.",
+    "note": "Perichondrium nekryje úplně všechny chrupavky: chybí například na kloubní chrupavce a typicky u vazivové chrupavky. Druhé tvrzení je proto obecný školní popis s výjimkami."
+  },
+  {
+    "id": 57,
+    "bookRef": "II · otázka 12",
+    "category": "Kostní tkáň",
+    "question": "Kostní tkáň",
+    "options": [
+      "Neobsahuje kolagenní vlákna",
+      "Je bezcévná a nemá inervaci",
+      "Obsahuje 35 % minerálních látek",
+      "Je tvořena především lamelózními typy kosti"
+    ],
+    "answer": 3,
+    "title": "Dospělá kost skládá svůj materiál do uspořádaných vrstev",
+    "paragraphs": [
+      "V běžné zralé kostře převládá lamelární, v nabídce lamelózní, kostní tkáň. Její hmota je uspořádaná do lamel neboli tenkých vrstev. Proto klíč vybírá D.",
+      "Představ si vrstvený pevný materiál: uspořádání výztuže pomáhá odolávat zátěži. Kolagen dává kosti určitou houževnatost, minerální složka zase tvrdost a odolnost vůči tlaku. Samotný tvrdý minerál bez organické výztuže by byl křehčí.",
+      "Kost je živá a prokrvená tkáň, nikoli suchá neživá tyčka. Cévy přivádějí živiny a kost se průběžně přestavuje. Uvedené číslo 35 % není v této nabídce správným vyjádřením podílu minerální složky."
+    ],
+    "memory": "Kost = živý vrstvený materiál: kolagenní výztuž plus minerální zpevnění.",
+    "note": "Podíly vody, organických a minerálních látek závisejí na tom, zda hodnotíme mokrou či suchou hmotnost a jaký vzorek měříme. Pro tento test je rozhodující D."
+  },
+  {
+    "id": 58,
+    "bookRef": "II · otázka 13",
+    "category": "Kostní tkáň",
+    "question": "Okostice",
+    "options": [
+      "Je poměrně necitlivá",
+      "Je důležitá pro výživu kostí",
+      "Je krvetvornou tkání",
+      "Pokrývá celou kost včetně kloubních konců"
+    ],
+    "answer": 1,
+    "title": "Zásobovací a opravárenský obal kosti",
+    "paragraphs": [
+      "Okostice je vazivový obal na povrchu kosti. Přivádí cévy a obsahuje buňky důležité pro růst do šířky a opravy. Je tedy důležitá pro výživu kostí: B.",
+      "Představ si obal domu, ve kterém vedou zásobovací rozvody a působí údržba. Není to jediná cesta výživy celé kosti, ale její funkce je významná. Okostice je také bohatě inervovaná, takže její poranění může velmi bolet.",
+      "Krvetvorba patří především červené kostní dřeni. Na plochách, kde kost vstupuje do kloubu, je místo běžné okostice kloubní chrupavka; D proto neplatí."
+    ],
+    "memory": "Okostice = cévy, citlivost a opravy. Kloubní povrch kryje chrupavka."
+  },
+  {
+    "id": 59,
+    "bookRef": "II · otázka 14",
+    "category": "Růst kostí",
+    "question": "Osifikace",
+    "options": [
+      "Probíhá pouze z povrchu chrupavky",
+      "Se šíří z osifikačních center",
+      "Dlouhých kostí probíhá z vaziva",
+      "Není ovlivněna růstovým hormonem"
+    ],
+    "answer": 1,
+    "title": "Kostnatění začíná v určitých místech a postupuje dál",
+    "paragraphs": [
+      "Osifikace znamená vznik kostní tkáně. Při vývoji dlouhé kosti se objevují osifikační centra, odkud kostnatění postupuje do dalších oblastí. Proto je správně B.",
+      "Představ si stavbu, která se rozbíhá z několika připravených pracovišť. Chrupavčitý model dlouhé kosti se postupně nahrazuje kostí; nejde jen o nátěr jejího povrchu. Primární centrum bývá v oblasti budoucího těla dlouhé kosti, další centra vznikají v koncích.",
+      "Některé kosti skutečně vznikají přímým kostnatěním vazivového podkladu, ale pro typickou dlouhou kost je zásadní chrupavčitý model. Růstové hormonální signály celý vývoj ovlivňují, takže D není správně."
+    ],
+    "memory": "Osifikace = výstavba kostní tkáně z osifikačních center, ne pouhé obalení chrupavky."
+  },
+  {
+    "id": 60,
+    "bookRef": "II · otázka 15",
+    "category": "Svalové tkáně",
+    "question": "Hladká svalová tkáň",
+    "options": [
+      "Se skládá z vřetenovitých buněk spojených jemným vazivem",
+      "Je tvořena svalovými vlákny, která se skládají do svazků spojených vazivem",
+      "Tvoří základ zádových, hrudních a krčních svalů",
+      "Je řízena míšními a hlavovými nervy"
+    ],
+    "answer": 0,
+    "title": "Nenápadné buňky pohybují obsahem vnitřních orgánů",
+    "paragraphs": [
+      "Buňky hladké svaloviny jsou typicky vřetenovité: uprostřed širší a na koncích zúžené. Mezi nimi je jemná vazivová opora. Tomuto popisu odpovídá A.",
+      "Hladká svalovina pracuje například ve stěně střeva nebo cév. Její stah pomáhá posunovat obsah nebo měnit průsvit trubice. Představ si ruku, která postupně stlačuje měkkou hadici: obsah se posouvá, aniž bys musel každý stah vědomě řídit.",
+      "Velké zádové či krční svaly jsou naopak kosterní svalovina. Hladké svalstvo se řídí mimo jiné autonomními nervy, hormony a místními vlivy; běžně ho neovládáme vůlí jako biceps."
+    ],
+    "memory": "Hladká svalovina = vřetenovité buňky ve vnitřních orgánech, většinou bez vědomého ovládání.",
+    "note": "Nabídka D používá neurčité dělení nervů; i autonomní vlákna mají vztah k hlavovým a míšním nervům. A je zde konkrétní a zamýšlená odpověď klíče."
+  },
+  {
+    "id": 61,
+    "bookRef": "II · otázka 16",
+    "category": "Svalové tkáně",
+    "question": "Srdeční svalovina",
+    "options": [
+      "Je řízena míšními a hlavovými nervy",
+      "Tvoří vnitřní vrstvu srdeční stěny",
+      "Je typem příčně pruhované svalové tkáně",
+      "Je typem hladké svaloviny"
+    ],
+    "answer": 2,
+    "title": "Pruhovaná stavba neznamená ovládání vůlí",
+    "paragraphs": [
+      "Srdeční svalovina má pravidelné uspořádání kontraktilních bílkovin, které pod mikroskopem vytváří příčné pruhování. Proto je správně C. Není to hladká svalovina.",
+      "Představ si pravidelně uspořádané řady pracovníků, kteří společně přitahují dvě části k sobě. Pruhování odráží toto opakující se vnitřní uspořádání. Podobnost s kosterním svalem ale neznamená, že můžeš srdeční sval vědomě zastavit jako pohyb ruky.",
+      "Srdeční sval tvoří myokard, tedy svalovou střední vrstvu srdeční stěny. Vnitřní výstelka je endokard. Srdeční rytmus vzniká ve specializovaných buňkách srdce a autonomní nervy jeho činnost upravují."
+    ],
+    "memory": "Srdce = příčně pruhované, ale mimovolní. Myokard není vnitřní výstelka."
+  },
+  {
+    "id": 62,
+    "bookRef": "II · otázka 17",
+    "category": "Svalové tkáně",
+    "question": "Srdeční svalovina",
+    "options": [
+      "Má volní inervaci",
+      "Je příčně pruhovaná a složená z buněk",
+      "Je pod kontrolou mozkové kůry",
+      "Je tvořena svalovými vlákny spojenými vazivem"
+    ],
+    "answer": 1,
+    "title": "Propojené buňky pracují jako sehraný tým",
+    "paragraphs": [
+      "Správně je B: srdeční svalovina je příčně pruhovaná a tvoří ji jednotlivé svalové buňky. Ty jsou navzájem mechanicky a elektricky propojené, aby mohly pracovat koordinovaně.",
+      "Představ si tým lidí, kteří musí zabrat společně. Kdyby si každá buňka dělala svůj stah v libovolný okamžik, srdce by krev účinně nečerpalo. Spoje mezi buňkami pomáhají šířit elektrickou aktivitu a přenášet sílu.",
+      "Volní ovládání jako u pohybu prstů pro srdce neplatí. Formulace D připomíná především školní popis dlouhých vláken kosterní svaloviny; zde se hledá charakteristický popis srdečních buněk."
+    ],
+    "memory": "Srdeční buňky jsou propojený tým: pruhování ano, vědomý povel pro každý stah ne.",
+    "note": "Také v srdci jsou vazivové struktury a buněčná vlákna. D proto není vhodné vykládat jako popření veškerého vaziva v myokardu; B je odpověď klíče."
+  },
+  {
+    "id": 63,
+    "bookRef": "II · otázka 18",
+    "category": "Svalové tkáně",
+    "question": "Určete typy svalových tkání:",
+    "terms": [
+      "Svalová tkáň řízená míšními a hlavovými nervy",
+      "Svalovina inervovaná autonomními nervy",
+      "Svalová tkáň, schopná tvořit a rozvádět elektrické vzruchy"
+    ],
+    "definitions": [
+      "Hladká svalová tkáň",
+      "Srdeční svalovina",
+      "Kosterní svalová tkáň"
+    ],
+    "options": [
+      "A1, B2, C3",
+      "A3, B1, C2",
+      "A3, B2, C1",
+      "A1, B3, C2"
+    ],
+    "answer": 1,
+    "title": "Tři druhy svalů, tři typické způsoby řízení",
+    "paragraphs": [
+      "U kosterní svaloviny přichází povel prostřednictvím somatických motorických nervů: A3. U hladké svaloviny se v tomto základním členění zdůrazňují autonomní nervy, tedy B1. Specializovaná srdeční svalovina dokáže sama vytvářet a rozvádět elektrickou aktivitu: C2. Kombinace je B.",
+      "Představ si tři provozy: pohyb ruky na povel, automatické posouvání obsahu střeva a srdce s vlastním časovačem. Rozdíl v řízení souvisí s tím, k čemu daný sval slouží.",
+      "Není ale správné tvrdit, že autonomní nervy ovlivňují jen hladký sval. Upravují i srdeční frekvenci a sílu stahu. U přiřazení vybíráš typickou zamýšlenou vazbu, ne úplný seznam vlastností každé tkáně."
+    ],
+    "memory": "Kostra = motorický povel; hladká svalovina = automatický provoz; srdce = vlastní časování.",
+    "note": "Kategorie nejsou zcela výlučné: autonomní nervy inervují také srdce a elektrické děje probíhají i v ostatních svalech."
+  },
+  {
+    "id": 64,
+    "bookRef": "II · otázka 19",
+    "category": "Svalové tkáně",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "Myofibrily v hladké a srdeční svalovině i v kosterním svalu jsou složeny ze dvou typů bílkovin. Při kontrakci vyvolané nervovým podnětem se molekuly obou bílkovin vsouvají mezi sebe a svalové vlákno se zkracuje.",
+      "Srdeční svalovina je typem hladké svalové tkáně složené z buněk. Srdeční svalovina je inervována mozkovými a míšními nervy."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 0,
+    "title": "Vlákénka po sobě kloužou; srdce není hladký sval",
+    "paragraphs": [
+      "Klíč uvádí A. Základní princip první věty míří na aktin a myosin: při stahu se jejich filamenta vůči sobě posouvají. Nemusejí se sama zkrátit; změní se jejich překrytí a tím délka kontraktilního uspořádání.",
+      "Představ si dvě řady prstů, které zasouváš více mezi sebe. Celá sestava se zkrátí, přestože jednotlivé prsty nezkrátíš. Druhé tvrzení je určitě chybné: srdeční sval je příčně pruhovaný, ne hladký.",
+      "První tvrzení však není přesným popisem všech tří svalových tkání. Hladká svalovina nemá myofibrily uspořádané jako příčně pruhované svaly a srdeční stah běžně nezačíná vnějším nervovým povelem ke každému úderu."
+    ],
+    "memory": "Stah = větší překrytí aktinu a myosinu. Srdeční svalovina = příčně pruhovaná.",
+    "note": "A odpovídá vytištěnému klíči. První tvrzení ber jako zjednodušenou pomůcku ke klouzavému mechanismu, nikoli jako přesnou definici myofibril hladkého svalu nebo původu srdečního rytmu."
+  },
+  {
+    "id": 65,
+    "bookRef": "II · otázka 20",
+    "category": "Nervová tkáň",
+    "question": "Nejprimitivnější nervová soustava u živočichů je",
+    "options": [
+      "Trubicovitá",
+      "Žebříčkovitá",
+      "Difúzní",
+      "Pásovitá"
+    ],
+    "answer": 2,
+    "title": "Nejdřív síť, teprve později výrazná centrála",
+    "paragraphs": [
+      "Difúzní nervová soustava tvoří rozptýlenou síť nervových buněk bez výrazného ústředního mozku. V základním školním srovnání jde o nejjednodušší z uvedených uspořádání, proto C.",
+      "Představ si sousedskou síť, kde se zprávy předávají mezi propojenými členy, místo aby všechno procházelo jednou kanceláří. Takové uspořádání známe například u některých žahavců.",
+      "Žebříčkovité a další centralizovanější soustavy už mají výraznější podélné dráhy a nervová centra. Trubicovitá soustava obratlovců zahrnuje mozek a míchu. Otázka porovnává typy organizace, ne inteligenci jednotlivého zvířete."
+    ],
+    "memory": "Difúzní = rozptýlená síť bez výrazné centrály.",
+    "note": "Slovo nejprimitivnější je historický školní popis jednoduchosti stavby; neznamená, že dnešní živočich je nezměněný přímý předek ostatních."
+  },
+  {
+    "id": 66,
+    "bookRef": "II · otázka 21",
+    "category": "Nervová tkáň",
+    "question": "Žebříčková nervová soustava se nachází u",
+    "options": [
+      "Láčkovců",
+      "Červů kroužkovců",
+      "Prvoků",
+      "Strunatců"
+    ],
+    "answer": 1,
+    "title": "Podélné dráhy propojené příčkami",
+    "paragraphs": [
+      "Klíč vybírá kroužkovce, tedy B. Jejich břišní nervová soustava má v základním popisu párové podélné prvky a propojení mezi nimi; uspořádání připomíná žebřík se dvěma bočnicemi a příčkami.",
+      "Nervová centra v jednotlivých článcích pomáhají řídit tělo po úsecích. Představ si řadu místních stanic propojených společným vedením: některé signály zpracují místně, jiné předají dál.",
+      "Prvoci nejsou mnohobuněční živočichové s nervovou tkání. Strunatci mají v základním členění trubicovitou nervovou soustavu. U láčkovců učebnice naopak zdůrazňuje rozptýlenou nervovou síť."
+    ],
+    "memory": "Žebřík = podélné bočnice, příčná propojení a článkovaná nervová centra."
+  },
+  {
+    "id": 67,
+    "bookRef": "II · otázka 22",
+    "category": "Nervová tkáň",
+    "question": "Neuron",
+    "options": [
+      "Má vždy jeden dendrit",
+      "Neobsahuje buněčné organely",
+      "Obsahuje obvykle několik axonů",
+      "Je vyživován prostřednictvím neuroglií"
+    ],
+    "answer": 3,
+    "title": "Nervová buňka má kolem sebe podpůrný servis",
+    "paragraphs": [
+      "Neuroglie neboli gliové buňky podporují prostředí, ve kterém neurony pracují. Podílejí se mimo jiné na metabolické podpoře, hospodaření s látkami a udržování vhodného okolí. Proto je zamýšlená odpověď D.",
+      "Představ si citlivý přístroj, který potřebuje nejen drát pro signál, ale také správné napájení, izolaci a servis. Neuron je specializovaný na přenos a zpracování informací, glie pomáhají udržet podmínky jeho činnosti.",
+      "Neuron je plnohodnotná buňka s organelami. Dendritů může mít více nebo mohou být výběžky uspořádané jinak podle typu neuronu. Typicky má jeden axon, který se může větvit; několik větví není totéž jako několik samostatných axonů."
+    ],
+    "memory": "Neuron přenáší a zpracovává signály, glie poskytují důležitý podpůrný servis.",
+    "note": "Výživa neuronu zahrnuje přísun látek z krve a okolí; D neznamená, že každá živina musí vždy projít přes gliovou buňku."
+  },
+  {
+    "id": 68,
+    "bookRef": "II · otázka 23",
+    "category": "Nervová tkáň",
+    "question": "Výběžky neuronů dendrity",
+    "options": [
+      "Jsou krátké výběžky vedoucí dostředivě",
+      "Jsou pokryty myelinovou pochvou",
+      "Jsou součástí neuroglií",
+      "Jsou dlouhá vlákna vedoucí odstředivě"
+    ],
+    "answer": 0,
+    "title": "Dendrity jsou přijímací větve neuronu",
+    "paragraphs": [
+      "Dendrity obvykle přijímají vstupy a vedou změny elektrického napětí směrem k tělu neuronu. Dostředivě zde tedy znamená k tělu této konkrétní buňky. Správně je A.",
+      "Představ si korunu stromu, jejíž větve sbírají signály z okolí. Čím bohatší větvení, tím více prostoru pro kontakty s dalšími buňkami. Axon se naopak v základním popisu stará o výstup signálu od těla neuronu.",
+      "Dendrity patří neuronu, nikoli neurogliím, a běžně nemají myelinovou pochvu jako myelinizované axony. Délka a tvar se liší podle druhu neuronu, ale pro tuto otázku je rozhodující přijímací směr."
+    ],
+    "memory": "Dendrity dovnitř k tělu buňky, axon jako typický výstup ven.",
+    "note": "Dostředivě se tu vztahuje k tělu neuronu, ne automaticky k mozku. Popis krátké je obecná pomůcka, nikoli přesná délková hranice."
+  },
+  {
+    "id": 69,
+    "bookRef": "II · otázka 24",
+    "category": "Nervová tkáň",
+    "question": "Přiřaďte k sobě správné termíny (významově, funkčně, anatomicky):",
+    "terms": [
+      "Gliová buňka",
+      "Odstředivý výběžek neuronu",
+      "Dostředivý výběžek neuronu",
+      "Mediátor",
+      "Pochva nervového vlákna"
+    ],
+    "definitions": [
+      "Axon",
+      "Dendrit",
+      "Astrocyt",
+      "Schwannova buňka",
+      "Acetylcholin"
+    ],
+    "options": [
+      "A4, B2, C1, D5, E3",
+      "A3, B1, C2, D5, E4",
+      "A3, B1, C2, D4, E5",
+      "A4, B2, C1, D3, E5"
+    ],
+    "answer": 1,
+    "title": "Podpora, vedení signálu, chemická zpráva a izolace",
+    "paragraphs": [
+      "Astrocyt je typ gliové buňky: A3. Axon v základním popisu odvádí signál od těla neuronu, B1, zatímco dendrit přivádí vstupy k tělu, C2. Acetylcholin je chemický přenašeč neboli mediátor: D5.",
+      "Schwannova buňka vytváří obaly kolem periferních nervových vláken a může vytvářet jejich myelin: E4. Celá kombinace je B. Představ si elektrické vedení, jeho izolaci, servisní pracoviště a zprávu předanou přes malou mezeru chemicky.",
+      "Mediátor není další dlouhý drát. Uvolní se na synapsi, naváže na receptory a ovlivní další buňku. Proto je užitečné rozlišovat výběžek pro vedení signálu od látky pro jeho předání."
+    ],
+    "memory": "Astrocyt podporuje; axon odvádí; dendrit přijímá; acetylcholin předává zprávu; Schwannova buňka obaluje.",
+    "note": "Schwannovy buňky obalují vlákna v periferním nervstvu. V centrálním nervstvu vytvářejí myelin jiné glie, oligodendrocyty. Astrocyt není jediný typ glie."
+  },
+  {
+    "id": 70,
+    "bookRef": "II · otázka 25",
+    "category": "Hojení tkání",
+    "question": "Hojení kostní tkáně",
+    "options": [
+      "Nikdy nevede k obnovení původní funkce",
+      "Probíhá velmi pomalu a neplnohodnotně",
+      "Je pomalé a kost lze zatěžovat postupně",
+      "Probíhá dobře a rychle"
+    ],
+    "answer": 2,
+    "title": "Opravená konstrukce potřebuje čas, než unese plnou zátěž",
+    "paragraphs": [
+      "Kost se dokáže hojit a často obnovit dobrou funkci, ale pevnost se nevrátí okamžitě. Nejprve vzniká dočasná opravná tkáň, která se dál mění a přestavuje. Proto klíč volí C: hojení vyžaduje čas a návrat zátěže bývá postupný.",
+      "Představ si opravovaný most. Nové spojení nejprve vznikne a teprve potom získává potřebnou pevnost a uspořádání. To, že už je mezera překlenutá, ještě neznamená, že konstrukce snese libovolnou zátěž.",
+      "Výroky nikdy neobnoví funkci a vždy neplnohodnotně jsou příliš absolutní. Ani dobře a rychle však nevystihuje celou dobu obnovy. Konkrétní průběh závisí na místě, typu poranění, zásobení krví a dalších podmínkách."
+    ],
+    "memory": "Kost není po spojení okamžitě stejně pevná. Oprava pokračuje přestavbou.",
+    "note": "Jde o vysvětlení otázky, ne o návod k zatěžování konkrétní zlomeniny; z tohoto klíče nelze odvodit přesný čas hojení."
+  },
+  {
+    "id": 71,
+    "bookRef": "II · otázka 26",
+    "category": "Hojení tkání",
+    "question": "Regenerační schopnost nervové tkáně",
+    "options": [
+      "Je nulová",
+      "Je pro dobré krevní zásobení dobrá",
+      "Je velmi pomalá a nemusí být úplné",
+      "Nezávisí na poškození periferního výběžku neuronu"
+    ],
+    "answer": 2,
+    "title": "Obnovit vedení je těžší než jen zalepit mezeru",
+    "paragraphs": [
+      "Nervová tkáň se po poškození často obnovuje pomalu a výsledek nemusí být úplný. Správně je C. Nestačí vytvořit jakoukoli novou hmotu: musí se obnovit i správné vedení a kontakty mezi buňkami.",
+      "Představ si svazek jemných komunikačních kabelů. I kdybys spojil přerušené místo, každý vodič musí dorůst vhodnou cestou a zapojit se na správný cíl. U periferního nervu může za vhodných podmínek axon znovu růst; zásadní je i přežití těla neuronu a stav okolních struktur.",
+      "Slovo nulová je tedy příliš silné. Naopak dobrý přívod krve sám o sobě nezaručuje dobrou regeneraci. Podmínky se výrazně liší v periferním nervstvu a v mozku či míše."
+    ],
+    "memory": "Nervová oprava musí obnovit nejen kabel, ale i správné spojení.",
+    "note": "Možnost C má v originálu neobratnou shodu slov; zachovává její obsah. Neznamená, že všechny nervové struktury regenerují stejně."
+  },
+  {
+    "id": 72,
+    "bookRef": "II · otázka 27",
+    "category": "Hojení tkání",
+    "question": "Regenerace a hojení",
+    "options": [
+      "Kostní tkáně probíhá dobře a rychle",
+      "Nervové tkáně je dobré díky dobrému krevnímu zásobení",
+      "Bezcévných chrupavek je nedokonalé",
+      "Epitelů je poměrně pomalé"
+    ],
+    "answer": 2,
+    "title": "Bez vlastních cév má oprava horší zásobování",
+    "paragraphs": [
+      "Chrupavka nemá vlastní cévní síť a její obnova bývá omezená. Proto je v této nabídce správně C. Buňky jsou uložené v mezibuněčné hmotě a látky k nim musejí přestupovat z okolí.",
+      "Představ si opraváře na odlehlém místě bez přímé zásobovací silnice. Materiál se dopravuje obtížněji než na dobře dostupnou stavbu. Navíc záleží na tom, kolik buněk schopných opravy je na místě a jaké prostředí je obklopuje.",
+      "Mnohé epitely se naopak obnovují rychle. Kost může mít dobrou schopnost obnovy, ale rychlost a návrat pevnosti nelze zjednodušit na okamžitou opravu. U nervové tkáně zase samotné cévní zásobení nezaručuje úspěch."
+    ],
+    "memory": "Chrupavka bez cév = omezené opravárenské zásobování, a proto obtížnější obnova."
+  },
+  {
+    "id": 73,
+    "bookRef": "II · otázka 28",
+    "category": "Hojení tkání",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "Epitely regenerují obvykle velmi dobře a rychle. Bohaté cévní zásobení podkladových vrstev epitelu urychluje buněčné dělení, které vede k rychlému vyplnění defektu.",
+      "Nervová tkáň má přes dobré krevní zásobení malou regenerační schopnost. Plně diferencované neurony nemají schopnost proliferace."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 2,
+    "title": "Dobrý přísun materiálu nestačí bez buněk schopných dělení",
+    "paragraphs": [
+      "Klíč hodnotí obě tvrzení jako pravdivá: C. Mnohé epitely mají zásobu buněk schopných dělení a průběžně se obnovují. Živiny k nim přicházejí z cév v podkladovém vazivu, protože epitel sám běžně cévy neobsahuje.",
+      "Zralé neurony se obvykle běžným způsobem nedělí. I při dobrém zásobení tedy nelze po jejich ztrátě jednoduše vytvořit stejný počet nových kopií. Navíc je nutné obnovit složitá propojení.",
+      "Představ si dvě opravny se stejným přísunem materiálu. Jedna má zásobu pracovníků a snadno nahrazovaných dílů, druhá opravuje jedinečné složité součástky. Rozdíl v obnově proto nespočívá jen v kvalitě zásobování."
+    ],
+    "memory": "Epitel má často obnovovací buňky; zralý neuron se běžně nerozdělí na dvě náhrady.",
+    "note": "První tvrzení říká obvykle: specializované epitely mohou mít horší obnovu. Omezená tvorba nových neuronů z prekurzorů není totéž jako dělení plně zralých neuronů."
+  },
+  {
+    "id": 74,
+    "bookRef": "III · otázka 1",
+    "category": "Růst těla",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "Po narození roste člověk do délky nejrychleji v prvním roce života. Pak následuje zpomalení rychlosti růstu, které trvá až do sedmého roku, kdy se růst mírně zrychluje. Třetí zrychlení růstu odpovídá počátku dospívání (puberty).",
+      "Během růstu člověka se nemění jeho proporce těla, ani poměr mezi velikostí orgánů."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 0,
+    "title": "Dítě není jen zmenšenina dospělého",
+    "paragraphs": [
+      "Učebnice bere první tvrzení jako pravdivé. Rychlost růstu se v průběhu dětství mění: po rychlém prvním roce se zpomaluje a další výrazné zrychlení souvisí s pubertou. Nejde o stále stejně rychlé prodlužování těla.",
+      "Druhé tvrzení je chybné, protože se mění také proporce. Malé dítě má vůči tělu relativně větší hlavu a během růstu se mění například podíl délky končetin. Správná kombinace podle klíče je A.",
+      "Představ si obrázek miminka, který jen rovnoměrně zvětšíš. Nevznikne z něj přirozeně vypadající dospělý, protože jednotlivé části těla nerostou ve stejném poměru. Růst proto znamená změnu velikosti i vzájemných poměrů."
+    ],
+    "memory": "Růst není kopírka se stejným zvětšením všech částí: mění se rychlost i proporce.",
+    "note": "Věk kolem sedmého roku a načasování puberty jsou orientační údaje učebnice. Jednotliví lidé nemají totožnou růstovou křivku."
+  },
+  {
+    "id": 75,
+    "bookRef": "III · otázka 2",
+    "category": "Orientace na těle",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "Anatomické postavení zaujímá tělo stojící ve stoji spojném se vzpřímenou hlavou, ruce volně spuštěné, dlaně obrácené dopředu.",
+      "Loketní kloub je vzhledem ke kloubu ramennímu uložen proximálně."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 0,
+    "title": "Společná výchozí poloha zabrání zmatku ve směrech",
+    "paragraphs": [
+      "Anatomický popis vychází ze sjednocené polohy těla: člověk stojí vzpřímeně a dlaně míří dopředu. Díky tomu nemusíme při každém popisu řešit, jestli právě leží nebo má ruce zkřížené. První tvrzení odpovídá konvenci použité v učebnici.",
+      "Proximální znamená blíže k připojení končetiny k trupu. Loket je od trupu dál než rameno, takže je vůči rameni distálně, nikoli proximálně. Druhé tvrzení je nepravdivé a klíč vybírá A.",
+      "Představ si cestu po ruce od ramene k prstům. Směrem k rameni jdeš proximálně, směrem k prstům distálně. Vždy porovnáváš dvě místa, ne to, zda máš zrovna ruku nahoře nebo dole."
+    ],
+    "memory": "Rameno je blíž trupu; loket je vůči němu distální. Dlaně v anatomické poloze míří dopředu."
+  },
+  {
+    "id": 76,
+    "bookRef": "III · otázka 3",
+    "category": "Orientace na těle",
+    "question": "Opačný směr ke směru kraniálnímu je",
+    "options": [
+      "Proximální",
+      "Dorzální",
+      "Kaudální",
+      "Ventrální"
+    ],
+    "answer": 2,
+    "title": "Od hlavy směrem ke kostrči",
+    "paragraphs": [
+      "Kraniální znamená směrem k hlavě. Opačným směrem je kaudální, tedy směrem k dolnímu konci trupu či kostrči. Správně je C.",
+      "Představ si osu probíhající tělem od hlavy dolů. Když se po ní posuneš k hlavě, jdeš kraniálně; opačně kaudálně. Je to jiná dvojice než vpředu a vzadu.",
+      "Dorzální odkazuje k zádové straně, ventrální k přední či břišní. Proximální zase porovnává vzdálenost od připojení končetiny. Směrové pojmy tedy nejdříve přiřaď ke správné ose."
+    ],
+    "memory": "Kraniálně k hlavě, kaudálně ke kostrči. Dvě šipky na téže ose."
+  },
+  {
+    "id": 77,
+    "bookRef": "III · otázka 4",
+    "category": "Roviny těla",
+    "question": "S mediální rovinou jsou rovnoběžné roviny:",
+    "options": [
+      "Laterální",
+      "Sagitální",
+      "Frontální",
+      "Superficiální"
+    ],
+    "answer": 1,
+    "title": "Sagitální řezy jsou jako rovnoběžné plátky zleva doprava",
+    "paragraphs": [
+      "Otázka míří na střední, přesněji mediánní rovinu, která dělí tělo na pravou a levou polovinu. Rovnoběžné s ní jsou sagitální roviny, takže správně je B.",
+      "Představ si tělo rozřezané na svislé plátky, z nichž každý odděluje pravou a levou část. Prostřední plátek leží ve střední rovině, další mohou být více vpravo či vlevo a stále mají stejný směr.",
+      "Frontální rovina naopak odděluje přední a zadní část. Laterální znamená boční a superficiální povrchový; v této nabídce nejde o názvy správné soustavy rovnoběžných řezných rovin."
+    ],
+    "memory": "Sagitální roviny oddělují pravou a levou část; mediánní je ta přesně uprostřed.",
+    "note": "V originálu je napsáno mediální rovina. Pro přesnou střední rovinu se běžně používá označení mediánní; klíč požaduje B."
+  },
+  {
+    "id": 78,
+    "bookRef": "III · otázka 5",
+    "category": "Orientace na těle",
+    "question": "Vyberte správný význam pro následující termíny:",
+    "terms": [
+      "Frontální",
+      "Laterální",
+      "Kraniální",
+      "Kaudální"
+    ],
+    "definitions": [
+      "Boční",
+      "Směřující k hlavě",
+      "Čelní",
+      "Směřující ke kostrči"
+    ],
+    "options": [
+      "A2, B1, C4, D3",
+      "A3, B1, C4, D2",
+      "A3, B1, C2, D4",
+      "A4, B3, C1, D2"
+    ],
+    "answer": 2,
+    "title": "Čtyři orientační štítky na mapě těla",
+    "paragraphs": [
+      "Frontální znamená čelní, tedy A3. Laterální je boční, B1. Kraniální směřuje k hlavě, C2, a kaudální ke kostrči, D4. Celá kombinace odpovídá C.",
+      "Představ si mapu se šipkami a jasně pojmenovanými stranami. Anatomie potřebuje podobnou domluvu, abychom nezaměnili pravolevý směr s předozadním nebo směr k hlavě s pohybem ke straně.",
+      "Slova frontální a laterální si můžeš spojit s čelem a bokem. Kraniální připomíná cranium, lebku; kaudální odkazuje na ocasní konec těla. U člověka proto přirozeně směřuje ke kostrči."
+    ],
+    "memory": "Frontální čelo, laterální bok, kraniální hlava, kaudální kostrč."
+  },
+  {
+    "id": 79,
+    "bookRef": "III · otázka 6",
+    "category": "Orientace na těle",
+    "question": "Vyberte správný význam pro následující termíny:",
+    "terms": [
+      "Superficiální",
+      "Profundus",
+      "Proximální",
+      "Distální"
+    ],
+    "definitions": [
+      "Vzdálený",
+      "Blíže k trupu",
+      "Vnitřní, hluboký",
+      "Povrchový"
+    ],
+    "options": [
+      "A1, B3, C2, D4",
+      "A4, B3, C2, D1",
+      "A3, B4, C2, D1",
+      "A1, B2, C4, D3"
+    ],
+    "answer": 1,
+    "title": "Hloubka pod povrchem a vzdálenost od trupu jsou dvě různé věci",
+    "paragraphs": [
+      "Superficiální znamená povrchový, proto A4. Profundus je hluboký, B3. Proximální znamená blíže k trupu či místu připojení, C2, a distální dále od něj, D1. Správná kombinace je B.",
+      "Představ si ruku v rukávu. Kůže leží povrchněji než kost, zatímco rameno je proximálněji než zápěstí. První srovnání mluví o hloubce, druhé o poloze podél končetiny.",
+      "To vysvětluje, proč nestačí zapamatovat si jedno obecné slovo blíž. Vždy si řekni: blíž čemu? Povrchu, nebo připojení k trupu? Tím se vyhneš nejčastější záměně těchto dvojic."
+    ],
+    "memory": "Superficiální/profundus = povrch/hloubka. Proximální/distální = blíž/dál od připojení."
+  },
+  {
+    "id": 80,
+    "bookRef": "IV.a · otázka 1",
+    "category": "Kostra",
+    "question": "Kosterní soustava člověka se skládá",
+    "options": [
+      "Z o něco více jak 100 kostí",
+      "Z o něco více jak 200 kostí",
+      "Z o něco více jak 300 kostí",
+      "Z o něco více jak 400 kostí"
+    ],
+    "answer": 1,
+    "title": "Dospělá kostra má běžně kolem 206 kostí",
+    "paragraphs": [
+      "Pro dospělého člověka se obvykle uvádí 206 kostí. To je o něco více než 200, takže správně je B. Nejde o stejný počet samostatných kostních částí v každém období života.",
+      "Představ si stavebnici, jejíž některé součásti se během vývoje pevně spojí. Například některé původně oddělené kostní části postupně srůstají, a proto dítě a dospělý nemají úplně stejné počítání.",
+      "Existují i individuální rozdíly, například drobné přídavné kůstky. Pro tuto otázku není potřeba hledat univerzální číslo bez jediné výjimky: důležitý je řád a běžný školní údaj pro dospělou kostru."
+    ],
+    "memory": "Dospělá kostra: běžně 206 → něco přes 200 → B."
+  },
+  {
+    "id": 81,
+    "bookRef": "IV.a · otázka 2",
+    "category": "Růst kostí",
+    "question": "Růst kostí",
+    "options": [
+      "Probíhá i po skončení osifikací růstových chrupavek",
+      "Probíhá až do 30. roku života",
+      "Do šířky probíhá přirůstáním kostních lamel z hlubokých vrstev okostice",
+      "Do délky probíhá uprostřed diafýz"
+    ],
+    "answer": 2,
+    "title": "Délka a šířka kosti mají různá růstová pracoviště",
+    "paragraphs": [
+      "Růst do šířky vzniká přidáváním nové kostní tkáně na povrchu, mimo jiné činností buněk hlubší vrstvy okostice. Proto klíč vybírá C. Kost se nerozšiřuje tak, že by se její hotová mineralizovaná hmota jednoduše nafoukla.",
+      "Představ si kmen stromu, kterému přibývá vrstva zvenčí. Je to jiný princip než prodlužování dlouhé kosti v růstové ploténce mezi tělem a koncem kosti. Uprostřed diafýzy proto neleží běžné hlavní místo růstu do délky.",
+      "Po uzávěru růstových chrupavek se běžné prodlužování ukončuje. Kost ale dál žije a přestavuje se. Přesný věk uzávěru se liší podle kosti a člověka, takže jednoduchá univerzální hranice 30 let nesedí."
+    ],
+    "memory": "Do šířky přibývá kost z povrchu; do délky pracuje růstová ploténka.",
+    "note": "Možnost A je široká a nejednoznačná: po uzávěru plotének může pokračovat přestavba a změna šířky. Konec růstových chrupavek znamená především konec růstu do délky. Klíč volí C."
+  },
+  {
+    "id": 82,
+    "bookRef": "IV.a · otázka 3",
+    "category": "Kost a kostní dřeň",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "V mládí je v kostech zastoupena především červená kostní dřeň, která je krvetvorným orgánem. Červená dřeň je postupně nahrazována tukovou tkání a mění se ve žlutou kostní dřeň. V dospělosti je krvetvorná dřeň již jen v krátkých a plochých kostech.",
+      "U typické dlouhé kosti vzniká osifikací kostěná střední část kosti – diafýza a dvě koncové epifýzy. Mezi střední částí a kloubními konci zůstává po celý život neosifikovaná růstová chrupavka."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 0,
+    "title": "Krvetvorná dřeň ubývá, růstová ploténka nezůstává navždy",
+    "paragraphs": [
+      "Klíč vybírá A. První tvrzení vystihuje přechod od rozsáhlejší krvetvorné červené dřeně v dětství k většímu zastoupení tukové žluté dřeně. Červená dřeň funguje jako výrobna krevních buněk, žlutá má mnohem větší podíl tuku.",
+      "Druhé tvrzení je chybné: růstová chrupavka mezi tělem dlouhé kosti a jejím koncem nezůstává aktivní po celý život. Po dokončení podélného růstu se uzavírá a nahrazuje kostí. Je to jako dočasné stavební pracoviště, které po dokončení stavby skončí.",
+      "První tvrzení však používá příliš úzké slovo jen. U dospělého se krvetvorná dřeň nachází také v některých koncových oblastech dlouhých kostí. Nenauč se proto, že v žádné dlouhé kosti být nemůže."
+    ],
+    "memory": "Červená dřeň vyrábí krev. Růstová ploténka po dokončení růstu nezůstává otevřená navždy.",
+    "note": "A je odpověď vytištěného klíče. První tvrzení není kvůli slovu jen anatomicky úplně přesné; při doslovném hodnocení obou tvrzení je nabídka problematická."
+  },
+  {
+    "id": 83,
+    "bookRef": "IV.a · otázka 4",
+    "category": "Typy kostí",
+    "question": "Přiřaďte k sobě typy kostí:",
+    "terms": [
+      "Dolní čelist",
+      "Lopatka",
+      "Kost stehenní",
+      "Kost zápěstní"
+    ],
+    "definitions": [
+      "Kost dlouhá",
+      "Kost krátká",
+      "Kost plochá",
+      "Kost nepravidelného tvaru"
+    ],
+    "options": [
+      "A1, B2, C3, D4",
+      "A3, B4, C1, D2",
+      "A4, B3, C2, D1",
+      "A4, B3, C1, D2"
+    ],
+    "answer": 3,
+    "title": "Tvar kosti napovídá, jakou práci vykonává",
+    "paragraphs": [
+      "Dolní čelist má složitý nepravidelný tvar: A4. Lopatka je plochá kost, B3. Stehenní kost má výrazné tělo a dva konce, proto je dlouhá, C1. Běžná zápěstní kost patří mezi krátké, D2. Výsledná kombinace je D.",
+      "Představ si různé součásti stroje: dlouhá páka, plochá základna a menší prostorový díl. Stehenní kost slouží jako nosná páka, lopatka poskytuje širokou plochu pro svaly a malé zápěstní kosti skládají pohyblivý celek.",
+      "Dlouhá a krátká nejsou jen názvy podle absolutní velikosti. Rozhoduje také tvar a stavba. I malá kost s typickým tělem a konci může patřit do skupiny dlouhých kostí."
+    ],
+    "memory": "Čelist nepravidelná, lopatka plochá, stehenní dlouhá, zápěstní krátká."
+  },
+  {
+    "id": 84,
+    "bookRef": "IV.a · otázka 5",
+    "category": "Části kostry",
+    "question": "Ke které části kostry patří uvedené kosti?",
+    "terms": [
+      "Scapula",
+      "Vomer",
+      "Tibia",
+      "Vertebra"
+    ],
+    "definitions": [
+      "Lebka",
+      "Horní končetina",
+      "Dolní končetina",
+      "Hrudník"
+    ],
+    "options": [
+      "A1, B2, C3, D4",
+      "A2, B1, C3, D4",
+      "A4, B1, C2, D3",
+      "A2, B3, C1, D4"
+    ],
+    "answer": 1,
+    "title": "Nejdřív přelož název, potom ho zařaď na mapě kostry",
+    "paragraphs": [
+      "Scapula je lopatka, součást pletence horní končetiny: A2. Vomer je kost radličná v lebce: B1. Tibia je holenní kost dolní končetiny: C3. Klíč přiřazuje vertebra k nabídce hrudník, tedy D4, takže vybírá B.",
+      "U poslední dvojice je potřeba dát pozor: vertebra znamená obecně obratel, nikoli pouze hrudní obratel. Obratle tvoří páteř, která má i krční, bederní a další úseky. V nabídce však samostatná kategorie páteř chybí.",
+      "Představ si orientaci podle adres: lopatku najdeš u ramene, radličnou kost v nosní přepážce a tibii v bérci. Obratel nejprve patří na adresu páteř; teprve konkrétní typ určí její úsek."
+    ],
+    "memory": "Scapula lopatka, vomer radličná, tibia holenní, vertebra obratel.",
+    "note": "D4 je zkratka vytištěného testu. Neznamená, že každý obratel patří do hrudního úseku. Chybějící kategorii páteř nelze převzít jako anatomické pravidlo."
+  },
+  {
+    "id": 85,
+    "bookRef": "IV.a · otázka 6",
+    "category": "Vývoj kostry",
+    "question": "Hřbetní struna – chorda dorsalis",
+    "options": [
+      "Je u kruhoústých nahrazena páteří s obratli",
+      "Se dodnes zachovala u ryb",
+      "Se v embryonální době zakládá i u člověka",
+      "Je složena z obratlů"
+    ],
+    "answer": 2,
+    "title": "Dočasná vývojová osa není hotová páteř",
+    "paragraphs": [
+      "Hřbetní struna se zakládá během embryonálního vývoje také u člověka. Pomáhá vymezit osu vyvíjejícího se těla a ovlivňuje vývoj okolních struktur. Správně je C.",
+      "Představ si dočasnou vodicí konstrukci na stavbě. Není totožná s hotovým nosným systémem, ale podle ní se další části uspořádají. Obratle tedy nejsou součástkami, ze kterých je hřbetní struna složená.",
+      "Během vývoje člověka je velká část hřbetní struny nahrazena okolními strukturami; její zbytky se tradičně spojují s rosolovitým jádrem meziobratlové ploténky. Rozlišuj vznik dočasného vývojového útvaru od toho, co zůstává v dospělé kostře."
+    ],
+    "memory": "Chorda dorsalis = embryonální vodicí osa, ne řada obratlů.",
+    "note": "Zachování hřbetní struny se mezi skupinami ryb liší. Široce formulovaná B není přesný popis všech ryb; C je požadovaná odpověď klíče."
+  },
+  {
+    "id": 86,
+    "bookRef": "IV.a · otázka 7",
+    "category": "Páteř",
+    "question": "Která tvrzení o páteři jsou správná?",
+    "options": [
+      "V příčných výběžcích prvních pěti krčních obratlů jsou otvory pro páteřní tepny, zásobující části mozku",
+      "Kostrční kost – zbytek ocasní páteře, je složená z několika zcela pravidelných drobných kostí",
+      "Na páteři jsou spoje pohyblivé – kloubní a nepohyblivé – pomocí vazů a chrupavčitých destiček mezi obratli",
+      "Nejmenší těla mají krční obratle a největší těla mají bederní obratle"
+    ],
+    "answer": 3,
+    "title": "Čím níž, tím větší část váhy musí obratel přenést",
+    "paragraphs": [
+      "Klíč volí D. Těla typických krčních obratlů jsou menší, zatímco bederní obratle mají velká těla, protože přenášejí větší zátěž horních částí těla. Páteř se tak svou stavbou přizpůsobuje různému zatížení.",
+      "Představ si nosné sloupy ve vícepatrové stavbě: spodní musí unést i to, co stojí nad nimi. Neznamená to, že krční část nepotřebuje pevnost; má ale jiné poměry mezi pohyblivostí, velikostí a přenášenou zátěží.",
+      "První dva krční obratle jsou navíc zvláštně upravené pro pohyb hlavy, proto jde o obecné srovnání typických těl. Kostrč není řada zcela pravidelných volných kostiček a spojení obratlů nelze všechna popsat jako úplně nepohyblivá."
+    ],
+    "memory": "Bederní obratle nesou velkou zátěž, proto mají mohutná těla.",
+    "note": "Zadání mluví o tvrzeních v množném čísle, ale tištěný klíč uvádí pouze D. A například neuvádí úplný běžný průběh tepny všemi příslušnými krčními otvory; samotná zmínka o prvních pěti však není důkazem, že tam otvory nejsou. Nabídka je nejednoznačná a D také nepopisuje doslova každý krční obratel."
+  },
+  {
+    "id": 87,
+    "bookRef": "IV.a · otázka 8",
+    "category": "Páteř",
+    "question": "Spoje na páteři",
+    "options": [
+      "Jsou celkově velmi omezeně pohyblivé",
+      "Pevnými vazy omezují posun obratlů",
+      "Jsou vytvářeny pohyblivými meziobratlovými klouby",
+      "Jsou tvořeny ploténkami, které jsou v krčním úseku nejvyšší"
+    ],
+    "answer": 1,
+    "title": "Vazy omezují nežádoucí posun, ne všechen pohyb",
+    "paragraphs": [
+      "Vazy na páteři pomáhají držet obratle ve vzájemném vztahu a brání nadměrným či nevhodným posunům. Proto klíč vybírá B. Bez této kontroly by bylo obtížnější zachovat stabilitu a chránit nervové struktury.",
+      "Představ si řadu pohyblivých dílů propojených bezpečnostními pásy. Každý díl se může trochu pohnout, ale pásy omezí vychýlení za vhodnou mez. Součet menších pohybů přitom umožní výraznější pohyb celé páteře.",
+      "Na spojení se nepodílejí jen vazy, ale i klouby a meziobratlové ploténky. Ploténky proto nejsou jediný typ spojení a absolutně nejvyšší nejsou v krční části."
+    ],
+    "memory": "Vaz = bezpečnostní pás mezi obratli: dovolí přiměřený pohyb, brzdí nadměrný posun.",
+    "note": "Také C vystihuje jednu skutečnou součást spojů. Jako úplný popis je neúplná, protože páteř spojují i další struktury. Test požaduje B."
+  },
+  {
+    "id": 88,
+    "bookRef": "IV.a · otázka 9",
+    "category": "Páteř",
+    "question": "Přiřaďte uvedené výrazy k jednotlivým částem páteře:",
+    "terms": [
+      "Lumbus",
+      "Axis",
+      "Os sacrum",
+      "Thorax"
+    ],
+    "definitions": [
+      "Krční",
+      "Hrudní",
+      "Bederní",
+      "Křížová"
+    ],
+    "options": [
+      "A3, B1, C4, D2",
+      "A2, B1, C4, D3",
+      "A4, B3, C2, D4",
+      "A1, B2, C4, D3"
+    ],
+    "answer": 0,
+    "title": "Latinské orientační cedulky na páteři",
+    "paragraphs": [
+      "Lumbus označuje bederní oblast: A3. Axis je druhý krční obratel, takže B1. Os sacrum je křížová kost, C4. Thorax znamená hrudník a v nabídce odpovídá hrudní oblasti: D2. Správně je A.",
+      "Představ si páteř jako trasu s úseky: krční, hrudní, bederní a křížový. Axis je konkrétní zastávka vysoko na trase, zatímco os sacrum vzniká srůstem křížových obratlů níže.",
+      "Termíny tedy nejsou všechny stejného druhu: jeden je název konkrétního obratle, jiný oblasti či celé kosti. Přesto se dají správně umístit na společnou mapu těla."
+    ],
+    "memory": "Axis nahoře v krku; thorax hrudník; lumbus bedra; os sacrum kříž."
+  },
+  {
+    "id": 89,
+    "bookRef": "IV.a · otázka 10",
+    "category": "Páteř a žebra",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "Páteř je esovitě prohnuta. Dozadu prohnutý úsek vytváří hrudní a křížovou lordózu. Prohnutí dopředu tvoří krční a bederní kyfózu.",
+      "Prvních sedm párů žeber je pravých, další dva páry žeber jsou žebra nepravá a poslední tři páry jsou volná žebra."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 3,
+    "title": "Dva prohozené názvy a jeden špatně spočítaný pár",
+    "paragraphs": [
+      "První tvrzení prohodilo lordózu a kyfózu. Krční a bederní úsek mají fyziologické prohnutí dopředu, lordózu. Hrudní a křížový úsek jsou prohnuté dozadu, kyfóza. První tvrzení je tedy nepravdivé.",
+      "U žeber se v tomto členění uvádí sedm párů pravých, tři páry nepravých s nepřímým napojením vpředu a dva páry volných. Druhé tvrzení zaměnilo poslední počty dva a tři. Také je nepravdivé, proto D.",
+      "Představ si seznam 12 párů rozdělený na 7 + 3 + 2. Poslední dvě žebra na každé straně se vpředu nepřipojují k hrudní kosti, a proto jsou volná. Správný součet sám nestačí; důležité je správné rozdělení."
+    ],
+    "memory": "Krční a bederní lordóza, hrudní a křížová kyfóza. Žebra v testu: 7 + 3 + 2.",
+    "note": "Volná žebra se v širší klasifikaci řadí také mezi nepravá. Zde učebnice používá tři oddělené skupiny."
+  },
+  {
+    "id": 90,
+    "bookRef": "IV.a · otázka 11",
+    "category": "Klouby",
+    "question": "Největší kloub v těle je",
+    "options": [
+      "Kloub ramenní",
+      "Kloub kolenní",
+      "Kloub kyčelní",
+      "Kloub loketní"
+    ],
+    "answer": 1,
+    "title": "Koleno spojuje velké nosné části končetiny",
+    "paragraphs": [
+      "Za největší kloub lidského těla se v tomto základním srovnání považuje kolenní kloub. Správně je B. Zahrnuje spojení stehenní kosti s holenní kostí a také s čéškou.",
+      "Představ si velký nosný mechanismus, který musí při chůzi opakovaně přenášet zatížení a současně dovolit ohnutí nohy. Kloubní plochy, menisky, vazy a okolní svaly se dělí o různé části této práce.",
+      "Kyčel je také mohutný nosný kloub, ale v této nabídce není odpovědí na největší. Rameno je známé hlavně velkou pohyblivostí. Velikost, pevnost a rozsah pohybu tedy nejsou stejná vlastnost."
+    ],
+    "memory": "Největší v testu = koleno. Nejpohyblivější z běžných velkých kloubů = rameno."
+  },
+  {
+    "id": 91,
+    "bookRef": "IV.a · otázka 12",
+    "category": "Klouby",
+    "question": "Nejpohyblivější z uvedených kloubů je",
+    "options": [
+      "Kloub ramenní",
+      "Kloub loketní",
+      "Kloub vřetenozápěstní",
+      "Kloub kolenní"
+    ],
+    "answer": 0,
+    "title": "Mělká jamka dává rameni velký rozsah pohybu",
+    "paragraphs": [
+      "Ramenní kloub dovoluje pohyb paže v mnoha směrech a má velký rozsah. Mezi uvedenými možnostmi je proto správně A. Hlavice pažní kosti se pohybuje v poměrně mělké jamce lopatky.",
+      "Představ si míček na mělkém talířku oproti míčku v hluboké misce. Mělká opora dovolí více směrů pohybu, ale vyžaduje dobrou kontrolu okolními strukturami. U ramene mají velký význam svaly, šlachy, kloubní pouzdro a další stabilizátory.",
+      "Loket a koleno mají výraznější omezení hlavních pohybů. Nejpohyblivější ale neznamená nejpevněji uzamčený; rozsah pohybu a stabilita se musejí vyvažovat."
+    ],
+    "memory": "Rameno = velký rozsah, mělká jamka a důležitá svalová stabilizace."
+  },
+  {
+    "id": 92,
+    "bookRef": "IV.a · otázka 13",
+    "category": "Klouby",
+    "question": "Kolenní kloub",
+    "options": [
+      "Obsahuje jeden chrupavčitý meniskus, vložený mezi tibia a femur",
+      "Je druhý největší kloub v lidském těle",
+      "Má na přední ploše dvě čéšky, vložené do úponové šlachy čtyřhlavého svalu",
+      "Jeho hlavním pohybem je flexe a extenze bérce"
+    ],
+    "answer": 3,
+    "title": "Koleno hlavně ohýbá a natahuje nohu",
+    "paragraphs": [
+      "Flexe je ohnutí a extenze natažení. To jsou hlavní pohyby kolena, takže správně je D. Určitá rotace je za vhodné polohy také možná, ale základní pracovní pohyb tvoří ohnutí a natažení.",
+      "Představ si kloubový mechanismus, který se při kroku sklápí a znovu narovnává. Není to úplně obyčejný pant, protože se při pohybu mění i kontakt kloubních ploch a působí další stabilizační struktury.",
+      "Koleno má dva menisky, vnitřní a zevní, a běžně jednu čéšku. V základním srovnání je největší kloub, ne druhý největší. Ostatní nabídky tedy obsahují chybné počty nebo zařazení."
+    ],
+    "memory": "Koleno: dvě meniskové podložky, jedna čéška, hlavně ohnout a natáhnout."
+  },
+  {
+    "id": 93,
+    "bookRef": "IV.a · otázka 14",
+    "category": "Klouby",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "Loketní kloub je složený kloub, spojuje se v něm pažní, loketní a vřetenní kost.",
+      "Kyčelní kloub připojuje dolní končetinu k pánevním kostem. Je to největší kloub těla."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 0,
+    "title": "Věta se dvěma částmi může být chybná kvůli jediné z nich",
+    "paragraphs": [
+      "V oblasti loketního kloubu se setkávají pažní, loketní a vřetenní kost. První tvrzení je pravdivé. Složený kloub tedy nezahrnuje jen dvě kosti, jako by šlo o jednoduché spojení dvou dílů.",
+      "Kyčelní kloub skutečně připojuje volnou dolní končetinu k pánvi, ale tvrzení je doplněno chybou: největším kloubem se v tomto testu označuje koleno. Druhé tvrzení jako celek tedy neplatí. Odpověď je A.",
+      "Je to jako adresa se správnou ulicí a špatným číslem domu. Nemůžeš přijmout celou adresu jen proto, že první část sedí. U složených tvrzení proto vždy projdi každou větu až do konce."
+    ],
+    "memory": "Loket: pažní + loketní + vřetenní. Kyčel připojuje nohu, ale největší je koleno."
+  },
+  {
+    "id": 94,
+    "bookRef": "IV.a · otázka 15",
+    "category": "Spojení kostí",
+    "question": "Spojení kostí chrupavčitým spojením",
+    "options": [
+      "Nacházíme mezi křížovými obratli",
+      "Nacházíme ve švech klenby lebeční",
+      "Nacházíme v meziobratlových ploténkách",
+      "Umožňuje pohyb těchto kostí"
+    ],
+    "answer": 2,
+    "title": "Ploténka spojuje a zároveň pružně rozděluje zatížení",
+    "paragraphs": [
+      "Mezi těly sousedních obratlů jsou meziobratlové ploténky s vazivově chrupavčitými složkami. Představují typ chrupavčitého spojení, takže klíč uvádí C.",
+      "Představ si pevně vloženou pružnou podložku mezi dvěma nosnými díly. Nechová se jako volný kloub s velkým rozsahem, ale dovoluje menší deformace a pomáhá přenášet zatížení. Celá řada takových spojů přispěje k pohyblivosti páteře.",
+      "Lebeční švy jsou vazivová spojení. Křížové obratle jsou u dospělého převážně srostlé v kost křížovou. Proto jako konkrétní správný příklad vychází ploténky."
+    ],
+    "memory": "Chrupavčité spojení mezi obratlovými těly = meziobratlová ploténka.",
+    "note": "D je obecně formulované: některá chrupavčitá spojení umožňují omezený pohyb. Klíč požaduje konkrétní příklad C, nikoli tvrzení, že každé takové spojení je zcela nepohyblivé."
+  },
+  {
+    "id": 95,
+    "bookRef": "IV.a · otázka 16",
+    "category": "Růst kostí",
+    "question": "Epifyzární růstové chrupavky",
+    "options": [
+      "Se nacházejí na kloubních koncích epifýz dlouhých kostí",
+      "Jsou místa, kde kosti rostou do délky a do šířky",
+      "Činnost jejich buněk stimuluje hormon somatotropin",
+      "Se po ukončení růstu asi ve 30. roce života mění na kostní tkáň"
+    ],
+    "answer": 2,
+    "title": "Růstová ploténka potřebuje hormonální signály",
+    "paragraphs": [
+      "Somatotropin je růstový hormon. Ovlivňuje růst mimo jiné prostřednictvím dalších signálů, zejména IGF-1, a podporuje procesy v růstové chrupavce. Správně je C.",
+      "Představ si dočasnou výrobní linku, která přidává materiál pro prodlužování kosti. Chrupavka vzniká a na jedné straně se nahrazuje kostí. Růstová ploténka leží mezi oblastí těla a konce dlouhé kosti; není to kloubní chrupavka na samotném povrchu hlavice.",
+      "Tato linka je důležitá hlavně pro růst do délky, ne pro přidávání šířky z okostice. Po dokončení růstu se uzavírá, ale není správné všem kostem a lidem přidělit jeden pevný věk 30 let."
+    ],
+    "memory": "Somatotropin podporuje růst. Růstová ploténka není totéž co kloubní povrchová chrupavka."
+  },
+  {
+    "id": 96,
+    "bookRef": "IV.a · otázka 17",
+    "category": "Lebka",
+    "question": "Na lebce",
+    "options": [
+      "Je nejslabším místem jehlancovitá část spánkové kosti",
+      "Na bradavčitém výběžku spánkové kosti je zavěšena jazylka a hrtan",
+      "Vznikl skelet horní a dolní čelisti fylogeneticky ze žaberních oblouků",
+      "Jsou kosti spojeny nepohyblivě švy, které do puberty zcela osifikují"
+    ],
+    "answer": 2,
+    "title": "Čelisti souvisejí s dávnou přestavbou oblouků v oblasti hltanu",
+    "paragraphs": [
+      "Klíč vybírá C. Výrok odkazuje na evoluční souvislost čelistního aparátu s předními hltanovými neboli žaberními oblouky předků obratlovců. U člověka se během vývoje popisují hltanové oblouky; neznamená to, že má lidský zárodek funkční žábry.",
+      "Představ si přestavbu staršího stavebního plánu: některé původní části získají v dalších generacích jinou funkci a uspořádání. Vývoj čelistí není vznik úplně nezávislé konstrukce bez vztahu k okolí hltanu.",
+      "Skalní neboli jehlancovitá část spánkové kosti je velmi pevná, ne nejslabší. Závěsný aparát jazylky souvisí s bodcovitým, nikoli bradavčitým výběžkem. Ani všechny lebeční švy do puberty zcela nesrostou."
+    ],
+    "memory": "Klíč C: čelistní aparát má evoluční vztah k hltanovým obloukům. Bodcovitý není bradavčitý.",
+    "note": "Jde o stručnou evoluční formulaci učebnice, ne přesný seznam původu každé jednotlivé lebeční kosti. Historický název žaberní oblouky u člověka nepopisuje funkční žábry."
+  },
+  {
+    "id": 97,
+    "bookRef": "IV.a · otázka 18",
+    "category": "Lebka",
+    "question": "Největší z vedlejších nosních dutin je",
+    "options": [
+      "V horní čelisti",
+      "V čelní kosti",
+      "V čichové kosti",
+      "V klínové kosti"
+    ],
+    "answer": 0,
+    "title": "Největší pár dutin leží v oblasti horních čelistí",
+    "paragraphs": [
+      "Největšími vedlejšími nosními dutinami se v základním anatomickém popisu označují dutiny horní čelisti, čelistní dutiny. Proto je správně A.",
+      "Představ si vzdušné prostory uvnitř jinak pevné kostní konstrukce. Tyto dutiny jsou vystlané sliznicí a komunikují s nosní dutinou. Nejde tedy o samostatné kosti ani o prázdné prostory bez spojení s nosem.",
+      "Další vedlejší dutiny jsou v čelní a klínové kosti a ve sklípcích čichové kosti. Pro tuto otázku si je můžeš umístit na mapu obličeje: největší běžný pár hledej po stranách nosu v horní čelisti."
+    ],
+    "memory": "Čelistní dutina → horní čelist → největší z běžných vedlejších nosních dutin.",
+    "note": "Velikost dutin je individuální a mění se během vývoje; odpověď je obecné srovnání dospělé anatomie."
+  },
+  {
+    "id": 98,
+    "bookRef": "IV.a · otázka 19",
+    "category": "Lebka",
+    "question": "Obličejová část lebky zahrnuje",
+    "options": [
+      "Kost spánkovou",
+      "Kost radličnou",
+      "Kost temenní",
+      "Kost týlní"
+    ],
+    "answer": 1,
+    "title": "Radličná kost tvoří část nosní přepážky",
+    "paragraphs": [
+      "Kost radličná, latinsky vomer, patří do obličejové části lebky a podílí se na kostěné nosní přepážce. Správně je B.",
+      "Představ si lebku jako ochrannou schránku mozku a navazující kostní stavbu obličeje. Nosní přepážka pomáhá rozdělit prostor nosu na pravou a levou část, takže její kostní součást patří do tohoto obličejového uspořádání.",
+      "Spánková, temenní a týlní kost patří v základním členění k mozkové části lebky. K rozhodnutí proto nestačí, že všechny leží někde na hlavě; zvaž, jakou oblast vytvářejí."
+    ],
+    "memory": "Vomer = radličná kost = nosní přepážka = obličejová část lebky."
+  },
+  {
+    "id": 99,
+    "bookRef": "IV.a · otázka 20",
+    "category": "Lebka",
+    "question": "Obličejová část lebky",
+    "options": [
+      "Je tvořena dvojicí kostí spánkových a kostí čichovou",
+      "Obsahuje horní čelist spojenou lícní kostí s kostí spánkovou",
+      "Obsahuje i kost skalní – nejtvrdší kost v těle",
+      "Je v horní části tvořena kostí čelní"
+    ],
+    "answer": 1,
+    "title": "Lícní kost propojuje konstrukci obličeje s boční částí lebky",
+    "paragraphs": [
+      "Horní čelist se spojuje s lícní kostí a lícní kost navazuje také na spánkovou kost. Tomuto propojení odpovídá B. Lícní kost tedy není jen vystouplá ozdoba tváře, ale součást kostní konstrukce.",
+      "Představ si boční most mezi středem obličeje a oblastí u ucha. Lícní a spánková kost spolu vytvářejí lícní oblouk; další spojení upevňuje horní čelist do okolí.",
+      "Spánkové kosti a skalní část spánkové kosti se v základním členění řadí k mozkové části lebky. Totéž platí pro čelní kost, i když její poloha nad očima může svádět k záměně s obličejovou částí."
+    ],
+    "memory": "Horní čelist ↔ lícní kost ↔ spánková kost. Anatomické členění není jen podle toho, co vidíš zpředu."
+  },
+  {
+    "id": 100,
+    "bookRef": "IV.a · otázka 21",
+    "category": "Lebka",
+    "question": "Mozková část lebky",
+    "options": [
+      "Obsahuje kost skalní, která je nejslabším místem na lebce",
+      "Se skládá ze spodiny lební a klenby lební",
+      "Obsahuje jazylku, na níž je zavěšen hrtan",
+      "Obsahuje kost temenní a dvě kosti čelní"
+    ],
+    "answer": 1,
+    "title": "Ochranná schránka mozku má základnu a klenbu",
+    "paragraphs": [
+      "Mozkovou část lebky lze popsat jako spodinu lební a klenbu lební. Spodina vytváří základnu, klenba horní a boční kryt. Proto je správně B.",
+      "Představ si ochrannou přilbu doplněnou pevnou základnou. Kosti společně vymezují prostor pro mozek a poskytují místa průchodu nervů a cév. Nejde jen o horní oblouk bez dna.",
+      "Skalní část spánkové kosti je velmi pevná, takže A popisuje opak její vlastnosti. Jazylka neleží v mozkové části lebky a u dospělého běžně nepočítáme dvě samostatné čelní kosti. Temenní kosti jsou naproti tomu párové."
+    ],
+    "memory": "Mozková lebka = spodina + klenba. Čelní kost běžně jedna, temenní dvě."
+  },
+  {
+    "id": 101,
+    "bookRef": "IV.a · otázka 22",
+    "category": "Kostra nohy",
+    "question": "Kostra nohy neobsahuje",
+    "options": [
+      "Kost loďkovitou",
+      "Kost radličnou",
+      "Kost hlezenní",
+      "Kost krychlovou"
+    ],
+    "answer": 1,
+    "title": "Radličná kost patří do nosu, nikoli do nohy",
+    "paragraphs": [
+      "Kost radličná, vomer, se podílí na kostěné nosní přepážce. V noze ji proto nenajdeš a správně je B. Otázka zkouší umístění kosti, nikoli to, zda její název připomíná tvar nějakého předmětu.",
+      "Loďkovitá, hlezenní i krychlová kost naopak patří mezi zánártní kosti. Společně s ostatními vytvářejí zadní a střední část kostěné konstrukce nohy a pomáhají přenášet zatížení.",
+      "Představ si třídění součástek podle toho, do kterého zařízení patří. Radličná kost může znít podobně nezvykle jako loďkovitá, ale její adresa je lebka. Právě spojení názvu s místem je spolehlivější než pouhé zapamatování čtyř slov."
+    ],
+    "memory": "Radličná = nosní přepážka. V této nabídce jako jediná nepatří do nohy."
+  },
+  {
+    "id": 102,
+    "bookRef": "IV.a · otázka 23",
+    "category": "Horní končetina",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "Na předloktí navazuje ruka, zápěstí je složeno z osmi kůstek, na které navazuje záprstí a pět prstů, které všechny mají tři články.",
+      "Lopatkový pletenec je tvořen lopatkou a klíční kostí. Lopatka je plochá kost trojúhelníkového tvaru. Klíční kost je dlouhá, esovitě prohnutá."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 1,
+    "title": "Jediný palec změní hodnocení celé první věty",
+    "paragraphs": [
+      "Zápěstí má běžně osm kůstek a ostatní popis první věty začíná správně. Chyba je až ve slově všechny: palec má dva články, zatímco zbývající čtyři prsty mají po třech. První tvrzení jako celek tedy neplatí.",
+      "Pletenec horní končetiny tvoří lopatka a klíční kost. Lopatka je plochá, přibližně trojúhelníková a klíční kost má charakteristické esovité prohnutí. Druhé tvrzení je pravdivé, proto B.",
+      "Představ si kontrolu nákupního seznamu: správné první položky nezaručují, že je správný i zbytek. U dlouhých tvrzení se vyplatí dočíst až k výjimce, protože právě ta rozhodne o celé odpovědi."
+    ],
+    "memory": "Ruka: 8 zápěstních kůstek; palec 2 články, ostatní prsty 3. Pletenec = lopatka + klíční kost."
+  },
+  {
+    "id": 103,
+    "bookRef": "IV.a · otázka 24",
+    "category": "Pánev a noha",
+    "question": "Mezi kosti pánve nepatří",
+    "options": [
+      "Kost kyčelní",
+      "Kost sedací",
+      "Kost stydká",
+      "Kost loďkovitá"
+    ],
+    "answer": 3,
+    "title": "Pánevní kost vzniká spojením tří částí",
+    "paragraphs": [
+      "Kyčelní, sedací a stydká kost tvoří tři části pánevní kosti, které během vývoje srůstají. Kost loďkovitá je naproti tomu v noze. Správná odpověď na nepatří je tedy D.",
+      "Představ si jeden velký díl sestavený ze tří původních částí. V místě jejich setkání leží jamka kyčelního kloubu. Není to trojice libovolných kostí z dolní končetiny, ale konkrétní stavební části pánve.",
+      "Loďkovitou kost si umísti do zánártí. Její pojmenování podle tvaru samo o sobě neříká, že jde o pánev; rozhoduje skutečná poloha. Také slovo kyčelní v nabídce odkazuje na část pánevní kosti, ne na stehenní kost."
+    ],
+    "memory": "Pánevní kost: kyčelní + sedací + stydká. Loďkovitá je v noze."
+  },
+  {
+    "id": 104,
+    "bookRef": "IV.a · otázka 25",
+    "category": "Pánev",
+    "question": "Pánevní prostor",
+    "options": [
+      "Je u žen menší, než u mužů",
+      "Se u žen a u mužů liší jen velikostí, nikoliv tvarem",
+      "Je ohraničen pánevními kostmi a kostí křížovou a kostrční",
+      "Je tvořen dvěma kostmi pánevními a kostí sedací"
+    ],
+    "answer": 2,
+    "title": "Boční stěny a zadní opora vymezují pánevní prostor",
+    "paragraphs": [
+      "Pánevní prostor vymezují pánevní kosti a vzadu křížová kost s kostrčí. To popisuje C. Sedací kost není samostatný třetí díl vedle dvou celých pánevních kostí; je součástí každé z nich.",
+      "Představ si kostěnou mísu: dvě boční části se propojují se zadní stěnou. Tvar a rozměry tohoto prostoru mají vztah k uložení pánevních orgánů a také k porodním poměrům.",
+      "Běžné rozdíly mezi ženskou a mužskou pánví nejsou jen prosté zvětšení stejného tvaru. Liší se i proporce a úhly a mezi lidmi existuje variabilita. Proto se nedá správnost první dvojice možností odvodit z jednoduchého menší versus větší."
+    ],
+    "memory": "Pánevní prostor = pánevní kosti po stranách, křížová kost a kostrč vzadu."
+  },
+  {
+    "id": 105,
+    "bookRef": "IV.a · otázka 26",
+    "category": "Stehenní kost",
+    "question": "Stehenní kost",
+    "options": [
+      "Se na dolním konci rozšiřuje v jediný kloubní hrbol",
+      "Je součástí pánevního pletence",
+      "Zapadá kulovitou hlavicí do kloubní jamky v sedací kosti",
+      "Má velký a malý chocholík, na něž se upínají hýžďové svaly"
+    ],
+    "answer": 3,
+    "title": "Chocholíky jsou výrazné úpony, ale každému nepatří stejné svaly",
+    "paragraphs": [
+      "Vytištěný klíč uvádí D. Stehenní kost skutečně má velký i malý chocholík, tedy kostní výstupky sloužící jako místa svalových úponů. Tyto výstupky fungují jako vhodně umístěná oka pro tah šlach.",
+      "Je ale potřeba opravit druhou část formulace: na velký chocholík se upínají mimo jiné střední a malý hýžďový sval, zatímco malý chocholík je typickým úponem bedrokyčlostehenního svalu. Není správné připsat oba chocholíky obecně hýžďovým svalům.",
+      "Dole má stehenní kost dva hlavní kloubní hrboly. Patří k volné dolní končetině, nikoli k pánevnímu pletenci, a její hlavice zapadá do jamky vytvořené v pánevní kosti, ne pouze v sedací části."
+    ],
+    "memory": "Klíč D; pro anatomii velký chocholík a malý chocholík rozlišuj i podle svalových úponů.",
+    "note": "D je částečně nepřesná možnost, kterou požaduje klíč. Malý chocholík není běžným úponem hýžďových svalů. Zachování hodnocení podle PDF neznamená převzetí této nepřesnosti do vysvětlení."
+  },
+  {
+    "id": 106,
+    "bookRef": "IV.a · otázka 27",
+    "category": "Kostra nohy",
+    "question": "Největší ze zanártních kostí",
+    "options": [
+      "Kost hlezenní",
+      "Kost krychlová",
+      "Kost člunková",
+      "Kost patní"
+    ],
+    "answer": 3,
+    "title": "Patní kost tvoří mohutnou zadní oporu nohy",
+    "paragraphs": [
+      "Největší zánártní kostí je kost patní, calcaneus. Správně je D. Vytváří kostěný podklad paty a přenáší významnou část zatížení při stoji a pohybu.",
+      "Představ si zadní nosný blok konstrukce chodidla. Na jeho horní části spočívá kost hlezenní a na zadní část se upíná Achillova šlacha. Patní kost tedy propojuje nosnou funkci a tah lýtkových svalů.",
+      "Hlezenní kost leží výše a přenáší zatížení z bérce, ale není největší. Slova nártní a zánártní navíc nejsou totéž: zánártí zahrnuje zadní a střední skupinu těchto kostí, nárt pokračuje pěti delšími kostmi k prstům."
+    ],
+    "memory": "Největší zánártní kost = patní. Pata je mohutný zadní nosný blok."
+  },
+  {
+    "id": 107,
+    "bookRef": "IV.a · otázka 28",
+    "category": "Kostra nohy",
+    "question": "Kost hlezenní",
+    "options": [
+      "Je kloubně spojena s kostí loketní",
+      "Je největší nártní kostí",
+      "Patří mezi kosti zanártní",
+      "Je součástí pánevní kosti"
+    ],
+    "answer": 2,
+    "title": "Hlezenní kost je mezi bércem a dalšími kostmi nohy",
+    "paragraphs": [
+      "Kost hlezenní, talus, patří mezi zánártní kosti, takže správně je C. Na horní straně se účastní spojení s kostmi bérce a níže navazuje na další části kostry nohy.",
+      "Představ si přechodový díl, který přebírá zatížení shora a posílá ho do konstrukce nohy. Jeho poloha vysvětluje spojitost s hleznem, nikoli s loktem nebo pánví.",
+      "Kost loketní je v předloktí horní končetiny. Nártní kosti tvoří jinou skupinu než zánártní a největší zánártní je kost patní. Otázka tedy kontroluje současně místo i správné pojmenování skupiny."
+    ],
+    "memory": "Talus = hlezenní = zánártí. Ne loket, ne pánev, ne nártní kost."
+  },
+  {
+    "id": 108,
+    "bookRef": "IV.a · otázka 29",
+    "category": "Kostra a klouby",
+    "question": "Přiřaďte k sobě správné termíny (anatomicky a významově):",
+    "terms": [
+      "Kostrč",
+      "Meniskus",
+      "Kost radličná",
+      "Místo odběru kostní dřeně",
+      "Kost stydká"
+    ],
+    "definitions": [
+      "Kost lebeční",
+      "Součást pletence",
+      "Součást páteře",
+      "Součást kloubu",
+      "Sternum"
+    ],
+    "options": [
+      "A3, B4, C1, D5, E2",
+      "A2, B4, C3, D5, E1",
+      "A5, B4, C3, D1, E2",
+      "A2, B4, C5, D1, E3"
+    ],
+    "answer": 0,
+    "title": "Pět názvů, pět různých adres",
+    "paragraphs": [
+      "Kostrč je zakončení páteře, tedy A3. Meniskus je chrupavčitá součást kloubu, například kolena: B4. Kost radličná leží v lebce, proto C1. Sternum je hrudní kost, v této nabídce tradiční místo odběru kostní dřeně: D5.",
+      "Stydká kost je součástí pánevní kosti a tím pletence dolní končetiny: E2. Celá kombinace je A. Pomůže přiřadit si nejprve dobře známé dvojice a teprve potom zkontrolovat zbytek.",
+      "Představ si mapu těla: kostrč vzadu dole, meniskus v koleni, radličná v nose, sternum vpředu na hrudníku a stydká část vpředu v pánvi. Spojení s konkrétním místem je lepší než zapamatovat si samotnou řadu čísel."
+    ],
+    "memory": "Kostrč páteř, meniskus kloub, radličná lebka, sternum hrudní kost, stydká pánevní pletenec.",
+    "note": "D5 je přiřazení podle testu, ne doporučení jediné lokality všech odběrů. Výběr místa odběru dřeně závisí na typu vyšetření a dalších okolnostech."
+  },
+  {
+    "id": 109,
+    "bookRef": "IV.b · otázka 1",
+    "category": "Motorická jednotka",
+    "question": "Motorická jednotka kosterního svalu je",
+    "options": [
+      "Morfologickou jednotkou tohoto svalu",
+      "Funkční jednotkou tohoto svalu",
+      "Část svalu inervovaná svazkem nervových vláken",
+      "Motorická ploténka, v níž jsou zakončena nervová vlákna"
+    ],
+    "answer": 1,
+    "title": "Jeden motorický neuron ovládá svou skupinu vláken",
+    "paragraphs": [
+      "Motorickou jednotku tvoří jeden motorický neuron a všechna svalová vlákna, která jeho axon zásobuje. Jde o funkční jednotku řízení síly, takže správně je B.",
+      "Představ si jeden vypínač propojený s určitou skupinou světel. Když přijde povel z tohoto neuronu, aktivuje jeho svalová vlákna. Pro větší sílu může nervový systém zapojovat další jednotky a upravovat frekvenci povelů.",
+      "Motorická ploténka je jen konkrétní spojení nervového zakončení se svalovým vláknem. Není totožná s celou jednotkou. Stejně tak nejde o libovolný kus svalu zásobovaný celým svazkem různých nervových vláken."
+    ],
+    "memory": "Motorická jednotka = jeden motorický neuron + všechna jeho svalová vlákna."
+  },
+  {
+    "id": 110,
+    "bookRef": "IV.b · otázka 2",
+    "category": "Stavba svalu",
+    "question": "Myofibrily",
+    "options": [
+      "Jsou přítomny pouze v kosterních svalech",
+      "Jsou svazky svalových vláken",
+      "Jsou tvořeny dvojlomným myosinem a jednolomným aktinem",
+      "Nacházíme mezi buňkami svalové tkáně"
+    ],
+    "answer": 2,
+    "title": "Uvnitř svalového vlákna je mnoho jemných stahovacích struktur",
+    "paragraphs": [
+      "Myofibrily obsahují pravidelné uspořádání tenkých aktinových a silných myosinových filament. Učebnice je spojuje s odlišnými optickými vlastnostmi a vybírá C. Právě jejich uspořádání souvisí s příčným pruhováním.",
+      "Představ si kabel, uvnitř kterého jsou další jemné pracovní provazce. Svalové vlákno je velká buňka a myofibrily leží uvnitř ní; nejsou to svazky celých svalových vláken ani materiál uložený mezi buňkami.",
+      "Tento organizovaný kontraktilní aparát má i srdeční svalovina, proto A neplatí. Při stahu se aktinová a myosinová filamenta vůči sobě posouvají; myofibrila se zkracuje změnou jejich překrytí."
+    ],
+    "memory": "Svalové vlákno je buňka; myofibrily jsou jemné stahovací struktury uvnitř.",
+    "note": "Popis jednolomný aktin a dvojlomný myosin je školní optická zkratka. Pruhy závisí na uspořádání filament a některé oblasti obsahují jejich překrytí."
+  },
+  {
+    "id": 111,
+    "bookRef": "IV.b · otázka 3",
+    "category": "Řízení svalů",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "Motorická jednotka svalu se skládá z nervové buňky a jejího axonu a z vláken svalu, inervovaných tímto jediným nervovým vláknem.",
+      "Zpětné informace pro CNS o práci svalů vycházejí ze zvláštních receptorů ve svalech a šlachách – ze šlachových tělísek a svalových vřetének."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 2,
+    "title": "Řízení potřebuje povel ven i informaci zpátky",
+    "paragraphs": [
+      "První tvrzení správně popisuje motorickou jednotku: jeden neuron se svým axonem a všechna svalová vlákna, která řídí. Nervová větev se může rozdělit k několika vláknům, ale stále patří témuž neuronu.",
+      "Druhé tvrzení také platí. Svalová vřeténka poskytují informace například o protažení svalu a šlachová tělíska o jeho tahu. Nervový systém tak dostává zpětnou vazbu o probíhajícím pohybu. Klíč je C.",
+      "Představ si řízení auta: nestačí sešlápnout pedál, potřebuješ také vidět rychlost a reakci vozu. Podobně mozek a mícha nejen posílají svalům povely, ale využívají i informace o skutečném výsledku."
+    ],
+    "memory": "Motorická jednotka posílá výkon; svalové a šlachové receptory hlásí výsledek zpátky."
+  },
+  {
+    "id": 112,
+    "bookRef": "IV.b · otázka 4",
+    "category": "Motorická jednotka",
+    "question": "Motorická jednotka svalu",
+    "options": [
+      "Se skládá z vláken svalu, z nichž každé je inervováno jedním axonem",
+      "Je systém, v němž jedno nervové vlákno inervuje vždy maximálně vždy 2 až 3 svalová vlákna",
+      "Pracuje ve dvou fázích – smrštění (izotonická fáze) předchází zkrácení (izometrická fáze)",
+      "Se skládá z neuronu a jeho axonu, který inervuje svalová vlákna"
+    ],
+    "answer": 3,
+    "title": "Rozhodující je společný neuron, nikoli jen sousedství vláken",
+    "paragraphs": [
+      "Správně je D. K definici patří neuron i jeho axon a jím inervovaná svalová vlákna. Pouhé konstatování, že jednotlivá vlákna mají nervové zásobení, ještě neurčí, která patří do stejné jednotky.",
+      "Představ si skupinu zaměstnanců pod jedním vedoucím. Nestačí říci, že každý má nějakého vedoucího; musí být jasné, že jde o téhož. Počet svalových vláken v jednotce se liší podle svalu a požadované přesnosti pohybu, není vždy jen dvě až tři.",
+      "Možnost C navíc plete názvy: izometrická činnost znamená vznik síly bez změny délky, nikoli zkrácení. Tyto režimy popisují mechanickou práci svalu, ne úplnou definici motorické jednotky."
+    ],
+    "memory": "Společný vedoucí = společný motorický neuron. Jedna jednotka nemá pevně dané 2–3 členy."
+  },
+  {
+    "id": 113,
+    "bookRef": "IV.b · otázka 5",
+    "category": "Řízení svalů",
+    "question": "Svaly",
+    "options": [
+      "Čerpají energii pro svou činnost především štěpením bílkovin",
+      "Spotřebují i v klidu až 1 l kyslíku za hodinu",
+      "Informují CNS o své činnosti prostřednictvím proprioreceptorů",
+      "Hromadí jako odpadový produkt svého metabolismu hlavně močovinu"
+    ],
+    "answer": 2,
+    "title": "Sval průběžně hlásí, v jaké je poloze a jak táhne",
+    "paragraphs": [
+      "Proprioreceptory jsou smyslové struktury poskytující informace o poloze a pohybu vlastního těla. Ve svalech a šlachách pomáhají hlásit protažení a tah, takže správně je C.",
+      "Představ si, že zavřeš oči a přesto víš, zda máš loket ohnutý. Pomáhá právě zpětná vazba z pohybového aparátu; nervový systém nemusí všechno kontrolovat jen zrakem.",
+      "Bezprostředním energetickým zdrojem svalové práce je ATP, jehož zásobu tělo průběžně obnovuje několika cestami. Bílkoviny nejsou běžně hlavním palivem svalového pohybu. Spotřeba kyslíku navíc závisí na hmotě svalů, jejich aktivitě a dalších okolnostech, nikoli na jednom pevném čísle."
+    ],
+    "memory": "Proprio- = informace o vlastním těle. Svaly hlásí, jak jsou protažené a zatížené."
+  },
+  {
+    "id": 114,
+    "bookRef": "IV.b · otázka 6",
+    "category": "Svalový stah",
+    "question": "Při svalovém stahu ve svalových vláknech",
+    "options": [
+      "Přichází podnět motorickým nervovým vláknem",
+      "Se Ca²⁺ ionty váží do biomembrán endoplazmatického retikula",
+      "Se sval smršťuje a pracuje bez účasti Ca²⁺ iontů",
+      "Nedochází vždy ke štěpení molekul ATP"
+    ],
+    "answer": 0,
+    "title": "Nervový povel spustí uvolnění vápníku uvnitř svalu",
+    "paragraphs": [
+      "U běžného kosterního svalu přijde povel motorickým nervovým vláknem. Přenos na nervosvalové ploténce vyvolá elektrickou aktivitu svalové buňky, která naváže na uvolnění vápníku z vnitřních zásob. Proto je správně A.",
+      "Představ si řetězec: zazvonění, otevření skladu a spuštění strojů. Vápník pomůže zpřístupnit místa pro spolupráci aktinu a myosinu. Bez této vazby mezi elektrickým povelem a stahovacím aparátem by samotná přítomnost svalových bílkovin nestačila.",
+      "Při opakovaných stahovacích cyklech je potřebné ATP, stejně jako při návratu vápníku do zásob. D tedy nelze převzít jako pravidlo pro aktivní svalovou práci. Při zahájení stahu se vápník neodklízí do zásob, ale jeho dostupnost u kontraktilního aparátu vzroste."
+    ],
+    "memory": "Povel nervem → aktivace svalové buňky → uvolnění Ca²⁺ → práce aktinu a myosinu s ATP."
+  },
+  {
+    "id": 115,
+    "bookRef": "IV.b · otázka 7",
+    "category": "Svalová práce",
+    "question": "Svalová činnost se projevuje aktivitou",
+    "options": [
+      "Izokinetickou a izotonickou",
+      "Izometrickou a izokinetickou",
+      "Izometrickou a izotonickou",
+      "Izocyklickou a excentrickou"
+    ],
+    "answer": 2,
+    "title": "Sval může držet zátěž i měnit svou délku",
+    "paragraphs": [
+      "Základní dvojice v učebnici je izometrická a izotonická činnost: C. Při izometrické činnosti sval vytváří sílu bez změny délky; při idealizované izotonické se délka mění při přibližně stálém tahu.",
+      "Představ si držení tašky ve stejné poloze oproti jejímu zvedání. Při držení můžeš vynakládat značné úsilí, přestože se zátěž neposouvá. Práce svalu tedy nemusí vždy znamenat viditelné zkrácení a pohyb.",
+      "Ve skutečném pohybu se často střídají a kombinují různé mechanické podmínky. Existuje i popis izokinetické činnosti podle stálé rychlosti, ale test hledá právě základní učebnicovou dvojici."
+    ],
+    "memory": "Izometrická = stejná délka, vzniká tah. Izotonická = mění se délka při přibližně stejném tahu.",
+    "note": "Nabídka není úplný seznam režimů svalové práce. Některé další pojmy jsou platné také, pouze nejsou požadovanou dvojicí klíče."
+  },
+  {
+    "id": 116,
+    "bookRef": "IV.b · otázka 8",
+    "category": "Svalová práce",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "statements": [
+      "Ke kontrakci a relaxaci potřebují svaly velké množství kyslíku, v klidu spotřebují svaly těla asi 1 l kyslíku za hodinu, při práci až 10 litrů.",
+      "Kontrakce svalu probíhá ve dvou fázích. Ve svalu nejprve vzroste napětí bez jeho zkrácení (izometrická fáze). Teprve potom se sval smrští (izotonická fáze)."
+    ],
+    "options": [
+      "1 = ano; 2 = ne",
+      "1 = ne; 2 = ano",
+      "1 = ano; 2 = ano",
+      "1 = ne; 2 = ne"
+    ],
+    "answer": 1,
+    "title": "Nejprve překonat odpor, potom pohnout břemenem",
+    "paragraphs": [
+      "Klíč uvádí B: první tvrzení ne a druhé ano. Spotřebu kyslíku nelze obecně popsat dvěma pevnými hodinovými údaji pro všechny lidi a typy práce. ATP lze navíc krátkodobě doplňovat i cestami, které přímo kyslík nepotřebují.",
+      "Druhé tvrzení vystihuje běžný model zvedání břemene: nejdřív musí sval vytvořit dostatečný tah, aby překonal odpor. Teprve potom se břemeno pohne a sval se může zkrátit. Představ si napínání lana, než se těžký náklad odlepí od země.",
+      "Není to ovšem povinná posloupnost každého svalového stahu. Při pouhém držení zátěže může sval zůstat v režimu bez změny délky a při jiných pohybech se mění podmínky složitěji."
+    ],
+    "memory": "Pro klíč B. U zvedání: nejdřív vyrovnat odpor tahem, pak může začít pohyb.",
+    "note": "Druhé tvrzení je školní mechanický model, ne univerzální zákon pro každý stah. Uvedená spotřeba kyslíku v prvním tvrzení není obecně použitelná fyziologická konstanta."
+  },
+  {
+    "id": 117,
+    "bookRef": "IV.b · otázka 9",
+    "category": "Svalový stah",
+    "question": "Při činnosti svalů se",
+    "options": [
+      "Hlavice myozinu dotýkají aktinových vláken",
+      "Hlavice myozinu nedotýkají aktinových vláken",
+      "Hlavice aktinu dotýkají motorické jednotky",
+      "Myozinová vlákna dotýkají přímo nervosvalové ploténky"
+    ],
+    "answer": 0,
+    "title": "Myosinové hlavice zabírají za aktin jako malé páčky",
+    "paragraphs": [
+      "Při svalovém stahu se myosinové hlavice cyklicky vážou na aktin a pomáhají posouvat filamenta vůči sobě. Tomu odpovídá A. Nejde jen o blízkost dvou bílkovin, ale o opakované pracovní spojování a uvolňování.",
+      "Představ si řadu malých rukou na laně: přichytit, zabrat, uvolnit a znovu se připravit. Energie z ATP umožňuje pokračování cyklu. Vápník pomáhá řídit, zda jsou příslušná místa pro tuto spolupráci dostupná.",
+      "Nervosvalová ploténka je místo přenosu povelu z nervu na svalovou buňku. Není to bod, o který by se přímo opírala všechna myosinová filamenta. Rozlišuj tedy řídicí kontakt od vlastní mechaniky uvnitř svalu."
+    ],
+    "memory": "Myosinové hlavice zabírají za aktin. Nervosvalová ploténka předává povel, ne tah filament."
+  },
+  {
+    "id": 118,
+    "bookRef": "IV.b · otázka 10",
+    "category": "Svalová únava",
+    "question": "Příčinou svalové únavy je",
+    "options": [
+      "Hormonální nedostatečnost",
+      "Nedostatek kyseliny mléčné",
+      "Nahromadění glukózy",
+      "Nahromadění zplodin metabolismu"
+    ],
+    "answer": 3,
+    "title": "Pracovní prostředí svalové buňky se při námaze mění",
+    "paragraphs": [
+      "Učebnice z uvedené nabídky vybírá D. Při intenzivní práci se mění koncentrace látek vznikajících či spotřebovávaných během metabolismu. Tyto změny mohou zhoršit schopnost udržet stejnou sílu a rychlost práce.",
+      "Představ si dílnu v plném provozu: nestačí přivážet palivo, musí se také udržet vhodné prostředí, odvážet produkty a zachovat funkční stroje. Ve svalu se při únavě mohou kombinovat změny energetických zásob, iontového prostředí a řízení stahu.",
+      "Únava tedy není jednoduše nedostatkem kyseliny mléčné ani nahromaděním glukózy. Také není správné označit samotný laktát za jedinou univerzální příčinu všech podob únavy."
+    ],
+    "memory": "Únava = změněné podmínky pro práci a řízení svalu; klíč zde zdůrazňuje metabolické produkty.",
+    "note": "D je zjednodušená odpověď testu. Svalová únava má více mechanismů a může zahrnovat i centrální nervové řízení."
+  },
+  {
+    "id": 119,
+    "bookRef": "IV.b · otázka 11",
+    "category": "Svalový stah",
+    "question": "Smrštění svalu – svalová kontrakce",
+    "options": [
+      "Je vyvolána i podprahovým nervovým podnětem",
+      "Je provázena změknutím svalového bříška",
+      "Je vyvolána nervovým podnětem po uvolnění vápenatých iontů",
+      "Zkracuje sval o 10–20 % délky vlákna"
+    ],
+    "answer": 2,
+    "title": "Vápník zpřístupní kontraktilní aparát pro práci",
+    "paragraphs": [
+      "Klíč vybírá C. U kosterní svaloviny vyvolá dostatečný nervový povel elektrickou aktivaci svalové buňky, na kterou navazuje uvolnění vápníku. Teprve dostupný vápník umožní zapojení kontraktilního aparátu.",
+      "Představ si stroj s bezpečnostní závorou: samotná přítomnost motoru nestačí, musí se uvolnit přístup k pracovnímu místu. U příčně pruhovaného svalu vápník přes regulační bílkoviny umožní spolupráci aktinu a myosinu.",
+      "Podprahový podnět nevyvolá běžnou plnou odpověď příslušného svalového vlákna. Ani konkrétní procento zkrácení není univerzální pravidlo pro každý stah; sval může vyvíjet sílu i bez změny délky."
+    ],
+    "memory": "Nervový povel spustí děj, Ca²⁺ dovolí práci aktinu s myosinem.",
+    "note": "Formulace C je zkratka. Správné pořadí je nervový podnět, aktivace svalové buňky, uvolnění Ca²⁺ a spuštění kontraktilního mechanismu."
+  },
+  {
+    "id": 120,
+    "bookRef": "IV.b · otázka 12",
+    "category": "Pohyby",
+    "question": "Které dvojice pohybů svalů tvoří protiklady?",
+    "terms": [
+      "Abdukce",
+      "Extenze",
+      "Pronace"
+    ],
+    "definitions": [
+      "Flexe",
+      "Addukce",
+      "Supinace"
+    ],
+    "options": [
+      "A1, B3, C2",
+      "A3, B2, C3",
+      "A1, B2, C3",
+      "A2, B1, C3"
+    ],
+    "answer": 3,
+    "title": "Od těla a k tělu, ohnout a natáhnout, otočit opačně",
+    "paragraphs": [
+      "Abdukce je odtažení od příslušné střední osy a jejím opakem je addukce, přitažení: A2. Extenze je natažení a flexe ohnutí: B1. Protikladem pronace je supinace: C3. Kombinace odpovídá D.",
+      "Představ si paži, kterou nejprve zvedneš do strany a potom vrátíš k trupu. To je snadná pomůcka pro první dvojici. U lokte zase ohnutí a narovnání ukazují druhou dvojici.",
+      "Pronaci a supinaci si můžeš ukázat otáčením předloktí: v základním příkladu se dlaň obrací dolů nebo nahoru. Každou dvojici však vztahuj ke stejnému pohybu a oblasti, nemíchej ohnutí s otáčením."
+    ],
+    "memory": "ABdukce odtahuje, ADdukce přitahuje. Extenze/flexe, pronace/supinace jsou další protiklady."
+  },
+  {
+    "id": 121,
+    "bookRef": "IV.b · otázka 13",
+    "category": "Stavba a řízení svalu",
+    "question": "Které termíny, týkající se svalů, spolu funkčně souvisí?",
+    "terms": [
+      "Myofibrily",
+      "Fascie",
+      "Šlachová tělíska a svalová vřeténka",
+      "Šlacha"
+    ],
+    "definitions": [
+      "Svalový úpon",
+      "Zpětné informace pro CNS",
+      "Vazivový obal svalu",
+      "Smrštění svalu"
+    ],
+    "options": [
+      "A1, B2, C3, D4",
+      "A3, B4, C3, D1",
+      "A4, B3, C2, D1",
+      "A4, B3, C1, D2"
+    ],
+    "answer": 2,
+    "title": "Stroj, obal, čidlo a přenos tahu mají různé úkoly",
+    "paragraphs": [
+      "Myofibrily tvoří kontraktilní aparát, tedy A4. Fascie je vazivový obal, B3. Šlachová tělíska a svalová vřeténka poskytují zpětné informace nervovému systému, C2. Šlacha přenáší tah a souvisí s úponem, D1. Správně je C.",
+      "Představ si zařízení s pohonem uvnitř, ochranným obalem, měřicími čidly a lanem vedoucím sílu na další část. Jednotlivé struktury spolupracují, ale nejsou vzájemně zaměnitelné.",
+      "Čidlo neposkytuje hlavní sílu pohybu a obal není z aktinu a myosinu uspořádaný jako kontraktilní aparát. Právě spojení struktury s hlavním úkolem umožní odvodit přiřazení bez slepého memorování."
+    ],
+    "memory": "Myofibrily táhnou, fascie obaluje, receptory hlásí, šlacha přenáší tah do úponu."
+  },
+  {
+    "id": 122,
+    "bookRef": "IV.b · otázka 14",
+    "category": "Pohyby",
+    "question": "Antagonistické svaly",
+    "options": [
+      "Spolupracují na tomtéž pohybu",
+      "Zabezpečují opačný pohyb",
+      "Jsou všechny kosterní svaly",
+      "Jsou svaly synergistické"
+    ],
+    "answer": 1,
+    "title": "Jeden směr potřebuje protějšek pro návrat a kontrolu",
+    "paragraphs": [
+      "Antagonisté mají vzhledem k určitému pohybu opačný účinek. Například jeden sval loket ohýbá a druhý ho natahuje. Proto je správně B.",
+      "Představ si dvě lana připevněná na opačné strany pohyblivé páky. Tahem za jedno posuneš páku jedním směrem, tahem za druhé opačným. Svaly mohou také současně působit přiměřenou silou a pomoci kloub stabilizovat.",
+      "Synergisté naopak spolupracují na určitém pohybu. To ale neznamená, že je každý sval navždy pouze antagonista nebo pouze synergista; označení vyjadřuje jeho vztah k jinému svalu a konkrétnímu úkolu."
+    ],
+    "memory": "Antagonisté = opačné účinky pro daný pohyb. Synergisté = spolupráce na daném pohybu."
+  },
+  {
+    "id": 123,
+    "bookRef": "IV.b · otázka 15",
+    "category": "Svalové tkáně",
+    "question": "Svalová tkáň",
+    "options": [
+      "Příčně pruhovaná je tvořena protáhlými jednojadernými buňkami",
+      "Hladká je inervována mozkovými a míšními nervy",
+      "Příčně pruhovaná tvoří kosterní svaly a je inervována vegetativními nervy",
+      "Hladká tvoří převážnou část trávicí soustavy a pracuje nezávisle na naší vůli"
+    ],
+    "answer": 3,
+    "title": "Ve stěně trávicí trubice pracuje mimovolní svalovina",
+    "paragraphs": [
+      "Klíč volí D. Hladká svalovina je zásadní součástí svalových vrstev většiny trávicí trubice. Svými stahy posouvá a promíchává obsah a obvykle ji neřídíme vědomě jako pohyb ruky.",
+      "Představ si automatický dopravník: práce pokračuje bez toho, abys každému úseku střeva posílal úmyslný povel. Její řízení zahrnuje autonomní a místní nervové mechanismy i další signály.",
+      "Kosterní svalová vlákna jsou typicky mnohojaderná a jejich běžné motorické zásobení je somatické, ne vegetativní. D je však nutné číst jako popis hladké svaloviny ve svalových vrstvách, ne jako tvrzení, že celý trávicí orgán je převážně samotný sval."
+    ],
+    "memory": "Hladká svalovina v trávicí stěně = mimovolní posouvání a promíchávání obsahu.",
+    "note": "D je zjednodušené: trávicí orgány obsahují i epitely, vazivo a další tkáně a některé jejich úseky mají jinou svalovinu. B má neurčitou formulaci, protože autonomní vlákna mají vztah i k hlavovým a míšním nervům."
+  },
+  {
+    "id": 124,
+    "bookRef": "IV.b · otázka 16",
+    "category": "Řízení svalů",
+    "question": "Jakými nervy jsou řízeny hladké svaly?",
+    "options": [
+      "Vegetativními a senzitivními nervy",
+      "Výhradně hlavovými nervy",
+      "Nervy pyramidové dráhy",
+      "Autonomními (vegetativními) nervy"
+    ],
+    "answer": 3,
+    "title": "Autonomní řízení upravuje provoz vnitřních orgánů",
+    "paragraphs": [
+      "Správně je D. Autonomní a vegetativní jsou dva názvy pro tentýž okruh nervového řízení vnitřních orgánů. Může ovlivňovat například napětí cévní stěny nebo činnost hladkého svalu v trávicí trubici.",
+      "Představ si automatickou regulaci provozu domu. Neovládáš vědomě každý ventil, ale systém průběžně přizpůsobuje jeho nastavení potřebám. U jednotlivých orgánů se účinek nervů může lišit.",
+      "Senzitivní vlákna přivádějí informace zpátky; nejsou totéž jako motorické řízení hladkého svalu. Pyramidová dráha souvisí hlavně s volním pohybem kosterních svalů. Hladká svalovina přitom může reagovat i na hormony a místní podmínky, ne jen na nervy."
+    ],
+    "memory": "Autonomní = vegetativní. Řídí mimovolní provoz; senzitivní vlákna hlavně hlásí informace."
+  },
+  {
+    "id": 125,
+    "bookRef": "IV.b · otázka 17",
+    "category": "Řízení svalů",
+    "question": "Hladké svalstvo",
+    "options": [
+      "Je ovlivňováno nervy i hormony",
+      "Ovlivňujeme vůlí",
+      "Dosahuje třetiny hmotnosti těla",
+      "Se skládá z vláken propojených spojkami"
+    ],
+    "answer": 0,
+    "title": "K témuž svalu mohou přijít nervové i chemické zprávy",
+    "paragraphs": [
+      "Hladká svalovina reaguje na nervové signály a také na hormony či další látky. Proto je správně A. Nemusí čekat na vědomý povel k jednotlivému stahu.",
+      "Představ si ventil, který lze ovlivnit kabelem i zprávou z centrálního regulačního systému. Některý signál může stah podpořit, jiný ho omezit; záleží na orgánu a jeho receptorech.",
+      "Podíl přibližně třetiny tělesné hmotnosti by nepopisoval běžně hladkou svalovinu. Ani slovní popis vláken propojených spojkami není v této nabídce jejím hlavním rozlišovacím znakem. Zaměř se na skutečnost, že její práci upravuje několik druhů signálů."
+    ],
+    "memory": "Hladká svalovina může dostávat nervové i hormonální povely — obojí může měnit její činnost.",
+    "note": "Některé hladké svaly mají mezi buňkami významné elektrické propojení. A proto neznamená, že hladká svalovina nikdy nemá buněčné spoje."
+  },
+  {
+    "id": 126,
+    "bookRef": "IV.b · otázka 18",
+    "category": "Kosterní svaly",
+    "question": "Kosterních svalů je přibližně",
+    "options": [
+      "Čtyři sta",
+      "Pět set",
+      "Šest set",
+      "Sedm set"
+    ],
+    "answer": 2,
+    "title": "Přibližný počet, ne pevný součet každé svalové části",
+    "paragraphs": [
+      "Učebnice uvádí přibližně šest set kosterních svalů, proto je správně C. Slovo přibližně je důležité: výsledný počet záleží i na tom, jak se samostatné svaly a jejich části vymezují a počítají.",
+      "Představ si mapu města s mnoha menšími ulicemi a jejich větvemi. Podrobný seznam může některé větve uvádět zvlášť, zatímco stručný je spojuje. Podobně anatomické názvosloví a individuální odchylky ovlivňují přesné počítání svalů.",
+      "Pro tuto otázku je tedy hlavní správný řád a údaj používaný dokumentem, ne pátrání po jednom čísle bez jakékoli výjimky. Jde o kosterní svaly, nikoli o počet jednotlivých svalových buněk nebo všech hladkých svalových vrstev."
+    ],
+    "memory": "V tomto testu kosterní svaly ≈ 600 → C."
+  },
+  {
+    "id": 127,
+    "bookRef": "IV.b · otázka 19",
+    "category": "Svalové tkáně",
+    "question": "Svalstvo příčně pruhované",
+    "options": [
+      "Tvoří vrstvy stěn dutých orgánů",
+      "Je složené z jednojaderných a dvoujaderných úseků",
+      "Je inervováno vegetativními nervy",
+      "Je řízeno míšními a mozkovými nervy"
+    ],
+    "answer": 3,
+    "title": "Test zde myslí příčně pruhované kosterní svaly",
+    "paragraphs": [
+      "V tomto členění se příčně pruhovaným svalstvem myslí kosterní svaly a jejich somatické motorické zásobení. Příslušná motorická vlákna přicházejí cestou míšních nebo hlavových nervů. Proto klíč vybírá D.",
+      "Představ si povel pro pohyb ruky nebo žvýkání: signál musí dorazit ke konkrétním svalovým vláknům přes jejich motorické neurony. Není to totéž jako běžné autonomní řízení hladkého svalu střeva.",
+      "Kosterní svalová vlákna jsou typicky mnohojaderná. Je ale potřeba nezapomenout na srdce: také má příčné pruhování, přestože způsob jeho činnosti a řízení je od kosterních svalů odlišný."
+    ],
+    "memory": "Klíč D platí pro kosterní svalstvo: somatické motorické zásobení hlavovými a míšními nervy.",
+    "note": "Výraz příčně pruhované není obecně synonymum pouze pro kosterní svalstvo. Příčně pruhovaná je také srdeční svalovina; otázka používá užší školní význam."
+  },
+  {
+    "id": 128,
+    "bookRef": "IV.b · otázka 20",
+    "category": "Stavba svalu",
+    "question": "Svalová vlákna kosterních svalů",
+    "options": [
+      "Vytváří po spojení snopečky a snopce",
+      "Tvoří svalovou povázku – fascii",
+      "Jsou bezjaderná",
+      "Jsou inervována vždy jedno svalové vlákno jedním nervovým vláknem"
+    ],
+    "answer": 0,
+    "title": "Velký sval vzniká sdružováním menších funkčních částí",
+    "paragraphs": [
+      "Svalová vlákna se sdružují do menších a větších svazků, které učebnice označuje jako snopečky a snopce. Správně podle klíče je A. Celek přitom propojuje a obaluje vazivo.",
+      "Představ si silné lano složené z menších lanek. Svalová vlákna představují jednotlivé velké buňky a vazivové vrstvy pomáhají organizovat jejich uspořádání a přenášet výsledný tah.",
+      "Fascie není vytvořená samotnými svalovými vlákny, ale vazivem. Kosterní svalová vlákna mají více jader, nikoli žádné. Běžné motorické zásobení jednotlivého zralého vlákna je skutečně typicky od jednoho motorického neuronu."
+    ],
+    "memory": "Vlákna se skládají do svazků; vazivo tvoří obaly. Kosterní svalové vlákno má více jader.",
+    "note": "D obsahuje také běžně platnou souvislost motorického zásobení, ale absolutní vždy je příliš silné a test požaduje A. Jedno motorické vlákno zároveň může zásobovat mnoho svalových vláken."
+  },
+  {
+    "id": 129,
+    "bookRef": "IV.b · otázka 21",
+    "category": "Srdeční svalovina",
+    "question": "Srdeční svalstvo",
+    "options": [
+      "Je pod kontrolou mozkové kůry",
+      "Je příčně pruhované, složené z buněk",
+      "Není řízeno vegetativními nervy",
+      "Je aktivováno ze tří center automacie"
+    ],
+    "answer": 1,
+    "title": "Srdeční buňky jsou pruhované a mají vlastní rytmické řízení",
+    "paragraphs": [
+      "Srdeční svalovina je tvořená jednotlivými propojenými buňkami a má příčné pruhování. To je jasný popis v B. Její pravidelný vnitřní aparát umožňuje koordinované vytváření síly pro čerpání krve.",
+      "Představ si tým s vlastním časovačem, jehož tempo lze zvenčí upravovat. Specializované buňky srdce vytvářejí rytmus a autonomní nervy mohou měnit například frekvenci. Mozková kůra běžně neposílá vědomý povel ke každému úderu.",
+      "V převodním systému existují i záložní rytmotvorné oblasti. To ale neznamená, že se každý normální stah spouští současně ze tří nezávislých center. Proto obecné tvrzení D nevystihuje běžný normální rytmus."
+    ],
+    "memory": "Srdce = příčně pruhované propojené buňky, vlastní rytmus a autonomní úprava tempa."
+  },
+  {
+    "id": 130,
+    "bookRef": "IV.b · otázka 22",
+    "category": "Anatomické souvislosti svalů",
+    "question": "Které termíny k sobě patří?",
+    "terms": [
+      "Hernie",
+      "Achillova šlacha",
+      "Místo pro nitrosvalovou injekci",
+      "Pupeční jizva"
+    ],
+    "definitions": [
+      "Velký hýžďový sval",
+      "Úpon lýtkového svalu",
+      "Přímé břišní svaly",
+      "Tříselná kýla"
+    ],
+    "options": [
+      "A4, B2, C1, D3",
+      "A2, B4, C1, D3",
+      "A2, B1, C3, D4",
+      "A1, B2, C3, D4"
+    ],
+    "answer": 0,
+    "title": "Pojmy spoj podle oblasti a významu, ne podle podobného znění",
+    "paragraphs": [
+      "Hernie znamená kýla; tříselná kýla je jeden její typ, tedy A4. Achillova šlacha přenáší tah lýtkového svalstva na patní kost: B2. Učebnice spojuje nitrosvalovou injekci s velkým hýžďovým svalem: C1.",
+      "Pupeční jizva leží ve střední čáře břišní stěny mezi pravým a levým přímým břišním svalem. V nabídce tedy D3 a celá kombinace A. Jde o topografickou souvislost, ne o tvrzení, že pupík je přímo svalová tkáň.",
+      "Představ si mapu: tříselná oblast pro kýlu, pata pro Achillovu šlachu, hýžďová oblast pro historický školní příklad injekce a přední břišní stěna pro pupík. Každé spojení má jiný důvod."
+    ],
+    "memory": "Hernie kýla; Achillovka lýtko; pupík střední čára mezi přímými břišními svaly.",
+    "note": "C1 zachovává přiřazení klíče. Výběr místa nitrosvalového podání závisí na konkrétních okolnostech a nelze ho určit jen podle tohoto přiřazovacího testu."
+  },
+  {
+    "id": 131,
+    "bookRef": "IV.b · otázka 23",
+    "category": "Skupiny svalů",
+    "question": "Ve které části těla najdeme uvedené svaly?",
+    "terms": [
+      "Pilovitý boční sval",
+      "Hýžďový sval",
+      "Trapézový sval",
+      "Zevní a vnitřní šikmý sval"
+    ],
+    "definitions": [
+      "Sval břicha",
+      "Sval dolní končetiny",
+      "Sval hrudníku",
+      "Zádový sval"
+    ],
+    "options": [
+      "A1, B2, C3, D4",
+      "A4, B3, C2, D1",
+      "A1, B2, C4, D3",
+      "A3, B2, C4, D1"
+    ],
+    "answer": 3,
+    "title": "Sval si nejdřív představ na těle, pak vyber skupinu",
+    "paragraphs": [
+      "Pilovitý boční sval je v oblasti hrudníku a působí na lopatku: A3. Hýžďové svaly se řadí ke svalstvu dolní končetiny, B2. Trapézový sval patří mezi zádové svaly, C4. Zevní a vnitřní šikmý sval v této nabídce znamenají šikmé svaly břišní, D1. Správně je D.",
+      "Představ si čtyři místa: boční hrudní stěnu, hýždě, horní část zad a boky břišní stěny. Takové rozmístění umožní přiřazení odvodit bez učení dlouhé řady písmen.",
+      "Zařazení do skupiny neznamená, že sval nepohybuje sousední oblastí. Trapézový sval leží na zádech, ale významně pohybuje lopatkou, tedy pomáhá i činnosti horní končetiny."
+    ],
+    "memory": "Pilovitý hrudník, hýžďový dolní končetina, trapéz záda, šikmé břišní břicho."
+  },
+  {
+    "id": 132,
+    "bookRef": "IV.b · otázka 24",
+    "category": "Skupiny svalů",
+    "question": "Trapézový sval patří",
+    "options": [
+      "Ke svalům horní končetiny",
+      "K zádovým svalům",
+      "K pánevním svalům",
+      "Ke svalům dolní končetiny"
+    ],
+    "answer": 1,
+    "title": "Sval na zádech pomáhá nastavovat lopatku",
+    "paragraphs": [
+      "Trapézový sval je rozsáhlý povrchový sval horní části zad a zadní oblasti krku. V základním anatomickém členění proto patří k zádovým svalům: B.",
+      "Představ si širokou plachtu nataženou mezi oblastí páteře a pletence horní končetiny. Různé části svalu táhnou lopatku různými směry a spolupracují při jejím správném postavení.",
+      "To, že pomáhá pohybům spojeným s paží, z něj automaticky neudělá sval zařazený do volné horní končetiny. Otázka rozlišuje anatomickou skupinu od pouhého vlivu na pohyb sousedního segmentu."
+    ],
+    "memory": "Trapéz leží hlavně na horních zádech; jeho důležitým pracovním partnerem je lopatka."
+  },
+  {
+    "id": 133,
+    "bookRef": "IV.b · otázka 25",
+    "category": "Skupiny svalů",
+    "question": "Deltový sval patří ke svalstvu",
+    "options": [
+      "Horní končetiny",
+      "Dolní končetiny",
+      "Hrudníku",
+      "Hlavy"
+    ],
+    "answer": 0,
+    "title": "Svalová čepice ramene pohybuje paží",
+    "paragraphs": [
+      "Deltový sval vytváří typický zaoblený obrys ramene a patří ke svalstvu horní končetiny. Správně je A. Jeho části se podílejí na různých pohybech paže.",
+      "Představ si svalovou čepici položenou přes ramenní kloub. Táhne za pažní kost a podle zapojené části může pomoci například s upažením nebo pohybem paže dopředu a dozadu.",
+      "Jeho umístění na hranici trupu a končetiny může svádět k hrudníku, ale v tomto členění jde o sval ramenní oblasti horní končetiny. Pomůže vybavit si viditelný oblý sval na boku ramene."
+    ],
+    "memory": "Deltový sval = zaoblená svalová čepice ramene → horní končetina."
+  },
+  {
+    "id": 134,
+    "bookRef": "IV.b · otázka 26",
+    "category": "Břišní svaly",
+    "question": "Svaly břicha",
+    "options": [
+      "Boční břišní stěnu tvoří jeden šikmý a jeden příčný sval",
+      "Při současném smrštění přímých břišních svalů dochází k výdechu",
+      "Oslabením přímých břišních svalů ve střední čáře vznikají tříselné kýly",
+      "Napětím tříselného vazu vzniká břišní lis, který pomáhá vyprazdňování orgánů břišní dutiny"
+    ],
+    "answer": 1,
+    "title": "Břišní svaly mohou pomoci vytlačit vzduch z plic",
+    "paragraphs": [
+      "Při aktivním, silnějším výdechu mohou břišní svaly zvýšit nitrobřišní tlak a pomoci posunout bránici vzhůru. Učebnice proto vybírá B. Neznamená to, že každý klidový výdech musí být vyvolán aktivním stahem přímých břišních svalů.",
+      "Představ si tlak zespodu na pružnou přepážku pod hrudníkem. Zmenšení prostoru hrudníku přispívá k vytlačení vzduchu. Břišní svaly zároveň podpírají orgány a spolupracují při pohybu trupu.",
+      "Boční břišní stěna má zevní šikmý, vnitřní šikmý a příčný sval, tedy ne jen jeden šikmý. Břišní lis také nevzniká pouhým napnutím tříselného vazu a tříselná kýla není totéž co rozestup přímých svalů ve střední čáře."
+    ],
+    "memory": "Břišní svaly mohou pomoci silnému výdechu zvýšením tlaku a posunem bránice vzhůru.",
+    "note": "B popisuje účast při aktivním výdechu. Klidový výdech bývá převážně pasivní díky pružnosti dýchací soustavy."
+  },
+  {
+    "id": 135,
+    "bookRef": "IV.b · otázka 27",
+    "category": "Koleno a svaly",
+    "question": "Čéška je zasunuta ve",
+    "options": [
+      "Trojhlavém lýtkovém svalu",
+      "Předním bércovém svalu",
+      "Šlaše čtyřhlavého stehenního svalu",
+      "Předním holenním svalu"
+    ],
+    "answer": 2,
+    "title": "Kost vložená do šlachy zlepšuje podmínky tahu",
+    "paragraphs": [
+      "Čéška je sezamská kost uložená ve šlaše čtyřhlavého stehenního svalu. Správně je C. Leží před kolenem a účastní se přenosu síly při natahování kolena.",
+      "Představ si lano, jehož tah je veden přes vhodně umístěný pevný díl. Čéška mění mechanické poměry úponového aparátu a pomáhá účinnosti čtyřhlavého svalu. Není to volná kůstka náhodně vložená mezi svaly lýtka.",
+      "Čtyřhlavý stehenní sval je vpředu na stehně. Lýtkové svaly se nacházejí pod kolenem a jejich typickou společnou silnou šlachou je Achillova. Základní mapa stehna a bérce tedy pomůže odpověď snadno odlišit."
+    ],
+    "memory": "Čéška → před kolenem → šlacha čtyřhlavého stehenního svalu."
+  },
+  {
+    "id": 136,
+    "bookRef": "IV.b · otázka 28",
+    "category": "Svaly kyčle",
+    "question": "Svaly kyčelního kloubu",
+    "options": [
+      "Zahrnují krejčovský sval a přímý stehenní sval",
+      "K podávání nitrosvalových injekcí je nejvhodnější čtyřhlavý stehenní sval",
+      "Zanožení při chůzi vykonává hlavně velký hýžďový sval",
+      "Nezahrnují čtyřhlavý stehenní sval, jehož funkcí je pouze extenze kolenního kloubu"
+    ],
+    "answer": 2,
+    "title": "Velký hýžďový sval je významný natahovač v kyčli",
+    "paragraphs": [
+      "Velký hýžďový sval se významně podílí na extenzi v kyčli, tedy na pohybu stehna dozadu nebo na napřimování z ohnuté kyčle. Tomuto vztahu odpovídá C, které požaduje klíč.",
+      "Představ si vstávání ze židle nebo výstup do schodu: zevní tah silného hýžďového svalu pomáhá přejít z ohnuté polohy do napřímené. Při chůzi se jeho aktivita mění podle fáze a podmínek, nejde o nepřetržitou práci jediného svalu.",
+      "Přímý stehenní sval jako součást čtyřhlavého svalu prochází také přes kyčel a může ji ohýbat. Nelze proto připsat celému čtyřhlavému svalu pouze jediný účinek na koleno."
+    ],
+    "memory": "Velký hýžďový pomáhá natahovat kyčel. Přímý stehenní může působit i na kyčel, nejen na koleno.",
+    "note": "A také uvádí svaly, které funkčně působí přes kyčelní kloub. Výraz svaly kyčelního kloubu není v nabídce zcela jednoznačně vymezen; C je odpověď tištěného klíče, ne úplný seznam všech účastníků pohybu."
+  },
+  {
+    "id": 137,
+    "bookRef": "IV.b · otázka 29",
+    "category": "Skupiny svalů",
+    "question": "Mezi svaly horní končetiny patří",
+    "options": [
+      "Sval deltový",
+      "Svaly bércové",
+      "Sval trapézový",
+      "Pilovitý sval"
+    ],
+    "answer": 0,
+    "title": "Deltový sval patří přímo k ramenní oblasti končetiny",
+    "paragraphs": [
+      "Deltový sval je v tomto základním anatomickém členění svalem horní končetiny. Proto je správně A. Nachází se přes rameno a svým tahem ovlivňuje polohu paže.",
+      "Představ si obrys ramene pod oblečením: výraznou část jeho zaoblení tvoří právě tento sval. Bércové svaly jsou na dolní končetině mezi kolenem a nohou, takže B se do skupiny horní končetiny nehodí.",
+      "Trapézový a pilovitý sval mohou také ovlivňovat pohyby lopatky, ale běžně se řadí mezi svaly zad či hrudníku. Anatomické zařazení a funkční spolupráce přes hranice oblastí jsou dvě různé věci."
+    ],
+    "memory": "Deltový rameno = horní končetina. Bércové svaly = dolní končetina."
+  },
+  {
+    "id": 138,
+    "bookRef": "IV.b · otázka 30",
+    "category": "Skupiny svalů",
+    "question": "Mezi svaly dolní končetiny patří",
+    "options": [
+      "Sval bederní",
+      "Svaly vřetenní",
+      "Sval deltový",
+      "Svaly hýžďové"
+    ],
+    "answer": 3,
+    "title": "Hýžďové svaly propojují pánev a stehno",
+    "paragraphs": [
+      "Hýžďové svaly patří ke svalstvu dolní končetiny a působí v oblasti kyčelního kloubu. Správně podle klíče je D. Jednotlivé hýžďové svaly se liší svým průběhem a konkrétními účinky.",
+      "Představ si nosné a řídicí tahy mezi pánví a stehenní kostí. Některé pomáhají pohybovat stehnem, jiné jsou důležité pro udržení pánve při stoji na jedné noze. Dolní končetina tedy nezahrnuje jen svaly hluboko pod kolenem.",
+      "Vřetenní skupiny odkazují k předloktí a deltový sval k rameni. Sval bederní má složitější vztah k oblasti trupu i kyčle; z nabízených možností test vybírá jasně pojmenovanou hýžďovou skupinu."
+    ],
+    "memory": "Hýžďové svaly = pánev a kyčel = svalstvo dolní končetiny.",
+    "note": "Velký bederní sval se funkčně účastní pohybu kyčle jako součást bedrokyčlostehenního svalu. D je zde odpověď školního členění, ne popření této funkční souvislosti."
+  },
+  {
+    "id": 139,
+    "bookRef": "IV.b · otázka 31",
+    "category": "Svaly hlavy",
+    "question": "Které z uvedených svalů patří mezi svaly hlavy?",
+    "options": [
+      "Podjazylkové svaly",
+      "Deltový sval",
+      "Křídlaté svaly",
+      "Pilovitý sval"
+    ],
+    "answer": 2,
+    "title": "Křídlaté svaly pomáhají pohybovat dolní čelistí",
+    "paragraphs": [
+      "Křídlaté svaly patří mezi žvýkací svaly hlavy, proto je správně C. Působí na dolní čelist a spolupracují při jejích pohybech, které potřebujeme při zpracování potravy.",
+      "Představ si čelist jako pohyblivou část, kterou lze nejen sevřít, ale také posouvat a řídit ze stran. Křídlaté svaly pomáhají vytvářet tuto přesnější mechaniku; nejde o svaly křídel, ale o název odvozený od jejich anatomických vztahů.",
+      "Deltový sval leží na rameni. Pilovitý sval z těchto otázek se vztahuje k hrudníku a lopatce. Podjazylkové svaly se běžně řadí ke krčním svalům, i když leží blízko hlavy."
+    ],
+    "memory": "Křídlaté svaly = žvýkací svaly hlavy, práce s dolní čelistí."
+  },
+  {
+    "id": 140,
+    "bookRef": "IV.b · otázka 32",
+    "category": "Dýchací svaly",
+    "question": "Mezi pomocné dýchací svaly nepatří",
+    "options": [
+      "Velký prsní sval",
+      "Malý prsní sval",
+      "Pilovitý boční sval",
+      "Bránice"
+    ],
+    "answer": 3,
+    "title": "Bránice není pomocník navíc, ale hlavní nádechový sval",
+    "paragraphs": [
+      "Bránice je hlavní nádechový sval, proto mezi pomocné svaly v této nabídce nepatří. Správně je D. Při stahu se její klenba zplošťuje a zvětšuje se prostor hrudní dutiny.",
+      "Představ si pohyblivé dno vzduchové pumpy: jeho posun změní objem a umožní proudění vzduchu. Prsní a další pomocné svaly mohou za určitých podmínek pomáhat zvedat či stabilizovat hrudník, zvlášť pokud jsou jejich jiné úpony vhodně zafixované.",
+      "Otázka tedy netvrdí, že bránice s dýcháním nesouvisí. Přesně naopak: je natolik zásadní, že patří do hlavní, nikoli pomocné skupiny. Pozor na slovo nepatří v zadání."
+    ],
+    "memory": "Bránice dýchá hlavně, ne jen pomocně. Proto v této otázce vyřaď D."
+  },
+  {
+    "id": 141,
+    "bookRef": "IV.b · otázka 33",
+    "category": "Svaly paže",
+    "question": "Ke svalům paže nepatří:",
+    "options": [
+      "Dvojhlavý sval",
+      "Trojhlavý sval",
+      "Hákový sval",
+      "Krejčovský sval"
+    ],
+    "answer": 3,
+    "title": "Krejčovský sval najdeš na stehně, ne na paži",
+    "paragraphs": [
+      "Krejčovský sval, sartorius, je dlouhý sval na přední straně stehna. Ke svalům paže proto nepatří a správně je D. Jeho průběh vede od oblasti pánve šikmo přes stehno k vnitřní straně pod kolenem.",
+      "Představ si šikmý pás položený přes stehno. Jeho název se tradičně spojuje s polohou končetin při sezení, ale pro otázku stačí správně přiřadit oblast dolní končetiny.",
+      "Dvojhlavý, trojhlavý a hákový sval v této nabídce označují svaly pažní oblasti. Slovo paže je anatomicky užší než celá horní končetina: jde o úsek mezi ramenem a loktem."
+    ],
+    "memory": "Krejčovský = sartorius = stehno. Paže je mezi ramenem a loktem."
+  },
+  {
+    "id": 142,
+    "bookRef": "V · otázka 1",
+    "category": "Tělní tekutiny",
+    "question": "Tělní tekutina nejnižšího vývojového stupně je",
+    "options": [
+      "Hemolymfa",
+      "Hydrolymfa",
+      "Perilymfa",
+      "Endolymfa"
+    ],
+    "answer": 1,
+    "title": "Jednoduchá rozváděcí tekutina před specializovanou krví",
+    "paragraphs": [
+      "Učebnice v historickém srovnání tělních tekutin vybírá hydrolymfu: B. Označuje jednoduchou tekutinu vnitřních prostor některých jednodušeji organizovaných živočichů, spojenou s výměnou a rozvodem látek.",
+      "Představ si základní vodní prostředí kolem buněk oproti pozdějšímu specializovanému dopravnímu systému s vlastními buňkami a přenašeči. Rozdíl v názvech vystihuje, že tělní tekutiny různých živočichů nemají stejnou stavbu a úkoly.",
+      "Hemolymfa je typická pro otevřené cévní soustavy řady bezobratlých. Perilymfa a endolymfa jsou naopak názvy tekutin vnitřního ucha. Podobný konec slova tedy ještě neznamená stejnou skupinu tělní tekutiny."
+    ],
+    "memory": "Pro tento test hydrolymfa = nejjednodušší stupeň. Perilymfu a endolymfu si spoj s vnitřním uchem.",
+    "note": "Nejnižší vývojový stupeň je historické školní členění. Není to univerzální žebříček hodnoty či dokonalosti dnešních organismů."
+  },
+  {
+    "id": 143,
+    "bookRef": "V · otázka 2",
+    "category": "Tělní tekutiny",
+    "question": "Tělní tekutinou většiny bezobratlých je",
+    "options": [
+      "Hydrolymfa",
+      "Lymfa",
+      "Hemolymfa",
+      "Perilymfa"
+    ],
+    "answer": 2,
+    "title": "Hemolymfa proudí i do prostorů kolem orgánů",
+    "paragraphs": [
+      "Klíč uvádí C, hemolymfu. U mnoha bezobratlých s otevřenou cévní soustavou nejde o krev trvale uzavřenou v souvislé síti cév. Tekutina se dostává do tělních prostor a přímo obklopuje orgány.",
+      "Představ si rozdíl mezi rozvodem jen v uzavřených trubkách a rozvodem, který ústí také do společného prostoru kolem pracovních míst. Hemolymfa tak může zajišťovat transport živin, metabolitů a dalších látek.",
+      "Lymfa neboli míza v lidské fyziologii není jiné slovo pro hemolymfu. Perilymfa souvisí s vnitřním uchem. Ne všichni bezobratlí ale mají stejný oběhový systém, takže jde o obecné školní srovnání, ne pravidlo pro každý druh."
+    ],
+    "memory": "Hemolymfa = typická tekutina otevřené cévní soustavy mnoha bezobratlých."
+  },
+  {
+    "id": 144,
+    "bookRef": "V · otázka 3",
+    "category": "Krevní plazma",
+    "question": "pH krevní plazmy",
+    "options": [
+      "Je působením metabolismu stále zvyšováno",
+      "Je udržováno prostřednictvím chloridu sodného a uhličitanu sodného",
+      "Po svalové námaze může být jeho hodnota posunuta – vznik alkalózy",
+      "Je dlouhodobě udržováno na mírně kyselé úrovni"
+    ],
+    "answer": 1,
+    "title": "Krev potřebuje pH v úzkém, mírně zásaditém rozmezí",
+    "paragraphs": [
+      "Klíč vybírá B, ale chemická formulace nabídky je nepřesná. Krev udržuje pH v úzkém mírně zásaditém rozmezí, přibližně 7,35–7,45. Významný je hydrogenuhličitanový pufr společně s dalšími pufry a činností plic a ledvin.",
+      "Představ si tlumič výkyvů: když přibude kyselá či zásaditá zátěž, pufry zmírní okamžitou změnu. Plíce upravují odvod oxidu uhličitého a ledviny se podílejí na dlouhodobější regulaci. Samotný chlorid sodný není hlavním pufrem.",
+      "Metabolismus pH jen jednostranně nezvyšuje a normální plazma není mírně kyselá. Po námaze záleží na druhu dějů i dýchání; z ní nelze automaticky odvodit alkalózu jako jediný výsledek."
+    ],
+    "memory": "Krev je mírně zásaditá. Pufry tlumí výkyvy, plíce a ledviny pomáhají pH regulovat.",
+    "note": "B zachovává doslovnou nabídku a klíč PDF. Přesnější chemický termín je hydrogenuhličitan; uvedení uhličitanu sodného a chloridu sodného není správným úplným popisem pufračního systému."
+  },
+  {
+    "id": 145,
+    "bookRef": "V · otázka 4",
+    "category": "Bílkoviny plazmy",
+    "question": "Které z uvedených plazmatických bílkovin nevznikají v játrech?",
+    "options": [
+      "Albuminy",
+      "Globuliny",
+      "Fibrinogen",
+      "Protrombin"
+    ],
+    "answer": 1,
+    "title": "Protilátky vyrábějí specializované imunitní buňky",
+    "paragraphs": [
+      "Klíč volí B a míří hlavně na imunoglobuliny, tedy protilátky. Ty vytvářejí plazmatické buňky vzniklé z B-lymfocytů, nikoli jaterní buňky. Globuliny jsou však širší a rozmanitější skupina.",
+      "Představ si krevní plazmu jako společný zásobovací prostor. Albumin a řadu bílkovin důležitých pro srážení dodávají játra, zatímco protilátky pocházejí z buněk specializovaných na imunitní odpověď. Stejné místo výskytu tedy neznamená stejnou výrobnu.",
+      "Albumin, fibrinogen a protrombin se běžně tvoří v játrech. U slova globuliny je nutné dodat, že některé další globuliny také vznikají v játrech. Není správné přiřadit celé skupině jednotný původ mimo játra."
+    ],
+    "memory": "Protilátky neboli imunoglobuliny vyrábějí plazmatické buňky. Játra dodávají například albumin.",
+    "note": "B je zjednodušení klíče. Přesnější otázka by jmenovala imunoglobuliny, protože obecné globuliny zahrnují i bílkoviny jaterního původu."
+  },
+  {
+    "id": 146,
+    "bookRef": "V · otázka 5",
+    "category": "Krevní plazma",
+    "question": "Krevní plazma",
+    "options": [
+      "Obsahuje 50 % vody a v ní rozpuštěné látky",
+      "Tvoří 90 % objemu krve",
+      "Obsahuje chlorid sodný a kyselý uhličitan sodný",
+      "Nemá stálou hodnotu pH"
+    ],
+    "answer": 2,
+    "title": "Vodné prostředí s bílkovinami, ionty a převáženým nákladem",
+    "paragraphs": [
+      "Plazma obsahuje rozpuštěné ionty včetně sodíku, chloridů a hydrogenuhličitanů. Učebnice je uvádí jako příslušné soli a vybírá C. Tyto látky se podílejí na vlastnostech vnitřního prostředí, například osmotických poměrech a acidobazické rovnováze.",
+      "Představ si vodní dopravní prostředí, ve kterém jsou vedle sebe rozpuštěné drobné částice, bílkoviny i převážené živiny a další látky. Není to čistá voda, ale ani směs, která by z poloviny sestávala z pevných rozpuštěných přísad.",
+      "Voda tvoří zhruba devět desetin samotné plazmy. To si nesmíš splést s podílem plazmy v celé krvi, protože krev zahrnuje také krvinky a destičky. Její pH se navíc udržuje v úzkých mezích."
+    ],
+    "memory": "Zhruba 90 % vody v plazmě není totéž jako 90 % plazmy v celé krvi.",
+    "note": "Kyselý uhličitan je starší označení hydrogenuhličitanu. V plazmě popisujeme především rozpuštěné ionty, nikoli jednoduchý seznam neporušených molekul solí."
+  },
+  {
+    "id": 147,
+    "bookRef": "V · otázka 6",
+    "category": "Krevní plazma",
+    "question": "Které z uvedených látek se nenacházejí v krevní plazmě?",
+    "options": [
+      "Glykogen",
+      "Albuminy a globuliny",
+      "Vitamíny a hormony",
+      "Žlučová barviva"
+    ],
+    "answer": 0,
+    "title": "Zásobní glykogen zůstává hlavně uvnitř buněk",
+    "paragraphs": [
+      "Glykogen je zásobní polysacharid uložený především v buňkách jater a svalů. Není běžnou fyziologickou rozpuštěnou složkou plazmy, takže správně je A. V krvi se jako běžný transportovaný cukr sleduje zejména glukóza.",
+      "Představ si sklad zásob a dopravní silnici. Glykogen je velká zásobní forma uvnitř skladu, zatímco jednotlivé molekuly glukózy mohou být dopravovaným nákladem. Tělo tak odděluje dlouhodobější zásobu od oběhu.",
+      "Bílkoviny plazmy, některé vitamíny a hormony se v plazmě běžně nacházejí. Také žlučové barvivo bilirubin se krví přenáší, v určité formě navázané na albumin. Slovo žlučový proto neznamená, že látka nemůže být v krvi."
+    ],
+    "memory": "Glykogen = zásoba uvnitř buněk. Glukóza = běžný cukerný náklad v krvi.",
+    "note": "Otázka popisuje normální složení plazmy; slovo nenachází se není tvrzení o absolutní nemožnosti jakékoli stopové přítomnosti při všech stavech."
+  },
+  {
+    "id": 148,
+    "bookRef": "V · otázka 7",
+    "category": "Vnitřní prostředí",
+    "question": "Homeostáza je",
+    "options": [
+      "Prasknutí erytrocytů v hypotonickém roztoku",
+      "Stálost vnitřního prostředí organismu v jeho fyziologické normě",
+      "Zástava krvácení",
+      "Dědičná porucha krevní srážlivosti"
+    ],
+    "answer": 1,
+    "title": "Tělo průběžně reguluje, aby se hodnoty držely v mezích",
+    "paragraphs": [
+      "Homeostáza znamená udržování vhodných podmínek vnitřního prostředí, tedy B. Nejde o naprostou nehybnost hodnot, ale o regulovanou stabilitu v určitém rozmezí navzdory změnám okolí a činnosti těla.",
+      "Představ si termostat: teplota může trochu kolísat, ale systém průběžně upravuje výkon, aby se držela kolem vhodného nastavení. Podobné regulační principy pomáhají udržovat třeba teplotu, koncentraci glukózy nebo pH.",
+      "Zástava krvácení je hemostáza, což je velmi podobně znějící, ale jiné slovo. Rozpad červených krvinek je hemolýza a dědičná porucha srážení z jiných otázek může být hemofilie. Rozlišení těchto čtyř termínů je hlavní chyták."
+    ],
+    "memory": "HOMEostáza = prostředí v mezích. HEMOstáza = zastavení krvácení."
+  },
+  {
+    "id": 149,
+    "bookRef": "V · otázka 8",
+    "category": "Žlučová barviva",
+    "question": "Příčinou žlutého zbarvení pokožky (ikteru) je",
+    "options": [
+      "Snížené vyměšování pankreatického hormonu",
+      "Porucha glycidového metabolismu",
+      "Porucha srážení krve",
+      "Choroba jater"
+    ],
+    "answer": 3,
+    "title": "Žluté zbarvení souvisí s hromaděním bilirubinu",
+    "paragraphs": [
+      "Klíč vybírá D. Játra zpracovávají bilirubin, barvivo vznikající při odbourávání hemu, například z červených krvinek. Když jeho zpracování či vylučování nefunguje dobře, může se bilirubin hromadit a žlutě zbarvit tkáně.",
+      "Představ si dopravní linku s navazující čistírnou: pokud zpracování nebo odvoz přestane stačit, materiál se hromadí před překážkou. To pomáhá pochopit souvislost jater a žloutenky lépe než samotné spojení dvou názvů.",
+      "Nemoci jater ale nejsou jedinou možnou příčinou ikteru. Může k němu přispět i zvýšený rozpad krvinek nebo překážka v odtoku žluči. Z uvedené nabídky je tedy D správná možnost, nikoli úplné vysvětlení všech případů."
+    ],
+    "memory": "Ikterus = bilirubin ve tkáních. Játra jsou důležitá zpracovatelská stanice, ale příčina může být i před ní či za ní.",
+    "note": "Z této otázky nelze podle samotné barvy pokožky určit konkrétní diagnózu. D zachovává omezenou nabídku učebnice."
+  },
+  {
+    "id": 150,
+    "bookRef": "V · otázka 9",
+    "category": "Tvorba krvinek",
+    "question": "Erytropoetin",
+    "options": [
+      "Je hormon vylučovaný nadledvinami",
+      "Povzbuzuje kostní dřeň k produkci erytrocytů",
+      "Se přestává vytvářet ve vyšších nadmořských výškách",
+      "Urychluje zánik erytrocytů ve slezině"
+    ],
+    "answer": 1,
+    "title": "Signál, aby výrobna červených krvinek zvýšila produkci",
+    "paragraphs": [
+      "Erytropoetin, zkráceně EPO, podporuje tvorbu červených krvinek v kostní dřeni. Proto je správně B. U dospělého vzniká především v ledvinách, nikoli v nadledvinách.",
+      "Představ si hlášení o nedostatku přepravní kapacity pro kyslík. Ledviny reagují na dostupnost kyslíku a mohou zvýšit signál, který podpoří tvorbu erytrocytů. Odpověď není okamžité přibývání hotových krvinek, ale změna jejich výroby.",
+      "Ve vyšší nadmořské výšce může nižší dostupnost kyslíku tento systém naopak povzbudit. EPO tedy není pokyn k urychlenému ničení krvinek ve slezině; jeho hlavním úkolem je podpora jejich vzniku."
+    ],
+    "memory": "EPO = zpráva pro červenou kostní dřeň: podpoř tvorbu erytrocytů. Hlavní zdroj u dospělého jsou ledviny."
   }
 ]);
 const $ = id => document.getElementById(id);
 const LETTERS = ['A','B','C','D'];
+const BANK_SIZE = QUESTIONS.length;
 const STORAGE_KEY = 'somatologie-learning-v2';
 const DAY = 86400000;
 const SHORT_DELAY = 10 * 60000;
@@ -1160,7 +3401,7 @@ function whole(n){return Number.isSafeInteger(n)&&n>=0;}
 function validProgress(p){return p&&['seen','correct','wrong','guesses','level','due','lastAt','lastTurn'].every(k=>whole(p[k]))&&p.level<=5&&p.guesses<=p.correct&&p.seen===p.correct+p.wrong&&['new','correct','wrong','guess'].includes(p.lastResult);}
 function validSession(s){
   if(s===null)return true;
-  if(!s||!['smart','all','weak'].includes(s.mode)||!whole(s.target)||s.target<1||s.target>50||typeof s.completed!=='boolean'||!byId.has(s.currentId)||!Array.isArray(s.queue)||new Set(s.queue).size!==s.queue.length||!s.queue.every(id=>byId.has(id))||!Array.isArray(s.attempts)||s.attempts.length>s.target)return false;
+  if(!s||!['smart','all','weak'].includes(s.mode)||!whole(s.target)||s.target<1||s.target>BANK_SIZE||typeof s.completed!=='boolean'||!byId.has(s.currentId)||!Array.isArray(s.queue)||new Set(s.queue).size!==s.queue.length||!s.queue.every(id=>byId.has(id))||!Array.isArray(s.attempts)||s.attempts.length>s.target)return false;
   if(!s.attempts.every(a=>a&&byId.has(a.id)&&whole(a.selected)&&a.selected<=3&&typeof a.guessed==='boolean'&&typeof a.good==='boolean'&&a.good===(a.selected===byId.get(a.id).answer)&&whole(a.at)))return false;
   if(s.currentAnswer!==null&&(!whole(s.currentAnswer)||s.currentAnswer>3))return false;
   if(s.currentAnswer!==null){const last=s.attempts.at(-1);if(!last||last.id!==s.currentId||last.selected!==s.currentAnswer||last.guessed!==s.currentGuessed)return false;}
@@ -1212,16 +3453,17 @@ function applyReview(id,good,guessed,now=Date.now()){
   data.progress[id]=p;return p;
 }
 function element(tag,className,text){const el=document.createElement(tag);if(className)el.className=className;if(text!==undefined)el.textContent=text;return el;}
-function setScreen(name){screen=name;$('home').hidden=name!=='home';$('quiz').hidden=name!=='quiz';$('results').hidden=name!=='results';$('roundStats').hidden=name==='home';$('quizToolbar').hidden=name==='home';$('introDescription').textContent=name==='home'?'50 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.':'Vyber odpověď, přečti si souvislosti a pokračuj vlastním tempem.';}
+function setScreen(name){screen=name;$('home').hidden=name!=='home';$('quiz').hidden=name!=='quiz';$('results').hidden=name!=='results';$('roundStats').hidden=name==='home';$('quizToolbar').hidden=name==='home';$('introDescription').textContent=name==='home'?BANK_SIZE+' otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.':'Vyber odpověď, přečti si souvislosti a pokračuj vlastním tempem.';}
+function modeLabel(s){return s.mode==='smart'?'Chytré procvičování':s.mode==='all'?'Celý test · '+s.target+' otázek':'Chyby a tipy';}
 function renderHome(){
-  setScreen('home');const s=summary();$('seenTotal').textContent=s.seen+' / 50';$('masteredTotal').textContent=s.mastered+' / 50';$('dueTotal').textContent=String(s.due);$('weakCount').textContent=String(s.weak);$('weakStart').disabled=s.weak===0;
+  setScreen('home');const s=summary();$('seenTotal').textContent=s.seen+' / '+BANK_SIZE;$('masteredTotal').textContent=s.mastered+' / '+BANK_SIZE;$('dueTotal').textContent=String(s.due);$('weakCount').textContent=String(s.weak);$('weakStart').disabled=s.weak===0;
   $('resume').hidden=!data.session||data.session.completed;
   if(data.session&&!data.session.completed){$('resume').textContent='Pokračovat v kole · '+data.session.attempts.length+' / '+data.session.target;}
   const available=smartCandidates(Date.now(),null);$('smartStart').disabled=!available.length;
   const nextDue=QUESTIONS.map(q=>progress(q.id)).filter(p=>p.seen&&p.due>Date.now()).reduce((min,p)=>Math.min(min,p.due),Infinity);
-  $('homeHint').textContent=available.length?(s.due?s.due+' otázek už čeká na zopakování. Slabší dostanou přednost.':s.newCount+' nových otázek čeká na první vyzkoušení.'):(Number.isFinite(nextDue)?'Pro tuto chvíli máš hotovo. Další opakování '+formatWhen(nextDue)+'. Pokud chceš, dej si test všech 50.':'Vyber si režim procvičování.');
+  $('homeHint').textContent=available.length?(s.due?s.due+' otázek už čeká na zopakování. Slabší dostanou přednost.':s.newCount+' nových otázek čeká na první vyzkoušení.'):(Number.isFinite(nextDue)?'Pro tuto chvíli máš hotovo. Další opakování '+formatWhen(nextDue)+'. Pokud chceš, dej si test všech '+BANK_SIZE+'.':'Vyber si režim procvičování.');
   $('weakHint').textContent=s.weak?'Poslední chyby a správné odpovědi označené jako tip. V tomto režimu se ukážou i před plánovaným termínem.':'Zatím žádné otázky po poslední chybě nebo tipu.';
-  $('learningFill').style.width=s.mastered/50*100+'%';$('learningProgress').setAttribute('aria-valuenow',s.mastered);
+  $('learningFill').style.width=s.mastered/BANK_SIZE*100+'%';$('learningProgress').setAttribute('aria-valuemax',BANK_SIZE);$('learningProgress').setAttribute('aria-valuenow',s.mastered);
 }
 function start(mode){
   const now=Date.now();let ids;if(mode==='all')ids=shuffle(QUESTIONS.map(q=>q.id));else if(mode==='weak')ids=shuffle(QUESTIONS.filter(q=>['wrong','guess'].includes(progress(q.id).lastResult)).map(q=>q.id));else ids=smartCandidates(now,null).map(c=>c.id);
@@ -1245,7 +3487,7 @@ function renderFeedback(q,selected,guessed){
 function reason(id){const p=progress(id);if(!p.seen)return 'Nová otázka';if(p.lastResult==='wrong')return 'Vrací se po chybě';if(p.lastResult==='guess')return 'Ověříme předchozí tip';if(p.due<=Date.now())return 'Čas na zopakování';return p.level>=3?'Kontrola zvládnuté otázky':'Další procvičení';}
 function renderQuestion(focus=false){
   const s=data.session;if(!s){renderHome();return;}if(s.completed){renderResults(focus);return;}setScreen('quiz');const q=byId.get(s.currentId);const hasAnswer=s.currentAnswer!==null;
-  $('modeLabel').textContent=s.mode==='smart'?'Chytré procvičování':s.mode==='all'?'Test všech 50':'Chyby a tipy';$('category').textContent=q.category;$('bookNumber').textContent='Č. '+q.id+' / 50 · '+(q.bookRef||'I · otázka '+q.id);$('question').textContent=q.question;$('reason').textContent=reason(q.id);$('hint').textContent=q.terms?'Vyber správnou kombinaci přiřazení.':q.statements?'Vyber hodnocení obou tvrzení.':'Vyber jednu odpověď.';renderLegend(q);
+  $('modeLabel').textContent=modeLabel(s);$('category').textContent=q.category;$('bookNumber').textContent='Č. '+q.id+' / '+BANK_SIZE+' · '+(q.bookRef||'I · otázka '+q.id);$('question').textContent=q.question;$('reason').textContent=reason(q.id);$('hint').textContent=q.terms?'Vyber správnou kombinaci přiřazení.':q.statements?'Vyber hodnocení obou tvrzení.':'Vyber jednu odpověď.';renderLegend(q);
   $('guess').checked=hasAnswer?s.currentGuessed:false;$('guess').disabled=hasAnswer;
   const root=$('answers');root.replaceChildren();q.options.forEach((text,i)=>{const button=element('button','answer');button.type='button';button.dataset.option=String(i);button.disabled=hasAnswer;button.append(element('span','letter',LETTERS[i]),element('span','answer-text',text));const mark=element('span','answer-mark');mark.setAttribute('aria-hidden','true');button.append(mark);if(hasAnswer&&i===q.answer){button.classList.add('correct');mark.textContent='✓';button.setAttribute('aria-label',LETTERS[i]+': '+text+'. Správně podle klíče'+(i===s.currentAnswer?', tvoje volba.':'.'));}else if(hasAnswer&&i===s.currentAnswer){button.classList.add('wrong');mark.textContent='✕';button.setAttribute('aria-label',LETTERS[i]+': '+text+'. Tvoje odpověď, nesprávně podle klíče.');}button.addEventListener('click',()=>choose(i));root.append(button);});
   $('feedback').hidden=true;if(hasAnswer)renderFeedback(q,s.currentAnswer,s.currentGuessed);$('next').disabled=!hasAnswer;$('nextText').textContent=s.attempts.length>=s.target?'Zobrazit výsledek':'Další otázka';$('underButton').textContent=hasAnswer?'Vysvětlení si můžeš přečíst v klidu.':'Nejdřív zkus odpovědět. Správný tip označ před volbou.';updateStats();if(focus)$('question').focus({preventScroll:true});
@@ -1261,7 +3503,7 @@ function nextQuestion(){
   if(!next){s.completed=true;save();renderResults(true);}else{s.currentId=next;s.currentAnswer=null;s.currentGuessed=false;save();$('announcement').textContent='';renderQuestion(true);}scrollTop();
 }
 function renderResults(focus=false){
-  setScreen('results');updateStats();const s=data.session;const result=score();$('modeLabel').textContent=s.mode==='smart'?'Chytré procvičování':s.mode==='all'?'Test všech 50':'Chyby a tipy';const root=$('results');root.replaceChildren();const box=element('div','result');box.append(element('div','eyebrow','Kolo dokončeno'));const heading=element('h2','',result.rate===100?'Výborně. Dej paměti čas.':result.rate>=70?'Jde ti to dobře.':'Každá otázka tě posune.');heading.tabIndex=-1;
+  setScreen('results');updateStats();const s=data.session;const result=score();$('modeLabel').textContent=modeLabel(s);const root=$('results');root.replaceChildren();const box=element('div','result');box.append(element('div','eyebrow','Kolo dokončeno'));const heading=element('h2','',result.rate===100?'Výborně. Dej paměti čas.':result.rate>=70?'Jde ti to dobře.':'Každá otázka tě posune.');heading.tabIndex=-1;
   const guessed=s.attempts.filter(a=>a.good&&a.guessed).length;box.append(heading,element('p','',s.attempts.length<s.target?'Pro tuto chvíli už není vhodná další otázka. Chytré procvičování pokračuje při dalším termínu.':'Pokrok je uložený. Chyby a tipy se vrátí brzy, zvládnuté otázky dostanou delší odstup.'),element('div','result-score',result.rate+' %'),element('div','result-caption',result.correct+' z '+result.answered+' odpovědí správně'+(guessed?' · z toho '+guessed+' označených jako tip':'')));
   const overview=element('button','next','Zpět na přehled');overview.addEventListener('click',()=>{renderHome();scrollTop();});box.append(overview);
   const weakIds=[...new Set(s.attempts.filter(a=>!a.good||a.guessed).map(a=>a.id))];if(weakIds.length){const retry=element('button','next secondary','Procvičit chyby a tipy');retry.addEventListener('click',()=>start('weak'));box.append(retry);}root.append(box);
@@ -1275,7 +3517,7 @@ $('weakStart').addEventListener('click',()=>start('weak'));
 $('resume').addEventListener('click',()=>{renderQuestion(true);scrollTop();});
 $('homeButton').addEventListener('click',abandonToHome);
 $('next').addEventListener('click',nextQuestion);
-$('reset').addEventListener('click',()=>{if(!confirm('Opravdu vymazat celý uložený pokrok všech 50 otázek? Tento krok nejde vrátit.'))return;data=freshData();save();renderHome();scrollTop();});
+$('reset').addEventListener('click',()=>{if(!confirm('Opravdu vymazat celý uložený pokrok všech '+BANK_SIZE+' otázek? Tento krok nejde vrátit.'))return;data=freshData();save();renderHome();scrollTop();});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&screen==='home')renderHome();});
 data=load();save();renderHome();
 // Refresh due counts when a tab stays open across the next review time.
