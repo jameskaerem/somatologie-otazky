@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f6f3ee">
-  <meta name="description" content="150 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
+  <meta name="description" content="200 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
   <title>Somatologie · malý krok, velké pochopení</title>
   <style>
     :root{color-scheme:light;--bg:#f6f3ee;--paper:#fffefa;--ink:#293d39;--muted:#65736e;--line:#e1e6df;--sage:#dceadf;--green:#236345;--green-bg:#e4f3e7;--red:#983a45;--red-bg:#fbe5e6;--lavender:#ece7f8;--accent:#65558e;--peach:#fae8dc;--radius:26px}
@@ -18,22 +18,22 @@
   <header class="brand">
     <div class="brand-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M4 6.5c3.4-1.2 6.7-.7 10 1.6 3.3-2.3 6.6-2.8 10-1.6v16c-3.4-1.2-6.7-.7-10 1.6-3.3-2.3-6.6-2.8-10-1.6v-16Z" stroke="#56765e" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 8v16M7.5 11l3 .9M7.5 15l3 .9M17.5 12l3-.9M17.5 16l3-.9" stroke="#56765e" stroke-width="1.5" stroke-linecap="round"/></svg></div>
     <div><div class="brand-name">Somatologie</div><div class="brand-sub">Malý krok, velké pochopení.</div></div>
-    <span class="offline">150 otázek</span>
+    <span class="offline">200 otázek</span>
   </header>
 
-  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">150 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
+  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">200 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
   <div id="storageNotice" class="toast" hidden>Prohlížeč nepovolil ukládání. Test funguje, ale po zavření se průběh neobnoví.</div>
   <div id="recoveryNotice" class="recovery" hidden>Uložený pokrok nebylo možné načíst. Začínáme s novým přehledem.</div>
   <section class="card home" id="home" aria-label="Přehled učení">
     <h2 class="home-title">Každá otázka má svůj čas.</h2>
-    <div class="home-stats"><div class="home-stat"><span>Vyzkoušeno</span><strong id="seenTotal">0 / 150</strong></div><div class="home-stat"><span>Zvládnuté</span><strong id="masteredTotal">0 / 150</strong></div><div class="home-stat"><span>Čas zopakovat</span><strong id="dueTotal">0</strong></div></div>
+    <div class="home-stats"><div class="home-stat"><span>Vyzkoušeno</span><strong id="seenTotal">0 / 200</strong></div><div class="home-stat"><span>Zvládnuté</span><strong id="masteredTotal">0 / 200</strong></div><div class="home-stat"><span>Čas zopakovat</span><strong id="dueTotal">0</strong></div></div>
     <p class="learning-label">Zvládnuté = alespoň 3 úspěšná vybavení v plánovaných termínech.</p>
-    <div class="track" role="progressbar" id="learningProgress" aria-label="Počet opakovaně zvládnutých otázek" aria-valuemin="0" aria-valuemax="150" aria-valuenow="0"><div class="fill" id="learningFill"></div></div>
+    <div class="track" role="progressbar" id="learningProgress" aria-label="Počet opakovaně zvládnutých otázek" aria-valuemin="0" aria-valuemax="200" aria-valuenow="0"><div class="fill" id="learningFill"></div></div>
     <p class="home-hint" id="homeHint"></p>
     <button class="next resume" id="resume" hidden>Pokračovat v kole</button>
     <div class="mode-card recommended"><span class="tag">Doporučený režim</span><h3>Chytré procvičování</h3><p>Krátké kolo do 10 odpovědí. Přednost mají chyby a tipy, pak otázky k opakování a nové. Zvládnuté odpočívají do svého termínu.</p><button class="next" id="smartStart">Začít chytré kolo</button></div>
     <div class="mode-card"><h3>Jen chyby a tipy <span class="pill" id="weakCount">0</span></h3><p id="weakHint"></p><button class="next secondary" id="weakStart">Procvičit slabší otázky</button></div>
-    <div class="mode-card"><h3>Test všech 150</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
+    <div class="mode-card"><h3>Test všech 200</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
     <details class="home-help"><summary>Jak funguje chytré opakování?</summary><ul><li><strong>Chyba nebo tip:</strong> otázka se vrátí po alespoň třech jiných odpovědích v témže chytrém kole, jinak přibližně za 10 minut.</li><li><strong>Správně a bez tipu:</strong> termíny se postupně prodlužují na 1, 3, 7, 14 a 30 dní od příslušné odpovědi.</li><li><strong>Správně před termínem:</strong> procvičení se počítá do výsledku, ale samo neposune otázku na vyšší úroveň.</li><li><strong>Tři úspěchy s odstupem:</strong> otázka se označí jako zvládnutá. Nezmizí navždy; po termínu se znovu ověří.</li><li><strong>Další chyba:</strong> otázka se vrátí mezi ty k častému procvičení.</li></ul><p>Jednotlivé otázky se v chytrém kole mohou zopakovat. Skóre proto počítá odpovědi, zatímco horní přehled počítá různé otázky.</p><p>Pokrok se ukládá pouze v tomto prohlížeči a na této webové adrese. Telefon a počítač mají samostatný přehled. Režim tipování označ před odpovědí.</p></details>
   </section>
   <div class="quiz-toolbar" id="quizToolbar" hidden><button class="home-button" id="homeButton">← Přehled</button><span class="mode-label" id="modeLabel"></span></div>
@@ -53,7 +53,7 @@
   </section>
   <section class="card" id="results" aria-label="Výsledek kola" hidden></section>
   <footer class="footer"><p id="saveStatus">Pokrok se ukládá v tomto prohlížeči. Bez účtu a registrace.</p>
-    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 150 otázek v pořadí dokumentu: kapitolu I, otázky 1–45 (v aplikaci 1–45), kapitolu II, otázky 1–28 (46–73), kapitolu III, otázky 1–6 (74–79), kapitolu IV.a, otázky 1–29 (80–108), kapitolu IV.b, otázky 1–33 (109–141), a kapitolu V, otázky 1–9 (142–150).</p><p>Otázky: tištěné strany 8–15, 18–22, 24–25, 28–39 a 42–43 (PDF strany 5–8, 10–13, 15–20 a 22). Tištěné klíče: strany 15, 22, 25, 32, 39 a 51 (PDF strany 8, 12, 13, 17, 20 a 26). Všech 150 přiřazení správné odpovědi bylo porovnáno s těmito klíči; nově přidané otázky se ověřovaly bez internetových zdrojů. Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
+    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 200 otázek v pořadí dokumentu: kapitolu I, otázky 1–45 (v aplikaci 1–45), kapitolu II, otázky 1–28 (46–73), kapitolu III, otázky 1–6 (74–79), kapitolu IV.a, otázky 1–29 (80–108), kapitolu IV.b, otázky 1–33 (109–141), a kapitolu V, otázky 1–59 (142–200).</p><p>Otázky: tištěné strany 8–15, 18–22, 24–25, 28–39 a 42–51 (PDF strany 5–8, 10–13, 15–20 a 22–26). Tištěné klíče: strany 15, 22, 25, 32, 39 a 51 (PDF strany 8, 12, 13, 17, 20 a 26). Všech 200 přiřazení správné odpovědi bylo porovnáno s těmito klíči; nově přidané otázky se ověřovaly bez internetových zdrojů. Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
     <details class="sources"><summary>Uložený pokrok</summary><p>Nové kolo nemaže dřívější znalost otázek. Vymazání dole resetuje celé učení. Vymazáním dat prohlížeče se pokrok také ztratí. Stejná webová adresa po nahrání nové verze pokrok zachová, pokud zůstane zachované úložiště prohlížeče.</p><button class="reset" id="reset">Vymazat celý uložený pokrok</button></details>
   </footer>
 </main>
@@ -3379,6 +3379,1108 @@ QUESTIONS.push(...[
       "Ve vyšší nadmořské výšce může nižší dostupnost kyslíku tento systém naopak povzbudit. EPO tedy není pokyn k urychlenému ničení krvinek ve slezině; jeho hlavním úkolem je podpora jejich vzniku."
     ],
     "memory": "EPO = zpráva pro červenou kostní dřeň: podpoř tvorbu erytrocytů. Hlavní zdroj u dospělého jsou ledviny."
+  },
+  {
+    "id": 151,
+    "bookRef": "V · otázka 10",
+    "category": "Krev a imunita",
+    "question": "Kostní krvetvorná dřeň",
+    "options": [
+      "Je jedním z největších orgánů těla",
+      "Má až 3x větší hmotnost, než játra",
+      "Tvoří se v ní z 50 % červené a z 50 % bílé krvinky",
+      "Je u novorozence jediným místem, kde se tvoří bílé krvinky"
+    ],
+    "answer": 0,
+    "title": "Velká továrna rozdělená do mnoha kostí",
+    "paragraphs": [
+      "Krvetvorná kostní dřeň je rozsáhlá tkáň rozmístěná uvnitř mnoha kostí. Když její jednotlivé části vezmeš dohromady, jde o jeden z velkých orgánů těla. Proto klíč vybírá A, i když dřeň na obrázku nevidíš jako jeden ohraničený útvar.",
+      "Představ si výrobní podnik s mnoha pobočkami. Každá zabírá část jedné kosti, ale společně zajišťují obrovskou výrobu krvinek. Vznikají zde červené krvinky, krevní destičky i řada bílých krvinek.",
+      "Výroba se neřídí pevným poměrem půl na půl: tělo potřebuje různé počty a typy buněk s různou životností. Na vývoji a dozrávání lymfocytů se navíc podílejí také další orgány, například brzlík."
+    ],
+    "memory": "Dřeň je síť krevních továren v kostech; jejich celková velikost se sčítá."
+  },
+  {
+    "id": 152,
+    "bookRef": "V · otázka 11",
+    "category": "Krev a imunita",
+    "question": "Vyberte nesprávnou odpověď! Hemolýza krve může nastat",
+    "options": [
+      "Působením hadího jedu",
+      "Působením fyziologického roztoku",
+      "Působením destilované vody",
+      "Působením radioaktivního záření"
+    ],
+    "answer": 1,
+    "title": "Fyziologický roztok krvinku běžně neroztrhne",
+    "paragraphs": [
+      "Hledáš nesprávné tvrzení. Správná volba v testu je proto B: vhodný fyziologický roztok sám o sobě běžně nezpůsobí osmotické praskání červených krvinek. Má přibližně stejný osmotický účinek jako jejich okolí v krvi.",
+      "Představ si krvinku jako měkký váček, přes jehož obal může proudit voda. V destilované vodě je venku velmi málo rozpuštěných látek, voda proudí dovnitř a váček může nabobtnat až prasknout. Tomu se říká hemolýza.",
+      "Některé složky hadích jedů mohou poškodit buněčný obal a poškození může vznikat také působením záření. Neznamená to, že každý jed nebo každá dávka záření musí hemolýzu vyvolat. Rozhoduje konkrétní působení."
+    ],
+    "memory": "Hledej výjimku: fyziologický roztok drží vodní rovnováhu; čistá voda krvinku nafukuje."
+  },
+  {
+    "id": 153,
+    "bookRef": "V · otázka 12",
+    "category": "Krev a imunita",
+    "question": "Krev",
+    "options": [
+      "Je v těle obsažena nejvíce v žilách, ve svalech a v plicích",
+      "Tvoří asi 1/5 hmotnosti těla",
+      "U ženy obsahuje na jednotku objemu více erytrocytů",
+      "Můžeme bez ohrožení života ztratit až do objemu 3 litrů"
+    ],
+    "answer": 0,
+    "title": "Žíly slouží také jako velký zásobník krve",
+    "paragraphs": [
+      "Podle tištěného klíče je správně A. Důležitá myšlenka je, že krev není rozdělená rovnoměrně: velkou zásobu má žilní řečiště a významné množství je také v cévách svalů a plic. Nejde jen o krev právě procházející srdcem.",
+      "Představ si vodovod s širokými zásobními nádržemi. Žíly mají poddajné stěny a pojmou velký objem, zatímco tepny pracují hlavně jako rozvod pod vyšším tlakem. Zásoba se podle potřeb oběhu přerozděluje.",
+      "Krev tvoří přibližně 7–8 % tělesné hmotnosti, nikoli pětinu. Ženy mívají v průměru nižší počet erytrocytů na objem než muži. Tvrzení o bezpečné ztrátě tří litrů je chybné: taková ztráta může být život ohrožující."
+    ],
+    "memory": "Žíly jsou objemový zásobník. Pětina těla ani bezpečná ztráta tří litrů neplatí.",
+    "note": "A spojuje cévní oddíl se dvěma oblastmi těla, jejichž cévy krev obsahují. Je to zjednodušený popis rozložení krve, nikoli přesné dělení na navzájem oddělené části."
+  },
+  {
+    "id": 154,
+    "bookRef": "V · otázka 13",
+    "category": "Krev a imunita",
+    "question": "Červené krvinky",
+    "options": [
+      "Jsou okrouhlé jaderné buňky obalené polopropustnou membránou",
+      "Obsahují nejvíce železa ze všech buněk těla",
+      "Jsou schopny aktivního pohybu a změny tvaru",
+      "Vzestup jejich množství nad normální hodnoty se nazývá anémie"
+    ],
+    "answer": 1,
+    "title": "Železo v hemoglobinu pomáhá převážet kyslík",
+    "paragraphs": [
+      "Klíč vybírá B, protože erytrocyty jsou naplněné hemoglobinem, jehož součástí je železo. Právě tato součást umožňuje vratně vázat kyslík: naložit ho v plicích a předat ve tkáních, kde je potřeba.",
+      "Představ si krvinku jako dopravní vůz plný sedadel pro kyslík. Železo v hemu je součástí každého vazebného místa. Nejde o volné kovové částečky plovoucí uvnitř krvinky, ale o železo zabudované do molekul.",
+      "Zralé lidské erytrocyty nemají jádro. Umějí se pružně deformovat při průchodu úzkou cévou, ale aktivně nelezou jako některé bílé krvinky. Anémie znamená nedostatek hemoglobinu v krvi, nikoli nadbytek erytrocytů."
+    ],
+    "memory": "Červená krvinka veze kyslík díky hemoglobinu se železem.",
+    "note": "Superlativ „nejvíce ze všech buněk“ je nepřesný bez určení způsobu srovnání. Pro test platí B; podstatným faktem je vysoký obsah železa v hemoglobinu erytrocytů."
+  },
+  {
+    "id": 155,
+    "bookRef": "V · otázka 14",
+    "category": "Krev a imunita",
+    "question": "Červené krvinky (erytrocyty)",
+    "options": [
+      "Jsou pravými buňkami",
+      "Nemají stálý tvar",
+      "Přežívají maximálně 120 dní",
+      "Vytvářejí protilátky"
+    ],
+    "answer": 2,
+    "title": "Krvinka má dlouhou službu, ale není nesmrtelná",
+    "paragraphs": [
+      "Tištěný klíč označuje C. U červených krvinek se běžně učí životnost kolem 120 dní. Po tuto dobu opakovaně převážejí kyslík a oxid uhličitý; opotřebené krvinky nakonec odstraní zejména makrofágy ve slezině a játrech.",
+      "Představ si doručovací auto, které nepřetržitě objíždí město. Jeho pružnost a stav obalu se postupně zhoršují. Proto musí výrobní linka v kostní dřeni průběžně dodávat nové krvinky a materiál ze starých se částečně recykluje.",
+      "Protilátky tvoří plazmatické buňky vzniklé z B-lymfocytů. Erytrocyt má typický tvar oboustranně vkleslého disku, ale při průchodu kapilárou se umí dočasně deformovat. Ztráta jádra z něj nedělá neexistující nebo neživou strukturu."
+    ],
+    "memory": "Erytrocyt slouží přibližně čtyři měsíce; protilátky vyrábí jiná buněčná linka.",
+    "note": "120 dní je přibližná obvyklá životnost, nikoli pevná maximální hranice pro každou krvinku. Zralé erytrocyty jsou specializované buňky bez jádra; výraz „pravé buňky“ je zde zastaralý."
+  },
+  {
+    "id": 156,
+    "bookRef": "V · otázka 15",
+    "category": "Krev a imunita",
+    "question": "Zmnožení erytrocytů nad fyziologickou mez nastává",
+    "options": [
+      "Při dlouhodobém pobytu ve větších nadmořských výškách",
+      "Při lepších podmínkách sycení krve O₂",
+      "Při vyšším atmosférickém tlaku",
+      "Jako kompenzace při snížení počtu bílých krvinek"
+    ],
+    "answer": 0,
+    "title": "Méně dostupného kyslíku může znamenat více přepravců",
+    "paragraphs": [
+      "Ve větší nadmořské výšce je nižší atmosférický tlak a tím i nižší tlak kyslíku ve vdechovaném vzduchu. Při dlouhodobém pobytu může tělo zvýšit tvorbu erytrocytů. Správně je A; nejde o okamžitou změnu po příchodu na kopec.",
+      "Představ si, že každý dodávkový vůz může naložit méně zásilek. Jednou možností je přidat další vozy. Ledviny při nižší dostupnosti kyslíku zvyšují tvorbu hormonu erytropoetinu, který podpoří krvetvorbu v kostní dřeni.",
+      "Podnětem tedy nejsou lepší podmínky okysličování ani vyšší tlak. Bílé krvinky mají jiné úkoly, takže jejich nedostatek nelze jednoduše vyřešit přidáním červených. Každá buněčná řada má vlastní regulační potřeby."
+    ],
+    "memory": "Výška → méně dostupného kyslíku → erytropoetin → více červených přepravců."
+  },
+  {
+    "id": 157,
+    "bookRef": "V · otázka 16",
+    "category": "Krev a imunita",
+    "question": "Větší množství erytrocytů v krvi mají",
+    "options": [
+      "Lidé žijící v přímořských oblastech",
+      "Lidské plody",
+      "Staří lidé",
+      "Lidé trpící anémií"
+    ],
+    "answer": 1,
+    "title": "Plod získává kyslík přes placentu",
+    "paragraphs": [
+      "V tomto srovnání klíč vybírá lidské plody, tedy B. V pozdějším období vývoje mají běžně vyšší koncentraci erytrocytů a hemoglobinu než dospělý člověk. Je to součást přizpůsobení podmínkám, ve kterých získávají kyslík.",
+      "Představ si přepravu přes přestupní stanici: kyslík se nejprve dostane do krve matky a potom přes placentu do krve plodu. Pomáhá vyšší kapacita jeho krve i odlišný fetální hemoglobin, který kyslík váže ochotněji.",
+      "Přímořská oblast nepřináší podnět jako dlouhodobý pobyt ve vysokých horách. Ani stáří samo o sobě neznamená více erytrocytů. Anémie pak není stav s jejich účelným nadbytkem, ale s nedostatečnou koncentrací hemoglobinu."
+    ],
+    "memory": "Plod má kyslíkovou zásilku přes placentu; jeho krev je na tento přenos přizpůsobená.",
+    "note": "„Větší množství“ zde chápej jako množství na jednotku objemu krve v příslušném období vývoje, ne jako větší celkový počet krvinek v malém plodu než v celém dospělém."
+  },
+  {
+    "id": 158,
+    "bookRef": "V · otázka 17",
+    "category": "Krev a imunita",
+    "question": "Které z uvedených krvinek nejsou pravými buňkami?",
+    "options": [
+      "Erytrocyty",
+      "Granulocyty",
+      "Lymfocyty",
+      "Monocyty"
+    ],
+    "answer": 0,
+    "title": "Klíč tím myslí krvinky, které ztratily jádro",
+    "paragraphs": [
+      "Podle učebnicového klíče vyber A, erytrocyty. Zralá lidská červená krvinka při vývoji ztratí jádro, zatímco granulocyty, lymfocyty a monocyty jádro mají. Právě tento rozdíl se otázka snaží prověřit.",
+      "Představ si specializované přepravní vozidlo, ze kterého se odstranila část vybavení, aby sloužilo svému úkolu. Zralý erytrocyt je uzpůsoben přenosu plynů a průchodu úzkými cévami; bez jádra se už nemůže běžně dělit.",
+      "Je ale důležité nenaučit se chybnou větu, že erytrocyt vůbec není buňka. Je to vysoce specializovaná buňka bez jádra. Krevní destičky jsou naproti tomu buněčné úlomky, ale ty v nabízených možnostech nejsou."
+    ],
+    "memory": "V tomto starším názvosloví hledej chybějící jádro: zralý erytrocyt.",
+    "note": "Označení „nejsou pravými buňkami“ je zastaralé a zavádějící. A zachovává klíč; biologicky jsou zralé erytrocyty bezjaderné buňky."
+  },
+  {
+    "id": 159,
+    "bookRef": "V · otázka 18",
+    "category": "Krev a imunita",
+    "question": "Sedimentace červených krvinek",
+    "options": [
+      "Závisí na složení krevní plazmy",
+      "Je stejně rychlá u mužů i u žen",
+      "Se odečítá po 10 minutách",
+      "Umožňuje přesnou diagnózu choroby"
+    ],
+    "answer": 0,
+    "title": "Rychlost klesání ovlivňuje i okolní tekutina",
+    "paragraphs": [
+      "Správně je A: sedimentace závisí mimo jiné na složení plazmy. Některé plazmatické bílkoviny podporují spojování erytrocytů do shluků, které v odměrné trubici klesají rychleji než jednotlivé rozptýlené krvinky.",
+      "Představ si jednotlivé lístky padající vodou a potom jejich těžší svazeček. Přirovnání není přesný fyzikální model, ale pomůže pochopit, proč uspořádání krvinek a vlastnosti prostředí mění rychlost jejich usazování.",
+      "Standardní údaj sedimentace se běžně vztahuje k jedné hodině, ne deseti minutám. Výsledek ovlivňuje více okolností včetně pohlaví a počtu či tvaru erytrocytů. Je to nespecifický ukazatel: sám neurčí jednu přesnou chorobu."
+    ],
+    "memory": "Sedimentace je stopa o prostředí krve, nikoli jmenovka konkrétní nemoci."
+  },
+  {
+    "id": 160,
+    "bookRef": "V · otázka 19",
+    "category": "Krev a imunita",
+    "question": "Sedimentace krve",
+    "options": [
+      "Stoupá s vyšším obsahem protilátek v krvi",
+      "Nezávisí na hmotnosti a množství erytrocytů v krvi",
+      "Je odečítána po půlhodině",
+      "U zdravého muže činí 8 mm – dílků"
+    ],
+    "answer": 0,
+    "title": "Více některých bílkovin může spojit krvinky do shluků",
+    "paragraphs": [
+      "Podle klíče platí A. Vyšší obsah imunoglobulinů, tedy protilátek, může podporovat shlukování erytrocytů a zvýšit rychlost sedimentace. Podobně působí i další bílkoviny plazmy, například fibrinogen.",
+      "Představ si mince položené jednotlivě a potom spojené do sloupečků. Červené krvinky mohou vytvářet podobné sestavy a ty se usazují jinak než samostatné buňky. Výsledek proto souvisí i s tím, co se děje v jejich okolí.",
+      "Není to jednoduché měření množství protilátek: vliv má také počet a tvar erytrocytů a další podmínky. Normální hodnota není jedno povinné číslo osm pro každého zdravého muže. Posuzuje se v rozmezí a v souvislosti s dalšími údaji."
+    ],
+    "memory": "Více imunoglobulinů může znamenat více shluků a rychlejší sedimentaci; není to přímý počet protilátek."
+  },
+  {
+    "id": 161,
+    "bookRef": "V · otázka 20",
+    "category": "Krev a imunita",
+    "question": "Posuďte správnost obou tvrzení.",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 1,
+    "title": "Změna bílkovin sedimentaci urychluje; pH musí zůstat stabilní",
+    "paragraphs": [
+      "První tvrzení je jako celek chybné: při zvýšení některých imunoglobulinů se sedimentace typicky zrychluje, nikoli zpomaluje. Samotný popis klesání krvinek působením gravitace je v pořádku. Jedna chybná část ale stačí k odmítnutí celého tvrzení.",
+      "Druhé tvrzení je v učebnicovém smyslu správné. Krevní pH se udržuje blízko 7,4, tedy lehce na zásadité straně. Enzymy a buňky potřebují úzké pracovní podmínky, podobně jako přístroj, který funguje správně jen při určitém nastavení.",
+      "Odpověď je tedy B: první ne, druhé ano. Sedimentace popisuje chování krvinek v trubici, kdežto pH chemické prostředí krve. Udržování vnitřního prostředí samozřejmě zahrnuje i další veličiny, například množství vody a iontů."
+    ],
+    "memory": "Imunoglobuliny mohou sedimentaci zrychlit; pH krve je přibližně 7,4.",
+    "statements": [
+      "Sedimentace červených krvinek je jejich klesání gravitací ke dnu nádobky, nebo pipety naplněné krví. Zmnožují-li se v plazmě imunoglobuliny (např. při infekčních onemocněních), klesá sedimentační rychlost červených krvinek.",
+      "K udržení stálého vnitřního prostředí musí krev zajistit především stálé pH plazmy. Kyselost plazmy nepatrně kolísá kolem zásadité reakce pH = 7,4."
+    ]
+  },
+  {
+    "id": 162,
+    "bookRef": "V · otázka 21",
+    "category": "Krev a imunita",
+    "question": "Hemolýza erytrocytů",
+    "options": [
+      "Nastává po smíchání krve různých krevních skupin",
+      "Nastává po vstříknutí fyziologického roztoku do krve",
+      "Stoupá se stoupající osmotickou rezistencí krve",
+      "Nemůže nastat po vstříknutí tekutiny o vyšším osmotickém tlaku do krve"
+    ],
+    "answer": 0,
+    "title": "Neslučitelné značky mohou spustit útok na krvinku",
+    "paragraphs": [
+      "Klíč vybírá A a myslí tím smíchání neslučitelné krve. Protilátky mohou rozpoznat antigeny na cizích erytrocytech, navázat se na ně a spustit jejich poškození. Shlukování krvinek a jejich rozpad jsou přitom různé, byť související děje.",
+      "Představ si ochranné rozpoznávací štítky na zásilkách. Pokud je obrana příjemce vyhodnotí jako cizí a má proti nim odpovídající protilátky, mohou být krvinky napadeny. Samotné různé názvy skupin ale ještě automaticky neznamenají neslučitelnost.",
+      "Fyziologický roztok sám běžně osmotickou hemolýzu nevyvolává. Vyšší osmotická odolnost znamená lepší odolávání, nikoli více rozpadu. U velmi koncentrovaného okolí krvinka především ztrácí vodu a smršťuje se; slovo nikdy je ale příliš absolutní."
+    ],
+    "memory": "Hemolýza při neslučitelnosti = protilátky napadnou cizí značky na erytrocytu.",
+    "note": "A je zkrácené: ne každá kombinace různých krevních skupin vyvolá hemolýzu. Rozhoduje skutečná slučitelnost a druh převáděné krevní složky."
+  },
+  {
+    "id": 163,
+    "bookRef": "V · otázka 22",
+    "category": "Krev a imunita",
+    "question": "Posuďte správnost obou tvrzení.",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 2,
+    "title": "Hematokrit měří objemový podíl; játra pomáhají vyrovnávat glykémii",
+    "paragraphs": [
+      "Klíč označuje obě tvrzení za správná, tedy C. Hematokrit vyjadřuje, jakou část objemu krve tvoří červené krvinky. Když si krev představíš rozdělenou na buněčnou a tekutou část, právě tento objemový podíl je hlavní myšlenkou prvního tvrzení.",
+      "Glykémie je koncentrace glukózy v krvi. Játra pomáhají její výkyvy tlumit: při dostatku mohou glukózu ukládat do glykogenu a při potřebě ji z něj uvolňovat. Připomíná to sklad, který přijímá přebytečné zásoby a vydává je při nedostatku.",
+      "Nejde o stejný typ hodnoty: hematokrit říká něco o objemovém zastoupení erytrocytů, glykémie o rozpuštěné glukóze. Řízení glykémie zahrnuje hormony a další orgány; jaterní glykogen je důležitý zásobník, nikoli jediný mechanismus."
+    ],
+    "memory": "Hematokrit = podíl objemu erytrocytů; glykémie = glukóza v krvi; glykogen = zásoba.",
+    "statements": [
+      "Hematokrit je hodnota, užívaná v hematologii k vyjádření vzájemného poměru mezi množstvím krevní plasmy a formovanými krevními elementy – krvinkami.",
+      "Hladinu cukru v krvi nazýváme glykémie. Je-li glykémie nízká, cukr se z jater uvolňuje a glykémie se zvyšuje. Při opačné situaci se cukr v játrech ukládá do zásoby v molekulách glykogenu, který je rezervoárem cukru v organismu."
+    ],
+    "note": "První věta je volná učebnicová formulace. Přesně je hematokrit podíl objemu erytrocytů na celkovém objemu krve, nikoli poměr všech krvinek k plazmě."
+  },
+  {
+    "id": 164,
+    "bookRef": "V · otázka 23",
+    "category": "Krev a imunita",
+    "question": "Bílé krvinky",
+    "options": [
+      "Se vyskytují ve větším počtu u mužů než u žen",
+      "Se vyskytují v krvi a v míze",
+      "Zajišťují přenos kyslíku z plic do tkání",
+      "Žijí dva až tři měsíce"
+    ],
+    "answer": 1,
+    "title": "Obrana se přesouvá mezi krví, tkáněmi a mízou",
+    "paragraphs": [
+      "Bílé krvinky najdeme v krvi i v míze, proto je správně B. Různé druhy leukocytů se také nacházejí ve tkáních, kde sledují okolí, rozpoznávají problémy a podílejí se na obranné reakci organismu.",
+      "Představ si hlídky používající více dopravních cest. Krev je jedna hlavní trasa a mízní systém další; mízní uzliny fungují jako místa, kde se obranné buňky setkávají s informacemi z tkání. Lymfocyty mezi těmito místy recirkulují.",
+      "Převoz většiny kyslíku je úkol erytrocytů s hemoglobinem. Bílé krvinky také nemají jednu společnou životnost: některé žijí krátce, jiné dlouho a paměťové populace mohou přetrvávat roky. Jednotné dva až tři měsíce tedy nesedí."
+    ],
+    "memory": "Bílá obrana cestuje krví i mízou; kyslík veze červená linka."
+  },
+  {
+    "id": 165,
+    "bookRef": "V · otázka 24",
+    "category": "Krev a imunita",
+    "question": "70 % všech bílých krvinek tvoří",
+    "options": [
+      "Neutrofilní granulocyty",
+      "Eozinofilní granulocyty",
+      "Bazofilní leukocyty",
+      "Agranulocyty"
+    ],
+    "answer": 0,
+    "title": "Neutrofily bývají nejpočetnější rychlá zásahová skupina",
+    "paragraphs": [
+      "V běžném diferenciálním rozpočtu krve dospělého převažují neutrofilní granulocyty, proto klíč vybírá A. Údaj 70 % představuje učebnicové přiblížení, ne povinné složení krve každého zdravého člověka.",
+      "Představ si pohotovostní tým, který potřebuje mnoho rychle dostupných členů. Neutrofily patří k vrozené obraně, rychle přicházejí do místa zánětu a umějí pohlcovat i ničit mikroorganismy, zejména při obraně proti bakteriím.",
+      "Eozinofily a bazofily mají také důležité úkoly, ale v krvi jich obvykle bývá výrazně méně. Zastoupení jednotlivých druhů se mění s věkem i stavem organismu, takže samotné procento bez dalších souvislostí neurčuje diagnózu."
+    ],
+    "memory": "Neutrofily = obvykle nejpočetnější leukocyty dospělého; 70 % ber orientačně.",
+    "note": "Podíl neutrofilů není stálých 70 %. Obvyklá rozmezí závisí na věku a laboratoři; u dětí se poměry mohou lišit."
+  },
+  {
+    "id": 166,
+    "bookRef": "V · otázka 25",
+    "category": "Krev a imunita",
+    "question": "Monocyty",
+    "options": [
+      "Se mění na fagocytující makrofágy",
+      "Patří mezi nejmenší leukocyty",
+      "Mají v cytoplazmě barvitelná granula",
+      "Působí při zástavě krvácení"
+    ],
+    "answer": 0,
+    "title": "Z krevního pracovníka se může stát tkáňový uklízeč",
+    "paragraphs": [
+      "Monocyty mohou po přechodu z krve do tkáně dozrávat v makrofágy, které pohlcují mikroorganismy i buněčné zbytky. Správně je A. Slovo fagocytóza znamená právě toto pohlcení částice buňkou a její následné zpracování.",
+      "Představ si pracovníka, který přejede na místo a stane se součástí místního úklidového a obranného týmu. Makrofág nejen uklízí, ale také vysílá signály a pomáhá předávat informace dalším buňkám imunity.",
+      "Monocyty patří naopak k velkým krvinkám. Řadí se mezi agranulocyty, protože nemají typická specifická granula granulocytů; neznamená to, že uvnitř nemají vůbec žádné váčky. Hlavní buněčnou zátku při krvácení vytvářejí destičky."
+    ],
+    "memory": "Monocyt může do tkáně dorazit jako posila a stát se makrofágem, velkým pohlcovačem.",
+    "note": "Ne všechny tkáňové makrofágy vznikají průběžně z krevních monocytů. Některé populace mají původ už v embryonálním vývoji a udržují se místně."
+  },
+  {
+    "id": 167,
+    "bookRef": "V · otázka 26",
+    "category": "Krev a imunita",
+    "question": "Monocyty",
+    "options": [
+      "Nikdy nevystupují z cév",
+      "Se dostávají z krve do tkání",
+      "Tvoří 50 % bílých krvinek",
+      "Jsou menší než erytrocyty"
+    ],
+    "answer": 1,
+    "title": "Cévní stěna není pro obranné buňky neprostupná zeď",
+    "paragraphs": [
+      "Monocyty mohou přecházet z krve přes stěnu drobných cév do tkání, proto je správně B. Právě tak se obranné buňky dostávají tam, kde je potřeba uklidit poškozené buňky nebo pomoci zvládnout infekci.",
+      "Představ si hlídku na silnici, která na signál opustí hlavní trasu a vstoupí do postižené čtvrti. Přechod přes cévní stěnu je řízený proces; buňka se přichytí k výstelce a projde do okolí podle místních signálů.",
+      "Monocyty jsou větší než červené krvinky a netvoří polovinu běžných leukocytů. Jejich význam nespočívá v početní převaze, ale v úkolech, které zvládají po příchodu do tkání, například při vzniku části makrofágů a při fagocytóze."
+    ],
+    "memory": "Monocyt není uvězněný v cévě: umí přejít za prací do tkáně."
+  },
+  {
+    "id": 168,
+    "bookRef": "V · otázka 27",
+    "category": "Krev a imunita",
+    "question": "Posuďte správnost obou tvrzení.",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 0,
+    "title": "Monocyty mohou dozrát v makrofágy; mezi granulocyty vedou neutrofily",
+    "paragraphs": [
+      "První tvrzení popisuje běžnou cestu monocytu: vznikne v kostní dřeni a po vstupu do tkáně se může změnit v makrofág. Ten pohlcuje cizí částice i buněčné zbytky. V tomto učebnicovém smyslu je první tvrzení správné.",
+      "Druhé tvrzení začíná dobře: granulocyty obsahují granula, jejichž barvení pomáhá rozlišovat jednotlivé typy. Potom ale pořadí převrací. V krvi dospělého jsou obvykle nejpočetnější neutrofily, zatímco bazofilů je velmi málo.",
+      "Vyber tedy A: první ano, druhé ne. Představ si tým s mnoha neutrofilními členy a menšími specializovanými skupinami. Název podle barvení říká, jak granula reagují na barviva, nikoli kolik daných buněk musí v krvi být."
+    ],
+    "memory": "Monocyt → může být makrofág; neutrofily početně vedou, bazofily jsou vzácné.",
+    "statements": [
+      "Monocyty vznikají v kostní dřeni. Ve tkáních se mění na makrofágy, které fagocytují částice, které jsou tělu cizí.",
+      "Granulocyty obsahují v cytoplazmě hrudky, které se barví různými histologickými barvivy. Nejvíce je v krvi bazofilních a eosinofilních granulocytů, nejméně neutrofilních granulocytů."
+    ]
+  },
+  {
+    "id": 169,
+    "bookRef": "V · otázka 28",
+    "category": "Krev a imunita",
+    "question": "Při zastavení krvácení se uplatňují především",
+    "options": [
+      "Monocyty",
+      "Granulocyty",
+      "Histiocyty",
+      "Trombocyty"
+    ],
+    "answer": 3,
+    "title": "Destičky vytvoří první záplatu poškozené cévy",
+    "paragraphs": [
+      "Trombocyty jsou krevní destičky a při zástavě krvácení mají zásadní úlohu. Přichytí se v místě poranění cévy, aktivují se a spojují s dalšími destičkami. Správně je D. Vzniká první destičková zátka.",
+      "Představ si malou trhlinu v potrubí. Destičky fungují jako rychle přiložená záplata a srážecí systém ji potom zpevní sítí fibrinu. Zapojí se také stažení cévy, takže se na opravě podílí několik spolupracujících mechanismů.",
+      "Monocyty, granulocyty a tkáňové makrofágy se zaměřují především na obranu a úklid. Mohou ovlivňovat zánět i hojení, ale v této otázce hledáme hlavního buněčného účastníka tvorby zátky, nikoli libovolnou buňku u poranění."
+    ],
+    "memory": "Trombocyty = destičky, které rychle záplatují cévu; fibrin záplatu zpevní."
+  },
+  {
+    "id": 170,
+    "bookRef": "V · otázka 29",
+    "category": "Krev a imunita",
+    "question": "Který děj je podstatný při zastavení krvácení?",
+    "options": [
+      "Činnost krevních destiček",
+      "Sedimentace krvinek",
+      "Diapedéza bílých krvinek",
+      "Fagocytóza granulocytů a monocytů"
+    ],
+    "answer": 0,
+    "title": "Krvácení potřebuje utěsnit otvor",
+    "paragraphs": [
+      "Správně je A: krevní destičky se aktivují při poškození cévy a pomáhají vytvořit uzávěr. K jejich činnosti se přidává srážení krve s tvorbou fibrinu. Dohromady tak vzniká pevnější ochrana proti dalšímu úniku krve.",
+      "Představ si porušenou hadici. Potřebuješ spojit materiál právě přes otvor, ne čekat, až něco klesne na dno. Sedimentace popisuje usazování krvinek v nádobce a není mechanismem, který běžně opravuje poraněnou cévu.",
+      "Diapedéza je přechod bílých krvinek přes cévní stěnu a fagocytóza jejich pohlcování částic. Tyto děje jsou důležité pro obranu a úklid, ale neoznačují vytvoření destičkové zátky. Rozlišuj tedy obranu proti vetřelci od utěsnění krvácení."
+    ],
+    "memory": "Krvácení: destičková zátka a fibrin. Infekce a úklid: bílé krvinky."
+  },
+  {
+    "id": 171,
+    "bookRef": "V · otázka 30",
+    "category": "Krev a imunita",
+    "question": "Trombus",
+    "options": [
+      "Může jako putující embolus ucpat cévu",
+      "Se při hojení mění na vazivový obal cévy",
+      "Se po svém definitivním vzniku už nikdy nerozpouští",
+      "Vyvolá vždy trombózu"
+    ],
+    "answer": 0,
+    "title": "Když se kus sraženiny utrhne, může ucpat cestu jinde",
+    "paragraphs": [
+      "Klíč vybírá A. Trombus je krevní sraženina vzniklá v cévě nebo srdci za života. Jeho část se může uvolnit, být unášena proudem krve a jako embolus ucpat vzdálenější cévu, jejíž průsvit už je pro ni příliš malý.",
+      "Představ si kus materiálu uvolněný uvnitř potrubí. Nezůstane nutně v místě vzniku: proud ho odnese a zaklíní až v užším úseku. Rozlišuj proto trombus přichycený v místě vzniku a putující tromboembolus.",
+      "Sraženina nemusí zůstat navždy stejná. Může se rozpouštět působením fibrinolýzy nebo být postupně přestavována vazivem. Trombóza je název procesu vzniku trombu, nikoli povinný další následek každé již existující sraženiny."
+    ],
+    "memory": "Trombus vznikne na místě; odtržený tromboembolus cestuje a může ucpat cévu jinde."
+  },
+  {
+    "id": 172,
+    "bookRef": "V · otázka 31",
+    "category": "Krev a imunita",
+    "question": "Trombocyty",
+    "options": [
+      "Se shlukují a rozpadají v místě poranění",
+      "Mají význam hlavně při imunitní odpovědi organismu",
+      "Uvolňují protrombin",
+      "Jsou schopny fagocytózy"
+    ],
+    "answer": 0,
+    "title": "Destičky se přichytí, aktivují a spojí",
+    "paragraphs": [
+      "Tištěný klíč vybírá A. Hlavní myšlenkou je shlukování destiček v místě poškození cévy. Destičky se přichytí, změní tvar a uvolní obsah svých granul, který pomáhá přivolat a aktivovat další destičky.",
+      "Představ si opraváře, kteří se nejen sejdou u otvoru, ale také zavolají posily a vzájemně se propojí. Jejich povrch navíc poskytuje vhodné prostředí pro část srážecích reakcí. Tak vzniká návaznost mezi destičkovou zátkou a fibrinovou sítí.",
+      "Protrombin je srážecí bílkovina vytvářená především v játrech a přítomná v plazmě, nikoli hlavní zásilka destičkových granul. Destičky mají i další vazby na obranné děje, ale jejich základní úloha v této otázce je zástava krvácení."
+    ],
+    "memory": "Destičky u poranění: přichycení → aktivace → spojování a uvolnění obsahu granul.",
+    "note": "Slovo „rozpadají“ je starší zjednodušení. Běžná aktivace a vypuštění granul nejsou totéž jako nutné prasknutí každé destičky."
+  },
+  {
+    "id": 173,
+    "bookRef": "V · otázka 32",
+    "category": "Krev a imunita",
+    "question": "Plazmin",
+    "options": [
+      "Je obsažen v bazofilních granulocytech",
+      "Způsobuje trombózu",
+      "Rozpouští fibrin",
+      "Zastavuje krvácení"
+    ],
+    "answer": 2,
+    "title": "Po opravě je potřeba odstranit přebytečnou síť",
+    "paragraphs": [
+      "Plazmin je enzym, který štěpí fibrin, proto je správně C. Fibrin tvoří síť zpevňující krevní sraženinu. Její řízené odbourávání se nazývá fibrinolýza a pomáhá obnovit průchodnost a odstranit nepotřebný materiál.",
+      "Představ si lešení při opravě domu. Nejprve je potřeba ho postavit a zajistit, ale po dokončení práce nemá překážet navždy. Plazmin představuje součást týmu, který fibrinové lešení rozebírá. Vzniká aktivací předstupně zvaného plazminogen.",
+      "Nepleť si ho s trombinem: trombin pomáhá vytvářet fibrin z fibrinogenu, plazmin fibrin štěpí. Nejde tedy o hlavní látku budující krevní zátku. Srážení a rozpouštění musí být vyvážené, aby céva nezůstala ucpaná ani zbytečně nekrvácela."
+    ],
+    "memory": "Trombin fibrin pomáhá tvořit; plazmin ho pomáhá rozebírat."
+  },
+  {
+    "id": 174,
+    "bookRef": "V · otázka 33",
+    "category": "Krev a imunita",
+    "question": "Antihemofilní globulin je",
+    "options": [
+      "Destičkový tromboplastin",
+      "Protrombin přeměněný na trombin",
+      "U osob postižených hemofilií vylučován v přebytku",
+      "Vnitřní faktor krevní srážlivosti"
+    ],
+    "answer": 3,
+    "title": "Chybějící pomocník může oslabit celou srážecí soustavu",
+    "paragraphs": [
+      "Antihemofilním globulinem se zde myslí srážecí faktor VIII. Patří do vnitřní cesty srážení a klíč proto vybírá D. Jeho nedostatek nebo porucha funkce způsobuje hemofilii A; problémem tedy není jeho nadbytek.",
+      "Představ si výrobní linku, ve které jeden pomocník umožňuje další reakci běžet dostatečně účinně. Faktor VIII pracuje jako kofaktor, tedy partner dalšího faktoru. Když správně nefunguje, tvorba dostatečně pevné sraženiny je narušena.",
+      "Není to trombin ani destičkový tromboplastin. Také ho nezaměň s vnitřním faktorem žaludku potřebným pro vstřebání vitaminu B12: podobné slovní spojení označuje dvě zcela různé věci. Tady jsme v soustavě krevního srážení."
+    ],
+    "memory": "Antihemofilní globulin = faktor VIII; hemofilie A souvisí s jeho nedostatkem či poruchou."
+  },
+  {
+    "id": 175,
+    "bookRef": "V · otázka 34",
+    "category": "Krev a imunita",
+    "question": "Přiřaďte k sobě termíny, které funkčně souvisí:",
+    "options": [
+      "A4, B3, C2, D1",
+      "A3, B4, C2, D1",
+      "A1, B4, C2, D3",
+      "A2, B4, C3, D1"
+    ],
+    "answer": 1,
+    "title": "Bílkovina, objemový podíl a brzda srážení mají odlišné role",
+    "paragraphs": [
+      "Albumin je významná krevní bílkovina, tedy A3. Hematokrit vyjadřuje podíl červených krvinek v objemu krve, B4. Heparin souvisí se srážením tím, že ho tlumí, C2. Protilátky patří mezi imunoglobuliny, takže v nabídce D1. Celek je B.",
+      "Představ si čtyři různé kolonky: materiál rozpuštěný v plazmě, číselný údaj o krvinkách, brzdu srážecího systému a obrannou bílkovinu. Nejde o čtyři zaměnitelné názvy jedné věci; každý popisuje jiný typ informace.",
+      "Důležité je nepřevrátit význam heparinu: přiřazení ke srážení neznamená, že srážení podporuje. A ani každý globulin není protilátka. Právě imunoglobuliny jsou skupina globulinů, která zajišťuje protilátkové rozpoznání."
+    ],
+    "memory": "Albumin bílkovina; hematokrit podíl; heparin brzda srážení; imunoglobulin protilátka.",
+    "terms": [
+      "Albumin",
+      "Hematokrit",
+      "Heparin",
+      "Globulin"
+    ],
+    "definitions": [
+      "Protilátka",
+      "Srážení krve",
+      "Krevní protein",
+      "Podíl červených krvinek v objemu krve"
+    ],
+    "note": "D1 používá zkratku: protilátkami jsou imunoglobuliny, nikoli všechny globuliny. Heparin srážení omezuje."
+  },
+  {
+    "id": 176,
+    "bookRef": "V · otázka 35",
+    "category": "Krev a imunita",
+    "question": "Co obsahují, nebo vytvářejí jednotlivé typy krvinek?",
+    "options": [
+      "A1, B2, C3, D4",
+      "A4, B3, C1, D2",
+      "A2, B4, C1, D3",
+      "A2, B3, C1, D2"
+    ],
+    "answer": 2,
+    "title": "Každá buněčná linka má jiné pracovní vybavení",
+    "paragraphs": [
+      "Barvitelná specifická zrna patří ke granulocytům, A2. Protilátky vytvářejí plazmatické buňky vyvinuté z B-lymfocytů, tedy B4. Hemoglobin obsahují erytrocyty, C1. Poslední spojení klíče je tromboplastin a destičky, D3. Výsledkem je C.",
+      "Představ si čtyři profese: obránce s granuly, výrobce rozpoznávacích protilátek, přepravce kyslíku a opraváře cévy. Každý má vybavení odpovídající své práci. Tak lze přiřazení odvodit podle funkce, ne jen podle písmen.",
+      "U destiček používá učebnice starší slovník srážení. Důležitý je jejich aktivovaný povrch podporující srážecí reakce. Neuč se z tohoto přiřazení, že všechny lymfocyty vyrábějí protilátky: T-lymfocyty mají jiné úkoly."
+    ],
+    "memory": "Granula granulocyty; protilátky B-linie; hemoglobin erytrocyty; srážení destičky.",
+    "terms": [
+      "Barvitelná zrna",
+      "Protilátky",
+      "Hemoglobin",
+      "Tromboplastin"
+    ],
+    "definitions": [
+      "Erytrocyty",
+      "Granulocyty",
+      "Krevní destičky",
+      "Lymfocyty"
+    ],
+    "note": "„Destičkový tromboplastin“ je historické zjednodušení pro souvislost destiček se srážením. Není totožný s tkáňovým faktorem, který se dnes označuje jako tkáňový tromboplastin."
+  },
+  {
+    "id": 177,
+    "bookRef": "V · otázka 36",
+    "category": "Krev a imunita",
+    "question": "Co je to? Vysvětlete uvedené termíny:",
+    "options": [
+      "A1, B3, C4, D2",
+      "A3, B1, C2, D4",
+      "A3, B1, C4, D2",
+      "A1, B4, C3, D2"
+    ],
+    "answer": 2,
+    "title": "Obranná kaskáda, nůžky na fibrin, rozpoznávací znak a sraženina",
+    "paragraphs": [
+      "Komplement pomáhá obraně a může poškodit cizí buňky, A3. Plazmin štěpí fibrin, B1. Antigen zde odpovídá cizorodé látce, C4. Trombus je sraženina vzniklá v cévě nebo srdci za života, tedy v nabídce D2. Správná kombinace je C.",
+      "Představ si komplement jako soustavu poplašných a zásahových součástek, plazmin jako nůžky na fibrinovou síť, antigen jako znak rozpoznaný obranou a trombus jako hotovou sraženinu. Tyto obrazy pomáhají odlišit podobně odborně znějící názvy.",
+      "Učebnicové definice jsou stručné. Komplement tvoří soustava více bílkovin, ne jediná látka. Antigen je struktura rozpoznávaná specifickou imunitou a nemusí být vždy cizí. Trombus se také liší od sraženiny vzniklé mimo cévní oběh."
+    ],
+    "memory": "Komplement obrana; plazmin štěpí fibrin; antigen rozpoznávaný znak; trombus sraženina.",
+    "terms": [
+      "Komplement",
+      "Plasmin",
+      "Antigen",
+      "Trombus"
+    ],
+    "definitions": [
+      "Látka, rozpouštějící fibrin",
+      "Výsledek hemokoagulace",
+      "Bílkovina, ničící cizorodé buňky",
+      "Cizorodá látka"
+    ],
+    "note": "A3 a C4 jsou zjednodušené popisy. Komplement je bílkovinný systém a antigen může být i vlastní struktura organismu."
+  },
+  {
+    "id": 178,
+    "bookRef": "V · otázka 37",
+    "category": "Krev a imunita",
+    "question": "Co to je? Vysvětlete uvedené děje:",
+    "options": [
+      "A3, B1, C4, D2",
+      "A4, B1, C3, D2",
+      "A3, B1, C2, D4",
+      "A4, B1, C2, D3"
+    ],
+    "answer": 3,
+    "title": "Praskání, shlukování a krvácivost nejsou totéž",
+    "paragraphs": [
+      "Hemolýza znamená rozpad červených krvinek s uvolněním hemoglobinu, A4. Alergie je přecitlivělá imunitní reakce, B1. Aglutinace je shlukování krvinek, C2. Hemofilie označuje dědičnou poruchu srážení vedoucí ke krvácivosti, D3. Vyber D.",
+      "Představ si malé váčky: při hemolýze se poškodí jejich obal a obsah unikne. Při aglutinaci se váčky slepují do skupin; samotné slepení ještě není jejich prasknutí. Oba děje mohou při neslučitelnosti krve souviset, ale mají jiný význam.",
+      "Alergie znamená nevhodně zaměřenou přecitlivělou obrannou reakci, zatímco u hemofilie nefunguje správně část srážecí soustavy. Podobné začátky slov hemo- tedy nejsou důvodem zaměnit rozpad krvinky s poruchou zastavování krvácení."
+    ],
+    "memory": "Hemolýza rozpad; aglutinace shluk; hemofilie krvácivost; alergie přecitlivělost.",
+    "terms": [
+      "Hemolýza",
+      "Alergie",
+      "Aglutinace",
+      "Hemofilie"
+    ],
+    "definitions": [
+      "Přecitlivělost organismu",
+      "Shlukování krvinek",
+      "Dědičná krvácivost",
+      "Praskání krvinek"
+    ]
+  },
+  {
+    "id": 179,
+    "bookRef": "V · otázka 38",
+    "category": "Krev a imunita",
+    "question": "Co to je? Vysvětlete uvedené termíny:",
+    "options": [
+      "A4, B1, C2, D3",
+      "A3, B1, C2, D4",
+      "A2, B3, C1, D4",
+      "A1, B4, C2, D3"
+    ],
+    "answer": 0,
+    "title": "Náhrada tkáně, převod krve a vzpomínka imunity",
+    "paragraphs": [
+      "Transplantace znamená přenos tkáně či orgánu, zde A4. Transfuze je převod krve nebo její složky, B1. Anamnestická reakce je paměťová, sekundární imunitní odpověď, C2. Dodání protilátek představuje pasivní imunizaci, D3. Klíč je A.",
+      "Představ si výměnu dílu, dodání krevní složky, zkušenou hlídku a zapůjčenou obranu. Zkušená hlídka po předchozím setkání reaguje rychleji; u pasivní imunizace naopak dostaneš hotové protilátky, které jsi sám nově nevytvořil.",
+      "Imunizace je širší pojem než pouhé dodání protilátek. Aktivní imunizace vyvolá vlastní odpověď a může vytvořit imunitní paměť. Pasivní ochrana hotovými protilátkami je dočasná a sama takovou vlastní paměť nevytváří."
+    ],
+    "memory": "Transplantace tkáň; transfuze krev; anamnestická reakce paměť; hotové protilátky pasivní ochrana.",
+    "terms": [
+      "Transplantace",
+      "Transfuze",
+      "Anamnestická reakce",
+      "Imunizace"
+    ],
+    "definitions": [
+      "Krevní převod",
+      "Imunitní odpověď",
+      "Dodání protilátek",
+      "Náhrada tkáně"
+    ],
+    "note": "D3 je pouze jeden druh imunizace, pasivní. Anamnestická imunitní reakce není totéž co odebírání anamnézy při rozhovoru s lékařem."
+  },
+  {
+    "id": 180,
+    "bookRef": "V · otázka 39",
+    "category": "Krev a imunita",
+    "question": "Imunologicky kompetentními buňkami jsou",
+    "options": [
+      "Granulocyty",
+      "Monocyty",
+      "Lymfocyty",
+      "Erytrocyty"
+    ],
+    "answer": 2,
+    "title": "Specifické rozpoznávání je specialita lymfocytů",
+    "paragraphs": [
+      "Klíč vybírá C, lymfocyty. V této otázce výraz imunologicky kompetentní znamená buňky schopné účastnit se specifické imunitní odpovědi. Základ tvoří B- a T-lymfocyty s receptory rozpoznávajícími určité antigeny.",
+      "Představ si hlídku, která nerozeznává jen obecné známky nebezpečí, ale umí číst konkrétní průkaz. Každá populace lymfocytů má své rozpoznávací zaměření a po aktivaci se může rozšířit právě ta, která odpovídá danému podnětu.",
+      "Granulocyty a monocyty jsou ovšem také důležité imunitní buňky. Otázka je nevylučuje z obrany organismu, jen používá užší školní označení pro specifickou imunitu. Erytrocyty mají hlavní úlohu v přenosu plynů."
+    ],
+    "memory": "V tomto testu imunologická kompetence míří na specifické rozpoznávání B- a T-lymfocytů.",
+    "note": "Monocyty i granulocyty se také účastní imunity. C odpovídá užšímu významu termínu v otázce, nikoli tvrzení, že obranu zajišťují pouze lymfocyty."
+  },
+  {
+    "id": 181,
+    "bookRef": "V · otázka 40",
+    "category": "Krev a imunita",
+    "question": "O imunologicky kompetentních buňkách platí:",
+    "options": [
+      "T lymfocyty dozrávají v kostní dřeni",
+      "T lymfocyty odpovídají za humorální imunitu",
+      "B lymfocyty vytvářejí imunoglobuliny",
+      "B lymfocyty jsou odpovědné za buněčnou imunitu"
+    ],
+    "answer": 2,
+    "title": "B-linie vyrábí protilátky, T-linie dozrává v brzlíku",
+    "paragraphs": [
+      "Správně je C. Aktivované B-lymfocyty se mohou změnit v plazmatické buňky, které ve velkém vylučují imunoglobuliny neboli protilátky. To je základ protilátkové, tedy humorální, části specifické imunity.",
+      "Představ si B-linii jako výrobce přesně cílených rozpoznávacích značek. Protilátky se šíří tělními tekutinami a vážou odpovídající antigen. T-lymfocyty mohou obranu řídit nebo přímo zasahovat proti napadeným buňkám.",
+      "T-lymfocyty dozrávají v thymu, česky brzlíku, zatímco B-lymfocyty u člověka v kostní dřeni. Rozdělení na B pro protilátky a T pro buněčnou odpověď je užitečný základ, ale obě větve spolu úzce spolupracují, například pomocí pomocných T-buněk."
+    ],
+    "memory": "B → protilátková výroba; T → thymus a důležité buněčné úkoly."
+  },
+  {
+    "id": 182,
+    "bookRef": "V · otázka 41",
+    "category": "Krev a imunita",
+    "question": "Specifická imunita se projevuje",
+    "options": [
+      "Vytvářením cytotoxických látek",
+      "Fagocytózou lymfocytů",
+      "Ničením bakterií lyzozymem ve slinách",
+      "Jako vrozená schopnost"
+    ],
+    "answer": 0,
+    "title": "Specifický zásah může cílit na napadenou buňku",
+    "paragraphs": [
+      "Klíč vybírá A. Cytotoxické T-lymfocyty rozpoznávají odpovídající antigen v souvislosti s vlastními povrchovými molekulami buněk a mohou použít látky, například perforin a granzymy, které vedou k zániku cílové buňky.",
+      "Představ si zásahovou jednotku, která nejprve ověří konkrétní průkaz cíle a teprve pak zasáhne. Specifičnost spočívá v rozpoznání, nikoli v tom, že by každá látka schopná poškodit buňku automaticky patřila jen ke specifické imunitě.",
+      "Lyzozym ve slinách je součást vrozené obrany. Lymfocyty nejsou běžnými profesionálními pohlcovači jako makrofágy a neutrofily. Získaná specifická odpověď se rozvíjí po setkání s antigenem a může vytvořit paměť."
+    ],
+    "memory": "Specifický zabiják nejprve rozpozná cíl; cytotoxické T-buňky potom mohou zasáhnout.",
+    "note": "Cytotoxické látky používají také NK buňky vrozené imunity. A zde označuje jejich využití v odpovědi cytotoxických T-lymfocytů, ne výlučnou vlastnost všech cytotoxických mechanismů."
+  },
+  {
+    "id": 183,
+    "bookRef": "V · otázka 42",
+    "category": "Krev a imunita",
+    "question": "Specifická imunita je zprostředkovaná",
+    "options": [
+      "Uvolňováním interferonu viry napadenými buňkami",
+      "Imunitní reakcí B- a T-lymfocytů",
+      "Fagocytózou granulocytů, monocytů a makrofágů",
+      "Uvolňováním lysozymu do slz, slin a na povrch kůže"
+    ],
+    "answer": 1,
+    "title": "B- a T-lymfocyty tvoří základ cílené odpovědi",
+    "paragraphs": [
+      "Specifickou, získanou imunitu zprostředkovávají B- a T-lymfocyty, proto je správně B. Rozpoznávají určité antigeny a po aktivaci se mohou množit příslušné buněčné populace. Část z nich vytváří základ dlouhodobější paměti.",
+      "Představ si rozdíl mezi obecným poplachem a pátráním podle konkrétní fotografie. Interferony, fagocytóza a lyzozym představují důležité prvky obecnější obrany, zatímco lymfocytární receptory umožňují velmi cílené rozpoznání.",
+      "B-buňky se mohou změnit ve výrobce protilátek. T-buňky například řídí další buňky nebo ničí napadené cíle. Vrozená a specifická větev se přitom propojují: fagocyt může pomoci předložit antigen a protilátka může usnadnit pohlcení částice."
+    ],
+    "memory": "Specifická imunita má své B a T; ostatní obranné nástroje s nimi spolupracují."
+  },
+  {
+    "id": 184,
+    "bookRef": "V · otázka 43",
+    "category": "Krev a imunita",
+    "question": "Diapedéza",
+    "options": [
+      "Je specifickou imunitní reakcí organismu",
+      "Je migrace bílých krvinek k cizorodým tělískům",
+      "Je vylučování cytotoxických látek",
+      "Patří k aktivní imunizaci"
+    ],
+    "answer": 1,
+    "title": "Diapedéza je průchod bílé krvinky přes cévní stěnu",
+    "paragraphs": [
+      "Podle tištěného klíče zvol B. Otázka tím míří na přesun bílých krvinek z krve do místa, kde jsou potřeba. Přesně ale diapedéza označuje samotný průchod leukocytu přes cévní stěnu do okolní tkáně.",
+      "Představ si hlídku, která nejprve opustí silnici průchodem v plotě a potom jde za signálem do domu. Průchod plotem odpovídá diapedéze. Následné směrování podle chemických signálů se označuje jako chemotaxe.",
+      "Nejde o tvorbu protilátek ani o očkování či jiný způsob aktivní imunizace. Diapedézu využívají různé obranné buňky včetně buněk vrozené imunity. Důležité je tedy spojit pojem s překročením cévní stěny, ne pouze s libovolným pohybem."
+    ],
+    "memory": "Diapedéza = projít cévní stěnou; chemotaxe = jít směrem podle chemického signálu.",
+    "note": "B je nejbližší nabídnutá možnost a odpovídá klíči, ale zaměňuje širší migraci za přesný význam diapedézy. Směřování k podnětu samo o sobě je chemotaxe."
+  },
+  {
+    "id": 185,
+    "bookRef": "V · otázka 44",
+    "category": "Krev a imunita",
+    "question": "Nespecifická imunita",
+    "options": [
+      "Se vytváří po setkání člověka s infekcí",
+      "Spočívá v tvorbě protilátek B-lymfocyty",
+      "Spočívá v tvorbě cytotoxických látek T-lymfocyty",
+      "Se projevuje fagocytózou leukocytů"
+    ],
+    "answer": 3,
+    "title": "Pohlcení vetřelce je součást připravené vrozené obrany",
+    "paragraphs": [
+      "Správně je D: součástí nespecifické neboli vrozené imunity je fagocytóza prováděná některými leukocyty. Například neutrofil nebo makrofág může částici obklopit, pohltit a uvnitř rozložit pomocí buněčných mechanismů.",
+      "Představ si základní úklidovou službu, která už je připravená a poznává běžné známky nebezpečí. Nemusí nejdřív vyrobit novou protilátku proti každému konkrétnímu vetřelci. Reaguje na obecnější vzory a signály poškození.",
+      "Protilátky B-linie a cílené reakce T-lymfocytů patří do specifické imunity. Vrozená obrana se při infekci aktivuje, ale není správné říkat, že teprve tehdy celá vzniká. A ne všechny leukocyty mají fagocytózu jako svou hlavní práci."
+    ],
+    "memory": "Vrozená obrana má připravené pohlcovače: zejména neutrofily a makrofágy."
+  },
+  {
+    "id": 186,
+    "bookRef": "V · otázka 45",
+    "category": "Krev a imunita",
+    "question": "Imunitní tolerance (snášenlivost)",
+    "options": [
+      "Lze ji vyvolat lépe u dospělého, než u novorozence",
+      "Vzniká při autoimunitních onemocněních",
+      "Vzniká po setkání organismu s antigenem",
+      "Bývá lékaři u pacienta vyvolávána působením imunosupresivních léků"
+    ],
+    "answer": 3,
+    "title": "Tlumení imunity a skutečná tolerance nejsou úplně totéž",
+    "paragraphs": [
+      "Tištěný klíč určuje D. Učebnice tím spojuje lékové tlumení imunity s omezením nežádoucí reakce, například proti transplantované tkáni. Pro hodnocení tohoto testu D zachováváme, ale samotnou definici tolerance je potřeba upřesnit.",
+      "Představ si strážní službu: můžeš jí obecně snížit aktivitu, nebo ji naučit, že konkrétní osoba má být tolerována. Imunosuprese odpovídá spíše prvnímu postupu. Imunitní tolerance je cílená nereaktivita vůči určitému antigenu.",
+      "Autoimunitní onemocnění naopak souvisejí se selháním tolerance vůči vlastním strukturám. Setkání s antigenem může za určitých podmínek toleranci navodit, ale také může spustit obranu. Samotné setkání tedy neurčuje jeden povinný výsledek."
+    ],
+    "memory": "Tolerance = nereagovat proti určitému cíli; imunosuprese = obecně tlumit obranu.",
+    "note": "D odpovídá PDF, ale imunosupresivní léčba sama není synonymem navození specifické imunitní tolerance. Nabídka je odborně zjednodušená; C může platit jen za určitých podmínek."
+  },
+  {
+    "id": 187,
+    "bookRef": "V · otázka 46",
+    "category": "Krev a imunita",
+    "question": "Co je to antigen?",
+    "options": [
+      "Imunoglobulin",
+      "Cizorodá látka, navozující imunitní odpověď",
+      "Látka, vznikající při aglutinaci krve",
+      "Látka, zabraňující expresi genu"
+    ],
+    "answer": 1,
+    "title": "Antigen je to, co specifická imunita rozpoznává",
+    "paragraphs": [
+      "Podle klíče je správně B. Učebnice popisuje typický příklad: cizí látka vstoupí do organismu a vyvolá imunitní odpověď. Antigen si můžeš představit jako konkrétní rozpoznávací znak, proti kterému se obrana zaměří.",
+      "Představ si štítek na povrchu mikroorganismu. Protilátka nebo příslušný receptor umí rozpoznat jeho určitou část. Nejde o látku, která by musela vzniknout až slepením krvinek; právě antigen na krvince může být důvodem, proč se na ni protilátka naváže.",
+      "Přesněji je antigen struktura rozpoznávaná specifickou imunitou. Nemusí být vždy cizí a nemusí sám vyvolat odpověď. Látka schopná odpověď skutečně navodit se nazývá imunogen. Pro tuto nabídku je však B zamýšlená definice."
+    ],
+    "memory": "Antigen = rozpoznávaný znak; protilátka = jeden z nástrojů, které ho rozpoznají.",
+    "note": "B spojuje antigen s imunogenem. Antigen může být i vlastní a jeho rozpoznání automaticky neznamená vyvolání obranné odpovědi."
+  },
+  {
+    "id": 188,
+    "bookRef": "V · otázka 47",
+    "category": "Krev a imunita",
+    "question": "Co jsou to imunoglobuliny?",
+    "options": [
+      "Protilátky bílkovinného charakteru",
+      "Produkty T-lymfocytů",
+      "Cytotoxické látky",
+      "Cizorodé bílkoviny, vyvolávající imunitní odpověď"
+    ],
+    "answer": 0,
+    "title": "Protilátka se hodí na určitý rozpoznávací znak",
+    "paragraphs": [
+      "Imunoglobuliny jsou protilátkové bílkoviny, takže je správně A. Vylučují je především plazmatické buňky vzniklé z B-lymfocytů. Příbuzná membránová podoba imunoglobulinu slouží také jako součást receptoru B-buňky.",
+      "Představ si nástroj s přesně tvarovaným úchytem: naváže určitý antigen a může ho zablokovat nebo označit pro další části obrany. Protilátka proto nemusí sama cílovou buňku roztrhat; často pomáhá ostatním lépe rozpoznat, co mají odstranit.",
+      "Nejsou to obecně produkty T-lymfocytů a není správné je definovat jako cizorodé bílkoviny. Rozlišuj směr vztahu: antigen je rozpoznávaný cíl, protilátka je rozpoznávající molekula. Jejich navázání může spustit další obranné děje."
+    ],
+    "memory": "Imunoglobulin = protilátková bílkovina B-linie; antigen je její rozpoznávaný cíl."
+  },
+  {
+    "id": 189,
+    "bookRef": "V · otázka 48",
+    "category": "Krev a imunita",
+    "question": "Mezi orgány mízního /imunitního/ systému nepatří",
+    "options": [
+      "Mandle",
+      "Brzlík",
+      "Měchýřkovité žlázy",
+      "Slezina"
+    ],
+    "answer": 2,
+    "title": "Podobně znějící název ještě neznamená imunitní orgán",
+    "paragraphs": [
+      "Měchýřkovité žlázy patří k mužské rozmnožovací soustavě a tvoří část semenné tekutiny. V této nabídce tedy nepatří mezi mízní orgány a správná odpověď je C. Otázka hledá výjimku, nikoli další obrannou stanici.",
+      "Představ si mapu služeb v těle. Mandle leží u vstupu do dýchacích a trávicích cest, brzlík zajišťuje dozrávání T-lymfocytů a slezina se podílí na sledování krve i odstraňování starých krvinek. Každá stanice má jiné místo a úkol.",
+      "Mízní systém tedy není jen potrubí s mízou; zahrnuje i orgány a tkáně s obrannými buňkami. Měchýřkovité žlázy mají jinou hlavní funkci, i když jako kterákoli tkáň samozřejmě mohou obsahovat buňky účastnící se místní obrany."
+    ],
+    "memory": "Mandle, brzlík a slezina: obrana. Měchýřkovité žlázy: rozmnožovací soustava."
+  },
+  {
+    "id": 190,
+    "bookRef": "V · otázka 49",
+    "category": "Krev a imunita",
+    "question": "T-lymfocyty",
+    "options": [
+      "Dozrávají v kostní dřeni",
+      "Produkují protilátky",
+      "Zneškodňují cizorodé buňky",
+      "Vznikají v brzlíku z kmenových buněk"
+    ],
+    "answer": 2,
+    "title": "T-buňky mohou zasáhnout přímo proti cílové buňce",
+    "paragraphs": [
+      "Klíč vybírá C. Cytotoxické T-lymfocyty dokážou rozpoznat odpovídající cíl, například virem napadenou buňku, a vyvolat její zánik. Další T-lymfocyty ale mají jiné úkoly, třeba koordinaci nebo tlumení obranné reakce.",
+      "Představ si tým s více profesemi: někteří členové zasahují, jiní rozdělují pokyny a další hlídají přehnanou reakci. Proto není správné učit se, že úplně každý T-lymfocyt přímo zabíjí. Protilátky navíc vyrábí B-linie, ne T-linie.",
+      "Předchůdci T-buněk pocházejí z krvetvorných buněk a do brzlíku přicházejí k dalšímu vývoji a dozrávání. V učebnicovém rozlišení tedy vznik původní krvetvorné linie patří ke kostní dřeni, klíčové dozrávání T-lymfocytů k brzlíku."
+    ],
+    "memory": "T = thymus pro dozrávání; část T-buněk umí cíleně zneškodnit napadenou buňku.",
+    "note": "D je neobratné: v brzlíku skutečně probíhá další vývoj T-buněk, ale jejich krvetvorní předchůdci do něj přicházejí. C také popisuje hlavně cytotoxickou podskupinu."
+  },
+  {
+    "id": 191,
+    "bookRef": "V · otázka 50",
+    "category": "Krev a imunita",
+    "question": "B lymfocyty",
+    "options": [
+      "Nemají na svém povrchu receptor pro antigen",
+      "Nepocházejí z kmenových buněk",
+      "Odpovídají za humorální imunitu",
+      "Jsou závislé na thymu"
+    ],
+    "answer": 2,
+    "title": "Humorální odpověď používá protilátky v tekutinách",
+    "paragraphs": [
+      "B-lymfocyty jsou základem protilátkové neboli humorální imunity, proto je správně C. Po aktivaci se mohou změnit v plazmatické buňky, které vylučují protilátky do krve a dalších tělních tekutin.",
+      "Představ si výrobnu rozpoznávacích nástrojů, které se mohou roznést po okolí. Samotná B-buňka má na povrchu receptor pro antigen; právě díky němu se může zapojit do vhodně zaměřené odpovědi. Pochází z krvetvorné buněčné linie.",
+      "B-lymfocyty u člověka dozrávají v kostní dřeni, zatímco T-lymfocyty v brzlíku. To ale neznamená, že B-buňky nikdy nepotřebují pomoc T-buněk: pro mnoho kvalitních protilátkových odpovědí je jejich spolupráce zásadní."
+    ],
+    "memory": "B-buňky → plazmatické buňky → protilátky v tělních tekutinách."
+  },
+  {
+    "id": 192,
+    "bookRef": "V · otázka 51",
+    "category": "Krev a imunita",
+    "question": "Komplement, nástroj přirozené imunity je",
+    "options": [
+      "Imunoglobulin",
+      "Hormon",
+      "Antigen",
+      "Plazmatická bílkovina"
+    ],
+    "answer": 3,
+    "title": "Komplement tvoří navazující obranná kaskáda bílkovin",
+    "paragraphs": [
+      "Podle klíče vyber D. Přesněji komplement není jedna plazmatická bílkovina, ale soustava mnoha bílkovin, které se mohou postupně aktivovat. Je důležitou součástí vrozené imunity a také propojuje více obranných mechanismů.",
+      "Představ si řadu navazujících poplašných zařízení. Aktivace jedné části spustí další, zesílí signál, označí cíl k pohlcení a v některých případech pomůže vytvořit otvor v jeho membráně. Jedna malá aktivace tak může mít větší navazující účinek.",
+      "Komplement není hormon ani samotná protilátka. Některé jeho dráhy mohou být spuštěny v návaznosti na protilátky navázané k cíli, jiné bez nich. Proto označení vrozená imunita neznamená, že by nemohl spolupracovat se specifickou odpovědí."
+    ],
+    "memory": "Komplement = tým obranných bílkovin, který se aktivuje v kaskádě.",
+    "note": "Jednotné číslo v možnosti D je učebnicová zkratka. Komplement je vícesložkový systém, nikoli jediná bílkovina."
+  },
+  {
+    "id": 193,
+    "bookRef": "V · otázka 52",
+    "category": "Krev a imunita",
+    "question": "Anamnestická reakce",
+    "options": [
+      "Je účinek komplementu na cizorodé buňky",
+      "Je sekundární imunitní odpověď",
+      "Nastává po setkání citlivého organismu s alergenem",
+      "Vzniká po prvním setkání organismu s antigenem"
+    ],
+    "answer": 1,
+    "title": "Imunita si známý podnět vybaví rychleji",
+    "paragraphs": [
+      "Anamnestická reakce je sekundární imunitní odpověď, tedy B. Nastává při opětovném setkání s odpovídajícím antigenem a využívá imunitní paměť vytvořenou při dřívější odpovědi. Obvykle proto probíhá rychleji a účinněji.",
+      "Představ si hlídku, která už má vyzkoušený postup a připravené zkušené členy. Při prvním setkání se vhodné populace teprve vybírají a rozšiřují; při dalším už mohou paměťové B- a T-buňky reagovat pohotověji.",
+      "Samotný účinek komplementu není definicí anamnestické reakce. Alergická reakce je jiná kategorie, i když také může navazovat na předchozí senzibilizaci. Při prvním setkání jde o primární odpověď, nikoli o reakci založenou na předchozí zkušenosti s týmž antigenem."
+    ],
+    "memory": "Anamnestická = paměťová = sekundární odpověď na známý antigen."
+  },
+  {
+    "id": 194,
+    "bookRef": "V · otázka 53",
+    "category": "Krev a imunita",
+    "question": "Thymus",
+    "options": [
+      "Je místo zániku lymfocytů",
+      "Je místo, kde dozrávají T-lymfocyty",
+      "Dosahuje maxima své velikosti v pubertě",
+      "Bývá až ve středním věku nahrazen tukovým vazivem"
+    ],
+    "answer": 1,
+    "title": "Brzlík je škola dozrávajících T-lymfocytů",
+    "paragraphs": [
+      "Podle klíče je správně B: thymus neboli brzlík je místem dozrávání a výběru T-lymfocytů. Předchůdci do něj přicházejí a procházejí kontrolami, které pomáhají vytvářet funkční a vůči vlastním strukturám přiměřeně tolerantní buňky.",
+      "Představ si školu se závěrečnými zkouškami. Ne každý žák projde: mnoho vyvíjejících se T-buněk při výběru zaniká. Proto ani možnost A není biologicky úplný nesmysl, jen nevystihuje hlavní funkci, kterou otázka hledá.",
+      "Brzlík je výrazný v dětství a po pubertě obvykle postupně involuuje, tedy jeho aktivní tkáň ubývá a přibývá tuk. Není správné představovat si náhlou výměnu až ve středním věku. Časování velikostního maxima ale není jednoznačný rozlišovací znak."
+    ],
+    "memory": "Thymus je škola T-buněk: dozrávání, výběr a pozdější postupný úbytek aktivní tkáně.",
+    "note": "PDF určuje B, ale nabídka není dokonale výlučná. V brzlíku také mnoho lymfocytů zaniká a maximum absolutní velikosti se často popisuje kolem puberty; relativní velikost vůči tělu má jiný průběh."
+  },
+  {
+    "id": 195,
+    "bookRef": "V · otázka 54",
+    "category": "Krev a imunita",
+    "question": "Posuďte správnost obou tvrzení.",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 0,
+    "title": "T-buňky v brzlíku dozrávají už před pubertou",
+    "paragraphs": [
+      "První tvrzení vyjadřuje základní školní popis: antigen může vyvolat obrannou reakci a T-lymfocyty zajišťují významnou část buněčné specifické imunity. Jejich dozrávání probíhá v brzlíku. Klíč bere první tvrzení jako správné.",
+      "Druhé tvrzení má správně umístění za hrudní kostí, ale chybně popisuje vývoj. Brzlík se vyvíjí a pracuje už před narozením a v dětství; nezačíná se zvětšovat teprve v pubertě. Po pubertě se naopak typicky rozbíhá jeho postupná involuce.",
+      "Vyber A: první ano, druhé ne. Představ si školu, která připravuje obranu už pro malé dítě. Nemůže čekat na pubertu, aby teprve zahájila činnost. Přesnost obou tvrzení posuzuj jako celek, ne pouze podle první správné poloviny věty."
+    ],
+    "memory": "Brzlík pracuje od raného vývoje; po pubertě aktivní tkáně postupně ubývá.",
+    "statements": [
+      "Cizorodé látky – antigeny – pronikají do organismu a vyvolávají obrannou imunitní reakci. Buněčnou imunitu zabezpečují T-lymfocyty, jejichž dozrávání zajišťuje brzlík.",
+      "Brzlík (thymus) je laločnatý orgán, uložený za hrudní kostí. Začíná zvětšovat svůj objem v pubertě a roste až do dospělosti."
+    ],
+    "note": "Antigen nemusí být vždy cizí a nemusí vždy vyvolat odpověď. První tvrzení používá obecný učebnicový popis typické obranné situace."
+  },
+  {
+    "id": 196,
+    "bookRef": "V · otázka 55",
+    "category": "Krev a imunita",
+    "question": "Jedinci krevní skupiny A mají",
+    "options": [
+      "V membráně erytrocytů aglutinogen A a v krevní plazmě aglutininy anti-A",
+      "V membráně erytrocytů aglutinogen B a v krevní plazmě aglutininy anti-A",
+      "V membráně erytrocytů aglutinogen A a v krevní plazmě aglutininy anti-B",
+      "V membráně erytrocytů aglutinogen B a v krevní plazmě aglutininy anti-B"
+    ],
+    "answer": 2,
+    "title": "Vlastní štítek A, protilátky proti cizímu B",
+    "paragraphs": [
+      "Skupina A znamená antigen A na povrchu erytrocytů a obvykle protilátky anti-B v plazmě. Správně je C. Starší názvy jsou aglutinogen pro antigen a aglutinin pro protilátku schopnou vyvolat shlukování krvinek.",
+      "Představ si vlastní členský průkaz A. Obrana nemá běžně napadat vlastní A, ale může rozpoznat odlišný znak B. Proto se písmeno vlastní skupiny a písmeno za anti- v tomto základním příkladu liší.",
+      "Nepleť si místo výskytu: antigen je na erytrocytu, protilátka je v plazmě. Toto rozlišení také vysvětluje, proč slučitelnost erytrocytů a plazmy není totéž. Jde o základ systému ABO; skutečné transfuzní rozhodování zahrnuje další okolnosti."
+    ],
+    "memory": "Skupina A: na krvince A, v plazmě anti-B; vlastní značku běžně nenapadám."
+  },
+  {
+    "id": 197,
+    "bookRef": "V · otázka 56",
+    "category": "Krev a imunita",
+    "question": "Při transfúzi krve",
+    "options": [
+      "Je skupina 0 univerzální dárce",
+      "Je skupina AB univerzální příjemce",
+      "Není vždy nutné provádět křížovou zkoušku",
+      "Lze použít jen krev stejné skupiny"
+    ],
+    "answer": 3,
+    "title": "Klíč chce stejnou skupinu, skutečná slučitelnost je širší",
+    "paragraphs": [
+      "Tištěný klíč označuje D. Pro výsledek tohoto testu ho zachováváme, ale věta „lze použít jen krev stejné skupiny“ není obecně přesná. V praxi lze za příslušných podmínek použít i slučitelné erytrocyty jiné skupiny ABO.",
+      "Představ si kontrolu zásilky podle více údajů. Nestačí jediné písmeno: záleží na podávané krevní složce, antigenech, protilátkách a provedeném posouzení slučitelnosti. Plazma totiž přináší jiný problém než samotné erytrocyty.",
+      "Označení univerzální dárce a univerzální příjemce jsou zkratky omezené určitým kontextem, zejména erytrocyty a systémem ABO. Neplatí bez výhrad pro veškerou krev a všechny antigeny. Z této otázky proto nelze odvodit praktický postup transfuze."
+    ],
+    "memory": "PDF hodnotí D; odborně si pamatuj slučitelnost konkrétní krevní složky, ne absolutní „jen stejná“.",
+    "note": "D je převzaté hodnocení z PDF, nikoli obecně platné transfuzní pravidlo. Nabídka je problematická i tím, že jednotlivé věty závisejí na druhu přípravku a konkrétní situaci."
+  },
+  {
+    "id": 198,
+    "bookRef": "V · otázka 57",
+    "category": "Krev a imunita",
+    "question": "Aglutinogen A, obsažený v membráně erytrocytů",
+    "options": [
+      "Se může měnit v aglutinogen B",
+      "Je přítomen u jedinců krevní skupiny B",
+      "Je běžně přítomen v erytrocytech jedinců evropské populace",
+      "Po smíchání s krví krevní skupiny A vede k aglutinaci erytrocytů"
+    ],
+    "answer": 2,
+    "title": "Antigen A je běžný znak skupin A a AB",
+    "paragraphs": [
+      "Podle klíče je správně C: antigen A je v evropské populaci běžně zastoupen, protože se vyskytuje u skupin A a AB. Věta ale neznamená, že ho má každý Evropan nebo že by byl přítomen ve všech krevních skupinách.",
+      "Představ si běžný typ průkazu: mnoho lidí ho má, jiní používají jinou variantu. Samotný znak A se při běžném kontaktu krve jednoduše nepřepne na B. Rozdíly ABO souvisejí s tvorbou určitých povrchových cukerných struktur.",
+      "Lidé skupiny B antigen A na svých erytrocytech běžně nemají. A ve vlastní skupině A se proti tomuto antigenu běžně nevyskytují anti-A protilátky, takže pouhá přítomnost A není důvodem ke shlukování vlastních krvinek."
+    ],
+    "memory": "Antigen A najdeš u A a AB; „běžný v populaci“ neznamená „u každého“."
+  },
+  {
+    "id": 199,
+    "bookRef": "V · otázka 58",
+    "category": "Krev a imunita",
+    "question": "K hemolýze červených krvinek plodu dochází tehdy,",
+    "options": [
+      "Je-li těhotná žena Rh pozitivní a plod Rh negativní",
+      "Je-li těhotná žena Rh negativní a plod Rh pozitivní",
+      "Když plod začne vytvářet vůči Rh antigenu aglutininy",
+      "Když vytvořené aglutininy neprostupují placentou"
+    ],
+    "answer": 1,
+    "title": "Rh rozdíl vytváří rizikovou situaci, protilátky jsou další podmínka",
+    "paragraphs": [
+      "Klíč vybírá B: v klasickém příkladu jde o RhD negativní matku a RhD pozitivní plod. Samotná tato kombinace ale ještě nezpůsobí rozpad krvinek. Matka musí mít odpovídající protilátky, které se dostanou k erytrocytům plodu.",
+      "Představ si štítek D na krvince dítěte, který matka sama nemá. Pokud se proti němu dříve vytvoří mateřské protilátky typu IgG, mohou přestoupit placentou a navázat se na krvinky dítěte. Tím může být spuštěno jejich ničení.",
+      "Nejde tedy hlavně o to, že by plod vyráběl protilátky proti sobě. A kdyby příslušné protilátky placentou neprocházely, tento mechanismus poškození by nemohly uskutečnit. V otázce si vždy odděl rizikovou kombinaci od skutečného rozvoje onemocnění."
+    ],
+    "memory": "Matka RhD−, plod RhD+ a mateřské anti-D IgG: teprve tento mechanismus vysvětluje riziko.",
+    "note": "B uvádí možnou rizikovou kombinaci, nikoli dostatečnou podmínku hemolýzy. Rh rozdíl sám neznamená, že se krvinky plodu budou nevyhnutelně rozpadat."
+  },
+  {
+    "id": 200,
+    "bookRef": "V · otázka 59",
+    "category": "Krev a imunita",
+    "question": "Hemolýza erytrocytů plodu",
+    "options": [
+      "Nastává v případě, je-li matka Rh+ a plod Rh−",
+      "Je nejtěžší při první graviditě",
+      "Způsobuje novorozeneckou žloutenku",
+      "Je výsledkem imunitní reakce plodu proti matce"
+    ],
+    "answer": 2,
+    "title": "Při větším rozpadu krvinek vzniká více bilirubinu",
+    "paragraphs": [
+      "Správně je C: zvýšený rozpad erytrocytů může vést k novorozenecké žloutence. Z hemoglobinu se při odbourávání tvoří bilirubin. Pokud jeho přísun převýší schopnost organismu ho zpracovat a vyloučit, hromadí se a zbarvuje tkáně dožluta.",
+      "Představ si recyklační linku zahlcenou materiálem. V novorozeneckém období navíc zpracování bilirubinu ještě nemusí mít plnou kapacitu. Neznamená to však, že každá žloutenka novorozence automaticky dokazuje imunitní rozpad krvinek.",
+      "U klasického Rh konfliktu jde o mateřské protilátky proti krvinkám plodu, nikoli o útok plodu na matku. Závažnost také není povinně nejvyšší při prvním těhotenství: záleží na předchozím vytvoření protilátek a dalších okolnostech."
+    ],
+    "memory": "Rozpad erytrocytů → odbourávání hemoglobinu → více bilirubinu → možná žloutenka.",
+    "note": "Hemolýza může žloutenku způsobit, ale není její jedinou příčinou. Předchozí senzibilizace může nastat i před prvním těhotenstvím, takže pořadí gravidity samo o sobě průběh neurčuje."
   }
 ]);
 const $ = id => document.getElementById(id);
