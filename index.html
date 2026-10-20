@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f6f3ee">
-  <meta name="description" content="200 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
+  <meta name="description" content="250 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
   <title>Somatologie · malý krok, velké pochopení</title>
   <style>
     :root{color-scheme:light;--bg:#f6f3ee;--paper:#fffefa;--ink:#293d39;--muted:#65736e;--line:#e1e6df;--sage:#dceadf;--green:#236345;--green-bg:#e4f3e7;--red:#983a45;--red-bg:#fbe5e6;--lavender:#ece7f8;--accent:#65558e;--peach:#fae8dc;--radius:26px}
@@ -18,22 +18,22 @@
   <header class="brand">
     <div class="brand-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M4 6.5c3.4-1.2 6.7-.7 10 1.6 3.3-2.3 6.6-2.8 10-1.6v16c-3.4-1.2-6.7-.7-10 1.6-3.3-2.3-6.6-2.8-10-1.6v-16Z" stroke="#56765e" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 8v16M7.5 11l3 .9M7.5 15l3 .9M17.5 12l3-.9M17.5 16l3-.9" stroke="#56765e" stroke-width="1.5" stroke-linecap="round"/></svg></div>
     <div><div class="brand-name">Somatologie</div><div class="brand-sub">Malý krok, velké pochopení.</div></div>
-    <span class="offline">200 otázek</span>
+    <span class="offline">250 otázek</span>
   </header>
 
-  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">200 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
+  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">250 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
   <div id="storageNotice" class="toast" hidden>Prohlížeč nepovolil ukládání. Test funguje, ale po zavření se průběh neobnoví.</div>
   <div id="recoveryNotice" class="recovery" hidden>Uložený pokrok nebylo možné načíst. Začínáme s novým přehledem.</div>
   <section class="card home" id="home" aria-label="Přehled učení">
     <h2 class="home-title">Každá otázka má svůj čas.</h2>
-    <div class="home-stats"><div class="home-stat"><span>Vyzkoušeno</span><strong id="seenTotal">0 / 200</strong></div><div class="home-stat"><span>Zvládnuté</span><strong id="masteredTotal">0 / 200</strong></div><div class="home-stat"><span>Čas zopakovat</span><strong id="dueTotal">0</strong></div></div>
+    <div class="home-stats"><div class="home-stat"><span>Vyzkoušeno</span><strong id="seenTotal">0 / 250</strong></div><div class="home-stat"><span>Zvládnuté</span><strong id="masteredTotal">0 / 250</strong></div><div class="home-stat"><span>Čas zopakovat</span><strong id="dueTotal">0</strong></div></div>
     <p class="learning-label">Zvládnuté = alespoň 3 úspěšná vybavení v plánovaných termínech.</p>
-    <div class="track" role="progressbar" id="learningProgress" aria-label="Počet opakovaně zvládnutých otázek" aria-valuemin="0" aria-valuemax="200" aria-valuenow="0"><div class="fill" id="learningFill"></div></div>
+    <div class="track" role="progressbar" id="learningProgress" aria-label="Počet opakovaně zvládnutých otázek" aria-valuemin="0" aria-valuemax="250" aria-valuenow="0"><div class="fill" id="learningFill"></div></div>
     <p class="home-hint" id="homeHint"></p>
     <button class="next resume" id="resume" hidden>Pokračovat v kole</button>
     <div class="mode-card recommended"><span class="tag">Doporučený režim</span><h3>Chytré procvičování</h3><p>Krátké kolo do 10 odpovědí. Přednost mají chyby a tipy, pak otázky k opakování a nové. Zvládnuté odpočívají do svého termínu.</p><button class="next" id="smartStart">Začít chytré kolo</button></div>
     <div class="mode-card"><h3>Jen chyby a tipy <span class="pill" id="weakCount">0</span></h3><p id="weakHint"></p><button class="next secondary" id="weakStart">Procvičit slabší otázky</button></div>
-    <div class="mode-card"><h3>Test všech 200</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
+    <div class="mode-card"><h3>Test všech 250</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
     <details class="home-help"><summary>Jak funguje chytré opakování?</summary><ul><li><strong>Chyba nebo tip:</strong> otázka se vrátí po alespoň třech jiných odpovědích v témže chytrém kole, jinak přibližně za 10 minut.</li><li><strong>Správně a bez tipu:</strong> termíny se postupně prodlužují na 1, 3, 7, 14 a 30 dní od příslušné odpovědi.</li><li><strong>Správně před termínem:</strong> procvičení se počítá do výsledku, ale samo neposune otázku na vyšší úroveň.</li><li><strong>Tři úspěchy s odstupem:</strong> otázka se označí jako zvládnutá. Nezmizí navždy; po termínu se znovu ověří.</li><li><strong>Další chyba:</strong> otázka se vrátí mezi ty k častému procvičení.</li></ul><p>Jednotlivé otázky se v chytrém kole mohou zopakovat. Skóre proto počítá odpovědi, zatímco horní přehled počítá různé otázky.</p><p>Pokrok se ukládá pouze v tomto prohlížeči a na této webové adrese. Telefon a počítač mají samostatný přehled. Režim tipování označ před odpovědí.</p></details>
   </section>
   <div class="quiz-toolbar" id="quizToolbar" hidden><button class="home-button" id="homeButton">← Přehled</button><span class="mode-label" id="modeLabel"></span></div>
@@ -53,7 +53,7 @@
   </section>
   <section class="card" id="results" aria-label="Výsledek kola" hidden></section>
   <footer class="footer"><p id="saveStatus">Pokrok se ukládá v tomto prohlížeči. Bez účtu a registrace.</p>
-    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 200 otázek v pořadí dokumentu: kapitolu I, otázky 1–45 (v aplikaci 1–45), kapitolu II, otázky 1–28 (46–73), kapitolu III, otázky 1–6 (74–79), kapitolu IV.a, otázky 1–29 (80–108), kapitolu IV.b, otázky 1–33 (109–141), a kapitolu V, otázky 1–59 (142–200).</p><p>Otázky: tištěné strany 8–15, 18–22, 24–25, 28–39 a 42–51 (PDF strany 5–8, 10–13, 15–20 a 22–26). Tištěné klíče: strany 15, 22, 25, 32, 39 a 51 (PDF strany 8, 12, 13, 17, 20 a 26). Všech 200 přiřazení správné odpovědi bylo porovnáno s těmito klíči; nově přidané otázky se ověřovaly bez internetových zdrojů. Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
+    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 250 otázek v pořadí dokumentu: kapitolu I, otázky 1–45 (v aplikaci 1–45), kapitolu II, otázky 1–28 (46–73), kapitolu III, otázky 1–6 (74–79), kapitolu IV.a, otázky 1–29 (80–108), kapitolu IV.b, otázky 1–33 (109–141), kapitolu V, otázky 1–60 (142–201), kapitolu VI, otázky 1–36 (202–237), a kapitolu VII, otázky 1–13 (238–250).</p><p>Otázky: tištěné strany 8–15, 18–22, 24–25, 28–39, 42–51, 54–59 a 62–64 (PDF strany 5–8, 10–13, 15–20, 22–26, 28–30 a 32–33). Tištěné klíče: strany 15, 22, 25, 32, 39, 51, 60 a 67 (PDF strany 8, 12, 13, 17, 20, 26, 31 a 34). Všech 250 přiřazení správné odpovědi bylo porovnáno s těmito klíči; nově přidané otázky se ověřovaly bez internetových zdrojů. Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
     <details class="sources"><summary>Uložený pokrok</summary><p>Nové kolo nemaže dřívější znalost otázek. Vymazání dole resetuje celé učení. Vymazáním dat prohlížeče se pokrok také ztratí. Stejná webová adresa po nahrání nové verze pokrok zachová, pokud zůstane zachované úložiště prohlížeče.</p><button class="reset" id="reset">Vymazat celý uložený pokrok</button></details>
   </footer>
 </main>
@@ -4481,6 +4481,1147 @@ QUESTIONS.push(...[
     ],
     "memory": "Rozpad erytrocytů → odbourávání hemoglobinu → více bilirubinu → možná žloutenka.",
     "note": "Hemolýza může žloutenku způsobit, ale není její jedinou příčinou. Předchozí senzibilizace může nastat i před prvním těhotenstvím, takže pořadí gravidity samo o sobě průběh neurčuje."
+  },
+  {
+    "id": 201,
+    "bookRef": "V · otázka 60",
+    "category": "Krev a imunita",
+    "question": "Ve kterém případě může dítě být postiženo novorozeneckou žloutenkou?",
+    "options": [
+      "Je-li otec i matka Rh negativní",
+      "Je-li otec Rh negativní a matka Rh pozitivní",
+      "Je-li otec Rh pozitivní a matka Rh negativní",
+      "Je-li otec i matka Rh pozitivní"
+    ],
+    "answer": 2,
+    "title": "Důležitá je krev plodu a protilátky matky",
+    "paragraphs": [
+      "Klíč vybírá C. RhD pozitivní otec a RhD negativní matka mohou mít RhD pozitivní dítě. Jestliže matka vytvořila odpovídající protilátky typu IgG, mohou přestupovat placentou a poškodit jeho červené krvinky.",
+      "Představ si znak D jako štítek, který dítě zdědilo po otci a matčina krev ho sama nemá. Mateřská obrana proti němu může vytvořit protilátky. Při rozpadu krvinek přibývá bilirubin, jehož hromadění může po narození způsobit žluté zbarvení.",
+      "Samotná krevní skupina rodičů onemocnění nezaručuje: plod nemusí být RhD pozitivní a matka nemusí mít škodící protilátky. Novorozenecká žloutenka má navíc i jiné příčiny, které s RhD rozdílem vůbec nesouvisejí."
+    ],
+    "memory": "RhD+ otec a RhD− matka mohou vytvořit rizikovou kombinaci; rozhoduje plod a mateřské protilátky.",
+    "note": "C odpovídá zamýšlenému Rh konfliktu v PDF. Obecná otázka na jakoukoli novorozeneckou žloutenku není výlučná: ta se může objevit i při ostatních kombinacích rodičů."
+  },
+  {
+    "id": 202,
+    "bookRef": "VI · otázka 1",
+    "category": "Krevní a mízní oběh",
+    "question": "U kterého z uvedených živočichů je uzavřený krevní oběh?",
+    "options": [
+      "Měkkýši",
+      "Členovci",
+      "Pláštěnci",
+      "Obratlovci"
+    ],
+    "answer": 3,
+    "title": "Krev obratlovce obíhá uvnitř cévní soustavy",
+    "paragraphs": [
+      "U obratlovců proudí krev uzavřenou soustavou cév a srdce, proto je správně D. Krev se za normálních podmínek nevylévá volně do prostorů mezi orgány, aby je přímo omývala. Látky se mezi krví a tkáněmi vyměňují přes cévní stěnu.",
+      "Představ si vodu vedenou potrubím: k jednotlivým místům se dostane rozvětvenou sítí a zase se vrací. Otevřená oběhová soustava naproti tomu zahrnuje prostory, ve kterých oběhová tekutina přímo obtéká orgány.",
+      "Členovci mají otevřenou soustavu a u měkkýšů je tento typ také běžný. Pozor ale na výjimku: hlavonožci patří mezi měkkýše a mají uzavřený oběh. Název velké živočišné skupiny proto nemusí bez výjimky popsat všechny její členy."
+    ],
+    "memory": "Obratlovci: uzavřený cévní okruh. Z měkkýšů pamatuj výjimku hlavonožce.",
+    "note": "A by nebylo správné jako obecná vlastnost všech měkkýšů, ale hlavonožci mají oběh uzavřený. D je jednoznačná skupinová odpověď klíče."
+  },
+  {
+    "id": 203,
+    "bookRef": "VI · otázka 2",
+    "category": "Krevní a mízní oběh",
+    "question": "U kterého z uvedených obratlovců ještě není srdeční komora rozdělena přepážkou (úplnou, nebo neúplnou)?",
+    "options": [
+      "Žába",
+      "Krokodýl",
+      "Skřivan",
+      "Kočka"
+    ],
+    "answer": 0,
+    "title": "Žába má dvě síně, ale jednu společnou komoru",
+    "paragraphs": [
+      "Správně je A, žába. V základním srovnání obratlovců má dospělá žába dvě srdeční síně a jednu komoru bez přepážky oddělující pravou a levou komoru. Nabízení pták, savec i krokodýl mají komory oddělené.",
+      "Představ si dvě vstupní místnosti ústící do společného výtlačného prostoru. Není to totéž jako dvě zcela oddělené pumpy člověka. Vnitřní uspořádání a proudění ale pomáhají tomu, aby se proudy nemíchaly úplně bez jakéhokoli usměrnění.",
+      "Krokodýl je důležitá výjimka mezi plazy: má oddělené komory, i když jeho cévní uspořádání dovoluje zvláštní přesměrování toku. Otázka zkouší přepážku srdeční komory, ne pouhý počet cév vystupujících ze srdce."
+    ],
+    "memory": "Žába: dvě síně, jedna komora. Krokodýl, pták a savec mají komory oddělené."
+  },
+  {
+    "id": 204,
+    "bookRef": "VI · otázka 3",
+    "category": "Krevní a mízní oběh",
+    "question": "Kde dochází k výměně látek mezi krví a tkáňovým mokem?",
+    "options": [
+      "Na membránách buněk",
+      "Na vnitřních strukturách buněk",
+      "Ve vlásečnicích",
+      "Na retikuloblastech"
+    ],
+    "answer": 2,
+    "title": "Tenká stěna vlásečnice umožňuje předávání zásilek",
+    "paragraphs": [
+      "Výměna mezi krví a tkáňovým mokem probíhá především přes stěny vlásečnic, takže je správně C. Zde se předávají plyny, živiny a odpadní látky mezi cévním oběhem a prostředím kolem buněk.",
+      "Představ si rozvozovou síť, ve které velké silnice vedou dopravu a drobné uličky umožní vyložit zásilky u domů. Kapiláry mají velkou celkovou plochu a velmi tenkou stěnu. Různé látky ji překračují různými mechanismy podle svých vlastností.",
+      "Buněčná membrána pak představuje další hranici: mezi tkáňovým mokem a vnitřkem vlastní buňky. Otázka se ale ptá na předchozí krok mezi krví a tekutinou mimo buňky, nikoli na děje uvnitř buněčných organel."
+    ],
+    "memory": "Krev ↔ tkáňový mok: kapilára. Tkáňový mok ↔ buňka: buněčná membrána."
+  },
+  {
+    "id": 205,
+    "bookRef": "VI · otázka 4",
+    "category": "Krevní a mízní oběh",
+    "question": "Přiřaďte uvedené charakteristiky k typům cév:",
+    "options": [
+      "A1, B2, C3, D4, E5",
+      "A2, B4, C5, D3, E1",
+      "A4, B1, C5, D3, E2",
+      "A2, B3, C4, D1, E5"
+    ],
+    "answer": 1,
+    "title": "Každý úsek cévní sítě má jinou práci",
+    "paragraphs": [
+      "Tepny mají v tomto srovnání silnou svalovou stěnu, A2. Arterioly změnou průsvitu výrazně ovlivňují odpor a tlak, B4. Kapiláry mají velmi malý průsvit, zde C5. Venuly vznikají sběrem z kapilár, D3, a žíly nohou obsahují chlopně, E1. Vyber B.",
+      "Představ si hlavní přívod, regulační kohoutek, místo výměny, malý sběrný kanálek a návratovou cestu s jednosměrnými ventily. Sled tepna → arteriola → kapilára → venula → žíla pak dává funkční smysl.",
+      "Číslo deset mikrometrů u kapilár ber jako orientační velikost, ne přesný rozměr každé vlásečnice. A nejvýraznější regulační vliv arteriol nespočívá jen v tloušťce stěny, ale hlavně v možnosti změnit malý průsvit."
+    ],
+    "memory": "Tepna přívod, arteriola kohoutek, kapilára výměna, venula sběr, žíla návrat.",
+    "terms": [
+      "Tepny",
+      "Arterioly",
+      "Kapiláry",
+      "Venuly",
+      "Žíly"
+    ],
+    "definitions": [
+      "Obsahují v dolních končetinách chlopně",
+      "Mají nejsilnější svalovou stěnu",
+      "Vznikají z tkáňových kapilár",
+      "Regulují krevní tlak",
+      "Mají průsvit 10 mikrometrů"
+    ]
+  },
+  {
+    "id": 206,
+    "bookRef": "VI · otázka 5",
+    "category": "Krevní a mízní oběh",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 0,
+    "title": "Ne každá céva má tři silné vrstvy",
+    "paragraphs": [
+      "První tvrzení správně popisuje základní trasu uzavřeného oběhu: tepny se větví do arteriol a kapilár, na které navazují venuly a žíly. Je to jako rozvětvení rozvodné sítě a následný sběr zpátky do větších cest.",
+      "Druhé tvrzení neplatí pro všechny cévy. Zejména kapiláry nemají plnou trojvrstevnou stěnu s vrstvou hladké svaloviny. Základ jejich stěny tvoří jediná vrstva endoteliálních buněk s podpůrnými strukturami.",
+      "Vyber A: první ano, druhé ne. Představ si rozdíl mezi pevnou hlavní hadicí a jemným místem předávání látek. Kdyby každá kapilára měla mohutnou svalovou a vazivovou stěnu jako větší céva, výměna mezi krví a tkáněmi by byla mnohem obtížnější."
+    ],
+    "memory": "Trojvrstevný plán velkých cév nelze beze změny přenést na jemnou kapiláru.",
+    "statements": [
+      "Cévní systém lidského těla je uzavřená soustava trubic. V tepenné části krevního oběhu se tepny zužují a vznikají arterioly, které se větví do sítí kapilár. Žilní část řečiště kapilárami začíná a z nich vznikají venuly, které přecházejí do větších žil.",
+      "Všechny cévy mají trojvrstevnou stěnu. Vnitřní vrstvu cév tvoří endotel, střední vrstvu hladká svalovina a vnější obal cév je vazivový."
+    ]
+  },
+  {
+    "id": 207,
+    "bookRef": "VI · otázka 6",
+    "category": "Krevní a mízní oběh",
+    "question": "Endotel",
+    "options": [
+      "Může v tepnách tvořit chlopně, vyztužené svalovinou",
+      "Je vnitřní výstelkou všech cév",
+      "Je místem diapedézy erytrocytů",
+      "Je vazivový obal cév s elastickými vlákny"
+    ],
+    "answer": 1,
+    "title": "Endotel je povrch cévy obrácený ke krvi",
+    "paragraphs": [
+      "Správně je B. Endotel tvoří vnitřní buněčnou výstelku cév, tedy povrch přímo sousedící s jejich obsahem. Není to vnější vazivový obal ani svalová vrstva, která mění napětí a průsvit cévní stěny.",
+      "Představ si velmi tenkou aktivní dlažbu na vnitřní straně potrubí. Není jen pasivně hladká: ovlivňuje prostup látek, srážení i reakce cévy. Bílé krvinky se přes tuto hranici mohou řízeně dostávat do tkání.",
+      "Běžně popisovaná diapedéza se týká leukocytů, nikoli normálního odchodu erytrocytů do tkáně. A chlopně návratových žil jsou řasy vnitřní vrstvy s vazivovým základem, ne svalem vyztužené ventily běžných tepen."
+    ],
+    "memory": "Endo- připomíná vnitřek: endotel vystýlá vnitřní povrch cévy."
+  },
+  {
+    "id": 208,
+    "bookRef": "VI · otázka 7",
+    "category": "Krevní a mízní oběh",
+    "question": "Činnost srdce a cév",
+    "options": [
+      "Je řízena základním ústředím v mozečku",
+      "Není řízena autonomním nervstvem",
+      "Je zpomalována působením adrenalinu",
+      "Je regulována čidly v nich umístěnými"
+    ],
+    "answer": 3,
+    "title": "Oběh má zpětnou vazbu o tlaku a složení krve",
+    "paragraphs": [
+      "Správně je D: receptory v srdci a cévách poskytují informace pro regulaci oběhu. Například tlaková čidla sledují napětí cévní stěny a pomáhají spustit odpověď, která upraví srdeční činnost a cévní napětí.",
+      "Představ si čerpadlo se senzory v potrubí. Bez informace o výsledném tlaku by regulace jen hádala. Signály se zpracovávají v nervových centrech a přes autonomní nervy se mění činnost srdce i cév podle situace.",
+      "Nejde o hlavní centrum v mozečku. Autonomní nervstvo má zásadní regulační úlohu a adrenalin běžně srdeční frekvenci i sílu stahu zvyšuje. Srdce navíc vytváří vlastní rytmus; regulace ho upravuje, nemusí každý tep zvlášť zahajovat z mozku."
+    ],
+    "memory": "Čidla hlásí stav, autonomní řízení upravuje pumpu a cévy."
+  },
+  {
+    "id": 209,
+    "bookRef": "VI · otázka 8",
+    "category": "Krevní a mízní oběh",
+    "question": "Stěny vlásečnic",
+    "options": [
+      "Obsahují buňky hladkého svalstva",
+      "Jsou tvořeny jednou vrstvou endotelových buněk",
+      "Mají na povrchu vazivový obal",
+      "Umožňují pouze výstup krevní plazmy, nikoliv leukocytů"
+    ],
+    "answer": 1,
+    "title": "Výměna potřebuje krátkou cestu přes stěnu",
+    "paragraphs": [
+      "Základ stěny kapilár tvoří jediná vrstva endoteliálních buněk, proto vyber B. Je to výrazně tenčí bariéra než vícevrstevná stěna větších tepen a žil. Krátká vzdálenost usnadňuje výměnu mezi krví a tkáněmi.",
+      "Představ si tenkou přepážku předávacího místa, ne mohutnou zeď hlavního potrubí. K endotelu patří také bazální lamina a mohou být přítomné podpůrné pericyty. Jedna buněčná vrstva tedy neznamená, že kolem není vůbec žádná další struktura.",
+      "Kapiláry nemají souvislou hladkosvalovou vrstvu běžné cévní stěny. Leukocyty umějí řízeně překročit cévní bariéru, v systémovém oběhu zejména na úrovni postkapilárních venul. Nelze proto obecně tvrdit, že buněčný průchod je v mikrocirkulaci nemožný."
+    ],
+    "memory": "Kapilára: tenká endotelová bariéra pro výměnu, ne malá tepna se třemi plnými vrstvami."
+  },
+  {
+    "id": 210,
+    "bookRef": "VI · otázka 9",
+    "category": "Krevní a mízní oběh",
+    "question": "Krevní vlásečnice",
+    "options": [
+      "Mají průměr 20–30 mikrometrů",
+      "Prostupují hustě většinu tkání",
+      "Jsou asi 0,5 mikrometru dlouhé",
+      "Regulují průtok krve dle potřeb organismu"
+    ],
+    "answer": 1,
+    "title": "Rozsáhlá síť přibližuje krev jednotlivým buňkám",
+    "paragraphs": [
+      "Vlásečnice vytvářejí husté sítě ve většině tkání, takže je správně B. Přivádějí krev blízko k buňkám a poskytují velkou celkovou plochu pro výměnu látek. Hustota sítě se liší podle potřeb dané tkáně.",
+      "Představ si mnoho drobných doručovacích uliček. Velká tepna nestačí, pokud zásilka zůstane daleko od adresáta. V aktivních tkáních je proto dostupnost kapilár důležitá pro průběžný přívod kyslíku a odvod odpadních látek.",
+      "Průměr běžné kapiláry je obvykle menší než uvedených 20–30 mikrometrů, i když existují různé typy. Půl mikrometru není běžná délka celé vlásečnice. Hlavní regulaci odporu zajišťují zejména arterioly před kapilární sítí."
+    ],
+    "memory": "Kapiláry doručují blízko buněk; arterioly před nimi slouží jako výrazné regulační kohoutky."
+  },
+  {
+    "id": 211,
+    "bookRef": "VI · otázka 10",
+    "category": "Krevní a mízní oběh",
+    "question": "Tepny (arterie)",
+    "options": [
+      "Se postupně větví do vlásečnic",
+      "Vedou krev směrem k srdci",
+      "Nejsou uvnitř vystlány endotelem",
+      "Mají odlišné složení vrstev stěny než žíly"
+    ],
+    "answer": 0,
+    "title": "Tepna je cesta od srdce k menším cévám",
+    "paragraphs": [
+      "Správně je A: tepny se větví přes menší tepenné větve a arterioly až do kapilárních sítí. Základním rozlišovacím znakem tepny je vedení krve od srdce, nikoli samotný obsah kyslíku v krvi.",
+      "Představ si hlavní rozvod od čerpadla, který se dělí na stále menší větve. Žíly naopak sbírají krev zpět k srdci. V plicním oběhu proto tepna vede méně okysličenou krev a plicní žíly krev okysličenou, ale názvy podle směru zůstávají.",
+      "Tepny i žíly mají endotel a u větších cév obdobné základní vrstvy. Liší se hlavně jejich poměry, tloušťkou a mechanickými vlastnostmi. Není tedy přesné tvrdit, že by šlo o úplně jiné typy stavebních vrstev."
+    ],
+    "memory": "Tepna od srdce, žíla k srdci; kyslík není definice názvu."
+  },
+  {
+    "id": 212,
+    "bookRef": "VI · otázka 11",
+    "category": "Krevní a mízní oběh",
+    "question": "Venuly",
+    "options": [
+      "Mají stejný průsvit jako kapiláry",
+      "Přecházejí do větších žil",
+      "Regulují podstatnou měrou krevní tlak",
+      "Tvoří sítě navazující na arterioly"
+    ],
+    "answer": 1,
+    "title": "Malé žilní sběrače se spojují do větších cest",
+    "paragraphs": [
+      "Venuly jsou malé žilní cévy, které přijímají krev z kapilární sítě a spojují se do větších žil. Proto je správně B. Leží tedy za místem hlavní výměny v běžné trase systémového oběhu.",
+      "Představ si drobné odtokové kanálky sbírající vodu z mnoha míst. Jak se spojují, vzniká větší návratová cesta. Naproti tomu arterioly přivádějí krev před kapiláry a výrazněji určují odpor přítoku do tkáně.",
+      "Venuly nemusí mít stejný průsvit jako kapiláry a v některých jejich úsecích probíhá důležitý přestup leukocytů do okolí. Na zapamatování pomůže udržet správné pořadí: arteriola, kapilára, venula. Bez kapilárního mezikroku bys obvyklou síť popsal chybně."
+    ],
+    "memory": "Arteriola přivádí, kapilára vyměňuje, venula sbírá do žíly."
+  },
+  {
+    "id": 213,
+    "bookRef": "VI · otázka 12",
+    "category": "Krevní a mízní oběh",
+    "question": "Při inervaci srdce",
+    "options": [
+      "Sympatikus snižuje výkonnost srdce",
+      "Parasympatikus vede ke snížení počtu systol",
+      "Není regulována srdeční frekvence",
+      "Vede zvýšený vliv parasympatiku k tachykardii"
+    ],
+    "answer": 1,
+    "title": "Parasympatikus obvykle zpomaluje srdeční rytmus",
+    "paragraphs": [
+      "Správně je B. Parasympatická aktivita především přes bloudivý nerv zpomaluje tvorbu vzruchů v sinusovém uzlu, a tak snižuje počet srdečních stahů za minutu. Systola je stah, takže jde o snížení frekvence.",
+      "Představ si nastavení tempa automatické pumpy: parasympatikus působí jako zpomalující regulace, sympatikus při běžné aktivaci jako zrychlující a posilující vliv. Pumpa má vlastní rytmus, ale nervové signály ho přizpůsobují potřebám těla.",
+      "Tachykardie znamená zrychlenou srdeční frekvenci, nikoli typický důsledek zvýšeného parasympatického vlivu. Ani tvrzení, že nervové zásobení frekvenci neovlivňuje, tedy nesedí. Základní směr účinku je důležitější než učení osamoceného názvu nervu."
+    ],
+    "memory": "Parasympatikus obvykle zpomalí tempo; sympatikus ho obvykle zvýší."
+  },
+  {
+    "id": 214,
+    "bookRef": "VI · otázka 13",
+    "category": "Krevní a mízní oběh",
+    "question": "Vysvětlete uvedené termíny:",
+    "options": [
+      "A1, B5, C3, D2, E4",
+      "A2, B5, C3, D1, E4",
+      "A3, B5, C1, D2, E4",
+      "A3, B5, C2, D1, E4"
+    ],
+    "answer": 3,
+    "title": "Srdeční stěna má vnitřek, sval a povrch",
+    "paragraphs": [
+      "Endokard vystýlá srdeční dutiny, A3. Myokard je srdeční sval, B5. Epikard leží na povrchu srdce, C2. Perikard je osrdečníkový obal, D1. Infarkt znamená odumření tkáně při nedostatečném prokrvení, zde E4. Správná kombinace je D.",
+      "Představ si stěnu čerpadla: hladký vnitřní povrch, pracující svalovou vrstvu a zevní povrch. Kolem srdce je navíc osrdečníkový vak, který není totéž co samotný sval. Pořadí endo-, myo-, epi- pomáhá jednotlivé vrstvy odlišit.",
+      "Infarkt na rozdíl od prvních čtyř pojmů není normální anatomická vrstva. Popisuje poškození a zánik tkáně při kritickém výpadku jejího zásobení. V otázce je definován typickou situací při uzávěru přívodné tepny."
+    ],
+    "memory": "Endo uvnitř, myo sval, epi na povrchu, peri kolem; infarkt je poškození.",
+    "terms": [
+      "Endokard",
+      "Myokard",
+      "Epikard",
+      "Perikard",
+      "Infarkt"
+    ],
+    "definitions": [
+      "Osrdečník – zevní vazivový obal srdce",
+      "Vazivový list na povrchu srdce",
+      "Vnitřní výstelka srdečních dutin",
+      "Odumření tkáně při uzávěru tepny",
+      "Srdeční sval"
+    ]
+  },
+  {
+    "id": 215,
+    "bookRef": "VI · otázka 14",
+    "category": "Krevní a mízní oběh",
+    "question": "Vazivový povrch srdce se nazývá",
+    "options": [
+      "Endokard",
+      "Myokard",
+      "Epikard",
+      "Perikard"
+    ],
+    "answer": 3,
+    "title": "Osrdečníkový obal a přímý povrch srdce je potřeba rozlišit",
+    "paragraphs": [
+      "Tištěný klíč označuje D, perikard neboli osrdečník. V testu tuto odpověď zachováváme, protože otázka zřejmě míří na vazivový obal kolem srdce. Samotné znění „povrch srdce“ je ale nejednoznačné a může vést k jiné anatomické odpovědi.",
+      "Představ si předmět s vlastním povrchem vložený do ochranného vaku. Přímý povrch srdeční stěny tvoří epikard. Perikard označuje osrdečníkový vak; epikard je zároveň jeho útrobní serózní list. Tyto vztahy se proto slovně snadno zamění.",
+      "Endokard patří dovnitř dutin a myokard je svalová vrstva. Pro odborné porozumění si ponech oba správně rozlišené pojmy: epikard na srdci a osrdečník kolem srdce. Samotné naučení písmene D by tento rozdíl nevysvětlilo."
+    ],
+    "memory": "PDF chce perikard D; přímý povrch srdeční stěny je epikard.",
+    "note": "Formulace je problematická: pro přímý povrch srdce by odpovídal epikard C. D hodnotíme podle tištěného klíče jako zamýšlený zevní osrdečníkový obal."
+  },
+  {
+    "id": 216,
+    "bookRef": "VI · otázka 15",
+    "category": "Krevní a mízní oběh",
+    "question": "V srdci má nejsilnější svalovou vrstvu",
+    "options": [
+      "Pravá síň",
+      "Pravá komora",
+      "Levá síň",
+      "Levá komora"
+    ],
+    "answer": 3,
+    "title": "Levá komora tlačí krev do celého těla",
+    "paragraphs": [
+      "Nejsilnější svalovou stěnu má levá komora, tedy D. Musí vytvářet tlak potřebný pro průtok velkým tělním oběhem. Pravá komora žene krev do plic, kde je běžně podstatně menší tlakový odpor.",
+      "Představ si dvě pumpy: jedna obsluhuje kratší nízkotlaký okruh a druhá rozsáhlou síť s vyšším odporem. Druhá potřebuje mohutnější pracovní sval. Nejde o to, že by dlouhodobě přečerpávala více krve než pravá komora: jejich objemové výkony musí odpovídat.",
+      "Síně přesouvají krev do komor při mnohem menších tlakových nárocích, proto mají tenčí stěny. Tloušťka myokardu tedy souvisí s vykonávanou tlakovou prací, ne pouze s názvem levé nebo pravé strany."
+    ],
+    "memory": "Levá komora pracuje proti vyššímu tlaku velkého oběhu → nejsilnější svalová stěna."
+  },
+  {
+    "id": 217,
+    "bookRef": "VI · otázka 16",
+    "category": "Krevní a mízní oběh",
+    "question": "Endokard je",
+    "options": [
+      "Vnitřní výstelka srdeční dutiny",
+      "Vazivový obal srdce",
+      "Střední vrstva srdeční stěny",
+      "Srdeční svalovina"
+    ],
+    "answer": 0,
+    "title": "Krev se v srdci dotýká vnitřní výstelky",
+    "paragraphs": [
+      "Endokard vystýlá vnitřní povrch srdečních dutin, proto je správně A. Navazuje na vnitřní výstelku cév a podílí se také na pokrytí srdečních chlopní. Sval, který vytváří stah, se nazývá myokard.",
+      "Představ si vnitřní povrch nádrže, pracovní stěnu a vnější obal. Každá část má jiné místo a funkci. Endokard patří k ploše obrácené ke krvi uvnitř srdce, nikoli k vaku kolem celého orgánu.",
+      "Předpona endo- znamená uvnitř a v tomto názvu opravdu pomáhá. Střední svalová vrstva není endokard ani osrdečník. Když si při otázce představíš směr od krve přes stěnu ven, snadno seřadíš endokard, myokard a epikard."
+    ],
+    "memory": "ENDO = uvnitř; endokard leží na straně srdeční stěny obrácené ke krvi."
+  },
+  {
+    "id": 218,
+    "bookRef": "VI · otázka 17",
+    "category": "Krevní a mízní oběh",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 1,
+    "title": "V prvním tvrzení jsou prohozené chlopně",
+    "paragraphs": [
+      "První tvrzení je chybné. Mezi pravou síní a pravou komorou je trojcípá chlopeň, mezi levou síní a levou komorou dvojcípá neboli mitrální. Počet síní a komor je uveden správně, ale záměna chlopní znehodnotí celé tvrzení.",
+      "Druhé tvrzení je správné: za běžných podmínek vzniká rytmus v sinoatriálním neboli sinusovém uzlu. Autonomní nervstvo pak jeho tempo upravuje. Představ si metronom s vlastním chodem, kterému regulace mění rychlost.",
+      "Vyber B: první ne, druhé ano. Nervy tedy nejsou vodiče, které by musely zevní cestou přinést každý jednotlivý povel ke stahu. Srdce má vlastní převodní systém a zároveň reaguje na požadavky organismu."
+    ],
+    "memory": "Vpravo tři cípy, vlevo dva; rytmus začne v sinusovém uzlu.",
+    "statements": [
+      "Srdeční dutiny tvoří dvě síně a dvě komory. Mezi pravou síní a komorou je dvojcípá chlopeň a mezi levou síní a komorou chlopeň trojcípá.",
+      "Smrštění srdečního svalu je vyvoláno vzruchy, které vznikají automaticky v sinoatriálním uzlíku převodního systému. Změny srdeční frekvence zabezpečuje sympatická a parasympatická inervace."
+    ]
+  },
+  {
+    "id": 219,
+    "bookRef": "VI · otázka 18",
+    "category": "Krevní a mízní oběh",
+    "question": "Tepový srdeční objem",
+    "options": [
+      "Je polovinou minutového srdečního objemu",
+      "Může při práci nebo fyzické zátěži stoupat až na pětinásobek",
+      "Je v klidové fázi 100 mililitrů",
+      "Je množství krve vypuzené jednou srdeční systolou"
+    ],
+    "answer": 3,
+    "title": "Jedno vypuzení a celá minuta jsou různé údaje",
+    "paragraphs": [
+      "Tepový neboli systolický objem je množství krve, které jedna komora vypudí při jednom stahu. Správně je D. Minutový srdeční objem potom vznikne vynásobením tepového objemu počtem tepů za minutu.",
+      "Představ si pumpu, která při jednom stisku vydá určitou dávku. Celkový výdej za minutu závisí na velikosti dávky i počtu stisků. Není tedy pravda, že jeden tepový objem je pevně polovinou minutového.",
+      "Konkrétní objem se liší podle člověka a situace, takže jedna přesná klidová hodnota neplatí pro každého. Při zátěži může stoupat jak frekvence, tak tepový objem; výrazné násobné zvýšení celkového výdeje nesmíš automaticky připsat samotné dávce jednoho stahu."
+    ],
+    "memory": "Minutový výdej = objem jednoho tepu × počet tepů za minutu."
+  },
+  {
+    "id": 220,
+    "bookRef": "VI · otázka 19",
+    "category": "Krevní a mízní oběh",
+    "question": "Kde se nacházejí cípaté chlopně?",
+    "options": [
+      "Mezi síněmi",
+      "Mezi síněmi a komorami",
+      "Na začátku srdečnice a plicní tepny",
+      "Mezi plicní tepnou a pravou komorou"
+    ],
+    "answer": 1,
+    "title": "Cípaté chlopně hlídají vstup ze síní do komor",
+    "paragraphs": [
+      "Správně je B: cípaté chlopně leží mezi síněmi a komorami. Vpravo jde o trojcípou, vlevo o dvojcípou neboli mitrální chlopeň. Při stahu komor brání návratu krve zpátky do síní.",
+      "Představ si jednosměrné dveře, které dovolí naplnit pumpovací místnost, ale při zvýšení tlaku se zavřou. Šlašinky a papilární svaly pomáhají, aby se cípy při komorovém stahu nepřevrátily směrem do síně.",
+      "Na výstupu z komor do aorty a plicního kmene jsou chlopně poloměsíčité. Ty mají jinou stavbu a nepotřebují šlašinky jako cípaté chlopně. Rozlišuj tedy vstup do komory a výstup z ní, ne pouze obecné slovo srdeční chlopeň."
+    ],
+    "memory": "Síň → cípatá chlopeň → komora → poloměsíčitá chlopeň → tepna."
+  },
+  {
+    "id": 221,
+    "bookRef": "VI · otázka 20",
+    "category": "Krevní a mízní oběh",
+    "question": "Mitrální chlopeň je",
+    "options": [
+      "Mezi levou síní a komorou",
+      "Mezi pravou síní a komorou",
+      "Na začátku plicního kmene",
+      "Na začátku aorty"
+    ],
+    "answer": 0,
+    "title": "Mitrální je dvojcípá vstupní chlopeň levé komory",
+    "paragraphs": [
+      "Mitrální chlopeň leží mezi levou síní a levou komorou, tedy A. Je také označovaná jako dvojcípá. Otevírá se pro tok do komory a při komorovém stahu brání vracení krve do levé síně.",
+      "Představ si vstupní jednosměrné dveře před levou srdeční pumpou. Nejde o dveře na jejím výstupu: tam je aortální poloměsíčitá chlopeň. Oddělení vstupu a výstupu pomáhá udržet účelný tok jedním směrem.",
+      "V pravé polovině srdce obdobný vstup hlídá trojcípá chlopeň. Plicní kmen začíná u pravé komory, aorta u levé. Když si vybavíš cestu okysličené krve z plic do levé síně a dál do levé komory, umístění mitrální chlopně zapadne."
+    ],
+    "memory": "Mitrální = dvojcípá = mezi levou síní a levou komorou."
+  },
+  {
+    "id": 222,
+    "bookRef": "VI · otázka 21",
+    "category": "Krevní a mízní oběh",
+    "question": "Trojcípá chlopeň",
+    "options": [
+      "Je mezi levou síní a levou komorou",
+      "Je opatřena vazivovými vlákny – šlašinkami",
+      "Zabraňuje zpětnému toku krve z plicního kmene do pravé komory",
+      "Se nachází na začátku aorty"
+    ],
+    "answer": 1,
+    "title": "Šlašinky jistí cípy proti převrácení",
+    "paragraphs": [
+      "Správně je B. Trojcípá chlopeň leží mezi pravou síní a pravou komorou a její cípy jsou spojené šlašinkami s papilárními svaly komory. Jejich napětí pomáhá zabránit vychlípení cípů do síně při komorovém stahu.",
+      "Představ si dveře zajištěné lanky proti vyvrácení na nesprávnou stranu. Lanka sama dveře běžně neotvírají; pohyb chlopně závisí na tlakovém rozdílu. Pomáhají ale udržet správnou polohu při velkém tlaku.",
+      "Zpětnému toku z plicního kmene brání plicní poloměsíčitá chlopeň. Na začátku aorty je aortální poloměsíčitá. Obě výstupní chlopně si proto nepleť s trojcípou, která hlídá vstup do pravé komory."
+    ],
+    "memory": "Trojcípá vpravo mezi síní a komorou; šlašinky jistí cípy jako lanka."
+  },
+  {
+    "id": 223,
+    "bookRef": "VI · otázka 22",
+    "category": "Krevní a mízní oběh",
+    "question": "Vysvětlete uvedené termíny, související se srdeční činností:",
+    "options": [
+      "A4, B3, C2, D1",
+      "A1, B3, C2, D4",
+      "A4, B2, C3, D1",
+      "A1, B2, C3, D4"
+    ],
+    "answer": 0,
+    "title": "Stah vypuzuje, uvolnění umožňuje plnění",
+    "paragraphs": [
+      "Anastomóza je cévní spojka, v nabídce A4. Systola znamená kontrakci srdeční svaloviny, B3. Diastola je fáze uvolnění, C2. Auskultace znamená poslech, například srdečních ozev, D1. Správná kombinace je A.",
+      "Představ si střídání stisku pumpy a jejího opětovného naplnění. Systola a diastola jsou fáze činnosti; auskultace je způsob vyšetření a anastomóza anatomické propojení. Každý pojem tedy patří do jiné přihrádky.",
+      "Anastomóza obecně nemusí spojovat právě tepnu se žílou. Existují i spojky mezi tepnami nebo mezi žílami. Nabídka uvádí konkrétní arteriovenózní spojku, což stačí k přiřazení, ale nevystihuje celou šíři slova."
+    ],
+    "memory": "Systola stah, diastola uvolnění, auskultace poslech, anastomóza spojka.",
+    "terms": [
+      "Anastomóza",
+      "Systola",
+      "Diastola",
+      "Auskultace"
+    ],
+    "definitions": [
+      "Poslech srdečních ozev",
+      "Ochabnutí srdeční svaloviny",
+      "Kontrakce srdeční svaloviny",
+      "Spojka mezi tepnou a žílou"
+    ],
+    "note": "Anastomóza je obecně spojení cév či jiných dutých struktur. A4 zde představuje jeden její typ, nikoli úplnou definici."
+  },
+  {
+    "id": 224,
+    "bookRef": "VI · otázka 23",
+    "category": "Krevní a mízní oběh",
+    "question": "V době kdy probíhá diastola",
+    "options": [
+      "Probíhá smrštění srdečních síní",
+      "Je srdce ochablé a plní se krví",
+      "Je krev vytláčena do komor",
+      "Je krev vypuzována do tepen"
+    ],
+    "answer": 1,
+    "title": "Po stahu musí přijít možnost znovu se naplnit",
+    "paragraphs": [
+      "Klíč vybírá B: při diastole se příslušná srdeční svalovina uvolňuje a komory se mohou plnit. Při jejich systole se naopak zvyšuje tlak a po otevření výstupních chlopní je krev vypuzována do tepen.",
+      "Představ si pumpu, kterou po stisku pustíš, aby přijala další dávku. Bez fáze plnění by další stah neměl co vytlačit. Většina plnění komor probíhá při příznivém tlakovém rozdílu, závěrem pomůže také stah síní.",
+      "Pojmy diastola a systola je nejpřesnější vztahovat ke konkrétní oddílové činnosti. Na konci komorové diastoly totiž může probíhat systola síní. Základní školní odpověď B vystihuje uvolnění a plnění komor, ale neznamená současnou nečinnost úplně každé části srdce."
+    ],
+    "memory": "Komorová diastola = uvolnění a plnění; komorová systola = stah a vypuzování.",
+    "note": "A se může překrývat s koncem komorové diastoly, kdy se stahují síně. B je obecná charakteristika fáze podle klíče; otázka nerozlišuje oddíly dostatečně přesně."
+  },
+  {
+    "id": 225,
+    "bookRef": "VI · otázka 24",
+    "category": "Krevní a mízní oběh",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 2,
+    "title": "Duté žíly sbírají krev zpátky do pravé síně",
+    "paragraphs": [
+      "Obě tvrzení jsou v základním popisu správná, tedy C. Horní dutá žíla přivádí krev z hlavy, krku a horních končetin do pravé síně. Dolní dutá žíla sbírá krev z dolní části těla a také ji vede směrem k srdci.",
+      "Představ si dva velké návratové sběrače podle oblastí, ze kterých krev přitéká. Názvy horní a dolní orientují v těle, nikoli ve stupni okysličení. V obou případech se krev vrací k pravé polovině srdce a dál pokračuje do plic.",
+      "Druhé tvrzení neuvádí všechny přítoky dolní duté žíly: krev se do ní dostává také z břišní oblasti. To ale nečiní uvedené příklady nepravdivými. Slovo odvádí zde znamená odvádí z daných orgánů, nikoli pryč od srdce."
+    ],
+    "memory": "Horní i dolní dutá žíla sbírají odkysličenou krev do pravé síně.",
+    "statements": [
+      "Horní dutá žíla přivádí odkysličenou krev z orgánů hlavy, krku a z horní končetiny do pravé srdeční síně.",
+      "Dolní dutá žíla odvádí odkysličenou krev z dolní končetiny, z pánve a z pánevních orgánů."
+    ]
+  },
+  {
+    "id": 226,
+    "bookRef": "VI · otázka 25",
+    "category": "Krevní a mízní oběh",
+    "question": "Hlavní zdroj krve pro horní končetinu představuje",
+    "options": [
+      "Podpažní tepna",
+      "Pažní tepna",
+      "Loketní tepna",
+      "Krkavice"
+    ],
+    "answer": 1,
+    "title": "Hlavní přívod pokračuje přes podpaží do paže",
+    "paragraphs": [
+      "Tištěný klíč vybírá B, pažní tepnu. Ta je hlavní tepnou paže a pokračuje z podpažní tepny; níže se větví mimo jiné na vřetenní a loketní tepnu. Jde tedy o úseky navazující na stejný přívod krve.",
+      "Představ si jednu hlavní silnici, která podle průchodu různými oblastmi mění název. Zásobování horní končetiny začíná podklíčkovou tepnou, pokračuje jako podpažní a potom pažní. Krkavice naproti tomu zásobují hlavně oblast hlavy a krku.",
+      "Otázka není ideálně vymezená: podpažní tepna v možnosti A je také významná část přívodu pro horní končetinu. Zapamatuj si proto celou návaznost, nikoli chybnou představu, že podpaží a paže mají dvě navzájem nezávislé hlavní zásobovací cesty."
+    ],
+    "memory": "Podklíčková → podpažní → pažní tepna; PDF v této nabídce hodnotí B.",
+    "note": "B je klíč PDF, ale formulace „hlavní zdroj pro horní končetinu“ je široká. A rovněž označuje zásadní přívodný úsek; zdrojem celé návaznosti je podklíčková tepna."
+  },
+  {
+    "id": 227,
+    "bookRef": "VI · otázka 26",
+    "category": "Krevní a mízní oběh",
+    "question": "Krev na vyšetření se nejčastěji odebírá",
+    "options": [
+      "Z krátké skryté žíly",
+      "Z horní okružní žíly",
+      "Z periferních žil v loketní jamce",
+      "Z horní duté žíly"
+    ],
+    "answer": 2,
+    "title": "Povrchové žíly v loketní jamce jsou běžně přístupné",
+    "paragraphs": [
+      "Správně je C. Pro běžné žilní odběry se často používají dostupné periferní žíly v oblasti loketní jamky. Otázka se ptá na obvyklé místo odběru, nikoli na to, ze které velké cévy pochází veškerá krev organismu.",
+      "Představ si rozdíl mezi snadno přístupnou odbočkou a hlavním potrubím hluboko uvnitř těla. Velká centrální céva není automaticky vhodnější jen proto, že je široká. Pro běžný odběr je podstatná dostupnost povrchové žilní sítě.",
+      "Jiné typy vzorků se mohou získávat z jiných míst, například kapilární krev nebo krev z již zavedeného vstupu podle konkrétních okolností. To ale nemění školní odpověď o nejčastějším žilním odběru v této nabídce."
+    ],
+    "memory": "Běžný žilní odběr: periferní žíly loketní jamky, nikoli hluboká dutá žíla."
+  },
+  {
+    "id": 228,
+    "bookRef": "VI · otázka 27",
+    "category": "Krevní a mízní oběh",
+    "question": "Při průtoku krve mozkem, kdy je důležitý přívod kyslíku a glukózy mozkové tkáni,",
+    "options": [
+      "Činí spotřeba mozku 1/3 kyslíkové spotřeby organismu",
+      "Již minutová nedokrevnost mozku způsobuje bezvědomí",
+      "Je krev k mozku přiváděna dvěma tepnami",
+      "Kryje glukóza asi 4/5 energetické spotřeby mozku"
+    ],
+    "answer": 3,
+    "title": "Mozek potřebuje průběžný přísun energie",
+    "paragraphs": [
+      "Tištěný klíč určuje D. Podstatná myšlenka je, že glukóza je za běžných podmínek hlavním energetickým zdrojem mozku a její průběžný přívod závisí na krvi. Mozková tkáň má vysoké nároky a malé vlastní energetické rezervy.",
+      "Představ si pracoviště bez velkého skladu paliva, které musí dostávat průběžné dodávky. Kyslík umožňuje účinné získávání energie a glukóza dodává běžný hlavní substrát. Při delším hladovění se ale významněji uplatní také ketolátky.",
+      "Přesné čtyři pětiny nejsou univerzální konstantou. Přítok do mozku navíc zajišťují párové vnitřní krkavice a párové obratlové tepny, nikoli jen dvě tepny celkem. Při náhlém zastavení přítoku může bezvědomí nastat už během sekund, ne až po povinné minutě."
+    ],
+    "memory": "Mozek potřebuje průběžnou dodávku kyslíku a za běžných podmínek hlavně glukózy.",
+    "note": "D přebírá orientační číselný údaj z PDF. B je zavádějící časováním: bezvědomí může přijít mnohem dříve. Otázka není vhodná pro určování bezpečné doby bez prokrvení."
+  },
+  {
+    "id": 229,
+    "bookRef": "VI · otázka 28",
+    "category": "Krevní a mízní oběh",
+    "question": "Mozek",
+    "options": [
+      "Je zásobován krví výhradně dvojicí vnitřních krkavic",
+      "Reguluje průtok krve především prostřednictvím cév v mozkové tkáni",
+      "Je mimořádně citlivý především na nedostatek vitamínu C",
+      "Jeho základním zdrojem energie je glukóza"
+    ],
+    "answer": 3,
+    "title": "Běžné mozkové palivo přichází krví jako glukóza",
+    "paragraphs": [
+      "Podle klíče vyber D. Glukóza je za běžných podmínek základním zdrojem energie mozku. Buňky z ní získávají energii potřebnou například pro udržování iontových rozdílů, které umožňují elektrickou aktivitu nervové soustavy.",
+      "Představ si velmi aktivní elektrickou síť s nepřetržitými náklady na provoz. Nestačí jen předat signál: po něm je nutné obnovovat pracovní podmínky membrán. Proto mozek průběžně potřebuje energetické zásobování a kyslík.",
+      "Krev nepřitéká jen vnitřními krkavicemi, ale také obratlovými tepnami. Mozek je zároveň citlivý na nedostatek kyslíku a skutečně využívá místní cévní regulační mechanismy. Při delším hladovění umí část potřeby pokrýt ketolátkami, takže glukóza není jediná možná látka za všech stavů."
+    ],
+    "memory": "Běžný stav: glukóza jako hlavní palivo; krev přivádí krkavice i obratlové tepny.",
+    "note": "D je tištěný klíč. B také vystihuje skutečnou místní regulaci mozkového průtoku, takže nabídka není plně výlučná. D neznamená absolutní nemožnost využití jiného paliva."
+  },
+  {
+    "id": 230,
+    "bookRef": "VI · otázka 29",
+    "category": "Krevní a mízní oběh",
+    "question": "Popište funkci (popřípadě vznik) uvedených cév:",
+    "options": [
+      "A5, B2, C3, D4, E1",
+      "A2, B3, C4, D5, E1",
+      "A5, B3, C1, D2, E4",
+      "A2, B4, C3, D5, E1"
+    ],
+    "answer": 1,
+    "title": "Názvy cév přiřaď k jejich trase",
+    "paragraphs": [
+      "Mízní kapilára začíná slepě v tkáni, A2. Horní dutá žíla přivádí krev do pravé síně, B3. Vnitřní krkavice se podílí na zásobování mozku, C4. Vnitřní kyčelní tepna zásobuje pánevní oblast, D5. Aorta vystupuje z levé komory, E1. Celkem B.",
+      "Představ si mapu s pěti odlišnými šipkami: sběr tekutiny z okolí buněk, návrat do srdce, přívod k mozku, přívod do pánve a velký výstup z levé komory. Když znáš cíl a směr, názvy už nejsou jen seznam latinských slov.",
+      "Mízní céva nevede přímo ze srdeční komory a krkavice nevrací krev do pravé síně. Důležité je také slovo slepě: počáteční mízní kapiláry netvoří stejný uzavřený přívodně-odvodný okruh jako krevní cévy."
+    ],
+    "memory": "Aorta z levé komory, dutá žíla do pravé síně, mízní kapilára sbírá z tkáně.",
+    "terms": [
+      "Mízní céva",
+      "Horní dutá žíla",
+      "Vnitřní krkavice",
+      "Vnitřní kyčelní tepna",
+      "Aorta"
+    ],
+    "definitions": [
+      "Srdečnice – vystupuje z levé srdeční komory",
+      "Začíná slepě v mezibuněčných prostorách",
+      "Přivádí odkysličenou krev do pravé srdeční síně",
+      "Zásobuje krví mozek",
+      "Zásobuje krví pánevní orgány"
+    ]
+  },
+  {
+    "id": 231,
+    "bookRef": "VI · otázka 30",
+    "category": "Krevní a mízní oběh",
+    "question": "Míza",
+    "options": [
+      "Má zcela shodné složení jako krevní plazma",
+      "Je mírně zkalená a obsahuje více solí, než plazma",
+      "Se v mízních uzlinách zbavuje lymfocytů",
+      "Je odváděna do žilní krve"
+    ],
+    "answer": 3,
+    "title": "Mízní systém vrací tekutinu z tkání do oběhu",
+    "paragraphs": [
+      "Správně je D: míza se po průchodu mízní soustavou vrací do žilní krve. Vzniká z tkáňové tekutiny, která vstoupí do mízních kapilár. Tím se vrací také část bílkovin a dalších látek z mezibuněčného prostoru.",
+      "Představ si odvodňovací síť vracející uniklou tekutinu do hlavního oběhu. Bez této návratové cesty by se tekutina a bílkoviny v tkáních hromadily. Tok podporuje pohyb okolních struktur a chlopně pomáhají udržovat správný směr.",
+      "Míza není zcela totožná s plazmou a podle místa vzniku se liší, například obsahem tuků po vstřebávání ze střeva. Uzliny nejsou zařízení určená k odstranění všech lymfocytů: obranné buňky v nich naopak pracují a mohou se množit."
+    ],
+    "memory": "Míza sbírá z tkání a vrací do žilní krve; uzliny po cestě kontrolují obsah."
+  },
+  {
+    "id": 232,
+    "bookRef": "VI · otázka 31",
+    "category": "Krevní a mízní oběh",
+    "question": "Míza",
+    "options": [
+      "Má velmi proměnlivé složení",
+      "Přivádí ke tkáním základní živiny a kyslík",
+      "Za 24 hodin se jí vytvoří až 1 litr",
+      "Proudí cévami stejně rychle jako krev"
+    ],
+    "answer": 0,
+    "title": "Složení odráží oblast, ze které míza odtéká",
+    "paragraphs": [
+      "Správně je A. Míza vzniká z tkáňové tekutiny a její složení závisí na tom, z jakého orgánu přichází i co se v něm právě děje. Není to jedna neměnná směs pro všechny mízní cévy v těle.",
+      "Představ si odtokové vzorky z různých dílen: každý nese část látek typických pro svůj provoz. Míza ze střeva může po jídle obsahovat mnoho vstřebaných tuků, zatímco míza z jiné oblasti bude mít jiné zastoupení bílkovin a dalších složek.",
+      "Hlavní přívod kyslíku a živin zajišťuje krevní oběh; míza především vrací tekutinu a podílí se na obraně i transportu tuků. Její tok je pomalejší a jinak poháněný než krevní oběh. Pevný denní limit jednoho litru není obecně správný."
+    ],
+    "memory": "Míza nese zprávu z konkrétní tkáně; proto se její složení podle místa mění."
+  },
+  {
+    "id": 233,
+    "bookRef": "VI · otázka 32",
+    "category": "Krevní a mízní oběh",
+    "question": "Míza",
+    "options": [
+      "Se po přefiltrování v mízních uzlinách vrací zpět do tkání",
+      "Má složení nezávislé na látkové výměně tkáně",
+      "Obsahuje lymfocyty a některé krevní buňky",
+      "Obsahuje více bílkovin a méně tuku než plazma"
+    ],
+    "answer": 2,
+    "title": "Míza převáží i obranné buňky",
+    "paragraphs": [
+      "Klíč vybírá C: míza obsahuje lymfocyty a mohou v ní být také další leukocyty. Obranné buňky se pohybují mezi tkáněmi, mízními cestami, uzlinami a krví. Mízní systém je tedy zároveň důležitou komunikační sítí imunity.",
+      "Představ si dopravu vzorků a hlídek do kontrolního centra. Uzlina umožňuje setkání antigenu s buňkami, které na něj mohou reagovat. Tekutina potom nepokračuje běžně zpátky do stejné tkáně, ale míří většími cestami do žilního oběhu.",
+      "Složení závisí na místní látkové výměně. Míza také nemá univerzálně více bílkovin než plazma ani vždy méně tuku: střevní míza po vstřebávání tuků může být na tuk bohatá. Každá absolutní věta proto potřebuje kontrolu souvislostí."
+    ],
+    "memory": "Míza převáží lymfocyty a informace z tkáně přes uzliny zpátky do krevního oběhu.",
+    "note": "„Některé krevní buňky“ zde chápej zejména jako další bílé krvinky. Erytrocyty nejsou běžnou hlavní složkou zdravé mízy."
+  },
+  {
+    "id": 234,
+    "bookRef": "VI · otázka 33",
+    "category": "Krevní a mízní oběh",
+    "question": "Mízní (lymfatické) uzliny",
+    "options": [
+      "Jsou uzlíčky lymfoidní tkáně v trávicí soustavě",
+      "Jsou místa odbourávání zanikajících červených krvinek",
+      "Jsou tvořeny červenou a bílou dření",
+      "Jsou bariérou proti šíření infekce"
+    ],
+    "answer": 3,
+    "title": "Uzliny kontrolují mízu přicházející z tkání",
+    "paragraphs": [
+      "Správně je D. Mízní uzliny zachycují materiál přicházející mízou a vytvářejí prostředí, kde se aktivují a spolupracují obranné buňky. Tím pomáhají omezovat šíření infekce z oblasti, kterou odvádějí.",
+      "Představ si kontrolní stanici na návratové trase. Nejde jen o mechanické sítko: buňky uvnitř rozpoznávají podněty, předávají si informace a mohou rozvinout cílenou odpověď. Proto uzlina při reakci může zvětšit svůj objem.",
+      "Uzlíčky ve sliznici trávicí soustavy jsou jiná forma lymfatické tkáně. Červená a bílá pulpa je charakteristické členění sleziny, nikoli uzliny. A odbourávání starých erytrocytů se významně odehrává ve slezině a játrech, ne jako hlavní funkce běžné uzliny."
+    ],
+    "memory": "Uzlina kontroluje mízu; slezina sleduje krev. Červená a bílá pulpa patří ke slezině."
+  },
+  {
+    "id": 235,
+    "bookRef": "VI · otázka 34",
+    "category": "Krevní a mízní oběh",
+    "question": "Mízní uzliny",
+    "options": [
+      "Mají rozmanité uložení a rozmanitou stavbu",
+      "Tříselné skupiny nejsou přístupné pohmatovému vyšetření",
+      "Jednotlivých orgánů a krajin těla se nazývají regionální uzliny",
+      "Mají především transportní funkci"
+    ],
+    "answer": 2,
+    "title": "Regionální uzlina přísluší k určité oblasti odtoku",
+    "paragraphs": [
+      "Správně je C. Regionální uzliny přijímají mízu z určitého orgánu nebo oblasti těla. Slovo regionální tedy vyjadřuje jejich vztah k území, které odvádějí, ne zvláštní druh tekutiny nebo odlišnou základní buněčnou stavbu.",
+      "Představ si kontrolní centrum přiřazené k jedné čtvrti. Příchozí vzorky říkají něco o dění právě v této oblasti. To vysvětluje, proč se při místní obranné reakci mohou uplatnit odpovídající skupiny uzlin.",
+      "Některé povrchové skupiny, včetně tříselných, jsou přístupné pohmatu. Hlavní funkce uzlin není pouhé převážení mízy jako v hadici, ale její imunologická kontrola. Základní plán uzlin je podobný, i když velikost, tvar a umístění mohou kolísat."
+    ],
+    "memory": "Regionální uzlina = kontrolní stanice pro konkrétní orgán nebo oblast.",
+    "note": "A je vágní: uzliny mají různá umístění i určité rozdíly, ale společný základní stavební plán. C je přesné označení hledané klíčem."
+  },
+  {
+    "id": 236,
+    "bookRef": "VI · otázka 35",
+    "category": "Krevní a mízní oběh",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 0,
+    "title": "Slezina leží vlevo, ne vpravo",
+    "paragraphs": [
+      "První tvrzení odpovídá základní funkci uzlin: kontrolují mízu z příslušného území a mohou zadržet infekční částice i nádorové buňky. Jde o obrannou překážku, nikoli o záruku, že se přes uzlinu nic nikdy nerozšíří.",
+      "Druhé tvrzení chybně umisťuje slezinu pod pravou brániční klenbu. Slezina leží v levé horní části břicha pod levou klenbou bránice. Údaj o červené a bílé pulpě i podílu na odbourávání erytrocytů je jinak správný.",
+      "Vyber A: první ano, druhé ne. Představ si mapu břicha: játra převážně vpravo, slezina vlevo. Jedna prohozená strana opět stačí k tomu, aby celé dlouhé tvrzení neplatilo, i když další části znějí povědomě."
+    ],
+    "memory": "Slezina vlevo pod bránicí; regionální uzlina filtruje mízu ze svého území.",
+    "statements": [
+      "Mízní uzliny jsou bariérou proti šíření infekce a nádorového bujení. Regionální uzliny filtrují mízu z určitého orgánu nebo skupiny orgánů.",
+      "Slezina je uložena v břišní dutině pod pravou brániční klenbou. Je vyplněna červenou a bílou pulpou. Je to místo zániku červených krvinek."
+    ]
+  },
+  {
+    "id": 237,
+    "bookRef": "VI · otázka 36",
+    "category": "Krevní a mízní oběh",
+    "question": "Slezina",
+    "options": [
+      "Má červenou dřeň tvořenou mízními uzlíčky",
+      "Je místem tvorby lymfocytů",
+      "Obsahuje odvodnou tepnu a přívodnou žílu",
+      "Je až do dospělosti důležitým krvetvorným orgánem"
+    ],
+    "answer": 1,
+    "title": "Slezina spojuje kontrolu krve s imunitními reakcemi",
+    "paragraphs": [
+      "Podle klíče je správně B: ve slezině probíhá aktivace a množení lymfocytů. Její bílá pulpa je lymfatická tkáň, kde se rozvíjejí obranné reakce proti podnětům přicházejícím krví. Nejde ale o hlavní místo vzniku všech krvetvorných předchůdců.",
+      "Představ si krevní kontrolní stanici s obrannou a recyklační částí. Bílá pulpa souvisí s imunitou, červená pulpa s krevním filtrem a odstraňováním opotřebených erytrocytů. Označení červené a bílé části proto nelze libovolně prohodit.",
+      "Tepna krev do sleziny přivádí a žíla odvádí, ne naopak. Slezina se podílí na krvetvorbě během vývoje plodu, ale není běžně až do dospělosti hlavní továrnou na krvinky. Za některých nemocných stavů se zde krvetvorba může znovu objevit."
+    ],
+    "memory": "Bílá pulpa obrana; červená pulpa krevní filtr; přívod tepnou a odvod žílou.",
+    "note": "„Tvorba lymfocytů“ zde zahrnuje jejich množení v lymfatické tkáni. Základní původ krvetvorné linie nelze přesunout ze dřeně do sleziny."
+  },
+  {
+    "id": 238,
+    "bookRef": "VII · otázka 1",
+    "category": "Dýchací systém",
+    "question": "Uveďte u uvedených živočichů A–H, čím dýchají:",
+    "options": [
+      "A3, B1, C2, D1/3, E1, F3, G2, H1",
+      "A1, B1, C2, D1, E1, F1/3, G3, H1",
+      "A3, B1, C2, D3, E1, F1/3, G2, H1",
+      "A1, B1, C2, D1/3, E2, F3, G2, H1"
+    ],
+    "answer": 0,
+    "title": "Dýchací orgán souvisí s prostředím i vývojovým stadiem",
+    "paragraphs": [
+      "Hlemýžď zahradní používá plicní dutinu, A3. Rak má žábry, B1. Mravenec a moucha jako hmyz vzdušnice, C2 a G2. Rejnok a štika jsou ryby se žábrami, E1 a H1. Vydra je savec a dýchá plícemi, F3.",
+      "Skokan má v klíči D1/3: larvální pulec využívá žábry, dospělý plíce. Proto odpovídá kombinace A. U obojživelníků je navíc důležité kožní dýchání, které nabídka vůbec neuvádí a bez něhož by byl obraz neúplný.",
+      "Představ si různé cesty k plynným výměnám: žábry pro vodu, plíce pro vzduch a hmyzí síť vzdušnic vedoucí vzduch přímo k tkáním. Vydra sice plave, ale pod vodou nezíská kyslík rybími žábrami; musí dýchat vzduch."
+    ],
+    "memory": "Ryba a rak žábry; hmyz vzdušnice; vydra plíce; skokan mění orgány při vývoji.",
+    "terms": [
+      "Hlemýžď zahradní",
+      "Rak říční",
+      "Mravenec lesní",
+      "Skokan hnědý",
+      "Rejnok elektrický",
+      "Vydra říční",
+      "Moucha domácí",
+      "Štika obecná"
+    ],
+    "definitions": [
+      "Žábra",
+      "Vzdušnice",
+      "Plíce – plicní vaky"
+    ],
+    "note": "Zápis D1/3 zahrnuje různá vývojová stadia skokana, nikoli běžné žábry dospělé žáby. U skokana významně probíhá i kožní dýchání."
+  },
+  {
+    "id": 239,
+    "bookRef": "VII · otázka 2",
+    "category": "Dýchací systém",
+    "question": "Vzdušnicemi dýchají",
+    "options": [
+      "Láčkovci",
+      "Hmyz",
+      "Měkkýši",
+      "Kroužkovci"
+    ],
+    "answer": 1,
+    "title": "Hmyz vede vzduch sítí trubiček přímo do těla",
+    "paragraphs": [
+      "Správně je B, hmyz. Jeho vzdušnicová soustava je rozvětvená síť trubic otevřených na povrch těla průduchy. Jemné větve přivádějí vzduch blízko tkáním, takže výměna plynů funguje jinak než u člověka s plícemi.",
+      "Představ si vnitřní síť drobných ventilačních hadiček vedoucích až k pracovištím. Člověk dopraví kyslík od plic především krví s hemoglobinem; u hmyzu obstará hlavní cestu kyslíku k buňkám přímo vzdušnicová síť.",
+      "To je důvod, proč není správné automaticky hledat u každého suchozemského živočicha plíce. Měkkýši zahrnují různé dýchací typy a láčkovci využívají výměnu přes povrch. Z nabízených skupin označuje typický vzdušnicový systém právě hmyz."
+    ],
+    "memory": "Hmyz má vlastní ventilační síť: průduchy → vzdušnice → jemné větve k tkáním."
+  },
+  {
+    "id": 240,
+    "bookRef": "VII · otázka 3",
+    "category": "Dýchací systém",
+    "question": "Z obratlovců mají nejdokonalejší dýchací orgány",
+    "options": [
+      "Ryby a obojživelníci",
+      "Obojživelníci a plazi",
+      "Plazi a savci",
+      "Ptáci a savci"
+    ],
+    "answer": 3,
+    "title": "Ptáci a savci mají výkonné, ale rozdílné dýchací soustavy",
+    "paragraphs": [
+      "Klíč označuje D, ptáky a savce. V tomto školním srovnání jde o velmi členité a výkonné soustavy vhodné pro vysoké metabolické nároky. Savci mají plíce s mnoha alveoly, ptáci odlišně uspořádané plíce spolupracující se vzdušnými vaky.",
+      "Představ si dvě různá konstrukční řešení stejného požadavku: účinně získávat kyslík pro aktivní tělo. U savců se střídá nádech a výdech do stejných cest, zatímco u ptáků vzdušné vaky pomáhají udržet zvláštní průtokový systém plic.",
+      "Slovo nejdokonalejší není přesné biologické měřítko. Žábry ryb jsou výborně přizpůsobené vodě a neznamenají jednoduše vadnější plíce. Pro test si spoj D s uvedeným srovnáním, ale současně mysli na různé prostředí a potřeby živočichů."
+    ],
+    "memory": "PDF: ptáci a savci. Funkčně jde o různá řešení pro vysoké nároky na výměnu plynů.",
+    "note": "„Nejdokonalejší“ je hodnotící učebnicová zkratka, nikoli univerzální pořadí pro všechna prostředí a všechna měřítka účinnosti."
+  },
+  {
+    "id": 241,
+    "bookRef": "VII · otázka 4",
+    "category": "Dýchací systém",
+    "question": "Dýchací systém doplněný vzdušnými vaky mají",
+    "options": [
+      "Paryby",
+      "Dvojdyšné ryby",
+      "Obojživelníci",
+      "Ptáci"
+    ],
+    "answer": 3,
+    "title": "Vzdušné vaky pomáhají ventilovat ptačí plíce",
+    "paragraphs": [
+      "Správně je D, ptáci. Jejich dýchací soustava zahrnuje plíce propojené se vzdušnými vaky. Vaky slouží hlavně k pohybu a zásobě vzduchu; hlavní výměna plynů probíhá ve vlastní plicní tkáni.",
+      "Představ si měchy, které pohánějí vzduch přes výměník. Měch a výměník nejsou totéž: vaky zajišťují ventilaci, zatímco plíce poskytují povrch pro přestup plynů. Ptačí uspořádání umožňuje velmi účinné využití proudícího vzduchu.",
+      "Nezaměňuj tyto vaky s lidskými plicními sklípky. Alveoly savců jsou drobná místa výměny, ptačí vzdušné vaky jsou velké navazující prostory s jinou rolí. Stejné slovo vzduch tedy ještě neznamená stejnou anatomickou funkci."
+    ],
+    "memory": "Ptačí vaky jako měchy; vlastní plíce jako výměník kyslíku a oxidu uhličitého."
+  },
+  {
+    "id": 242,
+    "bookRef": "VII · otázka 5",
+    "category": "Dýchací systém",
+    "question": "Zevní dýchání",
+    "options": [
+      "Je výměna plynů mezi krví a plícemi",
+      "Je zajišťováno rozvodem dýchacích plynů",
+      "Zahrnuje tkáňové oxidace",
+      "Je závislé na funkci horních a dolních dýchacích cest"
+    ],
+    "answer": 0,
+    "title": "Zevní výměna probíhá na plicní straně oběhu",
+    "paragraphs": [
+      "Klíč vybírá A. Zevní dýchání zde znamená výměnu plynů mezi vzduchem v plicních sklípcích a krví plicních kapilár. Kyslík přechází do krve a oxid uhličitý opačně, podle rozdílů jejich parciálních tlaků.",
+      "Představ si překladiště mezi okolním vzduchem a dopravou v těle. Ventilace přiveze vzduch do plic, výměna přes tenkou bariéru naloží kyslík do krve a krevní oběh ho rozveze dál. Tyto kroky spolupracují, ale nejsou totožné.",
+      "Tkáňové oxidace jsou buněčné chemické děje a transport plynů krví je další část celé cesty. Funkční dýchací cesty jsou pro přirozenou ventilaci důležité, proto D popisuje souvislost, ale A je hledaná základní definice podle klíče."
+    ],
+    "memory": "Zevní výměna: plicní vzduch ↔ krev; rozvoz krví a spotřeba v buňce jsou další kroky.",
+    "note": "D je také obecně pravdivá funkční souvislost. Jediná odpověď A je vybraná podle tištěného klíče jako definice, nikoli proto, že by dýchací cesty nebyly důležité."
+  },
+  {
+    "id": 243,
+    "bookRef": "VII · otázka 6",
+    "category": "Dýchací systém",
+    "question": "Vnější (zevní) dýchání",
+    "options": [
+      "Je výměna dýchacích plynů mezi krví a tkáňovými buňkami",
+      "Je výměna dýchacích plynů mezi atmosférou a krví",
+      "Je výměna O₂ a CO₂ mezi krví a tkáněmi",
+      "Je oxidativní metabolismus tkání"
+    ],
+    "answer": 1,
+    "title": "Vnější část spojuje atmosféru s krví",
+    "paragraphs": [
+      "Správně je B. V tomto rozdělení vnější dýchání zahrnuje cestu výměny plynů mezi okolním prostředím a krví přes plíce. Samotný přestup kyslíku do krve se odehrává mezi alveolárním vzduchem a plicními kapilárami.",
+      "Představ si hranici mezi vnějším světem a vnitřní dopravou. Vzduch se musí dostat do plicních sklípků a plyny pak překročit tenkou alveolokapilární bariéru. Krev potom může kyslík převézt k jednotlivým tkáním.",
+      "Výměna mezi krví a tkáněmi patří v tomto názvosloví k vnitřnímu dýchání. Oxidativní metabolismus je ještě jiná úroveň: buňky při chemických reakcích využívají přijaté látky k získávání energie. Rozdělení pomáhá nemíchat ventilaci, výměnu a buněčnou spotřebu."
+    ],
+    "memory": "Vnější: atmosféra přes plíce do krve. Vnitřní: krev a tkáň."
+  },
+  {
+    "id": 244,
+    "bookRef": "VII · otázka 7",
+    "category": "Dýchací systém",
+    "question": "Vnitřní dýchání",
+    "options": [
+      "Je výměna plynů mezi vzduchem a krví",
+      "Je výměna plynů mezi krví a tkáňovými buňkami",
+      "Probíhá difúzí přes alveolo-kapilární stěnu",
+      "Je závislé na aktivitě některých center v prodloužené míše"
+    ],
+    "answer": 1,
+    "title": "V tkáních se kyslíková zásilka vyloží",
+    "paragraphs": [
+      "Vnitřní dýchání v této otázce znamená výměnu plynů mezi krví a tkáňovými buňkami, tedy B. Kyslík odchází směrem k buňkám a oxid uhličitý vznikající jejich činností se přesouvá směrem do krve.",
+      "Představ si konečnou vykládku zásilky u příjemce. Plíce byly nakládací místo, krev rozvoz a tkáňové kapiláry místo předání. Mezi cévou a buňkou je tkáňový mok, přes který se plyny také musí přemístit.",
+      "Alveolokapilární stěna leží v plicích, a proto patří k zevní výměně. Nervová centra řídí ventilaci, ale sama neoznačují místní výměnu plynů v orgánech. Důležité je určit, mezi kterými dvěma prostředími právě výměnu popisuješ."
+    ],
+    "memory": "Plíce nakládají, krev veze, tkáně vykládají: poslední krok je zde vnitřní dýchání."
+  },
+  {
+    "id": 245,
+    "bookRef": "VII · otázka 8",
+    "category": "Dýchací systém",
+    "question": "Složení vdechovaného vzduchu:",
+    "options": [
+      "A1, B2, C3",
+      "A2, B1, C3",
+      "A1, B3, C2",
+      "A2, B3, C1"
+    ],
+    "answer": 1,
+    "title": "Kyslík tvoří přibližně pětinu suchého vzduchu",
+    "paragraphs": [
+      "Kyslíku je přibližně 21 %, tedy A2. Dusíku je přibližně 78 %, v zaokrouhlené nabídce 79 %, tedy B1. Oxidu uhličitého je zhruba 0,04 %, C3. Správná kombinace podle PDF je B.",
+      "Představ si sto dílků suchého vzduchu: zhruba jednadvacet patří kyslíku, většina zbytku dusíku a malé části dalším plynům. Kyslík tedy není nejhojnější složka, přestože je pro naše dýchání zásadní.",
+      "Hodnoty jsou orientační. Vzduch obsahuje také argon a další stopové plyny, takže číslo 79 % nesmíš chápat jako přesnou hodnotu samotného dusíku. Ve vlhkém vzduchu navíc část objemu připadá na vodní páru a složení se tím mění."
+    ],
+    "memory": "Kyslík asi 21 %, dusík asi 78 %, CO₂ řádově setiny procenta.",
+    "terms": [
+      "Kyslík",
+      "Dusík",
+      "Oxid uhličitý"
+    ],
+    "definitions": [
+      "79 %",
+      "21 %",
+      "0,04 %"
+    ],
+    "note": "PDF zaokrouhluje dusík na 79 %. Přesnější obvyklý údaj je přibližně 78 % suchého vzduchu; obsah CO₂ kolísá podle prostředí."
+  },
+  {
+    "id": 246,
+    "bookRef": "VII · otázka 9",
+    "category": "Dýchací systém",
+    "question": "Nosohltan a hrtan. Vysvětlete jednotlivé termíny:",
+    "options": [
+      "A2, B1, C3, D4",
+      "A1, B4, C3, D2",
+      "A4, B1, C2, D3",
+      "A3, B4, C2, D1"
+    ],
+    "answer": 2,
+    "title": "Příklopka chrání vstup, trubice a otvory propojují prostory",
+    "paragraphs": [
+      "Epiglottis je hrtanová příklopka, v nabídce A4. Koniotomie označuje nouzové chirurgické otevření dýchací cesty v oblasti hrtanu, B1. Eustachova trubice spojuje střední ucho s nosohltanem, C2. Choana je zadní otvor nosní dutiny do nosohltanu, D3. Vyber C.",
+      "Představ si mapu průchodů: nos vede choanami do nosohltanu, od středního ucha sem ústí sluchová trubice a vstup do hrtanu je při polykání chráněn několika mechanismy včetně příklopky. Každý název označuje jiný spoj nebo ochrannou strukturu.",
+      "Koniotomie není běžná anatomická trubice, ale název zdravotnického výkonu. Příklopka také neodděluje hrtan od hltanu trvale jako pevná zeď: pomáhá chránit vchod při polykání. Definice v nabídce jsou stručné funkční zkratky."
+    ],
+    "memory": "Epi příklopka, Eustachova ucho, choana zadní nosní otvor; koniotomie je výkon.",
+    "terms": [
+      "Epiglottis",
+      "Koniotomie",
+      "Eustachova trubice",
+      "Choana"
+    ],
+    "definitions": [
+      "Umožnění proudění vzduchu do průdušnice",
+      "Spojuje střední ucho s nosohltanem",
+      "Spojuje nosní dutinu s nosohltanem",
+      "Odděluje hrtan od hltanu"
+    ],
+    "note": "A4 neznamená trvalou přepážku. B1 je pouze funkční popis specializovaného výkonu, nikoli návod k jeho provedení."
+  },
+  {
+    "id": 247,
+    "bookRef": "VII · otázka 10",
+    "category": "Dýchací systém",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 0,
+    "title": "Pravá a levá hlavní průduška nejsou zrcadlově stejné",
+    "paragraphs": [
+      "První tvrzení klíč bere jako správné: příklopka se podílí na ochraně vstupu do hrtanu při polykání a průdušnice navazuje pod prstencovou chrupavkou. Nejde ovšem o trvalé úplné oddělení hrtanu od hltanu.",
+      "Druhé tvrzení je chybné. Pravá a levá hlavní průduška nemají stejnou délku ani stejný úhel odstupu. Pravá je obvykle kratší, širší a svislejší, zatímco levá směřuje šikměji a má delší průběh.",
+      "Vyber A: první ano, druhé ne. Představ si rozbočku se dvěma nestejnými rameny, která musí zapadnout do různě uspořádaného hrudníku. Stejné množství plic na obou stranách nevyžaduje stejnou geometrii cest a dokonce ani stejné počty plicních laloků."
+    ],
+    "memory": "Pravá hlavní průduška bývá kratší, širší a svislejší než levá.",
+    "statements": [
+      "Dutina hrtanu je od hltanu oddělena hrtanovou příklopkou, která se při polykání uzavírá. Průdušnice navazuje na prstencovou chrupavku hrtanu.",
+      "Průdušnice vstupuje do hrudníku, kde se větví na pravou a levou průdušku, které vstupují do plic. Obě průdušky v místě větvení odstupují pod stejným úhlem a jsou stejně dlouhé."
+    ],
+    "note": "První tvrzení používá zkratku pro ochranu při polykání; na uzávěru dýchací cesty spolupracuje více struktur, nejen samotná epiglottis."
+  },
+  {
+    "id": 248,
+    "bookRef": "VII · otázka 11",
+    "category": "Dýchací systém",
+    "question": "Vysvětlete uvedené termíny:",
+    "options": [
+      "A1, B3, C4, D1",
+      "A2, B4, C3, D1",
+      "A4, B3, C2, D1",
+      "A2, B3, C4, D1"
+    ],
+    "answer": 3,
+    "title": "Nádech, výdech, pauza a nedostatek kyslíku",
+    "paragraphs": [
+      "Apnoe je přerušení dýchání, A2. Inspirium je vdech, B3. Expirium je výdech, C4. Hypoxie znamená nedostatek kyslíku ve tkáních, D1. Správná kombinace podle klíče je D.",
+      "Představ si dechový cyklus jako pohyb vzduchu dovnitř a ven. Inspirium a expirium označují směr této ventilace. Apnoe popisuje chybějící dýchání, zatímco hypoxie říká něco o zásobení tkáně a nemusí mít vždy stejnou příčinu.",
+      "Hypoxie může souviset také s oběhem nebo schopností krve kyslík převážet, nejen s neprůchodnou cestou vzduchu. Rozlišuj proto děj pohybu vzduchu od výsledku v tkáních. Člověk může provádět dechové pohyby a přesto mít nedostatečně okysličenou určitou tkáň."
+    ],
+    "memory": "IN dovnitř = inspirium; EX ven = expirium; apnoe pauza; hypoxie málo kyslíku ve tkáni.",
+    "terms": [
+      "Apnoe",
+      "Inspirium",
+      "Expirium",
+      "Hypoxie"
+    ],
+    "definitions": [
+      "Nedostatek kyslíku v tkáních",
+      "Přerušení dýchání",
+      "Vdech",
+      "Výdech"
+    ]
+  },
+  {
+    "id": 249,
+    "bookRef": "VII · otázka 12",
+    "category": "Dýchací systém",
+    "question": "Hrtan",
+    "options": [
+      "Je součástí horních cest dýchacích",
+      "Je místem rozdělení cest polykacích a dýchacích",
+      "Je orgán tvorby hlasu",
+      "Je soubor nepohyblivě spojených chrupavek"
+    ],
+    "answer": 2,
+    "title": "Hlas vzniká proudem vzduchu přes hlasivky",
+    "paragraphs": [
+      "Správně je C. Hrtan obsahuje hlasivky a proud vydechovaného vzduchu může rozkmitat hlasivkové řasy. Tím vzniká základ hlasu, který se potom upravuje v navazujících rezonančních prostorech a při artikulaci.",
+      "Představ si zdroj zvuku, jehož napětí a uspořádání lze měnit. Hrtanové chrupavky, svaly a klouby nastavují polohu hlasivek a velikost hlasivkové štěrbiny. Není to tedy nepohyblivě slepená trubka.",
+      "V členění používaném PDF se hrtan řadí do dolních cest dýchacích. Hltan je společným úsekem pro vzduch a potravu a v oblasti vstupu do hrtanu se cesty funkčně rozcházejí. Nejjednoznačnější hledaná úloha hrtanu v nabídce je tvorba hlasu."
+    ],
+    "memory": "Hrtan obsahuje hlasivky: proud vzduchu je rozkmitá a vznikne základ hlasu.",
+    "note": "Rozdělení na horní a dolní cesty se může mezi obory lišit. Hodnocení A zde odpovídá členění učebnice, zatímco C označuje jednoznačnou funkci hrtanu."
+  },
+  {
+    "id": 250,
+    "bookRef": "VII · otázka 13",
+    "category": "Dýchací systém",
+    "question": "Hrtan",
+    "options": [
+      "Je od hltanu trvale oddělen hrtanovou příklopkou",
+      "Je spojen Eustachovou trubicí se středním uchem",
+      "Přechází dolním úsekem plynule do průdušnice",
+      "Je tvořen chrupavkami, z nichž největší je hmatná chrupavka prstenčitá"
+    ],
+    "answer": 2,
+    "title": "Hrtan navazuje směrem dolů na průdušnici",
+    "paragraphs": [
+      "Správně je C. Hrtan tvoří část cesty pro vzduch a jeho dolní úsek pokračuje do průdušnice. Ta potom sestupuje do hrudníku a dělí se na hlavní průdušky. Při představě cesty vzduchu tak má každá část své místo.",
+      "Představ si navazující úseky jedné dopravní trasy. Hrtan má zvláštní vybavení pro hlas a ochranu dýchací cesty, průdušnice pokračuje jako chrupavkami zpevněný přívod. Příklopka není trvalá zeď mezi hltanem a hrtanem.",
+      "Eustachova trubice ústí do nosohltanu, nikoli do hrtanu. Největší hrtanovou chrupavkou je chrupavka štítná; prstencová leží níže a vytváří úplný prstenec. D tak zaměňuje dvě různé chrupavky a jejich vlastnosti."
+    ],
+    "memory": "Hrtan → průdušnice; největší je štítná chrupavka, prstencová tvoří úplný prstenec."
   }
 ]);
 const $ = id => document.getElementById(id);
