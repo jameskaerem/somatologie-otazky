@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f6f3ee">
-  <meta name="description" content="250 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
+  <meta name="description" content="300 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
   <title>Somatologie · malý krok, velké pochopení</title>
   <style>
     :root{color-scheme:light;--bg:#f6f3ee;--paper:#fffefa;--ink:#293d39;--muted:#65736e;--line:#e1e6df;--sage:#dceadf;--green:#236345;--green-bg:#e4f3e7;--red:#983a45;--red-bg:#fbe5e6;--lavender:#ece7f8;--accent:#65558e;--peach:#fae8dc;--radius:26px}
@@ -18,22 +18,22 @@
   <header class="brand">
     <div class="brand-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M4 6.5c3.4-1.2 6.7-.7 10 1.6 3.3-2.3 6.6-2.8 10-1.6v16c-3.4-1.2-6.7-.7-10 1.6-3.3-2.3-6.6-2.8-10-1.6v-16Z" stroke="#56765e" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 8v16M7.5 11l3 .9M7.5 15l3 .9M17.5 12l3-.9M17.5 16l3-.9" stroke="#56765e" stroke-width="1.5" stroke-linecap="round"/></svg></div>
     <div><div class="brand-name">Somatologie</div><div class="brand-sub">Malý krok, velké pochopení.</div></div>
-    <span class="offline">250 otázek</span>
+    <span class="offline">300 otázek</span>
   </header>
 
-  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">250 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
+  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">300 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
   <div id="storageNotice" class="toast" hidden>Prohlížeč nepovolil ukládání. Test funguje, ale po zavření se průběh neobnoví.</div>
   <div id="recoveryNotice" class="recovery" hidden>Uložený pokrok nebylo možné načíst. Začínáme s novým přehledem.</div>
   <section class="card home" id="home" aria-label="Přehled učení">
     <h2 class="home-title">Každá otázka má svůj čas.</h2>
-    <div class="home-stats"><div class="home-stat"><span>Vyzkoušeno</span><strong id="seenTotal">0 / 250</strong></div><div class="home-stat"><span>Zvládnuté</span><strong id="masteredTotal">0 / 250</strong></div><div class="home-stat"><span>Čas zopakovat</span><strong id="dueTotal">0</strong></div></div>
+    <div class="home-stats"><div class="home-stat"><span>Vyzkoušeno</span><strong id="seenTotal">0 / 300</strong></div><div class="home-stat"><span>Zvládnuté</span><strong id="masteredTotal">0 / 300</strong></div><div class="home-stat"><span>Čas zopakovat</span><strong id="dueTotal">0</strong></div></div>
     <p class="learning-label">Zvládnuté = alespoň 3 úspěšná vybavení v plánovaných termínech.</p>
-    <div class="track" role="progressbar" id="learningProgress" aria-label="Počet opakovaně zvládnutých otázek" aria-valuemin="0" aria-valuemax="250" aria-valuenow="0"><div class="fill" id="learningFill"></div></div>
+    <div class="track" role="progressbar" id="learningProgress" aria-label="Počet opakovaně zvládnutých otázek" aria-valuemin="0" aria-valuemax="300" aria-valuenow="0"><div class="fill" id="learningFill"></div></div>
     <p class="home-hint" id="homeHint"></p>
     <button class="next resume" id="resume" hidden>Pokračovat v kole</button>
     <div class="mode-card recommended"><span class="tag">Doporučený režim</span><h3>Chytré procvičování</h3><p>Krátké kolo do 10 odpovědí. Přednost mají chyby a tipy, pak otázky k opakování a nové. Zvládnuté odpočívají do svého termínu.</p><button class="next" id="smartStart">Začít chytré kolo</button></div>
     <div class="mode-card"><h3>Jen chyby a tipy <span class="pill" id="weakCount">0</span></h3><p id="weakHint"></p><button class="next secondary" id="weakStart">Procvičit slabší otázky</button></div>
-    <div class="mode-card"><h3>Test všech 250</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
+    <div class="mode-card"><h3>Test všech 300</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
     <details class="home-help"><summary>Jak funguje chytré opakování?</summary><ul><li><strong>Chyba nebo tip:</strong> otázka se vrátí po alespoň třech jiných odpovědích v témže chytrém kole, jinak přibližně za 10 minut.</li><li><strong>Správně a bez tipu:</strong> termíny se postupně prodlužují na 1, 3, 7, 14 a 30 dní od příslušné odpovědi.</li><li><strong>Správně před termínem:</strong> procvičení se počítá do výsledku, ale samo neposune otázku na vyšší úroveň.</li><li><strong>Tři úspěchy s odstupem:</strong> otázka se označí jako zvládnutá. Nezmizí navždy; po termínu se znovu ověří.</li><li><strong>Další chyba:</strong> otázka se vrátí mezi ty k častému procvičení.</li></ul><p>Jednotlivé otázky se v chytrém kole mohou zopakovat. Skóre proto počítá odpovědi, zatímco horní přehled počítá různé otázky.</p><p>Pokrok se ukládá pouze v tomto prohlížeči a na této webové adrese. Telefon a počítač mají samostatný přehled. Režim tipování označ před odpovědí.</p></details>
   </section>
   <div class="quiz-toolbar" id="quizToolbar" hidden><button class="home-button" id="homeButton">← Přehled</button><span class="mode-label" id="modeLabel"></span></div>
@@ -53,7 +53,7 @@
   </section>
   <section class="card" id="results" aria-label="Výsledek kola" hidden></section>
   <footer class="footer"><p id="saveStatus">Pokrok se ukládá v tomto prohlížeči. Bez účtu a registrace.</p>
-    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 250 otázek v pořadí dokumentu: kapitolu I, otázky 1–45 (v aplikaci 1–45), kapitolu II, otázky 1–28 (46–73), kapitolu III, otázky 1–6 (74–79), kapitolu IV.a, otázky 1–29 (80–108), kapitolu IV.b, otázky 1–33 (109–141), kapitolu V, otázky 1–60 (142–201), kapitolu VI, otázky 1–36 (202–237), a kapitolu VII, otázky 1–13 (238–250).</p><p>Otázky: tištěné strany 8–15, 18–22, 24–25, 28–39, 42–51, 54–59 a 62–64 (PDF strany 5–8, 10–13, 15–20, 22–26, 28–30 a 32–33). Tištěné klíče: strany 15, 22, 25, 32, 39, 51, 60 a 67 (PDF strany 8, 12, 13, 17, 20, 26, 31 a 34). Všech 250 přiřazení správné odpovědi bylo porovnáno s těmito klíči; nově přidané otázky se ověřovaly bez internetových zdrojů. Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
+    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 300 otázek v pořadí dokumentu: kapitolu I, otázky 1–45 (v aplikaci 1–45), kapitolu II, otázky 1–28 (46–73), kapitolu III, otázky 1–6 (74–79), kapitolu IV.a, otázky 1–29 (80–108), kapitolu IV.b, otázky 1–33 (109–141), kapitolu V, otázky 1–60 (142–201), kapitolu VI, otázky 1–36 (202–237), kapitolu VII, otázky 1–34 (238–271), a kapitolu VIII, otázky 1–29 (272–300).</p><p>Otázky: tištěné strany 8–15, 18–22, 24–25, 28–39, 42–51, 54–59, 62–67 a 70–75 (PDF strany 5–8, 10–13, 15–20, 22–26, 28–30, 32–34 a 36–38). Tištěné klíče: strany 15, 22, 25, 32, 39, 51, 60, 67 a 78 (PDF strany 8, 12, 13, 17, 20, 26, 31, 34 a 40). Všech 300 přiřazení správné odpovědi bylo porovnáno s těmito klíči; nově přidané otázky se ověřovaly bez internetových zdrojů. Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
     <details class="sources"><summary>Uložený pokrok</summary><p>Nové kolo nemaže dřívější znalost otázek. Vymazání dole resetuje celé učení. Vymazáním dat prohlížeče se pokrok také ztratí. Stejná webová adresa po nahrání nové verze pokrok zachová, pokud zůstane zachované úložiště prohlížeče.</p><button class="reset" id="reset">Vymazat celý uložený pokrok</button></details>
   </footer>
 </main>
@@ -5622,6 +5622,1117 @@ QUESTIONS.push(...[
       "Eustachova trubice ústí do nosohltanu, nikoli do hrtanu. Největší hrtanovou chrupavkou je chrupavka štítná; prstencová leží níže a vytváří úplný prstenec. D tak zaměňuje dvě různé chrupavky a jejich vlastnosti."
     ],
     "memory": "Hrtan → průdušnice; největší je štítná chrupavka, prstencová tvoří úplný prstenec."
+  },
+  {
+    "id": 251,
+    "bookRef": "VII · otázka 14",
+    "category": "Dýchací systém",
+    "question": "Barva hlasu závisí na",
+    "options": [
+      "Na šířce hlasivkové štěrbiny",
+      "Na délce hlasových vazů",
+      "Napětí hlasových vazů",
+      "Na prostornosti a tvaru hrtanové dutiny a nosních dutin"
+    ],
+    "answer": 3,
+    "title": "Barva hlasu závisí i na rezonančních prostorech",
+    "paragraphs": [
+      "Klíč vybírá D. Barva hlasu znamená charakter zvuku, podle kterého poznáš různé hlasy i při stejné výšce tónu. Významně ji ovlivňuje tvar a velikost rezonančních prostorů nad hlasivkami, které některé složky zvuku zvýrazní a jiné utlumí.",
+      "Představ si stejný zdroj tónu připojený k různým ozvučným skříním. Výška může zůstat podobná, ale výsledný zvuk bude jiný. U člověka pracuje hltan, ústní dutina a podle nastavení měkkého patra také nosní prostor.",
+      "Délka a napětí hlasivek ovlivňují hlavně rychlost jejich kmitání, tedy výšku základního tónu. Vlastnosti hlasového zdroje se ovšem na barvě podílejí také. Otázka zjednodušeně rozlišuje rezonanční zabarvení od výšky hlasu."
+    ],
+    "memory": "Výška = jak rychle hlasivky kmitají; barva = také jak zvuk upraví rezonanční prostory.",
+    "note": "D je školní zkratka. Barvu významně utváří celý hlasový trakt, zejména hltan a ústní dutina; nelze ji vysvětlit jen velikostí nosních dutin."
+  },
+  {
+    "id": 252,
+    "bookRef": "VII · otázka 15",
+    "category": "Dýchací systém",
+    "question": "Výška hlasu závisí na",
+    "options": [
+      "Poloze hrtanové příklopky",
+      "Prostornosti a tvaru hrtanové a hltanové dutiny",
+      "Na napětí a délce hlasových vazů",
+      "Velikosti hrtanových chrupavek"
+    ],
+    "answer": 2,
+    "title": "Napnutější hlasivky mohou kmitat rychleji",
+    "paragraphs": [
+      "Správně je C. Výška hlasu souvisí s frekvencí kmitání hlasivek a tu ovlivňuje jejich napětí, délka i účinná hmotnost. Hrtanové svaly mohou nastavením těchto vlastností výšku průběžně měnit.",
+      "Představ si strunu hudebního nástroje: změnou napětí a délky měníš její kmitání. Hlasivky nejsou doslova dvě obyčejné struny, protože jde o živé pružné řasy rozechvívané proudem vzduchu, ale přirovnání vystihuje vztah k frekvenci.",
+      "Rezonanční dutiny potom mění výslednou podobu zvuku a jeho barvu. Příklopka má hlavní roli v ochraně dýchací cesty při polykání, nikoli jako běžný ovladač výšky tónu. Rozlišuj tedy zdroj kmitání od prostorů, kterými zvuk dál prochází."
+    ],
+    "memory": "Napětí a délka hlasivek nastavují kmitání; rychlejší kmitání znamená vyšší tón."
+  },
+  {
+    "id": 253,
+    "bookRef": "VII · otázka 16",
+    "category": "Dýchací systém",
+    "question": "Průdušky",
+    "options": [
+      "Obě zcela symetricky navazují na průdušnici",
+      "Se před vstupem do plic větví na průdušinky",
+      "Jsou tvořeny podkovovitými chrupavkami",
+      "Obsahují ve vazivu hladkou i příčně pruhovanou svalovinu"
+    ],
+    "answer": 2,
+    "title": "Chrupavka podpírá dýchací cestu, její tvar se ale mění",
+    "paragraphs": [
+      "PDF hodnotí C. Hlavní průdušky mají chrupavčitou oporu, která pomáhá udržovat jejich průsvit. V úsecích mimo plíce mohou být chrupavky podobné neúplným prstencům průdušnice; dále v plicích přechází opora v nepravidelné ploténky.",
+      "Představ si pružnou hadici s výztuhami proti zhroucení. Je důležité, aby vzduch mohl proudit i při změnách tlaku. Menší průdušinky už chrupavku nemají a výraznou roli v jejich stěně hraje hladká svalovina.",
+      "Pravá a levá hlavní průduška nejsou zrcadlově stejné. Průdušinky vznikají až po dalších větveních, ne jako hotové jemné větve před vstupem do plic. Běžná svalovina průduškové stěny je hladká, nikoli kosterní příčně pruhovaná."
+    ],
+    "memory": "Průdušky mají chrupavčitou oporu; průdušinky už chrupavku nemají.",
+    "note": "C není přesný popis všech průdušek. Podkovovité opory se vztahují hlavně k velkým mimoplicním úsekům, uvnitř plic převažují chrupavčité ploténky."
+  },
+  {
+    "id": 254,
+    "bookRef": "VII · otázka 17",
+    "category": "Dýchací systém",
+    "question": "Pravá průduška",
+    "options": [
+      "Se větví na dvě skupiny průdušek do dvou plicních laloků",
+      "Odstupuje pod ostřejším úhlem od průdušnice než levá průduška",
+      "Probíhá téměř v přímém pokračování průdušnice",
+      "Je kratší, než levá"
+    ],
+    "answer": 2,
+    "title": "Pravá hlavní průduška směřuje svisleji",
+    "paragraphs": [
+      "Klíč vybírá C: pravá hlavní průduška vede více v pokračování směru průdušnice než levá. Bývá také širší a kratší. Uspořádání dvou hlavních průdušek tedy není dokonale symetrické.",
+      "Představ si rozbočku, kde jedna větev míří více rovně a druhá odbočuje výrazněji stranou. To pomáhá pochopit, proč se vdechnutý cizí předmět za určitých okolností snáze dostane do pravého hlavního ramene. Nejde ale o pravidlo bez výjimek.",
+      "Pravá plíce má tři laloky, ne dva, takže A neplatí. D naopak popisuje běžně správnou vlastnost pravé hlavní průdušky a B závisí na tom, vůči které ose úhel měříme. Pro test zachováváme C, ale nabídka není odborně dokonale výlučná."
+    ],
+    "memory": "Pravá hlavní průduška: obvykle svislejší, širší a kratší; klíč vybírá C.",
+    "note": "Také D je běžně pravdivé. C je jediná hodnocená odpověď podle PDF, nikoli důkaz, že pravá průduška není kratší."
+  },
+  {
+    "id": 255,
+    "bookRef": "VII · otázka 18",
+    "category": "Dýchací systém",
+    "question": "Co znamenají uvedené termíny?",
+    "options": [
+      "A4, B1, C2, D3",
+      "A1, B4, C2, D3",
+      "A4, B1, C3, D2",
+      "A1, B4, C3, D2"
+    ],
+    "answer": 0,
+    "title": "Hrtan a hltan se podobají názvem, ale mají jiné role",
+    "paragraphs": [
+      "Diaphragma je bránice, A4. Pleura označuje pohrudniční systém blan, v nabídce B1. Larynx je hrtan, C2, a pharynx hltan, D3. Správná kombinace je A. U posledních dvou názvů rozhoduje jediná souhláska.",
+      "Představ si cestu vzduchu přes hltan ke vstupu do hrtanu a dál do průdušnice. Hltan je společná křižovatka pro potravu a vzduch, hrtan obsahuje hlasivky a chrání dýchací cestu. Bránice leží níže jako důležitý dýchací sval.",
+      "Pleura má nástěnný a útrobní list. V přesné češtině je nástěnný list pohrudnice a list přímo na plíci poplicnice. Přiřazení B1 používá obecnější školní překlad, nikoli tvrzení, že jde jen o jedinou blánu bez rozlišení listů."
+    ],
+    "memory": "Larynx hrtan, pharynx hltan; diaphragma bránice, pleura dvě spolupracující blány.",
+    "terms": [
+      "Diaphragma",
+      "Pleura",
+      "Larynx",
+      "Pharynx"
+    ],
+    "definitions": [
+      "Pohrudnice",
+      "Hrtan",
+      "Hltan",
+      "Bránice"
+    ]
+  },
+  {
+    "id": 256,
+    "bookRef": "VII · otázka 19",
+    "category": "Dýchací systém",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 2,
+    "title": "Plíce mají laloky a uvnitř nich menší segmenty",
+    "paragraphs": [
+      "Podle klíče jsou obě tvrzení správná, tedy C. Pravá plíce má běžně tři laloky a levá dva. Uvnitř jsou bronchopulmonální segmenty, z nichž každý má vlastní segmentální průdušku a přívodnou větev plicní tepny.",
+      "Představ si dům rozdělený na křídla a ta dále na oddělení s vlastním přívodem. Takové uspořádání umožňuje za vhodných okolností odstranit jednotlivý segment a ponechat ostatní. Hranice mezi segmenty pomáhají orientaci, ale nejsou jako silné stěny místností.",
+      "Plicní žíly často probíhají mezi segmenty, takže tvrzení o vlastních cévách je potřeba chápat zjednodušeně. Segment přesto představuje užitečnou anatomickou jednotku větší než jednotlivý sklípek nebo jemné výměnné struktury."
+    ],
+    "memory": "Pravá plíce tři laloky, levá dva; segment má vlastní průdušku a tepennou větev.",
+    "statements": [
+      "Pravá plíce je rozdělena na tři laloky a levá na dva laloky. Plicní laloky se dělí na plicní segmenty.",
+      "Plicní segment je úsek plicní tkáně, který má vlastní průdušku a cévy a je oddělen od ostatních segmentů vrstvou vaziva. Operačně lze odstraňovat samostatně i jednotlivé segmenty."
+    ],
+    "note": "Vazivové hranice bývají jemné a ne vždy úplné. Žilní odtok není uzavřený samostatný systém uvnitř každého segmentu."
+  },
+  {
+    "id": 257,
+    "bookRef": "VII · otázka 20",
+    "category": "Dýchací systém",
+    "question": "Co znamenají uvedené termíny?",
+    "options": [
+      "A3, B4, C2, D1",
+      "A4, B2, C3, D1",
+      "A4, B3, C2, D1",
+      "A4, B3, C1, D2"
+    ],
+    "answer": 2,
+    "title": "Od hlavní trubice až k místu výměny",
+    "paragraphs": [
+      "Alveolus je plicní sklípek, A4. Bronchiolus je průdušinka, B3. Bronchus znamená průduška, C2. Trachea je průdušnice, D1. Správná kombinace je C. Zdrobnělina bronchiolus ti pomůže rozpoznat jemnější větev.",
+      "Představ si strom obrácený korunou dolů: průdušnice je hlavní kmen, průdušky větší větve a průdušinky menší větvení. Na jejich vzdáleném konci se nacházejí výměnné oblasti s alveoly. Vedení vzduchu a vlastní výměna tedy mají odlišné místo.",
+      "Alveolus není další velká transportní trubka. Jeho tenká stěna spolu s okolními kapilárami umožňuje přestup plynů. U běžných vodivých průdušinek je hlavní úlohou přívod vzduchu, zatímco výměna začíná v navazující respirační části."
+    ],
+    "memory": "Trachea průdušnice → bronchus průduška → bronchiolus průdušinka → alveolus sklípek.",
+    "terms": [
+      "Alveolus",
+      "Bronchiolus",
+      "Bronchus",
+      "Trachea"
+    ],
+    "definitions": [
+      "Průdušnice",
+      "Průduška",
+      "Průdušinka",
+      "Plicní sklípek"
+    ]
+  },
+  {
+    "id": 258,
+    "bookRef": "VII · otázka 21",
+    "category": "Dýchací systém",
+    "question": "Plíce",
+    "options": [
+      "Jsou rozděleny na menší pravou a větší levou plíci",
+      "Jsou tvořeny šesti laloky",
+      "Jsou obaleny vazivovou blanou pohrudnicí",
+      "Přiléhají k hrudní stěně v důsledku podtlaku v pohrudniční štěrbině"
+    ],
+    "answer": 3,
+    "title": "Dvě vlhké blány pomáhají přenést pohyb hrudníku na plíce",
+    "paragraphs": [
+      "Správně je D. Za běžných podmínek je tlak v pohrudniční dutině nižší než tlak v plicních sklípcích a rozdíl pomáhá udržet plíce rozepjaté. Tenká vrstva tekutiny umožňuje klouzání i mechanické spojení obou pleurálních listů.",
+      "Představ si dvě navlhčené hladké destičky: mohou po sobě klouzat, ale jdou hůře odtáhnout od sebe. Když se hrudník při nádechu rozšíří, přes tento systém se pohyb přenese i na plíce. Samotná plíce se aktivně neroztahuje vlastním kosterním svalem.",
+      "Pravá plíce je obvykle větší a má tři laloky, levá dva. Na povrchu plíce je přesně poplicnice; pohrudnice vystýlá hrudní stěnu. C používá nesprávné přesné české označení listu, proto klíč vybírá D."
+    ],
+    "memory": "Poplicnice na plíci, pohrudnice na hrudní stěně; tlakový rozdíl drží plíci rozepjatou."
+  },
+  {
+    "id": 259,
+    "bookRef": "VII · otázka 22",
+    "category": "Dýchací systém",
+    "question": "Plicní segmenty",
+    "options": [
+      "Nelze operativně od sebe oddělit",
+      "Lze zobrazit plicní scintigrafií",
+      "Nejsou vzájemně odděleny vazivem",
+      "Jsou nejmenšími funkčními jednotkami plicní tkáně"
+    ],
+    "answer": 1,
+    "title": "Zobrazení může ukázat rozložení funkce v plicích",
+    "paragraphs": [
+      "Klíč vybírá B. Plicní scintigrafie zobrazuje rozložení prokrvení nebo ventilace podle použitého vyšetření. Na takovém zobrazení lze hodnotit také oblasti odpovídající segmentům, například segmentální poruchy prokrvení.",
+      "Představ si funkční mapu budovy, která ukazuje, kam přichází dodávka nebo proudí vzduch. Není to stejný obraz jako detailní fotografie každé stěny, ale oblastní výpadek se může zobrazit podle anatomického členění.",
+      "Segmenty nejsou nejmenší výměnné jednotky a za vhodných podmínek je lze chirurgicky oddělit. Jejich hranice mohou být vyznačeny jemným vazivem; nelze je popsat jako zcela bez hranic ani jako vždy dokonale oddělené silnou přepážkou."
+    ],
+    "memory": "Segment je oblast s vlastní průduškou; scintigrafie ukazuje funkční rozložení, ne detail každé stěny.",
+    "note": "B neznamená, že scintigrafie zobrazuje jemné anatomické hranice stejně jako detailní anatomická zobrazovací metoda."
+  },
+  {
+    "id": 260,
+    "bookRef": "VII · otázka 23",
+    "category": "Dýchací systém",
+    "question": "Struktura plic",
+    "options": [
+      "Povrch plic kryje pevná blána – pohrudnice",
+      "Pravá plíce má tři laloky, levá dva",
+      "Obě plíce mají stejný počet laloků, ale různou velikost",
+      "Průdušky se před vstupem do plic dělí v několik větví"
+    ],
+    "answer": 1,
+    "title": "Na pravé straně tři, na levé dva",
+    "paragraphs": [
+      "Správně je B. Běžné členění pravé plíce zahrnuje horní, střední a dolní lalok, zatímco levá má horní a dolní. Levá strana hrudníku navíc musí respektovat prostorové vztahy se srdcem.",
+      "Představ si dvě sousední budovy s podobnou funkcí, ale jiným rozdělením křídel. Stejný úkol zásobit krev kyslíkem nevyžaduje zrcadlově totožné členění. Počet laloků si proto nelze odvodit jen z toho, že máme dvě plíce.",
+      "Blánu přímo na plíci nazýváme poplicnice; pohrudnice vystýlá hrudní stěnu. Další větvení průduškového stromu probíhá převážně uvnitř plic, takže D není přesný obecný popis hlavních průdušek před jejich vstupem."
+    ],
+    "memory": "Pravá horní + střední + dolní = 3; levá horní + dolní = 2."
+  },
+  {
+    "id": 261,
+    "bookRef": "VII · otázka 24",
+    "category": "Dýchací systém",
+    "question": "Dechový objem",
+    "options": [
+      "Se rovná vitální kapacitě plic",
+      "Se může při práci a námaze zvětšit až 10krát",
+      "Je při usilovném dýchání až 2 litry vzduchu",
+      "Je při klidném dýchání objem asi 500 ml"
+    ],
+    "answer": 3,
+    "title": "Běžný dech je jen část toho, co dokážeme vydechnout",
+    "paragraphs": [
+      "Klíč vybírá D. Klidový dechový objem dospělého se často ilustruje hodnotou přibližně 500 mililitrů na jeden nádech či výdech. Nejde o přesnou povinnou dávku každého člověka a každého jednotlivého dechu.",
+      "Představ si pumpu, která při běžném provozu používá jen část možného zdvihu. Při větší potřebě může být dech hlubší a současně častější. Vitální kapacita ale popisuje maximální vydechnutelný objem po maximálním nádechu, ne jednu klidovou dávku.",
+      "Při námaze se objem může zvýšit, ale jednoduché univerzální hranice dva litry nebo přesný desetinásobek nevystihují rozdíly mezi lidmi a situacemi. Pro základní otázku je rozhodující odlišit orientačních půl litru klidového dechu od maximálních kapacit."
+    ],
+    "memory": "Klidový dech zhruba půl litru; vitální kapacita je maximální rozdíl mezi plným nádechem a výdechem."
+  },
+  {
+    "id": 262,
+    "bookRef": "VII · otázka 25",
+    "category": "Dýchací systém",
+    "question": "Vitální kapacita plic",
+    "options": [
+      "Je minutový dechový objem",
+      "Je počet dechů za minutu",
+      "Mívá hodnotu kolem 4000 ml",
+      "Je objem vzduchu v plicích po přerušení dýchání"
+    ],
+    "answer": 2,
+    "title": "Kapacita je objem, ne frekvence ani minutový součet",
+    "paragraphs": [
+      "Podle klíče je správně C. Čtyři litry jsou orientační školní příklad vitální kapacity dospělého. Je to objem vzduchu, který lze maximálně vydechnout po předchozím maximálním nádechu.",
+      "Představ si měřitelný rozsah mezi největším naplněním a největším vyprázdněním pumpy. V plicích přesto i po maximálním výdechu zůstává reziduální objem. Vitální kapacita tedy neznamená veškerý vzduch, který by plíce kdy mohly obsahovat.",
+      "Počet dechů za minutu je frekvence a součin frekvence s dechovým objemem dává minutovou ventilaci. Skutečná vitální kapacita závisí například na výšce, věku, tělesných proporcích a zdravotním stavu, takže jeden údaj nelze použít jako stejnou normu pro všechny."
+    ],
+    "memory": "Vitální kapacita = maximální výdech po maximálním nádechu; 4 litry jsou jen orientační příklad."
+  },
+  {
+    "id": 263,
+    "bookRef": "VII · otázka 26",
+    "category": "Dýchací systém",
+    "question": "Vitální kapacita plic",
+    "options": [
+      "Je u žen dvojnásobkem a u mužů čtyřnásobkem hodnoty povrchu těla",
+      "Je množství vzduchu, které vydechneme po největším nádechu",
+      "Je úplným a spolehlivým ukazatelem výkonnosti plic",
+      "Může u trénovaných sportovců dosáhnout hodnoty až 3 litrů"
+    ],
+    "answer": 1,
+    "title": "Rozhodující je maximální nádech i maximální výdech",
+    "paragraphs": [
+      "Správně podle klíče je B. Přesná definice potřebuje dodat, že jde o maximálně vydechnuté množství po maximálním nádechu. Kdybys po plném nádechu vydechl jen maličko, samozřejmě tím celou vitální kapacitu nezměříš.",
+      "Představ si odměření celého využitelného rozsahu nádoby, ne náhodné malé porce. Měření ukazuje důležitou vlastnost plicních objemů, ale neřekne samo o sobě všechno o průchodnosti dýchacích cest, výměně plynů nebo stavu oběhu.",
+      "Pevný vztah k povrchu těla uvedený v A není obecné pravidlo a tři litry nepředstavují horní mez trénovaného sportovce. Také větší objem automaticky neznamená celkově zdravější či výkonnější plíce bez ohledu na další funkční údaje."
+    ],
+    "memory": "Maximální nádech → maximální výdech = měření vitální kapacity; samo nepopíše celé zdraví plic.",
+    "note": "B je zkrácené: musí jít o maximální výdech, ne libovolný výdech po velkém nádechu."
+  },
+  {
+    "id": 264,
+    "bookRef": "VII · otázka 27",
+    "category": "Dýchací systém",
+    "question": "Hodnota vitální kapacity plic",
+    "options": [
+      "Se rovná dechovému objemu",
+      "Se rovná expiračnímu rezervnímu objemu",
+      "Umožňuje samostatně a přesně rozlišit povahu poruch v plicní ventilaci",
+      "Je určitým i když neúplným ukazatelem výkonnosti plic"
+    ],
+    "answer": 3,
+    "title": "Jeden údaj z měření není celý příběh plic",
+    "paragraphs": [
+      "Správně je D. Vitální kapacita poskytuje užitečnou informaci o využitelném objemovém rozsahu, ale sama nevysvětluje veškerou plicní funkci. Pro posouzení poruch je potřeba znát další objemy, průtoky a souvislosti.",
+      "Představ si hodnocení auta jen podle velikosti nádrže. Údaj je užitečný, ale neřekne, jak dobře pracuje motor nebo jak snadno proudí palivo. Podobně vitální kapacita neukáže sama přesný mechanismus každé poruchy ventilace.",
+      "Klidový dechový objem je jen jedna menší část tohoto rozsahu. Expirační rezervní objem je množství, které ještě vydechneš navíc po běžném klidovém výdechu. Ani jeden tedy není synonymem celé vitální kapacity."
+    ],
+    "memory": "Vitální kapacita je užitečný dílek skládačky, ne samostatná úplná diagnóza."
+  },
+  {
+    "id": 265,
+    "bookRef": "VII · otázka 28",
+    "category": "Dýchací systém",
+    "question": "Dýchací centrum",
+    "options": [
+      "Reaguje citlivěji na nedostatek O₂ než na přebytek CO₂",
+      "Vysílá podněty k míšním nervům, inervujícím dýchací svaly",
+      "Funguje automaticky a nelze jej ovlivnit chemickými podněty",
+      "Nelze ovlivnit vědomím"
+    ],
+    "answer": 1,
+    "title": "Automatický rytmus potřebuje cestu až ke svalům",
+    "paragraphs": [
+      "Správně je B. Nervové okruhy řídící dýchání vytvářejí rytmickou aktivitu a přes navazující motorické dráhy ovládají bránici a další dýchací svaly. Míšní motorické neurony pak posílají povely příslušnými nervy ke svalům.",
+      "Představ si automatický dirigentský systém, který musí mít vodiče až k jednotlivým hráčům. Samotné centrum nevytvoří mechanický nádech bez svalové práce. Výstup je průběžně upravován podle informací o potřebách organismu.",
+      "Řízení reaguje na chemické podněty, zejména souvislosti CO₂ a pH, a při poklesu kyslíku také na signály periferních receptorů. Dýchání lze dočasně ovlivnit vůlí, takže automatický provoz neznamená úplnou nemožnost vědomého zásahu."
+    ],
+    "memory": "Centrum rytmus vytvoří, motorické nervy ho předají a dýchací svaly provedou pohyb."
+  },
+  {
+    "id": 266,
+    "bookRef": "VII · otázka 29",
+    "category": "Dýchací systém",
+    "question": "Řízení dýchacích pohybů",
+    "options": [
+      "Není ovlivňováno ústřední nervovou soustavou",
+      "Je ovlivňováno hormonálně",
+      "Je uskutečňuje přes dýchací centrum v prodloužené míše",
+      "Ovlivňuje imunitní systém"
+    ],
+    "answer": 2,
+    "title": "Základní řídicí síť je v mozkovém kmeni",
+    "paragraphs": [
+      "Klíč vybírá C: zásadní nervové okruhy pro rytmus a řízení dýchání jsou v prodloužené míše, kde spolupracují s dalšími částmi mozkového kmene. Odtud vycházejí povely navazující na motorické neurony dýchacích svalů.",
+      "Představ si automatické řízení ventilátoru, které má současně vstupy z různých senzorů i možnost krátkodobého ručního ovládání. Dýchání se proto přizpůsobuje zátěži, chemickému složení vnitřního prostředí i některým vědomým činnostem.",
+      "Tvrzení, že řízení není ovlivněno ústřední nervovou soustavou, je přímo opačné. Hormony mohou dýchání také modulovat, ale B neoznačuje hlavní mechanismus rytmických pohybů, který otázka hledá. Nervová centra nejsou izolovaná od celého těla."
+    ],
+    "memory": "Prodloužená mícha je hlavní část automatického řízení, další centra a vstupy ho upravují.",
+    "note": "C obsahuje jazykovou chybu převzatou z PDF. B může popisovat skutečný modulační vliv hormonů; C je klíč pro hlavní nervové řízení."
+  },
+  {
+    "id": 267,
+    "bookRef": "VII · otázka 30",
+    "category": "Dýchací systém",
+    "question": "Dýchací centrum v prodloužené míše",
+    "options": [
+      "Funguje automaticky bez látkové a nervové regulace",
+      "Nemůžeme ovlivňovat vůlí",
+      "Vysílá podněty k míšním nervům, inervujícím dýchací svaly",
+      "Udržuje klidovou frekvenci dýchání 10 dechů za minutu"
+    ],
+    "answer": 2,
+    "title": "Automatika se průběžně přizpůsobuje vstupům",
+    "paragraphs": [
+      "Správně je C. Centrum nefunguje jako uzavřený hodinový strojek bez zpětné vazby: vytváří povely, které přes motorické neurony a nervy aktivují dýchací svaly. Díky svalům se mění objem hrudníku a vzduch proudí.",
+      "Představ si chytrý regulátor, který sám běží, ale přitom sleduje senzory a přijímá další pokyny. Chemické změny, mechanické podněty i vyšší mozková činnost mohou výsledný rytmus upravovat podle aktuální situace.",
+      "Při mluvení nebo vědomém změnění dechu automatiku dočasně ovlivňuješ vůlí. Ani přesně deset dechů za minutu není pevná klidová norma všech lidí. Frekvence kolísá s věkem, stavem a okolnostmi a sama nevystihuje celkovou ventilaci."
+    ],
+    "memory": "Automatické neznamená neregulované: centra posílají povely a současně reagují na vstupy."
+  },
+  {
+    "id": 268,
+    "bookRef": "VII · otázka 31",
+    "category": "Dýchací systém",
+    "question": "Hlavním činitelem ovlivňujícím plicní ventilaci je (jsou)",
+    "options": [
+      "Parciální tlak O₂",
+      "Parciální tlak CO₂",
+      "Stopy CO v krevní plasmě",
+      "Nahromadění N v plicích"
+    ],
+    "answer": 1,
+    "title": "CO₂ dává důležitý signál, jak upravit ventilaci",
+    "paragraphs": [
+      "V běžném zdravém organismu je zásadním chemickým regulátorem ventilace parciální tlak oxidu uhličitého, tedy B. Zvýšený CO₂ souvisí se změnami pH a obvykle vede k zesílení ventilace, která ho pomáhá odvést.",
+      "Představ si odvětrávání místnosti podle množství vydýchaného plynu. Systém tím nepřímo sleduje, jak dobře stíhá odstraňovat produkt metabolismu. Centrální chemorecepce výrazně reaguje na změny pH související s CO₂ v okolí nervové tkáně.",
+      "Kyslík se také hlídá, zejména periferními chemoreceptory při výraznějším poklesu jeho tlaku. Neznamená to, že O₂ není důležitý nebo že pro každého nemocného člověka vždy platí totožné regulační poměry. Stopy CO či nahromadění dusíku nejsou hledaný běžný řídicí signál."
+    ],
+    "memory": "Běžná chemická regulace: CO₂ a související pH výrazně řídí ventilaci; O₂ má také vlastní čidla."
+  },
+  {
+    "id": 269,
+    "bookRef": "VII · otázka 32",
+    "category": "Dýchací systém",
+    "question": "Mezi pomocné dýchací svaly nepatří",
+    "options": [
+      "Bránice",
+      "Zádové svaly",
+      "Krční svaly",
+      "Prsní svaly"
+    ],
+    "answer": 0,
+    "title": "Bránice není pomocník navíc, ale hlavní motor nádechu",
+    "paragraphs": [
+      "Hledáš výjimku, proto vyber A. Bránice je hlavní nádechový sval, nikoli pouze pomocný sval zapojovaný navíc. Při stažení se její klenba snižuje, zvětší se prostor hrudníku a vytvoří se podmínky pro proudění vzduchu dovnitř.",
+      "Představ si běžný hlavní motor a dodatečné posily. Při zvýšených nárocích mohou některé krční, prsní nebo zádové svaly při vhodně zafixovaných úponech pomáhat měnit polohu žeber a hrudníku. Jejich úloha záleží na konkrétním svalu a situaci.",
+      "Slovo pomocné tedy neznamená, že všechny svaly dané skupiny musí být aktivní při každém klidovém dechu. Otázka rozlišuje základní funkci bránice od dodatečného zapojení jiných svalů, ne jejich důležitost pro celé tělo."
+    ],
+    "memory": "Bránice = hlavní nádechový sval; pomocné svaly mohou přidat výkon při větší potřebě."
+  },
+  {
+    "id": 270,
+    "bookRef": "VII · otázka 33",
+    "category": "Dýchací systém",
+    "question": "Při klidném dýchání se každým vdechem a výdechem vymění asi",
+    "options": [
+      "1,5 l vzduchu při frekvenci přibližně 25krát za minutu",
+      "2,5 l vzduchu při frekvenci 18–22krát za minutu",
+      "0,5 l vzduchu při frekvenci 14–18krát za minutu",
+      "1 l vzduchu při frekvenci 8–12krát za minutu"
+    ],
+    "answer": 2,
+    "title": "Běžný dech má menší objem než maximální nádech",
+    "paragraphs": [
+      "Klíč vybírá C: půl litru na dech při uvedené orientační frekvenci. Je to školní příklad klidového dýchání dospělého, nikoli přesné pravidlo pro každého. Běžné dechy využívají jen část celkové dostupné objemové rezervy.",
+      "Představ si pravidelné menší dávky pumpy. Například při šestnácti deších za minutu a půl litru na dech vyjde osm litrů minutové ventilace. Ne všechno z tohoto objemu ale dosáhne výměnných ploch, protože část zůstává ve vodivých cestách.",
+      "Proto rozlišuj celkovou minutovou ventilaci a alveolární ventilaci, která skutečně přivádí čerstvý vzduch k místu výměny. Hloubka i frekvence se mohou měnit podle potřeb a věku; nejde o návod držet se nuceně jednoho počtu dechů."
+    ],
+    "memory": "Klidově orientačně 0,5 l na dech; objem × frekvence dává minutovou ventilaci.",
+    "note": "Rozmezí 14–18 je údaj použité učebnice, ne univerzální hranice normální dechové frekvence."
+  },
+  {
+    "id": 271,
+    "bookRef": "VII · otázka 34",
+    "category": "Dýchací systém",
+    "question": "Vyberte nesprávnou odpověď! Astmatický záchvat",
+    "options": [
+      "Může vzniknout pouze v dětském věku",
+      "Může nastat u lidí trpících sennou rýmou",
+      "Může být vyvolán alergeny",
+      "Může být vyvolán psychickými faktory"
+    ],
+    "answer": 0,
+    "title": "Astma není omezené jen na děti",
+    "paragraphs": [
+      "Hledáš nesprávné tvrzení, proto je správná volba A. Astma se může projevovat v dětství i v dospělosti. Slovo pouze dělá z první možnosti nepravdivé omezení, i když u části lidí obtíže skutečně začnou už v dětství.",
+      "Představ si přecitlivělou dýchací cestu, která na některé podněty reaguje zúžením, otokem a změnou tvorby hlenu. Alergická rýma může s astmatem souviset a alergeny mohou u citlivých osob zhoršení spustit. Astma ale nemusí být vždy alergické.",
+      "Stres a emoce mohou obtíže ovlivnit nebo u některých lidí přispět ke zhoršení. To neznamená, že je astma jen psychický problém nebo že si člověk potíže vymýšlí. Jde o onemocnění dýchacích cest s různými spouštěči a mechanismy."
+    ],
+    "memory": "Pozor na pouze: astma se může projevit i v dospělosti; stresový spouštěč neznamená vymyšlenou nemoc."
+  },
+  {
+    "id": 272,
+    "bookRef": "VIII · otázka 1",
+    "category": "Trávicí systém",
+    "question": "Fylogeneticky je nejjednodušším typem trávicího systému",
+    "options": [
+      "Potravní vakuola u prvoků",
+      "Vakovitá láčka s jediným přijímacím a vyvrhovacím otvorem",
+      "Trávení pomocí hepatopankreasu",
+      "Jednoduchá trávicí trubice s ústním a řitním otvorem bez vnitřního členění"
+    ],
+    "answer": 1,
+    "title": "Jedna společná dutina s jedním otvorem",
+    "paragraphs": [
+      "PDF vybírá B, vakovitou láčku s jedním otvorem. V tomto srovnání jde o jednoduchou mnohobuněčnou trávicí soustavu: potrava vstoupí stejnou cestou, kterou se později odstraňují nestrávené zbytky.",
+      "Představ si sáček s jediným vstupem oproti průchozí výrobní lince. Trávicí trubice se dvěma otvory dovolí oddělit příjem a výdej a různé úseky se mohou specializovat. Láčka takové úplné jednosměrné průchozí uspořádání nemá.",
+      "Potravní vakuola prvoka je ještě jednodušší nitrobuněčný prostor, ale není samostatnou orgánovou soustavou mnohobuněčného živočicha. Proto je důležité číst otázku v tomto užším významu; jinak by A mohla působit jako logicky nejjednodušší možnost."
+    ],
+    "memory": "Láčka = jeden otvor dovnitř i ven; trávicí trubice = průchod mezi dvěma otvory.",
+    "note": "B odpovídá nejjednodušší orgánové soustavě v nabídce. Vakuola u prvoka není trávicí orgánová soustava; otázka tento význam nevymezuje výslovně."
+  },
+  {
+    "id": 273,
+    "bookRef": "VIII · otázka 2",
+    "category": "Trávicí systém",
+    "question": "Probíhá trávení některých živin již v ústech?",
+    "options": [
+      "Sacharidů",
+      "Bílkovin",
+      "Tuků",
+      "Ne – až v žaludku"
+    ],
+    "answer": 0,
+    "title": "Sliny začnou rozebírat škrob už při žvýkání",
+    "paragraphs": [
+      "Správně je A. Slinná amyláza zahajuje štěpení škrobu na menší sacharidové části už v ústech. Mechanické rozmělnění potravy současně zpřístupňuje větší povrch, na kterém může enzym působit.",
+      "Představ si dlouhý řetěz, který je potřeba nastříhat na menší úseky. Amyláza nevyřeší v ústech celé trávení všech cukrů, ale práci zahájí. Další štěpení a většina vstřebávání pak proběhnou v tenkém střevě.",
+      "Odpověď neznamená, že by v ústech nutně vznikla veškerá glukóza nebo se zde vstřebala většina sacharidů. Také existuje jazyková lipáza související s trávením tuků, její působení však probíhá zejména po spolknutí. Typický školní příklad ústního trávení je škrob."
+    ],
+    "memory": "Ústa: žvýkání zvětší povrch a slinná amyláza začne štěpit škrob."
+  },
+  {
+    "id": 274,
+    "bookRef": "VIII · otázka 3",
+    "category": "Trávicí systém",
+    "question": "Slinné žlázy",
+    "options": [
+      "Největší z nich je žláza podčelistní",
+      "Jsou všechny uloženy mimo ústní dutinu",
+      "Produkují sliny buď nepřetržitě, nebo v závislosti na potravě",
+      "Vyprodukují denně až 1 litr slin"
+    ],
+    "answer": 2,
+    "title": "Základní zvlhčování pokračuje i mezi jídly",
+    "paragraphs": [
+      "Klíč vybírá C. Slinné žlázy zajišťují průběžné zvlhčování úst a jejich sekrece se výrazně mění podle podnětů, například žvýkání, chuti nebo dalších signálů souvisejících s jídlem. Různé žlázy se na celkové produkci podílejí různě.",
+      "Představ si základní úklid a mazání výrobní linky, které běží i při menším provozu. Když přijde potrava, výkon se upraví, aby se sousto lépe spojilo, polykalo a začalo chemicky zpracovávat. Sliny zároveň chrání ústní prostředí.",
+      "Největší velká slinná žláza je příušní, nikoli podčelistní. Drobné žlázky leží ve sliznici úst. Denní objem je proměnlivý a jeden litr nepředstavuje pevnou horní hranici; základní a stimulovaná sekrece navíc nejsou dva dokonale oddělené světy."
+    ],
+    "memory": "Sliny běží i na základní výkon a při jídle přidají; největší žláza je příušní."
+  },
+  {
+    "id": 275,
+    "bookRef": "VIII · otázka 4",
+    "category": "Trávicí systém",
+    "question": "Význam slin spočívá v tom, že",
+    "options": [
+      "Zahajují trávení škrobů",
+      "Obsahují enzym chymozin, srážející mléko",
+      "Obsahují enzym trypsin, trávící bílkoviny",
+      "Chrání živiny před rozpouštěním"
+    ],
+    "answer": 0,
+    "title": "Sliny sousto zvlhčí a amyláza začne štěpit škrob",
+    "paragraphs": [
+      "Správně je A. Sliny obsahují amylázu, která zahajuje štěpení škrobu. Není nutné čekat až na žaludek, aby vůbec začala chemická úprava potravy. Ústa tedy nejsou pouze místo mechanického rozkousání.",
+      "Představ si přípravnou dílnu: zuby materiál rozdělí, sliny ho zvlhčí a spojí do sousta a enzym začne rozebírat určité vazby škrobu. Rozpouštění látek ve slinách je zároveň důležité pro to, aby mohly působit na chuťové receptory.",
+      "Trypsin patří ke štěpení bílkovin ve střevě a přichází z pankreatu jako neaktivní trypsinogen. Chymosin není charakteristický slinný enzym. Sliny živiny obecně nechrání před rozpuštěním, ale naopak umožňují jejich kontakt s vodným prostředím."
+    ],
+    "memory": "Sliny + škrob = začátek práce amylázy; trypsin patří k pankreatu a střevu."
+  },
+  {
+    "id": 276,
+    "bookRef": "VIII · otázka 5",
+    "category": "Trávicí systém",
+    "question": "Zub je tvořen několika vrstvami – přiřaďte k nim odpovídající charakteristiky:",
+    "options": [
+      "A2, B4, C3, D1",
+      "A3, B2, C4, D1",
+      "A3, B1, C2, D4",
+      "A3, B4, C2, D1"
+    ],
+    "answer": 3,
+    "title": "Tvrdý obal chrání živé nitro",
+    "paragraphs": [
+      "Sklovina je silně mineralizovaná povrchová tkáň korunky, A3. Dentin neboli zubovina tvoří většinu zubu a souvisí s citlivostí, B4. Cement kryje kořen, C2. Dřeň obsahuje cévy a nervy v měkkém vazivu, D1. Celá kombinace je D.",
+      "Představ si pevně chráněný objekt s živým zázemím uvnitř. Sklovina nemá vlastní cévy ani nervy, ale pod ní leží dentin s kanálky a dřeň s nervovým a cévním zásobením. Poškození povrchu tak může postupně zasáhnout citlivější části.",
+      "Cement umožňuje upevnění závěsného aparátu ke kořeni a stavbou připomíná kost, není však totéž co kost čelisti. Citlivost dentinu také neznamená, že každý jeho kousek má stejnou nervovou stavbu jako měkká dřeň."
+    ],
+    "memory": "Sklovina korunka, cement kořen, dentin hlavní tvrdá hmota, dřeň cévy a nervy.",
+    "terms": [
+      "Sklovina",
+      "Dentin",
+      "Cement",
+      "Dřeň"
+    ],
+    "definitions": [
+      "Řídké, bohatě inervované vazivo s množstvím cév",
+      "Kryje zub v rozsahu kořene, má stavbu kosti",
+      "Tvrdá tkáň, obsahuje až 98 % minerálních látek",
+      "Velmi citlivá tkáň na vnější podněty (tlak, teplo), strukturou připomíná kost"
+    ]
+  },
+  {
+    "id": 277,
+    "bookRef": "VIII · otázka 6",
+    "category": "Trávicí systém",
+    "question": "Zuby",
+    "options": [
+      "Vícekořenové jsou pouze stoličky",
+      "Jsou v čelistech zavěšeny v alveolárních jamkách",
+      "Třetí stoličky vyrůstají do 18. roku",
+      "Jsou seřazeny do horního parabolického a dolního eliptického oblouku"
+    ],
+    "answer": 1,
+    "title": "Zub není do čelisti napevno přivařený",
+    "paragraphs": [
+      "Správně je B. Kořen zubu je upevněn v kostěném zubním lůžku pomocí závěsného aparátu, zejména vazivových vláken mezi cementem a kostí. Díky tomu se síla při kousání přenáší a zároveň jemně tlumí.",
+      "Představ si pevný sloupek uchycený systémem pružných lanek. Nejde o volně visící zub, ale ani o běžné přímé srůstání celého kořene s kostí. Vazivo zprostředkovává stabilitu, citlivé vnímání zátěže i drobné pružné pohyby.",
+      "Více kořenů mohou mít také některé třenové zuby, takže A je příliš absolutní. Zuby moudrosti se prořezávají velmi variabilně a nemusí se objevit do osmnácti let, někdy se neprořežou vůbec. Tvary oblouků také nejsou jediné neměnné geometrické křivky."
+    ],
+    "memory": "Zub drží v lůžku pružný závěsný aparát; počet kořenů i prořezávání mají variace."
+  },
+  {
+    "id": 278,
+    "bookRef": "VIII · otázka 7",
+    "category": "Trávicí systém",
+    "question": "Mléčný chrup",
+    "options": [
+      "Se skládá z 32 zubů",
+      "Se začíná prořezávat po prvním roce života",
+      "Neobsahuje stoličky",
+      "Je nahrazen definitivním chrupem mezi 6. a 7. rokem"
+    ],
+    "answer": 3,
+    "title": "Kolem šestého roku výměna začíná, nekončí",
+    "paragraphs": [
+      "PDF označuje D, ale větu je potřeba opravit ve významu: přibližně kolem šestého až sedmého roku výměna mléčného chrupu začíná. Kompletní nahrazení během jediného tohoto období neproběhne; následují roky smíšeného chrupu.",
+      "Představ si postupnou rekonstrukci místností, nikoli výměnu celé budovy za jeden den. Mléčný chrup má dvacet zubů včetně stoliček. První stálé stoličky navíc vyrůstají za mléčnými a žádný mléčný zub přímo nenahrazují.",
+      "Prořezávání mléčných zubů obvykle začíná už v prvním roce, s individuálními rozdíly. Neuč se tedy D jako přesnou větu o dokončení výměny; zapamatuj si věkový orientační bod jejího začátku a skutečnost, že výměna pokračuje postupně."
+    ],
+    "memory": "Mléčný chrup má 20 zubů; kolem 6 let začíná výměna a smíšený chrup.",
+    "note": "D je tištěný klíč, ale jeho doslovné znění je chybné: celý mléčný chrup není nahrazen mezi šestým a sedmým rokem."
+  },
+  {
+    "id": 279,
+    "bookRef": "VIII · otázka 8",
+    "category": "Trávicí systém",
+    "question": "Vyberte nesprávnou odpověď! Periodontium",
+    "options": [
+      "Je tvořeno vlákny a okosticí zubního lůžka",
+      "Zajišťuje zubu v jamce lehké pérování",
+      "Nezasahuje do sliznice čelistí",
+      "Se nazývá ozubice"
+    ],
+    "answer": 2,
+    "title": "Závěsný aparát souvisí i s okolím krčku zubu",
+    "paragraphs": [
+      "Hledáš nesprávné tvrzení, proto podle klíče vyber C. Periodontium zde učebnice označuje jako ozubici, vazivový závěsný aparát zubu. Jeho vlákna upevňují kořen v lůžku a navazují na vazivové struktury v okolí zubu.",
+      "Představ si pružné ukotvení, které musí spolupracovat s celým okolím, nikoli končit izolovaně uvnitř kosti. Síly při skousnutí se přes vlákna rozloží a zub může velmi jemně pružit. Připojení v oblasti krčku souvisí s okolní dásní.",
+      "Názvosloví je důležité: v češtině se ozubicí míní hlavně periodontální vaz, zatímco parodont zahrnuje širší soubor závěsných a podpůrných tkání. V jiných jazycích může periodontium označovat právě celý tento širší soubor, takže definice potřebuje kontext."
+    ],
+    "memory": "Ozubice pružně kotví zub a souvisí s jeho okolím; neber ji jako izolovaný provaz uvnitř jamky.",
+    "note": "PDF používá periodontium ve významu ozubice. Termín může mít i širší význam podpůrných tkání zubu; A je proto velmi zjednodušené."
+  },
+  {
+    "id": 280,
+    "bookRef": "VIII · otázka 9",
+    "category": "Trávicí systém",
+    "question": "Při polykání",
+    "options": [
+      "Je hrtanová příklopka otevřena",
+      "Prochází sousto mezi kořenem jazyka a měkkým patrem",
+      "Se uplatňují dva hltanové svěrače",
+      "Jde o reflexní děj, řízený z hypothalamu"
+    ],
+    "answer": 1,
+    "title": "Sousto je vedeno z úst do hltanu a dál do jícnu",
+    "paragraphs": [
+      "Správně je B. Jazyk posouvá sousto dozadu a to prochází oblastí mezi kořenem jazyka a měkkým patrem do hltanu. Následuje přesně koordinovaný sled pohybů, který ho dopraví do jícnu a chrání dýchací cestu.",
+      "Představ si řízenou křižovatku, kde se musí na krátkou chvíli správně nastavit několik uzávěrů. Měkké patro pomáhá oddělit nosohltan a ochrana hrtanu zahrnuje zvednutí hrtanu i uzávěrové děje včetně pohybu příklopky.",
+      "První část můžeš zahájit vůlí, další fáze probíhají převážně reflexně. Významná řídicí síť je v mozkovém kmeni, ne prostě v hypothalamu. Hltan má tři hlavní svalové konstriktory, takže tvrzení o dvou hltanových svěračích není správný základní popis."
+    ],
+    "memory": "Polykání je souhra cesty do jícnu a ochrany nosohltanu i hrtanu."
+  },
+  {
+    "id": 281,
+    "bookRef": "VIII · otázka 10",
+    "category": "Trávicí systém",
+    "question": "Charakterizujte uvedená nakupení mízní tkáně:",
+    "options": [
+      "A2, B3, C1",
+      "A3, B1, C2",
+      "A3, B2, C1",
+      "A1, B2, C3"
+    ],
+    "answer": 0,
+    "title": "Obrana hlídá vstupní oblasti i stěnu střeva",
+    "paragraphs": [
+      "Nosní neboli hltanová mandle leží v nosohltanu, A2. Patrové mandle jsou mezi patrovými oblouky po stranách přechodu z úst do hltanu, B3. Appendix je slepý přívěsek céka a obsahuje mnoho lymfatické tkáně, C1. Vyber A.",
+      "Představ si obranné kontrolní body u cest, kterými přichází obsah zvenku. Mandle sledují oblast vstupu vzduchu a potravy. Lymfatická tkáň apendixu je součást širší střevní obrany, ne jen zbytečná výplň bez jakékoli funkce.",
+      "Nosní mandli nezaměň s párovými trubicovými mandlemi přímo u ústí sluchových trubic. A2 je přibližné topografické přiřazení. Appendix také není celé slepé střevo: je to jeho červovitý přívěsek."
+    ],
+    "memory": "Nosní mandle nosohltan, patrové mezi oblouky, appendix přívěsek céka s lymfatickou tkání.",
+    "terms": [
+      "Nosní mandle",
+      "Patrová mandle",
+      "Sliznice apendixu"
+    ],
+    "definitions": [
+      "Slepá výchlipka tlustého střeva",
+      "Ve stěně nosohltanu poblíž ústí středoušní trubice",
+      "Nacházejí se v prohlubni patrohltanových oblouků"
+    ],
+    "note": "A2 přibližuje oblast; hltanová mandle leží ve stropu a zadní stěně nosohltanu. U ústí sluchové trubice se rozlišuje trubicová mandle."
+  },
+  {
+    "id": 282,
+    "bookRef": "VIII · otázka 11",
+    "category": "Trávicí systém",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 1,
+    "title": "Svalovina jícnu se směrem dolů mění",
+    "paragraphs": [
+      "První tvrzení je chybné: jícen není po celé délce tvořen příčně pruhovaným svalem. Horní úsek má převahu této svaloviny, níže je přechodná oblast a dolní část převážně hladká svalovina. Peristaltické posouvání sousta je správně.",
+      "Druhé tvrzení správně orientuje vstup jícnu do žaludku k oblasti kardie a výstup žaludku k pyloru neboli vrátníku. Představ si zásobník s odděleným přívodem a dávkovaným odchodem: každý konec má jiné jméno a vztahy.",
+      "Vyber B: první ne, druhé ano. Sousto se jícnem neposouvá jen pádem vlastní vahou, ale koordinovanou svalovou vlnou. Vrátník není svěrač mezi jícnem a žaludkem; patří na opačný konec žaludku směrem ke dvanáctníku."
+    ],
+    "memory": "Jícen nahoře příčně pruhovaný, dole hladký; kardie vstup do žaludku, pylorus výstup.",
+    "statements": [
+      "Jícen je svalová trubice, která spojuje hltan se žaludkem. V celém jícnu je příčně pruhovaná svalovina, která vykonává při polykání peristaltické pohyby.",
+      "Jícen přechází do oddílu žaludku, označovaného kardie (česlo). Na kardii navazuje vlastní tělo žaludku. Dolů se žaludek zužuje v trubicovitý pylorus (vrátník)."
+    ]
+  },
+  {
+    "id": 283,
+    "bookRef": "VIII · otázka 12",
+    "category": "Trávicí systém",
+    "question": "Jícen",
+    "options": [
+      "Je v horní části tvořen hladkým svalstvem",
+      "Je v dolní části tvořen příčně pruhovaným svalstvem",
+      "Vykonává peristaltické pohyby",
+      "Navazuje na žaludek svěračem vrátníkem"
+    ],
+    "answer": 2,
+    "title": "Svalová vlna posouvá sousto správným směrem",
+    "paragraphs": [
+      "Správně je C. Jícen provádí peristaltické pohyby: koordinované stažení a uvolnění svaloviny postupuje tak, aby posunulo sousto směrem k žaludku. Není to nehybná trubka závislá pouze na gravitaci.",
+      "Představ si, že posouváš obsah pružnou hadicí postupným stiskem za ním. Přirovnání zachycuje směr práce, i když v těle je pohyb přesně řízen nervovými mechanismy a zapojují se různé svalové vrstvy.",
+      "V A a B jsou typy svaloviny prohozené: nahoře převažuje příčně pruhovaná, dole hladká. Vrátník leží až na přechodu ze žaludku do dvanáctníku. Přechod jícnu do žaludku je oblast kardie s funkčním dolním jícnovým uzávěrem."
+    ],
+    "memory": "Jícen posouvá peristaltikou; vrátník čeká až na výstupu ze žaludku."
+  },
+  {
+    "id": 284,
+    "bookRef": "VIII · otázka 13",
+    "category": "Trávicí systém",
+    "question": "Žaludek",
+    "options": [
+      "Má neměnný tvar",
+      "Je plochý vakovitý orgán",
+      "Neumožňuje resorpci žádných látek",
+      "Pojme v dospělosti až 1 litr potravy"
+    ],
+    "answer": 1,
+    "title": "Pružný zásobník mění tvar podle náplně",
+    "paragraphs": [
+      "Klíč vybírá B, plochý vakovitý orgán. Žaludek je roztažitelný svalový orgán a zejména nenaplněný může být zploštělý. Jeho tvar a poloha se však mění s naplněním, polohou těla i mezi jednotlivými lidmi.",
+      "Představ si pružný zásobník, který se přizpůsobí přijatému obsahu, promíchává ho a dávkuje dál do střeva. Není to pevná nádoba s jedním stále stejným obrysem ani s jedním nepřekročitelným objemem pro všechny dospělé.",
+      "Většina vstřebávání živin sice probíhá až v tenkém střevě, ale žaludek není absolutně neprostupný pro všechny látky. Jeden litr také nepředstavuje jeho obecnou maximální kapacitu. Pro porozumění je podstatný roztažitelný vakovitý charakter, ne slovo plochý bez souvislosti."
+    ],
+    "memory": "Žaludek je pružný svalový vak; tvar i náplň se mění.",
+    "note": "B používá zjednodušený popis nenaplněného orgánu. Naplněný žaludek není trvale plochý a přesný objem nelze určit jedinou univerzální hranicí."
+  },
+  {
+    "id": 285,
+    "bookRef": "VIII · otázka 14",
+    "category": "Trávicí systém",
+    "question": "Kyselina chlorovodíková v žaludku",
+    "options": [
+      "Nepůsobí baktericidně",
+      "Sráží veškeré mléko v žaludku kojenců",
+      "Umožňuje přeměnu neúčinného pepsinogenu na pepsin",
+      "Znehodnocuje vitamíny B1, B2 a C"
+    ],
+    "answer": 2,
+    "title": "Kyselé prostředí pomůže zapnout bílkovinné nůžky",
+    "paragraphs": [
+      "Správně je C. Kyselé prostředí umožňuje aktivaci pepsinogenu na pepsin a podporuje působení vzniklého enzymu. Pepsinogen je neaktivní předstupeň, takže se bílkovinné štěpení nespouští stejně už ve výrobní buňce.",
+      "Představ si nástroj odeslaný s bezpečnostním krytem. Až vhodné prostředí umožní jeho aktivaci. Vzniklý pepsin potom pomáhá aktivovat další pepsinogen; kyselina zároveň denaturuje potravu a zhoršuje přežívání řady mikroorganismů.",
+      "Proto A neplatí: kyselé prostředí má i ochranný účinek, i když žaludek nesterilizuje bez výjimky všechno. Tvrzení o veškerém mléku nebo plošném znehodnocení uvedených vitaminů nejsou správným vysvětlením hlavní úlohy HCl."
+    ],
+    "memory": "Pepsinogen bezpečný předstupeň → v kyselém prostředí aktivní pepsin."
+  },
+  {
+    "id": 286,
+    "bookRef": "VIII · otázka 15",
+    "category": "Trávicí systém",
+    "question": "Silně kyselé prostředí v žaludku",
+    "options": [
+      "Je nezbytné pro působení pepsinu",
+      "Umožňuje resorpci tráveniny",
+      "Je neutralizováno šťávou pankreatu",
+      "Stále poškozuje sliznici žaludku"
+    ],
+    "answer": 0,
+    "title": "Pepsin pracuje dobře v kyselém prostředí",
+    "paragraphs": [
+      "Správně je A. Žaludeční pepsin je přizpůsoben práci při nízkém pH. Kyselost tedy není jen vedlejší vlastnost obsahu, ale důležitá podmínka pro jeho účinné štěpení bílkovin.",
+      "Představ si nástroj, který má správné pracovní nastavení. Ve střevě bude prostředí jiné a práci převezmou další enzymy. Hydrogenuhličitan z pankreatu pomáhá neutralizovat kyselou tráveninu až po jejím příchodu do dvanáctníku, ne běžně uvnitř samotného žaludku.",
+      "Žaludeční sliznici chrání hlenová bariéra, hydrogenuhličitan a další mechanismy. Kyselina proto za normálních podmínek nemusí neustále ničit vlastní stěnu. Ochrana má však své hranice a její porucha může vést k poškození."
+    ],
+    "memory": "Žaludek kyselý pro pepsin; dvanáctník neutralizuje přicházející obsah.",
+    "note": "C vystihuje skutečný děj až ve dvanáctníku. V kontextu otázky na prostředí uvnitř žaludku je klíč A."
+  },
+  {
+    "id": 287,
+    "bookRef": "VIII · otázka 16",
+    "category": "Trávicí systém",
+    "question": "V žaludku",
+    "options": [
+      "Se vstřebávají látky, vzniklé zde trávením",
+      "Se mohou přechodně nacházet 1 až dva litry potravy",
+      "Zůstává potrava nejdéle dvě hodiny",
+      "Pepsinogen zahajuje štěpení bílkovin"
+    ],
+    "answer": 1,
+    "title": "Žaludek přijatý obsah dočasně uchovává a promíchává",
+    "paragraphs": [
+      "Správně je B. Žaludek je roztažitelný zásobník a dočasná náplň řádu jednoho až dvou litrů odpovídá orientačnímu učebnicovému popisu dospělého. Není to stejný objem u každého ani doporučená dávka jídla.",
+      "Představ si míchačku s regulovaným výstupem. Obsah se promísí se šťávou a postupně odchází do dvanáctníku podle jeho připravenosti i vlastností jídla. Proto nelze tvrdit, že každá potrava musí zmizet nejpozději do dvou hodin.",
+      "Pepsinogen je neaktivní předstupeň; bílkoviny štěpí až aktivní pepsin. Většina živin a produktů jejich rozkladu se vstřebává v tenkém střevě. Žaludek sice některé látky vstřebat může, ale hlavní úlohou zde není vstřebání všech vzniklých živin."
+    ],
+    "memory": "Žaludek skladuje a míchá; pepsinogen se musí nejprve změnit na pepsin."
+  },
+  {
+    "id": 288,
+    "bookRef": "VIII · otázka 17",
+    "category": "Trávicí systém",
+    "question": "Enzymy žaludku",
+    "options": [
+      "Pepsin zahajuje štěpení bílkovin v potravě",
+      "Chymosin sráží po celý život mléčné bílkoviny v potravě",
+      "Mucin se účastní při štěpení sacharidů",
+      "Lipáza s vysokou účinností štěpí tuky na glycerol a mastné kyseliny"
+    ],
+    "answer": 0,
+    "title": "Pepsin řeže bílkoviny, mucin hlavně chrání",
+    "paragraphs": [
+      "Správně je A. Pepsin zahajuje výrazné štěpení potravních bílkovin v žaludku na menší peptidy. Není to finální rozložení celé bílkoviny na vstřebatelné aminokyseliny; další kroky pokračují ve střevě.",
+      "Představ si rozebrání dlouhé šňůry na kratší kusy, které se pak ještě zpracují jinde. Mucin má jinou práci: jako součást hlenu pomáhá chránit sliznici a není sacharidový trávicí enzym. Podobný odborný název neznamená stejnou funkci.",
+      "Žaludeční lipáza se na trávení tuků podílí, ale hlavní zpracování probíhá ve střevě za pomoci pankreatické lipázy a žluči. Tvrzení o celoživotním chymosinu nelze převzít jako přesný popis lidské žaludeční fyziologie."
+    ],
+    "memory": "Pepsin bílkovinné nůžky; mucin ochranný hlen; hlavní trávení tuků pokračuje ve střevě."
+  },
+  {
+    "id": 289,
+    "bookRef": "VIII · otázka 18",
+    "category": "Trávicí systém",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 0,
+    "title": "Klíč PDF je potřeba oddělit od přesné role lidských enzymů",
+    "paragraphs": [
+      "PDF hodnotí první tvrzení jako správné a druhé jako nesprávné, tedy A. Spolehlivým jádrem prvního je, že žaludeční prostředí obsahuje HCl, ochranný hlen, žaludeční lipázu a pepsin vznikající z pepsinogenu. Pepsin zahajuje štěpení bílkovin.",
+      "Představ si kyselou pracovní dílnu s ochrannou vrstvou na vlastní stěně. Enzymatické nůžky rozebírají potravu, zatímco hlen pomáhá chránit dílnu samotnou. Kyselina není enzym a mucin není nástroj pro štěpení sacharidů.",
+      "Problematickou částí obou tvrzení je chymosin. Ten je typický pro srážení mléka u mláďat některých savců, zejména přežvýkavců; nelze ho bez dalšího vydávat za běžný funkční enzym lidských kojenců. Hodnocení A proto nepovažuj za potvrzení každého detailu první věty."
+    ],
+    "memory": "Pro test A; pro porozumění pepsin štěpí bílkoviny, hlen chrání a údaj o lidském chymosinu je sporný.",
+    "statements": [
+      "Žaludeční šťáva obsahuje kyselinu chlorovodíkovou, pepsin, chymosin, žaludeční lipázu a mucin. Pepsin je enzym, zahajující štěpení bílkovin na jednodušší bílkovinné složky, rozpustné ve vodě.",
+      "Chymosin je důležitý u kojenců, sráží mléčné bílkoviny, které jsou pak snáze štěpitelné. Nachází se především v žaludeční šťávě kojenců, u dospělých je jeho objem v žaludeční šťávě nízký."
+    ],
+    "note": "Tištěný klíč A je zachován, ale nabídka není odborně spolehlivá: chymosin se zde uvádí v tradičním lidském učebnicovém popisu, který není přesný. Neuč se rozdíl kojenci versus dospělí jako ověřený mechanismus lidského chymosinu."
+  },
+  {
+    "id": 290,
+    "bookRef": "VIII · otázka 19",
+    "category": "Trávicí systém",
+    "question": "Hormon gastrin",
+    "options": [
+      "Vzniká v buňkách tenkého střeva a působí na činnost žaludku",
+      "Je jedním z hormonů slinivky břišní",
+      "Ovlivňuje produkci kyseliny chlorovodíkové a pepsinogenu",
+      "Má vliv na pohyb střev a vyprazdňování žlučníku"
+    ],
+    "answer": 2,
+    "title": "Gastrin hlásí žaludku, že je potřeba pracovat",
+    "paragraphs": [
+      "Správně je C. Gastrin se podílí na podpoře žaludeční sekrece, především kyseliny chlorovodíkové, a ovlivňuje také uvolňování pepsinogenu a další žaludeční děje. Uvolňují ho G-buňky hlavně v dolní části žaludku.",
+      "Představ si provozní zprávu, že dorazil materiál ke zpracování. Gastrin nepřestřihuje bílkoviny sám jako enzym, ale prostřednictvím receptorů a navazujících buněk pomáhá nastavit kyselé pracovní prostředí a činnost žaludku.",
+      "Menší množství G-buněk je i ve dvanáctníku, takže A nepopisuje úplně nemožné místo vzniku, ale míjí hlavní zdroj. Gastrin není typický hormon pankreatických ostrůvků. Vyprazdňování žlučníku je výrazně spojeno s cholecystokininem, ne s touto základní rolí gastrinu."
+    ],
+    "memory": "Gastrin = regulační zpráva pro žaludek, hlavně podpora tvorby kyseliny.",
+    "note": "A není zcela nepravdivé: gastrin vzniká i v některých buňkách duodena. C je funkční charakteristika označená tištěným klíčem."
+  },
+  {
+    "id": 291,
+    "bookRef": "VIII · otázka 20",
+    "category": "Trávicí systém",
+    "question": "Vrátníkový svěrač",
+    "options": [
+      "Tvoří přechod mezi jícnem a žaludkem",
+      "Reflexně povoluje když sousto dosáhne žaludku",
+      "Po ochabnutí vypuzuje tráveninu do dvanáctníku",
+      "Nemá tak mohutnou svalovinu jako česlo"
+    ],
+    "answer": 2,
+    "title": "Vrátník dávkuje výstup ze žaludku",
+    "paragraphs": [
+      "Klíč vybírá C: po uvolnění vrátníkového svěrače může část žaludečního obsahu projít do dvanáctníku. Přesněji obsah nevypuzuje samotný ochablý svěrač; posun zajišťují tlakové poměry a svalové stahy žaludku.",
+      "Představ si regulační bránu na výstupu míchačky. Brána určuje, kdy a kolik může projít, ale materiál tlačí pracovní mechanismus před ní. Průběžná zpětná vazba ze střeva pomáhá, aby kyselá trávenina nepřicházela příliš rychle.",
+      "Pylorus neboli vrátník leží mezi žaludkem a duodenem, nikoli mezi jícnem a žaludkem. Má výraznou hladkou svalovinu. Příchod sousta na vstup tedy není totéž co okamžité otevření výstupu pro veškerý obsah."
+    ],
+    "memory": "Pylorus = výstupní brána do duodena; uvolní průchod, žaludeční stah posune obsah.",
+    "note": "C je nepřesné slovesem „vypuzuje“. Relaxace svěrače umožňuje průchod, nevytváří sama vypuzovací sílu."
+  },
+  {
+    "id": 292,
+    "bookRef": "VIII · otázka 21",
+    "category": "Trávicí systém",
+    "question": "Označte správně jednotlivé části trávicí trubice:",
+    "options": [
+      "A3, B2, C4, D1, E5",
+      "A2, B4, C3, D5, E1",
+      "A2, B3, C4, D5, E1",
+      "A2, B3, C4, D1, E5"
+    ],
+    "answer": 1,
+    "title": "Tenké střevo má tři navazující úseky",
+    "paragraphs": [
+      "Duodenum je dvanáctník, A2. Jejunum znamená lačník, B4, a ileum kyčelník, C3. Caecum je slepé střevo, D5. Rectum je konečník, E1. Správná kombinace je B a první tři názvy patří k tenkému střevu.",
+      "Představ si trasu ze žaludku do duodena, potom přes jejunum a ileum. Na konci tenkého střeva obsah vstupuje do oblasti céka a pokračuje tlustým střevem dál. Rectum leží až v závěrečné části této dlouhé cesty.",
+      "Slepé střevo není totéž co appendix: appendix je jeho červovitý přívěsek. A ileum nepleť s ileem jako patologickým stavem střevní neprůchodnosti, který se odborně píše ileus. Podobná slova mohou znamenat normální úsek i nemoc."
+    ],
+    "memory": "Duodenum dvanáctník → jejunum lačník → ileum kyčelník; caecum slepé střevo, rectum konečník.",
+    "terms": [
+      "Duodenum",
+      "Jejunum",
+      "Ileum",
+      "Caecum",
+      "Rectum"
+    ],
+    "definitions": [
+      "Konečník",
+      "Dvanáctník",
+      "Kyčelník",
+      "Lačník",
+      "Slepé střevo"
+    ]
+  },
+  {
+    "id": 293,
+    "bookRef": "VIII · otázka 22",
+    "category": "Trávicí systém",
+    "question": "Co obsahují sekrety exokrinních žláz, které ústí do trávicí trubice?",
+    "options": [
+      "A3, B4, C2, D1",
+      "A2, B1, C3, D4",
+      "A2, B3, C4, D1",
+      "A2, B4, C3, D1"
+    ],
+    "answer": 2,
+    "title": "Žlázy dodávají odlišné pracovní prostředky",
+    "paragraphs": [
+      "Příušní žláza dodává slinnou amylázu zvanou ptyalin, A2. Žaludeční žlázy souvisejí s pepsinem, B3. Pankreas s trypsinem, C4. Játra vytvářejí žluč, D1. Správné přiřazení je C.",
+      "Představ si čtyři dodavatele na různých místech zpracovatelské linky. Amyláza začíná práci na škrobu, žaludeční a pankreatické proteázy zpracovávají bílkoviny a žluč usnadňuje zacházení s tuky. Žluč přitom sama není směs trávicích enzymů.",
+      "Důležitá bezpečnostní poznámka: žaludeční buňky uvolňují zejména pepsinogen a pankreas trypsinogen, tedy neaktivní předstupně. Aktivní pepsin a trypsin vznikají až následnou aktivací v příslušném prostředí. Nabídka uvádí zjednodušeně názvy výsledných enzymů."
+    ],
+    "memory": "Příušní amyláza, žaludek pepsinogen, pankreas trypsinogen, játra žluč.",
+    "terms": [
+      "Příušní žláza",
+      "Žláza žaludeční sliznice",
+      "Slinivka břišní",
+      "Játra"
+    ],
+    "definitions": [
+      "Žluč",
+      "Ptyalin",
+      "Pepsin",
+      "Trypsin"
+    ],
+    "note": "B3 a C4 spojují žlázu s aktivním enzymem. Vlastní sekrece předchází jeho aktivaci a obsahuje zejména neaktivní pepsinogen či trypsinogen."
+  },
+  {
+    "id": 294,
+    "bookRef": "VIII · otázka 23",
+    "category": "Trávicí systém",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 0,
+    "title": "Klky zvětšují tenké střevo, tračník je nemá",
+    "paragraphs": [
+      "První tvrzení je správné. Do dvanáctníku přichází žluč a pankreatická šťáva. Vnitřní povrch tenkého střeva zvětšují řasy a klky, na úrovni jednotlivých buněk ještě mikroklky. Velká plocha pomáhá trávení a vstřebávání.",
+      "Druhé tvrzení je chybné kvůli klkům v tračníku: běžná sliznice tlustého střeva nemá takové střevní klky. Má krypty a přizpůsobení ke vstřebávání vody a iontů i k tvorbě hlenu, ale nelze ji popsat jako řidší verzi klkatého tenkého střeva.",
+      "Vyber A: první ano, druhé ne. Představ si rozdíl mezi plochou rozšířenou hustými výběžky pro příjem živin a navazujícím úsekem, který hlavně upravuje zbytek obsahu. Bakterie v tlustém střevě se podílejí na jeho zpracování, neznamená to však, že stolice vzniká jen prostým hnitím."
+    ],
+    "memory": "Tenké střevo má klky; tračník má krypty a vstřebává vodu, ale běžně nemá klky.",
+    "statements": [
+      "Do duodena tenkého střeva ústí vývod žlučových cest a vývody slinivky břišní. Vnitřní povrch tenkého střeva je zvětšen slizničními řasami a paličkovitými výběžky – klky.",
+      "Stěna tlustého střeva je upravena pro vstřebávání vody a zahuštění obsahu. Na sliznici tračníků tlustého střeva jsou malé řídké klky. Po dokončení trávení se hnitím a kvašením zbytků potravy tvoří stolice."
+    ]
+  },
+  {
+    "id": 295,
+    "bookRef": "VIII · otázka 24",
+    "category": "Trávicí systém",
+    "question": "Produkce trávicích enzymů",
+    "options": [
+      "Probíhá v pravidelných cyklech",
+      "Je stálá a stejnoměrná",
+      "Je reflexní po podráždění čidel",
+      "Je během dne pravidelná a periodická"
+    ],
+    "answer": 2,
+    "title": "Trávicí sekrece reaguje na podněty",
+    "paragraphs": [
+      "Správně podle klíče je C. Senzorické podněty a nervové reflexy pomáhají přizpůsobit trávicí sekreci přítomnosti a povaze potravy. Reakci může spouštět například chuť, žvýkání nebo obsah v jednotlivých úsecích trávicího traktu.",
+      "Představ si výrobní linku, která mění dodávky podle právě příchozího materiálu. Nemá smysl vyrábět za všech okolností stejnou dávku všech enzymů. Sekrece a jejich účinek se koordinují s pohyby trávicí trubice a potřebami konkrétní fáze.",
+      "Nervové reflexy však nejsou jediný mechanismus: významné jsou i hormony a místní signály. Slovo produkce navíc může znamenat tvorbu v buňce nebo vlastní uvolnění. Otázka míří hlavně na regulovanou sekreci, nikoli na jediný pevný denní časový rozvrh."
+    ],
+    "memory": "Jídlo a čidla → nervové i hormonální signály → přizpůsobení trávicí sekrece.",
+    "note": "C nevystihuje veškeré řízení. Sekreci ovlivňují také hormony a místní faktory; samotná buněčná syntéza enzymů není totožná s jejich uvolněním."
+  },
+  {
+    "id": 296,
+    "bookRef": "VIII · otázka 25",
+    "category": "Trávicí systém",
+    "question": "V duodenu",
+    "options": [
+      "Chrání sliznici před účinkem kyseliny chlorovodíkové hlen",
+      "Začíná vstřebávání živin, které je maximální v jejunu a ileu",
+      "Vyúsťují vývody pankreatu a žlučovodu, které nejsou opatřeny svěrači",
+      "Dospělého člověka se nachází enzym chymozin, který sráží mléčné bílkoviny"
+    ],
+    "answer": 0,
+    "title": "Dvanáctník musí chránit stěnu před kyselým přítokem",
+    "paragraphs": [
+      "Tištěný klíč vybírá A. Do dvanáctníku přichází kyselý obsah ze žaludku, proto je důležitá hlenová ochrana a hydrogenuhličitan, který kyselost tlumí. Pomáhají sekrety sliznice i pankreatu.",
+      "Představ si další dílnu za kyselou pracovní částí: potřebuje ochranný povrch a úpravu přicházející směsi, aby mohly pracovat jiné enzymy. Hlen není neprůstřelný obal, ale součást celé spolupracující slizniční bariéry.",
+      "Vyústění společných žlučových a pankreatických cest je spojeno se svěračovým aparátem, takže C neplatí. Vstřebávání jednotlivých živin má různá hlavní místa a začíná už v proximálním tenkém střevě; B je proto také částečně pravdivé a nelze ho zamítnout jako úplný nesmysl."
+    ],
+    "memory": "Duodenum chrání hlen a hydrogenuhličitan; ústí vývodů není bez svěračové regulace.",
+    "note": "A je klíč PDF. B není jednoznačně nepravdivé: duodenum skutečně živiny vstřebává a rozložení maxima záleží na konkrétní látce; poslední ileum má navíc zvláštní úlohy."
+  },
+  {
+    "id": 297,
+    "bookRef": "VIII · otázka 26",
+    "category": "Trávicí systém",
+    "question": "Které z uvedených slinných žláz produkují sliny nepřetržitě?",
+    "options": [
+      "Podčelistní slinná žláza",
+      "Podjazyková slinná žláza",
+      "Slinivka břišní",
+      "Drobné slinné žlázy sliznice ústní dutiny"
+    ],
+    "answer": 3,
+    "title": "Drobné žlázky průběžně udržují vlhký povrch",
+    "paragraphs": [
+      "Klíč vybírá D. Drobné slinné žlázy ve sliznici úst přispívají k průběžnému zvlhčování a ochraně povrchu. Jejich hlenovitá složka pomáhá snížit tření a udržovat vhodné prostředí i tehdy, když právě nejíš.",
+      "Představ si malé místní mazací body rozmístěné po zařízení. Nemusí dodávat největší podíl celkové tekutiny, ale pomáhají tam, kde je povrch potřebuje. Velké žlázy pak výrazně přispívají k objemu a reagují na různé podněty.",
+      "Ani velké slinné žlázy nejsou mimo jídlo vždy zcela vypnuté: zejména podčelistní žláza významně přispívá k nestimulované sekreci. Slinivka břišní zase není slinná žláza, přestože české názvy znějí podobně. Slovo nepřetržitě je proto nutné chápat jako školní důraz, ne jako výlučné pravidlo."
+    ],
+    "memory": "Drobné žlázky průběžně chrání povrch; i velké žlázy mají základní sekreci.",
+    "note": "D odpovídá PDF, ale bazální tvorba slin není vyhrazena jen drobným žlázkám. Sekrece všech žláz se navíc v čase mění, například ve spánku."
+  },
+  {
+    "id": 298,
+    "bookRef": "VIII · otázka 27",
+    "category": "Trávicí systém",
+    "question": "Která tvrzení o slinivce břišní jsou nesprávná?",
+    "options": [
+      "Produkuje hormony a enzymy",
+      "Produkuje žluč",
+      "Je uložena v ohbí dvanáctníku",
+      "Ústí do dvanáctníku"
+    ],
+    "answer": 1,
+    "title": "Žluč tvoří játra, pankreas dodává jinou šťávu",
+    "paragraphs": [
+      "Hledáš nesprávné tvrzení, proto vyber B. Slinivka břišní nevyrábí žluč; tu vytvářejí játra. Pankreas dodává do dvanáctníku vlastní šťávu s hydrogenuhličitanem a trávicími enzymy či jejich předstupni.",
+      "Představ si dva dodavatele do stejné dílny. Játra posílají žluč pro zpracování tuků a pankreas enzymatické nástroje i neutralizační složku. Obě tekutiny se setkávají ve střevě, ale společný cíl z nich nedělá výrobek stejného orgánu.",
+      "Pankreas má také endokrinní ostrůvky, které uvolňují hormony do krve. V ohbí dvanáctníku leží jeho hlava; celé tělo a ocas pokračují dál. C je tedy zkrácený popis vztahu části orgánu, ne přesná poloha úplně celé slinivky."
+    ],
+    "memory": "Pankreas enzymy a hormony; játra žluč; žlučník žluč skladuje.",
+    "note": "C je topografické zjednodušení: ohbí duodena objímá hlavu pankreatu, nikoli celý orgán."
+  },
+  {
+    "id": 299,
+    "bookRef": "VIII · otázka 28",
+    "category": "Trávicí systém",
+    "question": "Slinivka břišní (pankreas)",
+    "options": [
+      "Má endokrinní část vylučující trávicí enzymy do dvanáctníku",
+      "Má exokrinní část vylučující inzulín a glukagon do krve",
+      "Vylučuje do dvanáctníku žluč, usnadňující trávení tuků",
+      "Vylučuje do dvanáctníku hydrogenuhličitany sloužící k neutralizaci kyselé tráveniny žaludku"
+    ],
+    "answer": 3,
+    "title": "Pankreas pomáhá změnit kyselé prostředí na vhodné pro střevní enzymy",
+    "paragraphs": [
+      "Správně je D. Pankreatická šťáva obsahuje hydrogenuhličitan, který pomáhá neutralizovat kyselý obsah přicházející ze žaludku. Tím chrání další úsek a vytváří vhodnější podmínky pro působení střevních a pankreatických enzymů.",
+      "Představ si přesun směsi mezi dvěma dílnami s odlišným nastavením. Žaludek potřebuje kyselé prostředí pro pepsin, ale následující zpracování vyžaduje jinou chemickou situaci. Nestačí tedy jen přidat nové enzymy a ponechat veškerou kyselost stejnou.",
+      "Exokrinní část posílá sekret vývodem do střeva. Endokrinní ostrůvky uvolňují hormony, například inzulín a glukagon, do krve. V A a B jsou právě tyto směry prohozené. Žluč opět pochází z jater, ne ze slinivky."
+    ],
+    "memory": "EXO vývodem do střeva; ENDO hormony do krve; pankreatický hydrogenuhličitan tlumí kyselost."
+  },
+  {
+    "id": 300,
+    "bookRef": "VIII · otázka 29",
+    "category": "Trávicí systém",
+    "question": "Střevní šťáva, produkovaná žlázami sliznice tenkého střeva",
+    "options": [
+      "Neobsahuje trávicí enzymy",
+      "Je slabě kyselá",
+      "Dokončuje štěpení bílkovin, cukrů a tuků",
+      "Je ve své produkci řízena hormonálně"
+    ],
+    "answer": 2,
+    "title": "Dolaďování trávení probíhá i přímo na povrchu střevních buněk",
+    "paragraphs": [
+      "Podle klíče vyber C. Tenké střevo je místem pokračování a dokončování většiny trávení. Enzymy v jeho prostředí a na povrchu buněk rozkládají menší části potravy na složky, které lze následně vstřebat.",
+      "Představ si závěrečnou dílnu, která navazuje na předchozí hrubé zpracování. Některé nástroje přicházejí z pankreatu, jiné jsou vázané přímo na kartáčový lem enterocytů. Například tamní peptidázy a disacharidázy dokončují důležité kroky štěpení bílkovin a sacharidů.",
+      "Není ale přesné připsat vše jedné volně tekoucí střevní šťávě. Tuky zásadně zpracovávají pankreatické enzymy za pomoci žluči a sekrece sliznice je řízena více mechanismy. Obsah tenkého střeva také není za běžných podmínek popisován jako slabě kyselá žaludeční šťáva."
+    ],
+    "memory": "Tenké střevo dokončuje; pracuje pankreatická šťáva, žluč i enzymy kartáčového lemu.",
+    "note": "C je souhrnná školní zkratka. Enzymy kartáčového lemu jsou převážně vázané na buněčný povrch, nikoli všechny volně vyloučené žlázami do šťávy. D také nelze absolutně vyloučit, protože hormonální vlivy existují."
   }
 ]);
 const $ = id => document.getElementById(id);
