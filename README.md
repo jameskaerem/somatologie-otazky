@@ -1,30 +1,30 @@
 # Somatologie
 
-**Verze: 1.5.0**  
-**Datum vydání: 20. 10. 2026**  
-**Počet otázek: 300**
+**Verze: 1.6.0**  
+**Datum vydání: 22. 10. 2026**  
+**Počet otázek: 350**
 
 Mobilní procvičování somatologie v jednom samostatném HTML souboru. Obsahuje vysvětlení odpovědí, chytré opakování a ukládání pokroku v prohlížeči.
 
 ## Změny v této verzi
 
-- Přidáno přesně 50 otázek, čísla 251–300: kapitola VII otázky 14–34 a kapitola VIII otázky 1–29.
-- Nová sada dokončuje dýchací systém a přidává ústa, zuby, polykání, jícen, žaludek, pankreas a začátek střevního trávení.
-- Každá nová otázka má tři odstavce s vysvětlením souvislostí a pomůcku pro zapamatování.
-- Všech 300 přiřazení odpovědí souhlasí s přepisem tištěných klíčů PDF. Nové otázky, možnosti a klíče byly čteny přímo ze skenu bez internetových zdrojů; nové klíče jsou na PDF stranách 34 a 40 (tištěné strany 67 a 78).
-- Sporné, zastaralé nebo nejednoznačné formulace mají poznámku „Pro přesnost“. V této sadě například rozlišujeme začátek výměny mléčného chrupu od jejího dokončení, aktivní enzym od jeho předstupně a problematický údaj o chymosinu člověka. Hodnocení zůstává podle tištěného klíče.
-- Původních 250 otázek včetně vysvětlení a identifikátorů zůstalo beze změny. Formát ukládání a pravidla chytrého opakování jsou zachované.
+- Přidáno přesně 50 otázek, čísla 301–350: kapitola VIII otázky 30–49, kapitola IX otázky 1–19, kapitola X otázky 1–9 a kapitola XI otázky 1–2.
+- Sada dokončuje trávení, zahrnuje celou kapitolu fyziologie výživy a termoregulace a začíná močový systém.
+- Každá nová otázka má tři odstavce vysvětlení s logickými souvislostmi a pomůcku pro zapamatování.
+- Všech 350 přiřazení odpovědí souhlasí s přepisem tištěných klíčů zdrojového PDF. Nové otázky, možnosti a klíče byly čteny přímo ze skenu bez internetu a bez přebírání ručních značek. Nově použité klíče: PDF strany 40, 43, 44 a 48 (tištěné strany 78, 84, 87 a 95).
+- Sporné či zastaralé formulace mají poznámku „Pro přesnost“. Například rozlišujeme zásobní ferritin a transportní transferin, horečku a hypertermii nebo obecný ileus a jeho paralytickou formu. U problematické otázky o vodě je výslovně uvedeno, že A je biologicky správné, i když PDF hodnotí D.
+- Původních 300 otázek včetně vysvětlení a identifikátorů zůstalo beze změny. Formát uloženého pokroku ani pravidla chytrého opakování se nemění.
 
 ## Co bylo ověřeno
 
-- Celý náhodný test 300 různých otázek, okamžité zbarvení odpovědí, vysvětlení, ochrana proti opakovanému započítání a správné výsledné skóre.
-- Zachování všech polí pokroku při aktualizaci z 250 na 300 otázek na stejné adrese: chyby, tipy, zvládnuté otázky i rozpracované starší kolo.
+- Celý náhodný test 350 různých otázek, zbarvení odpovědí, zobrazení vysvětlení, ochrana proti dvojímu započtení a výsledné skóre.
+- Zachování všech polí pokroku při aktualizaci ze 300 na 350 otázek na stejné adrese: chyby, tipy, zvládnuté otázky i rozpracované starší kolo.
 - Obnovení po skutečném zavření a znovuotevření testovacího prohlížeče před aktualizací i po ní.
-- Pokračování po obnovení stránky v novém celém testu za hranicí 250 odpovědí.
-- Chytré opakování včetně odloženého návratu chyby, označení tipu a neposouvání úrovně při příliš časném opakování.
-- Všech 300 otázek i vysvětlení při šířkách 320, 390, 768 a 1024 pixelů bez vodorovného přetékání. Tlačítka odpovědí mají nejméně 64 pixelů na výšku.
-- Spuštění samostatného HTML bez internetu a funkční náhradní chování při zablokovaném či poškozeném úložišti.
-- Kopie HTML v balíčku je shodná se zdrojem a ZIP prošel kontrolou integrity i porovnáním obsahu.
+- Pokračování v novém celém testu po obnovení stránky za hranicí 300 odpovědí.
+- Chytré opakování: správný tip nezvyšuje zvládnutí, předčasná správná odpověď neposune úroveň a chyba se vrací po odstupu.
+- Všech 350 otázek i vysvětlení při šířkách 320, 390, 768 a 1024 pixelů bez vodorovného přetékání. Tlačítka odpovědí mají nejméně 64 pixelů na výšku.
+- Offline spuštění samostatného HTML a funkční náhradní chování při zablokovaném či poškozeném úložišti.
+- Shoda zabaleného HTML se zdrojem, kontrola obsahu ZIP a jeho integrity.
 
 ## Spuštění a nahrání
 
@@ -34,12 +34,13 @@ Na GitHub nahraj **obsah této složky** do stejného místa jako dosud: `index.
 
 Pokrok se ukládá po každé odpovědi v konkrétním prohlížeči a jeho profilu, odděleně od HTML souboru. Nahrazení aplikace na stejném webu ho zachovává, pokud zůstala zachovaná data prohlížeče. Mezi zařízeními se nesynchronizuje; vymazání dat nebo ukončení anonymního režimu může pokrok odstranit. U místně otevřeného souboru může přesunutí do jiné složky znamenat jiné úložiště; pro pravidelné používání zachovej stejnou webovou adresu.
 
-Rozpracované starší kolo (například test 250 otázek) si zachová původní délku. Nové otázky se zapojí do nově zahájeného kola a chytrého procvičování; dřívější znalost původních otázek zůstane uložená.
+Rozpracované starší kolo (například test 300 otázek) si zachová původní délku. Nové otázky se zapojí do nově zahájeného kola a chytrého procvičování; dřívější znalost původních otázek zůstane uložená.
 
 ## Historie verzí
 
 | Verze | Otázky | Hlavní změna |
 | --- | ---: | --- |
+| 1.6.0 | 350 | Dalších 50 otázek: dokončení trávení, výživa, termoregulace a začátek močového systému; kontrola klíčů a zachování pokroku. |
 | 1.5.0 | 300 | Dalších 50 otázek: dokončení dýchacího systému a začátek trávení; vysvětlení, kontrola klíčů a kompatibilita pokroku. |
 | 1.4.0 | 250 | Dalších 50 otázek: dokončení krve, celý krevní oběh a začátek dýchacího systému; ověřené klíče, vysvětlení a kompatibilita pokroku. |
 | 1.3.0 | 200 | Dalších 50 otázek o krvi a imunitě; kontrola klíčů, vysvětlení, mobilního zobrazení a zachování pokroku. |
@@ -52,8 +53,8 @@ Rozpracované starší kolo (například test 250 otázek) si zachová původní
 
 ## Číslování dalších vydání
 
-- **1.6.0:** další rozšíření otázek nebo nová funkce.
-- **1.5.1:** drobná oprava současné verze.
+- **1.7.0:** další rozšíření otázek nebo nová funkce.
+- **1.6.1:** drobná oprava současné verze.
 - **2.0.0:** zásadní přepracování aplikace.
 
 Každé další vydání má vlastní složku a ZIP se stejným číslem verze a obsahuje `index.html` a aktualizované `README.md`. Při přidávání otázek se zachovají identifikátory dosavadních otázek a kompatibilita uloženého pokroku.

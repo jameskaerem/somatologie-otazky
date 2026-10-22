@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f6f3ee">
-  <meta name="description" content="300 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
+  <meta name="description" content="350 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
   <title>Somatologie · malý krok, velké pochopení</title>
   <style>
     :root{color-scheme:light;--bg:#f6f3ee;--paper:#fffefa;--ink:#293d39;--muted:#65736e;--line:#e1e6df;--sage:#dceadf;--green:#236345;--green-bg:#e4f3e7;--red:#983a45;--red-bg:#fbe5e6;--lavender:#ece7f8;--accent:#65558e;--peach:#fae8dc;--radius:26px}
@@ -18,22 +18,22 @@
   <header class="brand">
     <div class="brand-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M4 6.5c3.4-1.2 6.7-.7 10 1.6 3.3-2.3 6.6-2.8 10-1.6v16c-3.4-1.2-6.7-.7-10 1.6-3.3-2.3-6.6-2.8-10-1.6v-16Z" stroke="#56765e" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 8v16M7.5 11l3 .9M7.5 15l3 .9M17.5 12l3-.9M17.5 16l3-.9" stroke="#56765e" stroke-width="1.5" stroke-linecap="round"/></svg></div>
     <div><div class="brand-name">Somatologie</div><div class="brand-sub">Malý krok, velké pochopení.</div></div>
-    <span class="offline">300 otázek</span>
+    <span class="offline">350 otázek</span>
   </header>
 
-  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">300 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
+  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">350 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
   <div id="storageNotice" class="toast" hidden>Prohlížeč nepovolil ukládání. Test funguje, ale po zavření se průběh neobnoví.</div>
   <div id="recoveryNotice" class="recovery" hidden>Uložený pokrok nebylo možné načíst. Začínáme s novým přehledem.</div>
   <section class="card home" id="home" aria-label="Přehled učení">
     <h2 class="home-title">Každá otázka má svůj čas.</h2>
-    <div class="home-stats"><div class="home-stat"><span>Vyzkoušeno</span><strong id="seenTotal">0 / 300</strong></div><div class="home-stat"><span>Zvládnuté</span><strong id="masteredTotal">0 / 300</strong></div><div class="home-stat"><span>Čas zopakovat</span><strong id="dueTotal">0</strong></div></div>
+    <div class="home-stats"><div class="home-stat"><span>Vyzkoušeno</span><strong id="seenTotal">0 / 350</strong></div><div class="home-stat"><span>Zvládnuté</span><strong id="masteredTotal">0 / 350</strong></div><div class="home-stat"><span>Čas zopakovat</span><strong id="dueTotal">0</strong></div></div>
     <p class="learning-label">Zvládnuté = alespoň 3 úspěšná vybavení v plánovaných termínech.</p>
-    <div class="track" role="progressbar" id="learningProgress" aria-label="Počet opakovaně zvládnutých otázek" aria-valuemin="0" aria-valuemax="300" aria-valuenow="0"><div class="fill" id="learningFill"></div></div>
+    <div class="track" role="progressbar" id="learningProgress" aria-label="Počet opakovaně zvládnutých otázek" aria-valuemin="0" aria-valuemax="350" aria-valuenow="0"><div class="fill" id="learningFill"></div></div>
     <p class="home-hint" id="homeHint"></p>
     <button class="next resume" id="resume" hidden>Pokračovat v kole</button>
     <div class="mode-card recommended"><span class="tag">Doporučený režim</span><h3>Chytré procvičování</h3><p>Krátké kolo do 10 odpovědí. Přednost mají chyby a tipy, pak otázky k opakování a nové. Zvládnuté odpočívají do svého termínu.</p><button class="next" id="smartStart">Začít chytré kolo</button></div>
     <div class="mode-card"><h3>Jen chyby a tipy <span class="pill" id="weakCount">0</span></h3><p id="weakHint"></p><button class="next secondary" id="weakStart">Procvičit slabší otázky</button></div>
-    <div class="mode-card"><h3>Test všech 300</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
+    <div class="mode-card"><h3>Test všech 350</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
     <details class="home-help"><summary>Jak funguje chytré opakování?</summary><ul><li><strong>Chyba nebo tip:</strong> otázka se vrátí po alespoň třech jiných odpovědích v témže chytrém kole, jinak přibližně za 10 minut.</li><li><strong>Správně a bez tipu:</strong> termíny se postupně prodlužují na 1, 3, 7, 14 a 30 dní od příslušné odpovědi.</li><li><strong>Správně před termínem:</strong> procvičení se počítá do výsledku, ale samo neposune otázku na vyšší úroveň.</li><li><strong>Tři úspěchy s odstupem:</strong> otázka se označí jako zvládnutá. Nezmizí navždy; po termínu se znovu ověří.</li><li><strong>Další chyba:</strong> otázka se vrátí mezi ty k častému procvičení.</li></ul><p>Jednotlivé otázky se v chytrém kole mohou zopakovat. Skóre proto počítá odpovědi, zatímco horní přehled počítá různé otázky.</p><p>Pokrok se ukládá pouze v tomto prohlížeči a na této webové adrese. Telefon a počítač mají samostatný přehled. Režim tipování označ před odpovědí.</p></details>
   </section>
   <div class="quiz-toolbar" id="quizToolbar" hidden><button class="home-button" id="homeButton">← Přehled</button><span class="mode-label" id="modeLabel"></span></div>
@@ -53,7 +53,7 @@
   </section>
   <section class="card" id="results" aria-label="Výsledek kola" hidden></section>
   <footer class="footer"><p id="saveStatus">Pokrok se ukládá v tomto prohlížeči. Bez účtu a registrace.</p>
-    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 300 otázek v pořadí dokumentu: kapitolu I, otázky 1–45 (v aplikaci 1–45), kapitolu II, otázky 1–28 (46–73), kapitolu III, otázky 1–6 (74–79), kapitolu IV.a, otázky 1–29 (80–108), kapitolu IV.b, otázky 1–33 (109–141), kapitolu V, otázky 1–60 (142–201), kapitolu VI, otázky 1–36 (202–237), kapitolu VII, otázky 1–34 (238–271), a kapitolu VIII, otázky 1–29 (272–300).</p><p>Otázky: tištěné strany 8–15, 18–22, 24–25, 28–39, 42–51, 54–59, 62–67 a 70–75 (PDF strany 5–8, 10–13, 15–20, 22–26, 28–30, 32–34 a 36–38). Tištěné klíče: strany 15, 22, 25, 32, 39, 51, 60, 67 a 78 (PDF strany 8, 12, 13, 17, 20, 26, 31, 34 a 40). Všech 300 přiřazení správné odpovědi bylo porovnáno s těmito klíči; nově přidané otázky se ověřovaly bez internetových zdrojů. Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
+    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 350 otázek v pořadí dokumentu: kapitolu I, otázky 1–45 (v aplikaci 1–45), kapitolu II, otázky 1–28 (46–73), kapitolu III, otázky 1–6 (74–79), kapitolu IV.a, otázky 1–29 (80–108), kapitolu IV.b, otázky 1–33 (109–141), kapitolu V, otázky 1–60 (142–201), kapitolu VI, otázky 1–36 (202–237), kapitolu VII, otázky 1–34 (238–271), kapitolu VIII, otázky 1–49 (272–320), kapitolu IX, otázky 1–19 (321–339), kapitolu X, otázky 1–9 (340–348), a kapitolu XI, otázky 1–2 (349–350).</p><p>Otázky: tištěné strany 8–15, 18–22, 24–25, 28–39, 42–51, 54–59, 62–67, 70–78, 80–84, 86–87 a 90 (PDF strany 5–8, 10–13, 15–20, 22–26, 28–30, 32–34, 36–44 a 46). Tištěné klíče: strany 15, 22, 25, 32, 39, 51, 60, 67, 78, 84, 87 a 95 (PDF strany 8, 12, 13, 17, 20, 26, 31, 34, 40, 43, 44 a 48). Všech 350 přiřazení správné odpovědi bylo porovnáno s těmito klíči; nově přidané otázky se ověřovaly bez internetových zdrojů. Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
     <details class="sources"><summary>Uložený pokrok</summary><p>Nové kolo nemaže dřívější znalost otázek. Vymazání dole resetuje celé učení. Vymazáním dat prohlížeče se pokrok také ztratí. Stejná webová adresa po nahrání nové verze pokrok zachová, pokud zůstane zachované úložiště prohlížeče.</p><button class="reset" id="reset">Vymazat celý uložený pokrok</button></details>
   </footer>
 </main>
@@ -6733,6 +6733,1213 @@ QUESTIONS.push(...[
     ],
     "memory": "Tenké střevo dokončuje; pracuje pankreatická šťáva, žluč i enzymy kartáčového lemu.",
     "note": "C je souhrnná školní zkratka. Enzymy kartáčového lemu jsou převážně vázané na buněčný povrch, nikoli všechny volně vyloučené žlázami do šťávy. D také nelze absolutně vyloučit, protože hormonální vlivy existují."
+  },
+  {
+    "id": 301,
+    "bookRef": "VIII · otázka 30",
+    "category": "Trávicí systém",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 2,
+    "title": "Kyselý přítok vyvolá pomoc s neutralizací",
+    "paragraphs": [
+      "Klíč hodnotí obě tvrzení jako správná, tedy C. Sekretin se uvolňuje ze sliznice dvanáctníku při příchodu kyselého obsahu a podporuje hlavně vodnatou pankreatickou sekreci bohatou na hydrogenuhličitan. Ten pomáhá kyselost zmírnit.",
+      "Představ si další dílnu, která si po přijetí kyselé směsi vyžádá neutralizační pomoc. Pankreas zároveň dodává nástroje ke štěpení bílkovin, tuků a škrobu. Jejich tvorba a výdej však mají více řídicích vlivů, nejen jediný hormon.",
+      "Proteázy přicházejí převážně jako neaktivní předstupně, například trypsinogen, aby nezačaly účinně štěpit vlastní žlázu. Cholecystokinin a nervové signály výrazně podporují enzymovou složku. První tvrzení je tedy vhodné číst hlavně ve vztahu k hydrogenuhličitanové odpovědi."
+    ],
+    "memory": "Sekretin žádá hlavně neutralizační hydrogenuhličitan; pankreas dodává také enzymy a jejich předstupně.",
+    "statements": [
+      "Hlavním podnětem pro tvorbu pankreatické šťávy je sekretin, látka uvolňovaná ve stěně duodena po podráždění kyselým žaludečním obsahem.",
+      "Pankreatická šťáva obsahuje trypsinový komplex (štěpení bílkovin), pankreatickou lipázu (štěpení tuků) a pankreatickou amylázu (štěpení sacharidů)."
+    ],
+    "note": "„Hlavní podnět“ není univerzální pro všechny složky pankreatické šťávy. Trypsin je v sekretu především zastoupen neaktivním trypsinogenem."
+  },
+  {
+    "id": 302,
+    "bookRef": "VIII · otázka 31",
+    "category": "Trávicí systém",
+    "question": "Soli žlučových kyselin",
+    "options": [
+      "Se tvoří ve žlučníku",
+      "Snížením povrchového napětí emulgují tuky",
+      "Se účastní při trávení bílkovin",
+      "Obsahují hlavně bilirubin"
+    ],
+    "answer": 1,
+    "title": "Tukové kapky potřebují zpřístupnit vodnému prostředí",
+    "paragraphs": [
+      "Správně je B. Žlučové soli pomáhají rozptýlit a stabilizovat tukové kapénky ve vodném prostředí střeva. Zvětšuje se dostupný povrch pro lipázy a spolu s dalšími složkami se tvoří micely usnadňující vstřebávání produktů trávení tuků.",
+      "Představ si mastnotu rozptýlenou do malých kapek pomocí látky, která rozumí vodě i tuku. Není to přesně stejný děj jako mytí nádobí, ale přirovnání pomáhá: jedna velká tuková koule nabízí enzymům méně přístupného povrchu než mnoho drobných kapek.",
+      "Žlučové kyseliny vznikají v játrech a žlučník je hlavně zásobník žluči. Bilirubin je jiná složka, žlučové barvivo vznikající při odbourávání hemu. Žlučové soli nejsou bílkovinné nůžky ani trávicí enzymy."
+    ],
+    "memory": "Žlučové soli tuk zpřístupní, lipázy ho chemicky štěpí."
+  },
+  {
+    "id": 303,
+    "bookRef": "VIII · otázka 32",
+    "category": "Trávicí systém",
+    "question": "Žluč",
+    "options": [
+      "Je vytvářena a zahušťována ve žlučníku",
+      "Umožňuje trávení bílkovin a tuků",
+      "Obsahuje žlučová barviva, cholesterol a hlen",
+      "Obsahuje zejména trávicí enzymy"
+    ],
+    "answer": 2,
+    "title": "Žluč tvoří játra, žlučník ji skladuje",
+    "paragraphs": [
+      "Klíč vybírá C. Žluč obsahuje žlučové soli, barviva, cholesterol, fosfolipidy, vodu a další složky; hlenová složka souvisí i se sekrecí žlučových cest a žlučníku. Není to hlavně směs enzymů.",
+      "Představ si pomocnou kapalinu pro zacházení s tuky a zároveň cestu vylučování některých látek, například bilirubinu. Žluč vzniká v játrech. Ve žlučníku se uchovává a zahušťuje, protože se část vody a iontů vstřebává zpět.",
+      "A proto zaměňuje místo výroby se zásobníkem. Žluč usnadňuje trávení a vstřebávání tuků, ale běžné štěpení bílkovin zajišťují proteolytické enzymy, například pepsin a pankreatické proteázy. Samotná žluč není jejich náhradou."
+    ],
+    "memory": "Játra vyrábějí, žlučník skladuje a zahušťuje; žluč pomáhá tukům a odnáší některé odpadní látky."
+  },
+  {
+    "id": 304,
+    "bookRef": "VIII · otázka 33",
+    "category": "Trávicí systém",
+    "question": "Žlučník slouží",
+    "options": [
+      "Pro vytváření látek nezbytných pro srážení krve",
+      "Pro udržování stálé tělesné teploty",
+      "Pro vylučování škodlivin je pro život nezbytný",
+      "Ke shromažďování a zahušťování žluče"
+    ],
+    "answer": 3,
+    "title": "Zásobník připraví žluč na chvíli, kdy je potřeba",
+    "paragraphs": [
+      "Správně je D. Žlučník shromažďuje žluč vytvořenou játry a zahušťuje ji vstřebáváním části vody a iontů. Při vhodných podnětech se stáhne a jeho obsah se dostává žlučovými cestami do dvanáctníku.",
+      "Představ si sklad pomocné kapaliny vedle výrobní linky. Výroba probíhá jinde, ale sklad umožní poskytnout větší dávku v potřebnou chvíli. Proto nelze žlučníku připsat veškeré funkce jater jen proto, že spolu orgány úzce souvisejí.",
+      "Řadu srážecích bílkovin vytvářejí játra, ne žlučník. Žlučník také není hlavní termoregulační orgán ani nepostradatelná jediná cesta odvodu škodlivin. Jeho význam spočívá především v hospodaření se žlučí, nikoli v samotné její výrobě."
+    ],
+    "memory": "Žlučník = sklad a koncentrátor; játra = výrobce žluči."
+  },
+  {
+    "id": 305,
+    "bookRef": "VIII · otázka 34",
+    "category": "Trávicí systém",
+    "question": "Označte, o které vývody trávicího traktu jde:",
+    "options": [
+      "A2, B3, C4, D1",
+      "A2, B4, C3, D1",
+      "A3, B4, C2, D1",
+      "A3, B2, C4, D1"
+    ],
+    "answer": 3,
+    "title": "Název vývodu prozradí jeho původ",
+    "paragraphs": [
+      "Ductus cysticus je vývod žlučníku, A3. Ductus choledochus je společný žlučovod, B2. Ductus hepaticus je jaterní vývod, C4. Ductus pancreaticus je vývod slinivky, D1. Správná kombinace je D.",
+      "Představ si mapu potrubí mezi výrobcem, zásobníkem a střevem. Jaterní cesty přivádějí žluč od výrobce, vývod žlučníku připojuje zásobník a společný žlučovod pokračuje směrem k duodenu. Pankreatická cesta přináší odlišný sekret.",
+      "Není potřeba učit se jen řadu písmen: hepato- odkazuje na játra a pancreato- na slinivku. Cysticus se v této oblasti vztahuje ke žlučníku. Jednotlivé cesty se propojují, ale jejich jména stále označují konkrétní úseky, ne jednu zaměnitelnou trubici."
+    ],
+    "memory": "Cysticus žlučník, hepaticus játra, choledochus společný žlučovod, pancreaticus pankreas.",
+    "terms": [
+      "Ductus cysticus",
+      "Ductus choledochus",
+      "Ductus hepaticus",
+      "Ductus pancreaticus"
+    ],
+    "definitions": [
+      "Vývod slinivky břišní",
+      "Žlučovod",
+      "Vývod žlučníku",
+      "Jaterní vývod"
+    ]
+  },
+  {
+    "id": 306,
+    "bookRef": "VIII · otázka 35",
+    "category": "Trávicí systém",
+    "question": "Při trávení živin v tenkém střevě se neúčastní",
+    "options": [
+      "Enzym trypsin",
+      "Enzym pepsin",
+      "Směs lipáz",
+      "Směs amyláz"
+    ],
+    "answer": 1,
+    "title": "Pepsin má své hlavní pracoviště v žaludku",
+    "paragraphs": [
+      "Hledáš výjimku, proto je správně B. Pepsin působí hlavně v kyselém žaludku. V prostředí tenkého střeva, kde se kyselost tlumí, není hlavním účinným nástrojem pokračujícího trávení.",
+      "Představ si střídání směn v různých dílnách. Žaludeční pepsin zahájí rozklad bílkovin a ve střevě pokračují pankreatické proteázy, například aktivovaný trypsin, a peptidázy buněčného povrchu. Enzym potřebuje také vhodné pracovní podmínky.",
+      "Lipázy se podílejí na štěpení tuků a amyláza na štěpení škrobu. Samotná přítomnost zbytků pepsinu v obsahu přicházejícím ze žaludku neznamená, že bude dál účinně pracovat za jiného pH. Otázka míří na fyziologické místo účinku."
+    ],
+    "memory": "Pepsin kyselý žaludek; trypsin a další pankreatické enzymy pokračují ve střevě."
+  },
+  {
+    "id": 307,
+    "bookRef": "VIII · otázka 36",
+    "category": "Trávicí systém",
+    "question": "Aktivní vstřebávání živin",
+    "options": [
+      "Nezávisí na složení potravy",
+      "Je fyziologickým základem metabolismu",
+      "Zahrnuje resorpci a transport živin – pouze do krevního oběhu",
+      "V žilách tenkého střeva je provázeno prouděním krve rychlostí až 20 ml za minutu"
+    ],
+    "answer": 1,
+    "title": "Živiny se musí dostat přes střevní bariéru do těla",
+    "paragraphs": [
+      "Klíč vybírá B. Vstřebání potravy poskytuje organismu substráty pro energetické i stavební děje. Rozštěpit jídlo v lumen střeva nestačí: jeho využitelné složky musí překročit epitel a dostat se do vnitřního prostředí.",
+      "Představ si vyložené zboží před branou skladu. Trávení ho rozdělí do vhodných balení a vstřebávání ho přepraví dovnitř. Některé přenašeče využívají energii přímo či nepřímo, jiné látky přecházejí usnadněnou nebo prostou difuzí.",
+      "Transport nevede jen do krve: značná část dlouhořetězcových tuků odchází ve formě chylomikronů nejprve mízou. Složení potravy a vlastnosti jednotlivých látek také ovlivňují místo i způsob vstřebání. Číselný údaj D navíc není obecné pravidlo střevního průtoku."
+    ],
+    "memory": "Trávení balení zmenší, vstřebání ho dopraví do těla; cesta může vést krví i mízou.",
+    "note": "B je široké shrnutí: metabolismus zahrnuje mnohem víc než střevní absorpci. Ne všechny živiny se vstřebávají aktivním transportem."
+  },
+  {
+    "id": 308,
+    "bookRef": "VIII · otázka 37",
+    "category": "Trávicí systém",
+    "question": "V játrech",
+    "options": [
+      "Se zpracovává jen malá část vstřebaných živin",
+      "Se neukládají žádné zásobní látky",
+      "Jsou zneškodňovány jedovaté látky",
+      "Se koncentruje vytvořená žluč"
+    ],
+    "answer": 2,
+    "title": "Játra chemicky zpracovávají i mnoho cizorodých látek",
+    "paragraphs": [
+      "Správně je C. Játra se významně podílejí na přeměnách látek, včetně řady cizorodých a potenciálně škodlivých sloučenin. Často je mění do podoby, kterou lze dále využít nebo vyloučit.",
+      "Představ si velké zpracovatelské centrum, kam přichází mnoho látek ze střeva. Nejde jen o filtr zachycující nečistoty v sítku: pracují zde enzymy a probíhají chemické reakce. Některé meziprodukty přitom mohou být naopak reaktivní, takže zneškodnění není automatické u každé látky.",
+      "Játra zároveň ukládají například glykogen a některé další zásoby. Významně zpracovávají vstřebané živiny a tvoří žluč; její zahušťování je typickou funkcí žlučníku. Záměna výrobce a zásobníku by proto vedla k nesprávné odpovědi D."
+    ],
+    "memory": "Játra = chemická zpracovna a zásobník; žlučník zahušťuje jejich žluč."
+  },
+  {
+    "id": 309,
+    "bookRef": "VIII · otázka 38",
+    "category": "Trávicí systém",
+    "question": "V játrech",
+    "options": [
+      "Je uložen pankreas",
+      "Přivádí živiny z žaludku a střev jaterní tepna",
+      "Jsou žlázové vnitřně sekretorické buňky",
+      "Probíhá metabolická cirkulace vrátnicovým oběhem"
+    ],
+    "answer": 3,
+    "title": "Vrátnice přivádí krev ze zažívacích orgánů",
+    "paragraphs": [
+      "Klíč označuje D. Smyslem je jaterní vrátnicový oběh: krev z většiny trávicího traktu přichází portální žílou do jater, kde lze její obsah metabolicky zpracovat. Neobvyklé spojení metabolická cirkulace není přesná samostatná definice.",
+      "Představ si rozvoz, který po převzetí zboží ze střeva nejprve projede centrálním skladem. Játra díky tomu získávají důležitou možnost upravit koncentrace a zpracovat řadu vstřebaných látek před jejich dalším oběhem.",
+      "Jaterní tepna přináší především okysličenou krev, ale hlavní cesta živin z trávicího traktu je vrátnice. Pankreas je samostatný orgán, nikoli uložená součást jater. Játra sice produkují látky do krve a mají endokrinní funkce, takže C je příliš neurčitá nabídka."
+    ],
+    "memory": "Živiny ze střeva přivádí do jater hlavně vrátnice; jaterní tepna dodává okysličenou krev.",
+    "note": "D zachovává klíč, termín „metabolická cirkulace“ je nestandardní. C nelze chápat jako důkaz, že játra nemají endokrinní funkce."
+  },
+  {
+    "id": 310,
+    "bookRef": "VIII · otázka 39",
+    "category": "Trávicí systém",
+    "question": "V játrech",
+    "options": [
+      "Se vytváří velké množství tělesného tepla",
+      "Je jeden trámec vždy tvořen několika lalůčky",
+      "Je v levé rýze uložen žlučník",
+      "Vznikají trombocyty"
+    ],
+    "answer": 0,
+    "title": "Intenzivní metabolismus také uvolňuje teplo",
+    "paragraphs": [
+      "Správně je A. Játra vykonávají mnoho metabolických reakcí a významně přispívají k tvorbě tělesného tepla. Energie z chemických přeměn se nepromění celá v užitečnou buněčnou práci, část se uvolní jako teplo.",
+      "Představ si rušnou továrnu, která při provozu také hřeje. Jaterní buňky zpracovávají živiny, tvoří bílkoviny, přeměňují látky a udržují zásoby. Proto je játra potřeba vnímat jako aktivní metabolický orgán, ne jen pasivní sklad.",
+      "Jaterní trámce jsou uspořádání hepatocytů uvnitř lalůčkové stavby, nikoli sestavy několika lalůčků. Žlučník leží v příslušné jamce na spodní ploše jater, ne jednoduše v levé rýze. Destičky běžně vznikají z megakaryocytů v kostní dřeni."
+    ],
+    "memory": "Játra hodně chemicky pracují, a proto také významně hřejí."
+  },
+  {
+    "id": 311,
+    "bookRef": "VIII · otázka 40",
+    "category": "Trávicí systém",
+    "question": "Kde se ukládá glykogen?",
+    "options": [
+      "V nervových buňkách",
+      "V kostní dřeni",
+      "V buňkách jater",
+      "Ve slezině"
+    ],
+    "answer": 2,
+    "title": "Játra mají zásobní balení glukózy",
+    "paragraphs": [
+      "Z nabízených odpovědí je správně C. Hepatocyty ukládají glukózové jednotky do glykogenu a při potřebě je mohou uvolňovat pro udržování glykémie. Glykogen je rozvětvená zásobní molekula, ne volný cukr nahromaděný bez uspořádání.",
+      "Představ si sklad s rozebíratelnými balíky. Při dostatku se zásoby doplňují, mezi jídly se mohou vydávat. Tato funkce pomáhá zásobovat i jiné tkáně, které potřebují průběžný přívod glukózy krví.",
+      "Velkou zásobu glykogenu mají také kosterní svaly, jen jejich využití je hlavně místní pro svalovou práci. Neznamená to tedy, že by glykogen existoval pouze v játrech. Otázka jen nabízí játra jako nejvhodnější typický zásobní orgán."
+    ],
+    "memory": "Jaterní glykogen pomáhá celé glykémii; svalový glykogen slouží hlavně svému svalu."
+  },
+  {
+    "id": 312,
+    "bookRef": "VIII · otázka 41",
+    "category": "Trávicí systém",
+    "question": "Apendicitida",
+    "options": [
+      "Je odnětí apendixu",
+      "Je zánět mízní tkáně apendixu",
+      "Je prasknutí apendixu",
+      "Se nedá léčit chirurgicky"
+    ],
+    "answer": 1,
+    "title": "Koncovka -itida označuje zánět",
+    "paragraphs": [
+      "Klíč vybírá B. Apendicitida je zánět červovitého přívěsku slepého střeva, tedy apendixu. Nabídka ho zužuje na mízní tkáň, ale zánětlivý proces může postihovat celou stěnu a okolní struktury.",
+      "Představ si rozdíl mezi názvem problému, zákroku a komplikace. Zánět je apendicitida, chirurgické odstranění se nazývá apendektomie a prasknutí stěny je perforace. Nejsou to tři zaměnitelné názvy stejného děje.",
+      "Přítomnost lymfatické tkáně v apendixu souvisí s jeho stavbou, ale nestačí k úplné definici nemoci. A také nelze tvrdit, že chirurgické řešení vůbec není možné. Tady se učíš význam pojmu, nikoli rozhodovací postup pro konkrétního pacienta."
+    ],
+    "memory": "Apendicitida zánět; apendektomie odstranění; perforace prasknutí.",
+    "note": "B je jediná možnost klíče, ale přesnější definice zní zánět apendixu, ne pouze jeho mízní tkáně."
+  },
+  {
+    "id": 313,
+    "bookRef": "VIII · otázka 42",
+    "category": "Trávicí systém",
+    "question": "Apendix",
+    "options": [
+      "Je zcela nepohyblivý červovitý přívěsek tlustého střeva",
+      "Je konečným úsekem tlustého střeva",
+      "Může být dlouhý až 5 centimetrů",
+      "Obsahuje pod sliznicí mízní tkáň"
+    ],
+    "answer": 3,
+    "title": "Přívěsek céka obsahuje obrannou tkáň",
+    "paragraphs": [
+      "Správně podle klíče je D. Ve stěně apendixu je bohatá lymfatická tkáň zasahující do sliznice a podslizniční oblasti. Apendix je červovitý přívěsek céka, tedy začátečního úseku tlustého střeva.",
+      "Představ si boční slepou odbočku s obrannými buňkami v její stěně. Není to konec celé trávicí trubice a její poloha se mezi lidmi liší. Část je zavěšená na vlastním mezenteriu, takže označení zcela nepohyblivý není správný obecný popis.",
+      "Délka apendixu je proměnlivá a pět centimetrů není jeho univerzální horní mez. Některý appendix tak dlouhý být může, ale formulace až pět by zaváděla, pokud ji chápeš jako maximum. Klíč proto míří na lymfatickou tkáň, ne na pevný rozměr."
+    ],
+    "memory": "Appendix = proměnlivý přívěsek céka s lymfatickou tkání, ne konečný úsek střeva.",
+    "note": "C může být pravdivé jako příklad konkrétní délky. Neplatí jako obecná maximální hranice, což zřejmě otázka slovem „až“ zamýšlí."
+  },
+  {
+    "id": 314,
+    "bookRef": "VIII · otázka 43",
+    "category": "Trávicí systém",
+    "question": "V tlustém střevě",
+    "options": [
+      "Jsou vyměšovány mnohé trávicí šťávy",
+      "Vznikají výkaly působením bakterií a zahušťováním obsahu",
+      "Nemohou díky kyselému prostředí přežívat žádné bakterie",
+      "Je sliznice s četnými klky, kde se vstřebávají živiny"
+    ],
+    "answer": 1,
+    "title": "Zbytek obsahu se upraví a zahustí",
+    "paragraphs": [
+      "Správně je B. Tlusté střevo vstřebává vodu a ionty, mění se konzistence obsahu a působí na něj střevní mikroorganismy. Stolice pak obsahuje zbytky potravy, mikrobiální hmotu, odloučené buňky a další složky.",
+      "Představ si závěrečnou část linky, kde se upravuje zbytek po hlavním vstřebávání. Bakterie mohou zpracovat například některé nestrávené sacharidy a vytvářet látky využitelné pro střevní buňky. Není to prázdný sterilní tunel.",
+      "Běžná sliznice tračníku nemá klky jako tenké střevo, ale má krypty a mnoho buněk tvořících hlen. Hlavní porce enzymatického trávení potravy už proběhla dříve. Proto ani A, C nebo D nevystihují správně jeho typickou funkci a stavbu."
+    ],
+    "memory": "Tlusté střevo: mikrobiální zpracování, příjem vody a iontů, zahuštění zbytku."
+  },
+  {
+    "id": 315,
+    "bookRef": "VIII · otázka 44",
+    "category": "Trávicí systém",
+    "question": "Ileus",
+    "options": [
+      "Neovlivňuje průběh trávení",
+      "Je zástava střevní peristaltiky",
+      "Vyvolává defekační reflex",
+      "Je zánět červovitého výběžku tlustého střeva"
+    ],
+    "answer": 1,
+    "title": "Zástava pasáže může mít různé příčiny",
+    "paragraphs": [
+      "PDF vybírá B. U paralytického ileu přestane střevo účinně pohybovat obsahem, protože selže jeho pohybová činnost. Ileus obecně ale znamená závažnou poruchu střevní průchodnosti či pasáže a může být i mechanický.",
+      "Představ si dopravní linku: provoz se zastaví buď vypnutím pohonu, nebo překážkou v cestě. V prvním případě odpovídá obraz zástavě peristaltiky. U mechanické překážky mohou být pohyby v určité fázi naopak zvýšené, takže prosté ztotožnění není úplné.",
+      "Ileus nepleť s ileem, normálním kyčelníkem, ani s apendicitidou, zánětem apendixu. Významně mění průchod obsahu a rozhodně není stav bez vlivu na trávení. Otázka používá užší popis jedné formy problému."
+    ],
+    "memory": "Ileus = porucha pasáže; paralytický vypne pohon, mechanický vytvoří překážku.",
+    "note": "B je přesné hlavně pro paralytickou formu. Pro všechny ileózní stavy není zástava peristaltiky úplnou definicí."
+  },
+  {
+    "id": 316,
+    "bookRef": "VIII · otázka 45",
+    "category": "Trávicí systém",
+    "question": "Bakterie v tlustém střevě",
+    "options": [
+      "Se objevují při určitém druhu potravy, při jiném mizí",
+      "Jsou kvasné a hnilobné",
+      "Vytváří vitamíny D a A",
+      "Způsobují zpomalení trávení a zácpu"
+    ],
+    "answer": 1,
+    "title": "Různé mikroorganismy zpracovávají různé zbytky",
+    "paragraphs": [
+      "Klíč vybírá B. Starší názvy kvasné a hnilobné vystihují rozdíl mezi mikrobiálním zpracováním sacharidů a bílkovinných zbytků. Skutečný střevní mikrobiom je ovšem mnohem rozmanitější než dvě ostře oddělené skupiny.",
+      "Představ si tým zpracovatelů s různými nástroji a různými produkty. Některé děje vytvářejí mastné kyseliny s krátkým řetězcem, jiné odlišné metabolity a plyny. Potrava může poměry mezi mikroorganismy měnit, ale běžně je všechny jedním jídlem nevypne.",
+      "Vitamin A a D nejsou správná typická dvojice pro tuto funkci střevních bakterií. Ani nelze každé bakterii automaticky připsat zácpu: mikroorganismy mají mnoho úloh a jejich vztah k pohyblivosti střeva závisí na širších souvislostech."
+    ],
+    "memory": "Mikrobiom zpracovává různé zbytky; dvě staré kategorie nejsou celý jeho svět."
+  },
+  {
+    "id": 317,
+    "bookRef": "VIII · otázka 46",
+    "category": "Trávicí systém",
+    "question": "V tlustém střevě",
+    "options": [
+      "Pobývá trávenina maximálně 5 hodin",
+      "Probíhá resorpce minerálních látek",
+      "Se nejvíce vody vstřebává ve slepém střevě",
+      "Se denně vytvoří až 100 g stolice"
+    ],
+    "answer": 1,
+    "title": "Voda a ionty se vstřebávají i v závěru trávicí trubice",
+    "paragraphs": [
+      "Správně je B. Tlusté střevo vstřebává vodu a elektrolyty, například sodík a chloridy, a tím pomáhá upravit obsah před vyloučením. Není jen skladem, který by už nic nevyměňoval s vnitřním prostředím.",
+      "Představ si závěrečnou úpravu tekuté směsi: část vody a rozpuštěných iontů se vrátí do těla a zbytek zhoustne. Většina celkové střevní absorpce vody ovšem proběhne už v tenkém střevě; význam tlustého střeva tím nezaniká.",
+      "Doba průchodu i hmotnost stolice jsou velmi proměnlivé, takže pět hodin nebo sto gramů nejsou obecné maximální hranice. C neplatí jako pravidlo pro největší vstřebané množství vody v celé soustavě a také příliš zužuje místo děje na samotné cékum."
+    ],
+    "memory": "Tlusté střevo dál vstřebává vodu a ionty; průchod a množství stolice nemají jediný pevný limit."
+  },
+  {
+    "id": 318,
+    "bookRef": "VIII · otázka 47",
+    "category": "Trávicí systém",
+    "question": "V tlustém střevě",
+    "options": [
+      "Se začínají hromadit zbytky potravy již 2 hodiny po jídle",
+      "Probíhá sestupný tračník podél pravého obvodu břišní dutiny",
+      "Je konečným úsekem 20 cm dlouhý konečník",
+      "Je vstřebávána voda a minerální látky"
+    ],
+    "answer": 3,
+    "title": "Hlavní hledaný děj je vstřebávání vody a iontů",
+    "paragraphs": [
+      "Podle klíče je správně D. Tlusté střevo přijímá zpět vodu a rozpuštěné ionty a podílí se tak na hospodaření s tekutinou i na podobě stolice. Navazuje na hlavní vstřebávání živin v tenkém střevě.",
+      "Představ si poslední úsek odvodňovací linky. Není potřeba znát jeden přesný čas po jídle, protože průchod závisí na potravě, pohyblivosti a dalších okolnostech. Ani z jedné porce nelze určit přesný univerzální okamžik vstupu do tračníku.",
+      "Sestupný tračník probíhá vlevo, nikoli podél pravé strany. Konečník je skutečně závěrečný úsek, ale jeho délka se obvykle udává přibližně patnáct centimetrů a záleží na vymezení. Číslo dvacet není spolehlivá obecná definice konečníku."
+    ],
+    "memory": "Sestupný tračník vlevo; hlavní funkční odpověď je voda a ionty zpět do těla.",
+    "note": "Anatomické délky jsou orientační a závisí na vymezení. D je jednoznačný děj hodnocený klíčem."
+  },
+  {
+    "id": 319,
+    "bookRef": "VIII · otázka 48",
+    "category": "Trávicí systém",
+    "question": "Vysvětlete uvedené termíny týkající se onemocnění nebo funkce trávicího procesu:",
+    "options": [
+      "A3, B6, C1, D5, E2, F4",
+      "A1, B6, C3, D2, E5, F4",
+      "A3, B5, C1, D6, E2, F4",
+      "A3, B6, C1, D2, E5, F4"
+    ],
+    "answer": 0,
+    "title": "Pojmy označují děje, pocity i tvar střeva",
+    "paragraphs": [
+      "Angina zde míří na zánět mandlí v hltanu, A3. Emulgace rozptyluje tukové kapky, B6. Nausea znamená nevolnost, C1. Haustrace označuje vakovité vyklenutí tračníku, D5. Obstipace je zácpa, E2, a defekace vyprázdnění stolice, F4. Celkem A.",
+      "Představ si různé přihrádky: nemoc v krku, úprava tuku, nepříjemný pocit, anatomický vzhled, obtížné vyprazdňování a samotný odchod stolice. Podobně odborně znějící názvy nejsou nutně stejného typu.",
+      "Angina v tomto kontextu není angina pectoris a zánět mandlí nemusí být jen bakteriální. Haustra zase nejsou totéž co chorobné divertikly: jde o běžné vakovité členění stěny tračníku. Slovo výchlipky v nabídce je proto třeba chápat opatrně."
+    ],
+    "memory": "Nausea nevolnost, obstipace zácpa, defekace vyprázdnění, emulgace tukové kapky.",
+    "terms": [
+      "Angina",
+      "Emulgace",
+      "Nausea",
+      "Haustrace",
+      "Obstipace",
+      "Defekace"
+    ],
+    "definitions": [
+      "Nevolnost, nucení ke zvracení",
+      "Zácpa",
+      "Zánět mízní tkáně hltanu bakteriálního původu",
+      "Vyprazdňování střevního obsahu",
+      "Výchlipky stěny tlustého střeva",
+      "Rozptýlení tukových kapiček pomocí žluči při trávení tuků"
+    ],
+    "note": "Definice A3 omezuje angínu na bakterie, i když tonsilitida může mít i jiný původ. Haustrace označuje normální vakovité členění, nikoli automaticky nemocné výchlipky."
+  },
+  {
+    "id": 320,
+    "bookRef": "VIII · otázka 49",
+    "category": "Trávicí systém",
+    "question": "Vysvětlete uvedené termíny, týkající se různých částí a funkcí trávicího procesu:",
+    "options": [
+      "A3, B4, C1, D2, E5",
+      "A4, B5, C1, D2, E3",
+      "A3, B5, C1, D2, E4",
+      "A3, B2, C1, D5, E4"
+    ],
+    "answer": 2,
+    "title": "Od zubu až po výstup, plus název poruchy",
+    "paragraphs": [
+      "Incisivus je řezák, A3. Pylorus vrátník, B5. Chymus znamená tráveninu, C1. Ileus označuje poruchu střevní průchodnosti, D2. Anus je řitní otvor, E4. Správná kombinace je C.",
+      "Představ si cestu potravy: řezák pomáhá oddělit sousto, žaludek vytváří tráveninu a vrátník ji dávkuje dál. Na konci trubice je anus. Ileus do této běžné trasy nepatří jako normální orgán: pojmenovává problém s průchodem obsahu.",
+      "Zvlášť si odliš ileus a ileum. Ileum je kyčelník, normální poslední úsek tenkého střeva. Ileus je patologický stav. Malá změna koncovky tak může změnit význam z anatomického názvu na nemoc či poruchu."
+    ],
+    "memory": "Incisivus řezák, pylorus vrátník, chymus trávenina, ileus neprůchodnost, anus otvor.",
+    "terms": [
+      "Incisivus",
+      "Pylorus",
+      "Chymus",
+      "Ileus",
+      "Anus"
+    ],
+    "definitions": [
+      "Trávenina",
+      "Neprůchodnost střev",
+      "Řezák",
+      "Řitní otvor",
+      "Vrátník"
+    ]
+  },
+  {
+    "id": 321,
+    "bookRef": "IX · otázka 1",
+    "category": "Fyziologie výživy",
+    "question": "Vysvětlete jednotlivé termíny z oblasti látkové výměny:",
+    "options": [
+      "A1, B2, C3, D4",
+      "A2, B1, C3, D4",
+      "A2, B1, C4, D3",
+      "A1, B4, C2, D3"
+    ],
+    "answer": 1,
+    "title": "Příjem, vstřebání, stavba a rozklad jsou různé kroky",
+    "paragraphs": [
+      "Asimilace je v nabídce přijímání a přeměna látek, A2. Resorpce znamená vstřebávání, B1. Anabolismus zahrnuje syntézu složitějších látek, C3. Katabolismus jejich rozklad, D4. Správná kombinace je B.",
+      "Představ si dílnu: materiál se dopraví dovnitř, z částí se něco vyrobí a jiné celky se rozebírají. Anabolické a katabolické dráhy spolupracují, protože stavba potřebuje energii i stavební jednotky, které může dodat rozklad.",
+      "Resorpce není jen spolknutí potravy, ale přechod látek přes bariéru do vnitřního prostředí. Asimilace se často používá v širším významu osvojování a zabudování látek, někdy blízko anabolismu. Nabídka zde tyto příbuzné pojmy pro účely přiřazení rozděluje."
+    ],
+    "memory": "Resorpce dovnitř, anabolismus staví, katabolismus rozkládá; asimilace látky osvojuje.",
+    "terms": [
+      "Asimilace",
+      "Resorpce",
+      "Anabolismus",
+      "Katabolismus"
+    ],
+    "definitions": [
+      "Vstřebávání živin",
+      "Přijímání a přeměna látek",
+      "Chemické syntézy",
+      "Chemické štěpení"
+    ]
+  },
+  {
+    "id": 322,
+    "bookRef": "IX · otázka 2",
+    "category": "Fyziologie výživy",
+    "question": "Voda",
+    "options": [
+      "Se vstřebává především v tenkém střevě",
+      "Je v nápojích a potravě přijímána v objemu 6 litrů denně",
+      "Prochází ledvinami v objemu až 50 litrů denně",
+      "Je hlavní stavební složkou všech tkání"
+    ],
+    "answer": 3,
+    "title": "Voda je zásadní prostředí těla, ale tkáně se liší",
+    "paragraphs": [
+      "Tištěný klíč určuje D. Voda tvoří velký podíl hmotnosti těla a je nezbytným prostředím buněk i tělních tekutin. Doslovné tvrzení o hlavní stavební složce úplně všech tkání je však příliš silné, protože podíly vody se výrazně liší.",
+      "Představ si město, jehož provoz závisí na vodě, ale každá čtvrť má jiné složení. Sval, tuková tkáň a mineralizovaná kost nemají stejný obsah vody. Voda také plní roli rozpouštědla, transportního prostředí a tepelného zásobníku.",
+      "A je přitom fyziologicky správné: většina střevně vstřebané vody se vrací přes tenké střevo. Šest litrů není univerzální denní příjem a údaj o průchodu ledvinami je bez upřesnění toku či filtrace nejasný. Neuč se tedy, že A musí být biologicky nepravda."
+    ],
+    "memory": "PDF chce D; pamatuj i správný fakt, že většina střevní absorpce vody probíhá v tenkém střevě.",
+    "note": "Nabídka není jednoznačná. A je správné a D má příliš absolutní slovo „všech“. Hodnocení D je zachované pouze podle tištěného klíče."
+  },
+  {
+    "id": 323,
+    "bookRef": "IX · otázka 3",
+    "category": "Fyziologie výživy",
+    "question": "Jakou funkci mají v organismu uvedené sloučeniny?",
+    "options": [
+      "A1, B3, C4, D2",
+      "A4, B3, C1, D2",
+      "A1, B4, C3, D2",
+      "A4, B1, C3, D2"
+    ],
+    "answer": 3,
+    "title": "Jedna skupina látek může mít více rolí",
+    "paragraphs": [
+      "Sacharidy se zde přiřazují ke zdroji energie, A4. Bílkoviny ke stavebním látkám, B1. Tuky jako součást membrán, C3. Nukleové kyseliny k uchování a realizaci dědičné informace, D2. Celkově D.",
+      "Představ si palivo, konstrukční materiál, membránovou součást a informační systém. Takové rozdělení pomůže v testu, ale skutečná buňka nepoužívá každou skupinu jen jediným způsobem. Bílkoviny jsou také enzymy a receptory a tuky významně ukládají energii.",
+      "U membrán jde především o určité lipidy, například fosfolipidy a cholesterol, ne jen o zásobní tuk v tukových buňkách. Sacharidy mají také stavební a rozpoznávací úlohy. Přiřazení vybírá typickou nabízenou funkci, ne úplný seznam všeho, co daná látka zvládne."
+    ],
+    "memory": "Sacharidy energie, bílkoviny stavba i nástroje, lipidy membrány i zásoby, nukleové kyseliny informace.",
+    "terms": [
+      "Sacharidy",
+      "Bílkoviny",
+      "Tuky",
+      "Nukleové kyseliny"
+    ],
+    "definitions": [
+      "Základní stavební látky v organismu",
+      "Uchovávají a realizují dědičnou informaci",
+      "Jsou součástí buněčných membrán",
+      "Základní zdroje energie v organismu"
+    ]
+  },
+  {
+    "id": 324,
+    "bookRef": "IX · otázka 4",
+    "category": "Fyziologie výživy",
+    "question": "Jakou funkci mají v organismu uvedené sloučeniny?",
+    "options": [
+      "A3, B1, C2, D4",
+      "A1, B3, C2, D4",
+      "A1, B3, C4, D2",
+      "A4, B1, C2, D3"
+    ],
+    "answer": 0,
+    "title": "Látky poskytují stavbu, energii i prostředí reakcí",
+    "paragraphs": [
+      "Bílkoviny se v nabídce vážou k tvorbě orgánů, A3. Tuky a sacharidy dodávají energii, B1. Anorganické látky, zejména ionty, ovlivňují osmotické poměry, C2. Voda je prostředí mnoha chemických reakcí, D4. Správně A.",
+      "Představ si stavbu, která potřebuje materiál, pohon, vhodné koncentrace rozpuštěných částic a vodné prostředí. Žádná složka nenahradí automaticky všechny ostatní: energie sama nevytvoří chybějící aminokyseliny ani správnou iontovou rovnováhu.",
+      "Pojem anorganické látky je široký a osmotické poměry neurčují jen ony. Například plazmatické bílkoviny mají důležitý koloidně osmotický účinek. Přiřazení tedy zachycuje užitečné školní souvislosti, nikoli výlučné funkce jednotlivých skupin."
+    ],
+    "memory": "Bílkoviny stavba, tuky a cukry energie, ionty osmotické poměry, voda reakční prostředí.",
+    "terms": [
+      "Bílkoviny",
+      "Tuky a sacharidy",
+      "Anorganické látky",
+      "Voda"
+    ],
+    "definitions": [
+      "Zdroj energie",
+      "Udržování osmotického tlaku krve",
+      "Organogeneze",
+      "Prostředí pro chemické reakce"
+    ]
+  },
+  {
+    "id": 325,
+    "bookRef": "IX · otázka 5",
+    "category": "Fyziologie výživy",
+    "question": "Proteiny",
+    "options": [
+      "Lze nahradit jinými složkami potravy",
+      "Organismus dokáže ukládat do zásoby",
+      "Tvoří asi 10 % hmotnosti těla",
+      "Jsou hlavní stavební látkou živých organismů"
+    ],
+    "answer": 3,
+    "title": "Bílkoviny jsou stavební materiál i pracovní nástroje",
+    "paragraphs": [
+      "Klíč vybírá D. Proteiny tvoří důležité struktury buněk a tkání a současně fungují jako enzymy, přenašeče či regulační molekuly. Pro jejich výrobu potřebuje tělo aminokyseliny, z nichž některé musí získat potravou.",
+      "Představ si sadu různých součástek, které nestačí nahradit samotnou dodávkou energie. Tuk a cukr mohou dodat palivo, ale nedodají všechny nezbytné aminokyseliny. Proto nelze bílkoviny jako nutriční potřebu beze zbytku nahradit libovolnou jinou složkou.",
+      "Tělo sice může při potřebě rozkládat vlastní tkáňové bílkoviny, ale nemá zvláštní zásobní sklad proteinu obdobný tukové zásobě. Údaj deset procent je navíc příliš hrubý jako obecné vyjádření podílu. D míří na podstatnou stavební roli, ne na jedinou funkci proteinů."
+    ],
+    "memory": "Bílkoviny nejsou jen palivo: přinášejí nezbytné aminokyselinové součástky pro stavbu a funkci těla."
+  },
+  {
+    "id": 326,
+    "bookRef": "IX · otázka 6",
+    "category": "Fyziologie výživy",
+    "question": "Sacharidy",
+    "options": [
+      "Nelze nahradit žádnou jinou složkou potravy",
+      "Jsou základním zdrojem energie organismu",
+      "Se vstřebávají převážně do mízního oběhu",
+      "Jsou štěpeny enzymy lipázami"
+    ],
+    "answer": 1,
+    "title": "Sacharidy jsou běžně dostupné energetické palivo",
+    "paragraphs": [
+      "Správně je B. V běžné smíšené stravě jsou sacharidy významným zdrojem energie a glukóza zásadním substrátem řady tkání. Buňky ji mohou využívat v navazujících metabolických drahách k tvorbě ATP.",
+      "Představ si běžně rozvážené palivo, které tělo umí rychle zpracovat nebo do určité míry uložit jako glykogen. Organismus ale používá i tuky a některé aminokyseliny, takže nejde o jediný možný zdroj energie za všech podmínek.",
+      "Vstřebané monosacharidy putují ze střeva hlavně portální krví do jater, nikoli převážně mízou. Lipázy pracují s tuky; škrob štěpí amylázy a další cukerné vazby příslušné enzymy. Nedostatek sacharidů tělo může částečně kompenzovat vlastní tvorbou glukózy."
+    ],
+    "memory": "Sacharidy běžné palivo; vstřebané cukry míří hlavně krví do jater, ne mízou."
+  },
+  {
+    "id": 327,
+    "bookRef": "IX · otázka 7",
+    "category": "Fyziologie výživy",
+    "question": "Označte zdroj těchto vitamínů B. Jaké poruchy způsobuje jejich hypovitaminóza?",
+    "options": [
+      "A4, B3, C2, D1",
+      "A4, B1, C2, D3",
+      "A4, B3, C1, D2",
+      "A1, B2, C3, D4"
+    ],
+    "answer": 1,
+    "title": "Každý vitamin skupiny B pomáhá jiným reakcím",
+    "paragraphs": [
+      "Podle klíče B: thiamin B1 souvisí s beri-beri, A4. Riboflavin B2 se v nabídce pojí s postižením koutků, B1. Pyridoxin B6 s vybranými slizničními projevy, C2. Kobalamin B12 s poruchou krvetvorby, D3.",
+      "Představ si více různých pomocníků pro enzymy, nikoli jeden společný vitamin B. Nedostatek B1 narušuje energetický metabolismus a může poškodit nervy i srdce. B12 je důležitý pro syntézu DNA i nervovou soustavu, proto jeho nedostatek není jen změna barvy krve.",
+      "Zdroje a projevy se překrývají a samotné bolavé koutky neurčí přesný chybějící vitamin. Uvedené potraviny jsou příklady, ne úplné jídelní doporučení. B6 může při nedostatku ovlivnit také nervy a krvetvorbu, takže stručný popis v nabídce není celá jeho funkce."
+    ],
+    "memory": "B1 beri-beri, B2 koutky jako příklad, B6 více enzymových úloh, B12 krvetvorba a nervy.",
+    "terms": [
+      "Vitamín B1 – thiamin",
+      "Vitamín B2 – riboflavin",
+      "Vitamín B6 – pyridoxin",
+      "Vitamín B12 – kobalamin"
+    ],
+    "definitions": [
+      "Játra, srdce, ledviny, mléko, zelenina. Bolavé ústní koutky",
+      "Mléko, kvasnice, maso. Pomalé hojení zánětů a sliznic",
+      "Játra, ledviny, mléko. Poruchy krvetvorby – anémie",
+      "Obiloviny, játra, srdce, ledviny, maso. Onemocnění beri-beri"
+    ],
+    "note": "Příznaky nejsou jedinečné diagnostické značky jednotlivých vitaminů. Jedno přiřazení z tabulky nelze použít k určení příčiny konkrétního symptomu."
+  },
+  {
+    "id": 328,
+    "bookRef": "IX · otázka 8",
+    "category": "Fyziologie výživy",
+    "question": "Označte zdroj uvedených vitamínů. Jaké poruchy způsobuje jejich hypovitaminóza?",
+    "options": [
+      "A2, B3, C1",
+      "A3, B2, C1",
+      "A2, B1, C3",
+      "A1, B2, C3"
+    ],
+    "answer": 1,
+    "title": "Starší názvy PP a H patří k vitaminům skupiny B",
+    "paragraphs": [
+      "Klíč je B. Vitamin PP je niacin a jeho nedostatek souvisí s pelagrou, A3. Vitamin H je biotin a nabídka ho pojí s poruchami růstu a sliznic, B2. Vitamin C je kyselina askorbová a výrazný nedostatek vede ke kurdějím, C1.",
+      "Představ si různé pomocné součástky chemických reakcí. Niacin souvisí s přenašeči elektronů, biotin s určitými karboxylačními reakcemi a vitamin C mimo jiné s tvorbou kolagenu. Když kolagen nevzniká správně, oslabují se podpůrné tkáně a mohou krvácet.",
+      "Označení PP a H jsou tradiční názvy a nejsou dalšími látkami mimo dnešní niacin a biotin. Seznam zdrojů v nabídce je jen výběr: biotin není pouze v živočišné stravě. Podobně uvedené symptomy nejsou jedinými ani výlučnými projevy nedostatku."
+    ],
+    "memory": "PP niacin → pelagra; H biotin; C → kolagen a při velkém nedostatku kurděje.",
+    "terms": [
+      "Vitamín PP – kyselina nikotinová",
+      "Vitamín H – biotin",
+      "Vitamín C – kyselina askorbová"
+    ],
+    "definitions": [
+      "Ovoce, hlavně šípky a rybíz. Kurděje",
+      "Živočišná potrava. Zpomalení růstu, záněty sliznic",
+      "Kvasnice, játra, mléko, listová zelenina. Záněty kůže Pelagra"
+    ]
+  },
+  {
+    "id": 329,
+    "bookRef": "IX · otázka 9",
+    "category": "Fyziologie výživy",
+    "question": "Označte zdroj uvedených vitamínů, rozpustných v tucích. Jaké poruchy způsobuje jejich hypovitaminóza?",
+    "options": [
+      "A3, B1, C2, D4",
+      "A2, B1, C4, D3",
+      "A3, B1, C4, D2",
+      "A1, B3, C4, D2"
+    ],
+    "answer": 2,
+    "title": "A, D, E, K tvoří jednu rozpustnostní skupinu",
+    "paragraphs": [
+      "Správně C: A se pojí se šeroslepostí a provitaminy v barevné zelenině, A3. D s tvorbou v kůži a křivicí, B1. E v nabídce s oleji a některými reprodukčními poruchami, C4. K s krvácivostí a vybranými rostlinnými zdroji, D2.",
+      "Představ si čtyři různé role: zrakové barvivo, hospodaření s vápníkem, ochrana membrán a funkční srážecí bílkoviny. Spojuje je rozpustnost v tucích, ale každý dělá jinou práci. Jejich příjem a využití proto souvisejí i s trávením a vstřebáváním tuků.",
+      "Zelenina obsahuje provitaminy A, nikoli vždy hotový retinol. Vitamin E je především antioxidant; jednoduché spojení s těhotenskými poruchami je starší učebnicová zkratka a neznamená, že jeho přidávání automaticky zlepší plodnost či těhotenství."
+    ],
+    "memory": "A zrak, D vápník, E antioxidant, K srážení; všechny čtyři rozpustné v tucích.",
+    "terms": [
+      "Vitamín A – axeroftol",
+      "Vitamín D – antirachitický",
+      "Vitamín E – tokoferol",
+      "Vitamín K – antihemorhagický"
+    ],
+    "definitions": [
+      "Ryby, tvorba v kůži po UV ozáření. Křivice",
+      "Květák, hrách, obiloviny. Zvýšená krvácivost",
+      "Žlutá a zelená zelenina (mrkev). Šeroslepost",
+      "Rostlinné oleje, živočišné tuky, obilná zrna. Některé gestační poruchy"
+    ],
+    "note": "C4 zachovává historické přiřazení PDF. Nelze z něj odvozovat slib reprodukčního přínosu doplňků vitaminu E."
+  },
+  {
+    "id": 330,
+    "bookRef": "IX · otázka 10",
+    "category": "Fyziologie výživy",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 0,
+    "title": "Vitamin A patří k tukovým, nikoli vodným vitaminům",
+    "paragraphs": [
+      "První tvrzení klíč bere jako správný obecný popis: vitaminy jsou potřeba v malých množstvích a organismus je většinou získává z potravy. Řada slouží jako součásti nebo předstupně enzymových pomocníků, jiné mají odlišné regulační role.",
+      "Druhé tvrzení je chybné: vitamin A je rozpustný v tucích spolu s D, E a K. Ve vodě rozpustné jsou vitaminy skupiny B a vitamin C. Slovo A je v nabídce přesunuté do nesprávné skupiny.",
+      "Vyber A: první ano, druhé ne. Představ si třídění podle prostředí, ve kterém se látka lépe rozpouští, ne podle toho, kolikáté písmeno má v názvu. Vitamin D je zároveň významná výjimka z nutnosti získat vše hotové potravou, protože jeho předstupeň vzniká v kůži."
+    ],
+    "memory": "Tukové vitaminy A D E K; vodné B a C.",
+    "statements": [
+      "Vitamíny jsou přídatnými faktory potravy. Mají vztah k enzymům. Tělo je získává z potravy a až na nepatrné výjimky je nedovede vytvářet.",
+      "Vitamíny jsou chemicky velmi různorodé látky. Můžeme je dělit podle rozpustnosti. Vitamíny rozpustné v tucích jsou vitamíny D, E a K, a vitamíny rozpustné ve vodě jsou vitamín A, skupina vitamínů B a vitamín C."
+    ],
+    "note": "Vztah k enzymům není jediná funkce všech vitaminů. Organismus může za určitých podmínek tvořit některé vitaminy nebo jejich prekurzory."
+  },
+  {
+    "id": 331,
+    "bookRef": "IX · otázka 11",
+    "category": "Fyziologie výživy",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 1,
+    "title": "Vitamin D prochází úpravou nejprve v játrech, potom hlavně v ledvině",
+    "paragraphs": [
+      "První tvrzení je chybné. Vitamin D může vznikat v kůži z prekurzoru za účinku UVB a jeho aktivace má důležitý krok nejprve v játrech a další především v ledvinách. Není správné začít ledvinou a potom popsat játra jako sklad hotového výsledku.",
+      "Druhé tvrzení v základním smyslu platí: některá zelenina obsahuje provitaminy, například beta-karoten, ze kterých tělo může získat vitamin A. Hotové formy se nacházejí také v některých živočišných potravinách. Vitamin A je potřebný pro zrakový cyklus.",
+      "Vyber B: první ne, druhé ano. Představ si pracovní postup se dvěma návaznými úpravami D a vedle něj dodávku A buď hotovou, nebo jako přeměnitelný materiál. Vznik v kůži ovšem neznamená, že každý člověk vždy vytvoří stejné dostatečné množství."
+    ],
+    "memory": "D: kůže či potrava → játra → hlavně ledvina. A: retinol nebo přeměnitelný provitamin.",
+    "statements": [
+      "Vitamín D (antirachitický) je po metabolické přeměně v ledvině skladován v játrech a odtud uvolňován do organismu, aby zvyšoval resorpci vápníku a fosforu ve střevě. Organismus člověka si jej nedovede vytvořit, jeho zdrojem jsou zejména ryby.",
+      "Vitamín A (axeroftol) je obsažen ve žluté a zelené zelenině a v plodech ve formě, ze které účinný vitamín teprve vzniká. Ve funkčním stavu je v potravinách živočišného původu. Je nezbytný při tvorbě barviv v sítnici oka."
+    ]
+  },
+  {
+    "id": 332,
+    "bookRef": "IX · otázka 12",
+    "category": "Fyziologie výživy",
+    "question": "Při nedostatku vitamínu A",
+    "options": [
+      "Vzniká šeroslepost",
+      "Vznikají záněty kůže",
+      "Dochází k vypadávání zubů",
+      "Vzniká chudokrevnost"
+    ],
+    "answer": 0,
+    "title": "Vidění za šera potřebuje správně obnovovat zrakové barvivo",
+    "paragraphs": [
+      "Správně podle klíče je A. Vitamin A je důležitý pro zrakový cyklus a jeho nedostatek může zhoršit vidění za šera. Zvlášť se projeví funkce tyčinek, které pomáhají vnímat při slabém osvětlení.",
+      "Představ si světelný snímač, jehož rozpoznávací součást musí po zachycení signálu znovu projít obnovou. Derivát vitaminu A je součást tohoto systému. Když materiál chybí, přizpůsobení tmě nefunguje správně.",
+      "Vitamin A má také další role, například ve stavu epitelů a regulaci buněk. Nabídka proto není úplným seznamem možných následků. Samotná šeroslepost také nemusí mít vždy jen nutriční příčinu; otázka zkouší typickou souvislost, ne diagnózu jednotlivého člověka."
+    ],
+    "memory": "A jako adaptace na šero: vitamin A patří ke zrakovému cyklu."
+  },
+  {
+    "id": 333,
+    "bookRef": "IX · otázka 13",
+    "category": "Fyziologie výživy",
+    "question": "Při nedostatku vitamínu K",
+    "options": [
+      "Vzniká nemoc beri-beri",
+      "Vzniká křivice",
+      "Dochází ke krvácení do tkání",
+      "Dochází k poškození mozku"
+    ],
+    "answer": 2,
+    "title": "Vitamin K pomáhá připravit funkční srážecí bílkoviny",
+    "paragraphs": [
+      "Správně je C. Vitamin K je potřebný pro chemickou úpravu některých bílkovin srážecího systému. Při výrazném nedostatku nemusí tyto bílkoviny pracovat správně a může se zvýšit sklon ke krvácení.",
+      "Představ si výrobek, který nestačí pouze vyrobit, ale musí dostat poslední důležitou funkční součást. Vitamin K se podílí na úpravě umožňující příslušným bílkovinám vázat vápník a správně se zapojit do dějů na buněčných površích.",
+      "Beri-beri souvisí s nedostatkem B1 a křivice typicky s poruchou mineralizace při nedostatku D nebo dalších problémech hospodaření s minerály. K tedy neznamená, že sám tvoří destičky; pomáhá funkci konkrétních bílkovin."
+    ],
+    "memory": "K = důležitý pro srážecí funkce; nedostatek může vést ke krvácivosti."
+  },
+  {
+    "id": 334,
+    "bookRef": "IX · otázka 14",
+    "category": "Fyziologie výživy",
+    "question": "Vitamín E",
+    "options": [
+      "Je obsažen v citrusových plodech",
+      "Podporuje činnost pohlavních žláz",
+      "Je významný pro tvorbu protrombinu",
+      "Podílí se na řízení metabolismu vápníku a fosforu"
+    ],
+    "answer": 1,
+    "title": "Hlavní dobře vystižitelná role E je antioxidační ochrana",
+    "paragraphs": [
+      "Tištěný klíč vybírá B, tradiční spojení vitaminu E s reprodukční funkcí. Přesnější základní vysvětlení je, že vitamin E pomáhá chránit lipidy membrán před oxidativním poškozením. Je to vitamin rozpustný v tucích.",
+      "Představ si ochranu lipidových součástí buněčné membrány před řetězovou chemickou reakcí. Tato ochrana má význam pro různé tkáně, nikoli jen pro pohlavní žlázy. Starší název tokoferol a reprodukční souvislosti vycházejí i z pokusných pozorování u zvířat.",
+      "Tvorba funkčních srážecích bílkovin souvisí výrazně s vitaminem K a hospodaření s vápníkem a fosforem s vitaminem D. Citrusové plody jsou typickým školním zdrojem C; malé množství E v potravině však není zcela vyloučené."
+    ],
+    "memory": "E si spoj hlavně s antioxidační ochranou membrán; PDF zde hodnotí B.",
+    "note": "B nepředstavuje důkaz, že přidávání vitaminu E zdravému člověku zlepší činnost pohlavních žláz nebo plodnost. A také není absolutně nemožné jako stopový obsah, jen není typická charakteristika."
+  },
+  {
+    "id": 335,
+    "bookRef": "IX · otázka 15",
+    "category": "Fyziologie výživy",
+    "question": "Vitamín B12",
+    "options": [
+      "Je obsažen v rybím tuku",
+      "Zajišťuje vidění – tvoří oční purpur",
+      "Je nutný pro udržení normální krvetvorby",
+      "Podporuje tvorbu protilátek"
+    ],
+    "answer": 2,
+    "title": "Rychle se množící krevní předchůdci potřebují správně tvořit DNA",
+    "paragraphs": [
+      "Správně je C. Vitamin B12 je důležitý pro normální krvetvorbu a také pro funkci nervové soustavy. Při jeho nedostatku se může narušit syntéza DNA a dozrávání rychle se množících buněk, včetně předchůdců erytrocytů.",
+      "Představ si výrobní linku, kde musí každá nová buňka dostat správně připravenou genetickou dokumentaci. Nedostatek pomocné složky může brzdit dělení a vést k abnormálnímu vývoji buněk. Zásoby a vstřebání B12 mají vlastní specifické podmínky.",
+      "Zrakový pigment se spojuje s vitaminem A, nikoli s B12. Rybí tuk není vhodná hlavní charakteristika B12, i když samotné rybí tkáně ho mohou obsahovat. Protilátky tvoří plazmatické buňky; obecné slovo podpora nevyjadřuje hledanou hlavní souvislost."
+    ],
+    "memory": "B12 = krvetvorba i nervy, zejména návaznost na správnou syntézu DNA."
+  },
+  {
+    "id": 336,
+    "bookRef": "IX · otázka 16",
+    "category": "Fyziologie výživy",
+    "question": "Vitamín K",
+    "options": [
+      "Je skladován v játrech",
+      "Se tvoří činností bakterií v tlustém střevě",
+      "Je rozpustný ve vodě",
+      "Je nezbytný pro tvorbu červených krvinek"
+    ],
+    "answer": 1,
+    "title": "Některé střevní bakterie umějí tvořit formy vitaminu K",
+    "paragraphs": [
+      "Klíč vybírá B. Některé střevní mikroorganismy syntetizují menachinony, tedy určité formy vitaminu K. Potrava je také důležitý zdroj a příspěvek mikrobiální tvorby k potřebě člověka nelze zjednodušit na jistou úplnou náhradu příjmu.",
+      "Představ si místní výrobu užitečné látky uvnitř střevního ekosystému. Ne vše, co se vyrobí, se musí ve stejném množství vstřebat a využít. Proto samotná přítomnost bakterií není důkazem, že nedostatek K nikdy nemůže nastat.",
+      "K je rozpustný v tucích, nikoli ve vodě, a jeho typická role se týká úprav srážecích a dalších bílkovin. Určité zásoby v játrech existují, takže A nelze popřít bez výhrady. Jsou ale ve srovnání s některými jinými tukovými vitaminy poměrně omezené."
+    ],
+    "memory": "Střevní mikrobi umějí některé formy K; vitamin K je tukový a souvisí se srážením.",
+    "note": "Také A může být pravdivé. PDF požaduje B; nabídka není dokonale výlučná a bakteriální tvorba neznamená zaručené pokrytí celé potřeby."
+  },
+  {
+    "id": 337,
+    "bookRef": "IX · otázka 17",
+    "category": "Fyziologie výživy",
+    "question": "Označte zdroj a funkci nerostných látek ve výživě:",
+    "options": [
+      "A5, B1, C4, D6, E2, F3",
+      "A4, B1, C3, D6, E5, F2",
+      "A4, B1, C2, D3, E5, F6",
+      "A5, B1, C2, D6, E4, F3"
+    ],
+    "answer": 3,
+    "title": "Minerály nejsou všechny zaměnitelná stavební hmota",
+    "paragraphs": [
+      "Sodík se pojí s NaCl a osmotickými poměry, A5. Vápník s mineralizací, B1. Fosfor s pevností kostí, C2. Železo s hemoglobinem, D6. Jod se štítnou žlázou, E4. Fluor v nabídce se zubní sklovinou, F3. Správně D.",
+      "Představ si šest odlišných součástek: iont pro tekutiny, dvě části minerálního podkladu, kov v přenašeči kyslíku, součást hormonů a prvek ovlivňující odolnost povrchu zubu. Každý má vlastní chemickou úlohu a nelze jej nahradit libovolným jiným minerálem.",
+      "Příklady zdrojů nejsou úplné a využitelnost se liší. Železo ze špenátu není stejné jako dobře dostupné hemové železo z masa. Fluoridy podporují odolnost skloviny a omezují kazivost při vhodném použití; neznamená to, že jakékoli množství je prospěšné."
+    ],
+    "memory": "Na tekutiny, Ca a P mineralizace, Fe hemoglobin, I hormony štítné žlázy, F odolnost skloviny.",
+    "terms": [
+      "Sodík",
+      "Vápník",
+      "Fosfor",
+      "Železo",
+      "Jod",
+      "Fluor"
+    ],
+    "definitions": [
+      "Zdroj – mléčné výrobky. Důležitý pro mineralizaci kostí a zubů",
+      "Zdroj – žloutek, mléko, maso ryb. Důležitý pro mechanickou pevnost kostí",
+      "Zdroj – ryby (pitná voda). Správný vývoj zubní skloviny",
+      "Zdroj – upravená kuchyňská sůl. Důležitý pro činnost štítné žlázy",
+      "Zdroj – sůl (NaCl). Důležitý pro udržování osm. tlaku krve a tělních tekutin",
+      "Zdroj – maso, játra, žloutek, špenát. Tvorba hemoglobinu"
+    ]
+  },
+  {
+    "id": 338,
+    "bookRef": "IX · otázka 18",
+    "category": "Fyziologie výživy",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 1,
+    "title": "Téměř všechen tělesný vápník je v mineralizovaných tkáních",
+    "paragraphs": [
+      "První tvrzení je chybné hlavně rozdělením půl na půl. Přibližně 99 % tělesného vápníku je v kostech a zubech, nikoli polovina v krvi. Malá zbývající část je však zásadní pro nervosvalové děje, signalizaci a srážení.",
+      "Druhé tvrzení klíč přijímá jako správné shrnutí zásob železa ve ferritinu a jeho využití pro hemoglobin. Představ si oddělený sklad a dopravu: ferritin je zásobní bílkovina, zatímco přenos železa krevní plazmou zajišťuje především transferin.",
+      "Vyber B: první ne, druhé ano podle PDF. Je také přesnější spojovat srážení a dráždivost s ionizovaným, tedy volným vápníkem, ne prostě s veškerým vápníkem navázaným na plazmatické bílkoviny. Dlouhá věta tak obsahuje více různých úrovní zjednodušení."
+    ],
+    "memory": "Vápník hlavně kosti a zuby; ferritin skladuje železo, transferin ho převáží.",
+    "statements": [
+      "Vápník je z 50 % uložen v kostře a v zubech a z 50 % v krvi. Jeho hlavním zdrojem jsou mléčné výrobky. Je nezbytným prvkem pro mineralizaci kostí a zubů. Vápník, vázaný v krevní plazmě ovlivňuje srážení krve a snižuje nervovou dráždivost.",
+      "Železo se po vstřebávání v tenkém střevě spojuje s bílkovinou na zásobní feritin, který je uložen v játrech, ve střevě, ve slezině a v kostní dřeni. Odtud je pak využíván k syntéze hemoglobinu. Zdrojem železa jsou živočišné tkáně a některé druhy zeleniny."
+    ],
+    "note": "První tvrzení zaměňuje podíly a význam vázaného versus ionizovaného Ca. Druhé zkracuje transportní krok: železo nejde krevní plazmou jen jako ferritin."
+  },
+  {
+    "id": 339,
+    "bookRef": "IX · otázka 19",
+    "category": "Fyziologie výživy",
+    "question": "Fosfor",
+    "options": [
+      "Je hlavním prvkem extracelulárních tekutin",
+      "Má význam pro srážení krve",
+      "Nachází se v zubní sklovině",
+      "Podporuje trávení"
+    ],
+    "answer": 2,
+    "title": "Fosforečnany tvoří součást tvrdého minerálního podkladu",
+    "paragraphs": [
+      "Správně je C. Fosfor je ve sklovině součástí fosforečnanových struktur minerálu, zejména hydroxyapatitu společně s vápníkem. Není zde ve formě volných kousků prvku, ale chemicky vázaný v pevné tkáni.",
+      "Představ si složenou stavební hmotu, jejíž pevnost závisí na správném uspořádání více součástí. Podobné minerální sloučeniny se uplatňují také v kostech. Fosfor má navíc mnoho dalších rolí, například ve fosfolipidech, nukleových kyselinách a ATP.",
+      "Hlavní iontové poměry extracelulární tekutiny nelze shrnout tím, že je jejím hlavním prvkem fosfor. Obecná tvrzení o podpoře trávení nebo srážení jsou v této nabídce příliš neurčitá. C udává konkrétní jednoznačnou anatomicko-chemickou souvislost."
+    ],
+    "memory": "Ca a fosforečnany patří k minerálu kostí i zubní skloviny."
+  },
+  {
+    "id": 340,
+    "bookRef": "X · otázka 1",
+    "category": "Termoregulace",
+    "question": "Teplota lidského těla je snižována",
+    "options": [
+      "Odpařováním potu",
+      "Vazokonstrikcí",
+      "Volní svalovou činností",
+      "Působením pyrogenů"
+    ],
+    "answer": 0,
+    "title": "Chladí hlavně odpaření, ne jen mokrá kůže",
+    "paragraphs": [
+      "Správně je A. Když se pot odpaří z kůže, spotřebuje se na změnu skupenství energie a tělo tak ztrácí teplo. Samotné vytvoření potu není zárukou stejného ochlazení: záleží i na tom, zda se může skutečně odpařit.",
+      "Představ si mokrý povrch, který při schnutí odebírá energii ze svého okolí. Ve vlhkém vzduchu je odpařování obtížnější, takže pot stékající bez odpaření nemá stejný chladicí účinek. Proudění vzduchu může proces usnadnit podle podmínek.",
+      "Vazokonstrikce kůže obvykle omezuje výdej tepla, svalová práce teplo vytváří a pyrogeny mohou zvýšit nastavení teplotní regulace při horečce. Proto tyto možnosti nejsou běžné mechanismy snižování tělesné teploty."
+    ],
+    "memory": "Pot ochladí při odpaření; stažení kožních cév naopak pomáhá teplo šetřit."
+  },
+  {
+    "id": 341,
+    "bookRef": "X · otázka 2",
+    "category": "Termoregulace",
+    "question": "Tělesná teplota je",
+    "options": [
+      "V průběhu 24 hodin stále stejná",
+      "Nejnižší pozdě odpoledne, nejvyšší v ranních hodinách",
+      "Nejvyšší pozdě odpoledne, nejnižší v ranních hodinách",
+      "Nejvyšší v době spánku, nejnižší v bdělém stavu"
+    ],
+    "answer": 2,
+    "title": "Vnitřní hodiny mění teplotu i během zdravého dne",
+    "paragraphs": [
+      "Správně je C. Při obvyklém denním režimu bývá tělesná teplota nižší v časných ranních hodinách a vyšší v pozdním odpoledni či večer. Jde o součást cirkadiánního rytmu, ne automaticky o onemocnění.",
+      "Představ si regulátor, jehož běžné nastavení má malou pravidelnou denní vlnu. Tělo není po celý den přesně na jediné hodnotě. Vliv má také aktivita, spánek, místo měření a další fyziologické okolnosti.",
+      "Proto dvě měření v různou denní dobu nelze hodnotit bez kontextu jako stejnou situaci. U směnného režimu nebo narušených rytmů se průběh může lišit. Otázka popisuje obvyklý základní denní vzorec, nikoli závazný rozvrh každého jednotlivce."
+    ],
+    "memory": "Obvyklá denní vlna: časné ráno níže, pozdní odpoledne výše."
+  },
+  {
+    "id": 342,
+    "bookRef": "X · otázka 3",
+    "category": "Termoregulace",
+    "question": "Tělesná teplota",
+    "options": [
+      "Je nejsnáze udržována při tepelné pohodě, tj. při 15 °C",
+      "Je-li zvýšená při infekci zvedá produkci protilátek",
+      "Je regulována termoregulačním centrem v mozečku",
+      "Je v konečníku o necelý stupeň nižší, než v podpažní jamce"
+    ],
+    "answer": 1,
+    "title": "Horečka může být součástí obranné odpovědi",
+    "paragraphs": [
+      "PDF vybírá B. Zvýšení teploty při infekci může podporovat některé imunitní děje a omezovat podmínky pro množení některých původců. Není ale přesné učit se jednoduché pravidlo, že jakékoli zvýšení teploty vždy zvýší počet protilátek.",
+      "Představ si změnu pracovních podmínek obranného systému, která může být v určitém rozsahu užitečná a zároveň má metabolické náklady. Výsledek záleží na výši teploty, příčině a stavu organismu. Vyšší tedy neznamená automaticky lepší.",
+      "Důležité regulační centrum je v hypothalamu, nikoli v mozečku. Rektální teplota bývá obvykle vyšší než podpažní, ne nižší. Tepelná pohoda zase není univerzálně právě patnáct stupňů bez ohledu na oblečení, aktivitu a prostředí."
+    ],
+    "memory": "Horečka může pomoci některým obranným dějům; hypothalamus reguluje a rektální měření bývá vyšší.",
+    "note": "B je zjednodušená učebnicová souvislost, ne univerzální přímá závislost produkce protilátek na teplotě ani doporučení zvyšovat horečku."
+  },
+  {
+    "id": 343,
+    "bookRef": "X · otázka 4",
+    "category": "Termoregulace",
+    "question": "Tělesná teplota",
+    "options": [
+      "Je nejnižší odpoledne po 17. hodině",
+      "Nepřiměřeně zvýšená horkou lázní či parami se nazývá úžeh",
+      "Se vytváří při chemických přeměnách hlavně ve svalstvu a v játrech",
+      "Se snižuje vazokonstrikcí arteriol"
+    ],
+    "answer": 2,
+    "title": "Metabolická práce vytváří teplo",
+    "paragraphs": [
+      "Klíč vybírá C. Přesněji při chemických přeměnách vzniká teplo, které přispívá k tělesné teplotě. Svaly a játra jsou významnými zdroji; při větší svalové práci může tepelná produkce výrazně stoupnout.",
+      "Představ si provoz stroje, který část energie mění na užitečnou práci a část na teplo. Tělo současně řídí, kolik tohoto tepla předá do okolí. Výsledná teplota tedy závisí na bilanci tvorby a výdeje, ne na jednom orgánu.",
+      "Kožní vazokonstrikce spíše omezuje ochlazování. Přehřátí v horkém prostředí není přesně totéž co úžeh z přímého slunečního působení. A běžné denní minimum nepřipadá právě na pozdní odpoledne, které bývá naopak teplejší částí rytmu."
+    ],
+    "memory": "Svaly a játra metabolicky hřejí; výslednou teplotu určí tvorba minus výdej tepla.",
+    "note": "C směšuje teplo a teplotu: vytváří se tepelná energie, teplota je veličina popisující stav."
+  },
+  {
+    "id": 344,
+    "bookRef": "X · otázka 5",
+    "category": "Termoregulace",
+    "question": "Hypertermie",
+    "options": [
+      "Nastává častěji u dospělých, než u novorozenců",
+      "Nastává v situaci, kdy nestačí regulační mechanismy, snižující teplotu těla",
+      "Se vyvíjí po potlačení tvorby pyrogenů",
+      "Významně snižuje látkovou výměnu"
+    ],
+    "answer": 1,
+    "title": "Přehřátí nastane, když bilance tepla přestane stačit",
+    "paragraphs": [
+      "Správně je B. Hypertermie znamená zvýšení teploty při nadměrném tepelném zatížení nebo nedostatečném výdeji tepla bez odpovídajícího zvýšení regulačního nastavení jako u horečky. Ochlazovací mechanismy nestačí vzniklé situaci.",
+      "Představ si místnost s normálně nastaveným termostatem, do které přichází víc tepla, než větrání odvádí. Regulátor nechce vyšší teplotu, ale ztrácí možnost ji udržet. To se liší od horečky, při níž se nastavený cíl posune.",
+      "Potlačení pyrogenů není obvyklý způsob vzniku hypertermie. Ani nelze říci, že zvýšená teplota automaticky významně sníží metabolismus. Srovnání četnosti mezi dospělými a novorozenci bez podmínek také nevyjadřuje definici tohoto stavu."
+    ],
+    "memory": "Hypertermie: běžný cíl regulace, ale tepla je moc nebo ho nelze dost odvést."
+  },
+  {
+    "id": 345,
+    "bookRef": "X · otázka 6",
+    "category": "Termoregulace",
+    "question": "Obranná hypertermie",
+    "options": [
+      "Obvykle stačí na likvidaci infekčního onemocnění",
+      "Vede k poklesu tvorby protilátek",
+      "Vede k omezení množení některých patogenních mikroorganismů",
+      "Je zahájena snížením hladiny pyrogenů"
+    ],
+    "answer": 2,
+    "title": "Učebnice zde myslí horečku jako součást obrany",
+    "paragraphs": [
+      "Správně podle klíče je C. Zvýšená teplota může zhoršit podmínky množení některých patogenů a ovlivnit imunitní reakce. Slovo některých je důležité: různým původcům vyhovují různé podmínky a účinek není univerzální.",
+      "Představ si obranný systém, který dočasně změní pracovní prostředí. U horečky se přes pyrogenní signály zvýší regulační nastavení v hypothalamu, takže tělo může zpočátku teplo šetřit a tvořit i při vyšší skutečné teplotě.",
+      "Samotná horečka obvykle nezaručí odstranění infekce a není správné ji popsat jako spuštěnou poklesem pyrogenů. Název obranná hypertermie je navíc starší: odborně je užitečné horečku od skutečného přehřátí při selhávajícím výdeji tepla rozlišovat."
+    ],
+    "memory": "Horečka může ztížit život některým původcům, ale není samostatná záruka vyléčení.",
+    "note": "Termín v PDF používá hypertermii široce. V přesnějším členění horečka zvyšuje regulační nastavení, zatímco hypertermie ho běžně nezvyšuje."
+  },
+  {
+    "id": 346,
+    "bookRef": "X · otázka 7",
+    "category": "Termoregulace",
+    "question": "Normální teplota těla je:",
+    "options": [
+      "A1, B2, C3",
+      "A3, B2, C1",
+      "A3, B1, C2",
+      "A2, B3, C1"
+    ],
+    "answer": 1,
+    "title": "Místo měření ovlivňuje obvyklý výsledek",
+    "paragraphs": [
+      "Klíč přiřazuje podpaží k 36,5 °C, A3, ústa k 37,0 °C, B2, a konečník k 37,3 °C, C1. Správná kombinace je B. Jsou to orientační školní hodnoty, nikoli jediné normální výsledky.",
+      "Představ si měření teploty na různých místech stejné budovy. Povrchovější oblast více ovlivní okolí a podmínky kontaktu, zatímco měření blíže tělesnému jádru běžně ukazuje jinou hodnotu. Proto nelze libovolně zaměnit všechny metody.",
+      "Záleží také na přístroji, technice, denní době a člověku. Mezi místy není pro každou situaci jedna neměnná hodnota k přičtení. Pro test si zapamatuj pořadí uvedené nabídky a pro porozumění především to, že normální teplota je rozmezí v kontextu metody."
+    ],
+    "memory": "V této tabulce: podpaží 36,5, ústa 37,0, konečník 37,3; nejsou to pevné hranice normality.",
+    "terms": [
+      "V podpaždí",
+      "V ústech",
+      "V konečníku"
+    ],
+    "definitions": [
+      "37,3 °C",
+      "37,0 °C",
+      "36,5 °C"
+    ]
+  },
+  {
+    "id": 347,
+    "bookRef": "X · otázka 8",
+    "category": "Termoregulace",
+    "question": "Jak probíhá a jak je řízena termoregulace?",
+    "options": [
+      "A1, B2, C3",
+      "A1, B3, C2",
+      "A3, B2, C1",
+      "A2, B3, C1"
+    ],
+    "answer": 3,
+    "title": "Teplo se tvoří, vydává a jeho bilanci hlídá řízení",
+    "paragraphs": [
+      "Tvorba tepla souvisí s látkovou výměnou v játrech, A2. Výdej je v nabídce spojen s pocením a odpařováním, B3. Řízení teploty s mezimozkem, tedy C1 podle klíče. Celá kombinace je D.",
+      "Představ si topení, chlazení a termostat. Každý představuje jinou část systému. Hypothalamus, součást mezimozku, využívá informace o teplotě krve i nervové signály z čidel a ovlivňuje výstupy, například pocení, cévní reakce a tvorbu tepla.",
+      "Věta o pouhém proudění krve v mezimozku je příliš stručná: proudění samo není regulační centrum. Výdej tepla také neprobíhá jen potem, ale podle prostředí sáláním, prouděním či vedením. Přiřazení uvádí příklady, nikoli úplný přehled."
+    ],
+    "memory": "Metabolismus topí, výměna s okolím chladí, hypothalamus řídí bilanci.",
+    "terms": [
+      "Tvorba tepla",
+      "Výdej tepla",
+      "Řízení teploty"
+    ],
+    "definitions": [
+      "Realizuje se prouděním krve v mezimozku",
+      "Probíhá látkovou výměnou v játrech",
+      "Realizuje se pocením a odpařováním potu kůží"
+    ],
+    "note": "C1 je nepřesně formulované. Teplotu řídí nervové okruhy hypothalamu včetně zpracování teplotních informací; samotný průtok krve není vysvětlení regulace."
+  },
+  {
+    "id": 348,
+    "bookRef": "X · otázka 9",
+    "category": "Termoregulace",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 0,
+    "title": "Čísla ze skenu nejsou bezpečné teplotní hranice",
+    "paragraphs": [
+      "První tvrzení klíč hodnotí jako správné: tělo vyvažuje metabolickou tvorbu a výdej tepla. Výdej zahrnuje přenos do okolí i odpařování. Přesnější je mluvit o úpravě tvorby a ztrát, nikoli o nutném současném zvýšení obojího při každé regulaci.",
+      "Druhé tvrzení je jako celek chybné a vyber proto A. Hypothalamus je sice důležité centrum, ale konkrétní přežití nelze odvodit z prostých univerzálních hodnot okolní a vnitřní teploty. Záleží na době, vlhkosti, stavu těla a mnoha dalších okolnostech.",
+      "Představ si bilanci výroby a odvodu energie, ne tabulku hodnot, které je možné bez následků vyzkoušet. Zejména uvedených 45 °C uvnitř těla nelze chápat jako běžně snesitelnou krátkodobou mez. Jde o nebezpečné zjednodušení, ne normální regulační rozmezí."
+    ],
+    "memory": "Termoregulace je bilance tvorby a výdeje; extrémní čísla v nabídce nejsou bezpečné limity.",
+    "statements": [
+      "Řízení tělesné teploty je v organismu zajištěno zvyšováním tvorby a výdeje tepla. Výdej tepla je zabezpečen vedením, sáláním a odpařováním a tvorba tepla metabolickými ději.",
+      "Všechny termoregulační možnosti v organismu jsou řízeny z teplotního centra v mezimozku. Člověk může přežít poměrně značné teplotní výkyvy – snáší teploty až do 50 °C. Vnitřní teplota může krátkodobě vystoupit až na 45 °C a poklesnout na 25 °C."
+    ],
+    "note": "První věta je zjednodušená a vynechává samostatné pojmenování proudění. Druhé tvrzení obsahuje neobhajitelné univerzální hranice snášenlivosti; klíč je označuje za nepravdivé."
+  },
+  {
+    "id": 349,
+    "bookRef": "XI · otázka 1",
+    "category": "Močový systém",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 0,
+    "title": "Různí živočichové vylučují dusík různým způsobem",
+    "paragraphs": [
+      "První tvrzení v základním smyslu platí: oxid uhličitý odchází hlavně plícemi a další látky se vylučují mimo jiné ledvinami, kůží a trávicí cestou. Jednotlivé orgány ale nemají stejný podíl na odvodu každé látky.",
+      "Druhé tvrzení je nepravdivé. Ne všichni suchozemští živočichové vylučují dusík převážně jako močovinu. Například ptáci, mnoho plazů a hmyz využívají významně kyselinu močovou a další odpovídající formy podle skupiny.",
+      "Vyber A: první ano, druhé ne. Představ si různé obalové formy stejného odpadu. Organismy musí z dusíkatého metabolismu odvést přebytečný dusík, ale způsob se přizpůsobuje dostupnosti vody i jejich biologii. Suchozemský život proto neznamená jedinou společnou vylučovanou molekulu."
+    ],
+    "memory": "Člověk významně močovinu; ptáci a mnoho dalších skupin hlavně kyselinu močovou.",
+    "statements": [
+      "Oxid uhličitý se z krve odstraňuje v plicích. Dusíkaté látky, voda a anorganické látky jsou odstraňovány ledvinami, trávicím ústrojím a kůží.",
+      "U všech suchozemských živočichů (hmyz a suchozemští obratlovci) se dusíkaté látky vylučují formou močoviny."
+    ]
+  },
+  {
+    "id": 350,
+    "bookRef": "XI · otázka 2",
+    "category": "Močový systém",
+    "question": "Vysvětlete uvedené termíny, které souvisejí s funkcí ledvin:",
+    "options": [
+      "A2, B3, C5, D1, E4",
+      "A2, B3, C1, D5, E4",
+      "A3, B2, C1, D4, E5",
+      "A2, B3, C1, D4, E5"
+    ],
+    "answer": 1,
+    "title": "Tvorba moči a vyprázdnění měchýře nejsou totéž",
+    "paragraphs": [
+      "Osmóza je pohyb vody přes selektivně propustnou membránu, A2. Difuze vyjadřuje samovolné rozptylování částic s čistým tokem podle gradientu, B3. Diuréza znamená tvorbu a výdej moči ledvinami, C1. Mikce je vyprázdnění měchýře, D5. Exkrece obecně vylučování, E4. Celek B.",
+      "Představ si filtraci a úpravu tekutiny v továrně a odděleně vypuštění zásobní nádrže. Ledviny mohou tvořit moč průběžně, zatímco člověk močí v oddělených okamžicích. Diuréza a mikce proto nejsou dva názvy stejného děje.",
+      "U osmózy se přes membránu pohybuje voda podle rozdílu chemického potenciálu. Neznamená to, že se musí vždy dokonale vyrovnat všechny koncentrace: proti pohybu může působit tlak a některé látky membránou neprojdou. Nabídka používá jednodušší školní formulaci."
+    ],
+    "memory": "Osmóza voda, difuze částice; diuréza ledvinná produkce, mikce vypuštění měchýře.",
+    "terms": [
+      "Osmóza",
+      "Difúze",
+      "Diureza",
+      "Mikce",
+      "Exkrece"
+    ],
+    "definitions": [
+      "Vylučování moče ledvinami",
+      "Proudění vody přes polopropustnou membránu kterým se vyrovnávají koncentrace roztoků, které membrána odděluje",
+      "Mísení dvou nebo více kapalin nebo plynů s odlišnou koncentrací",
+      "Vylučování (obecně)",
+      "Močení – vyprazdňování močového měchýře"
+    ],
+    "note": "A2 je zjednodušené. Rovnováha osmózy nemusí znamenat stejné koncentrace obou roztoků, pokud působí rozdíl tlaku."
   }
 ]);
 const $ = id => document.getElementById(id);
