@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f6f3ee">
-  <meta name="description" content="350 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
+  <meta name="description" content="400 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
   <title>Somatologie · malý krok, velké pochopení</title>
   <style>
     :root{color-scheme:light;--bg:#f6f3ee;--paper:#fffefa;--ink:#293d39;--muted:#65736e;--line:#e1e6df;--sage:#dceadf;--green:#236345;--green-bg:#e4f3e7;--red:#983a45;--red-bg:#fbe5e6;--lavender:#ece7f8;--accent:#65558e;--peach:#fae8dc;--radius:26px}
@@ -18,22 +18,22 @@
   <header class="brand">
     <div class="brand-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M4 6.5c3.4-1.2 6.7-.7 10 1.6 3.3-2.3 6.6-2.8 10-1.6v16c-3.4-1.2-6.7-.7-10 1.6-3.3-2.3-6.6-2.8-10-1.6v-16Z" stroke="#56765e" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 8v16M7.5 11l3 .9M7.5 15l3 .9M17.5 12l3-.9M17.5 16l3-.9" stroke="#56765e" stroke-width="1.5" stroke-linecap="round"/></svg></div>
     <div><div class="brand-name">Somatologie</div><div class="brand-sub">Malý krok, velké pochopení.</div></div>
-    <span class="offline">350 otázek</span>
+    <span class="offline">400 otázek</span>
   </header>
 
-  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">350 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
+  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">400 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
   <div id="storageNotice" class="toast" hidden>Prohlížeč nepovolil ukládání. Test funguje, ale po zavření se průběh neobnoví.</div>
   <div id="recoveryNotice" class="recovery" hidden>Uložený pokrok nebylo možné načíst. Začínáme s novým přehledem.</div>
   <section class="card home" id="home" aria-label="Přehled učení">
     <h2 class="home-title">Každá otázka má svůj čas.</h2>
-    <div class="home-stats"><div class="home-stat"><span>Vyzkoušeno</span><strong id="seenTotal">0 / 350</strong></div><div class="home-stat"><span>Zvládnuté</span><strong id="masteredTotal">0 / 350</strong></div><div class="home-stat"><span>Čas zopakovat</span><strong id="dueTotal">0</strong></div></div>
+    <div class="home-stats"><div class="home-stat"><span>Vyzkoušeno</span><strong id="seenTotal">0 / 400</strong></div><div class="home-stat"><span>Zvládnuté</span><strong id="masteredTotal">0 / 400</strong></div><div class="home-stat"><span>Čas zopakovat</span><strong id="dueTotal">0</strong></div></div>
     <p class="learning-label">Zvládnuté = alespoň 3 úspěšná vybavení v plánovaných termínech.</p>
-    <div class="track" role="progressbar" id="learningProgress" aria-label="Počet opakovaně zvládnutých otázek" aria-valuemin="0" aria-valuemax="350" aria-valuenow="0"><div class="fill" id="learningFill"></div></div>
+    <div class="track" role="progressbar" id="learningProgress" aria-label="Počet opakovaně zvládnutých otázek" aria-valuemin="0" aria-valuemax="400" aria-valuenow="0"><div class="fill" id="learningFill"></div></div>
     <p class="home-hint" id="homeHint"></p>
     <button class="next resume" id="resume" hidden>Pokračovat v kole</button>
     <div class="mode-card recommended"><span class="tag">Doporučený režim</span><h3>Chytré procvičování</h3><p>Krátké kolo do 10 odpovědí. Přednost mají chyby a tipy, pak otázky k opakování a nové. Zvládnuté odpočívají do svého termínu.</p><button class="next" id="smartStart">Začít chytré kolo</button></div>
     <div class="mode-card"><h3>Jen chyby a tipy <span class="pill" id="weakCount">0</span></h3><p id="weakHint"></p><button class="next secondary" id="weakStart">Procvičit slabší otázky</button></div>
-    <div class="mode-card"><h3>Test všech 350</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
+    <div class="mode-card"><h3>Test všech 400</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
     <details class="home-help"><summary>Jak funguje chytré opakování?</summary><ul><li><strong>Chyba nebo tip:</strong> otázka se vrátí po alespoň třech jiných odpovědích v témže chytrém kole, jinak přibližně za 10 minut.</li><li><strong>Správně a bez tipu:</strong> termíny se postupně prodlužují na 1, 3, 7, 14 a 30 dní od příslušné odpovědi.</li><li><strong>Správně před termínem:</strong> procvičení se počítá do výsledku, ale samo neposune otázku na vyšší úroveň.</li><li><strong>Tři úspěchy s odstupem:</strong> otázka se označí jako zvládnutá. Nezmizí navždy; po termínu se znovu ověří.</li><li><strong>Další chyba:</strong> otázka se vrátí mezi ty k častému procvičení.</li></ul><p>Jednotlivé otázky se v chytrém kole mohou zopakovat. Skóre proto počítá odpovědi, zatímco horní přehled počítá různé otázky.</p><p>Pokrok se ukládá pouze v tomto prohlížeči a na této webové adrese. Telefon a počítač mají samostatný přehled. Režim tipování označ před odpovědí.</p></details>
   </section>
   <div class="quiz-toolbar" id="quizToolbar" hidden><button class="home-button" id="homeButton">← Přehled</button><span class="mode-label" id="modeLabel"></span></div>
@@ -53,7 +53,7 @@
   </section>
   <section class="card" id="results" aria-label="Výsledek kola" hidden></section>
   <footer class="footer"><p id="saveStatus">Pokrok se ukládá v tomto prohlížeči. Bez účtu a registrace.</p>
-    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 350 otázek v pořadí dokumentu: kapitolu I, otázky 1–45 (v aplikaci 1–45), kapitolu II, otázky 1–28 (46–73), kapitolu III, otázky 1–6 (74–79), kapitolu IV.a, otázky 1–29 (80–108), kapitolu IV.b, otázky 1–33 (109–141), kapitolu V, otázky 1–60 (142–201), kapitolu VI, otázky 1–36 (202–237), kapitolu VII, otázky 1–34 (238–271), kapitolu VIII, otázky 1–49 (272–320), kapitolu IX, otázky 1–19 (321–339), kapitolu X, otázky 1–9 (340–348), a kapitolu XI, otázky 1–2 (349–350).</p><p>Otázky: tištěné strany 8–15, 18–22, 24–25, 28–39, 42–51, 54–59, 62–67, 70–78, 80–84, 86–87 a 90 (PDF strany 5–8, 10–13, 15–20, 22–26, 28–30, 32–34, 36–44 a 46). Tištěné klíče: strany 15, 22, 25, 32, 39, 51, 60, 67, 78, 84, 87 a 95 (PDF strany 8, 12, 13, 17, 20, 26, 31, 34, 40, 43, 44 a 48). Všech 350 přiřazení správné odpovědi bylo porovnáno s těmito klíči; nově přidané otázky se ověřovaly bez internetových zdrojů. Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
+    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 400 otázek v pořadí dokumentu: kapitolu I, otázky 1–45 (v aplikaci 1–45), kapitolu II, otázky 1–28 (46–73), kapitolu III, otázky 1–6 (74–79), kapitolu IV.a, otázky 1–29 (80–108), kapitolu IV.b, otázky 1–33 (109–141), kapitolu V, otázky 1–60 (142–201), kapitolu VI, otázky 1–36 (202–237), kapitolu VII, otázky 1–34 (238–271), kapitolu VIII, otázky 1–49 (272–320), kapitolu IX, otázky 1–19 (321–339), kapitolu X, otázky 1–9 (340–348), kapitolu XI, otázky 1–28 (349–376), a kapitolu XII, otázky 1–24 (377–400).</p><p>Otázky: tištěné strany 8–15, 18–22, 24–25, 28–39, 42–51, 54–59, 62–67, 70–78, 80–84, 86–87, 90–95 a 98–102 (PDF strany 5–8, 10–13, 15–20, 22–26, 28–30, 32–34, 36–44, 46–48 a 50–52). Tištěné klíče: strany 15, 22, 25, 32, 39, 51, 60, 67, 78, 84, 87, 95 a 102 (PDF strany 8, 12, 13, 17, 20, 26, 31, 34, 40, 43, 44, 48 a 52). Všech 400 přiřazení správné odpovědi bylo porovnáno s těmito klíči; nově přidané otázky se ověřovaly bez internetových zdrojů. Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
     <details class="sources"><summary>Uložený pokrok</summary><p>Nové kolo nemaže dřívější znalost otázek. Vymazání dole resetuje celé učení. Vymazáním dat prohlížeče se pokrok také ztratí. Stejná webová adresa po nahrání nové verze pokrok zachová, pokud zůstane zachované úložiště prohlížeče.</p><button class="reset" id="reset">Vymazat celý uložený pokrok</button></details>
   </footer>
 </main>
@@ -7940,6 +7940,1129 @@ QUESTIONS.push(...[
       "Močení – vyprazdňování močového měchýře"
     ],
     "note": "A2 je zjednodušené. Rovnováha osmózy nemusí znamenat stejné koncentrace obou roztoků, pokud působí rozdíl tlaku."
+  },
+  {
+    "id": 351,
+    "bookRef": "XI · otázka 3",
+    "category": "Močový systém",
+    "question": "Co znamenají uvedené termíny?",
+    "options": [
+      "A1, B1, C2, D3",
+      "A1, B3, C2, D3",
+      "A1, B3, C2, D1",
+      "A1, B3, C2, D2"
+    ],
+    "answer": 2,
+    "title": "Ledvina je orgán, nefron jeho pracovní jednotka",
+    "paragraphs": [
+      "Nefros i ren označují ledvinu, tedy A1 a D1. Nefron je základní stavební a funkční jednotka ledviny, B3. Ureter je močovod, C2. Správná kombinace je C; dvě různá slova zde skutečně patří ke stejné definici.",
+      "Představ si celou továrnu, mnoho malých pracovních linek uvnitř a odvod hotového produktu. Ledvina je továrna, nefron linka, ve které vzniká a upravuje se filtrát, a močovod odvádí výslednou moč směrem do měchýře.",
+      "Močovod si nepleť s močovou trubicí. Ureter vede z ledvinné pánvičky do měchýře, urethra z měchýře ven. Podobný začátek názvu neznamená stejnou polohu ani funkci; rozlišení pomůže i při dalších otázkách."
+    ],
+    "memory": "Nefros = ren = ledvina; nefron pracovní jednotka; ureter močovod.",
+    "terms": [
+      "Nefros",
+      "Nefron",
+      "Ureter",
+      "Ren"
+    ],
+    "definitions": [
+      "Ledvina",
+      "Močovod",
+      "Stavební jednotka ledvin"
+    ]
+  },
+  {
+    "id": 352,
+    "bookRef": "XI · otázka 4",
+    "category": "Močový systém",
+    "question": "V ledvině",
+    "options": [
+      "Vstřebávání vody ovlivňuje antidiuretický hormon, produkovaný hypofýzou",
+      "Se v tubulech vstřebává z filtrované plazmy zpět až 50 % vody",
+      "Jsou vstřebané látky odváděny kapilárami opřádajícími ledvinné kanálky",
+      "Jsou osmózou transportovány vodík, draslík a vápník"
+    ],
+    "answer": 2,
+    "title": "Užitečné látky se z kanálku vracejí do krve",
+    "paragraphs": [
+      "Správně je C. Při zpětném vstřebávání látky přecházejí z tekutiny v ledvinném kanálku přes jeho buňky a okolí do krevních kapilár. Ledvina tak neodevzdá močí všechno, co se nejprve přefiltrovalo.",
+      "Představ si třídicí linku se záchranným sběrem: potřebné zásoby se vracejí do hlavního oběhu a odpad pokračuje dál. Zpět se obvykle získá mnohem více než polovina filtrované vody, běžně kolem 99 % podle podmínek.",
+      "ADH ovlivňuje zadržení vody, ale tvoří se v hypothalamu a zadní lalok hypofýzy ho uvolňuje do krve. Osmóza označuje pohyb vody, nikoli vlastní transport iontů vodíku, draslíku a vápníku. Každý pojem proto patří k jiné části mechanismu."
+    ],
+    "memory": "Kanálek vybere, kapilára převezme; ADH vzniká v hypothalamu, osmózou jde voda."
+  },
+  {
+    "id": 353,
+    "bookRef": "XI · otázka 5",
+    "category": "Močový systém",
+    "question": "Ledvina",
+    "options": [
+      "Obsahuje několik desítek milionů nefronů",
+      "Obsahuje světlejší kůru a vnitřní tmavou žíhanou dřeň",
+      "Je ledvinnou tepnou napojena na hrudní aortu",
+      "Je párový orgán po stranách křížové části páteře"
+    ],
+    "answer": 1,
+    "title": "Kůra leží zevně, dřeň uvnitř",
+    "paragraphs": [
+      "Klíč vybírá B. Ledvina má zevní kůru a vnitřní dřeň uspořádanou do pyramid; dlouhé úseky kanálků a cév vytvářejí žíhaný vzhled. Barevný rozdíl je orientační popis preparátu, nikoli nejdůležitější definiční znak.",
+      "Představ si orgán s vnější pracovní zónou a vnitřními souběžnými cestami. Ledvinná tělíska najdeš v kůře, zatímco části kanálků zasahují do dřeně. Neznamená to ale, že každý celý nefron leží pouze v jedné z těchto vrstev.",
+      "Na jednu ledvinu připadá řádově kolem milionu nefronů s velkou individuální variabilitou, nikoli několik desítek milionů. Tepny vycházejí z břišní aorty a běžná poloha ledvin je výše v zadní části břicha, ne po stranách křížové páteře."
+    ],
+    "memory": "Ledvina: kůra venku, dřeň uvnitř; přívod z břišní aorty.",
+    "note": "Odstín kůry a dřeně závisí i na prokrvení a způsobu zobrazení. B je zde hodnocené anatomické členění, ne univerzální barevná norma."
+  },
+  {
+    "id": 354,
+    "bookRef": "XI · otázka 6",
+    "category": "Močový systém",
+    "question": "Ledviny",
+    "options": [
+      "Vytváří denně asi 20 litrů primární moči a 1–1,5 l definitivní moči",
+      "Jsou ledvinnými tepnami napojeny na břišní aortu",
+      "Ústí do nepárového močovodu",
+      "Vylučují pravidelně stále stejné množství H₂O a NaCl za jednotku času"
+    ],
+    "answer": 1,
+    "title": "Přívod krve musí zvládnout velkou průběžnou filtraci",
+    "paragraphs": [
+      "Správně je B. Ledvinné tepny obvykle odstupují z břišní aorty a přivádějí krev k filtraci i zásobení orgánu. Velké množství filtrované tekutiny se potom z větší části vrátí zpět do krve.",
+      "Představ si čističku, která zpracuje mnoho vody, ale vypustí jen malý výsledný objem. Primárního filtrátu vzniká u dospělého orientačně kolem 150–180 litrů denně, ne pouhých dvacet. Konečný objem moči je mnohem menší a proměnlivý.",
+      "Z každé ledviny vede zpravidla vlastní močovod, takže není jeden společný nepárový. Výdej vody a soli se přizpůsobuje příjmu a regulačním potřebám. Právě schopnost měnit výsledek je zásadní pro udržení stálého vnitřního prostředí."
+    ],
+    "memory": "Z břišní aorty krev dovnitř; velký filtrát, malé a proměnlivé množství konečné moči."
+  },
+  {
+    "id": 355,
+    "bookRef": "XI · otázka 7",
+    "category": "Močový systém",
+    "question": "Činnost ledvin",
+    "options": [
+      "Není pro existenci organismu nezbytná",
+      "Je řízena nervově a látkově",
+      "Můžeme ovlivnit vůlí",
+      "Má cyklický charakter"
+    ],
+    "answer": 1,
+    "title": "Ledviny pracují průběžně a reagují na řídicí signály",
+    "paragraphs": [
+      "Správně je B. Funkci ledvin ovlivňuje nervové řízení a látkové signály včetně hormonů, například ADH, aldosteronu a systému renin–angiotenzin. Ty mění zacházení s vodou, ionty i prokrvení a pomáhají udržovat vnitřní rovnováhu.",
+      "Představ si automatickou regulační stanici, která dostává údaje o tlaku a složení tekutin. Její práce nemá být každou hodinu stejná: při změně příjmu nebo oběhové situace upraví výsledek. Jednotlivé mechanismy přitom pracují v různých časových měřítkách.",
+      "Vůlí ovládáme zejména část chování při močení, nikoli přímo glomerulární filtraci každého nefronu. Ledviny jsou pro dlouhodobé udržení vnitřního prostředí nezbytné; jejich funkci lze nahrazovat, ale to neznamená, že není potřeba."
+    ],
+    "memory": "Ledviny automaticky řídí nervy a hormony; vědomé močení není totéž co řízení filtrace."
+  },
+  {
+    "id": 356,
+    "bookRef": "XI · otázka 8",
+    "category": "Močový systém",
+    "question": "V ledvinách",
+    "options": [
+      "Jsou chemicky zneškodňovány škodlivé látky",
+      "Se do definitivní moči dostává asi 10 % vody, přefiltrované v glomerulech",
+      "Už nedochází ke vstřebávání žádných látek",
+      "Se koncentrují a vylučují odpadní látky"
+    ],
+    "answer": 3,
+    "title": "Filtrát se upraví, aby se odpad dal odvést s vhodným množstvím vody",
+    "paragraphs": [
+      "Klíč vybírá D. Ledviny z filtrátu a následnou sekrecí vytvářejí moč, ve které odcházejí odpadní látky a přebytečné složky. Současně vracejí velkou část vody a potřebných látek zpět do oběhu.",
+      "Představ si třídění s nastavitelným zahuštěním. Voda se nevrací vždy úplně stejně, takže výsledná moč může být podle podmínek různě koncentrovaná. Neznamená to, že musí být za všech okolností koncentrovanější než krevní plazma.",
+      "Do konečné moči běžně odchází spíše přibližně jedno procento filtrované vody než deset, ale číslo se mění. Ledviny mají i metabolické funkce, avšak obecným hlavním popisem chemického zneškodňování mnoha cizorodých látek bývají játra. C popírá zásadní zpětné vstřebávání."
+    ],
+    "memory": "Ledviny třídí a nastavují vodu; odpad vyloučí, užitečné složky z velké části vrátí."
+  },
+  {
+    "id": 357,
+    "bookRef": "XI · otázka 9",
+    "category": "Močový systém",
+    "question": "Močový systém. Charakterizujte uvedené látky:",
+    "options": [
+      "A1, B2, C3",
+      "A2, B1, C3",
+      "A3, B1, C2",
+      "A3, B2, C1"
+    ],
+    "answer": 2,
+    "title": "Primární moč je začátek, definitivní je výsledek úprav",
+    "paragraphs": [
+      "Primární moč je glomerulární filtrát, A3. Močovina je dusíkatý produkt související zejména s odbouráváním aminokyselin, zde B1. Definitivní moč je výsledek navazujících kanálkových úprav, C2. Správná kombinace je C.",
+      "Představ si hrubý průchod filtrem a následnou třídicí linku. Z původní tekutiny se mnohé vrátí do krve a některé látky se naopak do kanálku přidají. Finální složení tedy neurčuje pouze samotný první filtr.",
+      "Definice močoviny v nabídce je široká: purinové složky nukleových kyselin se u člověka odbourávají hlavně na kyselinu močovou, což je jiná látka. A konečná moč vzniká resorpcí i sekrecí, ne jen jedním směrem přepravy."
+    ],
+    "memory": "Primární filtrát → resorpce i sekrece → konečná moč; močovina není kyselina močová.",
+    "terms": [
+      "Primární moč",
+      "Močovina",
+      "Definitivní moč"
+    ],
+    "definitions": [
+      "Konečný produkt rozpadu proteinů a nukleoproteinů",
+      "Konečný produkt tubulární resorpce",
+      "Glomerulární filtrát"
+    ],
+    "note": "B1 není přesná úplná definice dusíkatého metabolismu. C2 vynechává tubulární sekreci, která se na výsledku také podílí."
+  },
+  {
+    "id": 358,
+    "bookRef": "XI · otázka 10",
+    "category": "Močový systém",
+    "question": "Kde začíná tvorba moči?",
+    "options": [
+      "V glomerulech",
+      "Ve stočených kanálcích",
+      "V ledvinových kalíšcích",
+      "V močovodu"
+    ],
+    "answer": 0,
+    "title": "První krok je filtrace z cévního klubíčka",
+    "paragraphs": [
+      "Správně je A. Tvorba moči začíná glomerulární filtrací: část tekutiny a drobných rozpuštěných látek přechází z kapilár klubíčka přes filtrační bariéru do prostoru Bowmanova pouzdra. Vzniká primární moč.",
+      "Představ si první síto před dlouhou třídicí cestou. Neprochází běžně krvinky a většina velkých plazmatických bílkovin. Mnoho menších látek ale projde, i když je tělo potřebuje; jejich záchrana proběhne v dalších úsecích.",
+      "Stočené kanálky filtrát upravují, kalichy a pánvička sbírají výslednou moč a močovod ji dopravuje do měchýře. Místo odvodu hotového produktu proto nesmíš zaměnit s místem vzniku prvotního filtrátu."
+    ],
+    "memory": "Glomerulus filtruje, kanálky upravují, kalichy sbírají a močovod odvádí."
+  },
+  {
+    "id": 359,
+    "bookRef": "XI · otázka 11",
+    "category": "Močový systém",
+    "question": "Ledvinná (Malpighiho) tělíska",
+    "options": [
+      "Tvoří Bowmanovy váčky a proximální stočené kanálky",
+      "Se nacházejí v ledvinové dřeni",
+      "Tvoří tubulární části nefronů",
+      "Jsou místa jejichž funkce je ovlivněna hormonem reninem"
+    ],
+    "answer": 3,
+    "title": "Tělísko tvoří klubíčko s obklopujícím pouzdrem",
+    "paragraphs": [
+      "Klíč označuje D. Renin spouští systém renin–angiotenzin, který ovlivňuje cévní poměry a může měnit glomerulární filtraci. Není to ale přímý jediný ovladač tělíska a účinek závisí na souvislostech.",
+      "Představ si filtrační uzel napojený na přívod a odvod krve. Ledvinné tělísko tvoří glomerulus a Bowmanovo pouzdro, nikoli proximální kanálek. Kanálek na něj navazuje jako další pracovní úsek nefronu.",
+      "Tělíska leží v kůře, ne ve dřeni, a nejsou sama tubulární částí. Renin tvoří hlavně specializované buňky ve stěně přívodné arterioly v juxtaglomerulárním aparátu; neplavou volně uvnitř filtrátu, aby ho přímo vyráběly."
+    ],
+    "memory": "Tělísko = glomerulus + Bowmanovo pouzdro, v kůře; renin ovlivňuje navazující regulaci."
+  },
+  {
+    "id": 360,
+    "bookRef": "XI · otázka 12",
+    "category": "Močový systém",
+    "question": "Nefrony v ledvinách",
+    "options": [
+      "Mají Malpighiho tělíska umístěny ve dřeňové vrstvě",
+      "Obsahují Henleovy kličky v korové vrstvě",
+      "Začínají v kůře ledvinové Bowmanovým pouzdrem",
+      "Jsou řízeny ústředím v mozečku"
+    ],
+    "answer": 2,
+    "title": "Filtrační začátek je v kůře",
+    "paragraphs": [
+      "Správně je C. Nefron začíná ledvinným tělískem s Bowmanovým pouzdrem v kůře. Odtud tekutina pokračuje do proximálního kanálku a dalších úseků, které mění její složení i množství.",
+      "Představ si pracovní linku rozloženou přes různé části budovy. Začátek neleží tam, kam sahá nejhlubší smyčka potrubí. Henleovy kličky zasahují do dřeně, u některých nefronů hluboko, a pomáhají vytvářet podmínky pro koncentrování moči.",
+      "Typická lokalizace tělísek tedy není dřeň a regulaci nefronů nelze připsat jednomu centru v mozečku. Podílejí se místní mechanismy, prokrvení, nervové vlivy a hormony. Pro základní orientaci si odliš filtrační začátek a navazující smyčku."
+    ],
+    "memory": "Tělísko v kůře, Henleova smyčka do dřeně; nefron není celý na jediném místě."
+  },
+  {
+    "id": 361,
+    "bookRef": "XI · otázka 13",
+    "category": "Močový systém",
+    "question": "Schema nefronu",
+    "options": [
+      "Nefron sestává z cévní a tubulární části",
+      "Z glomerulu se filtruje definitivní moč",
+      "Tubuly vytvářejí žíhanou dřeň",
+      "Kličky jsou v ledvinové kůře"
+    ],
+    "answer": 0,
+    "title": "Filtr a kanálková linka spolupracují",
+    "paragraphs": [
+      "Klíč vybírá A: v základním členění se rozlišuje filtrační vztah k cévnímu klubíčku a navazující tubulární část. Přesně anatomicky nefron tvoří ledvinné tělísko a kanálek; cévní síť je s nimi těsně funkčně propojená.",
+      "Představ si první filtr a dlouhou nastavitelnou třídicí linku. Glomerulus vytvoří primární moč, ne konečnou. Kanálky potom vracejí látky a vodu do krve, některé látky přidávají a pomáhají určit výslednou koncentraci.",
+      "Henleovy kličky směřují do dřeně. Souběžné úseky kanálků a sběrných cest skutečně přispívají k jejímu žíhání, takže C není úplný nesmysl. Nabídka zjednodušuje rozložení a nevymezuje všechny struktury natolik přesně, aby byly možnosti dokonale výlučné."
+    ],
+    "memory": "Nefron: filtrační tělísko a navazující kanálek; filtrát se teprve dál upravuje.",
+    "note": "A je školní členění podle PDF. C vyjadřuje skutečnou souvislost části kanálků se vzhledem dřeně; některé tubuly ovšem leží také v kůře."
+  },
+  {
+    "id": 362,
+    "bookRef": "XI · otázka 14",
+    "category": "Močový systém",
+    "question": "Primární moč",
+    "options": [
+      "Je hypertonická vůči krevní plazmě",
+      "Se zahušťuje glomerulární filtrací",
+      "Se upravuje tubulární rezorpcí",
+      "Se hromadí v močovém měchýři"
+    ],
+    "answer": 2,
+    "title": "Primární filtrát obsahuje i mnoho toho, co si tělo chce ponechat",
+    "paragraphs": [
+      "Správně je C. Primární moč se v kanálcích mění zpětným vstřebáváním vody a rozpuštěných látek. K výsledku se přidává také tubulární sekrece, tedy přeprava některých látek opačným směrem do kanálku.",
+      "Představ si hrubě prosátou tekutinu, ve které stále zůstaly cenné zásoby. Třídicí linka je vrací, a proto se do konečné moči běžně nedostane stejný objem a složení. Filtrace sama není zahušťovací etapa celého procesu.",
+      "Čerstvý glomerulární filtrát má přibližně podobnou osmolalitu jako plazma, ale obsahuje mnohem méně velkých bílkovin. V měchýři se shromažďuje až konečná moč. Přítomnost filtrátu v pouzdře a hotové moči v měchýři jsou různé fáze."
+    ],
+    "memory": "Primární moč se upravuje v kanálcích; do měchýře odchází až konečný výsledek."
+  },
+  {
+    "id": 363,
+    "bookRef": "XI · otázka 15",
+    "category": "Močový systém",
+    "question": "Glomerulární filtrát se vytváří",
+    "options": [
+      "Pod kontrolou aldosteronu",
+      "Tubulární resorpcí",
+      "Pod kontrolou hormonu ADH",
+      "Pod kontrolou hormonu reninu"
+    ],
+    "answer": 3,
+    "title": "Renin spustí regulační řetězec, ne samotné síto",
+    "paragraphs": [
+      "PDF hodnotí D. Renin je enzymatická součást hormonálního regulačního systému: spouští vznik angiotenzinu a další děje, které mohou změnit krevní tlak, odpor cév a tím také filtraci. Neznamená to, že přímo mění vodu na moč.",
+      "Představ si řízení tlaku před filtrem a za ním. Výsledný tok závisí na tlakových rozdílech, propustnosti a ploše filtrační bariéry. Místní autoregulace přitom pomáhá udržovat práci ledviny i při některých změnách celkového oběhu.",
+      "Tubulární resorpce je další krok po vzniku filtrátu. ADH hlavně mění propustnost pozdních úseků pro vodu a aldosteron hospodaření s ionty v příslušných úsecích. Každý regulační signál tedy nemá stejné hlavní pracovní místo."
+    ],
+    "memory": "Renin ovlivňuje oběhovou regulaci filtru; ADH a aldosteron hlavně pozdější zacházení s vodou a ionty.",
+    "note": "„Pod kontrolou reninu“ je neúplné: filtraci řídí více mechanismů a renin působí převážně prostřednictvím navazujícího systému."
+  },
+  {
+    "id": 364,
+    "bookRef": "XI · otázka 16",
+    "category": "Močový systém",
+    "question": "Glomerulární filtrace",
+    "options": [
+      "Není látkově řízena",
+      "Je ovlivňována hormonem erytropoetinem",
+      "Závisí na celkovém krevním tlaku",
+      "Probíhá intenzivněji ve dne, než v noci"
+    ],
+    "answer": 2,
+    "title": "Filtrace potřebuje vhodné tlakové poměry",
+    "paragraphs": [
+      "Správně podle klíče je C. Krevní tlak ovlivňuje tlak v ledvinných cévách a tím podmínky filtrace. Není to ale prostá přímá úměra, protože cévy a místní mechanismy část změn tlumí.",
+      "Představ si filtr s regulovaným přívodem. Pokud přívodní podmínky výrazně poklesnou, ani dobrá regulace už nemusí udržet stejný výkon. V určitém rozsahu ale autoregulace pomáhá filtraci stabilizovat místo toho, aby bezprostředně kopírovala každý výkyv tlaku.",
+      "Erytropoetin hlavně podporuje tvorbu červených krvinek a není základní bezprostřední regulátor tohoto filtru. Filtrace má i denní rytmy, proto D může vystihovat obvyklý trend, ale není definující univerzální pravidlo. Látkové řízení rozhodně existuje."
+    ],
+    "memory": "Tlak je důležitý, autoregulace tlumí výkyvy; erytropoetin patří hlavně ke krvetvorbě.",
+    "note": "D může být za běžného režimu rovněž pravdivé. C je odpověď klíče; závislost na tlaku se uplatňuje spolu s autoregulací a dalšími vlivy."
+  },
+  {
+    "id": 365,
+    "bookRef": "XI · otázka 17",
+    "category": "Močový systém",
+    "question": "Filtrace v glomerulech",
+    "options": [
+      "Není závislá na filtračním tlaku",
+      "Zahrnuje i filtraci plazmatických bílkovin",
+      "Dává vznik glomerulárnímu filtrátu neboli primární moči",
+      "Dává vznik definitivní moči"
+    ],
+    "answer": 2,
+    "title": "Výsledek prvního filtru je teprve primární moč",
+    "paragraphs": [
+      "Správně je C. Tekutina přestupující přes glomerulární bariéru se nazývá glomerulární filtrát nebo primární moč. Další složení a objem se výrazně mění v navazujících úsecích.",
+      "Představ si první třídění, které pustí vodu a řadu malých látek, ale běžně zadrží krvinky a převážnou část velkých plazmatických proteinů. Bariéra přitom není děravá síť bez rozlišování; záleží na vlastnostech částic i její stavbě.",
+      "Některé malé bílkoviny se filtrovat mohou a následně se zpracovávají v kanálcích, takže B není absolutně nemožný děj. Nevyjadřuje ale běžnou školní charakteristiku filtrace bez významného prostupu velkých plazmatických proteinů. Filtrační tlak je pro děj podstatný."
+    ],
+    "memory": "Glomerulus vytváří primární filtrát, nikoli hned konečnou moč.",
+    "note": "B je vágní: stopová filtrace a filtrace některých malých proteinů existují. Základní rozdíl je silné omezení průchodu velkých plazmatických bílkovin."
+  },
+  {
+    "id": 366,
+    "bookRef": "XI · otázka 18",
+    "category": "Močový systém",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 1,
+    "title": "Půl litru není běžný univerzální denní výdej",
+    "paragraphs": [
+      "První tvrzení klíč odmítá: půl litru za den není běžný obecný popis denní diurézy dospělého. Ta často bývá přibližně jeden až dva litry, ale výrazně závisí na příjmu, ztrátách, tělesných podmínkách a regulaci.",
+      "Druhé tvrzení klíč přijímá jako souvislost mezi uspořádáním cév, kanálků a regulací reninem. Představ si filtr napojený na místní čidla a regulátory. Renin vzniká především ve specializovaných buňkách přívodné arterioly u tělíska.",
+      "Vyber B: první ne, druhé ano podle PDF. Doslovná věta o buňkách produkujících renin uvnitř glomerulu je ale nepřesná. Také zvýšený příjem tekutin neznamená mechanicky stejný nárůst výdeje za všech situací, protože současně existují další cesty ztrát."
+    ],
+    "memory": "Diuréza je proměnlivá; renin produkuje juxtaglomerulární aparát u přívodu, ne prostě celé klubíčko.",
+    "statements": [
+      "Za běžných životních podmínek dosahuje množství moči za den (denní diuréza) asi 0,5 litru za 24 hodin. Při zvýšeném příjmu tekutin je denní diuréza zvýšena.",
+      "Anatomickým podkladem pro řízení filtrace v glomerulech je uspořádání kapilár cévních klubíček a kanálků. V glomerulech jsou buňky, které produkují hormon renin, který ovlivňuje glomerulární filtraci."
+    ],
+    "note": "Druhé tvrzení zachováváme v hodnocení podle klíče, ale lokalizaci reninu je třeba opravit na specializované juxtaglomerulární buňky."
+  },
+  {
+    "id": 367,
+    "bookRef": "XI · otázka 19",
+    "category": "Močový systém",
+    "question": "Zpětné vstřebávání v kanálcích ledvin",
+    "options": [
+      "Je pouze pasivním transportem po koncentračním spádu",
+      "Zahustí primární moč na tisícinu objemu",
+      "Zbavuje definitivní moč všech minerálních látek",
+      "Je hormonálně řízeno v oblasti distálních kanálků"
+    ],
+    "answer": 3,
+    "title": "Pozdní úseky dolaďují, kolik vody a iontů si tělo nechá",
+    "paragraphs": [
+      "Správně je D. Hormony ovlivňují přenosy v pozdních úsecích nefronu a sběrného systému. Například aldosteron mění zacházení se sodíkem a draslíkem a ADH zvyšuje propustnost příslušných úseků pro vodu.",
+      "Představ si konečné nastavitelné ventily za velkým základním tříděním. Nejdřív se vrátí většina běžně potřebných látek a vody, potom se výsledek doladí podle situace organismu. Ne všechny látky se přenášejí jen pasivně.",
+      "Konečná moč stále obsahuje minerální ionty a nevzniká obecně zahuštěním na jednu tisícinu původního objemu. Podstatné je, že návrat látek není vše nebo nic: probíhá selektivně různými přenašeči a v různých místech."
+    ],
+    "memory": "Aldosteron a ADH dolaďují pozdní transport; moč neztrácí automaticky všechny minerály."
+  },
+  {
+    "id": 368,
+    "bookRef": "XI · otázka 20",
+    "category": "Močový systém",
+    "question": "Vývodné močové cesty",
+    "options": [
+      "Mají ve stěně příčně pruhované svalstvo",
+      "Jsou zakončeny zevním svěračem s hladkým svalstvem",
+      "Posouvají moč peristaltickými pohyby močovodu",
+      "Celkově se skládají z kalichů, močovodů a močového měchýře"
+    ],
+    "answer": 3,
+    "title": "Výčet v klíči je neúplný, peristaltika močovodu je skutečná",
+    "paragraphs": [
+      "Tištěný klíč označuje D, ale výčet není úplný: patří sem také ledvinné pánvičky a močová trubice. Pro orientaci sleduj trasu od kalichů přes pánvičku a močovod do měchýře a potom urethrou ven.",
+      "C je přitom fyziologicky správné. Hladká svalovina močovodu vytváří peristaltické vlny posouvající moč směrem k měchýři. Představ si pružnou hadici s postupujícím stiskem, nikoli jen nehybnou trubku závislou na stékání vlastní vahou.",
+      "Zevní uretrální svěrač obsahuje příčně pruhovanou svalovinu, ne hladkou uvedenou v B. Většina vlastní stěny močových cest má naopak hladkou svalovinu. Hodnocení D proto nepřebírej jako bezchybnou anatomickou definici ani jako důvod popřít správný děj v C."
+    ],
+    "memory": "PDF hodnotí D; úplná trasa zahrnuje i pánvičku a urethru. C správně popisuje peristaltiku.",
+    "note": "Nabídka i klíč jsou problematické: D má neúplný výčet a C popisuje skutečnou funkci močovodu. A závisí na tom, zda zahrnujeme oblast zevního svěrače."
+  },
+  {
+    "id": 369,
+    "bookRef": "XI · otázka 21",
+    "category": "Močový systém",
+    "question": "Při mikci – vyprazdňování močového měchýře",
+    "options": [
+      "Je vůlí ovládán vnitřní svěrač močové trubice",
+      "Je vše řízeno z dolního úseku bederní míchy",
+      "Má rozhodující význam svalovina břišní stěny",
+      "Se uplatňuje kromě svaloviny stěny měchýře i svalovina močové trubice"
+    ],
+    "answer": 1,
+    "title": "Klíč zde uvádí nesprávně lokalizované řídicí centrum",
+    "paragraphs": [
+      "Tištěný klíč vybírá B, ale jeho anatomické tvrzení není přesné. Základní míšní mikční reflexy se spojují hlavně s křížovými segmenty S2–S4 a jsou koordinované centry v mozkovém kmeni a vyšších oblastech, nikoli vše v dolní bederní míše.",
+      "Představ si souhru nádrže a výstupního uzávěru. Sval měchýře se při vyprazdňování stahuje a výstup se vhodně uvolňuje. Vědomě ovlivňujeme zejména příčně pruhovaný zevní svěrač a chování, ne jednoduchý přímý povel vnitřnímu hladkému svěrači.",
+      "D proto vystihuje skutečnou spolupráci stěny měchýře a uretrálních struktur. B zde zachováváme jen kvůli shodě s PDF. Břišní lis může za určitých podmínek přispět, ale není správné z něj dělat hlavní normální motor celé mikce."
+    ],
+    "memory": "Pro test B; pro anatomii křížová mícha S2–S4 a koordinace z mozku, měchýř plus svěrače.",
+    "note": "Klíč PDF je zde odborně problematický. B není správné jako úplná lokalizace řízení; D popisuje reálnou souhru. Nepřebírej chybné místo reflexního centra."
+  },
+  {
+    "id": 370,
+    "bookRef": "XI · otázka 22",
+    "category": "Močový systém",
+    "question": "Moč",
+    "options": [
+      "Přitéká distálními kanálky do ledvinných kalichů",
+      "Přitéká sběracími kanálky do močovodu",
+      "Má pH 4,5 do 8,0",
+      "Vytéká močovou trubicí, která je u žen delší, než u mužů"
+    ],
+    "answer": 2,
+    "title": "Moč má proměnlivou kyselost i další vlastnosti",
+    "paragraphs": [
+      "Správně je C. pH moči může v běžně uváděném rozmezí kolísat přibližně mezi 4,5 a 8 podle potravy, metabolických podmínek i dalších vlivů. Není to stejné úzce řízené číslo jako pH krve.",
+      "Představ si výsledek regulační stanice, která může do odpadu poslat různá množství kyselých a zásaditých složek, aby pomohla chránit vnitřní prostředí. Samotná jedna hodnota pH ovšem bez kontextu neurčí příčinu ani konkrétní nemoc.",
+      "Z distálních kanálků tekutina pokračuje přes sběrný systém, papily, kalichy a pánvičku do močovodu; A a B tyto mezikroky přeskakují. Ženská močová trubice je běžně kratší než mužská, takže D má srovnání obrácené."
+    ],
+    "memory": "Moč může být kyselejší i zásaditější; ženská urethra je zpravidla kratší."
+  },
+  {
+    "id": 371,
+    "bookRef": "XI · otázka 23",
+    "category": "Močový systém",
+    "question": "Definitivní moč",
+    "options": [
+      "Obsahuje poměrně velké množství bílkovin",
+      "Není svým složením závislá na typu potravy",
+      "Je hypotonická vůči plazmě",
+      "Je svým složením závislá na složení krevní plazmy"
+    ],
+    "answer": 3,
+    "title": "Výsledek souvisí se vstupem a s tím, co tělo potřebuje upravit",
+    "paragraphs": [
+      "Klíč vybírá D. Látky přicházející krví i regulační potřeby organismu ovlivňují, co se do výsledné moči dostane. Ledvina filtruje, vrací a přidává jednotlivé složky, takže nejde o pasivní kopii plazmy.",
+      "Představ si upravovaný výstup podle kvality vstupu a zadání řízení. Potrava ovlivňuje třeba zátěž některými ionty a kyselinotvornými látkami, hormonální signály zase vodu a transporty. Definitivní moč proto není stálá směs nezávislá na okolnostech.",
+      "Za normálních podmínek neobsahuje velké množství bílkovin. Může být podle vodního hospodaření zředěnější i koncentrovanější než plazma, takže C neplatí jako povinná vlastnost. Proměnlivost je základní součást ledvinné regulační práce."
+    ],
+    "memory": "Konečná moč závisí na krevním vstupu, stravě i regulaci; není vždy stejně koncentrovaná."
+  },
+  {
+    "id": 372,
+    "bookRef": "XI · otázka 24",
+    "category": "Močový systém",
+    "question": "Regulace pH ledvinami probíhá",
+    "options": [
+      "Vylučováním iontů Mg⁺",
+      "Vylučováním H⁺ iontů",
+      "Zpětným vstřebáváním organických kyselin (např. kys. šťavelové)",
+      "Zpětným vstřebáváním slabých organických kyselin a jejich solí"
+    ],
+    "answer": 1,
+    "title": "Ledviny pomáhají odvádět kyselou zátěž a zachovat pufr",
+    "paragraphs": [
+      "Správně je B. Ledvinné kanálky vylučují vodíkové ionty a zároveň hospodaří s hydrogenuhličitanem. Kyselá zátěž se v moči odvádí hlavně navázaná na pufry a jako amonné ionty, ne jen jako velké množství volných H⁺.",
+      "Představ si odvoz odpadu v přepravních obalech: bez nich by koncentrace volných protonů rychle omezila další účinné vylučování. Systém pomáhá udržet krevní pH v úzkém rozmezí a spolupracuje s plícemi, které odvádějí CO₂.",
+      "Samotné vylučování hořčíku není základní mechanismus acidobazické regulace a jeho běžný iont je navíc Mg²⁺, nikoli Mg⁺ v nabídce. Návrat organických kyselin také nevystihuje hlavní hledanou odpověď."
+    ],
+    "memory": "H⁺ ven, hydrogenuhličitan chránit a doplňovat; plíce mezitím odvádějí CO₂."
+  },
+  {
+    "id": 373,
+    "bookRef": "XI · otázka 25",
+    "category": "Močový systém",
+    "question": "Močový měchýř",
+    "options": [
+      "Ústí do párových močových trubic",
+      "Je vyprazdňován přes dva svalové svěrače",
+      "Je párovým orgánem",
+      "Jeho pánevní poloha se stabilizuje brzo po narození"
+    ],
+    "answer": 1,
+    "title": "Jedna nádrž a spolupracující uzávěrový aparát",
+    "paragraphs": [
+      "Klíč vybírá B. V základním školním popisu se rozlišuje vnitřní hladkosvalový a zevní příčně pruhovaný uzávěrový mechanismus. Jejich funkce spolupracuje se svalovinou měchýře, aby moč neodcházela nekontrolovaně.",
+      "Představ si nádrž s řízeným vypouštěním. Měchýř je jeden a ven z něj vede jedna močová trubice, zatímco do něj běžně přicházejí dva močovody od ledvin. Přívodní párové cesty si proto nepleť s výstupem.",
+      "Detailní uspořádání svěračů a jejich anatomická ohraničenost se liší mezi pohlavími. Také poloha měchýře se s růstem a náplní mění, zejména u dítěte. Dvě oddělené stejně vypadající kruhové zátky tedy nejsou doslovný obraz každého člověka."
+    ],
+    "memory": "Dva močovody dovnitř, jeden měchýř, jedna urethra ven; uzávěr má více spolupracujících částí.",
+    "note": "B je funkční školní zjednodušení, zvláště pro ženský vnitřní svěrač nelze vždy kreslit samostatný jednoznačný svalový prstenec."
+  },
+  {
+    "id": 374,
+    "bookRef": "XI · otázka 26",
+    "category": "Močový systém",
+    "question": "Močový měchýř",
+    "options": [
+      "Se vyprazdňuje vědomým uvolněním vnitřního svěrače močové trubice",
+      "Jeho vyprazdňování můžeme ovlivnit vůlí až do jeho objemu 800 ml",
+      "Je uložen vzhledem k ostatním orgánům u žen i u mužů stejně",
+      "Je uložen v pánvi za stydkou sponou"
+    ],
+    "answer": 3,
+    "title": "Měchýř leží za přední kostěnou stěnou pánve",
+    "paragraphs": [
+      "Správně je D. Močový měchýř leží v malé pánvi za stydkou sponou a při naplnění může vystupovat výše. Jeho vztahy k okolním orgánům se liší u mužů a žen, protože jejich pánevní orgány nejsou totožné.",
+      "Představ si roztažitelnou nádrž za přední částí pánevního kruhu. Naplnění mění její tvar i dosah, takže obrázek prázdného měchýře není pevný obrys pro všechny situace. Okolní vztahy musí respektovat například přítomnost dělohy nebo prostaty.",
+      "Vědomá kontrola se týká hlavně zevního svěrače a vyššího řízení mikce. Osm set mililitrů není univerzální bezpečná nebo ovladatelná mez pro každého. A proto nepopisuje správně vůlí ovládanou část a C chybně sjednocuje anatomické vztahy."
+    ],
+    "memory": "Měchýř za stydkou sponou; příčně pruhovaný zevní svěrač pomáhá vědomé kontrole."
+  },
+  {
+    "id": 375,
+    "bookRef": "XI · otázka 27",
+    "category": "Močový systém",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 0,
+    "title": "Objemy i koordinace močení jsou složitější než pevná tabulka",
+    "paragraphs": [
+      "PDF hodnotí první tvrzení jako správné a druhé jako nesprávné, tedy A. První uvádí orientační objemy pocitu nucení a vyprazdňování, ale jeho absolutní věta o nepřekročení 500 ml není obecně pravdivá. Kapacita a vnímání se mezi lidmi liší.",
+      "Představ si nádrž s čidly, nikoli pevný automat vypínající u každého při stejném čísle. Druhé tvrzení správně zmiňuje nervy a souhru pánevního dna, ale mikce není jen stah jediné zevní vrstvy měchýře ani obyčejná peristaltika uretry.",
+      "Hlavním vypuzovacím svalem je detruzor a jeho činnost se koordinuje s uvolněním výstupního odporu. Pro test ponech A, pro porozumění však neber uvedené objemy jako nepřekročitelné hranice nebo doporučené cíle zadržování."
+    ],
+    "memory": "Pro test A; ve skutečnosti proměnlivá kapacita a koordinace detruzoru se svěrači.",
+    "statements": [
+      "Náplň močového měchýře nepřesahuje 500 ml, při náplni 150 ml se dostavuje nucení na moč. Při objemu okolo 350–400 ml se močový měchýř vyprazdňuje.",
+      "Mikce (vyprazdňování močového měchýře) je řízena autonomními nervy a míchou. Začátek močení je vyvolán podrážděním stěny měchýře. Uvolňují se i svaly pánevního dna, smršťuje se zevní vrstva svaloviny stěny měchýře a obsah měchýře je vypuzen do močové trubice, jejíž svalovina podporuje močení peristaltickými pohyby."
+    ],
+    "note": "První tvrzení je doslovně příliš absolutní. Klíč A zachováváme, ale hranice 500 ml není obecný strop náplně každého měchýře."
+  },
+  {
+    "id": 376,
+    "bookRef": "XI · otázka 28",
+    "category": "Močový systém",
+    "question": "Kde vznikají uvedené hormony, a co ovlivňují při regulaci činnosti ledvin?",
+    "options": [
+      "A3, B1, C2",
+      "A3, B2, C1",
+      "A1, B2, C3",
+      "A1, B3, C2"
+    ],
+    "answer": 0,
+    "title": "Tři signály, tři odlišná místa vzniku",
+    "paragraphs": [
+      "ADH vzniká v hypothalamu v mezimozku a podporuje návrat vody, A3. Aldosteron vzniká v kůře nadledvin a ovlivňuje mimo jiné návrat sodíku, B1. Renin vzniká v ledvině a zahajuje regulační systém, C2. Správná kombinace je A.",
+      "Představ si zprávu pro vodní propustnost, zprávu pro iontový transport a spouštěč oběhové regulační kaskády. Nemají stejné místo tvorby ani stejný bezprostřední účinek. ADH se navíc do krve uvolňuje z neurohypofýzy, přestože tam není původně vyroben.",
+      "Aldosteron působí i na výdej draslíku a další děje; není to jen tlačítko označené sodík. Renin působí jako enzym na angiotenzinogen a teprve navazující látky mění cévní a hormonální odpověď. Stručné definice proto doplňuj touto návazností."
+    ],
+    "memory": "ADH hypothalamus a voda; aldosteron nadledvinová kůra a ionty; renin ledvina a regulační kaskáda.",
+    "terms": [
+      "ADH",
+      "Aldosteron",
+      "Renin"
+    ],
+    "definitions": [
+      "Vznik v kůře nadledvin. Ovlivňuje vstřebávání sodíku",
+      "Vznik v ledvinách. Ovlivňuje glomerulární filtraci",
+      "Vznik v mezimozku. Zvyšuje vstřebávání vody (antidiuretický účinek)"
+    ]
+  },
+  {
+    "id": 377,
+    "bookRef": "XII · otázka 1",
+    "category": "Kožní ústrojí",
+    "question": "Typy kožního ústrojí u živočichů – přiřaďte jeho charakteristiku a funkci:",
+    "options": [
+      "A2, B3, C6, D5, E4, F1",
+      "A3, B2, C6, D5, E4, F1",
+      "A3, B6, C2, D5, E4, F1",
+      "A5, B2, C6, D3, E4, F1"
+    ],
+    "answer": 1,
+    "title": "Tělní pokryv odpovídá způsobu života",
+    "paragraphs": [
+      "Členovci mají chitinovou kutikulu, A3. Měkkýši v nabídce slizové žlázy, B2. Obojživelníci tenkou kůži s významným dýcháním, C6. Plazi rohovatějící pokryv, D5. Ptáci peří, E4. Savci chlupy a mléčné žlázy, F1. Celkem B.",
+      "Představ si různé ochranné obleky: vnější pevnou kostru, vlhký výměnný povrch a suchozemský rohový obal. Tělo ale není pod oblekem úplně stejné a jednotlivé skupiny mají mnoho odchylek. Peří ani chlupy nejsou nalepené cizí části, ale kožní deriváty.",
+      "Věta o ptácích bez žláz je příliš absolutní: u mnoha druhů existuje například kostrční žláza. A mammární žlázu je vhodnější popsat jako specializovaný kožní derivát než tvrdit jednoduchý přímý vznik z dnešních potních žláz."
+    ],
+    "memory": "Členovci chitin, obojživelníci kožní výměna, plazi rohový pokryv, ptáci peří, savci chlupy a mléko.",
+    "terms": [
+      "Členovci",
+      "Měkkýši",
+      "Obojživelníci",
+      "Plazi",
+      "Ptáci",
+      "Savci"
+    ],
+    "definitions": [
+      "Chlupy vznikají z pokožky vchlípením do škáry, vznik mléčných žláz ze žláz potních",
+      "Slizové žlázy v pokožce, volné spojení pokožky a škáry",
+      "Pokožka vylučuje kutikulu prostoupenou chitinem – vnější kostra",
+      "Z pokožky se vytváří peří – kůže nemá žlázy",
+      "Velmi silná a suchá pokožka, svlékání zrohovatělé pokožky",
+      "Tenká pokožka, mízní vaky ve škáře. Kůže reguluje teplotu a je i významným dýchacím orgánem"
+    ],
+    "note": "Přiřazení zachovává historické zkratky PDF. Ptáci nejsou bez výjimky zcela bez kožních žláz a evoluční vztah mléčných žláz je složitější."
+  },
+  {
+    "id": 378,
+    "bookRef": "XII · otázka 2",
+    "category": "Kožní ústrojí",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 0,
+    "title": "Pevná povrchová bariéra není výborný vodič tepla",
+    "paragraphs": [
+      "První tvrzení je v základním smyslu správné: kůže je rozsáhlý plošný orgán, který kombinuje pevnost a pružnost. Různé vrstvy spolupracují, aby chránily vnitřní prostředí a zároveň dovolovaly pohyb těla.",
+      "Druhé tvrzení začíná správně vlivem prokrvení na výdej tepla, ale chybně nazývá rohovou vrstvu dobře tepelně vodivou. Jde o mechanickou a vodní bariéru; tepelný přenos k povrchu významně mění hlavně krevní průtok a další podmínky.",
+      "Vyber A: první ano, druhé ne. Představ si pružnou vícevrstvou ochranu a uvnitř síť přívodu tepla. Změna toku krve není totéž co přeměna povrchové rohoviny v kovový chladič. Část pravdivého tvrzení neopraví jeho chybný závěr."
+    ],
+    "memory": "Kůže pevná i pružná; prokrvení mění výdej tepla, rohová vrstva není kovový vodič.",
+    "statements": [
+      "Kůže je největší plošný orgán lidského těla, je pevná, pružná a tažná.",
+      "Prokrvení kůže má značný vliv na výdej tepla. Zrohovatělá vrstva povrchových buněk pokožky je mechanicky odolná a dobře tepelně vodivá."
+    ]
+  },
+  {
+    "id": 379,
+    "bookRef": "XII · otázka 3",
+    "category": "Kožní ústrojí",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 1,
+    "title": "Kožní bariéra propouští látky podle více vlastností",
+    "paragraphs": [
+      "PDF hodnotí první tvrzení jako nesprávné a druhé jako správné, tedy B. První má správné jádro: neporušená kůže omezuje prostup vody a řady vodných látek. Samotná rozpustnost v etheru ale není dostatečný důkaz, že látka snadno pronikne do těla.",
+      "Představ si několikaúrovňovou bránu. Rozhoduje nejen rozpustnost v tucích, ale také velikost molekuly, koncentrace, formulace přípravku a stav bariéry. Ether v textu není návod k použití na kůži ani univerzální transportní prostředek.",
+      "Podkožní tuk má zásobní, mechanickou a izolační roli. Některé tukové vitaminy se v tukové tkáni mohou ukládat, jejich hlavní zásoby se ale liší a mohou být například v játrech. Druhé tvrzení je proto také širší školní shrnutí, nikoli přesná mapa všech zásob."
+    ],
+    "memory": "Pro test B; průnik kůží neurčí samotná rozpustnost a podkoží je významný tukový sklad.",
+    "statements": [
+      "Resorpční funkce kůže je poměrně malá. Voda a látky v ní rozpuštěné jsou kůží absorbovány jen v malé míře. Přes kůži lze do organismu vpravovat mnohem lépe látky v tukovém rozpouštědle – např. etheru rozpustné.",
+      "Kůže má i skladovací funkci. V podkožním vazivu je uloženo velké množství tuku, který mechanicky a tepelně izoluje a je i energetickou zásobárnou organismu. V kůži jsou takto uskladněny i vitamíny rozpustné v tucích."
+    ],
+    "note": "Klíč B zjevně odmítá příliš obecný závěr prvního tvrzení. Není tím popřen běžně lepší prostup některých vhodných lipofilních molekul oproti mnoha vodným látkám."
+  },
+  {
+    "id": 380,
+    "bookRef": "XII · otázka 4",
+    "category": "Kožní ústrojí",
+    "question": "Co obsahují uvedené vrstvy kůže?",
+    "options": [
+      "A3, B1, C2",
+      "A3, B2, C1",
+      "A2, B1, C3",
+      "A1, B3, C2"
+    ],
+    "answer": 0,
+    "title": "Každá vrstva má typické vybavení",
+    "paragraphs": [
+      "Pokožka obsahuje melanin, A3. Ve škáře se nachází podstatná část vlasových kořenů a folikulů, B1. Podkožní vazivo může obsahovat výraznou zásobu tuku, C2. Správná kombinace je A.",
+      "Představ si povrchovou barevnou a ochrannou bariéru, hlubší vazivové zázemí pro kožní struktury a pod ním měkkou zásobní výstelku. Rozdělení podle vrstev pomáhá odlišit místo původu určité struktury od místa, do kterého její části zasahují.",
+      "Vlasový folikul je epidermální derivát, ale jeho hlubší části jsou zanořené do škáry a někdy až do podkoží. Není tedy rozpor říci, že vzniká z epitelu a jeho kořen přitom leží hlouběji. Tuk také není rovnoměrně silná vrstva na všech místech těla."
+    ],
+    "memory": "Pokožka pigment, škára vlasové zázemí, podkoží tuk.",
+    "terms": [
+      "Pokožka (epidermis)",
+      "Škára (corium)",
+      "Podkožní vazivo"
+    ],
+    "definitions": [
+      "Vlasové kořeny",
+      "Zásobní tuk",
+      "Pigment melanin"
+    ]
+  },
+  {
+    "id": 381,
+    "bookRef": "XII · otázka 5",
+    "category": "Kožní ústrojí",
+    "question": "Pokožka",
+    "options": [
+      "Je bohatě prostoupena cévami a nervy",
+      "Je tvořena jednovrstevným dlaždicovým epitelem",
+      "Obsahuje bílkovinu keratin, těžko rozpustnou ve vodě",
+      "Je místem ukládání tuku"
+    ],
+    "answer": 2,
+    "title": "Keratin pomáhá vytvořit odolnou povrchovou bariéru",
+    "paragraphs": [
+      "Správně je C. Hlavní buňky pokožky, keratinocyty, vytvářejí keratinové bílkoviny a při dozrávání se podílejí na vzniku rohové bariéry. Ta chrání před mechanickými vlivy a omezuje nechtěné ztráty vody.",
+      "Představ si postupně obnovovaný ochranný povrch, který tvoří více vrstev buněk, ne jediný tenký plát. Epidermis je vícevrstevný rohovatějící dlaždicový epitel. Nové buňky vznikají hlouběji a postupně se přesouvají k povrchu.",
+      "Pokožka nemá vlastní krevní cévy a živiny dostává difuzí z podkladu. Nervová zakončení se do ní mohou dostávat, takže není správné označit ji za zcela bez nervů. Typická zásoba tuku leží hlavně v podkoží, nikoli mezi povrchovými rohovými buňkami."
+    ],
+    "memory": "Epidermis: více vrstev, keratin, bez vlastních cév; tukový sklad hlavně pod ní."
+  },
+  {
+    "id": 382,
+    "bookRef": "XII · otázka 6",
+    "category": "Kožní ústrojí",
+    "question": "V epidermis",
+    "options": [
+      "Probíhají krevní a mízní cévy a nervy",
+      "Je síť kolagenních a elastických vláken",
+      "Se vytvářejí kožní lišty, sloužící k identifikaci osob (daktyloskopie)",
+      "Obsahuje v hlubších vrstvách kožní pigment melanin zachycující UV záření"
+    ],
+    "answer": 3,
+    "title": "Melanin pomáhá tlumit účinek ultrafialového záření",
+    "paragraphs": [
+      "Klíč vybírá D. V hlubších vrstvách epidermis jsou melanocyty a melanin předávaný do okolních keratinocytů. Pigment pomáhá omezovat poškození buněk ultrafialovým zářením, ale neposkytuje absolutní ochranu.",
+      "Představ si drobné ochranné pigmentové balíčky rozložené nad citlivými částmi buněk. Barvu kůže ovlivňuje jejich tvorba a rozmístění i další faktory. Síť kolagenu a elastických vláken je naopak typická pro vazivovou škáru.",
+      "Epidermis nemá vlastní krevní ani mízní cévy. Kožní lišty na jejím povrchu skutečně vidíme, ale jejich uspořádání souvisí také s rozhraním a papilami škáry. Proto C není vhodné chápat jako zcela chybný popis povrchu; D je odpověď podle klíče."
+    ],
+    "memory": "Melanin v epidermis pomáhá proti UV; kolagen a cévy hledej hlavně ve škáře.",
+    "note": "C se částečně překrývá s realitou: epidermální lišty existují a jejich vzor souvisí s podkladem. Nabídka není dokonale výlučná."
+  },
+  {
+    "id": 383,
+    "bookRef": "XII · otázka 7",
+    "category": "Kožní ústrojí",
+    "question": "Pokožka (epidermis)",
+    "options": [
+      "Propouští vodu do spodních vrstev kůže",
+      "Obsahuje mazové a potní žlázy",
+      "Má dobrou resorpční schopnost pro látky rozpustné ve vodě",
+      "Množstvím pigmentu ovlivňuje barvu kůže"
+    ],
+    "answer": 3,
+    "title": "Pigment je jedna z příčin barvy povrchu",
+    "paragraphs": [
+      "Správně je D. Množství, typ a rozmístění melaninu významně ovlivňují barvu kůže. Výsledný vzhled ale není dán jen pigmentem: podílí se také krevní prokrvení, okysličení a další barevné složky.",
+      "Představ si průsvitný ochranný nátěr nad cévním podkladem. Epidermis není nepropustná pro úplně všechno, ale představuje účinnou bariéru, zvláště vůči mnoha hydrofilním látkám. Proto obecné tvrzení o dobré vodné resorpci neplatí.",
+      "Potní a mazové žlázy vznikají jako epidermální deriváty, ale jejich sekreční části jsou zanořené hlouběji ve škáře či podkoží. Původ epitelu neznamená, že celá žláza leží v povrchové pokožce. Základní funkce je ochrana a řízená výměna, ne volné nasávání vody."
+    ],
+    "memory": "Pigment povrch barví, bariéra omezuje průnik; kožní žlázy mají hlubší sekreční části."
+  },
+  {
+    "id": 384,
+    "bookRef": "XII · otázka 8",
+    "category": "Kožní ústrojí",
+    "question": "Škára, vrstva kůže pod pokožkou",
+    "options": [
+      "Obsahuje mazové žlázky, k nimž se přimykají vzpřimovače chlupů",
+      "Má velmi bohaté cévní sítě",
+      "Neobsahuje žádné smyslové buňky",
+      "Je místem, kde se ukládá tuková tkáň"
+    ],
+    "answer": 1,
+    "title": "Cévní síť vyživuje kůži a mění výdej tepla",
+    "paragraphs": [
+      "Klíč vybírá B. Škára obsahuje bohaté cévní sítě, které vyživují její struktury i nepřímo bezcévnou epidermis. Změna průtoku zároveň ovlivňuje, kolik tepla se přivede k povrchu a předá do okolí.",
+      "Představ si zásobovací a tepelné potrubí pod ochrannou vrstvou. Škára také obsahuje nervové struktury, receptory a části kožních žláz a folikulů. Není tedy jen inertní vazivová podložka bez vnímání.",
+      "Vzpřimovač chlupu je napojen na vlasový folikul a okolní vazivo, nikoli definován jako sval připojený jen k mazové žláze. Hlavní tuková zásoba patří do podkoží, i když hranice vrstev a některé specializované tukové populace nejsou na všech místech dokonale stejné."
+    ],
+    "memory": "Škára je vazivové zázemí s cévami a čidly; tukový polštář leží hlavně v podkoží."
+  },
+  {
+    "id": 385,
+    "bookRef": "XII · otázka 9",
+    "category": "Kožní ústrojí",
+    "question": "Ve škáře (corium)",
+    "options": [
+      "Nejsou obsaženy tukové buňky",
+      "Jsou receptory tlaku a tahu Vater-Paciniho tělíska",
+      "Se vytvářejí kožní lišty dermatoglyfy",
+      "Jsou pigmentové buňky se zrny pigmentu melaninu"
+    ],
+    "answer": 2,
+    "title": "Vzor povrchu souvisí i s rozhraním pokožky a škáry",
+    "paragraphs": [
+      "PDF hodnotí C. Uspořádání papilární škáry a jejího spojení s epidermis se podílí na vzoru kožních lišt, který se využívá například při otiscích prstů. Samotné viditelné lišty ale tvoří epidermální povrch.",
+      "Představ si reliéf pod pružným povrchem, jehož tvar se promítne navenek. Není přesné přesunout celý dermatoglyf výhradně do jediné vrstvy. Pro funkci a stabilitu vzoru je důležitá návaznost obou sousedních částí.",
+      "Paciniho tělíska se mohou nacházet v hluboké škáře i podkoží a reagují zejména na rychlé změny tlaku a vibrace. Proto B také zachycuje skutečnou smyslovou souvislost, i když slovo tah je nepřesné. Typické epidermální melanocyty naopak patří hlavně do bazální vrstvy pokožky."
+    ],
+    "memory": "Dermatoglyfy souvisejí s epidermálním povrchem i papilárním podkladem; klíč zde chce C.",
+    "note": "Otázka není výlučná. Paciniho tělíska v hlubší škáře existují a samotné lišty se označují jako epidermální; C je zjednodušený odkaz na papilární uspořádání."
+  },
+  {
+    "id": 386,
+    "bookRef": "XII · otázka 10",
+    "category": "Kožní ústrojí",
+    "question": "Podkožní vazivo",
+    "options": [
+      "Vybíhá proti škáře bradavkovitými výběžky",
+      "Je potenciální tukovou tkání",
+      "Je nejtužší vrstvou kůže",
+      "Obsahuje hmatová Meissnerova tělíska"
+    ],
+    "answer": 1,
+    "title": "Podkoží může tvořit měkkou energetickou a izolační vrstvu",
+    "paragraphs": [
+      "Správně je B. Podkožní vazivo obsahuje podle oblasti a jednotlivce různé množství tukové tkáně. Ta slouží jako energetická zásoba, mechanické tlumení a tepelná izolace.",
+      "Představ si měkkou výstelku pod pevným obalem. Umožňuje také posun kůže vůči některým hlubším strukturám. Není to nutně nejsilnější ani nejtužší vrstva a její tloušťka rozhodně není na celém těle stejná.",
+      "Bradavkovité papily jsou typicky na rozhraní škáry a pokožky, ne popis výběžků podkoží. Meissnerova tělíska pro jemný dotyk leží v papilární škáře určitých oblastí. Podkoží tedy nesmíš zaměnit s nejpovrchnější částí škáry jen proto, že obě obsahují vazivo."
+    ],
+    "memory": "Podkoží tukový polštář; Meissnerova tělíska papilární škára."
+  },
+  {
+    "id": 387,
+    "bookRef": "XII · otázka 11",
+    "category": "Kožní ústrojí",
+    "question": "Kožní žlázy",
+    "options": [
+      "Jsou nejhustěji obsaženy v kůži trupu",
+      "Apokrinní jsou činné už u novorozenců",
+      "Mazové se nacházejí všude, kde jsou vlasy a chlupy",
+      "Mléčné se embryonálně zakládají pouze u žen"
+    ],
+    "answer": 2,
+    "title": "Mazové žlázy obvykle doprovázejí vlasové folikuly",
+    "paragraphs": [
+      "Klíč vybírá C. Mazové žlázy jsou typicky spojené s vlasovými folikuly a jejich sekret pomáhá promašťovat vlasy a kožní povrch. Slovo všude ale představuje školní zobecnění, nikoli přesný seznam všech oblastních výjimek.",
+      "Představ si místní mazací službu u kožního vlasového zařízení. Některé mazové žlázy mohou ústit i samostatně a rozložení různých žláz není po těle rovnoměrné. Dlaně a plosky například nemají běžné vlasové folikuly a mazové žlázy.",
+      "Pachové apokrinní žlázy se funkčně výrazněji aktivují kolem puberty. Základ mléčných žláz se vytváří u obou pohlaví, takže D není správně. Žádná jediná oblast trupu také nevyjadřuje společné maximum všech druhů kožních žláz."
+    ],
+    "memory": "Mazové žlázy typicky s folikuly, pachové se aktivují kolem puberty, mléčný základ mají obě pohlaví.",
+    "note": "„Všude“ v C je příliš absolutní. Typický vztah mazové žlázy a folikulu má anatomické výjimky."
+  },
+  {
+    "id": 388,
+    "bookRef": "XII · otázka 12",
+    "category": "Kožní ústrojí",
+    "question": "Pro činnost kožních žláz platí:",
+    "options": [
+      "Rozložení kožních žláz v kůži je rovnoměrné",
+      "Množství vyloučeného potu závisí na tělesné námaze, nikoliv na prostředí",
+      "Mléčná žláza je plně vyvinutá a plně funkční již v polovině těhotenství",
+      "Apokrinní (pachové) žlázy jsou do puberty nečinné"
+    ],
+    "answer": 3,
+    "title": "Pachové žlázy výrazněji spouští pubertální změny",
+    "paragraphs": [
+      "Správně podle klíče je D. Apokrinní pachové žlázy se výrazněji funkčně aktivují kolem puberty v souvislosti s hormonálními změnami. Nejde o všechny potní žlázy: ekrinní žlázy pro termoregulaci mají jiný průběh funkčního vývoje.",
+      "Představ si dva různé provozy se společným slovem potní. Jeden odvádí teplo vodnatým potem a druhý tvoří odlišný sekret v určitých oblastech. Proto nelze vlastnosti apokrinních žláz přenášet na celý systém pocení.",
+      "Žlázy nejsou rozloženy rovnoměrně a pocení závisí také na teplotě, vlhkosti i dalších podnětech. Mléčná žláza se v těhotenství významně mění, ale plnou poporodní sekreční aktivitu nelze bez výhrad umístit do poloviny těhotenství."
+    ],
+    "memory": "Pachové apokrinní kolem puberty; termoregulační ekrinní nejsou stejný provoz."
+  },
+  {
+    "id": 389,
+    "bookRef": "XII · otázka 13",
+    "category": "Kožní ústrojí",
+    "question": "Mazové žlázy",
+    "options": [
+      "Jsou nejhustější na dlaních",
+      "Jsou všude, kde se nacházejí vlasy a chlupy",
+      "Začínají být činné v pubertě",
+      "Jsou uloženy v podkožním vazivu"
+    ],
+    "answer": 1,
+    "title": "Maz doprovází kožní folikul, ale puberta není úplný začátek",
+    "paragraphs": [
+      "PDF vybírá B: mazové žlázy obvykle souvisejí s vlasovými folikuly. Vylučují kožní maz, který se dostává k povrchu a na vlas. Výrok používá příliš široké všude, ale jeho zamýšlenou myšlenkou je tento typický vztah.",
+      "Představ si mazací jednotku vedle vlasového kanálku. Zpravidla leží ve škáře, ne jako hlavní zásobní struktura v podkožním tuku. Na dlaních a ploskách běžné mazové žlázy chybějí, takže A obrací důležitou oblastní zvláštnost.",
+      "Činnost může existovat už před pubertou, i když hormonální změny v pubertě ji výrazně zesilují. Není tedy správné říct, že se u každého začíná tvořit maz teprve tehdy. Samostatná vyústění a výjimky zároveň brání absolutnímu výkladu B."
+    ],
+    "memory": "Mazové typicky ve škáře u folikulu, ne na dlaních; puberta výkon zesílí, nemusí ho zahájit.",
+    "note": "B je zobecněný klíč, nikoli anatomické pravidlo bez výjimek."
+  },
+  {
+    "id": 390,
+    "bookRef": "XII · otázka 14",
+    "category": "Kožní ústrojí",
+    "question": "Potní žlázy",
+    "options": [
+      "Jsou v kůži rozloženy rovnoměrně",
+      "Chrání vlasy a chlupy před vysycháním",
+      "Je jich celkově na povrchu těla až 1 milion",
+      "Mohou vyloučit v závislosti na námaze a teplotě okolí 0,5–10 l potu za den"
+    ],
+    "answer": 3,
+    "title": "Výkon pocení se může výrazně měnit",
+    "paragraphs": [
+      "Klíč vybírá D jako orientační rozsah. Potní žlázy při velké tepelné a pracovní zátěži mohou vytvořit mnoho litrů potu za den, zatímco v klidu a chladu je produkce mnohem menší. Čísla nejsou povinný denní plán ani bezpečný limit.",
+      "Představ si chladicí systém s velkou výkonovou rezervou. Záleží na námaze, teplotě, vlhkosti, aklimatizaci i člověku. Ochlazení však nastává hlavně při odpaření, nikoli tím, že pot pouze steče z kůže.",
+      "Žlázy jsou rozmístěné nerovnoměrně a jejich počet se obvykle udává v řádu několika milionů, ne jako univerzální maximum jednoho milionu. Promašťování vlasů je hlavně úloha mazu. Rozlišuj tedy mazací sekret a vodnaté ochlazování."
+    ],
+    "memory": "Pocení má proměnlivý výkon; maz mastí, odpařený pot chladí.",
+    "note": "Rozsah D je orientační učebnicový příklad. Neznamená univerzální minimum, maximum ani doporučení ztrácet určité množství tekutin."
+  },
+  {
+    "id": 391,
+    "bookRef": "XII · otázka 15",
+    "category": "Kožní ústrojí",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 0,
+    "title": "Pot je vodný sekret, ale denní objem nemá jediný pevný rozsah",
+    "paragraphs": [
+      "První tvrzení klíč přijímá: potní žlázy čerpají vodu a rozpuštěné látky z vnitřního prostředí a výsledný pot obsahuje především vodu a ionty, mimo jiné sodík a chloridy. Malé množství tvoří další rozpuštěné složky.",
+      "Druhé tvrzení PDF odmítá, tedy odpověď A. Samotná závislost pocení na podmínkách je pravdivá, ale uvedený rozsah půl až pět litrů není obecný platný interval. Za některých okolností je množství menší nebo podstatně větší.",
+      "Představ si nastavitelný vodný výstup, jehož složení se upravuje i při průchodu vývodem žlázy. Pot není prostá identická kopie tkáňového moku a není hlavní náhradou ledvinného vylučování dusíkatého odpadu. Přesné složení i objem se mění podle podmínek."
+    ],
+    "memory": "Pro test první ano, druhé ne; pot hlavně voda a ionty, výkon bez jednoho univerzálního denního intervalu.",
+    "statements": [
+      "Pot se tvoří z tkáňového moku, který je v okolí buněk potních žláz. Pot obsahuje především vodu a chlorid sodný, z organických látek močovinu, kyselinu močovou, kreatinin, mastné kyseliny, aminokyseliny a jiné látky.",
+      "Denní množství potu je různé a závisí na teplotních podmínkách. Podle teploty prostředí, vlhkosti ovzduší a příjmu tekutin se denně vytvoří od půl litru do 5 litrů potu."
+    ],
+    "note": "První tvrzení je také zjednodušené: primární sekret vzniká činností buněk a ve vývodu se upravuje. Druhé není chybné svou proměnlivostí, ale příliš pevným číselným vymezením."
+  },
+  {
+    "id": 392,
+    "bookRef": "XII · otázka 16",
+    "category": "Kožní ústrojí",
+    "question": "Mléčná žláza",
+    "options": [
+      "Začíná produkovat mléko působením prolaktinu",
+      "Se skládá z 10 laloků",
+      "Nepatří ke kožním žlázám",
+      "Začíná u dívek růst v 7. až 8. roku života"
+    ],
+    "answer": 0,
+    "title": "Prolaktin podporuje tvorbu, oxytocin vypuzení",
+    "paragraphs": [
+      "Správně je A. Prolaktin je zásadní hormon podporující syntézu mléka v sekrečních buňkách. K tomu je potřeba vhodný vývoj žlázy a celkové hormonální podmínky, takže nejde o jediný izolovaný spínač bez souvislostí.",
+      "Představ si výrobnu a samostatný mechanismus výdeje. Oxytocin vyvolává stah myoepiteliálních buněk a pomáhá vypudit už vytvořené mléko. Tvorba a uvolnění tedy spolupracují, ale neřídí je v základním popisu tentýž hormon.",
+      "Mléčná žláza je kožní derivát a její počet laloků je proměnlivý, často se školně uvádí přibližně patnáct až dvacet. Pubertální růst má individuální načasování a nelze mu jako obecný začátek předepsat sedmý až osmý rok."
+    ],
+    "memory": "Prolaktin vyrábět, oxytocin vypudit; mléčná žláza patří ke kožním derivátům."
+  },
+  {
+    "id": 393,
+    "bookRef": "XII · otázka 17",
+    "category": "Kožní ústrojí",
+    "question": "Mléčná žláza",
+    "options": [
+      "Je řízena hormonálně – její vyprazdňování řídí prolaktin",
+      "Je v dětství malá, nevyvinutá, stejná u obou pohlaví",
+      "Začíná tvořit mléko již před porodem",
+      "Patří mezi sexuální apokrinní žlázy"
+    ],
+    "answer": 1,
+    "title": "Základ mají obě pohlaví, další vývoj se liší",
+    "paragraphs": [
+      "Tištěný klíč vybírá B. Před pubertou je základ mléčné žlázy u obou pohlaví obvykle podobný a málo rozvinutý. Výraznější odlišný růst a diferenciace přicházejí s hormonálními změnami, zvláště u dívek.",
+      "Představ si společný základ stavby, který později dostane jiné rozvojové pokyny. U funkční laktace podporuje prolaktin tvorbu mléka, kdežto vypuzovací reflex souvisí hlavně s oxytocinem. A proto správný hormonální vliv směšuje s nesprávnou konkrétní funkcí.",
+      "C přitom může být také pravdivé, protože tvorba a někdy odchod kolostra začínají už v těhotenství. Mléčná žláza je specializovaný kožní derivát s více způsoby sekrece; prosté přiřazení ke všem pachovým apokrinním žlázám její zvláštnosti nevystihuje."
+    ],
+    "memory": "Dětský základ u obou pohlaví; prolaktin tvorba a oxytocin výdej; kolostrum může vznikat před porodem.",
+    "note": "C je skutečná fyziologická možnost. B je klíč PDF, nikoli popření prenatální tvorby kolostra; slovo stejná také znamená základní podobnost, ne identitu bez výjimek."
+  },
+  {
+    "id": 394,
+    "bookRef": "XII · otázka 18",
+    "category": "Kožní ústrojí",
+    "question": "Tvorba mléka (laktace)",
+    "options": [
+      "Začíná po porodu tvorbou mleziva – kolostra",
+      "Je zahájena ihned až po porodu",
+      "Se objevuje až po zahájení kojení",
+      "Není řízena hormonálně"
+    ],
+    "answer": 1,
+    "title": "Zvýšená poporodní tvorba navazuje na přípravu v těhotenství",
+    "paragraphs": [
+      "PDF označuje B. Pro přesné porozumění je ale potřeba rozlišit tvorbu kolostra už v těhotenství a výrazné zvýšení sekrece po porodu, které souvisí s poklesem placentárních hormonů. Slovo až v B je proto doslovně zavádějící.",
+      "Představ si továrnu, která má část výroby připravenou před velkým zahájením provozu. Porod mění hormonální podmínky a následné odstraňování mléka podporuje udržení výroby. Nejde tedy o děj, který by teprve první přiložení vytvořilo úplně od nuly.",
+      "Kolostrum je časná sekrece s odlišným složením od pozdějšího zralého mléka. Laktace je hormonálně i místně regulovaná, takže D neplatí. Pro test zachováváme B, ale přesné časování popsané bez jednotlivých fází by vedlo k chybnému závěru."
+    ],
+    "memory": "Kolostrum může vznikat před porodem; po porodu se za změněných hormonů zvýší objem sekrece.",
+    "note": "B je tištěný klíč a není přesná univerzální definice začátku laktace. Je třeba odlišit prenatální sekreční přípravu od poporodní sekreční aktivace."
+  },
+  {
+    "id": 395,
+    "bookRef": "XII · otázka 19",
+    "category": "Kožní ústrojí",
+    "question": "Největší kožní žlázy v těle jsou",
+    "options": [
+      "Potní",
+      "Mazové",
+      "Mléčné",
+      "Apokrinní"
+    ],
+    "answer": 1,
+    "title": "Tady je v klíči věcná chyba",
+    "paragraphs": [
+      "Tištěné řešení uvádí B, mazové žlázy, a aplikace podle domluvy hodnotí toto písmeno. Biologicky však největší specializované kožní žlázy představují mléčné žlázy, tedy možnost C. Obě informace je potřeba jasně oddělit.",
+      "Představ si rozdíl mezi drobnou mazací žlázkou u vlasového folikulu a rozsáhlým žlázovým orgánem prsu. Mléčná žláza má vývojový vztah ke kožním derivátům, takže ji nelze ze srovnání vyřadit jen kvůli její zvláštní funkci.",
+      "Mazové žlázy jsou důležité pro tvorbu mazu, ale tím se nestávají největšími žlázami této skupiny. Tuto otázku ber jako konkrétní chybu původního klíče: písmeno pro nácvik podle PDF není správný podklad pro obecnou anatomickou poučku."
+    ],
+    "memory": "Klíč PDF B; správný anatomický fakt: největší kožní žlázy jsou mléčné, C.",
+    "note": "Zjevný rozpor klíče s anatomickým faktem. Hodnocení B je zachováno kvůli požadavku na shodu s PDF; odborně správná odpověď je C."
+  },
+  {
+    "id": 396,
+    "bookRef": "XII · otázka 20",
+    "category": "Kožní ústrojí",
+    "question": "Které z uvedených orgánů nepatří do kožních derivátů?",
+    "options": [
+      "Vlasy a nehty",
+      "Prsní žláza",
+      "Slinné žlázy",
+      "Apokrinní žlázy"
+    ],
+    "answer": 2,
+    "title": "Podobný sekretorický orgán nemusí mít stejný původ",
+    "paragraphs": [
+      "Správně je C. Slinné žlázy se v tomto členění neřadí mezi kožní deriváty. Vlasy, nehty a kožní žlázy včetně mléčných naproti tomu patří ke strukturám vyvíjejícím se ve vztahu ke kožnímu epitelu.",
+      "Představ si třídění podle vývoje a umístění, ne jen podle toho, že orgán něco vylučuje. Slinná žláza dodává sekret do úst a má vlastní vývojové vztahy. Mléčná žláza má sice velmi zvláštní funkci, ale je specializovaný kožní derivát.",
+      "Apokrinní žlázy i nehty tedy zůstávají na kožní straně seznamu, i když se na pohled vůbec nepodobají. Otázka neporovnává chemické složení sekretů ani to, zda je orgán velký nebo malý; rozhodující je příslušná anatomická skupina."
+    ],
+    "memory": "Vlasy, nehty a mléčné či jiné kožní žlázy ano; slinné žlázy v tomto seznamu ne."
+  },
+  {
+    "id": 397,
+    "bookRef": "XII · otázka 21",
+    "category": "Kožní ústrojí",
+    "question": "Vlasy",
+    "options": [
+      "Vznikají z vlasových váčků v pokožce",
+      "Mají barvu podle množství pigmentu uloženého jen ve dřeni vlasu",
+      "Jsou zvláčňovány mazovými žlázami vyúsťujícími do vlasových váčků",
+      "Patří k tak zvanému terciálnímu ochlupení"
+    ],
+    "answer": 2,
+    "title": "Maz se dostává do folikulu a na vlasový povrch",
+    "paragraphs": [
+      "Správně je C. Mazové žlázy typicky ústí do vlasového folikulu a jejich sekret pomáhá promašťovat vlas i okolní kožní povrch. Nejde o výživu mrtvého vlasového stvolu krví, ale o povrchovou úpravu.",
+      "Představ si vlas vyrůstající ze živé výrobní oblasti hlubšího folikulu a vedle něj místní mazací přívod. Viditelný vlasový stvol je keratinizovaný útvar; nové buňky vznikají v růstové zóně a postupně se mění v jeho strukturu.",
+      "Folikul je epidermálního původu, ale jeho hlubší části leží ve škáře či podkoží, takže A je zavádějící polohou. Pigment není jen ve dřeni vlasu, výrazný je v kůře. V tradičním časovém členění patří vlasy k sekundárnímu, nikoli pubertálnímu terciálnímu ochlupení."
+    ],
+    "memory": "Folikul tvoří vlas, maz ho promašťuje; pigment vlasu není omezen jen na jeho dřeň."
+  },
+  {
+    "id": 398,
+    "bookRef": "XII · otázka 22",
+    "category": "Kožní ústrojí",
+    "question": "Sekundární ochlupení",
+    "options": [
+      "Se objevuje již u plodu a vyvíjí se po narození",
+      "Se vyvíjí až po pubertě v dospělém věku",
+      "Je součástí sekundárních pohlavních znaků",
+      "Je jemné chmýří, pokrývající tělo plodu"
+    ],
+    "answer": 0,
+    "title": "Název sekundární ochlupení není totéž co sekundární pohlavní znak",
+    "paragraphs": [
+      "Klíč vybírá A. V tradičním vývojovém členění zahrnuje sekundární ochlupení například vlasy, řasy a obočí, jejichž vývoj začíná už před narozením a pokračuje dále. Nejde tedy o skupinu vznikající až s pubertou.",
+      "Představ si tři časové přihrádky: jemné plodové lanugo, další ochlupení včetně vlasů a pozdější hormonálně závislé oblasti. Stejné slovo sekundární v názvu pohlavních znaků neznamená stejnou přihrádku v tomto starším třídění.",
+      "Jemné chmýří plodu je primární ochlupení. Chlupy v podpaží a pubické oblasti se obvykle spojují s terciálním. Dnešní popis může používat také rozlišení lanugo, vellus a terminální vlas, které není totožné s jedinou časovou tabulkou PDF."
+    ],
+    "memory": "Sekundární v této tabulce = například vlasy, řasy a obočí; pubertální oblasti jsou terciální.",
+    "note": "Časové školní členění nelze úplně zaměnit s popisem podle tloušťky a struktury vlasu nebo s termínem sekundární pohlavní znaky."
+  },
+  {
+    "id": 399,
+    "bookRef": "XII · otázka 23",
+    "category": "Kožní ústrojí",
+    "question": "Časový postup vývoje ochlupení. Co k jednotlivým ochlupením patří?",
+    "options": [
+      "A3, B2, C1",
+      "A2, B1, C3",
+      "A1, B3, C2",
+      "A2, B3, C1"
+    ],
+    "answer": 3,
+    "title": "Tři názvy sledují postupný vývoj",
+    "paragraphs": [
+      "Primární ochlupení je jemné plodové chmýří, A2. Sekundární v tomto členění zahrnuje vlasy, řasy a obočí, B3. Terciální představují například pubertálně se rozvíjející chlupy v podpaží, C1. Správně je D.",
+      "Představ si časovou osu od plodu k pozdějším hormonálním změnám. Pomůže přiřazovat typické příklady, ale neznamená, že každá oblast těla projde přesně stejným viditelným vývojem nebo že časování je u všech lidí shodné.",
+      "Jemné chmýří v definici A2 se zde vztahuje k primárnímu plodovému ochlupení, ne automaticky ke všem jemným vlasům dospělého. Pojmy vellus a terminální vlas hodnotí jinou vlastnost než samotné pořadí primární, sekundární, terciální."
+    ],
+    "memory": "Primární plodové chmýří; sekundární vlasy a řasy; terciální například podpaží.",
+    "terms": [
+      "Primární ochlupení",
+      "Sekundární ochlupení",
+      "Terciální ochlupení"
+    ],
+    "definitions": [
+      "Chlupy v podpaždí",
+      "Jemné chmýří na povrchu těla",
+      "Vlasy, řasy, obočí"
+    ]
+  },
+  {
+    "id": 400,
+    "bookRef": "XII · otázka 24",
+    "category": "Kožní ústrojí",
+    "question": "Charakterizujte jednotlivé typy kožních žláz:",
+    "options": [
+      "A1, B4, C2, D3",
+      "A2, B4, C1, D3",
+      "A2, B1, C4, D3",
+      "A4, B1, C2, D3"
+    ],
+    "answer": 1,
+    "title": "Mazání, ochlazení, pachové souvislosti a výživa dítěte",
+    "paragraphs": [
+      "Mazové žlázy typicky ústí do vlasových pochev, A2. Ekrinní potní žlázy významně pomáhají termoregulaci, B4. Pachové apokrinní žlázy souvisejí s pachovými látkami, C1. Mléčné žlázy zajišťují produkci výživy dítěte, D3. Celá kombinace je B.",
+      "Představ si čtyři různé kožní provozy. Jeden promašťuje, druhý využívá odpařování k ochlazení, třetí dodává odlišný sekret v určitých oblastech a čtvrtý vytváří mléko. Slovo žláza neznamená shodný produkt ani stejnou regulaci.",
+      "U pachových žláz se typický pach z velké části rozvíjí působením kožních mikroorganismů na původní sekret. Není přesné představovat si hotový parfém vznikající jen uvnitř žlázy. Mazové vyústění také může mít oblastní výjimky."
+    ],
+    "memory": "Mazové mazání, ekrinní potní chlazení, apokrinní pachové souvislosti, mléčné výživa.",
+    "terms": [
+      "Mazové žlázy",
+      "Potní žlázy",
+      "Pachové žlázy",
+      "Mléčné žlázy"
+    ],
+    "definitions": [
+      "Produkují vonavé aromatické látky",
+      "Ústí do vlasových pochev",
+      "Zajišťují výživu dítěte",
+      "Významně se uplatňují při termoregulaci"
+    ],
+    "note": "A1 v první možnosti je doplněné označení podle významu poškozeného tisku. Správná kombinace B je čitelná a shoduje se s klíčem. Pach závisí výrazně na zpracování sekretu mikrobiomem."
   }
 ]);
 const $ = id => document.getElementById(id);

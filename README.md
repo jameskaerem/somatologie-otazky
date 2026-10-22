@@ -1,30 +1,31 @@
 # Somatologie
 
-**Verze: 1.6.0**  
+**Verze: 1.7.0**  
 **Datum vydání: 22. 10. 2026**  
-**Počet otázek: 350**
+**Počet otázek: 400**
 
 Mobilní procvičování somatologie v jednom samostatném HTML souboru. Obsahuje vysvětlení odpovědí, chytré opakování a ukládání pokroku v prohlížeči.
 
 ## Změny v této verzi
 
-- Přidáno přesně 50 otázek, čísla 301–350: kapitola VIII otázky 30–49, kapitola IX otázky 1–19, kapitola X otázky 1–9 a kapitola XI otázky 1–2.
-- Sada dokončuje trávení, zahrnuje celou kapitolu fyziologie výživy a termoregulace a začíná močový systém.
-- Každá nová otázka má tři odstavce vysvětlení s logickými souvislostmi a pomůcku pro zapamatování.
-- Všech 350 přiřazení odpovědí souhlasí s přepisem tištěných klíčů zdrojového PDF. Nové otázky, možnosti a klíče byly čteny přímo ze skenu bez internetu a bez přebírání ručních značek. Nově použité klíče: PDF strany 40, 43, 44 a 48 (tištěné strany 78, 84, 87 a 95).
-- Sporné či zastaralé formulace mají poznámku „Pro přesnost“. Například rozlišujeme zásobní ferritin a transportní transferin, horečku a hypertermii nebo obecný ileus a jeho paralytickou formu. U problematické otázky o vodě je výslovně uvedeno, že A je biologicky správné, i když PDF hodnotí D.
-- Původních 300 otázek včetně vysvětlení a identifikátorů zůstalo beze změny. Formát uloženého pokroku ani pravidla chytrého opakování se nemění.
+- Přidáno přesně 50 otázek, čísla 351–400: kapitola XI otázky 3–28 a kapitola XII otázky 1–24. Sada dokončuje močový systém a přidává kůži, její vrstvy, žlázy, laktaci a ochlupení.
+- Každá nová otázka má tři odstavce vysvětlení souvislostí a pomůcku pro zapamatování.
+- Všech 400 přiřazení odpovědí souhlasí s přepisem tištěných klíčů PDF. Nové otázky, možnosti a klíče byly přečteny přímo ze skenu bez internetu a bez přebírání ručních značek. Nově použité klíče: PDF strany 48 a 52, tištěné strany 95 a 102.
+- Nejednoznačné nebo chybné formulace mají poznámku „Pro přesnost“. Hodnocení je nadále podle PDF, odborné vysvětlení výslovně uvádí potřebné opravy.
+- Konkrétní zjevné rozpory: otázka 369 (XI/21) má chybnou lokalizaci řízení mikce; otázka 395 (XII/19) má jako největší kožní žlázy v klíči B – mazové, zatímco anatomicky je správně C – mléčné. Oba rozpory jsou přímo v aplikaci vysvětlené.
+- Rozlišujeme například vznik ADH v hypothalamu od uvolnění v neurohypofýze, tvorbu mléka podporovanou prolaktinem od vypuzování řízeného oxytocinem a prenatální tvorbu kolostra od zvýšené poporodní sekrece.
+- Původních 350 otázek včetně vysvětlení a identifikátorů zůstalo beze změny. Formát uloženého pokroku i pravidla chytrého opakování jsou zachované.
 
 ## Co bylo ověřeno
 
-- Celý náhodný test 350 různých otázek, zbarvení odpovědí, zobrazení vysvětlení, ochrana proti dvojímu započtení a výsledné skóre.
-- Zachování všech polí pokroku při aktualizaci ze 300 na 350 otázek na stejné adrese: chyby, tipy, zvládnuté otázky i rozpracované starší kolo.
+- Celý náhodný test 400 různých otázek, zbarvení odpovědí, vysvětlení, ochrana před dvojím započtením a výsledné skóre.
+- Zachování všech polí pokroku při aktualizaci ze 350 na 400 otázek na stejné adrese: chyby, tipy, zvládnuté otázky a rozpracované starší kolo.
 - Obnovení po skutečném zavření a znovuotevření testovacího prohlížeče před aktualizací i po ní.
-- Pokračování v novém celém testu po obnovení stránky za hranicí 300 odpovědí.
-- Chytré opakování: správný tip nezvyšuje zvládnutí, předčasná správná odpověď neposune úroveň a chyba se vrací po odstupu.
-- Všech 350 otázek i vysvětlení při šířkách 320, 390, 768 a 1024 pixelů bez vodorovného přetékání. Tlačítka odpovědí mají nejméně 64 pixelů na výšku.
-- Offline spuštění samostatného HTML a funkční náhradní chování při zablokovaném či poškozeném úložišti.
-- Shoda zabaleného HTML se zdrojem, kontrola obsahu ZIP a jeho integrity.
+- Pokračování v novém celém testu po obnovení stránky za hranicí 350 odpovědí.
+- Chytré opakování včetně opatrného hodnocení tipů, nemožnosti posunout úroveň předčasným opakováním a návratu chyby s odstupem.
+- Všech 400 otázek a vysvětlení při šířkách 320, 390, 768 a 1024 pixelů bez vodorovného přetékání. Tlačítka odpovědí mají výšku nejméně 64 pixelů.
+- Offline spuštění jediného HTML a funkční náhradní chování při zablokovaném nebo poškozeném úložišti.
+- Shoda zabaleného HTML se zdrojem, kontrola obsahu a integrity ZIP.
 
 ## Spuštění a nahrání
 
@@ -34,12 +35,13 @@ Na GitHub nahraj **obsah této složky** do stejného místa jako dosud: `index.
 
 Pokrok se ukládá po každé odpovědi v konkrétním prohlížeči a jeho profilu, odděleně od HTML souboru. Nahrazení aplikace na stejném webu ho zachovává, pokud zůstala zachovaná data prohlížeče. Mezi zařízeními se nesynchronizuje; vymazání dat nebo ukončení anonymního režimu může pokrok odstranit. U místně otevřeného souboru může přesunutí do jiné složky znamenat jiné úložiště; pro pravidelné používání zachovej stejnou webovou adresu.
 
-Rozpracované starší kolo (například test 300 otázek) si zachová původní délku. Nové otázky se zapojí do nově zahájeného kola a chytrého procvičování; dřívější znalost původních otázek zůstane uložená.
+Rozpracované starší kolo (například test 350 otázek) si zachová původní délku. Nové otázky se zapojí do nově zahájeného kola a chytrého procvičování; dřívější znalost původních otázek zůstane uložená.
 
 ## Historie verzí
 
 | Verze | Otázky | Hlavní změna |
 | --- | ---: | --- |
+| 1.7.0 | 400 | Dalších 50 otázek: dokončení močového systému a kůže včetně žláz a ochlupení; kontrola klíčů a kompatibilita pokroku. |
 | 1.6.0 | 350 | Dalších 50 otázek: dokončení trávení, výživa, termoregulace a začátek močového systému; kontrola klíčů a zachování pokroku. |
 | 1.5.0 | 300 | Dalších 50 otázek: dokončení dýchacího systému a začátek trávení; vysvětlení, kontrola klíčů a kompatibilita pokroku. |
 | 1.4.0 | 250 | Dalších 50 otázek: dokončení krve, celý krevní oběh a začátek dýchacího systému; ověřené klíče, vysvětlení a kompatibilita pokroku. |
@@ -53,8 +55,8 @@ Rozpracované starší kolo (například test 300 otázek) si zachová původní
 
 ## Číslování dalších vydání
 
-- **1.7.0:** další rozšíření otázek nebo nová funkce.
-- **1.6.1:** drobná oprava současné verze.
+- **1.8.0:** další rozšíření otázek nebo nová funkce.
+- **1.7.1:** drobná oprava současné verze.
 - **2.0.0:** zásadní přepracování aplikace.
 
 Každé další vydání má vlastní složku a ZIP se stejným číslem verze a obsahuje `index.html` a aktualizované `README.md`. Při přidávání otázek se zachovají identifikátory dosavadních otázek a kompatibilita uloženého pokroku.
