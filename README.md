@@ -1,81 +1,46 @@
-# Somatologie
+# Kvíz pro Markét
 
-**Verze: 1.12.0**  
-**Datum vydání: 27. 10. 2026**  
-**Počet otázek: 630 — kompletní sada dodaného PDF**
+Verze 2.0.0 • 27. 10. 2026
 
-Mobilní procvičování somatologie v jediném samostatném HTML souboru. Obsahuje logická vysvětlení, chytré opakování a ukládání pokroku v prohlížeči.
+Jedna webová stránka, dvě záložky: **Somatologie (630 otázek)** a **Biologie (50 otázek)**. Mobilní rozvržení, vysvětlení po každé odpovědi, chytré procvičování, opakování chyb a tipů, náhodný test celé sady. Aplikace je v jediném samostatném `index.html` a funguje i offline.
 
-## Změny v této verzi
+## Nahrání na současný web
 
-- Přidáno posledních 30 otázek, čísla 601–630 (XVII/5–34). Požadovaných dalších 50 již v tomto PDF nezbývalo: dokument končí otázkou XVII/34, celkově otázkou 630.
-- Dokončen vývoj dítěte: novorozenecké orgány a reflexy, spánek, věková období, kojenec, batole, chrup, puberta a dospívání.
-- Každá nová otázka má tři odstavce vysvětlení souvislostí a pomůcku pro zapamatování. Přiřazovací otázka obsahuje legendu, dvojice tvrzení jsou oddělené.
-- Otázky a možnosti byly přečteny ze skenu PDF stran 76–79 (tištěné strany 150–156). Hodnocení je zkontrolované proti tištěnému klíči XVII na PDF straně 79 (tištěná 156), nikoli podle ručních značek. Nebyly použity internetové zdroje.
-- Všech 630 odpovědí odpovídá přepisu tištěných klíčů. Původních 600 otázek včetně identifikátorů a všech obsahových polí zůstalo beze změny.
-- Zachován klíč úložiště `somatologie-learning-v2`, formát dat i pravidla chytrého opakování. Jedna správná odpověď ještě neznamená zvládnutí; označený tip se za zvládnutí nepočítá.
+1. Rozbal ZIP.
+2. Nahraď na stávajícím webu soubor `index.html` novým souborem. README je dokumentace.
+3. Zachovej stejnou webovou adresu a prohlížeč, ve kterém byl původní pokrok uložený.
+4. Po načtení stránky vyber záložku nahoře. Rozpracované kolo zůstává dostupné přes „Pokračovat v kole“.
 
-## Přesnost a zjednodušení zdroje
+Tento balíček není automaticky nahraný na veřejný web. Je připravený k nahrazení předchozí verze na stejné adrese.
 
-Hodnocení sleduje tištěný klíč. Vysvětlení výslovně upozorňují na nepřesnosti zdroje a odlišují školní odpověď od přesné fyziologie.
+## Zachování somatologie
 
-- XVII/12: rychlé provzdušnění plic při zahájení dýchání není totožné s úplným okamžitým odstraněním plicní tekutiny.
-- XVII/13 a XVII/16: část vedlejších nosních dutin je založena již při narození; relativní velikost ledvin a přítomnost nefronů neznamenají dospělou funkční zralost.
-- XVII/19 (615): tělesný tuk skutečně také chrání před tepelnými ztrátami, přesto klíč vybírá jinou pravdivou odpověď. Přibližně 35 °C není běžný cílový údaj tělesné teploty novorozence.
-- XVII/20 (616): somatostatin tvoří v pankreatu delta buňky; jeho místní účinek se odlišuje od úlohy hypotalamického somatostatinu při řízení růstového hormonu.
-- XVII/22: novorozenec bolest vnímá. Ochranný slzný film není totéž co nápadně viditelné slzy při pláči.
-- XVII/23 (619): klíč přijímá oba výroky, ale 20 hodin není jednotná potřeba spánku všech kojenců a vývoj mozkové kůry není při narození plně dokončený. Tyto nepřesnosti jsou výslovně opraveny.
-- XVII/24, XVII/33 a XVII/34: věkové hranice puberty a dospělosti jsou orientační; adolescence může v širším významu zahrnovat i pubertu.
-- XVII/28 a XVII/29: základy řeči a jemná motorika se rozvíjejí již během prvního roku; výlučně mléčná výživa nevystihuje celý kojenecký věk. Některé alternativy tak podle výkladu částečně platí. Stoličky se obvykle prořezávají později, s individuálním rozptylem.
-- XVII/31: kojenecké období končí prvními narozeninami, nikoli dosažením přesné hmotnosti nebo ukončením kojení.
+- Všech 630 otázek, jejich ID, možnosti, odpovědi a vysvětlení se přesně shodují s původní verzí 1.12.0.
+- Zachovaný klíč úložiště `somatologie-learning-v2`, verze dat 2, pravidla opakování a migrace nejstarší desetio­tázkové verze.
+- Původní pokrok i rozpracované kolo se načítají bez převodu. Přepnutí záložky kolo neukončuje.
+- Biologie používá samostatný klíč `biologie-learning-v2`. Výsledky, tipy, chyby, termíny a kola se mezi předměty nemíchají.
+- Vymazání pokroku maže pouze vybraný předmět a vyžaduje potvrzení. Druhý předmět ponechá.
+- Volbu poslední záložky si aplikace pamatuje samostatně.
 
-Upozornění z předchozích verzí zůstávají u dotčených otázek přímo v aplikaci.
+Pokrok je místní pro konkrétní prohlížeč a webový původ. Přechod na jinou doménu, jiný prohlížeč, anonymní režim nebo vymazání dat jej nepřenese. Otevření staženého HTML není totéž úložiště jako původní web.
 
-## Co bylo ověřeno
+## Biologie: první sada
 
-- Celý náhodný test 630 různých otázek: zbarvení odpovědí, vysvětlení, ochrana před dvojím započtením, dokončení a skóre.
-- Aktualizace z 600 na 630 otázek na stejné adrese zachovává všechna uložená pole: chyby, tipy, zvládnuté otázky i rozpracované starší kolo o 600 otázkách.
-- Skutečné zavření a znovuotevření testovacího prohlížeče před aktualizací i po ní; obnovení nového kola po 611 odpovědích.
-- Chytré opakování, plánované odstupy, nezapočítání tipů jako zvládnutí a návrat chybné otázky po dalších odpovědích.
-- Všech 630 otázek a vysvětlení při šířkách 320, 390, 768 a 1024 pixelů bez vodorovného přetékání; tlačítka nejméně 64 pixelů vysoká.
-- Offline spuštění jediného HTML, náhradní chování při blokovaném úložišti a zotavení po poškozených uložených datech.
-- Shoda zabaleného HTML s aktuálním souborem, přesně dva soubory v balíčku a integrita ZIP.
+Zdroj: Ivan Novotný, Michal Hruška, **Biologie člověka pro gymnázia**, Fortuna, 4. přepracované vydání, 2007, ISBN 978-80-7373-007-9. Dodaný soubor: `623763327-biologie-cloveka.pdf`.
 
-## Spuštění a nahrání
+Otázky 1–50 jsou nově vytvořené testy A–D podle výkladu na **tištěných stranách 15–29, PDF stranách 8–15**. Nejde o přepis hotové testové banky nebo oficiálního klíče: kniha obsahuje výklad a otevřené studijní otázky. Každý test má jednu správnou odpověď, odkaz na tištěnou stránku, tři vysvětlující odstavce a paměťovou pomůcku. Texty knihy byly vizuálně přečteny ze skenu; nevyužívá se neověřený OCR přepis.
 
-Otevři `index.html` v prohlížeči. Stažený soubor funguje bez internetu.
+Témata: organizace těla a homeostáza; řízení tělesných soustav; vazivo, chrupavka a kost; kostní buňky, mineralizace, dřeň a růst; kloubní spojení; páteř a hrudník; lebka; pletenec a kosti končetin. Testy se vyhýbají nepřesným zobecněním zdroje, například klasifikaci skloviny jako pojiva. Biologické otázky jsou ověřené proti příslušnému výkladu, nikoli proti neexistujícímu tištěnému klíči A–D.
 
-Na GitHub nahraj **obsah této složky** do stejného místa jako dosud: `index.html` a `README.md`. Název vydané složky slouží pro archivaci; kvůli nové verzi není potřeba měnit adresu webu.
+Další dávka má pokračovat ID 51–100. Doplnit lze zbývající učivo o kostře a následně svalstvo od tištěné strany 30. Zachovat prvních 50 ID i jejich obsah a oba klíče úložiště.
 
-Pokrok se ukládá po každé odpovědi v konkrétním prohlížeči a jeho profilu, odděleně od HTML souboru. Nahrazení aplikace na stejném webu ho zachovává, pokud zůstala zachovaná data prohlížeče. Mezi zařízeními se nesynchronizuje; vymazání dat nebo ukončení anonymního režimu může pokrok odstranit. U místně otevřeného souboru může přesunutí do jiné složky znamenat jiné úložiště; pro pravidelné používání zachovej stejnou webovou adresu.
+## Ověření
 
-Rozpracované starší kolo (například test 600 otázek) si zachová původní délku. Nové otázky se zapojí do nově zahájeného kola a chytrého procvičování; dřívější znalost původních otázek zůstane uložená.
+- Přesná strojová shoda všech 630 původních otázek.
+- Načtení dat vytvořených původním řadičem, včetně přerušeného kola a tipu, bez změny uložených dat.
+- Celé kolo 630 otázek somatologie a 50 otázek biologie; hodnocení, zbarvení tříd odpovědí, vysvětlení a ochrana před dvojím započtením.
+- Přepínání předmětů, samostatná kola, obnovení při opětovném načtení, oddělený reset, chytré opakování a migrace staré verze pouze do somatologie.
+- Náhradní fungování při blokovaném úložišti, zotavení po poškozených datech a neplatném názvu záložky.
+- Ovládání záložek klávesami vlevo/vpravo, Home a End.
 
-## Historie verzí
-
-| Verze | Otázky | Hlavní změna |
-| --- | ---: | --- |
-| 1.12.0 | 630 | Posledních 30 otázek XVII/5–34: dokončena celá sada PDF, kontrola klíče a zachování pokroku. |
-| 1.11.0 | 600 | Dalších 50 otázek: dokončení pohlavního systému, těhotenství a porod, první čtyři otázky o novorozenci; kontrola klíčů i zachování pokroku. |
-| 1.10.0 | 550 | Dalších 50 otázek: dokončení nervového řízení, všechny smysly a začátek pohlavního systému; kontrola klíčů i zachování pokroku. |
-| 1.9.0 | 500 | Dalších 50 otázek nervového řízení: neurony, glie, CNS, reflexy a nervy; kontrola klíče i zachování pokroku. |
-| 1.8.0 | 450 | Dalších 50 otázek: dokončení kůže, celé hormonální řízení a začátek nervového systému; kontrola klíčů a zachování pokroku. |
-| 1.7.0 | 400 | Dalších 50 otázek: dokončení močového systému a kůže včetně žláz a ochlupení; kontrola klíčů a kompatibilita pokroku. |
-| 1.6.0 | 350 | Dalších 50 otázek: dokončení trávení, výživa, termoregulace a začátek močového systému; kontrola klíčů a zachování pokroku. |
-| 1.5.0 | 300 | Dalších 50 otázek: dokončení dýchacího systému a začátek trávení; vysvětlení, kontrola klíčů a kompatibilita pokroku. |
-| 1.4.0 | 250 | Dalších 50 otázek: dokončení krve, celý krevní oběh a začátek dýchacího systému; ověřené klíče, vysvětlení a kompatibilita pokroku. |
-| 1.3.0 | 200 | Dalších 50 otázek o krvi a imunitě; kontrola klíčů, vysvětlení, mobilního zobrazení a zachování pokroku. |
-| 1.2.0 | 150 | Dalších 50 otázek; kontrola klíčů a zachování pokroku po restartu; balíček s README. |
-| 1.1.0 | 100 | Dalších 50 otázek; kontrola proti PDF a kompatibilita uloženého pokroku. |
-| 1.0.0 | 50 | Rozšíření banky, chytré opakování, označení tipů a ukládání pokroku. |
-| 0.1.0 | 10 | První funkční prototyp s vysvětleními a mobilním vzhledem. |
-
-Čísla verzí před 1.2.0 byla při zavedení tohoto přehledu přiřazena zpětně podle skutečně dodaných verzí.
-
-## Číslování dalších vydání
-
-- **1.13.0:** nová funkce nebo obsah z dalšího zdroje. Původní PDF je již kompletní.
-- **1.12.1:** drobná oprava současné verze.
-- **2.0.0:** zásadní přepracování aplikace.
-
-Každé další vydání má vlastní složku a ZIP se stejným číslem verze a obsahuje `index.html` a aktualizované `README.md`. Při přidávání otázek se zachovají identifikátory dosavadních otázek a kompatibilita uloženého pokroku.
+Testy spouštějí skutečný JavaScript aplikace s minimálním adaptérem DOM. **Nejde o test ve skutečném prohlížeči:** místní HTTP náhled se v dostupném prohlížeči nenačetl a přímé otevření souboru blokovala jeho bezpečnostní politika. Vizuální vykreslení a skutečné prohlížečové úložiště nové verze proto nebyly ověřeny. Rozvržení vychází z původní aplikace s přidanými responzivními záložkami.

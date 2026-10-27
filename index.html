@@ -4,23 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f6f3ee">
-  <meta name="description" content="630 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
-  <title>Somatologie · malý krok, velké pochopení</title>
+  <meta name="description" content="Somatologie a biologie člověka. Dva kvízy s vysvětlením, chytrým opakováním a samostatným ukládáním pokroku.">
+  <title>Kvíz pro Markét · Somatologie a biologie</title>
   <style>
     :root{color-scheme:light;--bg:#f6f3ee;--paper:#fffefa;--ink:#293d39;--muted:#65736e;--line:#e1e6df;--sage:#dceadf;--green:#236345;--green-bg:#e4f3e7;--red:#983a45;--red-bg:#fbe5e6;--lavender:#ece7f8;--accent:#65558e;--peach:#fae8dc;--radius:26px}
     *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.55;-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer;touch-action:manipulation}button,a,summary{outline-offset:5px}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--accent)}button:disabled{cursor:default}button:enabled:active{transform:translateY(1px)}[hidden]{display:none!important}a{color:#59477d;text-underline-offset:3px}svg{display:block}.app{max-width:740px;margin:auto;padding:30px 24px calc(28px + env(safe-area-inset-bottom))}.brand{display:flex;align-items:center;gap:12px}.brand-icon{display:grid;place-items:center;width:46px;height:46px;border-radius:16px;background:var(--sage)}.brand-name{font-weight:760;letter-spacing:-.4px;font-size:20px}.brand-sub{font-size:12px;color:var(--muted)}.offline{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:12px;color:#4e6458}.offline:before{content:"";width:7px;height:7px;border-radius:50%;background:#7b9b80}.intro{margin:28px 0 22px}.eyebrow{text-transform:uppercase;letter-spacing:1.8px;font-size:10px;font-weight:750;color:#667968;margin-bottom:8px}.intro h1{font-size:clamp(27px,5.8vw,36px);letter-spacing:-1.2px;line-height:1.17;margin:0 0 10px;font-weight:720}.intro p{color:var(--muted);font-size:14px;margin:0;max-width:490px}.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:22px}.stat{border:1px solid #e2e4dd;border-radius:18px;padding:13px 16px;background:#fdfbf7}.stat:nth-child(2){background:var(--lavender);border-color:transparent}.stat:nth-child(3){background:var(--sage);border-color:transparent}.stat-label{font-size:11px;color:#58645f;display:block;margin-bottom:3px}.stat-value{font-size:23px;font-weight:750;letter-spacing:-.7px}.stat-unit{font-size:12px;font-weight:500;letter-spacing:0;color:#58645f}.card{background:var(--paper);border:1px solid #e5e7df;border-radius:var(--radius);padding:25px;box-shadow:0 12px 35px #32463706}.question-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.pill{display:inline-flex;padding:5px 10px;border-radius:9px;background:var(--lavender);color:#62547f;font-size:11px;font-weight:650}.book-number{font-size:11px;color:var(--muted)}.track{height:5px;background:#eceee7;border-radius:10px;margin:16px 0 22px;overflow:hidden}.fill{height:100%;width:0;background:#9eb7a1;border-radius:10px;transition:width .25s}.question-title{font-size:clamp(20px,4.5vw,25px);font-weight:690;line-height:1.35;letter-spacing:-.55px;margin:0 0 18px;overflow-wrap:anywhere}.legend{background:#f5f6f0;border:1px solid #e5e8de;border-radius:17px;padding:15px;margin:0 0 18px;font-size:13px}.legend-title{font-weight:750;margin:0 0 8px;color:#536154}.legend-list{margin:0;padding:0;list-style:none}.legend-list li{display:flex;gap:9px;margin:7px 0;line-height:1.4}.legend-code{min-width:20px;font-weight:750;color:#56694d}.legend-divider{height:1px;background:#e0e4d8;margin:14px 0}.hint{font-size:12px;color:var(--muted);margin:0 0 11px}.answers{display:grid;gap:10px}.answer{width:100%;display:flex;align-items:center;gap:12px;padding:14px;border:1.5px solid var(--line);background:white;border-radius:16px;text-align:left;min-height:64px;color:var(--ink);line-height:1.45;transition:background .15s,border-color .15s;position:relative}.letter{flex:0 0 33px;height:33px;display:grid;place-items:center;border-radius:10px;background:#f3f4ef;font-weight:720;font-size:13px;color:#627064}.answer-text{flex:1;font-size:15px;overflow-wrap:anywhere}.answer-mark{display:none;flex:0 0 21px;font-size:20px;font-weight:700}.answer:disabled{opacity:1;color:#5c6761}.answer.correct{background:var(--green-bg);border-color:#68a67b;color:var(--green)}.answer.correct .letter{background:#cbe7d3;color:var(--green)}.answer.wrong{background:var(--red-bg);border-color:#d5838b;color:var(--red)}.answer.wrong .letter{background:#f5cbd0;color:var(--red)}.answer.correct .answer-mark,.answer.wrong .answer-mark{display:block}.feedback{margin-top:22px;padding:20px;background:#f3f6ef;border-radius:18px;animation:appear .22s ease-out}.feedback-status{margin:0 0 13px;display:flex;align-items:center;gap:8px;font-size:14px;font-weight:750}.feedback-status.good{color:var(--green)}.feedback-status.bad{color:var(--red)}.feedback h3{font-size:17px;letter-spacing:-.2px;margin:0 0 10px}.feedback p{font-size:14px;margin:0 0 12px;line-height:1.7}.feedback p:last-child{margin-bottom:0}.memory{padding:13px 15px;border-radius:13px;background:#e4ebdf;font-size:13px!important}.note{padding:13px 15px;border-radius:13px;background:#fcf0dc;border:1px solid #ecdfc1;font-size:12px!important}.source-link{font-size:11px!important;color:var(--muted)}.actions{margin-top:20px}.next{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:57px;border:0;background:#344e43;color:white;border-radius:16px;font-weight:700;font-size:15px;padding:15px}.next:disabled{background:#e5e8e0;color:#7b847c}.next svg{width:17px;height:17px}.under-button{text-align:center;font-size:11px;color:var(--muted);margin:9px 0 0}.footer{padding:20px 8px 0;text-align:center;color:var(--muted);font-size:11px}.footer p{margin:7px 0}.reset{border:0;background:transparent;padding:12px;color:#5b695e;font-size:12px;text-decoration:underline;text-underline-offset:4px;min-height:44px}.sources{text-align:left;border-top:1px solid #e2e5dd;margin-top:12px;padding-top:10px}.sources summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:6px;font-size:12px}.sources summary:before{content:"+";font-size:18px}.sources[open] summary:before{content:"−"}.sources ul{padding-left:19px;line-height:1.8}.sources p{font-size:12px}.result{text-align:center;padding:8px 0}.result-icon{margin:0 auto 16px;width:66px;height:66px;border-radius:22px;background:var(--sage);display:grid;place-items:center}.result h2{font-size:27px;letter-spacing:-.8px;margin:0 0 8px}.result>p{color:var(--muted);font-size:14px;margin:0 auto 20px;max-width:400px}.result-score{font-size:58px;font-weight:760;letter-spacing:-3px;line-height:1.2;color:#4e6553}.result-caption{font-size:12px;color:var(--muted);margin:6px 0 22px}.secondary{margin-top:10px;border:1px solid #d4dcd0;background:#f1f5eb;color:#3c5848}.mistakes{margin:24px 0 0;text-align:left}.mistakes h3{font-size:13px;margin-bottom:10px}.mistake{border-top:1px solid var(--line);padding:12px 0;font-size:13px}.mistake strong{display:block;margin-bottom:5px}.mistake span{color:var(--muted)}.toast{background:var(--peach);color:#705747;border-radius:10px;padding:9px 12px;margin:12px 0;font-size:12px}.session-label{font-size:11px;color:var(--muted)}@keyframes appear{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}@media(hover:hover){.answer:enabled:hover{background:#f5f7ef;border-color:#aab9a4}.next:enabled:hover{background:#416151}.secondary:enabled:hover{background:#e2eadb}}@media(max-width:480px){.app{padding:22px 16px calc(20px + env(safe-area-inset-bottom))}.intro{margin-top:25px}.stats{gap:8px;margin-bottom:18px}.stat{padding:12px}.stat-value{font-size:22px}.card{padding:20px 16px;border-radius:23px}.question-head{flex-wrap:wrap}.answer{padding:13px 12px;gap:10px}.answer-text{font-size:14px}.feedback{padding:17px}.offline{font-size:11px}.brand-sub{font-size:11px}.legend{padding:13px}.question-title{font-size:21px}.footer{padding-left:2px;padding-right:2px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
   
     .home-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:0 0 21px}.home-stat{background:#f3f5ed;border-radius:16px;padding:14px 11px}.home-stat:nth-child(2){background:var(--sage)}.home-stat:nth-child(3){background:var(--lavender)}.home-stat span{display:block;font-size:11px;color:#58665b}.home-stat strong{display:block;font-size:24px;margin-top:3px;letter-spacing:-.6px}.home-title{font-size:23px;line-height:1.3;letter-spacing:-.6px;margin:0 0 17px}.learning-label{font-size:12px;color:var(--muted);margin:10px 0 6px}.home .track{margin:8px 0 18px}.home-hint{font-size:13px;color:#526753;line-height:1.6;margin:0 0 17px}.mode-card{border:1px solid var(--line);border-radius:17px;padding:16px;margin-top:12px;background:#fafbf6}.mode-card.recommended{background:#edf3e7;border-color:#cddac2}.mode-card h3{font-size:16px;line-height:1.35;margin:0 0 6px}.mode-card p{font-size:12px;color:var(--muted);margin:0 0 12px;line-height:1.65}.mode-card .next{min-height:51px;font-size:14px}.tag{font-size:10px;color:#506345;background:#dce9d2;border-radius:8px;padding:4px 8px;display:inline-block;margin-bottom:8px;font-weight:650}.home-help{font-size:12px;color:#56665b;margin-top:19px}.home-help summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:650}.home-help ul{padding-left:20px;margin:5px 0 12px;line-height:1.8}.home-help p{line-height:1.7}.resume{margin-bottom:16px;background:var(--lavender);border:1px solid #d7cdea;color:#584676}.quiz-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 13px}.home-button{border:1px solid #dfe4da;background:#fffefa;color:#56664f;border-radius:12px;padding:10px 13px;min-height:44px;font-size:12px}.mode-label{font-size:12px;color:var(--muted);text-align:right}.reason{font-size:11px;font-weight:650;color:#6b775d;margin:12px 0 3px}.guess-label{display:flex;align-items:flex-start;gap:10px;margin:0 0 14px;padding:12px 13px;border-radius:13px;background:#f8f1e8;font-size:13px;min-height:50px;cursor:pointer;color:#725d42}.guess-label input{width:20px;height:20px;flex:0 0 20px;accent-color:#84653f;margin:1px 0 0}.guess-label small{font-size:11px;color:#786d5c;display:block;line-height:1.45;margin-top:2px}.statements{margin:0;padding-left:22px}.statements li{margin:8px 0 13px;line-height:1.65}.statements li::marker{font-weight:750}.schedule-note{padding:13px 15px;border-radius:12px;background:var(--lavender);color:#5d4a7b;font-size:12px!important}.source-list li{margin-bottom:6px}.sources{overflow-wrap:anywhere}.recovery{font-size:12px;margin:10px 0;border-radius:12px;padding:12px;background:var(--peach)}@media(max-width:360px){.home-stat strong{font-size:21px}.home-stat span{font-size:10px}.book-number{font-size:10px}.home .card{padding:16px}.home-stat{padding:12px 8px}.offline{font-size:10px}.brand-name{font-size:19px}}
-  </style>
+  
+.subject-tabs{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:6px;background:#eae9e1;border-radius:18px;margin:23px 0 10px}.subject-tab{min-height:56px;border:0;border-radius:13px;background:transparent;color:#56635b;font-size:14px;font-weight:700;padding:10px 8px;line-height:1.3}.subject-tab[aria-selected="true"]{background:var(--paper);color:#344e43;box-shadow:0 2px 8px #32463712}.subject-tab small{display:block;font-weight:500;font-size:11px;margin-top:4px;color:var(--muted)}.subject-context{font-size:12px;color:var(--muted);margin:0 3px 17px;line-height:1.65}.subject-tabs+.intro{margin-top:20px}.book-number{text-align:right;overflow-wrap:anywhere}.brand-name{font-size:19px}@media(max-width:360px){.brand-name{font-size:17px}.offline{font-size:10px}.subject-tab{font-size:13px}}
+</style>
 </head>
 <body>
 <main class="app">
   <header class="brand">
     <div class="brand-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M4 6.5c3.4-1.2 6.7-.7 10 1.6 3.3-2.3 6.6-2.8 10-1.6v16c-3.4-1.2-6.7-.7-10 1.6-3.3-2.3-6.6-2.8-10-1.6v-16Z" stroke="#56765e" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 8v16M7.5 11l3 .9M7.5 15l3 .9M17.5 12l3-.9M17.5 16l3-.9" stroke="#56765e" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-    <div><div class="brand-name">Somatologie</div><div class="brand-sub">Malý krok, velké pochopení.</div></div>
+    <div><div class="brand-name">Kvíz pro Markét</div><div class="brand-sub">Malý krok, velké pochopení.</div></div>
     <span class="offline">630 otázek</span>
   </header>
 
+
+  <div class="subject-tabs" role="tablist" aria-label="Vyber předmět">
+    <button type="button" id="tab-somatologie" class="subject-tab" role="tab" aria-selected="true" aria-controls="subjectPanel" tabindex="0">Somatologie<small>630 otázek</small></button>
+    <button type="button" id="tab-biologie" class="subject-tab" role="tab" aria-selected="false" aria-controls="subjectPanel" tabindex="-1">Biologie<small>50 otázek</small></button>
+  </div>
+  <div id="subjectPanel" role="tabpanel" aria-labelledby="tab-somatologie">
+  <p id="subjectContext" class="subject-context"></p>
   <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">630 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
   <div id="storageNotice" class="toast" hidden>Prohlížeč nepovolil ukládání. Test funguje, ale po zavření se průběh neobnoví.</div>
   <div id="recoveryNotice" class="recovery" hidden>Uložený pokrok nebylo možné načíst. Začínáme s novým přehledem.</div>
@@ -33,7 +42,7 @@
     <button class="next resume" id="resume" hidden>Pokračovat v kole</button>
     <div class="mode-card recommended"><span class="tag">Doporučený režim</span><h3>Chytré procvičování</h3><p>Krátké kolo do 10 odpovědí. Přednost mají chyby a tipy, pak otázky k opakování a nové. Zvládnuté odpočívají do svého termínu.</p><button class="next" id="smartStart">Začít chytré kolo</button></div>
     <div class="mode-card"><h3>Jen chyby a tipy <span class="pill" id="weakCount">0</span></h3><p id="weakHint"></p><button class="next secondary" id="weakStart">Procvičit slabší otázky</button></div>
-    <div class="mode-card"><h3>Test všech 630</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
+    <div class="mode-card"><h3 id="allTitle">Test všech 630</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
     <details class="home-help"><summary>Jak funguje chytré opakování?</summary><ul><li><strong>Chyba nebo tip:</strong> otázka se vrátí po alespoň třech jiných odpovědích v témže chytrém kole, jinak přibližně za 10 minut.</li><li><strong>Správně a bez tipu:</strong> termíny se postupně prodlužují na 1, 3, 7, 14 a 30 dní od příslušné odpovědi.</li><li><strong>Správně před termínem:</strong> procvičení se počítá do výsledku, ale samo neposune otázku na vyšší úroveň.</li><li><strong>Tři úspěchy s odstupem:</strong> otázka se označí jako zvládnutá. Nezmizí navždy; po termínu se znovu ověří.</li><li><strong>Další chyba:</strong> otázka se vrátí mezi ty k častému procvičení.</li></ul><p>Jednotlivé otázky se v chytrém kole mohou zopakovat. Skóre proto počítá odpovědi, zatímco horní přehled počítá různé otázky.</p><p>Pokrok se ukládá pouze v tomto prohlížeči a na této webové adrese. Telefon a počítač mají samostatný přehled. Režim tipování označ před odpovědí.</p></details>
   </section>
   <div class="quiz-toolbar" id="quizToolbar" hidden><button class="home-button" id="homeButton">← Přehled</button><span class="mode-label" id="modeLabel"></span></div>
@@ -53,13 +62,14 @@
   </section>
   <section class="card" id="results" aria-label="Výsledek kola" hidden></section>
   <footer class="footer"><p id="saveStatus">Pokrok se ukládá v tomto prohlížeči. Bez účtu a registrace.</p>
-    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 630 otázek v pořadí dokumentu: kapitolu I, otázky 1–45 (v aplikaci 1–45), kapitolu II, otázky 1–28 (46–73), kapitolu III, otázky 1–6 (74–79), kapitolu IV.a, otázky 1–29 (80–108), kapitolu IV.b, otázky 1–33 (109–141), kapitolu V, otázky 1–60 (142–201), kapitolu VI, otázky 1–36 (202–237), kapitolu VII, otázky 1–34 (238–271), kapitolu VIII, otázky 1–49 (272–320), kapitolu IX, otázky 1–19 (321–339), kapitolu X, otázky 1–9 (340–348), kapitolu XI, otázky 1–28 (349–376), kapitolu XII, otázky 1–25 (377–401), kapitolu XIII, otázky 1–42 (402–443), kapitolu XIV, otázky 1–58 (444–501), kapitolu XV, otázky 1–25 (502–526), kapitolu XVI, otázky 1–70 (527–596), a kapitolu XVII, otázky 1–34 (597–630).</p><p>Otázky: tištěné strany 8–15, 18–22, 24–25, 28–39, 42–51, 54–59, 62–67, 70–78, 80–84, 86–87, 90–95, 98–111, 114–125, 128–133, 136–156 (PDF strany 5–8, 10–13, 15–20, 22–26, 28–30, 32–34, 36–44, 46–48, 50–56, 58–63, 65–67 a 69–79). Tištěné klíče: strany 15, 22, 25, 32, 39, 51, 60, 67, 78, 84, 87, 95, 102, 111, 125, 133, 148 a 156 (PDF strany 8, 12, 13, 17, 20, 26, 31, 34, 40, 43, 44, 48, 52, 56, 63, 67, 75 a 79). Všech 630 přiřazení správné odpovědi bylo porovnáno s těmito klíči; nově přidané otázky se ověřovaly bez internetových zdrojů. Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
-    <details class="sources"><summary>Uložený pokrok</summary><p>Nové kolo nemaže dřívější znalost otázek. Vymazání dole resetuje celé učení. Vymazáním dat prohlížeče se pokrok také ztratí. Stejná webová adresa po nahrání nové verze pokrok zachová, pokud zůstane zachované úložiště prohlížeče.</p><button class="reset" id="reset">Vymazat celý uložený pokrok</button></details>
+    <details class="sources" id="subjectSources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 630 otázek v pořadí dokumentu: kapitolu I, otázky 1–45 (v aplikaci 1–45), kapitolu II, otázky 1–28 (46–73), kapitolu III, otázky 1–6 (74–79), kapitolu IV.a, otázky 1–29 (80–108), kapitolu IV.b, otázky 1–33 (109–141), kapitolu V, otázky 1–60 (142–201), kapitolu VI, otázky 1–36 (202–237), kapitolu VII, otázky 1–34 (238–271), kapitolu VIII, otázky 1–49 (272–320), kapitolu IX, otázky 1–19 (321–339), kapitolu X, otázky 1–9 (340–348), kapitolu XI, otázky 1–28 (349–376), kapitolu XII, otázky 1–25 (377–401), kapitolu XIII, otázky 1–42 (402–443), kapitolu XIV, otázky 1–58 (444–501), kapitolu XV, otázky 1–25 (502–526), kapitolu XVI, otázky 1–70 (527–596), a kapitolu XVII, otázky 1–34 (597–630).</p><p>Otázky: tištěné strany 8–15, 18–22, 24–25, 28–39, 42–51, 54–59, 62–67, 70–78, 80–84, 86–87, 90–95, 98–111, 114–125, 128–133, 136–156 (PDF strany 5–8, 10–13, 15–20, 22–26, 28–30, 32–34, 36–44, 46–48, 50–56, 58–63, 65–67 a 69–79). Tištěné klíče: strany 15, 22, 25, 32, 39, 51, 60, 67, 78, 84, 87, 95, 102, 111, 125, 133, 148 a 156 (PDF strany 8, 12, 13, 17, 20, 26, 31, 34, 40, 43, 44, 48, 52, 56, 63, 67, 75 a 79). Všech 630 přiřazení správné odpovědi bylo porovnáno s těmito klíči; nově přidané otázky se ověřovaly bez internetových zdrojů. Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
+    <details class="sources"><summary>Uložený pokrok</summary><p>Nové kolo nemaže dřívější znalost otázek. Vymazání dole resetuje pouze právě vybraný předmět. Vymazáním dat prohlížeče se pokrok také ztratí. Stejná webová adresa po nahrání nové verze pokrok zachová, pokud zůstane zachované úložiště prohlížeče.</p><button class="reset" id="reset">Vymazat pokrok tohoto předmětu</button></details>
   </footer>
+  </div>
 </main>
 <script>
 'use strict';
-const QUESTIONS = [
+const SOMATOLOGY_QUESTIONS = [
   {
     id:1,category:'Biologické obory',
     question:'Přiřaďte odpovídající náplň jednotlivým biologickým vědním oborům:',
@@ -179,7 +189,7 @@ const QUESTIONS = [
   }
 ];
 
-QUESTIONS.push(...[
+SOMATOLOGY_QUESTIONS.push(...[
   {
     "id": 11,
     "category": "Člověk a antropologie",
@@ -14187,14 +14197,1076 @@ QUESTIONS.push(...[
     "memory": "Dospívání začíná pubertálními změnami; věkové i terminologické hranice mají rozptyl."
   }
 ]);
+const BIOLOGY_QUESTIONS = [
+  {
+    "id": 1,
+    "category": "Základy biologie",
+    "bookRef": "str. 15",
+    "sourcePages": "15",
+    "question": "Co především zkoumá anatomie?",
+    "options": [
+      "Pouze vztahy organismů k prostředí",
+      "Stavbu těla a jeho částí",
+      "Činnost orgánů bez popisu jejich stavby",
+      "Pouze dědičnost krevních skupin"
+    ],
+    "answer": 1,
+    "title": "Anatomie je mapa těla",
+    "paragraphs": [
+      "Anatomie popisuje, z čeho je tělo sestavené a jak jsou jeho části uspořádané. Patří sem například stavba srdce a poloha jeho dutin.",
+      "Představ si plán domu: ukazuje místnosti a jejich propojení. Podobně anatomie ukazuje orgány a jejich vzájemné vztahy.",
+      "Otázku, jak srdce čerpá krev, řeší hlavně fyziologie. Stavba a funkce spolu ale souvisejí, takže se oba obory doplňují."
+    ],
+    "memory": "Anatomie = jak je tělo postavené."
+  },
+  {
+    "id": 2,
+    "category": "Základy biologie",
+    "bookRef": "str. 15",
+    "sourcePages": "15",
+    "question": "Jak jdou po sobě základní stupně organizace lidského těla od nejmenšího?",
+    "options": [
+      "Tkáně → buňky → orgány → organismus → soustavy",
+      "Orgán → tkáň → buňka → soustava → organismus",
+      "Buňka → orgán → tkáň → organismus → soustava",
+      "Buňka → tkáň → orgán → orgánová soustava → organismus"
+    ],
+    "answer": 3,
+    "title": "Od buněk k celému člověku",
+    "paragraphs": [
+      "Buňky se sdružují do tkání. Různé tkáně vytvářejí orgán a spolupracující orgány tvoří soustavu. Soustavy společně tvoří organismus.",
+      "Je to jako stavebnice: malé díly tvoří větší celky a ty se propojí do funkčního modelu. Vyšší celek závisí na spolupráci menších částí.",
+      "Orgán není menší než tkáň. Například plíce obsahují více tkání a patří do dýchací soustavy."
+    ],
+    "memory": "Buňka, tkáň, orgán, soustava, organismus."
+  },
+  {
+    "id": 3,
+    "category": "Základy biologie",
+    "bookRef": "str. 16",
+    "sourcePages": "16",
+    "question": "Co nejlépe vystihuje homeostázu?",
+    "options": [
+      "Zvětšování každé odchylky od běžné hodnoty",
+      "Udržování relativně stálého vnitřního prostředí",
+      "Úplné zastavení látkové přeměny",
+      "Neměnnost všech tělesných hodnot za každé situace"
+    ],
+    "answer": 1,
+    "title": "Stabilita díky průběžným úpravám",
+    "paragraphs": [
+      "Homeostáza znamená regulované udržování vnitřních podmínek v přiměřeném rozmezí. Tělo přitom stále spotřebovává energii a reaguje na změny.",
+      "Podobně lednice udržuje vhodnou teplotu tím, že podle potřeby zapíná a vypíná chlazení. Stabilní výsledek vzniká průběžnou činností.",
+      "Nejde o dokonale neměnná čísla ani o nečinnost. Hodnoty mohou přirozeně kolísat, podstatné je jejich řízení."
+    ],
+    "memory": "Homeostáza = udržovaný vnitřní pořádek."
+  },
+  {
+    "id": 4,
+    "category": "Základy biologie",
+    "bookRef": "str. 16",
+    "sourcePages": "16",
+    "question": "Jak působí negativní zpětná vazba při regulaci?",
+    "options": [
+      "Regulace ignoruje skutečnou hodnotu",
+      "Znamená úplné vypnutí všech tělesných funkcí",
+      "Odezva působí proti vzniklé odchylce",
+      "Odezva vždy zvětšuje původní odchylku"
+    ],
+    "answer": 2,
+    "title": "Odchylka spustí opačnou reakci",
+    "paragraphs": [
+      "Negativní zpětná vazba tlumí změnu, která ji vyvolala. Pomáhá tak držet řízenou veličinu poblíž vhodné hodnoty.",
+      "Když termostat zjistí příliš nízkou teplotu, zapne topení. Výsledek působí proti poklesu teploty, nikoli v jeho směru.",
+      "Slovo negativní zde neznamená škodlivý. Popisuje opačný směr odpovědi vůči odchylce."
+    ],
+    "memory": "Negativní vazba odchylku brzdí."
+  },
+  {
+    "id": 5,
+    "category": "Tělesné soustavy",
+    "bookRef": "str. 17",
+    "sourcePages": "17",
+    "question": "Které dvě soustavy především koordinují činnost ostatních soustav?",
+    "options": [
+      "Pouze kostra a klouby",
+      "Trávicí soustava a zubní sklovina",
+      "Pouze dýchací a rozmnožovací soustava",
+      "Nervová soustava a soustava žláz s vnitřní sekrecí"
+    ],
+    "answer": 3,
+    "title": "Tělo potřebuje řízení i spolupráci",
+    "paragraphs": [
+      "Nervová soustava a endokrinní soustava zajišťují řízení a koordinaci. Díky tomu nejsou orgány jen samostatné jednotky bez společného směru.",
+      "Představ si síť pokynů a zpráv mezi jednotlivými pracovišti. Nervové signály a hormony pomáhají sladit činnost celého těla.",
+      "Kostra poskytuje oporu a dýchací soustava vyměňuje plyny. To jsou důležité úkoly, ale nejde o hlavní dvojici řídicích soustav."
+    ],
+    "memory": "Koordinace = nervy a hormony."
+  },
+  {
+    "id": 6,
+    "category": "Pojivové tkáně",
+    "bookRef": "str. 18",
+    "sourcePages": "18",
+    "question": "Co tvoří pasivní část pohybového aparátu?",
+    "options": [
+      "Kostra",
+      "Kosterní svaly při stahu",
+      "Mozková kůra",
+      "Svalová kontraktilní bílkovina"
+    ],
+    "answer": 0,
+    "title": "Kostra dává pohybu oporu",
+    "paragraphs": [
+      "Kostra představuje pasivní pohybový aparát. Sama se aktivně nestahuje, ale poskytuje pevnou oporu pro působení svalů.",
+      "Kosti fungují podobně jako páky. Sval dodá tah a kloub dovolí, aby se kost vůči jiné kosti pohnula.",
+      "Pasivní neznamená, že kost je mrtvá tkáň. Označuje její mechanickou úlohu v pohybu, nikoli nepřítomnost metabolismu."
+    ],
+    "memory": "Kosti jsou páky, svaly je táhnou."
+  },
+  {
+    "id": 7,
+    "category": "Pojivové tkáně",
+    "bookRef": "str. 18",
+    "sourcePages": "18",
+    "question": "Která trojice obsahuje pojivové tkáně opěrné soustavy?",
+    "options": [
+      "Krevní destička, neuron a svalové vlákno",
+      "Vazivo, chrupavka a kost",
+      "Epitel, neuron a sítnice",
+      "Svalovina, pokožka a nerv"
+    ],
+    "answer": 1,
+    "title": "Různá pevnost, společný základ",
+    "paragraphs": [
+      "Vazivo, chrupavka a kost patří mezi pojivové tkáně. Liší se hlavně vlastnostmi mezibuněčné hmoty a tím i mechanickým chováním.",
+      "Představ si různé stavební materiály: jeden dobře přenáší tah, jiný pruží a další je pevně mineralizovaný. Každý se hodí na jiný úkol.",
+      "Epitel a svalovina jsou jiné základní typy tkání. Neuron je navíc jednotlivá nervová buňka, nikoli název pojivové tkáně."
+    ],
+    "memory": "Vazivo, chrupavka, kost = opěrná pojiva."
+  },
+  {
+    "id": 8,
+    "category": "Pojivové tkáně",
+    "bookRef": "str. 18",
+    "sourcePages": "18",
+    "question": "Jaká je hlavní úloha vazů v pohybové soustavě?",
+    "options": [
+      "Vytvářet červené krvinky",
+      "Nahrazovat všechny kloubní chrupavky",
+      "Spojovat kosti a pomáhat stabilizovat jejich spojení",
+      "Připojovat svalová bříška přímo k pokožce"
+    ],
+    "answer": 2,
+    "title": "Vaz drží kost u kosti",
+    "paragraphs": [
+      "Vazy jsou pevné vazivové struktury, které spojují kosti. Pomáhají udržet správné vztahy mezi kostmi a omezují nežádoucí pohyb.",
+      "Představ si zpevňující popruhy kolem spoje. Umožní potřebný pohyb, ale brání tomu, aby se části rozjely mimo vhodný rozsah.",
+      "Se šlachou se vaz snadno zamění. Šlacha typicky přenáší sílu ze svalu na kost, zatímco vaz propojuje kosti."
+    ],
+    "memory": "Vaz váže kost ke kosti."
+  },
+  {
+    "id": 9,
+    "category": "Pojivové tkáně",
+    "bookRef": "str. 18",
+    "sourcePages": "18",
+    "question": "Co typicky spojuje šlacha?",
+    "options": [
+      "Dvě sousední nervové buňky",
+      "Pouze dvě chrupavky v uchu",
+      "Kostní dřeň s krevní destičkou",
+      "Sval s kostí"
+    ],
+    "answer": 3,
+    "title": "Šlacha přenáší svalový tah",
+    "paragraphs": [
+      "Šlacha je vazivové spojení, kterým se sval upíná ke kosti. Při svalovém stahu přenese tah na kost.",
+      "Je jako pevné lano mezi motorem a pákou. Sval vytvoří sílu, šlacha ji přenese a kost se může pohnout v kloubu.",
+      "Šlacha se sama nestahuje jako svalové bříško. Její hlavní úloha je přenos tahu, ne aktivní výroba pohybu."
+    ],
+    "memory": "Šlacha = lano mezi svalem a kostí."
+  },
+  {
+    "id": 10,
+    "category": "Pojivové tkáně",
+    "bookRef": "str. 18",
+    "sourcePages": "18",
+    "question": "Co je charakteristické pro pojivové tkáně?",
+    "options": [
+      "Buňky vytvářejí významné množství mezibuněčné hmoty",
+      "Jsou tvořeny pouze nervovými vlákny",
+      "Nemají žádnou hmotu mimo buňky",
+      "Vždy mají stejnou tvrdost jako kost"
+    ],
+    "answer": 0,
+    "title": "Důležitý je i prostor mezi buňkami",
+    "paragraphs": [
+      "V pojivech nejsou podstatné jen buňky, ale také hmota, kterou vytvářejí kolem sebe. Ta obsahuje základní hmotu a vlákna.",
+      "Připomíná to stavbu, kde o pevnosti nerozhodují jen pracovníci, ale i materiál, který ukládají. Vlastnosti okolní hmoty určují chování celé tkáně.",
+      "Mezibuněčná hmota není prázdné místo. Podle jejího složení je pojivo měkké, pružné nebo tvrdé."
+    ],
+    "memory": "Pojivo poznáš i podle toho, co je mezi buňkami."
+  },
+  {
+    "id": 11,
+    "category": "Pojivové tkáně",
+    "bookRef": "str. 19",
+    "sourcePages": "19",
+    "question": "Která vlákna poskytují pojivu především pevnost v tahu?",
+    "options": [
+      "Svalové myofibrily v mezibuněčné hmotě",
+      "Kolagenní vlákna",
+      "Elastická vlákna jako jediný nositel pevnosti",
+      "Nervová vlákna"
+    ],
+    "answer": 1,
+    "title": "Kolagen zpevňuje",
+    "paragraphs": [
+      "Kolagenní vlákna jsou pevnou vláknitou složkou pojivové hmoty. Pomáhají tkáni odolávat tahu.",
+      "Představ si výztužná lana v materiálu. Sama neurčují všechny jeho vlastnosti, ale výrazně přispívají k jeho mechanické odolnosti.",
+      "Elastická vlákna se uplatňují především v pružnosti. Nervová vlákna vedou signály a myofibrily jsou stažlivé struktury svalových buněk."
+    ],
+    "memory": "Kolagen = pevná výztuž."
+  },
+  {
+    "id": 12,
+    "category": "Pojivové tkáně",
+    "bookRef": "str. 19",
+    "sourcePages": "19",
+    "question": "S čím souvisí elastická vlákna pojiva především?",
+    "options": [
+      "S mineralizací jako jediným zdrojem tvrdosti",
+      "S vedením vzruchu v neuronu",
+      "S pružností a návratem po deformaci",
+      "S tvorbou červených krvinek"
+    ],
+    "answer": 2,
+    "title": "Elastin dovoluje návrat",
+    "paragraphs": [
+      "Elastická vlákna přispívají k pružnosti tkáně. Po natažení jí pomáhají vracet se k původnímu tvaru.",
+      "Připomínají gumičku v látce. Kolagenní výztuž a pružná vlákna mohou v jednom pojivu působit společně.",
+      "Pružnost není totéž jako tvrdost ani aktivní svalový stah. Návrat pružného materiálu nevyžaduje stejný mechanismus jako kontrakce svalu."
+    ],
+    "memory": "Elastin si spoj s elastickou gumičkou."
+  },
+  {
+    "id": 13,
+    "category": "Stavba kostí",
+    "bookRef": "str. 19",
+    "sourcePages": "19",
+    "question": "Které tři hlavní složky popisuje učebnice u kosti jako orgánu?",
+    "options": [
+      "Pouze kloubní tekutina, šlacha a pokožka",
+      "Neuron, mícha a mozková kůra",
+      "Svalové bříško, povázka a šlacha",
+      "Okostice, vlastní kostní tkáň a kostní dřeň"
+    ],
+    "answer": 3,
+    "title": "Kost jako orgán má více částí",
+    "paragraphs": [
+      "Kost není jen tvrdá hmota. Její základní popis zahrnuje povrchovou okostici, vlastní kostní tkáň a kostní dřeň.",
+      "Podobně jako dům má obal, nosnou konstrukci a vnitřní prostor, má i kost několik součástí s odlišnými úkoly.",
+      "Kostní dřeň není mícha. Dřeň se nachází v kostech, zatímco mícha je součást nervové soustavy uložená v páteřním kanálu."
+    ],
+    "memory": "Kost = obal, kostní tkáň, dřeň."
+  },
+  {
+    "id": 14,
+    "category": "Stavba kostí",
+    "bookRef": "str. 19",
+    "sourcePages": "19",
+    "question": "Které buňky vytvářejí novou kostní mezibuněčnou hmotu?",
+    "options": [
+      "Osteoblasty",
+      "Erytrocyty",
+      "Neurony",
+      "Krevní destičky"
+    ],
+    "answer": 0,
+    "title": "Osteoblast je stavitel",
+    "paragraphs": [
+      "Osteoblasty tvoří novou kostní hmotu. Jsou důležité při růstu i přestavbě kosti.",
+      "Představ si stavební četu, která ukládá materiál. Kost se průběžně obnovuje, takže podobné stavební procesy nejsou omezené jen na dětství.",
+      "Červené krvinky přenášejí dýchací plyny, neurony vedou signály a destičky se podílejí na zástavě krvácení. Novou kostní hmotu nevytvářejí."
+    ],
+    "memory": "OsteoBLAST = kostní stavitel."
+  },
+  {
+    "id": 15,
+    "category": "Stavba kostí",
+    "bookRef": "str. 20",
+    "sourcePages": "20",
+    "question": "Jak se nazývají zralé kostní buňky uložené v komůrkách kostní hmoty?",
+    "options": [
+      "Spermie",
+      "Osteocyty",
+      "Chondrocyty",
+      "Erytrocyty"
+    ],
+    "answer": 1,
+    "title": "Osteocyt žije uvnitř kostní hmoty",
+    "paragraphs": [
+      "Zralé kostní buňky se nazývají osteocyty. Leží v drobných komůrkách mineralizované mezibuněčné hmoty.",
+      "Tvrdý materiál kolem nich neznamená, že by kost byla bez života. Kostní buňky mají výživu a vzájemná propojení drobnými kanálky.",
+      "Chondrocyty jsou buňky chrupavky. Podobnost názvů může mást, ale předpona osteo odkazuje na kost."
+    ],
+    "memory": "Osteocyt = buňka kosti, chondrocyt = buňka chrupavky."
+  },
+  {
+    "id": 16,
+    "category": "Stavba kostí",
+    "bookRef": "str. 20",
+    "sourcePages": "20",
+    "question": "Která složka kostní hmoty přispívá především k její tvrdosti?",
+    "options": [
+      "Samotná tuková náplň žluté dřeně",
+      "Nervová zakončení okostice",
+      "Anorganické minerální soli, zejména vápenaté",
+      "Pouze voda bez rozpuštěných látek"
+    ],
+    "answer": 2,
+    "title": "Minerály dávají kosti tvrdost",
+    "paragraphs": [
+      "Kost obsahuje organickou i anorganickou složku. Minerální soli uložené v její hmotě se výrazně podílejí na tvrdosti.",
+      "Představ si vyztužený materiál: minerální část dává tvrdost a organická část přispívá k houževnatosti. Potřebná je jejich kombinace.",
+      "Tvrdost sama nezaručuje odolnost proti každému poškození. Materiál může být tvrdý a současně křehký."
+    ],
+    "memory": "Minerály tvrdí, kolagen zpevňuje v tahu."
+  },
+  {
+    "id": 17,
+    "category": "Stavba kostí",
+    "bookRef": "str. 20",
+    "sourcePages": "20",
+    "question": "Kde je uložena převážná většina tělesného vápníku?",
+    "options": [
+      "Volně ve vzduchu v plicích",
+      "Pouze v žaludeční šťávě",
+      "V nervových vzruších bez vazby na tkáně",
+      "V kostech"
+    ],
+    "answer": 3,
+    "title": "Kostra je také minerální zásobárna",
+    "paragraphs": [
+      "Kosti představují hlavní zásobárnu vápníku v těle. Učebnice uvádí přibližně 99 % tělesného vápníku.",
+      "Kostra tak neslouží jen jako nosná konstrukce. Je zároveň velkým skladem minerálů, který souvisí s celkovým hospodařením organismu.",
+      "Vápník má důležité funkce i mimo kost, například při svalové činnosti. To ale neznamená, že by se tam nacházela většina jeho celkového množství."
+    ],
+    "memory": "Největší sklad vápníku = kostra."
+  },
+  {
+    "id": 18,
+    "category": "Stavba kostí",
+    "bookRef": "str. 20",
+    "sourcePages": "20",
+    "question": "Co je diafýza dlouhé kosti?",
+    "options": [
+      "Střední, zpravidla trubicovitý úsek",
+      "Pouze chrupavka na kloubní ploše",
+      "Jeden z rozšířených konců kosti",
+      "Vaz spojující dvě sousední kosti"
+    ],
+    "answer": 0,
+    "title": "Diafýza je tělo dlouhé kosti",
+    "paragraphs": [
+      "Diafýza označuje střední část dlouhé kosti. Rozšířené konce se nazývají epifýzy.",
+      "U dlouhé kosti si představ trubici s rozšířenými konci. Trubicovitá stavba spojuje mechanickou odolnost s úsporou materiálu.",
+      "Diafýza není šlacha ani kloubní chrupavka. Jde o oblast samotné kosti."
+    ],
+    "memory": "Diafýza = střed, epifýzy = konce."
+  },
+  {
+    "id": 19,
+    "category": "Stavba kostí",
+    "bookRef": "str. 20",
+    "sourcePages": "20",
+    "question": "Co prochází Haversovými kanálky v hutné kostní tkáni?",
+    "options": [
+      "Moč odváděná z ledvin",
+      "Cévy a nervy",
+      "Pouze vzduch z plic",
+      "Šlachy všech okolních svalů"
+    ],
+    "answer": 1,
+    "title": "I tvrdá kost potřebuje zásobování",
+    "paragraphs": [
+      "Haversovy kanálky obsahují cévy a nervy. Kolem nich jsou soustředně uspořádané kostní lamely.",
+      "Představ si obytný blok s centrální trasou pro zásobování. Tvrdá tkáň není neprostupný kus kamene bez potřeb živých buněk.",
+      "Kanálky nejsou dýchací ani močové cesty. Souvisí s vnitřním uspořádáním a zásobováním kostní tkáně."
+    ],
+    "memory": "Haversův kanálek = zásobovací cesta v kosti."
+  },
+  {
+    "id": 20,
+    "category": "Stavba kostí",
+    "bookRef": "str. 20–21",
+    "sourcePages": "20–21",
+    "question": "Jaký je hlavní rozdíl mezi hutnou a houbovitou kostní tkání?",
+    "options": [
+      "Houbovitá je výhradně tuk bez kostní hmoty",
+      "Hutná se vyskytuje jen v lebce a nikde jinde",
+      "Hutná tvoří kompaktní vrstvy, houbovitá prostorovou síť trámců",
+      "Hutná je živá a houbovitá vždy mrtvá"
+    ],
+    "answer": 2,
+    "title": "Dva způsoby uspořádání kostní tkáně",
+    "paragraphs": [
+      "Hutná tkáň tvoří kompaktnější kostní vrstvy. Houbovitá tkáň vytváří prostorovou síť kostních trámců s prostory mezi nimi.",
+      "Je to podobné rozdílu mezi plnější stěnou a promyšlenou příhradovou konstrukcí. Obě mohou přenášet zatížení, ale jiným uspořádáním materiálu.",
+      "Houbovitá kost není houba ani pouhá tuková tkáň. Název popisuje její síťovitou stavbu."
+    ],
+    "memory": "Kompakta = hutná vrstva, spongióza = síť trámců."
+  },
+  {
+    "id": 21,
+    "category": "Stavba kostí",
+    "bookRef": "str. 21",
+    "sourcePages": "21",
+    "question": "Proč je důležité uspořádání trámců houbovité kosti?",
+    "options": [
+      "Slouží výhradně k vedení vzduchu",
+      "Zabraňuje jakékoli přestavbě kosti",
+      "Nahrazuje všechny cévy v těle",
+      "Pomáhá přenášet zatížení ve směrech působících sil"
+    ],
+    "answer": 3,
+    "title": "Trámce nejsou náhodná výplň",
+    "paragraphs": [
+      "Kostní trámce vytvářejí prostorovou síť, jejíž uspořádání souvisí s mechanickým zatížením. Kost se na zatěžování také přestavbou přizpůsobuje.",
+      "Představ si nosníky mostu, které vedou sílu konstrukcí. Vhodné rozmístění materiálu dovolí odolávat zatížení bez vyplnění celého objemu.",
+      "To neznamená, že kost snese libovolnou sílu. Výsledná odolnost závisí i na množství a kvalitě tkáně."
+    ],
+    "memory": "Kostní trámce = nosníky podle zatížení."
+  },
+  {
+    "id": 22,
+    "category": "Kostní dřeň",
+    "bookRef": "str. 21",
+    "sourcePages": "21",
+    "question": "Jaká je hlavní funkce červené kostní dřeně?",
+    "options": [
+      "Tvorba krevních elementů včetně krevních destiček",
+      "Vedení nervových vzruchů z mozku",
+      "Výroba kloubní tekutiny v každém kloubu",
+      "Pouze ukládání vzduchu"
+    ],
+    "answer": 0,
+    "title": "Dřeň je krevní výrobna",
+    "paragraphs": [
+      "V červené kostní dřeni vznikají krevní elementy: červené a bílé krvinky i krevní destičky. Průběžně nahrazují zanikající krevní buňky.",
+      "Představ si nepřetržitou výrobnu zásobující oběh. Krev potřebuje obnovu, takže tvorba nekončí dokončením růstu kostry.",
+      "Červená kostní dřeň se nesmí zaměnit s míchou. Nervová soustava a krvetvorba mají v tomto případě podobně znějící názvy, ale jiné úkoly."
+    ],
+    "memory": "Červená dřeň vyrábí krevní elementy."
+  },
+  {
+    "id": 23,
+    "category": "Kostní dřeň",
+    "bookRef": "str. 21",
+    "sourcePages": "21",
+    "question": "Čím se vyznačuje žlutá kostní dřeň?",
+    "options": [
+      "Vždy vytváří více krvinek než červená dřeň",
+      "Má vysoký podíl tukové tkáně",
+      "Je tvořena pouze nervovými buňkami",
+      "Je to jiné označení pro kloubní chrupavku"
+    ],
+    "answer": 1,
+    "title": "Žlutá dřeň obsahuje hodně tuku",
+    "paragraphs": [
+      "V některých kostech je během života část červené dřeně nahrazována tukovou tkání. Taková dřeň se označuje jako žlutá.",
+      "Barva napovídá odlišné složení. Zatímco červenou dřeň si spoj s krvetvorbou, žlutou si spoj hlavně s tukovou náplní.",
+      "Nejde o tvrdou kostní tkáň ani o míšní nervy. Je to obsah vnitřních kostních prostor s jiným složením než aktivní červená dřeň."
+    ],
+    "memory": "Žlutá dřeň = více tuku."
+  },
+  {
+    "id": 24,
+    "category": "Růst kostí",
+    "bookRef": "str. 21",
+    "sourcePages": "21",
+    "question": "Které tvrzení o okostici je správné?",
+    "options": [
+      "Pokrývá bez výjimky i všechny kloubní plochy",
+      "Je to pouze tuková výplň dutiny dlouhé kosti",
+      "Je to vazivový obal kosti s cévami a nervovými zakončeními",
+      "Je to tekutina uvnitř kloubní dutiny"
+    ],
+    "answer": 2,
+    "title": "Okostice je živý a citlivý obal",
+    "paragraphs": [
+      "Okostice neboli periost pokrývá povrch kosti s výjimkou kloubních ploch. Je bohatě zásobena cévami a obsahuje nervová zakončení.",
+      "Představ si obal propojený se zásobováním i citlivostí. Proto může poškození v této oblasti vyvolávat výraznou bolest.",
+      "Na kloubních plochách se nachází kloubní chrupavka. Okostice a chrupavka mají odlišnou stavbu i funkci."
+    ],
+    "memory": "Periost = okostice, citlivý obal kosti."
+  },
+  {
+    "id": 25,
+    "category": "Růst kostí",
+    "bookRef": "str. 21",
+    "sourcePages": "21",
+    "question": "Kde probíhá růst dlouhé kosti do délky?",
+    "options": [
+      "Pouze na povrchu kloubní tekutiny",
+      "Uvnitř žluté dřeně tvorbou tukových buněk",
+      "Pouze ve šlaše mimo kost",
+      "V oblasti růstových chrupavek mezi střední částí a konci kosti"
+    ],
+    "answer": 3,
+    "title": "Délku přidává růstová chrupavka",
+    "paragraphs": [
+      "Dlouhá kost roste do délky v oblastech růstových chrupavek. Nově vznikající chrupavka je postupně nahrazována kostní tkání.",
+      "Představ si posouvající se stavební pás. Na jedné straně přibývá chrupavka, na druhé se vytváří kost, takže se kost prodlužuje.",
+      "Po uzavření růstových plotének už běžný růst kosti do délky tímto způsobem nepokračuje. Nelze ho zaměnit s růstem do šířky."
+    ],
+    "memory": "Do délky roste kost přes růstovou chrupavku."
+  },
+  {
+    "id": 26,
+    "category": "Růst kostí",
+    "bookRef": "str. 21",
+    "sourcePages": "21",
+    "question": "Jak kost především roste do šířky?",
+    "options": [
+      "Přidáváním nové kostní tkáně z hlubších vrstev okostice",
+      "Prodlužováním kloubní tekutiny",
+      "Přeměnou nervů na tuk",
+      "Posouváním celé epifýzy bez tvorby tkáně"
+    ],
+    "answer": 0,
+    "title": "Šířka přibývá na povrchu",
+    "paragraphs": [
+      "Při růstu do šířky přibývají nové vrstvy kostní tkáně na povrchu z oblasti okostice. Současně se kost uvnitř přestavuje.",
+      "Podobá se to zesilování konstrukce přidáním další vrstvy zvenku. Nejde jen o nafouknutí již existující tvrdé hmoty.",
+      "Růstová chrupavka je zásadní pro růst do délky. Otázka se ale ptá na šířku, proto rozhoduje přirůstání na povrchu."
+    ],
+    "memory": "Délka = ploténka, šířka = okostice."
+  },
+  {
+    "id": 27,
+    "category": "Růst kostí",
+    "bookRef": "str. 21",
+    "sourcePages": "21",
+    "question": "Co znamená osifikace?",
+    "options": [
+      "Stažení kosterního svalu",
+      "Tvorbu kostní tkáně neboli kostnatění",
+      "Tvorbu kloubního mazu",
+      "Rozpad všech kostí na tuk"
+    ],
+    "answer": 1,
+    "title": "Osifikace je vznik kosti",
+    "paragraphs": [
+      "Osifikace znamená tvorbu kostní tkáně. V popisu růstu dlouhé kosti jde mimo jiné o nahrazování chrupavčitého podkladu kostí.",
+      "Představ si postupnou náhradu dočasného stavebního podkladu pevnější konstrukcí. Nejde jen o zvětšení téže chrupavky.",
+      "Osifikace není synonymem pro každý růst ani pro svalový stah. Popisuje konkrétně vznik kostní tkáně."
+    ],
+    "memory": "Osifikace = kostnatění."
+  },
+  {
+    "id": 28,
+    "category": "Klouby",
+    "bookRef": "str. 22",
+    "sourcePages": "22",
+    "question": "Co pomáhá snižovat tření v pohyblivém kloubu?",
+    "options": [
+      "Úplná nepřítomnost tekutiny v kloubu",
+      "Nahrazení všech chrupavek svalovými vlákny",
+      "Hladká kloubní chrupavka a kloubní tekutina",
+      "Přímé drhnutí nechráněných kostních povrchů"
+    ],
+    "answer": 2,
+    "title": "Kloub potřebuje hladký pohyb",
+    "paragraphs": [
+      "Kloubní plochy kryje chrupavka a v dutině je kloubní tekutina. Společně pomáhají snižovat tření při pohybu.",
+      "Připomíná to hladký, promazaný spoj stroje. Přirovnání vysvětluje tření, lidský kloub je však živá a složitější struktura.",
+      "Okostice není náhradou kloubní chrupavky. Na styčných kloubních plochách mají jednotlivé tkáně rozdílné úkoly."
+    ],
+    "memory": "Hladká chrupavka a tekutina = menší tření."
+  },
+  {
+    "id": 29,
+    "category": "Klouby",
+    "bookRef": "str. 22",
+    "sourcePages": "22",
+    "question": "Které spojení je příkladem chrupavčitého spojení kostí?",
+    "options": [
+      "Ramenní kloub jako volná kloubní dutina",
+      "Šlacha bicepsu",
+      "Srůst křížových obratlů kostní tkání",
+      "Stydká spona"
+    ],
+    "answer": 3,
+    "title": "Spona spojuje chrupavkou",
+    "paragraphs": [
+      "Stydká spona spojuje přední části pánevních kostí chrupavčitým spojením. Je tedy jiným typem spojení než volný pohyblivý kloub.",
+      "Představ si pevné, ale do jisté míry poddajné propojení. Chrupavka může spojovat kosti, nejen pokrývat kloubní plochy.",
+      "Srůst kostní tkání je kostěné spojení a šlacha připojuje sval. Ramenní kloub je pohyblivé kloubní spojení."
+    ],
+    "memory": "Stydká spona = chrupavčité spojení."
+  },
+  {
+    "id": 30,
+    "category": "Páteř a hrudník",
+    "bookRef": "str. 22",
+    "sourcePages": "22",
+    "question": "Co patří do osové kostry?",
+    "options": [
+      "Lebka, páteř, žebra a hrudní kost",
+      "Pouze kosti ruky a chodidla",
+      "Pouze lopatky a pánevní kosti",
+      "Pažní, vřetenní a loketní kost"
+    ],
+    "answer": 0,
+    "title": "Osová kostra tvoří střed těla",
+    "paragraphs": [
+      "Osovou kostru tvoří lebka, páteř a kostěné části hrudníku. Odlišujeme ji od kostry končetin a jejich pletenců.",
+      "Představ si centrální nosnou osu, ke které se připojují končetiny. Toto rozdělení pomáhá uspořádat velké množství kostí do přehledných celků.",
+      "Lopatka, pánevní kost a kosti volných končetin patří do druhé velké skupiny. Nejde o kosti osové kostry."
+    ],
+    "memory": "Osová = hlava, páteř a hrudník."
+  },
+  {
+    "id": 31,
+    "category": "Páteř a hrudník",
+    "bookRef": "str. 22",
+    "sourcePages": "22",
+    "question": "Kolik krčních obratlů má člověk obvykle?",
+    "options": [
+      "24",
+      "7",
+      "5",
+      "12"
+    ],
+    "answer": 1,
+    "title": "Krční úsek má sedm obratlů",
+    "paragraphs": [
+      "U člověka běžně rozlišujeme sedm krčních obratlů. První dva mají zvláštní stavbu a umožňují pohyby hlavy.",
+      "Páteř se člení na úseky s různým počtem obratlů. Je užitečné učit se je od hlavy směrem dolů jako navazující řadu.",
+      "Dvanáct je obvyklý počet hrudních a pět bederních obratlů. Čísla se tedy vztahují k jiným úsekům."
+    ],
+    "memory": "Krk 7, hrudník 12, bedra 5."
+  },
+  {
+    "id": 32,
+    "category": "Páteř a hrudník",
+    "bookRef": "str. 22",
+    "sourcePages": "22",
+    "question": "Která dvojice správně uvádí obvyklé počty hrudních a bederních obratlů?",
+    "options": [
+      "5 hrudních a 7 bederních",
+      "12 hrudních a 12 bederních",
+      "12 hrudních a 5 bederních",
+      "7 hrudních a 12 bederních"
+    ],
+    "answer": 2,
+    "title": "Jednotlivé úseky mají vlastní počty",
+    "paragraphs": [
+      "Hrudních obratlů je obvykle dvanáct a bederních pět. Na hrudní úsek navazují žebra.",
+      "Představ si páteř jako řadu různých oddílů. Nejen počty, ale také velikost a stavba obratlů odpovídají jejich místu a zatížení.",
+      "Sedm patří krčnímu úseku. Nezaměňuj počet hrudních obratlů s počtem všech obratlů páteře."
+    ],
+    "memory": "Hrudník 12, bedra 5."
+  },
+  {
+    "id": 33,
+    "category": "Páteř a hrudník",
+    "bookRef": "str. 22",
+    "sourcePages": "22",
+    "question": "Kolik párů žeber má člověk obvykle?",
+    "options": [
+      "7 párů",
+      "10 párů",
+      "24 párů",
+      "12 párů"
+    ],
+    "answer": 3,
+    "title": "Dvanáct párů tvoří kostru hrudníku",
+    "paragraphs": [
+      "Běžný počet je dvanáct párů žeber, tedy celkem dvacet čtyři jednotlivých žeber. Spolu s hrudní kostí a obratli tvoří kostru hrudníku.",
+      "Pozor na rozdíl mezi počtem párů a počtem jednotlivých kostí. Právě záměna páru za jednu kost bývá častou chybou.",
+      "Sedm je počet párů pravých žeber. Další žebra mají odlišné přední připojení, ale stále se počítají do celku."
+    ],
+    "memory": "12 párů = 24 žeber."
+  },
+  {
+    "id": 34,
+    "category": "Páteř a hrudník",
+    "bookRef": "str. 22",
+    "sourcePages": "22",
+    "question": "Co charakterizuje pravá žebra?",
+    "options": [
+      "Prvních 7 párů se vlastní chrupavkou připojuje k hrudní kosti",
+      "Jsou to poslední 2 páry bez předního připojení",
+      "Je jich vždy 12 párů a všechna končí volně",
+      "Připojují se jen k bederním obratlům"
+    ],
+    "answer": 0,
+    "title": "Pravá žebra mají vlastní cestu ke sternu",
+    "paragraphs": [
+      "Prvních sedm párů žeber se vlastní chrupavkou připojuje k hrudní kosti. Proto se označují jako pravá.",
+      "Představ si sedm přímých spojek mezi žebry a hrudní kostí. Další tři páry se připojují přes chrupavku výše uložených žeber.",
+      "Poslední dva páry nemají přední připojení k hrudní kosti a nazývají se volná žebra."
+    ],
+    "memory": "7 pravých, 3 nepřímo připojené, 2 volné."
+  },
+  {
+    "id": 35,
+    "category": "Páteř a hrudník",
+    "bookRef": "str. 22",
+    "sourcePages": "22",
+    "question": "Čím se vyznačuje atlas, první krční obratel?",
+    "options": [
+      "Je součástí hrudní kosti",
+      "Má prstencovitý tvar a nese lebku",
+      "Má zub čepovce jako svou hlavní součást",
+      "Je tvořen pěti srostlými bederními obratli"
+    ],
+    "answer": 1,
+    "title": "Atlas je nosič hlavy",
+    "paragraphs": [
+      "Atlas je první krční obratel. Má prstencovitou stavbu a kloubně se spojuje s týlní kostí.",
+      "Jeho český název nosič připomíná úlohu podpory hlavy. Spojení s lebkou dovoluje zejména kývavý pohyb.",
+      "Zub patří druhému krčnímu obratli, čepovci. Atlas se kolem něj při otáčení hlavy pohybuje."
+    ],
+    "memory": "Atlas nese, axis má zub."
+  },
+  {
+    "id": 36,
+    "category": "Páteř a hrudník",
+    "bookRef": "str. 22",
+    "sourcePages": "22",
+    "question": "Jaký význam má zub čepovce?",
+    "options": [
+      "Vyrábí červené krvinky",
+      "Nahrazuje dolní čelist při žvýkání",
+      "Tvoří osu, kolem níž se otáčí atlas s hlavou",
+      "Připojuje žebra k hrudní kosti"
+    ],
+    "answer": 2,
+    "title": "Čepovec pomáhá otáčet hlavou",
+    "paragraphs": [
+      "Zub čepovce je výběžek druhého krčního obratle. Je součástí spojení umožňujícího otáčení atlasu a hlavy.",
+      "Představ si čep v otočném mechanismu. Okolní vazivové struktury pomáhají udržet bezpečné vztahy jednotlivých částí.",
+      "Zub čepovce není zub v ústech. Název zde popisuje tvar kostního výběžku."
+    ],
+    "memory": "Axis = čep pro otáčení hlavy."
+  },
+  {
+    "id": 37,
+    "category": "Páteř a hrudník",
+    "bookRef": "str. 25",
+    "sourcePages": "25",
+    "question": "Co je uloženo v páteřním kanálu?",
+    "options": [
+      "Červená kostní dřeň všech obratlů jako jediný obsah",
+      "Průdušnice",
+      "Jícen",
+      "Mícha"
+    ],
+    "answer": 3,
+    "title": "Páteř chrání míchu",
+    "paragraphs": [
+      "Obratlové otvory navazují na sebe a vytvářejí páteřní kanál. V něm je uložena mícha se svými obaly.",
+      "Představ si ochranný tunel složený z jednotlivých kostěných dílů. Páteř tak současně nese tělo a chrání důležitou nervovou strukturu.",
+      "Kostní dřeň je v prostorech uvnitř kostí. Mícha je nervový orgán a není s kostní dření totožná."
+    ],
+    "memory": "Páteřní kanál chrání míchu."
+  },
+  {
+    "id": 38,
+    "category": "Páteř a hrudník",
+    "bookRef": "str. 25",
+    "sourcePages": "25",
+    "question": "Které zakřivení páteře se označuje jako lordóza?",
+    "options": [
+      "Prohnutí směrem dopředu, typicky krční a bederní",
+      "Vyklenutí směrem dozadu v hrudním úseku",
+      "Každé vybočení páteře do strany",
+      "Pouze srůst křížových obratlů"
+    ],
+    "answer": 0,
+    "title": "Lordóza a kyfóza mají opačný směr",
+    "paragraphs": [
+      "Lordóza je zakřivení dopředu v krční a bederní oblasti. Kyfóza je vyklenutí dozadu v oblasti hrudní a křížové.",
+      "Při pohledu z boku se střídají oblouky, které spolu s ploténkami podporují pružnost páteře. Přirozená páteř proto není rovná tyč.",
+      "Samotné slovo lordóza neznamená nemoc. Problémem může být nepřiměřené zakřivení, nikoli existence běžného oblouku."
+    ],
+    "memory": "Lordóza dopředu, kyfóza dozadu."
+  },
+  {
+    "id": 39,
+    "category": "Lebka",
+    "bookRef": "str. 25",
+    "sourcePages": "25",
+    "question": "Jak se dělí lebka v základním anatomickém popisu?",
+    "options": [
+      "Na zápěstí a záprstí",
+      "Na mozkovou a obličejovou část",
+      "Na krční a bederní část",
+      "Na diafýzu a dvě epifýzy"
+    ],
+    "answer": 1,
+    "title": "Lebka chrání i tvoří obličej",
+    "paragraphs": [
+      "Mozková část lebky vytváří kostěnou ochranu mozku. Obličejová část tvoří podklad obličeje a souvisí například s čelistmi.",
+      "Rozdělení odráží dvě velké úlohy: ochranu mozku a stavbu obličejové oblasti. Jednotlivé části přitom tvoří propojený celek.",
+      "Diafýza a epifýzy popisují dlouhou kost. Krční a bederní jsou úseky páteře, nikoli základní oddíly lebky."
+    ],
+    "memory": "Lebka = mozková a obličejová část."
+  },
+  {
+    "id": 40,
+    "category": "Lebka",
+    "bookRef": "str. 27",
+    "sourcePages": "27",
+    "question": "Kde je uložena hypofýza vzhledem ke kostem lebky?",
+    "options": [
+      "V zubu čepovce",
+      "V hlavici pažní kosti",
+      "V tureckém sedle kosti klínové",
+      "Uvnitř dolní čelisti mezi zuby"
+    ],
+    "answer": 2,
+    "title": "Turecké sedlo je kostěné lůžko",
+    "paragraphs": [
+      "Turecké sedlo je prohlubeň kosti klínové v oblasti lebeční spodiny. Je v něm uložena hypofýza neboli podvěsek mozkový.",
+      "Představ si tvarované lůžko pro malý orgán. Znalost místa propojuje anatomii lebky s endokrinní soustavou.",
+      "Hypofýza není část kosti. Je to žláza, jejíž uložení zde popisujeme pomocí okolní kostěné struktury."
+    ],
+    "memory": "Klínová kost, turecké sedlo, hypofýza."
+  },
+  {
+    "id": 41,
+    "category": "Lebka",
+    "bookRef": "str. 27",
+    "sourcePages": "27",
+    "question": "Která část spánkové kosti chrání sluchové a rovnovážné ústrojí?",
+    "options": [
+      "Zub čepovce",
+      "Mezistydká chrupavka",
+      "Krček stehenní kosti",
+      "Skalní část"
+    ],
+    "answer": 3,
+    "title": "Smyslové ústrojí má pevný obal",
+    "paragraphs": [
+      "Ve skalní části spánkové kosti je uloženo vnitřní sluchové a rovnovážné ústrojí. Jde o oblast lebeční spodiny.",
+      "Citlivé struktury tak mají pevnou kostěnou ochranu. Název skalní pomáhá připomenout výrazně tvrdou kost této oblasti.",
+      "Spánková kost patří k lebce. Čepovec je obratel a krček stehenní kosti patří dolní končetině."
+    ],
+    "memory": "Skalní část = sluch a rovnováha."
+  },
+  {
+    "id": 42,
+    "category": "Lebka",
+    "bookRef": "str. 27",
+    "sourcePages": "27",
+    "question": "Jak je dolní čelist spojena s lebkou?",
+    "options": [
+      "Pohyblivými klouby se spánkovými kostmi",
+      "Je pevně srostlá s oběma lopatkami",
+      "Nemá žádné spojení s dalšími kostmi",
+      "Je součástí prvního krčního obratle"
+    ],
+    "answer": 0,
+    "title": "Čelist potřebuje pohyb",
+    "paragraphs": [
+      "Dolní čelist neboli mandibula se kloubně spojuje se spánkovými kostmi. Toto pohyblivé spojení umožňuje pohyby potřebné například ke žvýkání.",
+      "Pevně srostlá čelist by nemohla otevírat ústa stejným způsobem. Stavba spojení tedy přímo souvisí s jeho funkcí.",
+      "Horní čelist a dolní čelist nejsou jen dva stejné díly. Mají odlišné vztahy k ostatním kostem lebky."
+    ],
+    "memory": "Mandibula se pohybuje v čelistních kloubech."
+  },
+  {
+    "id": 43,
+    "category": "Lebka",
+    "bookRef": "str. 27",
+    "sourcePages": "27",
+    "question": "Která kost je uložena pod dolní čelistí a souvisí se závěsem hrtanu?",
+    "options": [
+      "Čéška",
+      "Jazylka",
+      "Lopatka",
+      "Kost patní"
+    ],
+    "answer": 1,
+    "title": "Jazylka je opěrný bod v oblasti krku",
+    "paragraphs": [
+      "Jazylka je drobná kost pod dolní čelistí. Připojují se k ní svaly a vazy a souvisí se závěsem hrtanu.",
+      "Představ si závěsný a opěrný bod pro měkké struktury krku. Nemusí tvořit velkou kloubní plochu, aby měla důležitý mechanický význam.",
+      "Není to kost jazyka probíhající celou jeho délkou. Ostatní nabízené kosti leží v ramenním pletenci nebo na dolní končetině."
+    ],
+    "memory": "Jazylka leží pod čelistí u hrtanu."
+  },
+  {
+    "id": 44,
+    "category": "Kostra končetin",
+    "bookRef": "str. 27",
+    "sourcePages": "27",
+    "question": "Které kosti tvoří pletenec horní končetiny?",
+    "options": [
+      "Loketní a holenní kost",
+      "Kost patní a hlezenní",
+      "Lopatka a klíční kost",
+      "Pažní a stehenní kost"
+    ],
+    "answer": 2,
+    "title": "Pletenec připojuje horní končetinu",
+    "paragraphs": [
+      "Pletenec horní končetiny tvoří lopatka a klíční kost. Zajišťuje napojení volné končetiny na trup.",
+      "Představ si závěsnou konstrukci pro pohyblivou paži. Její stavba souvisí s velkým rozsahem pohybů horní končetiny.",
+      "Pažní kost už patří volné horní končetině. Vřetenní a loketní kost tvoří předloktí, ne pletenec."
+    ],
+    "memory": "Ramenní pletenec = lopatka a klíční kost."
+  },
+  {
+    "id": 45,
+    "category": "Kostra končetin",
+    "bookRef": "str. 27",
+    "sourcePages": "27",
+    "question": "Z kterých původně samostatných kostí vzniká pánevní kost?",
+    "options": [
+      "Z kosti pažní, loketní a vřetenní",
+      "Ze sedmi krčních obratlů",
+      "Z kosti čelní, temenní a týlní",
+      "Z kosti kyčelní, sedací a stydké"
+    ],
+    "answer": 3,
+    "title": "Jedna pánevní kost vzniká spojením tří",
+    "paragraphs": [
+      "Pánevní kost vzniká srůstem kosti kyčelní, sedací a stydké. V dospělosti tvoří funkčně propojený kostěný celek.",
+      "Představ si tři díly, které se během vývoje spojí v jednu pevnou konstrukci. Ta pomáhá přenášet zatížení mezi trupem a dolní končetinou.",
+      "Pánevní kost není totéž co celá pánev. Pánev je širší celek zahrnující obě pánevní kosti a zadní kostěné části."
+    ],
+    "memory": "Kyčelní + sedací + stydká = pánevní kost."
+  },
+  {
+    "id": 46,
+    "category": "Kostra končetin",
+    "bookRef": "str. 28",
+    "sourcePages": "28",
+    "question": "Která kost předloktí leží na palcové straně?",
+    "options": [
+      "Kost vřetenní neboli radius",
+      "Kost loketní neboli ulna",
+      "Kost pažní neboli humerus",
+      "Kost lýtková neboli fibula"
+    ],
+    "answer": 0,
+    "title": "Radius je na straně palce",
+    "paragraphs": [
+      "V anatomické poloze leží vřetenní kost na palcové straně předloktí. Loketní kost je na straně malíku.",
+      "Názvy stran se uč podle palce a malíku, ne podle toho, zda jde o pravou nebo levou ruku. Tak se vztah nezamění při otočení obrázku.",
+      "Pažní kost tvoří kostru paže. Fibula je lýtková kost na dolní končetině."
+    ],
+    "memory": "Radius u palce, ulna u malíku."
+  },
+  {
+    "id": 47,
+    "category": "Kostra končetin",
+    "bookRef": "str. 28",
+    "sourcePages": "28",
+    "question": "Kolik kostí tvoří běžně zápěstí jedné ruky?",
+    "options": [
+      "14",
+      "8",
+      "5",
+      "7"
+    ],
+    "answer": 1,
+    "title": "Zápěstí má osm drobných kostí",
+    "paragraphs": [
+      "Kostra zápěstí je tvořena osmi drobnými kostmi. Za nimi směrem k prstům následuje pět záprstních kostí.",
+      "Ruku si rozděl na zápěstí, záprstí a články prstů. Každá oblast má jiný počet a jinou stavbu kostí.",
+      "Pět patří záprstním kostem, sedm zánártním kostem nohy. Záměna ruky a chodidla je zde častá."
+    ],
+    "memory": "Zápěstí 8, záprstí 5."
+  },
+  {
+    "id": 48,
+    "category": "Kostra končetin",
+    "bookRef": "str. 28",
+    "sourcePages": "28",
+    "question": "Kolik článků má palec ruky?",
+    "options": [
+      "3",
+      "5",
+      "2",
+      "1"
+    ],
+    "answer": 2,
+    "title": "Palec má o článek méně",
+    "paragraphs": [
+      "Palec má dva články, zatímco každý ze zbývajících čtyř prstů ruky má články tři. Na jedné ruce je tak celkem čtrnáct článků prstů.",
+      "Při počítání můžeš použít vlastní ruku: dva články palce a čtyřikrát tři u ostatních prstů. Záprstní kosti do tohoto počtu nepatří.",
+      "Počet článků neznamená počet všech kostí ruky. Zápěstí a záprstí se počítají zvlášť."
+    ],
+    "memory": "Palec 2, ostatní prsty 3."
+  },
+  {
+    "id": 49,
+    "category": "Kostra končetin",
+    "bookRef": "str. 28–29",
+    "sourcePages": "28–29",
+    "question": "Která kost bérce je silnější a leží na palcové straně?",
+    "options": [
+      "Kost lýtková neboli fibula",
+      "Kost vřetenní neboli radius",
+      "Kost pažní neboli humerus",
+      "Kost holenní neboli tibia"
+    ],
+    "answer": 3,
+    "title": "Tibie je mohutnější kost bérce",
+    "paragraphs": [
+      "Bérec tvoří holenní a lýtková kost. Holenní kost je silnější a leží na vnitřní, palcové straně dolní končetiny.",
+      "Představ si dvě podélné opory bérce s různou mohutností. Výraznou přední hranu holenní kosti si můžeš nahmatat pod kůží.",
+      "Fibula leží na malíkové straně a je štíhlejší. Radius a humerus patří horní končetině."
+    ],
+    "memory": "Tibia u palce, fibula u malíku."
+  },
+  {
+    "id": 50,
+    "category": "Kostra končetin",
+    "bookRef": "str. 29",
+    "sourcePages": "29",
+    "question": "K čemu slouží menisky v kolenním kloubu?",
+    "options": [
+      "Pomáhají vyrovnávat tvarový nesoulad kloubních ploch",
+      "Nahrazují svalový stah při chůzi",
+      "Spojují přímo lebku s atlasem",
+      "Vytvářejí červené krvinky uvnitř kolena"
+    ],
+    "answer": 0,
+    "title": "Menisky přizpůsobují styčné plochy",
+    "paragraphs": [
+      "Menisky jsou chrupavčité destičky v kolenním kloubu. Pomáhají přizpůsobit kontakt nestejně zakřivených kloubních ploch.",
+      "Představ si tvarovanou vložku mezi dvěma povrchy, které by do sebe bez ní nezapadaly tak dobře. Přispívá k rozložení zatížení.",
+      "Meniskus není sval ani kostní dřeň. Sílu pro pohyb vytvářejí svaly, zatímco menisky pomáhají mechanice kloubu."
+    ],
+    "memory": "Menisky = tvarované vložky v koleni."
+  }
+];
+let activeSubject='somatologie';
+let QUESTIONS=SOMATOLOGY_QUESTIONS;
+let BANK_SIZE=QUESTIONS.length;
+let STORAGE_KEY='somatologie-learning-v2';
+let byId=new Map(QUESTIONS.map(q=>[q.id,q]));
+const SUBJECTS={
+ somatologie:{name:'Somatologie',questions:SOMATOLOGY_QUESTIONS,key:'somatologie-learning-v2',context:'630 otázek z původní sady. Hodnocení podle tištěného klíče; upozornění na nepřesnosti najdeš ve vysvětlení.'},
+ biologie:{name:'Biologie',questions:BIOLOGY_QUESTIONS,key:'biologie-learning-v2',context:'Prvních 50 nově vytvořených otázek podle výkladu knihy Biologie člověka, strany 15–29. Každá otázka má právě jednu správnou odpověď.'}
+};
+
 const $ = id => document.getElementById(id);
 const LETTERS = ['A','B','C','D'];
-const BANK_SIZE = QUESTIONS.length;
-const STORAGE_KEY = 'somatologie-learning-v2';
+
+
 const DAY = 86400000;
 const SHORT_DELAY = 10 * 60000;
 const INTERVALS = [0, DAY, 3*DAY, 7*DAY, 14*DAY, 30*DAY];
-const byId = new Map(QUESTIONS.map(q => [q.id,q]));
+
 let storageOK = true;
 let screen = 'home';
 let data;
@@ -14217,6 +15289,7 @@ function validData(d){return d&&d.version===2&&whole(d.turn)&&d.progress&&typeof
 function storageUnavailable(){storageOK=false;$('storageNotice').hidden=false;$('saveStatus').textContent='Ukládání není dostupné. Pokrok vydrží jen do zavření stránky.';}
 function save(){if(!storageOK)return;try{localStorage.setItem(STORAGE_KEY,JSON.stringify(data));}catch(e){storageUnavailable();}}
 function migrateOld(){
+  if(activeSubject!=='somatologie')return null;
   const raw=localStorage.getItem('somatologie-first10-v1');if(!raw)return null;
   let old;try{old=JSON.parse(raw);}catch(e){return null;}
   if(!old||old.version!==1||!old.answers||typeof old.answers!=='object'||Array.isArray(old.answers))return null;
@@ -14285,7 +15358,7 @@ function renderLegend(q){
 }
 function scheduleText(id,guessed,good){const p=progress(id);if(!good||guessed)return 'Vrátí se brzy: v chytrém kole nejdřív po třech jiných odpovědích, jinak '+formatWhen(p.due)+'.';return 'Další plánované opakování '+formatWhen(p.due)+'. '+(p.level>=3?'Opakovaně zvládnutá otázka — vrátí se ke kontrole.':'Jedna správná odpověď nestačí. Ověříme ji znovu s odstupem.');}
 function renderFeedback(q,selected,guessed){
-  const good=selected===q.answer;const status=$('feedbackStatus');status.className='feedback-status '+(good?'good':'bad');status.textContent=good?(guessed?'✓ Správný tip. Ještě si ho ověříme.':'✓ Správně. Pojďme si říct proč.'):'✕ Tentokrát ne. Podle klíče je správně '+LETTERS[q.answer]+'.';$('explanationTitle').textContent=q.title;const explanation=$('explanation');explanation.replaceChildren();
+  const good=selected===q.answer;const status=$('feedbackStatus');status.className='feedback-status '+(good?'good':'bad');status.textContent=good?(guessed?'✓ Správný tip. Ještě si ho ověříme.':'✓ Správně. Pojďme si říct proč.'):'✕ Tentokrát ne. '+(activeSubject==='biologie'?'Správně je ':'Podle klíče je správně ')+LETTERS[q.answer]+'.';$('explanationTitle').textContent=q.title;const explanation=$('explanation');explanation.replaceChildren();
   q.paragraphs.forEach(p=>explanation.append(element('p','',p)));const memory=element('p','memory');memory.append(element('strong','','Jak si to zapamatovat: '),document.createTextNode(q.memory));explanation.append(memory);
   if(q.note){const note=element('p','note');note.append(element('strong','','Pro přesnost: '),document.createTextNode(q.note));explanation.append(note);}
   const sources=[...(q.source?[q.source]:[]),...(q.sources||[])];sources.forEach(source=>{const p=element('p','source-link');const a=element('a','',source.label);a.href=source.url;a.target='_blank';a.rel='noopener noreferrer';p.append(a);explanation.append(p);});explanation.append(element('p','schedule-note',scheduleText(q.id,guessed,good)));$('feedback').hidden=false;
@@ -14295,13 +15368,13 @@ function renderQuestion(focus=false){
   const s=data.session;if(!s){renderHome();return;}if(s.completed){renderResults(focus);return;}setScreen('quiz');const q=byId.get(s.currentId);const hasAnswer=s.currentAnswer!==null;
   $('modeLabel').textContent=modeLabel(s);$('category').textContent=q.category;$('bookNumber').textContent='Č. '+q.id+' / '+BANK_SIZE+' · '+(q.bookRef||'I · otázka '+q.id);$('question').textContent=q.question;$('reason').textContent=reason(q.id);$('hint').textContent=q.terms?'Vyber správnou kombinaci přiřazení.':q.statements?'Vyber hodnocení obou tvrzení.':'Vyber jednu odpověď.';renderLegend(q);
   $('guess').checked=hasAnswer?s.currentGuessed:false;$('guess').disabled=hasAnswer;
-  const root=$('answers');root.replaceChildren();q.options.forEach((text,i)=>{const button=element('button','answer');button.type='button';button.dataset.option=String(i);button.disabled=hasAnswer;button.append(element('span','letter',LETTERS[i]),element('span','answer-text',text));const mark=element('span','answer-mark');mark.setAttribute('aria-hidden','true');button.append(mark);if(hasAnswer&&i===q.answer){button.classList.add('correct');mark.textContent='✓';button.setAttribute('aria-label',LETTERS[i]+': '+text+'. Správně podle klíče'+(i===s.currentAnswer?', tvoje volba.':'.'));}else if(hasAnswer&&i===s.currentAnswer){button.classList.add('wrong');mark.textContent='✕';button.setAttribute('aria-label',LETTERS[i]+': '+text+'. Tvoje odpověď, nesprávně podle klíče.');}button.addEventListener('click',()=>choose(i));root.append(button);});
+  const root=$('answers');root.replaceChildren();q.options.forEach((text,i)=>{const button=element('button','answer');button.type='button';button.dataset.option=String(i);button.disabled=hasAnswer;button.append(element('span','letter',LETTERS[i]),element('span','answer-text',text));const mark=element('span','answer-mark');mark.setAttribute('aria-hidden','true');button.append(mark);if(hasAnswer&&i===q.answer){button.classList.add('correct');mark.textContent='✓';button.setAttribute('aria-label',LETTERS[i]+': '+text+'. Správně'+(activeSubject==='biologie'?'':' podle klíče')+(i===s.currentAnswer?', tvoje volba.':'.'));}else if(hasAnswer&&i===s.currentAnswer){button.classList.add('wrong');mark.textContent='✕';button.setAttribute('aria-label',LETTERS[i]+': '+text+'. Tvoje odpověď, nesprávně'+(activeSubject==='biologie'?'.':' podle klíče.'));}button.addEventListener('click',()=>choose(i));root.append(button);});
   $('feedback').hidden=true;if(hasAnswer)renderFeedback(q,s.currentAnswer,s.currentGuessed);$('next').disabled=!hasAnswer;$('nextText').textContent=s.attempts.length>=s.target?'Zobrazit výsledek':'Další otázka';$('underButton').textContent=hasAnswer?'Vysvětlení si můžeš přečíst v klidu.':'Nejdřív zkus odpovědět. Správný tip označ před volbou.';updateStats();if(focus)$('question').focus({preventScroll:true});
 }
 function choose(selected){
   const s=data.session;if(!s||s.completed||s.currentAnswer!==null||!whole(selected)||selected>3)return;const q=byId.get(s.currentId);const guessed=$('guess').checked;const good=selected===q.answer;const now=Date.now();
   s.currentAnswer=selected;s.currentGuessed=guessed;s.attempts.push({id:q.id,selected,guessed,good,at:now});applyReview(q.id,good,guessed,now);save();renderQuestion();
-  $('announcement').textContent=(good?(guessed?'Správný tip. Otázka se brzy zopakuje.':'Správně.'):'Nesprávně podle klíče. Správná odpověď je '+LETTERS[q.answer]+'.')+' Vysvětlení je pod možnostmi.';$('feedbackStatus').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});$('next').focus({preventScroll:true});
+  $('announcement').textContent=(good?(guessed?'Správný tip. Otázka se brzy zopakuje.':'Správně.'):'Nesprávně. Správná odpověď je '+LETTERS[q.answer]+'.')+' Vysvětlení je pod možnostmi.';$('feedbackStatus').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});$('next').focus({preventScroll:true});
 }
 function nextQuestion(){
   const s=data.session;if(!s||s.completed||s.currentAnswer===null)return;
@@ -14313,7 +15386,7 @@ function renderResults(focus=false){
   const guessed=s.attempts.filter(a=>a.good&&a.guessed).length;box.append(heading,element('p','',s.attempts.length<s.target?'Pro tuto chvíli už není vhodná další otázka. Chytré procvičování pokračuje při dalším termínu.':'Pokrok je uložený. Chyby a tipy se vrátí brzy, zvládnuté otázky dostanou delší odstup.'),element('div','result-score',result.rate+' %'),element('div','result-caption',result.correct+' z '+result.answered+' odpovědí správně'+(guessed?' · z toho '+guessed+' označených jako tip':'')));
   const overview=element('button','next','Zpět na přehled');overview.addEventListener('click',()=>{renderHome();scrollTop();});box.append(overview);
   const weakIds=[...new Set(s.attempts.filter(a=>!a.good||a.guessed).map(a=>a.id))];if(weakIds.length){const retry=element('button','next secondary','Procvičit chyby a tipy');retry.addEventListener('click',()=>start('weak'));box.append(retry);}root.append(box);
-  if(weakIds.length){const mistakes=element('div','mistakes');mistakes.append(element('h3','','K čemu se vrátit'));weakIds.forEach(id=>{const q=byId.get(id);const row=element('div','mistake');row.append(element('strong','','Č. '+id+' · '+q.question),element('span','','Podle klíče: '+LETTERS[q.answer]+' — '+q.options[q.answer]));mistakes.append(row);});root.append(mistakes);}if(focus)heading.focus({preventScroll:true});
+  if(weakIds.length){const mistakes=element('div','mistakes');mistakes.append(element('h3','','K čemu se vrátit'));weakIds.forEach(id=>{const q=byId.get(id);const row=element('div','mistake');row.append(element('strong','','Č. '+id+' · '+q.question),element('span','',(activeSubject==='biologie'?'Správná odpověď: ':'Podle klíče: ')+LETTERS[q.answer]+' — '+q.options[q.answer]));mistakes.append(row);});root.append(mistakes);}if(focus)heading.focus({preventScroll:true});
 }
 function scrollTop(){window.scrollTo({top:0,behavior:'auto'});}
 function abandonToHome(){save();renderHome();scrollTop();}
@@ -14323,16 +15396,53 @@ $('weakStart').addEventListener('click',()=>start('weak'));
 $('resume').addEventListener('click',()=>{renderQuestion(true);scrollTop();});
 $('homeButton').addEventListener('click',abandonToHome);
 $('next').addEventListener('click',nextQuestion);
-$('reset').addEventListener('click',()=>{if(!confirm('Opravdu vymazat celý uložený pokrok všech '+BANK_SIZE+' otázek? Tento krok nejde vrátit.'))return;data=freshData();save();renderHome();scrollTop();});
+$('reset').addEventListener('click',()=>{if(!confirm('Opravdu vymazat pokrok předmětu '+SUBJECTS[activeSubject].name+' ('+BANK_SIZE+' otázek)? Druhého předmětu se to netýká. Tento krok nejde vrátit.'))return;data=freshData();save();renderHome();scrollTop();});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&screen==='home')renderHome();});
-data=load();save();renderHome();
+// Initialized after subject UI constants.
 // Refresh due counts when a tab stays open across the next review time.
 refreshTimer=setInterval(()=>{if(screen==='home')renderHome();},30000);
 
-const uniqueSources=new Map();
-QUESTIONS.forEach(q=>[...(q.source?[q.source]:[]),...(q.sources||[])].forEach(source=>uniqueSources.set(source.url,source)));
-for(const source of uniqueSources.values()){const li=element('li');const a=element('a','',source.label);a.href=source.url;a.target='_blank';a.rel='noopener noreferrer';li.append(a);$('sourceList').append(li);}
 
+const somatologySourceHTML=$('subjectSources').innerHTML;
+const biologySourceHTML=`<summary>O otázkách a zdrojích</summary><p>Ivan Novotný, Michal Hruška: <em>Biologie člověka pro gymnázia</em>, Fortuna, 4. přepracované vydání, 2007, ISBN 978-80-7373-007-9.</p><p>První sada obsahuje 50 vlastních testových otázek vytvořených podle výkladu na tištěných stranách 15–29 (PDF strany 8–15). Nejde o přepis hotových otázek A–D ani o oficiální klíč učebnice. Referenci na konkrétní stránku najdeš u každé otázky.</p><p>Témata: úvod, organizace těla a regulace; pojiva; stavba a růst kostí; kostní dřeň; klouby; páteř a hrudník; lebka; kosti končetin. Formulace i vysvětlení jsou napsaná pro tento kvíz. Další sady budou navazovat po 50 otázkách.</p><p>Otázky mají vždy jednu správnou odpověď. Vysvětlení vychází z příslušného výkladu; záměrně se netestují problematická zobecnění, například zařazení zubní skloviny mezi pojiva.</p><p>Samotný HTML soubor funguje bez internetu. Každý předmět má samostatné výsledky, opakování i rozpracované kolo. Pokrok se ukládá v tomto prohlížeči na stejné adrese.</p><ul class="source-list" id="sourceList"></ul>`;
+function updateSubjectUI(){
+ const config=SUBJECTS[activeSubject];
+ document.title=config.name+' · Kvíz pro Markét';
+ for(const id of Object.keys(SUBJECTS)){
+  const button=$('tab-'+id);button.setAttribute('aria-selected',String(id===activeSubject));button.tabIndex=id===activeSubject?0:-1;
+ }
+ $('subjectPanel').setAttribute('aria-labelledby','tab-'+activeSubject);
+ $('subjectContext').textContent=config.context;
+ document.querySelector('.offline').textContent=BANK_SIZE+' otázek';
+ $('allTitle').textContent='Test všech '+BANK_SIZE;
+ $('subjectSources').innerHTML=activeSubject==='biologie'?biologySourceHTML:somatologySourceHTML;
+ const uniqueSources=new Map();
+ QUESTIONS.forEach(q=>[...(q.source?[q.source]:[]),...(q.sources||[])].forEach(source=>uniqueSources.set(source.url,source)));
+ for(const source of uniqueSources.values()){const li=element('li');const a=element('a','',source.label);a.href=source.url;a.target='_blank';a.rel='noopener noreferrer';li.append(a);$('sourceList').append(li);}
+}
+function switchSubject(id,initial=false){
+ if(!Object.hasOwn(SUBJECTS,id)||(!initial&&id===activeSubject))return;
+ if(!initial)save();
+ activeSubject=id;const config=SUBJECTS[id];QUESTIONS=config.questions;BANK_SIZE=QUESTIONS.length;STORAGE_KEY=config.key;byId=new Map(QUESTIONS.map(q=>[q.id,q]));
+ storageOK=true;$('storageNotice').hidden=true;$('recoveryNotice').hidden=true;
+ $('saveStatus').textContent='Pokrok se ukládá v tomto prohlížeči. Bez účtu a registrace.';
+ data=load();save();updateSubjectUI();renderHome();$('announcement').textContent='';
+ try{localStorage.setItem('market-quiz-subject',id);}catch(e){}
+ if(!initial)scrollTop();
+}
+const subjectIds=Object.keys(SUBJECTS);
+subjectIds.forEach(id=>{
+ const button=$('tab-'+id);
+ button.addEventListener('click',()=>switchSubject(id));
+ button.addEventListener('keydown',event=>{
+  if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
+  event.preventDefault();let index=subjectIds.indexOf(id);
+  if(event.key==='Home')index=0;else if(event.key==='End')index=subjectIds.length-1;else index=(index+(event.key==='ArrowRight'?1:-1)+subjectIds.length)%subjectIds.length;
+  switchSubject(subjectIds[index]);$('tab-'+subjectIds[index]).focus();
+ });
+});
+let initialSubject='somatologie';try{const saved=localStorage.getItem('market-quiz-subject');if(Object.hasOwn(SUBJECTS,saved))initialSubject=saved;}catch(e){}
+switchSubject(initialSubject,true);
 </script>
 </body>
 </html>
