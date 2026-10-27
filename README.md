@@ -1,46 +1,42 @@
-# Kvíz pro Markét
+# Biologie a somatologie
 
-Verze 2.0.0 • 27. 10. 2026
+Verze 2.1.0 • 27. 10. 2026
 
-Jedna webová stránka, dvě záložky: **Somatologie (630 otázek)** a **Biologie (50 otázek)**. Mobilní rozvržení, vysvětlení po každé odpovědi, chytré procvičování, opakování chyb a tipů, náhodný test celé sady. Aplikace je v jediném samostatném `index.html` a funguje i offline.
+Jedna webová stránka, dvě záložky: **Somatologie (630 otázek)** a **Biologie (100 otázek)**. Vše v samostatném `index.html`, který funguje i offline. Obsahuje vysvětlení, paměťové pomůcky, chytré procvičování, opakování chyb a tipů a náhodný test celé sady.
+
+## Změny
+
+- Obecný název „Biologie a somatologie“ v hlavičce, titulku stránky i dokumentaci. Bez osobního věnování a osobního jména v názvu balíčku.
+- Přidány biologické otázky 51–100. Původních 50 biologických i všech 630 somatologických otázek zůstává beze změny, včetně ID, možností, správných odpovědí a vysvětlení.
+- Zůstávají stejné klíče a formát úložiště. Uložený pokrok i starší rozpracované kolo o 50 otázkách se zachovají; nové celé kolo obsahuje 100 otázek.
 
 ## Nahrání na současný web
 
-1. Rozbal ZIP.
-2. Nahraď na stávajícím webu soubor `index.html` novým souborem. README je dokumentace.
-3. Zachovej stejnou webovou adresu a prohlížeč, ve kterém byl původní pokrok uložený.
-4. Po načtení stránky vyber záložku nahoře. Rozpracované kolo zůstává dostupné přes „Pokračovat v kole“.
+Rozbal ZIP a nahraď stávající `index.html` novým souborem. Zachovej stejnou webovou adresu a prohlížeč, ve kterém je pokrok uložený. README slouží jako dokumentace. Tento balíček nebyl automaticky nahrán na veřejný web.
 
-Tento balíček není automaticky nahraný na veřejný web. Je připravený k nahrazení předchozí verze na stejné adrese.
+Každý předmět má samostatný pokrok a rozpracované kolo. Přepnutí záložky kolo neukončuje. Vymazání pokroku po potvrzení maže pouze právě vybraný předmět.
 
-## Zachování somatologie
+Pokrok je místní pro daný prohlížeč a webový původ. Jiná doména, jiný prohlížeč, soukromý režim nebo vymazání dat jej nepřenese. Stažené HTML a původní web nesdílejí automaticky stejné úložiště.
 
-- Všech 630 otázek, jejich ID, možnosti, odpovědi a vysvětlení se přesně shodují s původní verzí 1.12.0.
-- Zachovaný klíč úložiště `somatologie-learning-v2`, verze dat 2, pravidla opakování a migrace nejstarší desetio­tázkové verze.
-- Původní pokrok i rozpracované kolo se načítají bez převodu. Přepnutí záložky kolo neukončuje.
-- Biologie používá samostatný klíč `biologie-learning-v2`. Výsledky, tipy, chyby, termíny a kola se mezi předměty nemíchají.
-- Vymazání pokroku maže pouze vybraný předmět a vyžaduje potvrzení. Druhý předmět ponechá.
-- Volbu poslední záložky si aplikace pamatuje samostatně.
+## Zdroj a rozsah biologie
 
-Pokrok je místní pro konkrétní prohlížeč a webový původ. Přechod na jinou doménu, jiný prohlížeč, anonymní režim nebo vymazání dat jej nepřenese. Otevření staženého HTML není totéž úložiště jako původní web.
+Ivan Novotný, Michal Hruška: **Biologie člověka pro gymnázia**, Fortuna, 4. přepracované vydání, 2007, ISBN 978-80-7373-007-9. Zdrojový soubor: `623763327-biologie-cloveka.pdf`.
 
-## Biologie: první sada
+Jde o vlastní testy A–D vytvořené podle výkladu, nikoli přepis hotové testové banky nebo oficiálního klíče. Každá otázka má jednu správnou odpověď, číslo tištěné stránky, tři vysvětlující odstavce a paměťovou pomůcku. Zdroj byl přečten vizuálně ze skenu. Tištěná stránka a číslo stránky PDF se liší: PDF obsahuje převážně dvoustrany.
 
-Zdroj: Ivan Novotný, Michal Hruška, **Biologie člověka pro gymnázia**, Fortuna, 4. přepracované vydání, 2007, ISBN 978-80-7373-007-9. Dodaný soubor: `623763327-biologie-cloveka.pdf`.
+| Biologické otázky | Téma | Tištěné strany | PDF strany |
+|---|---|---|---|
+| 1–50 | Úvod, regulace, pojiva, kosti, klouby a kostra | 15–29 | 8–15 |
+| 51–70 | Kosterní, srdeční a hladké svalstvo, mechanismus stahu | 30–35 | 16–18 |
+| 71–80 | Oddíly tělesné vody, ionty, tkáňový mok, míza a výměna látek | 35–37 | 18–19 |
+| 81–100 | Krev, krvinky, destičky, srážení, plazma/sérum, AB0 a Rh | 37–42 | 19–22 |
 
-Otázky 1–50 jsou nově vytvořené testy A–D podle výkladu na **tištěných stranách 15–29, PDF stranách 8–15**. Nejde o přepis hotové testové banky nebo oficiálního klíče: kniha obsahuje výklad a otevřené studijní otázky. Každý test má jednu správnou odpověď, odkaz na tištěnou stránku, tři vysvětlující odstavce a paměťovou pomůcku. Texty knihy byly vizuálně přečteny ze skenu; nevyužívá se neověřený OCR přepis.
+Přehled popisuje použité zdroje, nikoli záruku, že každý odstavec těchto stran už má samostatnou otázku. Přesný celkový počet smysluplných testů nelze určit jen z počtu stran. Další dávka naváže čísly **101–150**, například imunitním systémem od tištěné strany 43. Přehled každé nové dávky bude uveden také ve zprávě v chatu.
 
-Témata: organizace těla a homeostáza; řízení tělesných soustav; vazivo, chrupavka a kost; kostní buňky, mineralizace, dřeň a růst; kloubní spojení; páteř a hrudník; lebka; pletenec a kosti končetin. Testy se vyhýbají nepřesným zobecněním zdroje, například klasifikaci skloviny jako pojiva. Biologické otázky jsou ověřené proti příslušnému výkladu, nikoli proti neexistujícímu tištěnému klíči A–D.
-
-Další dávka má pokračovat ID 51–100. Doplnit lze zbývající učivo o kostře a následně svalstvo od tištěné strany 30. Zachovat prvních 50 ID i jejich obsah a oba klíče úložiště.
+Problematická zobecnění zdroje se nepřebírají do testovaných správných odpovědí: například srdce má nervovou regulaci, přestože tvoří vlastní rytmus; tkáňový mok není zcela bez bílkovin; ne všichni tkáňoví makrofágové nutně vznikají z cirkulujících monocytů. Vysvětlení rozlišují školní model a jeho meze.
 
 ## Ověření
 
-- Přesná strojová shoda všech 630 původních otázek.
-- Načtení dat vytvořených původním řadičem, včetně přerušeného kola a tipu, bez změny uložených dat.
-- Celé kolo 630 otázek somatologie a 50 otázek biologie; hodnocení, zbarvení tříd odpovědí, vysvětlení a ochrana před dvojím započtením.
-- Přepínání předmětů, samostatná kola, obnovení při opětovném načtení, oddělený reset, chytré opakování a migrace staré verze pouze do somatologie.
-- Náhradní fungování při blokovaném úložišti, zotavení po poškozených datech a neplatném názvu záložky.
-- Ovládání záložek klávesami vlevo/vpravo, Home a End.
+Automatické kontroly ověřují shodu všech původních otázek, zachování uložených dat z předchozích verzí obou předmětů, starší nedokončené kolo o 50 otázkách, nová kola všech 630 a 100 otázek, hodnocení, ochranu před dvojím započtením, nezávislé přepínání a reset, chytré opakování, klávesové ovládání a fungování při poškozeném či blokovaném úložišti. Kontroluje se také absence osobního názvu a integrita ZIPu.
 
-Testy spouštějí skutečný JavaScript aplikace s minimálním adaptérem DOM. **Nejde o test ve skutečném prohlížeči:** místní HTTP náhled se v dostupném prohlížeči nenačetl a přímé otevření souboru blokovala jeho bezpečnostní politika. Vizuální vykreslení a skutečné prohlížečové úložiště nové verze proto nebyly ověřeny. Rozvržení vychází z původní aplikace s přidanými responzivními záložkami.
+Testy vykonávají skutečný JavaScript aplikace s minimálním adaptérem DOM. Vizuální kontrola nové verze ani ověření ve skutečném prohlížeči nebyly provedeny; předchozí místní náhled nebyl dostupný. ZIP obsahuje pouze `index.html` a `README.md`, aplikace nevyžaduje externí knihovny.
