@@ -1,43 +1,45 @@
 # Somatologie
 
-**Verze: 1.11.0**  
-**Datum vydání: 26. 10. 2026**  
-**Počet otázek: 600**
+**Verze: 1.12.0**  
+**Datum vydání: 27. 10. 2026**  
+**Počet otázek: 630 — kompletní sada dodaného PDF**
 
 Mobilní procvičování somatologie v jediném samostatném HTML souboru. Obsahuje logická vysvětlení, chytré opakování a ukládání pokroku v prohlížeči.
 
 ## Změny v této verzi
 
-- Přidáno přesně 50 otázek, čísla 551–600: XVI/25–70 a XVII/1–4. Sada dokončuje pohlavní systém včetně ovariálního a děložního cyklu, časného vývoje, placenty, těhotenství a porodu; navazuje čtyřmi otázkami o novorozenci.
-- Každá nová otázka má tři odstavce vysvětlení souvislostí a pomůcku pro zapamatování. Přiřazovací úlohy mají legendu, dvojice tvrzení se zobrazují odděleně.
-- Všech 600 hodnocených odpovědí souhlasí s přepisem tištěných klíčů PDF. Nová sada byla přečtena a kontrolována přímo ze skenu bez internetových zdrojů a bez přebírání ručních značek.
-- Nové otázky: PDF strany 71–76 (tištěné strany 140–148 a 150). Použité klíče pro novou sadu: PDF strana 75 (tištěná 148) a PDF strana 79 (tištěná 156).
-- Původních 550 otázek, jejich identifikátory, možnosti i vysvětlení zůstaly beze změny. Zachovány jsou klíč `somatologie-learning-v2`, formát uložených dat i pravidla chytrého opakování.
-- V XVI/60 má originál dvě možnosti označené B. Obsah a pořadí jsou zachované, tlačítka jsou sjednocena na A–D; správná první možnost A se nemění.
+- Přidáno posledních 30 otázek, čísla 601–630 (XVII/5–34). Požadovaných dalších 50 již v tomto PDF nezbývalo: dokument končí otázkou XVII/34, celkově otázkou 630.
+- Dokončen vývoj dítěte: novorozenecké orgány a reflexy, spánek, věková období, kojenec, batole, chrup, puberta a dospívání.
+- Každá nová otázka má tři odstavce vysvětlení souvislostí a pomůcku pro zapamatování. Přiřazovací otázka obsahuje legendu, dvojice tvrzení jsou oddělené.
+- Otázky a možnosti byly přečteny ze skenu PDF stran 76–79 (tištěné strany 150–156). Hodnocení je zkontrolované proti tištěnému klíči XVII na PDF straně 79 (tištěná 156), nikoli podle ručních značek. Nebyly použity internetové zdroje.
+- Všech 630 odpovědí odpovídá přepisu tištěných klíčů. Původních 600 otázek včetně identifikátorů a všech obsahových polí zůstalo beze změny.
+- Zachován klíč úložiště `somatologie-learning-v2`, formát dat i pravidla chytrého opakování. Jedna správná odpověď ještě neznamená zvládnutí; označený tip se za zvládnutí nepočítá.
 
-## Přesnost a problematické formulace učebnice
+## Přesnost a zjednodušení zdroje
 
-Hodnocení nadále sleduje tištěný klíč. Vysvětlení odděluje shodu s klíčem od přesnosti originální formulace a závažné rozpory uvádí v poznámce „Pro přesnost“.
+Hodnocení sleduje tištěný klíč. Vysvětlení výslovně upozorňují na nepřesnosti zdroje a odlišují školní odpověď od přesné fyziologie.
 
-- XVI/26 (552): parametrium je okolní vazivo, nikoli totéž co perimetrium, zevní obal vlastní děložní stěny. Nadpis otázky směšuje vlastní vrstvy a okolí.
-- XVI/27: hymen běžně úplně neuzavírá pochvu a nelze z něj spolehlivě určit sexuální historii.
-- XVI/29 a XVI/40: nabídky obsahují další pravdivé výroky vedle jediné volby klíče. Žluté tělísko tvoří i estrogeny; k transportu vejcovodem přispívají svalové kontrakce i řasinky.
-- XVI/35, XVI/37 a XVI/41: časové údaje jsou přibližné. Rozlišujeme krátké okno schopnosti oplození, ranou hormonální funkci žlutého tělíska a začátek implantace přibližně šestý až sedmý den po oplození.
-- XVI/43: sekreční fáze nemusí zahrnovat rýhování zárodku; děje před menstruací nelze obecně redukovat na prosté uvolnění oxytocinu. Důležité jsou hormonální změny a místní mediátory včetně prostaglandinů.
-- XVI/49–50 a XVI/59: vysvětlujeme rozdíl definice nidace, různých vymezení počátku těhotenství a užšího či širšího použití pojmu embryonální období.
-- XVI/53, XVI/57 a XVI/60–63: krevní oběhy zůstávají za běžných podmínek oddělené, ale výměna látek probíhá; ochrana ani imunologická bariéra nejsou absolutní. Placentace souvisí už s probíhající implantací. Čas zachycení srdeční činnosti závisí na použité metodě.
-- XVII/1 a XVII/4: procento tuku je proměnlivé a novorozenecká kostra už obsahuje kostní tkáň, přestože má významné chrupavčité struktury a dále dozrává.
-- XVII/3 (599): zjevně chybná obecná hranice klíče C. Tvorba kostní tkáně nekončí ve dvanácti letech; růst pokračuje a obnova kostí probíhá během života. Hodnocení C je zachované podle PDF, vysvětlení tento omyl výslovně opravuje.
+- XVII/12: rychlé provzdušnění plic při zahájení dýchání není totožné s úplným okamžitým odstraněním plicní tekutiny.
+- XVII/13 a XVII/16: část vedlejších nosních dutin je založena již při narození; relativní velikost ledvin a přítomnost nefronů neznamenají dospělou funkční zralost.
+- XVII/19 (615): tělesný tuk skutečně také chrání před tepelnými ztrátami, přesto klíč vybírá jinou pravdivou odpověď. Přibližně 35 °C není běžný cílový údaj tělesné teploty novorozence.
+- XVII/20 (616): somatostatin tvoří v pankreatu delta buňky; jeho místní účinek se odlišuje od úlohy hypotalamického somatostatinu při řízení růstového hormonu.
+- XVII/22: novorozenec bolest vnímá. Ochranný slzný film není totéž co nápadně viditelné slzy při pláči.
+- XVII/23 (619): klíč přijímá oba výroky, ale 20 hodin není jednotná potřeba spánku všech kojenců a vývoj mozkové kůry není při narození plně dokončený. Tyto nepřesnosti jsou výslovně opraveny.
+- XVII/24, XVII/33 a XVII/34: věkové hranice puberty a dospělosti jsou orientační; adolescence může v širším významu zahrnovat i pubertu.
+- XVII/28 a XVII/29: základy řeči a jemná motorika se rozvíjejí již během prvního roku; výlučně mléčná výživa nevystihuje celý kojenecký věk. Některé alternativy tak podle výkladu částečně platí. Stoličky se obvykle prořezávají později, s individuálním rozptylem.
+- XVII/31: kojenecké období končí prvními narozeninami, nikoli dosažením přesné hmotnosti nebo ukončením kojení.
+
+Upozornění z předchozích verzí zůstávají u dotčených otázek přímo v aplikaci.
 
 ## Co bylo ověřeno
 
-- Celý náhodný test 600 různých otázek: zbarvení odpovědí, vysvětlení, ochrana před dvojím započtením, dokončení a výsledné skóre.
-- Zachování všech polí pokroku při aktualizaci z 550 na 600 otázek na stejné adrese, včetně chyb, tipů, zvládnutých otázek a rozpracovaného staršího kola o původních 550 otázkách.
-- Obnovení po skutečném zavření a znovuotevření testovacího prohlížeče před aktualizací i po ní; pokračování nového kola po obnovení stránky po 561 odpovědích.
-- Chytré opakování, nezapočítání tipů jako zvládnutí, dodržení plánovaných odstupů a návrat chybné otázky po dalších odpovědích.
-- Všech 600 otázek i vysvětlení při šířkách 320, 390, 768 a 1024 pixelů bez vodorovného přetékání; tlačítka odpovědí mají výšku nejméně 64 pixelů.
-- Offline spuštění jediného HTML, náhradní chování při blokovaném úložišti a zotavení při poškozených uložených datech.
-- Shoda zabaleného HTML s aktuálním souborem, úplnost obsahu a integrita ZIP.
+- Celý náhodný test 630 různých otázek: zbarvení odpovědí, vysvětlení, ochrana před dvojím započtením, dokončení a skóre.
+- Aktualizace z 600 na 630 otázek na stejné adrese zachovává všechna uložená pole: chyby, tipy, zvládnuté otázky i rozpracované starší kolo o 600 otázkách.
+- Skutečné zavření a znovuotevření testovacího prohlížeče před aktualizací i po ní; obnovení nového kola po 611 odpovědích.
+- Chytré opakování, plánované odstupy, nezapočítání tipů jako zvládnutí a návrat chybné otázky po dalších odpovědích.
+- Všech 630 otázek a vysvětlení při šířkách 320, 390, 768 a 1024 pixelů bez vodorovného přetékání; tlačítka nejméně 64 pixelů vysoká.
+- Offline spuštění jediného HTML, náhradní chování při blokovaném úložišti a zotavení po poškozených uložených datech.
+- Shoda zabaleného HTML s aktuálním souborem, přesně dva soubory v balíčku a integrita ZIP.
 
 ## Spuštění a nahrání
 
@@ -47,12 +49,13 @@ Na GitHub nahraj **obsah této složky** do stejného místa jako dosud: `index.
 
 Pokrok se ukládá po každé odpovědi v konkrétním prohlížeči a jeho profilu, odděleně od HTML souboru. Nahrazení aplikace na stejném webu ho zachovává, pokud zůstala zachovaná data prohlížeče. Mezi zařízeními se nesynchronizuje; vymazání dat nebo ukončení anonymního režimu může pokrok odstranit. U místně otevřeného souboru může přesunutí do jiné složky znamenat jiné úložiště; pro pravidelné používání zachovej stejnou webovou adresu.
 
-Rozpracované starší kolo (například test 550 otázek) si zachová původní délku. Nové otázky se zapojí do nově zahájeného kola a chytrého procvičování; dřívější znalost původních otázek zůstane uložená.
+Rozpracované starší kolo (například test 600 otázek) si zachová původní délku. Nové otázky se zapojí do nově zahájeného kola a chytrého procvičování; dřívější znalost původních otázek zůstane uložená.
 
 ## Historie verzí
 
 | Verze | Otázky | Hlavní změna |
 | --- | ---: | --- |
+| 1.12.0 | 630 | Posledních 30 otázek XVII/5–34: dokončena celá sada PDF, kontrola klíče a zachování pokroku. |
 | 1.11.0 | 600 | Dalších 50 otázek: dokončení pohlavního systému, těhotenství a porod, první čtyři otázky o novorozenci; kontrola klíčů i zachování pokroku. |
 | 1.10.0 | 550 | Dalších 50 otázek: dokončení nervového řízení, všechny smysly a začátek pohlavního systému; kontrola klíčů i zachování pokroku. |
 | 1.9.0 | 500 | Dalších 50 otázek nervového řízení: neurony, glie, CNS, reflexy a nervy; kontrola klíče i zachování pokroku. |
@@ -71,8 +74,8 @@ Rozpracované starší kolo (například test 550 otázek) si zachová původní
 
 ## Číslování dalších vydání
 
-- **1.12.0:** další rozšíření otázek nebo nová funkce.
-- **1.11.1:** drobná oprava současné verze.
+- **1.13.0:** nová funkce nebo obsah z dalšího zdroje. Původní PDF je již kompletní.
+- **1.12.1:** drobná oprava současné verze.
 - **2.0.0:** zásadní přepracování aplikace.
 
 Každé další vydání má vlastní složku a ZIP se stejným číslem verze a obsahuje `index.html` a aktualizované `README.md`. Při přidávání otázek se zachovají identifikátory dosavadních otázek a kompatibilita uloženého pokroku.

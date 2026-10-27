@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f6f3ee">
-  <meta name="description" content="600 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
+  <meta name="description" content="630 otázek ze somatologie s vysvětlením a chytrým opakováním. Chyby a tipy častěji, zvládnuté otázky s odstupem.">
   <title>Somatologie · malý krok, velké pochopení</title>
   <style>
     :root{color-scheme:light;--bg:#f6f3ee;--paper:#fffefa;--ink:#293d39;--muted:#65736e;--line:#e1e6df;--sage:#dceadf;--green:#236345;--green-bg:#e4f3e7;--red:#983a45;--red-bg:#fbe5e6;--lavender:#ece7f8;--accent:#65558e;--peach:#fae8dc;--radius:26px}
@@ -18,22 +18,22 @@
   <header class="brand">
     <div class="brand-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 28 28" fill="none"><path d="M4 6.5c3.4-1.2 6.7-.7 10 1.6 3.3-2.3 6.6-2.8 10-1.6v16c-3.4-1.2-6.7-.7-10 1.6-3.3-2.3-6.6-2.8-10-1.6v-16Z" stroke="#56765e" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 8v16M7.5 11l3 .9M7.5 15l3 .9M17.5 12l3-.9M17.5 16l3-.9" stroke="#56765e" stroke-width="1.5" stroke-linecap="round"/></svg></div>
     <div><div class="brand-name">Somatologie</div><div class="brand-sub">Malý krok, velké pochopení.</div></div>
-    <span class="offline">600 otázek</span>
+    <span class="offline">630 otázek</span>
   </header>
 
-  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">600 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
+  <section class="intro"><div class="eyebrow">Tvoje chvilka na procvičení</div><h1>Nejen vědět.<br>Opravdu pochopit.</h1><p id="introDescription">630 otázek s vysvětlením. Krátká kola, která se přizpůsobí tomu, co potřebuješ procvičit.</p></section>
   <div id="storageNotice" class="toast" hidden>Prohlížeč nepovolil ukládání. Test funguje, ale po zavření se průběh neobnoví.</div>
   <div id="recoveryNotice" class="recovery" hidden>Uložený pokrok nebylo možné načíst. Začínáme s novým přehledem.</div>
   <section class="card home" id="home" aria-label="Přehled učení">
     <h2 class="home-title">Každá otázka má svůj čas.</h2>
-    <div class="home-stats"><div class="home-stat"><span>Vyzkoušeno</span><strong id="seenTotal">0 / 600</strong></div><div class="home-stat"><span>Zvládnuté</span><strong id="masteredTotal">0 / 600</strong></div><div class="home-stat"><span>Čas zopakovat</span><strong id="dueTotal">0</strong></div></div>
+    <div class="home-stats"><div class="home-stat"><span>Vyzkoušeno</span><strong id="seenTotal">0 / 630</strong></div><div class="home-stat"><span>Zvládnuté</span><strong id="masteredTotal">0 / 630</strong></div><div class="home-stat"><span>Čas zopakovat</span><strong id="dueTotal">0</strong></div></div>
     <p class="learning-label">Zvládnuté = alespoň 3 úspěšná vybavení v plánovaných termínech.</p>
-    <div class="track" role="progressbar" id="learningProgress" aria-label="Počet opakovaně zvládnutých otázek" aria-valuemin="0" aria-valuemax="600" aria-valuenow="0"><div class="fill" id="learningFill"></div></div>
+    <div class="track" role="progressbar" id="learningProgress" aria-label="Počet opakovaně zvládnutých otázek" aria-valuemin="0" aria-valuemax="630" aria-valuenow="0"><div class="fill" id="learningFill"></div></div>
     <p class="home-hint" id="homeHint"></p>
     <button class="next resume" id="resume" hidden>Pokračovat v kole</button>
     <div class="mode-card recommended"><span class="tag">Doporučený režim</span><h3>Chytré procvičování</h3><p>Krátké kolo do 10 odpovědí. Přednost mají chyby a tipy, pak otázky k opakování a nové. Zvládnuté odpočívají do svého termínu.</p><button class="next" id="smartStart">Začít chytré kolo</button></div>
     <div class="mode-card"><h3>Jen chyby a tipy <span class="pill" id="weakCount">0</span></h3><p id="weakHint"></p><button class="next secondary" id="weakStart">Procvičit slabší otázky</button></div>
-    <div class="mode-card"><h3>Test všech 600</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
+    <div class="mode-card"><h3>Test všech 630</h3><p>Všechny otázky jednou v náhodném pořadí, i ty zvládnuté. Hodí se pro kontrolu před zkouškou. Pokrok se aktualizuje i tady.</p><button class="next secondary" id="allStart">Spustit celý test</button></div>
     <details class="home-help"><summary>Jak funguje chytré opakování?</summary><ul><li><strong>Chyba nebo tip:</strong> otázka se vrátí po alespoň třech jiných odpovědích v témže chytrém kole, jinak přibližně za 10 minut.</li><li><strong>Správně a bez tipu:</strong> termíny se postupně prodlužují na 1, 3, 7, 14 a 30 dní od příslušné odpovědi.</li><li><strong>Správně před termínem:</strong> procvičení se počítá do výsledku, ale samo neposune otázku na vyšší úroveň.</li><li><strong>Tři úspěchy s odstupem:</strong> otázka se označí jako zvládnutá. Nezmizí navždy; po termínu se znovu ověří.</li><li><strong>Další chyba:</strong> otázka se vrátí mezi ty k častému procvičení.</li></ul><p>Jednotlivé otázky se v chytrém kole mohou zopakovat. Skóre proto počítá odpovědi, zatímco horní přehled počítá různé otázky.</p><p>Pokrok se ukládá pouze v tomto prohlížeči a na této webové adrese. Telefon a počítač mají samostatný přehled. Režim tipování označ před odpovědí.</p></details>
   </section>
   <div class="quiz-toolbar" id="quizToolbar" hidden><button class="home-button" id="homeButton">← Přehled</button><span class="mode-label" id="modeLabel"></span></div>
@@ -53,7 +53,7 @@
   </section>
   <section class="card" id="results" aria-label="Výsledek kola" hidden></section>
   <footer class="footer"><p id="saveStatus">Pokrok se ukládá v tomto prohlížeči. Bez účtu a registrace.</p>
-    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 600 otázek v pořadí dokumentu: kapitolu I, otázky 1–45 (v aplikaci 1–45), kapitolu II, otázky 1–28 (46–73), kapitolu III, otázky 1–6 (74–79), kapitolu IV.a, otázky 1–29 (80–108), kapitolu IV.b, otázky 1–33 (109–141), kapitolu V, otázky 1–60 (142–201), kapitolu VI, otázky 1–36 (202–237), kapitolu VII, otázky 1–34 (238–271), kapitolu VIII, otázky 1–49 (272–320), kapitolu IX, otázky 1–19 (321–339), kapitolu X, otázky 1–9 (340–348), kapitolu XI, otázky 1–28 (349–376), kapitolu XII, otázky 1–25 (377–401), kapitolu XIII, otázky 1–42 (402–443), kapitolu XIV, otázky 1–58 (444–501), kapitolu XV, otázky 1–25 (502–526), kapitolu XVI, otázky 1–70 (527–596), a kapitolu XVII, otázky 1–4 (597–600).</p><p>Otázky: tištěné strany 8–15, 18–22, 24–25, 28–39, 42–51, 54–59, 62–67, 70–78, 80–84, 86–87, 90–95, 98–111, 114–125, 128–133, 136–148 a 150 (PDF strany 5–8, 10–13, 15–20, 22–26, 28–30, 32–34, 36–44, 46–48, 50–56, 58–63, 65–67 a 69–76). Tištěné klíče: strany 15, 22, 25, 32, 39, 51, 60, 67, 78, 84, 87, 95, 102, 111, 125, 133, 148 a 156 (PDF strany 8, 12, 13, 17, 20, 26, 31, 34, 40, 43, 44, 48, 52, 56, 63, 67, 75 a 79). Všech 600 přiřazení správné odpovědi bylo porovnáno s těmito klíči; nově přidané otázky se ověřovaly bez internetových zdrojů. Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
+    <details class="sources"><summary>O otázkách a zdrojích</summary><p>Vlasta Chalupová-Karlovská: <em>Somatologie · Anatomie a fyziologie člověka · 630 testových otázek a odpovědí</em>, 2010. Banka obsahuje prvních 630 otázek v pořadí dokumentu: kapitolu I, otázky 1–45 (v aplikaci 1–45), kapitolu II, otázky 1–28 (46–73), kapitolu III, otázky 1–6 (74–79), kapitolu IV.a, otázky 1–29 (80–108), kapitolu IV.b, otázky 1–33 (109–141), kapitolu V, otázky 1–60 (142–201), kapitolu VI, otázky 1–36 (202–237), kapitolu VII, otázky 1–34 (238–271), kapitolu VIII, otázky 1–49 (272–320), kapitolu IX, otázky 1–19 (321–339), kapitolu X, otázky 1–9 (340–348), kapitolu XI, otázky 1–28 (349–376), kapitolu XII, otázky 1–25 (377–401), kapitolu XIII, otázky 1–42 (402–443), kapitolu XIV, otázky 1–58 (444–501), kapitolu XV, otázky 1–25 (502–526), kapitolu XVI, otázky 1–70 (527–596), a kapitolu XVII, otázky 1–34 (597–630).</p><p>Otázky: tištěné strany 8–15, 18–22, 24–25, 28–39, 42–51, 54–59, 62–67, 70–78, 80–84, 86–87, 90–95, 98–111, 114–125, 128–133, 136–156 (PDF strany 5–8, 10–13, 15–20, 22–26, 28–30, 32–34, 36–44, 46–48, 50–56, 58–63, 65–67 a 69–79). Tištěné klíče: strany 15, 22, 25, 32, 39, 51, 60, 67, 78, 84, 87, 95, 102, 111, 125, 133, 148 a 156 (PDF strany 8, 12, 13, 17, 20, 26, 31, 34, 40, 43, 44, 48, 52, 56, 63, 67, 75 a 79). Všech 630 přiřazení správné odpovědi bylo porovnáno s těmito klíči; nově přidané otázky se ověřovaly bez internetových zdrojů. Hodnotíme podle tištěného klíče, nikoli podle ručních značek. Například u otázek 25, 37 a 43 se ruční volby s klíčem liší.</p><p>Písmena v přiřazovací legendě označují pojmy, zatímco tlačítka A–D označují kombinace odpovědí. Vysvětlení jsou nově napsaná pro tuto aplikaci. Nejednoznačné, historické nebo problematické formulace mají po odpovědi poznámku <strong>Pro přesnost</strong>; shoda s klíčem neznamená, že jeho zjednodušení platí bez výjimek.</p><p>Stažený HTML soubor funguje bez internetu. Webová verze nepotřebuje žádné externí knihovny; první otevření webové adresy a odkazy na zdroje vyžadují připojení.</p><ul class="source-list" id="sourceList"></ul></details>
     <details class="sources"><summary>Uložený pokrok</summary><p>Nové kolo nemaže dřívější znalost otázek. Vymazání dole resetuje celé učení. Vymazáním dat prohlížeče se pokrok také ztratí. Stejná webová adresa po nahrání nové verze pokrok zachová, pokud zůstane zachované úložiště prohlížeče.</p><button class="reset" id="reset">Vymazat celý uložený pokrok</button></details>
   </footer>
 </main>
@@ -13546,6 +13546,645 @@ QUESTIONS.push(...[
     ],
     "memory": "Novorozenec už má kosti i významné chrupavčité růstové oblasti; skelet dál dozrává.",
     "note": "Formulace především chrupavčitá je zjednodušená. Mnoho kostí má osifikační centra už před narozením."
+  },
+  {
+    "id": 601,
+    "bookRef": "XVII · otázka 5",
+    "category": "Vývoj dítěte",
+    "question": "Lebka novorozence",
+    "options": [
+      "Má relativně velkou obličejovou a malou mozkovou část",
+      "Má již na dolní čelisti dokonale vytvořen bradový výběžek",
+      "Se skládá z více dílčích kostí, než lebka dospělého člověka",
+      "Má vytvořenu jen velmi slabou okostici"
+    ],
+    "answer": 2,
+    "title": "Některé oddělené části lebky teprve později srůstají",
+    "paragraphs": [
+      "Správně C. Novorozenecká lebka obsahuje některé kostní části odděleně, které později srůstají v celek. Proto je při stejném způsobu počítání dílčích částí jejich počet větší než v dospělé lebce.",
+      "Představ si skládanku, jejíž některé díly ještě nejsou pevně spojeny. Švy a fontanely umožňují přizpůsobení při porodu a další růst mozkovny. Není to ale nechráněný mozek: prostory jsou překryty vazivovými strukturami a dalšími obaly.",
+      "Poměr mozkové a obličejové části je oproti A obrácený: mozkovna je relativně velká, obličejová část menší. Čelist i její tvar se dále vyvíjejí. Z C neplyne vznik dalších dospělých kostí ze vzduchu, ale postupné spojování a přestavba již založených částí."
+    ],
+    "memory": "Novorozenecká lebka je skládanka s dosud nesrostlými díly; mozkovna relativně převažuje."
+  },
+  {
+    "id": 602,
+    "bookRef": "XVII · otázka 6",
+    "category": "Vývoj dítěte",
+    "question": "Novorozenec má",
+    "options": [
+      "Čtyři páry volných žeber",
+      "Již vytvořeno typické zakřivení páteře",
+      "Páteř, která se svým tvarem přizpůsobuje tvaru podložky",
+      "Páteř dlouhou asi 60 % délky těla"
+    ],
+    "answer": 2,
+    "title": "Typické dospělé křivky páteře vznikají postupně",
+    "paragraphs": [
+      "Klíč vybírá C. Páteř novorozence je poddajná a její tvar se mění s polohou a oporou. Nemá ještě plně vyvinuté typické dospělé esovité zakřivení, jak naznačuje B.",
+      "Představ si konstrukci, která se teprve učí nést hlavu a trup v různých polohách. Krční a bederní lordóza se rozvíjejí v souvislosti s postupným držením hlavy, vzpřimováním a zatěžováním. Vývoj není jeden okamžik přepnutí na dospělý tvar.",
+      "C neznamená, že se páteř má násilně tvarovat podle libovolné podložky. Popisuje její poddajnost. Běžně jsou dva páry volných žeber, nikoli čtyři; procento délky těla v D také nevystihuje správnou základní charakteristiku. Rozhoduje vývojová stavba a postupné vytváření křivek."
+    ],
+    "memory": "Dospělé esovité křivky se dotvářejí s držením hlavy a vzpřimováním."
+  },
+  {
+    "id": 603,
+    "bookRef": "XVII · otázka 7",
+    "category": "Vývoj dítěte",
+    "question": "U novorozence",
+    "options": [
+      "Je již vytvořena nožní klenba",
+      "Jsou kloubní chrupavky pružné a obsahují více vody",
+      "Obsahují kloubní pouzdra méně elastických vláken než u dospělého člověka",
+      "Je již dokonale vytvořen vnitřní a zevní kotník"
+    ],
+    "answer": 1,
+    "title": "Rostoucí pohybový aparát je poddajnější a dál osifikuje",
+    "paragraphs": [
+      "Správně B. Dětské chrupavčité struktury jsou bohaté na vodu a jejich mechanické vlastnosti se s růstem mění. Pohybový aparát novorozence nelze hodnotit jako plně vyzrálou zmenšeninu dospělého skeletu.",
+      "Představ si tkáň, která současně poskytuje oporu a dovoluje další vývoj. Některé části jsou dosud chrupavčité a osifikují později. Také oblast kotníků není ve všech částech kostně vyvinuta jako u dospělého člověka.",
+      "Klenba chodidla se funkčně vyvíjí postupně; její vzhled navíc překrývá tukový polštář na plosce. Z toho nelze každý novorozenecký vzhled chodidla pokládat za dospělou poruchu klenby. B je výstižná charakteristika tkáně, zatímco další možnosti nepatřičně předpokládají hotovou dospělou stavbu."
+    ],
+    "memory": "Chrupavka a poddajnost patří k růstu; klenba i kostní podoba kotníků se dotvářejí."
+  },
+  {
+    "id": 604,
+    "bookRef": "XVII · otázka 8",
+    "category": "Vývoj dítěte",
+    "question": "Novorozenec",
+    "options": [
+      "Má svalový systém, který se ještě zásadním způsobem liší od úpravy svalů dospělého člověka",
+      "Má zesílenou břišní stěnu v místě odstupu pupeční jizvy",
+      "Dýchá především mezižeberními svaly",
+      "Dýchá bránicí, která u něj sahá vysoko do hrudníku"
+    ],
+    "answer": 3,
+    "title": "Bránice má u novorozence výraznou dechovou úlohu",
+    "paragraphs": [
+      "Klíč vybírá D. Dýchání novorozence je výrazně závislé na bránici. Hrudník je poddajnější a postavení žeber i účinnost mezižeberních svalů se liší od dospělého uspořádání.",
+      "Představ si pohyblivou přepážku, jejíž stah zvětšuje prostor pro plíce. Proto jsou dechové pohyby často nápadné v oblasti břicha. Neznamená to, že vzduch vstupuje do břicha, ani že žádné další dýchací svaly nemají funkci.",
+      "Základní plán kosterních svalů už existuje, ale jejich síla, řízení a proporce dozrávají; A je bez upřesnění příliš obecné. Pupeční oblast navíc není automaticky zesílenou částí břišní stěny. D vystihuje konkrétní mechanickou souvislost místo představy převahy mezižeberního dýchání."
+    ],
+    "memory": "Novorozenecké dýchání výrazně využívá bránici; pohyb břicha není vzduch v břiše."
+  },
+  {
+    "id": 605,
+    "bookRef": "XVII · otázka 9",
+    "category": "Vývoj dítěte",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 2,
+    "title": "Krvotvorba mění místa a obranyschopnost dál dozrává",
+    "paragraphs": [
+      "Klíč vybírá C, oba výroky přijímá. Krvotvorba v prenatálním vývoji postupně využívá žloutkový váček, další orgány a kostní dřeň. Přechody se překrývají; uvedené týdny a měsíce jsou orientační schéma, nikoli přesné vypínače.",
+      "Představ si předávání výroby mezi pracovišti, která nějakou dobu běží souběžně. U donošeného novorozence je hlavním místem krvotvorby kostní dřeň. To neznamená, že by teprve po narození vznikly první krvinky.",
+      "Novorozenec má T i B lymfocyty, ale jeho imunitní odpovědi nejsou stejně zralé jako u dospělého. Mateřské protilátky získává zejména jako IgG přes placentu a po narození z mléka především slizniční IgA. Mléčné protilátky tedy nejsou jediným ani totožným zdrojem s placentárními."
+    ],
+    "memory": "Krvotvorba se stěhuje ke dřeni; IgG přechází placentou a mléko dodává hlavně slizniční IgA.",
+    "statements": [
+      "Červené krvinky se ve stěně žloutkového váčku začínají tvořit již ve třetím týdnu zárodečného vývoje. Ve druhém měsíci vznikají krvinky i v embryonálních játrech a ve slezině. Po pátém měsíci nitroděložního vývoje se hlavní krvetvornou tkání stává kostní dřeň plodu.",
+      "Dítě je při narození vybaveno buněčným i protilátkovým imunitním systémem – má T lymfocyty i B lymfocyty. Plná výkonnost imunitního systému však nastupuje až v průběhu několika prvních let života. Novorozenec proto získává protilátky z mateřského mléka."
+    ]
+  },
+  {
+    "id": 606,
+    "bookRef": "XVII · otázka 10",
+    "category": "Vývoj dítěte",
+    "question": "U novorozence",
+    "options": [
+      "Jsou červené krvinky větší a mají jádra",
+      "Stoupá po určitou dobu po narození počet erytrocytů",
+      "Je zpočátku vyšší počet bílých krvinek než u dospělého",
+      "Probíhá krvetvorba zejména v játrech a ve slezině"
+    ],
+    "answer": 2,
+    "title": "Počet a složení krvinek se po narození mění",
+    "paragraphs": [
+      "Správně C. Novorozenec mívá zpočátku vyšší počet leukocytů než dospělý a hodnoty se po porodu rychle mění. Jde o fyziologické vývojové rozdíly, ne automatický důkaz infekce z jediného čísla.",
+      "Představ si přechod organismu na samostatné dýchání a nové prostředí. Krvetvorba i životnost buněk se této situaci přizpůsobují. Hlavním krvetvorným místem donošeného novorozence je kostní dřeň, nikoli nadále především játra a slezina.",
+      "Novorozenecké erytrocyty bývají větší, ale zralé lidské červené krvinky jsou bezjaderné. Mohou se objevit jaderní předchůdci, což nedělá z každého erytrocytu buňku s jádrem. A spojuje částečně pravdivou vlastnost s chybným zobecněním."
+    ],
+    "memory": "Vyšší leukocyty mohou být věkový jev; zralý erytrocyt má i u novorozence být bezjaderný."
+  },
+  {
+    "id": 607,
+    "bookRef": "XVII · otázka 11",
+    "category": "Vývoj dítěte",
+    "question": "Srdce novorozence",
+    "options": [
+      "Má kónický tvar",
+      "Roste rychleji do délky než do šířky",
+      "Je třídutinové",
+      "Má větší objem komor než síní"
+    ],
+    "answer": 1,
+    "title": "Dětské srdce mění při růstu proporce i polohu",
+    "paragraphs": [
+      "Klíč vybírá B. Během růstu se tvar a proporce srdce postupně mění, přičemž učebnice zdůrazňuje výraznější růst do délky. Srdce novorozence není už tvarem a polohou úplně stejné jako srdce dospělého.",
+      "Představ si orgán, který roste spolu s hrudníkem a mění své uložení i zatížení. Po narození se výrazně přestavují poměry obou oběhů; změna se týká také relativní práce jednotlivých srdečních oddílů.",
+      "Lidské srdce má dvě síně a dvě komory, nikoli tři dutiny. Poměr velikostí je potřeba vztáhnout k věku a konkrétnímu měření, takže D není vhodná jednoduchá definice novorozeneckého srdce. B je učebnicová růstová charakteristika, ne přesný poměr rychlosti v každém období."
+    ],
+    "memory": "Čtyři srdeční dutiny už jsou přítomné; proporce a poloha se během růstu mění."
+  },
+  {
+    "id": 608,
+    "bookRef": "XVII · otázka 12",
+    "category": "Vývoj dítěte",
+    "question": "Novorozenec",
+    "options": [
+      "Vykonává po vytlačení tekutiny z plic své první dýchací pohyby",
+      "Dosahuje plného provzdušnění plic během několika minut po porodu",
+      "Má teprve po prvním týdnu života zvětšené, zaoblené plíce, které překrývají srdce v osrdečníku",
+      "Má v plicích první vzdušné plicní sklípky až několik minut po porodu"
+    ],
+    "answer": 1,
+    "title": "První dechy rychle zavádějí vzduch, odstraňování tekutiny ale pokračuje",
+    "paragraphs": [
+      "Klíč vybírá B jako popis rychlého rozvinutí a provzdušnění plic po porodu. Slovo plného je zjednodušené: přechod není jeden okamžik a odstraňování tekutiny i stabilizace plicního prostředí pokračují déle.",
+      "Představ si otevření dříve tekutinou vyplněných dýchacích prostor prvním prouděním vzduchu. Tekutina se odstraňuje hlavně vstřebáváním a dalšími mechanismy, nikoli nutně úplným vytlačením ještě před prvním dechem. První vzduch přichází už s prvními účinnými nádechy.",
+      "Dýchací pohyby plodu navíc existují před narozením, ale neznamenají vzdušné dýchání. Plíce také po porodu dál strukturálně dozrávají, takže B nemůže znamenat hotový dospělý počet a stav všech sklípků během několika minut."
+    ],
+    "memory": "První účinné nádechy provzdušňují rychle; úplný přechod a zrání trvají déle.",
+    "note": "B nesmí být čteno jako okamžité dokončení všech plicních změn. Vstřebávání tekutiny a stabilizace pokračují."
+  },
+  {
+    "id": 609,
+    "bookRef": "XVII · otázka 13",
+    "category": "Vývoj dítěte",
+    "question": "U novorozence",
+    "options": [
+      "Je velmi malá nosní dutina (asi 1/3 nosní dutiny dospělého)",
+      "Jsou již vytvořeny vedlejší nosní dutiny",
+      "Ještě není vytvořena hrtanová příklopka",
+      "Je krátký a široký hrtan ve velmi nízké poloze"
+    ],
+    "answer": 0,
+    "title": "Malé dýchací cesty mají jiné proporce než u dospělého",
+    "paragraphs": [
+      "Klíč vybírá A. Nosní prostor novorozence je malý a jeho rozměry i další proporce dýchacích cest se růstem mění. Údaj jedné třetiny je jen školní přibližování bez určení konkrétního rozměru, nikoli přesné univerzální měření.",
+      "Představ si úzké cesty, v nichž i menší změna průsvitu výrazně ovlivní proudění. Hrtan je u malého dítěte uložen výše, ne velmi nízko, a hrtanová příklopka už je vytvořená. C a D proto nejsou správné obecné popisy.",
+      "B je nejednoznačné: některé vedlejší nosní dutiny, zejména drobné čelistní a čichové prostory, už přítomny jsou, ale nejsou všechny vyvinuty jako u dospělého. Výběr A tedy nemá naučit, že novorozenec nemá vůbec žádné vedlejší dutiny."
+    ],
+    "memory": "Malý nos a vysoko uložený hrtan; některé vedlejší dutiny už existují v malé podobě.",
+    "note": "Číselný poměr v A je orientační. B nelze absolutně popřít, protože některé vedlejší dutiny jsou založeny již při narození."
+  },
+  {
+    "id": 610,
+    "bookRef": "XVII · otázka 14",
+    "category": "Vývoj dítěte",
+    "question": "U novorozence",
+    "options": [
+      "Dochází k osídlení trávicího systému bakteriemi až po několika prvních dnech života",
+      "Se začínají vytvářet trávicí enzymy až několik hodin po porodu",
+      "Má příjem potravy urychlující vliv na fyziologické vyzrávání trávicího systému",
+      "Je vytvořeno více žlázek na jednotku plochy žaludeční sliznice, než u dospělého člověka"
+    ],
+    "answer": 2,
+    "title": "Trávicí soustava má výbavu už před narozením a po něm dále dozrává",
+    "paragraphs": [
+      "Správně C. Přijímání potravy a kontakt s jejími složkami se podílejí na funkčním dozrávání trávicího systému. Ten ale při narození nezačíná úplně od nuly: řada enzymových a dalších mechanismů je založena už prenatálně.",
+      "Představ si připravený provoz, který se při novém způsobu zásobování dále přizpůsobuje. Jednotlivé funkce nemusí mít stejnou výkonnost jako u dospělého, přesto už umožňují běžné novorozenecké trávení.",
+      "Bakteriální osidlování se rozbíhá rychle v souvislosti s porodem a následnými kontakty, ne až po povinném několikadenním čekání. Nabídka C vysvětluje vývojový podnět, nikoli pravidlo, že jakákoli potrava v libovolném množství je v každém věku vhodná."
+    ],
+    "memory": "Trávení má prenatální základ a po narození se dál učí pracovat v nových podmínkách."
+  },
+  {
+    "id": 611,
+    "bookRef": "XVII · otázka 15",
+    "category": "Vývoj dítěte",
+    "question": "Vyberte nesprávnou odpověď! Novorozenec",
+    "options": [
+      "Je schopen polykat pouze tekutiny",
+      "Má již v čelistech uloženy zuby",
+      "Má relativně velká játra",
+      "Má velkou slinivku břišní"
+    ],
+    "answer": 3,
+    "title": "Zubní základy jsou přítomné, i když ještě nejsou vidět",
+    "paragraphs": [
+      "Klíč vybírá D jako nesprávnou charakteristiku. Slinivka novorozence není v tomto školním srovnání relativně velký orgán; její stavba a funkční výkon se dále vyvíjejí. Velká játra jsou naopak typickým relativním rysem raného věku.",
+      "Představ si rozdíl mezi založeným orgánem a tím, co už lze vidět na povrchu. Zuby se vyvíjejí uvnitř čelistí před prořezáním, takže B neříká, že každý novorozenec už musí mít zuby viditelné v ústech.",
+      "A je výživová a funkční zkratka, nikoli přesná definice všech možností polykacího mechanismu. Pro tuto záporně položenou otázku máš vybrat D, ne omylem některý z běžných vývojových znaků. Při učení tak odděl viditelný stav, vnitřní základy a relativní velikost orgánů."
+    ],
+    "memory": "Zuby už jsou založené v čelistech, relativně velká jsou játra; hledaná chyba je D."
+  },
+  {
+    "id": 612,
+    "bookRef": "XVII · otázka 16",
+    "category": "Vývoj dítěte",
+    "question": "U novorozence",
+    "options": [
+      "Jsou ledviny relativně větší a hmotnější než ledviny u dospělého",
+      "Jsou ledviny uloženy poněkud výše",
+      "Je již vytvořen tukový polštář ledvin",
+      "Jsou z hlediska mikroskopické stavby již vytvořeny zralé nefrony"
+    ],
+    "answer": 0,
+    "title": "Relativní velikost není totéž co absolutní hmotnost",
+    "paragraphs": [
+      "Klíč vybírá A. Ledviny jsou u novorozence relativně velké vzhledem k velikosti těla. To rozhodně neznamená, že by každá novorozenecká ledvina vážila v gramech více než ledvina dospělého člověka.",
+      "Představ si srovnávání podílu na celku místo samotného čísla na váze. Tvar, uložení i okolní tuková výbava se růstem mění. Ledvinné funkce při narození navíc nemají ve všech ohledech dospělou výkonnost.",
+      "U donošeného dítěte bývá tvorba nových nefronů převážně dokončená už před narozením, ale to není totéž jako úplná funkční zralost všech jejich částí. D proto potřebuje rozlišit založenou mikroskopickou stavbu a další dozrávání. A je zde nejvýstižnější charakteristika podle klíče."
+    ],
+    "memory": "Poměrně velké ledviny znamenají podíl k tělu; založený nefron ještě není dospělá funkce.",
+    "note": "D je bez rozlišení strukturální a funkční zralosti nejednoznačné; u donošených jsou nefrony zpravidla založeny prenatálně."
+  },
+  {
+    "id": 613,
+    "bookRef": "XVII · otázka 17",
+    "category": "Vývoj dítěte",
+    "question": "U novorozence",
+    "options": [
+      "Je zahájena činnost potních žláz až ve třech týdnech života",
+      "Jsou mazové žlázy funkční již po narození",
+      "Je relativně více podkožního tuku než u batolete",
+      "Ještě nejsou vytvořeny řasy a obočí"
+    ],
+    "answer": 1,
+    "title": "Mazové žlázy mají vývojovou aktivitu už před narozením",
+    "paragraphs": [
+      "Správně B. Mazové žlázy jsou funkčně aktivní již v časném životě a jejich sekrece souvisí i s prenatálním prostředím. Po narození se jejich aktivita mění v závislosti na hormonálních a vývojových poměrech.",
+      "Představ si kožní provoz, který už před narozením přispívá k ochrannému prostředí povrchu těla. Narození proto nemusí být první okamžik, kdy se všechny kožní žlázy vůbec začnou používat.",
+      "Řasy a obočí se zakládají prenatálně, takže D je chybné. Pocení a termoregulace dozrávají, ale nelze jim všem předepsat stejný ostrý start přesně ve třech týdnech. Také poměr tuku závisí na věku a individuálních podmínkách; B je konkrétní správná časová souvislost."
+    ],
+    "memory": "Mazové žlázy fungují časně; řasy a obočí nejsou až novým výtvorem po narození."
+  },
+  {
+    "id": 614,
+    "bookRef": "XVII · otázka 18",
+    "category": "Vývoj dítěte",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 0,
+    "title": "Vlasové struktury se vyvíjejí už před narozením",
+    "paragraphs": [
+      "Správně podle klíče A: první výrok se přijímá, druhý je nepravdivý. Lanugo je jemné prenatální ochlupení, které se z velké části před porodem uvolňuje. U některých novorozenců, zvláště méně zralých, může část přetrvávat.",
+      "Představ si výměnu dočasného povrchového pokryvu, nikoli náhlý vznik všech vlasových folikulů po porodu. Vlasy, řasy i obočí se vyvíjejí už během nitroděložního života. Slovo až v druhém tvrzení je proto zásadní chyba.",
+      "Ani celé tělo v prvním výroku není třeba brát doslova na každém centimetru: dlaně a plosky běžné vlasové folikuly nemají. Označení primární a sekundární je tradiční vývojové třídění; důležité je rozpoznat prenatální vznik, proměnu pokryvu a variabilitu jeho přetrvávání."
+    ],
+    "memory": "Lanugo je prenatální jemný pokryv; vlasy, řasy a obočí nevznikají teprve po narození.",
+    "statements": [
+      "Primární ochlupení se vyvíjí během nitroděložního vývoje a jako jemné chmýří pokrývá celé tělo plodu. Toto ochlupení se nazývá lanugo. Před porodem odpadává do plodové vody.",
+      "Sekundární ochlupení se začíná vytvářet až po narození. Patří k němu vlasy, řasy, obočí a drobné chloupky na povrchu těla."
+    ],
+    "note": "První výrok je zjednodušený: lanugo nemusí celé zmizet před porodem a nepokrývá doslova všechny povrchy."
+  },
+  {
+    "id": 615,
+    "bookRef": "XVII · otázka 19",
+    "category": "Vývoj dítěte",
+    "question": "Novorozenec",
+    "options": [
+      "Má těsně po porodu teplotu v konečníku až 35 °C",
+      "Nemá ještě dokonalou termoregulaci",
+      "Je chráněn před tepelnými ztrátami vrstvou podkožního tuku",
+      "Má odlišné reflexní mechanismy řízení tělesné teploty"
+    ],
+    "answer": 1,
+    "title": "Malé tělo ztrácí teplo relativně rychle",
+    "paragraphs": [
+      "Klíč vybírá B. Novorozenec má omezenější schopnost udržet tepelnou rovnováhu než dospělý. Významný je velký povrch vzhledem k hmotnosti, odlišná izolační výbava a nezralost některých regulačních odpovědí.",
+      "Představ si malou nádobu, která vzhledem ke svému objemu rychleji vyměňuje teplo s okolím. Organismus má mechanismy tvorby tepla včetně významu hnědého tuku, ale jejich možnosti nejsou neomezené.",
+      "Také C je věcně pravdivé: podkožní tuk k tepelné ochraně přispívá, aniž by zajistil dokonalou regulaci. Teplota 35 °C není údaj, který by se měl učit jako běžná očekávaná normální teplota všech novorozenců. Pro test zůstává B, ale C nepopíráme."
+    ],
+    "memory": "Nedokonalá termoregulace a ochranný podíl tuku mohou platit současně.",
+    "note": "C je také pravdivý dílčí ochranný mechanismus. Klíč vybírá B; hodnota 35 °C není běžný normální cíl."
+  },
+  {
+    "id": 616,
+    "bookRef": "XVII · otázka 20",
+    "category": "Vývoj dítěte",
+    "question": "U novorozence",
+    "options": [
+      "Mají nadledviny velkou hmotnost – dosahují větší hmotnosti, než ledviny",
+      "Není ještě u slinivky břišní plně vyvinuta její endokrinní funkce",
+      "Má štítná žláza hmotnost jako v dospělosti",
+      "Vylučují Langerhansovy ostrůvky v pankreatu hormon somatostatin, který zasahuje do řízení růstu"
+    ],
+    "answer": 3,
+    "title": "Pankreas tvoří i somatostatin, jeho hlavní místní úloha ale není totéž co hypothalamický signál",
+    "paragraphs": [
+      "Klíč vybírá D. Delta buňky pankreatických ostrůvků vytvářejí somatostatin. Ten v pankreatu působí významně místně a tlumí uvolňování dalších hormonů, například inzulínu a glukagonu.",
+      "Představ si stejnou molekulu používanou na různých pracovištích. Somatostatin z hypothalamu má důležitou úlohu v řízení výdeje růstového hormonu z hypofýzy. Není přesné celou tuto růstovou úlohu automaticky připsat především pankreatickému zdroji.",
+      "Novorozenecké nadledviny jsou relativně velké, ale ne běžně těžší než ledviny; štítná žláza nemá dospělou absolutní hmotnost. Endokrinní pankreas už funguje, přesto některé regulační odpovědi dále dozrávají. B proto není vhodné použít k tvrzení, že má novorozenec hotovou dospělou hormonální regulaci."
+    ],
+    "memory": "Delta buňky → somatostatin; v ostrůvku místní brzda, v hypothalamu také regulace GH.",
+    "note": "D spojuje různé zdroje a úlohy somatostatinu. B je bez určení stupně zralosti příliš obecné; endokrinní funkce je přítomná, ale dál se vyvíjí."
+  },
+  {
+    "id": 617,
+    "bookRef": "XVII · otázka 21",
+    "category": "Vývoj dítěte",
+    "question": "Novorozenec je vybaven",
+    "options": [
+      "Prvními stálými podmíněnými reflexy",
+      "Základními reflexy, důležitými pro přežití",
+      "Poměrně malou schopností mozkové kůry šířit podráždění a útlum",
+      "Již konečným počtem neuronů, které se po narození již nedělí, ani nerostou"
+    ],
+    "answer": 1,
+    "title": "Vrozené okruhy umožňují fungování ještě před učením",
+    "paragraphs": [
+      "Správně B. Novorozenec má vrozené reflexní odpovědi, například sací a polykací, které podporují příjem potravy a další základní fungování. Nečeká tedy s veškerým nervovým řízením až na pozdější zkušenost.",
+      "Představ si základní výbavu, na kterou postupně navazuje učení a změny nervových sítí. Podmíněné reflexy jsou získané vazby a nelze je charakterizovat jako první stálé vrozené programy. A směšuje dvě odlišné kategorie.",
+      "D je chybné zejména tvrzením, že neurony už nerostou: jejich výběžky, spojení a funkce se po narození výrazně mění. Rozvoj mozku není jen případné přibývání buněk, ale také přestavba sítí, myelinizace a zrání řízení. B tak spojuje časnou funkčnost s pokračujícím vývojem."
+    ],
+    "memory": "Vrozené reflexy už pomáhají přežít; nervové sítě se přesto dál vyvíjejí."
+  },
+  {
+    "id": 618,
+    "bookRef": "XVII · otázka 22",
+    "category": "Vývoj dítěte",
+    "question": "U novorozence",
+    "options": [
+      "Již slzná žláza tvoří slzy",
+      "Ještě nejsou funkční volná nervová zakončení pro vnímání bolesti",
+      "Je již stejný počet zcela funkčních chuťových receptorů jako u dospělého člověka",
+      "Je již vyvinuto rozlišování barev a jejich odstínů"
+    ],
+    "answer": 0,
+    "title": "Ochranný slzný film může existovat dříve než nápadné slzy při pláči",
+    "paragraphs": [
+      "Správně A. Slzná sekrece už přispívá k ochraně a zvlhčení oka. To není totéž jako množství nápadně přetékajících slz při pláči, které může být zpočátku menší a později se měnit.",
+      "Představ si tenkou ochrannou vrstvu na povrchu oka, kterou nemusíš vidět jako kapku na tváři. Chybějící výrazné slzení při pláči proto automaticky neznamená úplně nefunkční slznou žlázu.",
+      "Novorozenec bolest vnímá; B není správná fyziologická poučka. Chuť je funkční časně, ale C s přesně stejným počtem a úplnou dospělou funkcí je nepřiměřeně absolutní. Také zrakové rozlišování dál dozrává a nelze je považovat za hotovou dospělou barevnou diskriminaci."
+    ],
+    "memory": "Slzný film není totéž co viditelná slza; novorozenec bolest vnímá."
+  },
+  {
+    "id": 619,
+    "bookRef": "XVII · otázka 23",
+    "category": "Vývoj dítěte",
+    "question": "Jsou uvedená tvrzení správná, nebo ne?",
+    "options": [
+      "1. ano, 2. ne",
+      "1. ne, 2. ano",
+      "1. ano, 2. ano",
+      "1. ne, 2. ne"
+    ],
+    "answer": 2,
+    "title": "Klíč přijímá dva výroky, které mají důležitá zjednodušení",
+    "paragraphs": [
+      "Tištěný klíč vybírá C, tedy obě tvrzení ano. Potřeba spánku se s věkem opravdu mění, ale 20 hodin denně nelze předepsat všem novorozencům a všem kojencům. V tomto dlouhém období se spánek výrazně proměňuje a jednotlivci se liší.",
+      "Představ si vývojový proces místo stejného denního rozvrhu na celý první rok. Také u dospělých a ve stáří se může měnit délka, rozložení i kvalita spánku. Univerzální konečná věta o neměnnosti proto není přesný individuální popis.",
+      "Základní stavba kůry je založena před narozením, ale není plně dokončená ve všech strukturálních a funkčních ohledech. Po narození pokračují změny výběžků, synapsí, sítí i myelinizace a kůra už od počátku funguje. Pro hodnocení C; odborně nelze oba výroky přijmout bez těchto oprav."
+    ],
+    "memory": "Pro PDF C; spánek je proměnlivý a po narození se vyvíjí bílá hmota i korové sítě.",
+    "statements": [
+      "Potřeba spánku u člověka je různá. Novorozenec a kojenec prospí 20 hodin denně, u starších dětí potřeba spánku klesá, dospělí spí 7 až 9 hodin denně a ve stáří se už potřeba spánku nemění.",
+      "Mozková kůra je již u novorozence plně vytvořena, ale zdaleka není dokončen vývoj podkorové bílé hmoty, to je vývoj spojů mozkové kůry. Funkční projevy korové činnosti tedy u novorozence nastupují postupně, v průběhu několika let po narození."
+    ],
+    "note": "Oba výroky jsou zjednodušené: 20 hodin není jednotná potřeba všech kojenců a kůra není při narození plně dokončená."
+  },
+  {
+    "id": 620,
+    "bookRef": "XVII · otázka 24",
+    "category": "Vývoj dítěte",
+    "question": "Jak nazýváme jednotlivé uvedené postnatální období vývoje člověka?",
+    "options": [
+      "A2, B4, C1, D5, E6, F3",
+      "A1, B5, C2, D4, E6, F3",
+      "A1, B4, C2, D5, E6, F3",
+      "A1, B4, C6, D5, E2, F3"
+    ],
+    "answer": 2,
+    "title": "Věkové přiřazení je orientační mapa, ne ostrá biologická hranice",
+    "paragraphs": [
+      "Klíč vybírá C: desátý rok k pubertě A1, druhý rok k batoleti B4, šestnáctý rok k adolescenci C2, šestý měsíc ke kojenci D5, devatenáctý rok k dospělosti E6 a šestý den k novorozenci F3.",
+      "Představ si časovou osu s pojmenovanými úseky. U raných kategorií je přiřazení přehledné: novorozenec první týdny, kojenec první rok a batole další rané roky. U dospívání je větší rozdíl mezi jednoduchým školním rozdělením a individuálním průběhem.",
+      "Ne každý desetiletý je ve stejném pubertálním stadiu a devatenáctý rok není univerzální okamžik dokončení biologického zrání. V některých členěních stále spadá do adolescence. Kombinace C slouží jako klíč této tabulky, nikoli jako přesný předpis vývoje každého člověka."
+    ],
+    "memory": "6. den novorozenec, 6. měsíc kojenec, 2. rok batole; pozdější hranice jsou orientační.",
+    "terms": [
+      "Desátý rok života",
+      "Druhý rok života",
+      "Šestnáctý rok života",
+      "Šestý měsíc života",
+      "Devatenáctý rok života",
+      "Šestý den života"
+    ],
+    "definitions": [
+      "Puberta",
+      "Adolescence",
+      "Novorozenecké období",
+      "Období batolete",
+      "Kojenecké období",
+      "Dospělost"
+    ],
+    "note": "Zařazení 10. roku do puberty a 19. roku do dospělosti je školní zjednodušení; adolescence a biologické zrání mají různá vymezení."
+  },
+  {
+    "id": 621,
+    "bookRef": "XVII · otázka 25",
+    "category": "Vývoj dítěte",
+    "question": "Novorozenecké období",
+    "options": [
+      "Trvá první týden života dítěte",
+      "Je charakteristické již dokonalou termoregulací",
+      "Trvá až do prořezání prvních zoubků",
+      "Končí 28. dnem života dítěte"
+    ],
+    "answer": 3,
+    "title": "Novorozenec je věková kategorie prvních čtyř týdnů",
+    "paragraphs": [
+      "Správně D. Novorozenecké období zahrnuje prvních 28 dní života. Je to čas velké přestavby: dítě začne samo dýchat plícemi, mění se krevní oběh a přechází na příjem potravy mimo tělo matky.",
+      "Představ si první čtyři týdny jako úvodní adaptační etapu. Zvládnutí této etapy neznamená, že už všechny orgány pracují jako u dospělého. Regulace teploty i další funkce dál dozrávají, proto B neplatí.",
+      "První týden je pouze část novorozeneckého období. Prořezávání zubů naopak obvykle přichází mnohem později a hranici této kategorie neurčuje. Pro zapamatování pomůže čtveřice týdnů po sedmi dnech: 4 × 7 = 28."
+    ],
+    "memory": "Novorozenec: první 4 týdny, tedy 28 dní."
+  },
+  {
+    "id": 622,
+    "bookRef": "XVII · otázka 26",
+    "category": "Vývoj dítěte",
+    "question": "Období novorozenecké",
+    "options": [
+      "Je různě dlouhé v závislosti na délce prenatálního vývoje",
+      "Končí v prvním roce života",
+      "Trvá první měsíc života",
+      "Končí v prvním týdnu života"
+    ],
+    "answer": 2,
+    "title": "Věk po narození odlišuj od zralosti při narození",
+    "paragraphs": [
+      "Správně C. První měsíc je zde školní zkratka pro prvních 28 dní života. Přesné vymezení nepřebírá různý počet dní kalendářních měsíců: dítě se neposune do jiné kategorie jen proto, že se narodilo v únoru.",
+      "Představ si dvě různá pravítka. Jedno měří dobu od narození, druhé zralost dítěte a délku těhotenství před porodem. Předčasně narozené dítě může mít jiné vývojové potřeby, ale novorozenecké období se jako věková kategorie stále počítá od narození.",
+      "A tedy zaměňuje zralost za vymezení věkové etapy. Týden je příliš krátký a první rok patří převážně období kojeneckému. Když narazíš na dvojici otázek 25 a 26, spoj si měsíc s přesnějším údajem 28 dní."
+    ],
+    "memory": "První měsíc v této otázce znamená prvních 28 dní, ne libovolný kalendářní měsíc."
+  },
+  {
+    "id": 623,
+    "bookRef": "XVII · otázka 27",
+    "category": "Vývoj dítěte",
+    "question": "Novorozenec",
+    "options": [
+      "Má uzavřený lebeční kryt",
+      "Má sací, polykací a uchopovací reflex",
+      "Má v krvi snížený počet červených krvinek",
+      "Má ve srovnání s batoletem sníženou potřebu bílkovin"
+    ],
+    "answer": 1,
+    "title": "Vrozené reflexy fungují dříve než vědomě nacvičené pohyby",
+    "paragraphs": [
+      "Správně B. Sací a polykací reflex pomáhají přijímat potravu už po narození. Dlaňový uchopovací reflex znamená, že podráždění dlaně vyvolá sevření prstů. Dítě tyto reakce nemusí nejprve vědomě natrénovat.",
+      "Představ si základní výbavu, která pracuje ještě před osvojováním cílených dovedností. Reflexní sevření není totéž co pozdější záměrné uchopení hračky. Podobný viditelný pohyb tak může mít v různém věku jiné řízení.",
+      "Lebka má ještě švy a fontanely; A proto jako tvrzení o úplném uzavření neplatí. Počet červených krvinek je při narození relativně vysoký. Rychlý růst vyžaduje stavební látky a D bez rozlišení absolutní potřeby a potřeby na kilogram není správná charakteristika."
+    ],
+    "memory": "Sání, polykání a reflexní sevření dlaně jsou součástí vrozené výbavy."
+  },
+  {
+    "id": 624,
+    "bookRef": "XVII · otázka 28",
+    "category": "Vývoj dítěte",
+    "question": "Kojenecké období",
+    "options": [
+      "Trvá do zhojení pupečního pahýlu",
+      "Trvá od narození do dvou let dítěte",
+      "Je období, v němž ještě není vyvinuta dokonalá termoregulace",
+      "Je obdobím rozvoje řeči"
+    ],
+    "answer": 2,
+    "title": "Regulace teploty během prvního roku stále dozrává",
+    "paragraphs": [
+      "Klíč vybírá C. Kojenec už teplotu určitým způsobem reguluje, ale jeho možnosti a odolnost vůči změnám prostředí nejsou plně srovnatelné s dospělým. Význam má i relativně velký povrch těla vzhledem k jeho hmotnosti.",
+      "Představ si menší nádobu s poměrně velkou plochou povrchu: teplo se s okolím vyměňuje snadněji. Organismus navíc teprve dozrává. C tedy neříká, že dítě nemá vůbec žádnou termoregulaci, ale že ještě není dokonale vyzrálá.",
+      "Kojenecké období v běžném zde použitém členění následuje po novorozeneckém a končí prvními narozeninami. Neurčuje je zhojení pupku ani druhý rok. Už v kojeneckém věku se tvoří předpoklady řeči a objevuje žvatlání; D proto nelze číst jako úplně nepravdivý výrok o jakémkoli vývoji komunikace."
+    ],
+    "memory": "Kojenec teplotu reguluje, ale regulace ještě dozrává.",
+    "note": "Klíč C vystihuje nezralost termoregulace; základy řeči se přitom rozvíjejí už v kojeneckém období, takže D je příliš široká alternativa."
+  },
+  {
+    "id": 625,
+    "bookRef": "XVII · otázka 29",
+    "category": "Vývoj dítěte",
+    "question": "Kojenec",
+    "options": [
+      "Plně reguluje svou tělesnou teplotu",
+      "Může být vyživován pouze mateřským mlékem",
+      "Umí již ovládat jemnou motoriku",
+      "Ještě nemá prořezány stoličky"
+    ],
+    "answer": 3,
+    "title": "Stoličky obvykle přicházejí později než první řezáky",
+    "paragraphs": [
+      "Klíč vybírá D. První mléčné stoličky se obvykle prořezávají až po prvních narozeninách. V prvním roce tedy mohou být přítomné některé řezáky, zatímco stoličky většinou ještě chybějí. Pořadí a doba prořezávání se mezi dětmi liší.",
+      "Představ si zuby jako postupně doplňovanou sadu: první kousky neznamenají hotový chrup. A zaměňuje fungující, ale stále zrající regulaci teploty za plně vyspělou. D je typická vývojová charakteristika, ne záruka přesného dne pro každé dítě.",
+      "B může platit v časné části kojeneckého věku, ne jako výživový popis celého prvního roku. Jemná motorika se také už během tohoto roku výrazně vyvíjí, takže C nelze odmítnout tvrzením, že kojenec neumí žádné jemné pohyby. Nabídka je tedy obecná a hodnocení D odpovídá tištěnému klíči."
+    ],
+    "memory": "První zuby nejsou celý chrup; mléčné stoličky zpravidla až po prvních narozeninách.",
+    "note": "B a C mohou podle věku a výkladu částečně platit. Klíč vybírá D; vývoj zubů má individuální rozptyl."
+  },
+  {
+    "id": 626,
+    "bookRef": "XVII · otázka 30",
+    "category": "Vývoj dítěte",
+    "question": "Kojenec",
+    "options": [
+      "Má již prořezány všechny mléčné zuby",
+      "Dosahuje hmotnosti 15 kg",
+      "By měl být po dosažení 6. měsíce kromě kojení přikrmován",
+      "Přestává ke konci kojeneckého období nosit pleny"
+    ],
+    "answer": 2,
+    "title": "Příkrm doplňuje mléčnou výživu při dalším růstu",
+    "paragraphs": [
+      "Správně C podle učebnicového klíče. Základní myšlenka je, že přibližně v druhé polovině prvního roku už rostoucí dítě přechází i na další potraviny. Příkrm znamená doplnění mléčné výživy, nikoli automatické náhlé ukončení kojení.",
+      "Představ si postupné rozšiřování jídelníčku současně s rozvojem schopnosti jídlo zpracovat. Mění se potřeba živin i dovednosti při jídle. Samotné slovo přikrmování proto neznamená, že mateřské mléko přestalo mít význam.",
+      "Všech 20 mléčných zubů se obvykle doplní až později, přibližně do konce batolecího období. Hmotnost 15 kg není obecná norma pro kojence a kontrola vyprazdňování vyžaduje další zrání. Zde se učíme věkovou souvislost; konkrétní zavádění stravy není určeno jedinou větou testu."
+    ],
+    "memory": "Příkrm je přídavek k mléčné výživě; kolem půl roku se jídelníček postupně rozšiřuje."
+  },
+  {
+    "id": 627,
+    "bookRef": "XVII · otázka 31",
+    "category": "Vývoj dítěte",
+    "question": "Kojenecké období končí",
+    "options": [
+      "V prvním měsíci života po hojení pupeční jizvy",
+      "V šesti měsících života, kdy matka dítě přestává kojit",
+      "V prvním roce života, kdy jeho hmotnost dosahuje přibližně 10 kg",
+      "Ve třetím roce života, kdy dítě již běhá a mluví"
+    ],
+    "answer": 2,
+    "title": "Věkovou hranici určuje první narozeninový den",
+    "paragraphs": [
+      "Klíč vybírá C, kterou je potřeba číst jako konec prvního roku života. Kojenecké období končí prvními narozeninami. Údaj přibližně 10 kg je pouze orientační hmotnostní představa, nikoli podmínka přechodu do dalšího období.",
+      "Představ si označení věkových kategorií podle kalendáře: lehčí i těžší dítě překročí první narozeniny ve stejném věku. Dítě nemusí dosáhnout konkrétní hodnoty na váze, aby přestalo být v této klasifikaci kojencem.",
+      "Zhojení pupku nevymezuje konec kojeneckého období a ukončení kojení je něco jiného než konec věkové kategorie. Kojení také nemusí končit v šesti měsících. Třetí rok už spadá do batolecího období; schopnost běhat a mluvit nemění datum prvních narozenin."
+    ],
+    "memory": "Kojenec do prvních narozenin; 10 kg je orientační údaj, ne hranice kategorie."
+  },
+  {
+    "id": 628,
+    "bookRef": "XVII · otázka 32",
+    "category": "Vývoj dítěte",
+    "question": "Koncem batolecího období",
+    "options": [
+      "Se dítě učí chodit",
+      "Se dítě učí mluvit",
+      "Má dítě obvykle prořezáno všech 20 mléčných zubů",
+      "Váží dítě přibližně 6 kilogramů"
+    ],
+    "answer": 2,
+    "title": "Ke konci batolecího věku bývá mléčný chrup kompletní",
+    "paragraphs": [
+      "Správně C. Batolecí období se běžně vymezuje od prvních do třetích narozenin. Přibližně do jeho konce bývá doplněna celá sada 20 mléčných zubů. Slovo obvykle připomíná, že prořezávání nemá u všech dětí stejný rozvrh.",
+      "Představ si chrup jako sadu doplňovanou několik let. Každá polovina horní i dolní čelisti obsahuje v mléčném chrupu pět zubů: dva řezáky, špičák a dvě stoličky. Čtyři takové úseky dávají dohromady 20 zubů.",
+      "Chůze a řeč se rozvíjejí během batolecího věku a jejich základy zpravidla začínají před jeho koncem. A a B nejsou přesný typický znak až závěru období. Hmotnost 6 kg je pro tento věk jako obecná charakteristika příliš nízká. Ani jeden milník sám nepopisuje celý vývoj dítěte."
+    ],
+    "memory": "Čtyři úseky po pěti mléčných zubech = 20; chrup bývá kompletní kolem tří let."
+  },
+  {
+    "id": 629,
+    "bookRef": "XVII · otázka 33",
+    "category": "Vývoj dítěte",
+    "question": "Puberta",
+    "options": [
+      "Začíná u hochů dříve, než u dívek",
+      "Přechází v adolescenci",
+      "Začíná přibližně v 16 letech",
+      "Je obdobím zpomalení růstu"
+    ],
+    "answer": 1,
+    "title": "Učebnice řadí pubertu před pozdější fázi dospívání",
+    "paragraphs": [
+      "Klíč vybírá B. V použitém školním členění puberta s výraznými tělesnými změnami přechází do pozdější adolescence. Je ale dobré znát i širší význam slova adolescence, který může zahrnovat dospívání včetně puberty.",
+      "Představ si vývoj jako plynulý přechod, ne dvě místnosti oddělené jedněmi dveřmi. Pohlavní zrání, proměna tělesných proporcí i psychický vývoj probíhají současně, ale nejsou u všech lidí načasované stejně.",
+      "U dívek puberta v průměru začíná dříve než u chlapců, nikoli obráceně; jde o průměr, ne pravidlo bez výjimek. Šestnáct let nelze uvést jako obecný začátek puberty. Její součástí bývá růstový spurt, tedy zrychlení růstu; pozdější zpomalování necharakterizuje celé období."
+    ],
+    "memory": "V členění PDF: puberta → pozdější adolescence; dívky obvykle začínají dříve.",
+    "note": "Pojem adolescence se používá také pro celé dospívání včetně puberty. B vychází z užšího členění učebnice."
+  },
+  {
+    "id": 630,
+    "bookRef": "XVII · otázka 34",
+    "category": "Vývoj dítěte",
+    "question": "Dospívání",
+    "options": [
+      "Začíná pubertou",
+      "Končí vstupem do středního věku",
+      "Začíná zahájením školního věku",
+      "Začíná obdobím adolescence"
+    ],
+    "answer": 0,
+    "title": "Puberta představuje biologický vstup do dospívání",
+    "paragraphs": [
+      "Správně A podle použitého členění. Pubertální změny znamenají nástup biologického pohlavního zrání a jsou hlavním poznávacím znakem začínajícího dospívání. Nejde jen o jednu změnu vzhledu, ale o souhru hormonů, růstu a zrání orgánů.",
+      "Představ si několik souběžných vývojových hodin: tělesné, psychické a sociální. Nemusejí ukazovat přesně stejnou fázi. Dospívání proto nelze ukončit univerzálním jediným biologickým okamžikem ani zaměnit za celou dobu až do středního věku.",
+      "Začátek školní docházky zpravidla pubertu předchází. D je v této učebnici matoucí, protože adolescenci chápe jako pozdější úsek. V širší terminologii může adolescence znamenat dospívání jako celek; pak to není další samostatná událost před pubertou. Pro tento test si spoj dospívání s nástupem puberty."
+    ],
+    "memory": "Dospívání začíná pubertálními změnami; věkové i terminologické hranice mají rozptyl."
   }
 ]);
 const $ = id => document.getElementById(id);
