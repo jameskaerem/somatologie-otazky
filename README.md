@@ -1,14 +1,14 @@
 # Biologie a somatologie
 
-Verze 2.3.0 • 28. 10. 2026
+Verze 2.5.0 • 28. 10. 2026
 
-Jedna webová stránka, dvě záložky: **Somatologie (630 otázek)** a **Biologie (200 otázek)**. Vše v samostatném `index.html`, který funguje i offline. Obsahuje vysvětlení, paměťové pomůcky, chytré procvičování, opakování chyb a tipů a náhodný test celé sady.
+Jedna webová stránka, dvě záložky: **Somatologie (630 otázek)** a **Biologie (300 otázek)**. Vše v samostatném `index.html`, který funguje i offline. Obsahuje vysvětlení, paměťové pomůcky, chytré procvičování, opakování chyb a tipů a náhodný test celé sady.
 
 ## Změny
 
 - Obecný název „Biologie a somatologie“ v hlavičce, titulku stránky i dokumentaci. Bez osobního věnování a osobního jména v názvu balíčku.
-- Přidány biologické otázky 151–200. Původních 150 biologických i všech 630 somatologických otázek zůstává beze změny, včetně ID, možností, správných odpovědí a vysvětlení.
-- Zůstávají stejné klíče a formát úložiště. Uložený pokrok i starší rozpracovaná kola se zachovají; nové celé kolo obsahuje 200 otázek.
+- Přidány biologické otázky 251–300. Původních 250 biologických i všech 630 somatologických otázek zůstává beze změny, včetně ID, možností, správných odpovědí a vysvětlení.
+- Zůstávají stejné klíče a formát úložiště. Uložený pokrok i starší rozpracovaná kola se zachovají; nové celé kolo obsahuje 300 otázek.
 
 ## Nahrání na současný web
 
@@ -37,13 +37,21 @@ Jde o vlastní testy A–D vytvořené podle výkladu, nikoli přepis hotové te
 | 171–180 | Základní cévní pojmy: ateroskleróza, LDL/HDL, trombus, ischemie, infarkt, bypass a radikály | 60–62 | 31–32 |
 | 181–190 | Mízní cesty, návrat tekutin, transport tuků, uzliny a slezina | 63–64 | 32–33 |
 | 191–200 | Ventilace, metabolismus plynů, vodivé cesty, hltan, hrtan a průdušky | 65–67 | 33–34 |
+| 201–215 | Stavba plic, pleura, alveoly a obrana dýchacích cest | 68–69 | 35 |
+| 216–230 | Nádech/výdech, dýchací svaly, plicní objemy a mrtvý prostor | 69–71 | 35–36 |
+| 231–240 | Řízení dýchání, reakce na CO₂, zotavení po zátěži a další funkce | 71–73 | 36–37 |
+| 241–250 | Difuze plynů, přenos O₂, hemoglobin a transport CO₂ | 75–77 | 38–39 |
+| 251–265 | Trávení a vstřebávání, ústní dutina, stavba zubu, chrup a sliny | 78–81 | 40–41 |
+| 266–275 | Polykání, jícen, peristaltika, žaludek a žaludeční šťáva | 82–83 | 42 |
+| 276–290 | Tenké střevo, klky, pankreas, žluč a zpracování živin | 84–87 | 43–44 |
+| 291–300 | Tlusté střevo, mikrobiota, vyprazdňování a základní funkce jater | 87–90 | 44–46 |
 
-Přehled popisuje použité zdroje, nikoli záruku, že každý odstavec těchto stran už má samostatnou otázku. Přesný celkový počet smysluplných testů nelze určit jen z počtu stran. Další dávka naváže čísly **201–250**, respirační částí dýchací soustavy od tištěné strany 68. Přehled každé nové dávky bude uveden také ve zprávě v chatu.
+Přehled popisuje použité zdroje, nikoli záruku, že každý odstavec těchto stran už má samostatnou otázku. Přesný celkový počet smysluplných testů nelze určit jen z počtu stran. Další dávka naváže čísly **301–350**, látkovou přeměnou od tištěné strany 91. Přehled každé nové dávky bude uveden také ve zprávě v chatu.
 
 Problematická zobecnění zdroje se nepřebírají do testovaných správných odpovědí: například srdce má nervovou regulaci, přestože tvoří vlastní rytmus; tkáňový mok není zcela bez bílkovin; ne všichni tkáňoví makrofágové nutně vznikají z cirkulujících monocytů. Vysvětlení rozlišují školní model a jeho meze.
 
 ## Ověření
 
-Automatické kontroly ověřují shodu všech původních otázek, zachování uložených dat z předchozích verzí obou předmětů, starší nedokončená kola, nová kola všech 630 a 200 otázek, hodnocení, ochranu před dvojím započtením, nezávislé přepínání a reset, chytré opakování, klávesové ovládání a fungování při poškozeném či blokovaném úložišti. Kontroluje se také absence osobního názvu a integrita ZIPu.
+Automatické kontroly ověřují shodu všech původních otázek, zachování uložených dat z předchozích verzí obou předmětů, starší nedokončená kola, nová kola všech 630 a 300 otázek, hodnocení, ochranu před dvojím započtením, nezávislé přepínání a reset, chytré opakování, klávesové ovládání a fungování při poškozeném či blokovaném úložišti. Kontroluje se také absence osobního názvu a integrita ZIPu.
 
 Testy vykonávají skutečný JavaScript aplikace s minimálním adaptérem DOM. Vizuální kontrola nové verze ani ověření ve skutečném prohlížeči nebyly provedeny; předchozí místní náhled nebyl dostupný. ZIP obsahuje pouze `index.html` a `README.md`, aplikace nevyžaduje externí knihovny.
