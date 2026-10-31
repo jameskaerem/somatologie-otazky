@@ -1,14 +1,14 @@
 # Biologie a somatologie
 
-Verze 2.5.0 • 28. 10. 2026
+Verze 2.7.0 • 31. 10. 2026
 
-Jedna webová stránka, dvě záložky: **Somatologie (630 otázek)** a **Biologie (300 otázek)**. Vše v samostatném `index.html`, který funguje i offline. Obsahuje vysvětlení, paměťové pomůcky, chytré procvičování, opakování chyb a tipů a náhodný test celé sady.
+Jedna webová stránka, dvě záložky: **Somatologie (630 otázek)** a **Biologie (400 otázek)**. Vše v samostatném `index.html`, který funguje i offline. Obsahuje vysvětlení, paměťové pomůcky, chytré procvičování, opakování chyb a tipů a náhodný test celé sady.
 
 ## Změny
 
 - Obecný název „Biologie a somatologie“ v hlavičce, titulku stránky i dokumentaci. Bez osobního věnování a osobního jména v názvu balíčku.
-- Přidány biologické otázky 251–300. Původních 250 biologických i všech 630 somatologických otázek zůstává beze změny, včetně ID, možností, správných odpovědí a vysvětlení.
-- Zůstávají stejné klíče a formát úložiště. Uložený pokrok i starší rozpracovaná kola se zachovají; nové celé kolo obsahuje 300 otázek.
+- Přidány biologické otázky 351–400. Původních 350 biologických i všech 630 somatologických otázek zůstává beze změny, včetně ID, možností, správných odpovědí a vysvětlení.
+- Zůstávají stejné klíče a formát úložiště. Uložený pokrok i starší rozpracovaná kola se zachovají; nové celé kolo obsahuje 400 otázek.
 
 ## Nahrání na současný web
 
@@ -45,13 +45,21 @@ Jde o vlastní testy A–D vytvořené podle výkladu, nikoli přepis hotové te
 | 266–275 | Polykání, jícen, peristaltika, žaludek a žaludeční šťáva | 82–83 | 42 |
 | 276–290 | Tenké střevo, klky, pankreas, žluč a zpracování živin | 84–87 | 43–44 |
 | 291–300 | Tlusté střevo, mikrobiota, vyprazdňování a základní funkce jater | 87–90 | 44–46 |
+| 301–317 | Metabolismus sacharidů, tuků a bílkovin, esenciální aminokyseliny a obnova tkání | 91–93 | 46–47 |
+| 318–329 | Složky výživy, vláknina, esenciální mastné kyseliny, vitaminy, minerály a voda | 93–94 | 47–48 |
+| 330–339 | Exkrece, osmoregulace, stavba ledviny a nefronu | 95–98 | 48–50 |
+| 340–350 | Odvod moči, filtrace, resorpce, ADH a vyprazdňování měchýře | 98–100 | 50–51 |
+| 351–355 | Močové kameny, selhání ledvin, princip hemodialýzy a anatomické souvislosti infekcí | 101 | 51 |
+| 356–370 | Kůže, pokožka, škára, podkoží, pigment, mazové a potní žlázy, akné | 102–103 | 52 |
+| 371–385 | Tvorba a výdej tepla, pocení, kožní průtok, hypotalamus a horečka | 104–106 | 53–54 |
+| 386–400 | Nervová soustava, neuron, dendrity, axon, myelin, zakončení, glie a nervová vlákna | 107–109 | 54–55 |
 
-Přehled popisuje použité zdroje, nikoli záruku, že každý odstavec těchto stran už má samostatnou otázku. Přesný celkový počet smysluplných testů nelze určit jen z počtu stran. Další dávka naváže čísly **301–350**, látkovou přeměnou od tištěné strany 91. Přehled každé nové dávky bude uveden také ve zprávě v chatu.
+Přehled popisuje použité zdroje, nikoli záruku, že každý odstavec těchto stran už má samostatnou otázku. Přesný celkový počet smysluplných testů nelze určit jen z počtu stran. Další dávka naváže čísly **401–450**, membránovým potenciálem a dalšími principy nervové signalizace od tištěné strany 110. Přehled každé nové dávky bude uveden také ve zprávě v chatu.
 
 Problematická zobecnění zdroje se nepřebírají do testovaných správných odpovědí: například srdce má nervovou regulaci, přestože tvoří vlastní rytmus; tkáňový mok není zcela bez bílkovin; ne všichni tkáňoví makrofágové nutně vznikají z cirkulujících monocytů. Vysvětlení rozlišují školní model a jeho meze.
 
 ## Ověření
 
-Automatické kontroly ověřují shodu všech původních otázek, zachování uložených dat z předchozích verzí obou předmětů, starší nedokončená kola, nová kola všech 630 a 300 otázek, hodnocení, ochranu před dvojím započtením, nezávislé přepínání a reset, chytré opakování, klávesové ovládání a fungování při poškozeném či blokovaném úložišti. Kontroluje se také absence osobního názvu a integrita ZIPu.
+Automatické kontroly ověřují shodu všech původních otázek, zachování uložených dat z předchozích verzí obou předmětů, starší nedokončená kola, nová kola všech 630 a 400 otázek, hodnocení, ochranu před dvojím započtením, nezávislé přepínání a reset, chytré opakování, klávesové ovládání a fungování při poškozeném či blokovaném úložišti. Kontroluje se také absence osobního názvu a integrita ZIPu.
 
 Testy vykonávají skutečný JavaScript aplikace s minimálním adaptérem DOM. Vizuální kontrola nové verze ani ověření ve skutečném prohlížeči nebyly provedeny; předchozí místní náhled nebyl dostupný. ZIP obsahuje pouze `index.html` a `README.md`, aplikace nevyžaduje externí knihovny.
