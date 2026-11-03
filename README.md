@@ -1,14 +1,14 @@
 # Biologie a somatologie
 
-Verze 2.7.0 • 31. 10. 2026
+Verze 2.10.0 • 3. 11. 2026
 
-Jedna webová stránka, dvě záložky: **Somatologie (630 otázek)** a **Biologie (400 otázek)**. Vše v samostatném `index.html`, který funguje i offline. Obsahuje vysvětlení, paměťové pomůcky, chytré procvičování, opakování chyb a tipů a náhodný test celé sady.
+Jedna webová stránka, dvě záložky: **Somatologie (630 otázek)** a **Biologie (550 otázek)**. Vše v samostatném `index.html`, který funguje i offline. Obsahuje vysvětlení, paměťové pomůcky, chytré procvičování, opakování chyb a tipů a náhodný test celé sady.
 
 ## Změny
 
 - Obecný název „Biologie a somatologie“ v hlavičce, titulku stránky i dokumentaci. Bez osobního věnování a osobního jména v názvu balíčku.
-- Přidány biologické otázky 351–400. Původních 350 biologických i všech 630 somatologických otázek zůstává beze změny, včetně ID, možností, správných odpovědí a vysvětlení.
-- Zůstávají stejné klíče a formát úložiště. Uložený pokrok i starší rozpracovaná kola se zachovají; nové celé kolo obsahuje 400 otázek.
+- Přidány biologické otázky 501–550. Původních 500 biologických i všech 630 somatologických otázek zůstává beze změny, včetně ID, možností, správných odpovědí a vysvětlení.
+- Zůstávají stejné klíče a formát úložiště. Uložený pokrok i starší rozpracovaná kola se zachovají; nové celé kolo obsahuje 550 otázek.
 
 ## Nahrání na současný web
 
@@ -53,13 +53,25 @@ Jde o vlastní testy A–D vytvořené podle výkladu, nikoli přepis hotové te
 | 356–370 | Kůže, pokožka, škára, podkoží, pigment, mazové a potní žlázy, akné | 102–103 | 52 |
 | 371–385 | Tvorba a výdej tepla, pocení, kožní průtok, hypotalamus a horečka | 104–106 | 53–54 |
 | 386–400 | Nervová soustava, neuron, dendrity, axon, myelin, zakončení, glie a nervová vlákna | 107–109 | 54–55 |
+| 401–410 | Klidový membránový potenciál, iontové gradienty, kanály a pumpy | 110–112 | 56–57 |
+| 411–422 | Chemické synapse, receptory, depolarizace, hyperpolarizace a místní potenciály | 113–115 | 57–58 |
+| 423–434 | Vznik a vedení vzruchu, kódování a integrace nervových signálů | 114–118 | 58–60 |
+| 435–450 | Nervové obvody, reflexní oblouk, vrozené a podmíněné reflexy | 119–120 | 60–61 |
+| 451–465 | Vývoj CNS, stavba míchy, kořeny míšních nervů a vzestupné/sestupné dráhy | 121–122 | 61–62 |
+| 466–475 | Mozkový kmen, hlavové nervy, komory, likvor a mozkové pleny | 123–124 | 62–63 |
+| 476–485 | Mozeček, střední mozek, talamus, hypotalamus a propojení s hypofýzou | 125–126 | 63–64 |
+| 486–500 | Hemisféry, mozkový trámec, kůra a její oblasti, limbické struktury a bazální ganglia | 126–128 | 64–65 |
+| 501–510 | Lokomoce, úrovně motorického řízení, kortikospinální dráha a zpětná vazba | 129–131 | 65–66 |
+| 511–525 | Autonomní ganglia, sympatikus, parasympatikus a koordinace vnitřních funkcí | 131–134 | 66–68 |
+| 526–535 | Plasticita a základní pojmy cévních, infekčních a degenerativních onemocnění CNS | 134–137 | 68–69 |
+| 536–550 | Endokrinní/exokrinní sekrece, hormony, receptory a uspořádání hypofýzy | 138–141 | 70–71 |
 
-Přehled popisuje použité zdroje, nikoli záruku, že každý odstavec těchto stran už má samostatnou otázku. Přesný celkový počet smysluplných testů nelze určit jen z počtu stran. Další dávka naváže čísly **401–450**, membránovým potenciálem a dalšími principy nervové signalizace od tištěné strany 110. Přehled každé nové dávky bude uveden také ve zprávě v chatu.
+Přehled popisuje použité zdroje, nikoli záruku, že každý odstavec těchto stran už má samostatnou otázku. Přesný celkový počet smysluplných testů nelze určit jen z počtu stran. Další dávka naváže čísly **551–600**, zbývajícími hormony hypofýzy a dalšími endokrinními žlázami od tištěné strany 140. Přehled každé nové dávky bude uveden také ve zprávě v chatu.
 
 Problematická zobecnění zdroje se nepřebírají do testovaných správných odpovědí: například srdce má nervovou regulaci, přestože tvoří vlastní rytmus; tkáňový mok není zcela bez bílkovin; ne všichni tkáňoví makrofágové nutně vznikají z cirkulujících monocytů. Vysvětlení rozlišují školní model a jeho meze.
 
 ## Ověření
 
-Automatické kontroly ověřují shodu všech původních otázek, zachování uložených dat z předchozích verzí obou předmětů, starší nedokončená kola, nová kola všech 630 a 400 otázek, hodnocení, ochranu před dvojím započtením, nezávislé přepínání a reset, chytré opakování, klávesové ovládání a fungování při poškozeném či blokovaném úložišti. Kontroluje se také absence osobního názvu a integrita ZIPu.
+Automatické kontroly ověřují shodu všech původních otázek, zachování uložených dat z předchozích verzí obou předmětů, starší nedokončená kola, nová kola všech 630 a 550 otázek, hodnocení, ochranu před dvojím započtením, nezávislé přepínání a reset, chytré opakování, klávesové ovládání a fungování při poškozeném či blokovaném úložišti. Kontroluje se také absence osobního názvu a integrita ZIPu.
 
 Testy vykonávají skutečný JavaScript aplikace s minimálním adaptérem DOM. Vizuální kontrola nové verze ani ověření ve skutečném prohlížeči nebyly provedeny; předchozí místní náhled nebyl dostupný. ZIP obsahuje pouze `index.html` a `README.md`, aplikace nevyžaduje externí knihovny.
