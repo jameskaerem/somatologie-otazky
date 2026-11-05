@@ -1,14 +1,14 @@
 # Biologie a somatologie
 
-Verze 2.10.0 • 3. 11. 2026
+Verze 2.12.0 • 5. 11. 2026
 
-Jedna webová stránka, dvě záložky: **Somatologie (630 otázek)** a **Biologie (550 otázek)**. Vše v samostatném `index.html`, který funguje i offline. Obsahuje vysvětlení, paměťové pomůcky, chytré procvičování, opakování chyb a tipů a náhodný test celé sady.
+Jedna webová stránka, dvě záložky: **Somatologie (630 otázek)** a **Biologie (650 otázek)**. Vše v samostatném `index.html`, který funguje i offline. Obsahuje vysvětlení, paměťové pomůcky, chytré procvičování, opakování chyb a tipů a náhodný test celé sady.
 
 ## Změny
 
 - Obecný název „Biologie a somatologie“ v hlavičce, titulku stránky i dokumentaci. Bez osobního věnování a osobního jména v názvu balíčku.
-- Přidány biologické otázky 501–550. Původních 500 biologických i všech 630 somatologických otázek zůstává beze změny, včetně ID, možností, správných odpovědí a vysvětlení.
-- Zůstávají stejné klíče a formát úložiště. Uložený pokrok i starší rozpracovaná kola se zachovají; nové celé kolo obsahuje 550 otázek.
+- Přidány biologické otázky 601–650. Původních 600 biologických i všech 630 somatologických otázek zůstává beze změny, včetně ID, možností, správných odpovědí a vysvětlení.
+- Zůstávají stejné klíče a formát úložiště. Uložený pokrok i starší rozpracovaná kola se zachovají; nové celé kolo obsahuje 650 otázek.
 
 ## Nahrání na současný web
 
@@ -65,13 +65,21 @@ Jde o vlastní testy A–D vytvořené podle výkladu, nikoli přepis hotové te
 | 511–525 | Autonomní ganglia, sympatikus, parasympatikus a koordinace vnitřních funkcí | 131–134 | 66–68 |
 | 526–535 | Plasticita a základní pojmy cévních, infekčních a degenerativních onemocnění CNS | 134–137 | 68–69 |
 | 536–550 | Endokrinní/exokrinní sekrece, hormony, receptory a uspořádání hypofýzy | 138–141 | 70–71 |
+| 551–560 | Růstový hormon, prolaktin, ACTH, gonadotropiny a účinky oxytocinu | 140–141 | 71 |
+| 561–575 | Štítná žláza, T3/T4, kalcitonin, příštítná tělíska a řízení vápníku | 141–143 | 71–72 |
+| 576–586 | Kůra a dřeň nadledvin, kortizol, aldosteron, katecholaminy a zátěž | 141, 143–145 | 71–73 |
+| 587–600 | Endokrinní slinivka, inzulin/glukagon, pohlavní žlázy, placenta a melatonin | 145–146 | 73–74 |
+| 601–615 | Smyslové receptory, adekvátní podněty, hmat a propriocepce | 147–149 | 74–75 |
+| 616–630 | Vnitřní ucho, labyrinty, rovnovážné váčky, kanálky a řízení rovnováhy | 149–151 | 75–76 |
+| 631–640 | Zvuk, frekvence, hlasitost, barva tónu, boltec, zvukovod a bubínek | 151–153 | 76–77 |
+| 641–650 | Sluchové kůstky, okénka, sluchová trubice, hlemýžď, Cortiho orgán a nerv | 152–154 | 77–78 |
 
-Přehled popisuje použité zdroje, nikoli záruku, že každý odstavec těchto stran už má samostatnou otázku. Přesný celkový počet smysluplných testů nelze určit jen z počtu stran. Další dávka naváže čísly **551–600**, zbývajícími hormony hypofýzy a dalšími endokrinními žlázami od tištěné strany 140. Přehled každé nové dávky bude uveden také ve zprávě v chatu.
+Přehled popisuje použité zdroje, nikoli záruku, že každý odstavec těchto stran už má samostatnou otázku. Přesný celkový počet smysluplných testů nelze určit jen z počtu stran. Další dávka naváže čísly **651–700**, zrakovým orgánem od tištěné strany 155. Přehled každé nové dávky bude uveden také ve zprávě v chatu.
 
 Problematická zobecnění zdroje se nepřebírají do testovaných správných odpovědí: například srdce má nervovou regulaci, přestože tvoří vlastní rytmus; tkáňový mok není zcela bez bílkovin; ne všichni tkáňoví makrofágové nutně vznikají z cirkulujících monocytů. Vysvětlení rozlišují školní model a jeho meze.
 
 ## Ověření
 
-Automatické kontroly ověřují shodu všech původních otázek, zachování uložených dat z předchozích verzí obou předmětů, starší nedokončená kola, nová kola všech 630 a 550 otázek, hodnocení, ochranu před dvojím započtením, nezávislé přepínání a reset, chytré opakování, klávesové ovládání a fungování při poškozeném či blokovaném úložišti. Kontroluje se také absence osobního názvu a integrita ZIPu.
+Automatické kontroly ověřují shodu všech původních otázek, zachování uložených dat z předchozích verzí obou předmětů, starší nedokončená kola, nová kola všech 630 a 650 otázek, hodnocení, ochranu před dvojím započtením, nezávislé přepínání a reset, chytré opakování, klávesové ovládání a fungování při poškozeném či blokovaném úložišti. Kontroluje se také absence osobního názvu a integrita ZIPu.
 
 Testy vykonávají skutečný JavaScript aplikace s minimálním adaptérem DOM. Vizuální kontrola nové verze ani ověření ve skutečném prohlížeči nebyly provedeny; předchozí místní náhled nebyl dostupný. ZIP obsahuje pouze `index.html` a `README.md`, aplikace nevyžaduje externí knihovny.
