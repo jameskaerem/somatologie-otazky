@@ -1,14 +1,14 @@
 # Biologie a somatologie
 
-Verze 2.12.0 • 5. 11. 2026
+Verze 2.17.0 • 11. 11. 2026
 
-Jedna webová stránka, dvě záložky: **Somatologie (630 otázek)** a **Biologie (650 otázek)**. Vše v samostatném `index.html`, který funguje i offline. Obsahuje vysvětlení, paměťové pomůcky, chytré procvičování, opakování chyb a tipů a náhodný test celé sady.
+Jedna webová stránka, dvě záložky: **Somatologie (630 otázek)** a **Biologie (900 otázek)**. Vše v samostatném `index.html`, který funguje i offline. Obsahuje vysvětlení, paměťové pomůcky, chytré procvičování, opakování chyb a tipů a náhodný test celé sady.
 
 ## Změny
 
 - Obecný název „Biologie a somatologie“ v hlavičce, titulku stránky i dokumentaci. Bez osobního věnování a osobního jména v názvu balíčku.
-- Přidány biologické otázky 601–650. Původních 600 biologických i všech 630 somatologických otázek zůstává beze změny, včetně ID, možností, správných odpovědí a vysvětlení.
-- Zůstávají stejné klíče a formát úložiště. Uložený pokrok i starší rozpracovaná kola se zachovají; nové celé kolo obsahuje 650 otázek.
+- Přidány biologické otázky 701–900 v dávkách po 50. Původních 700 biologických i všech 630 somatologických otázek zůstává beze změny, včetně ID, možností, správných odpovědí a vysvětlení.
+- Zůstávají stejné klíče a formát úložiště. Uložený pokrok i starší rozpracovaná kola se zachovají; nové celé kolo obsahuje 900 otázek.
 
 ## Nahrání na současný web
 
@@ -73,13 +73,23 @@ Jde o vlastní testy A–D vytvořené podle výkladu, nikoli přepis hotové te
 | 616–630 | Vnitřní ucho, labyrinty, rovnovážné váčky, kanálky a řízení rovnováhy | 149–151 | 75–76 |
 | 631–640 | Zvuk, frekvence, hlasitost, barva tónu, boltec, zvukovod a bubínek | 151–153 | 76–77 |
 | 641–650 | Sluchové kůstky, okénka, sluchová trubice, hlemýžď, Cortiho orgán a nerv | 152–154 | 77–78 |
+| 651–665 | Stavba oka, optická prostředí, sítnice, tyčinky a čípky | 155–156 | 78–79 |
+| 666–685 | Zrakové pigmenty a zpracování, akomodace, ochrana oka a optické vady | 156–159 | 79–80 |
+| 686–696 | Chuť, čich, souhra kožního čití a nociceptivní zakončení | 160–162 | 81–82 |
+| 697–700 | Gamety, meióza, zygota a obnovení diploidního počtu chromozomů | 162–163 | 82 |
+| 701–750 | Pohlavní chromozomy, genetická variabilita, pohlavní orgány, gametogeneze, cyklus a oplození | 163–175 | 82–88 |
+| 751–800 | Časný vývoj, placenta, těhotenství, porod, antikoncepce a období lidského života | 176–192; doplnění 173, 229 | 89–97; 87, 115 |
+| 801–850 | Zdraví, alkohol, závislosti, kouření, infekce, genetické choroby a prostředí; doplnění respiračních infekcí | 193–203; doplnění 74–75 | 97–102; 38 |
+| 851–900 | Principy praktických cvičení a doplnění příloh: hlavové nervy, vitaminy, kostra a skupiny látek | 204–230 | 103–116 |
 
-Přehled popisuje použité zdroje, nikoli záruku, že každý odstavec těchto stran už má samostatnou otázku. Přesný celkový počet smysluplných testů nelze určit jen z počtu stran. Další dávka naváže čísly **651–700**, zrakovým orgánem od tištěné strany 155. Přehled každé nové dávky bude uveden také ve zprávě v chatu.
+Přehled popisuje použité zdroje, nikoli záruku, že každý odstavec těchto stran už má samostatnou otázku. Přesný celkový počet smysluplných testů nelze určit jen z počtu stran. Biologie je tematicky dokončena: všechny hlavní výkladové kapitoly (15–203), principy praktické části (204–218) a témata příloh (219–230) jsou zastoupeny novými nebo dřívějšími otázkami. Neznamená to samostatnou otázku ke každému odstavci či každé buňce tabulky. Předmluva, obsah a rejstřík nejsou samostatná testovaná témata. Podrobný audit je v `work/COVERAGE_AUDIT.md`. Přehled každé nové dávky bude uveden také ve zprávě v chatu.
 
 Problematická zobecnění zdroje se nepřebírají do testovaných správných odpovědí: například srdce má nervovou regulaci, přestože tvoří vlastní rytmus; tkáňový mok není zcela bez bílkovin; ne všichni tkáňoví makrofágové nutně vznikají z cirkulujících monocytů. Vysvětlení rozlišují školní model a jeho meze.
 
 ## Ověření
 
-Automatické kontroly ověřují shodu všech původních otázek, zachování uložených dat z předchozích verzí obou předmětů, starší nedokončená kola, nová kola všech 630 a 650 otázek, hodnocení, ochranu před dvojím započtením, nezávislé přepínání a reset, chytré opakování, klávesové ovládání a fungování při poškozeném či blokovaném úložišti. Kontroluje se také absence osobního názvu a integrita ZIPu.
+Automatické kontroly ověřují shodu všech původních otázek, zachování uložených dat z předchozích verzí obou předmětů, starší nedokončená kola, nová kola všech 630 a 900 otázek, hodnocení, ochranu před dvojím započtením, nezávislé přepínání a reset, chytré opakování, klávesové ovládání a fungování při poškozeném či blokovaném úložišti. Kontroluje se také absence osobního názvu a integrita ZIPu.
 
 Testy vykonávají skutečný JavaScript aplikace s minimálním adaptérem DOM. Vizuální kontrola nové verze ani ověření ve skutečném prohlížeči nebyly provedeny; předchozí místní náhled nebyl dostupný. ZIP obsahuje pouze `index.html` a `README.md`, aplikace nevyžaduje externí knihovny.
+
+Nové otázky jsou založeny na učebnici. Sporné obecné údaje o antikoncepci a přenosu HIV byly porovnány s primárními zdroji; zastaralé dávky, léčebné postupy a právní informace se netestují. Doplňkové ověření: [WHO – antikoncepce](https://www.who.int/health-topics/contraception/), [WHO – HIV/AIDS](https://www.who.int/news-room/fact-sheets/detail/hiv-aids/), [NHGRI – chromozomové odchylky](https://www.genome.gov/about-genomics/fact-sheets/Chromosome-Abnormalities-Fact-Sheet).
