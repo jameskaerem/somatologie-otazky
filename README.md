@@ -1,12 +1,12 @@
 # Studijní kvízy
 
-Verze 2.18.0 • 12. 11. 2026
+Verze 2.19.0 • 12. 11. 2026
 
-Somatologie (630), Biologie (900) a České Budějovice (50). Samostatný soubor HTML funguje offline. Všechny předměty mají chytré procvičování, opakování chyb a tipů a test celé sady.
+Somatologie (630), Biologie (900) a České Budějovice (100). Samostatný soubor HTML funguje offline. Všechny předměty mají chytré procvičování, opakování chyb a tipů a test celé sady.
 
 ## České Budějovice
 
-První dávka vychází ze souboru České Budějovice test 2019 oprava6.pdf. Pokrytí a návaznost zaznamenává work/BUDEJOVICE.md. Nový klíč je budejovice-learning-v2.
+První dávka vychází ze souboru České Budějovice test 2019 oprava6.pdf. Dávka 51–100 dokončuje výběr ze všeobecné informovanosti 2019 a začíná biologii pro fyzioterapii 2020 ve sbírce České Budějovice TESTY 2019, 2021, 2022.pdf. Pokrytí a návaznost zaznamenává work/BUDEJOVICE.md. Nový klíč je budejovice-learning-v2.
 
 ## Nahrání na současný web
 
