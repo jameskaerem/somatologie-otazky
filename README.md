@@ -1,14 +1,12 @@
-# Biologie a somatologie
+# Studijní kvízy
 
-Verze 2.17.0 • 11. 11. 2026
+Verze 2.18.0 • 12. 11. 2026
 
-Jedna webová stránka, dvě záložky: **Somatologie (630 otázek)** a **Biologie (900 otázek)**. Vše v samostatném `index.html`, který funguje i offline. Obsahuje vysvětlení, paměťové pomůcky, chytré procvičování, opakování chyb a tipů a náhodný test celé sady.
+Somatologie (630), Biologie (900) a České Budějovice (50). Samostatný soubor HTML funguje offline. Všechny předměty mají chytré procvičování, opakování chyb a tipů a test celé sady.
 
-## Změny
+## České Budějovice
 
-- Obecný název „Biologie a somatologie“ v hlavičce, titulku stránky i dokumentaci. Bez osobního věnování a osobního jména v názvu balíčku.
-- Přidány biologické otázky 701–900 v dávkách po 50. Původních 700 biologických i všech 630 somatologických otázek zůstává beze změny, včetně ID, možností, správných odpovědí a vysvětlení.
-- Zůstávají stejné klíče a formát úložiště. Uložený pokrok i starší rozpracovaná kola se zachovají; nové celé kolo obsahuje 900 otázek.
+První dávka vychází ze souboru České Budějovice test 2019 oprava6.pdf. Pokrytí a návaznost zaznamenává work/BUDEJOVICE.md. Nový klíč je budejovice-learning-v2.
 
 ## Nahrání na současný web
 
@@ -90,6 +88,6 @@ Problematická zobecnění zdroje se nepřebírají do testovaných správných 
 
 Automatické kontroly ověřují shodu všech původních otázek, zachování uložených dat z předchozích verzí obou předmětů, starší nedokončená kola, nová kola všech 630 a 900 otázek, hodnocení, ochranu před dvojím započtením, nezávislé přepínání a reset, chytré opakování, klávesové ovládání a fungování při poškozeném či blokovaném úložišti. Kontroluje se také absence osobního názvu a integrita ZIPu.
 
-Testy vykonávají skutečný JavaScript aplikace s minimálním adaptérem DOM. Vizuální kontrola nové verze ani ověření ve skutečném prohlížeči nebyly provedeny; předchozí místní náhled nebyl dostupný. ZIP obsahuje pouze `index.html` a `README.md`, aplikace nevyžaduje externí knihovny.
+Testy vykonávají skutečný JavaScript aplikace s minimálním adaptérem DOM. Chrome v offline režimu ověřil zobrazení tří záložek při šířkách 320, 375, 768 a 1280 px, odpověď s vysvětlením a obnovení rozehraného kola po načtení. ZIP obsahuje pouze `index.html` a `README.md`, aplikace nevyžaduje externí knihovny.
 
 Nové otázky jsou založeny na učebnici. Sporné obecné údaje o antikoncepci a přenosu HIV byly porovnány s primárními zdroji; zastaralé dávky, léčebné postupy a právní informace se netestují. Doplňkové ověření: [WHO – antikoncepce](https://www.who.int/health-topics/contraception/), [WHO – HIV/AIDS](https://www.who.int/news-room/fact-sheets/detail/hiv-aids/), [NHGRI – chromozomové odchylky](https://www.genome.gov/about-genomics/fact-sheets/Chromosome-Abnormalities-Fact-Sheet).
