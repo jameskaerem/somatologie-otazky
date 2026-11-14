@@ -1,12 +1,12 @@
 # Studijní kvízy
 
-Verze 2.22.0 • 13. 11. 2026
+Verze 2.23.0 • 14. 11. 2026
 
-Somatologie (630), Biologie (900) a České Budějovice (250). Samostatný soubor HTML funguje offline. Všechny předměty mají chytré procvičování, opakování chyb a tipů a test celé sady.
+Somatologie (630), Biologie (900) a České Budějovice (300). Samostatný soubor HTML funguje offline. Všechny předměty mají chytré procvičování, opakování chyb a tipů a test celé sady.
 
 ## České Budějovice
 
-První dávka vychází ze souboru České Budějovice test 2019 oprava6.pdf. Dávka 51–100 dokončuje výběr ze všeobecné informovanosti 2019 a začíná biologii pro fyzioterapii 2020 ve sbírce České Budějovice TESTY 2019, 2021, 2022.pdf. Dávka 101–150 dokončuje výběr z biologie 2020 pro fyzioterapii a pokračuje všeobecnou informovaností téhož testového souboru. Dávka 151–200 zahrnuje závěr všeobecné informovanosti, motivační testy a další biologický test pro fyzioterapii 2020. Dávka 201–250 navazuje genetikou a oběma variantami všeobecné informovanosti pro fyzioterapii 2021. Pokrytí a návaznost zaznamenává work/BUDEJOVICE.md. Nový klíč je budejovice-learning-v2.
+První dávka vychází ze souboru České Budějovice test 2019 oprava6.pdf. Dávka 51–100 dokončuje výběr ze všeobecné informovanosti 2019 a začíná biologii pro fyzioterapii 2020 ve sbírce České Budějovice TESTY 2019, 2021, 2022.pdf. Dávka 101–150 dokončuje výběr z biologie 2020 pro fyzioterapii a pokračuje všeobecnou informovaností téhož testového souboru. Dávka 151–200 zahrnuje závěr všeobecné informovanosti, motivační testy a další biologický test pro fyzioterapii 2020. Dávka 201–250 navazuje genetikou a oběma variantami všeobecné informovanosti pro fyzioterapii 2021. Dávka 251–300 zahrnuje ombudsmana a nové znalosti ze tří biologických testů 2021 pro fyzioterapii. Pokrytí a návaznost zaznamenává work/BUDEJOVICE.md. Nový klíč je budejovice-learning-v2.
 
 ## Nahrání na současný web
 
